@@ -712,9 +712,7 @@
             "017de174925e8c75"
         ],
         "x": 94,
-        "y": 319,
-        "w": 1992,
-        "h": 602
+        "y": 319
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -748,9 +746,7 @@
             "1ad455bccec8ab46"
         ],
         "x": 14,
-        "y": 699,
-        "w": 1192,
-        "h": 362
+        "y": 699
     },
     {
         "id": "e065b1ed4938b477",
@@ -831,9 +827,7 @@
             "783cfb381b70afc5"
         ],
         "x": 14,
-        "y": 59,
-        "w": 2812,
-        "h": 622
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -881,9 +875,7 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39,
-        "w": 872,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -905,9 +897,7 @@
             "427cc2991454bbf0"
         ],
         "x": 14,
-        "y": 219,
-        "w": 1012,
-        "h": 202
+        "y": 219
     },
     {
         "id": "19b0e082db0643ac",
@@ -18200,7 +18190,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 760,
-        "y": 260,
+        "y": 320,
         "wires": [
             []
         ]
@@ -18236,7 +18226,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 360,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "8e858e7fb6a75a5b"
@@ -18328,10 +18318,11 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 560,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
-                "21deb99e77dfa74d"
+                "21deb99e77dfa74d",
+                "3f97e618415f37c5"
             ],
             []
         ],
@@ -18383,13 +18374,68 @@
                 "dcf595a3aeb025a4",
                 "2c677d9d0250ba8c",
                 "574f6c6e7bd1b747",
-                "cacac13b4d0c7f07"
+                "cacac13b4d0c7f07",
+                "e6aea47391a1f784"
             ],
             []
         ],
         "outputLabels": [
             "On",
             "Off"
+        ]
+    },
+    {
+        "id": "e6aea47391a1f784",
+        "type": "api-call-service",
+        "z": "789ba711dc04fad2",
+        "name": "Basement DnD On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.basement_echo_dot_do_not_disturb_switch"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 770,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f97e618415f37c5",
+        "type": "api-call-service",
+        "z": "789ba711dc04fad2",
+        "name": "Basement DnD Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.basement_echo_dot_do_not_disturb_switch"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 770,
+        "y": 380,
+        "wires": [
+            []
         ]
     },
     {
