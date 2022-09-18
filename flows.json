@@ -120,14 +120,6 @@
         "env": []
     },
     {
-        "id": "d35726cd69e1aeff",
-        "type": "tab",
-        "label": "Misc Services",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "3e4ba157b540d183",
         "type": "tab",
         "label": "Global Variable Settings",
@@ -868,6 +860,54 @@
         ],
         "x": 34,
         "y": 159
+    },
+    {
+        "id": "477e752fcd2e2a19",
+        "type": "group",
+        "z": "ee67610b4a0578d2",
+        "name": "House Announcement System",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a4c477269b22f766",
+            "155b26ba197473e4",
+            "3153371fe2de6f8e",
+            "9cafa6212280b2d5",
+            "5095d45c90d5304f",
+            "3ae21589dd88c080",
+            "93b7bee28a7e896e",
+            "91c224b7d6f0d32e",
+            "b2bc83c9195efe0f"
+        ],
+        "x": 14,
+        "y": 39,
+        "w": 872,
+        "h": 142
+    },
+    {
+        "id": "50e4d951ee7b3e54",
+        "type": "group",
+        "z": "ee67610b4a0578d2",
+        "name": "Report System",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9dad92b6532b305a",
+            "f803c6af3a30eb66",
+            "c3dc3b15f1261b9f",
+            "3c0e9baa492b618a",
+            "3bd7704103dbfc20",
+            "a6234b2047ba3116",
+            "788eb0a1551db9b8",
+            "7674185d1e5ee489",
+            "427cc2991454bbf0"
+        ],
+        "x": 14,
+        "y": 219,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "19b0e082db0643ac",
@@ -17370,6 +17410,7 @@
         "id": "a4c477269b22f766",
         "type": "ha-button",
         "z": "ee67610b4a0578d2",
+        "g": "477e752fcd2e2a19",
         "name": "Send Button",
         "version": 0,
         "debugenabled": false,
@@ -17384,7 +17425,7 @@
             }
         ],
         "x": 110,
-        "y": 40,
+        "y": 80,
         "wires": [
             [
                 "155b26ba197473e4"
@@ -17395,6 +17436,7 @@
         "id": "155b26ba197473e4",
         "type": "api-current-state",
         "z": "ee67610b4a0578d2",
+        "g": "477e752fcd2e2a19",
         "name": "Message",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -17422,7 +17464,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 280,
-        "y": 40,
+        "y": 80,
         "wires": [
             [
                 "3153371fe2de6f8e"
@@ -17433,6 +17475,7 @@
         "id": "3153371fe2de6f8e",
         "type": "api-current-state",
         "z": "ee67610b4a0578d2",
+        "g": "477e752fcd2e2a19",
         "name": "Destination",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -17460,7 +17503,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 450,
-        "y": 40,
+        "y": 80,
         "wires": [
             [
                 "91c224b7d6f0d32e"
@@ -17471,6 +17514,7 @@
         "id": "9cafa6212280b2d5",
         "type": "ha-button",
         "z": "ee67610b4a0578d2",
+        "g": "477e752fcd2e2a19",
         "name": "Reset Button",
         "version": 0,
         "debugenabled": false,
@@ -17497,7 +17541,7 @@
             }
         ],
         "x": 110,
-        "y": 100,
+        "y": 140,
         "wires": [
             [
                 "5095d45c90d5304f"
@@ -17508,6 +17552,7 @@
         "id": "5095d45c90d5304f",
         "type": "api-call-service",
         "z": "ee67610b4a0578d2",
+        "g": "477e752fcd2e2a19",
         "name": "Reset Message",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -17526,7 +17571,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 300,
-        "y": 100,
+        "y": 140,
         "wires": [
             [
                 "3ae21589dd88c080"
@@ -17537,6 +17582,7 @@
         "id": "3ae21589dd88c080",
         "type": "api-call-service",
         "z": "ee67610b4a0578d2",
+        "g": "477e752fcd2e2a19",
         "name": "Reset Devices List",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -17555,7 +17601,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 510,
-        "y": 100,
+        "y": 140,
         "wires": [
             [
                 "b2bc83c9195efe0f"
@@ -17566,9 +17612,10 @@
         "id": "93b7bee28a7e896e",
         "type": "subflow:6429099c4571dd6b",
         "z": "ee67610b4a0578d2",
+        "g": "477e752fcd2e2a19",
         "name": "",
         "x": 780,
-        "y": 40,
+        "y": 80,
         "wires": [
             []
         ]
@@ -17577,6 +17624,7 @@
         "id": "91c224b7d6f0d32e",
         "type": "api-current-state",
         "z": "ee67610b4a0578d2",
+        "g": "477e752fcd2e2a19",
         "name": "Voice",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -17604,7 +17652,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 610,
-        "y": 40,
+        "y": 80,
         "wires": [
             [
                 "93b7bee28a7e896e"
@@ -17615,6 +17663,7 @@
         "id": "b2bc83c9195efe0f",
         "type": "api-call-service",
         "z": "ee67610b4a0578d2",
+        "g": "477e752fcd2e2a19",
         "name": "Reset Voice",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -17633,7 +17682,246 @@
         "outputProperties": [],
         "queue": "none",
         "x": 710,
-        "y": 100,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9dad92b6532b305a",
+        "type": "todoist-task-create",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "",
+        "token": "f19eac517a138c66",
+        "x": 930,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f803c6af3a30eb66",
+        "type": "ha-button",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "Send Report",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "675dd216a61c575b",
+        "outputProperties": [],
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "c3dc3b15f1261b9f"
+            ]
+        ]
+    },
+    {
+        "id": "c3dc3b15f1261b9f",
+        "type": "api-current-state",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "Get Text",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_text.report_system",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "text",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "3c0e9baa492b618a"
+            ]
+        ]
+    },
+    {
+        "id": "3c0e9baa492b618a",
+        "type": "api-current-state",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "Get Type",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_select.report_type",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "type",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "a6234b2047ba3116"
+            ]
+        ]
+    },
+    {
+        "id": "3bd7704103dbfc20",
+        "type": "template",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"content\": \"{{text}}\",\n    \"project_id\": 2285967948,\n    \"section_id\": {{type}}\n}",
+        "output": "str",
+        "x": 760,
+        "y": 260,
+        "wires": [
+            [
+                "9dad92b6532b305a"
+            ]
+        ]
+    },
+    {
+        "id": "a6234b2047ba3116",
+        "type": "function",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "",
+        "func": "if (msg.type === \"New Idea\") {\n    msg.type = \"81234669\"\n} else if (msg.type === \"Bug Report\") {\n    msg.type = \"94865633\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "3bd7704103dbfc20"
+            ]
+        ]
+    },
+    {
+        "id": "788eb0a1551db9b8",
+        "type": "ha-button",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "Reset Report",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "7df85e301aad3a3d",
+        "outputProperties": [
+            {
+                "property": "text",
+                "propertyType": "msg",
+                "value": "Type your report here",
+                "valueType": "str"
+            },
+            {
+                "property": "type",
+                "propertyType": "msg",
+                "value": "Bug Report",
+                "valueType": "str"
+            }
+        ],
+        "x": 110,
+        "y": 320,
+        "wires": [
+            [
+                "7674185d1e5ee489",
+                "427cc2991454bbf0"
+            ]
+        ]
+    },
+    {
+        "id": "7674185d1e5ee489",
+        "type": "api-call-service",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "Reset Text",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_text",
+        "service": "set_value",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_text.report_system"
+        ],
+        "data": "{\t    \"value\": msg.text\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 290,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "427cc2991454bbf0",
+        "type": "api-call-service",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "Reset Type",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.report_type"
+        ],
+        "data": "{\t    \"option\": msg.type\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 290,
+        "y": 380,
         "wires": [
             []
         ]
@@ -19196,236 +19484,6 @@
         "x": 215,
         "y": 780,
         "wires": []
-    },
-    {
-        "id": "9dad92b6532b305a",
-        "type": "todoist-task-create",
-        "z": "d35726cd69e1aeff",
-        "name": "",
-        "token": "f19eac517a138c66",
-        "x": 970,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f803c6af3a30eb66",
-        "type": "ha-button",
-        "z": "d35726cd69e1aeff",
-        "name": "Send Report",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "675dd216a61c575b",
-        "outputProperties": [],
-        "x": 150,
-        "y": 180,
-        "wires": [
-            [
-                "c3dc3b15f1261b9f"
-            ]
-        ]
-    },
-    {
-        "id": "c3dc3b15f1261b9f",
-        "type": "api-current-state",
-        "z": "d35726cd69e1aeff",
-        "name": "Get Text",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_text.report_system",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "text",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 320,
-        "y": 180,
-        "wires": [
-            [
-                "3c0e9baa492b618a"
-            ]
-        ]
-    },
-    {
-        "id": "3c0e9baa492b618a",
-        "type": "api-current-state",
-        "z": "d35726cd69e1aeff",
-        "name": "Get Type",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.report_type",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "type",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 480,
-        "y": 180,
-        "wires": [
-            [
-                "a6234b2047ba3116"
-            ]
-        ]
-    },
-    {
-        "id": "3bd7704103dbfc20",
-        "type": "template",
-        "z": "d35726cd69e1aeff",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"content\": \"{{text}}\",\n    \"project_id\": 2285967948,\n    \"section_id\": {{type}}\n}",
-        "output": "str",
-        "x": 800,
-        "y": 180,
-        "wires": [
-            [
-                "9dad92b6532b305a"
-            ]
-        ]
-    },
-    {
-        "id": "a6234b2047ba3116",
-        "type": "function",
-        "z": "d35726cd69e1aeff",
-        "name": "",
-        "func": "if (msg.type === \"New Idea\") {\n    msg.type = \"81234669\"\n} else if (msg.type === \"Bug Report\") {\n    msg.type = \"94865633\"\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 640,
-        "y": 180,
-        "wires": [
-            [
-                "3bd7704103dbfc20"
-            ]
-        ]
-    },
-    {
-        "id": "788eb0a1551db9b8",
-        "type": "ha-button",
-        "z": "d35726cd69e1aeff",
-        "name": "Reset Report",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "7df85e301aad3a3d",
-        "outputProperties": [
-            {
-                "property": "text",
-                "propertyType": "msg",
-                "value": "Type your report here",
-                "valueType": "str"
-            },
-            {
-                "property": "type",
-                "propertyType": "msg",
-                "value": "Bug Report",
-                "valueType": "str"
-            }
-        ],
-        "x": 150,
-        "y": 280,
-        "wires": [
-            [
-                "7674185d1e5ee489",
-                "427cc2991454bbf0"
-            ]
-        ]
-    },
-    {
-        "id": "7674185d1e5ee489",
-        "type": "api-call-service",
-        "z": "d35726cd69e1aeff",
-        "name": "Reset Text",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_text",
-        "service": "set_value",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_text.report_system"
-        ],
-        "data": "{\t    \"value\": msg.text\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 330,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "427cc2991454bbf0",
-        "type": "api-call-service",
-        "z": "d35726cd69e1aeff",
-        "name": "Reset Type",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.report_type"
-        ],
-        "data": "{\t    \"option\": msg.type\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 330,
-        "y": 340,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "e8d2135bb5564a4a",
