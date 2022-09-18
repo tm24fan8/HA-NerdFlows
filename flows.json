@@ -18164,7 +18164,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_boolean.stream_online"
+            "input_boolean.studio_quiet"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -18191,7 +18191,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_boolean.stream_online"
+            "input_boolean.studio_quiet"
         ],
         "data": "",
         "dataType": "jsonata",
