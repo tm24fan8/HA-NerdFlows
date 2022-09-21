@@ -712,9 +712,7 @@
             "017de174925e8c75"
         ],
         "x": 94,
-        "y": 319,
-        "w": 1992,
-        "h": 602
+        "y": 319
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -748,9 +746,7 @@
             "1ad455bccec8ab46"
         ],
         "x": 14,
-        "y": 699,
-        "w": 1192,
-        "h": 362
+        "y": 699
     },
     {
         "id": "e065b1ed4938b477",
@@ -831,9 +827,7 @@
             "783cfb381b70afc5"
         ],
         "x": 14,
-        "y": 59,
-        "w": 2812,
-        "h": 622
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -859,9 +853,7 @@
             "6f011420f6bb15a7"
         ],
         "x": 34,
-        "y": 159,
-        "w": 882,
-        "h": 302
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -883,9 +875,7 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39,
-        "w": 872,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -907,9 +897,7 @@
             "427cc2991454bbf0"
         ],
         "x": 14,
-        "y": 219,
-        "w": 1012,
-        "h": 202
+        "y": 219
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -954,9 +942,7 @@
             "069a7ab44b04c9ef"
         ],
         "x": 34,
-        "y": 39,
-        "w": 872,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -973,9 +959,7 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 142
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1016,9 +1000,7 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1432,
-        "h": 422
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1063,9 +1045,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1092,9 +1072,7 @@
             "58b54517ed812db3"
         ],
         "x": 34,
-        "y": 239,
-        "w": 832,
-        "h": 382
+        "y": 239
     },
     {
         "id": "eeafd13be593ae69",
@@ -1118,9 +1096,7 @@
             "f34816b23181f21e"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1032,
-        "h": 282
+        "y": 539
     },
     {
         "id": "753e14252442d87d",
@@ -1163,7 +1139,6 @@
             "label": true
         },
         "nodes": [
-            "f24aeb9c34914db9",
             "afeb1d238a623c3d",
             "34dcb204b421710d",
             "e69ad4771494c458",
@@ -1180,11 +1155,14 @@
             "392d8c474c89b9f0",
             "3ba243a44893f620",
             "49767cbfa622a734",
-            "04113ab4977bf725"
+            "04113ab4977bf725",
+            "eeab9b390a3115fb",
+            "1801227eeba9a397",
+            "cc053eef18a0b08c"
         ],
         "x": 34,
         "y": 319,
-        "w": 1732,
+        "w": 2092,
         "h": 222
     },
     {
@@ -2123,6 +2101,28 @@
         "id": "60eb53fb94cd64e4",
         "type": "lifx-config",
         "token": "c120128708971c253cfdb4c0fcaeac0b392b068b4f02764f1161765591dc3eb0"
+    },
+    {
+        "id": "3144aa42556ea257",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "name": "Kallen Timer Pause",
+        "version": 4,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Kallen Timer Pause"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:pause"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "entityType": "button"
     },
     {
         "id": "05e66e9e1092e6ea",
@@ -4453,73 +4453,6 @@
         ]
     },
     {
-        "id": "f24aeb9c34914db9",
-        "type": "server-state-changed",
-        "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
-        "name": "Pause Switch",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "input_boolean.kallen_timer_pause",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 130,
-        "y": 400,
-        "wires": [
-            [
-                "afeb1d238a623c3d"
-            ],
-            [
-                "34dcb204b421710d"
-            ]
-        ]
-    },
-    {
         "id": "afeb1d238a623c3d",
         "type": "api-call-service",
         "z": "4a8821853d4dd1ad",
@@ -4541,7 +4474,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 330,
+        "x": 690,
         "y": 360,
         "wires": [
             [
@@ -4571,7 +4504,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 320,
+        "x": 680,
         "y": 440,
         "wires": [
             [
@@ -5021,7 +4954,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 490,
+        "x": 850,
         "y": 440,
         "wires": [
             [
@@ -5050,7 +4983,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 660,
+        "x": 1020,
         "y": 440,
         "wires": [
             [
@@ -5081,7 +5014,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1260,
+        "x": 1620,
         "y": 400,
         "wires": [
             [
@@ -5137,7 +5070,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1480,
+        "x": 1840,
         "y": 400,
         "wires": [
             [
@@ -5221,7 +5154,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1660,
+        "x": 2020,
         "y": 400,
         "wires": [
             []
@@ -5264,7 +5197,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1030,
+        "x": 1390,
         "y": 440,
         "wires": [
             [
@@ -5763,7 +5696,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 840,
+        "x": 1200,
         "y": 440,
         "wires": [
             [
@@ -5813,7 +5746,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 510,
+        "x": 870,
         "y": 360,
         "wires": [
             [
@@ -5858,7 +5791,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 690,
+        "x": 1050,
         "y": 360,
         "wires": [
             [
@@ -5918,7 +5851,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 870,
+        "x": 1230,
         "y": 360,
         "wires": [
             [
@@ -5932,7 +5865,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "56c26bcb1de77e0e",
         "name": "",
-        "x": 1060,
+        "x": 1420,
         "y": 360,
         "wires": [
             []
@@ -5975,7 +5908,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 490,
+        "x": 850,
         "y": 500,
         "wires": [
             [
@@ -6020,7 +5953,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 670,
+        "x": 1030,
         "y": 500,
         "wires": [
             [
@@ -6039,7 +5972,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "activity timer has been resumed in room",
+                "to": "activity timer has been resumed in room with remainingtime remaining",
                 "tot": "str"
             },
             {
@@ -6068,6 +6001,15 @@
                 "tot": "msg"
             },
             {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "remainingtime",
+                "fromt": "str",
+                "to": "timerdata.attributes.remaining",
+                "tot": "msg"
+            },
+            {
                 "t": "set",
                 "p": "voice",
                 "pt": "msg",
@@ -6080,7 +6022,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
+        "x": 1210,
         "y": 500,
         "wires": [
             [
@@ -6094,9 +6036,132 @@
         "z": "4a8821853d4dd1ad",
         "g": "56c26bcb1de77e0e",
         "name": "",
-        "x": 1040,
+        "x": 1400,
         "y": 500,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eeab9b390a3115fb",
+        "type": "ha-button",
+        "z": "4a8821853d4dd1ad",
+        "g": "56c26bcb1de77e0e",
+        "name": "Pause Button",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "3144aa42556ea257",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "1801227eeba9a397"
+            ]
+        ]
+    },
+    {
+        "id": "1801227eeba9a397",
+        "type": "api-current-state",
+        "z": "4a8821853d4dd1ad",
+        "g": "56c26bcb1de77e0e",
+        "name": "Timer State",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "timer.kallen_timer",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "timerstate",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "timerdata",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "cc053eef18a0b08c"
+            ]
+        ]
+    },
+    {
+        "id": "cc053eef18a0b08c",
+        "type": "switch",
+        "z": "4a8821853d4dd1ad",
+        "g": "56c26bcb1de77e0e",
+        "name": "Routing",
+        "property": "timerstate",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "active",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "paused",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "idle",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 480,
+        "y": 400,
+        "wires": [
+            [
+                "afeb1d238a623c3d"
+            ],
+            [
+                "34dcb204b421710d"
+            ],
             []
         ]
     },
