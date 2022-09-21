@@ -1158,7 +1158,10 @@
             "04113ab4977bf725",
             "eeab9b390a3115fb",
             "1801227eeba9a397",
-            "cc053eef18a0b08c"
+            "cc053eef18a0b08c",
+            "6df16ceae69c8c2e",
+            "7f20a02b0b8f860a",
+            "3dcc1f88969d9a0b"
         ],
         "x": 34,
         "y": 319,
@@ -4474,7 +4477,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 690,
+        "x": 1050,
         "y": 360,
         "wires": [
             [
@@ -5746,7 +5749,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 870,
+        "x": 1230,
         "y": 360,
         "wires": [
             [
@@ -5791,7 +5794,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1050,
+        "x": 1410,
         "y": 360,
         "wires": [
             [
@@ -5810,7 +5813,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "activity timer has been paused in room",
+                "to": "activity timer has been paused in room with remainingmin minutes and remainingsec seconds left",
                 "tot": "str"
             },
             {
@@ -5839,6 +5842,24 @@
                 "tot": "msg"
             },
             {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "remainingmin",
+                "fromt": "str",
+                "to": "remainingmin",
+                "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "remainingsec",
+                "fromt": "str",
+                "to": "remainingsec",
+                "tot": "msg"
+            },
+            {
                 "t": "set",
                 "p": "voice",
                 "pt": "msg",
@@ -5851,7 +5872,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1230,
+        "x": 1590,
         "y": 360,
         "wires": [
             [
@@ -5865,7 +5886,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "56c26bcb1de77e0e",
         "name": "",
-        "x": 1420,
+        "x": 1780,
         "y": 360,
         "wires": [
             []
@@ -5957,7 +5978,7 @@
         "y": 500,
         "wires": [
             [
-                "49767cbfa622a734"
+                "6df16ceae69c8c2e"
             ]
         ]
     },
@@ -5972,7 +5993,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "activity timer has been resumed in room with remainingtime remaining",
+                "to": "activity timer has been resumed in room with remainingmin minutes and remainingsec seconds remaining",
                 "tot": "str"
             },
             {
@@ -6004,9 +6025,18 @@
                 "t": "change",
                 "p": "payload",
                 "pt": "msg",
-                "from": "remainingtime",
+                "from": "remainingmin",
                 "fromt": "str",
-                "to": "timerdata.attributes.remaining",
+                "to": "remainingmin",
+                "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "remainingsec",
+                "fromt": "str",
+                "to": "remainingsec",
                 "tot": "msg"
             },
             {
@@ -6022,7 +6052,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1210,
+        "x": 1730,
         "y": 500,
         "wires": [
             [
@@ -6036,7 +6066,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "56c26bcb1de77e0e",
         "name": "",
-        "x": 1400,
+        "x": 1920,
         "y": 500,
         "wires": [
             []
@@ -6157,12 +6187,191 @@
         "y": 400,
         "wires": [
             [
-                "afeb1d238a623c3d"
+                "f34f7a348bd2d5ee"
             ],
             [
                 "34dcb204b421710d"
             ],
             []
+        ]
+    },
+    {
+        "id": "6df16ceae69c8c2e",
+        "type": "api-current-state",
+        "z": "4a8821853d4dd1ad",
+        "g": "56c26bcb1de77e0e",
+        "name": "Get Minutes",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.kallen_timer_remaining_minutes",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "remainingmin",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1370,
+        "y": 500,
+        "wires": [
+            [
+                "7f20a02b0b8f860a"
+            ]
+        ]
+    },
+    {
+        "id": "7f20a02b0b8f860a",
+        "type": "api-current-state",
+        "z": "4a8821853d4dd1ad",
+        "g": "56c26bcb1de77e0e",
+        "name": "Get Seconds",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.kallen_timer_remaining_seconds",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "remainingsec",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1550,
+        "y": 500,
+        "wires": [
+            [
+                "49767cbfa622a734"
+            ]
+        ]
+    },
+    {
+        "id": "f34f7a348bd2d5ee",
+        "type": "api-current-state",
+        "z": "4a8821853d4dd1ad",
+        "name": "Get Minutes",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.kallen_timer_remaining_minutes",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "remainingmin",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 690,
+        "y": 360,
+        "wires": [
+            [
+                "3dcc1f88969d9a0b"
+            ]
+        ]
+    },
+    {
+        "id": "3dcc1f88969d9a0b",
+        "type": "api-current-state",
+        "z": "4a8821853d4dd1ad",
+        "g": "56c26bcb1de77e0e",
+        "name": "Get Seconds",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.kallen_timer_remaining_seconds",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "remainingsec",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 870,
+        "y": 360,
+        "wires": [
+            [
+                "afeb1d238a623c3d"
+            ]
         ]
     },
     {
