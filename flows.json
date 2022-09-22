@@ -853,7 +853,9 @@
             "6f011420f6bb15a7"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 882,
+        "h": 302
     },
     {
         "id": "477e752fcd2e2a19",
@@ -20516,7 +20518,7 @@
         "name": "Offset Before",
         "server": "9e87348d.9c1c48",
         "version": 0,
-        "template": "{{ (state_attr('input_datetime.tina_workday_end', 'timestamp') - 3600) | timestamp_custom('%H:%M', false) }}",
+        "template": "{{ (state_attr('input_datetime.tina_workday_end', 'timestamp') - 5400) | timestamp_custom('%H:%M', false) }}",
         "resultsLocation": "start",
         "resultsLocationType": "msg",
         "templateLocation": "",
