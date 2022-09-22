@@ -853,9 +853,7 @@
             "6f011420f6bb15a7"
         ],
         "x": 34,
-        "y": 159,
-        "w": 882,
-        "h": 302
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -877,7 +875,9 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -899,7 +899,9 @@
             "427cc2991454bbf0"
         ],
         "x": 14,
-        "y": 219
+        "y": 219,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -2121,6 +2123,50 @@
             {
                 "property": "icon",
                 "value": "mdi:pause"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "entityType": "button"
+    },
+    {
+        "id": "f040a57e80fda8ee",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "name": "Send Text Notification",
+        "version": 4,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Send Text Notification"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:message-alert"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "entityType": "button"
+    },
+    {
+        "id": "56690d428d1d2022",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "name": "Reset Text Notification",
+        "version": 4,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Reset Text Notification"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:backspace-reverse"
             },
             {
                 "property": "device_class",
@@ -18639,6 +18685,76 @@
         "queue": "none",
         "x": 290,
         "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98626a8f2b59bde3",
+        "type": "ha-button",
+        "z": "ee67610b4a0578d2",
+        "name": "Send Notification",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "f040a57e80fda8ee",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 120,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47bc783fd78f5aa8",
+        "type": "ha-button",
+        "z": "ee67610b4a0578d2",
+        "name": "Reset Text Notification",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "56690d428d1d2022",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 140,
+        "y": 540,
         "wires": [
             []
         ]
