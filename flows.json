@@ -746,9 +746,7 @@
             "1ad455bccec8ab46"
         ],
         "x": 14,
-        "y": 699,
-        "w": 1192,
-        "h": 362
+        "y": 699
     },
     {
         "id": "e065b1ed4938b477",
@@ -829,9 +827,7 @@
             "783cfb381b70afc5"
         ],
         "x": 14,
-        "y": 59,
-        "w": 2812,
-        "h": 622
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -1097,10 +1093,15 @@
             "780ad4c1a1d5204b",
             "51237623ed73ba98",
             "47aa56df01f697fc",
-            "f34816b23181f21e"
+            "f34816b23181f21e",
+            "aaac8068997af1a5",
+            "de4f1b15ce906809",
+            "bd75b077a1c76fce"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1452,
+        "h": 282
     },
     {
         "id": "753e14252442d87d",
@@ -8903,7 +8904,8 @@
         "y": 640,
         "wires": [
             [
-                "26bda03370a86d83"
+                "26bda03370a86d83",
+                "aaac8068997af1a5"
             ]
         ]
     },
@@ -9240,6 +9242,110 @@
             [
                 "edef3ad58f6e9bbd"
             ]
+        ]
+    },
+    {
+        "id": "aaac8068997af1a5",
+        "type": "api-current-state",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Delivery Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.delivery_mode",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 960,
+        "y": 580,
+        "wires": [
+            [
+                "de4f1b15ce906809"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "de4f1b15ce906809",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Set Adaptive",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.front_porch_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1150,
+        "y": 580,
+        "wires": [
+            [
+                "bd75b077a1c76fce"
+            ]
+        ]
+    },
+    {
+        "id": "bd75b077a1c76fce",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Turn off Delivery Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.delivery_mode"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1360,
+        "y": 580,
+        "wires": [
+            []
         ]
     },
     {
