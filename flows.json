@@ -746,9 +746,7 @@
             "1ad455bccec8ab46"
         ],
         "x": 14,
-        "y": 699,
-        "w": 1192,
-        "h": 362
+        "y": 699
     },
     {
         "id": "e065b1ed4938b477",
@@ -829,9 +827,7 @@
             "783cfb381b70afc5"
         ],
         "x": 14,
-        "y": 59,
-        "w": 2812,
-        "h": 622
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -17932,33 +17928,8 @@
         "y": 400,
         "wires": [
             [
-                "eb4220bac4e72e88"
+                "96905a317852d84e"
             ]
-        ]
-    },
-    {
-        "id": "eb4220bac4e72e88",
-        "type": "api-call-service",
-        "z": "75e98103856848a6",
-        "name": "Speech Engine",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "speech_engine",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"who\":\"kallen_bedroom\",\t    \"message\":\"!include ../templates/speech/daily_briefing.yaml\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 480,
-        "y": 400,
-        "wires": [
-            []
         ]
     },
     {
@@ -17978,9 +17949,9 @@
                 "valueType": "date"
             },
             {
-                "property": "topic",
+                "property": "who",
                 "propertyType": "msg",
-                "value": "Kallen Bedroom",
+                "value": "kallen_bedroom",
                 "valueType": "str"
             }
         ],
@@ -17988,8 +17959,33 @@
         "y": 460,
         "wires": [
             [
-                "96905a317852d84e"
+                "062135211ea05aee"
             ]
+        ]
+    },
+    {
+        "id": "062135211ea05aee",
+        "type": "api-call-service",
+        "z": "75e98103856848a6",
+        "name": "Script",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "kallen_school_status",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\": msg.who\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 490,
+        "y": 460,
+        "wires": [
+            []
         ]
     },
     {
@@ -18011,8 +18007,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1240,
-        "y": 460,
+        "x": 1200,
+        "y": 400,
         "wires": [
             []
         ]
@@ -18022,15 +18018,15 @@
         "type": "file in",
         "z": "75e98103856848a6",
         "name": "Read File",
-        "filename": "/config/templates/speech/kallen_school_status.yaml",
+        "filename": "/config/templates/speech/daily_briefing.yaml",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 500,
-        "y": 460,
+        "x": 460,
+        "y": 400,
         "wires": [
             [
                 "293cc3018a39af5d"
@@ -18056,8 +18052,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
-        "y": 460,
+        "x": 650,
+        "y": 400,
         "wires": [
             [
                 "0b5a8b6754e8ab37"
@@ -18076,8 +18072,8 @@
         "resultsLocationType": "msg",
         "templateLocation": "template",
         "templateLocationType": "msg",
-        "x": 880,
-        "y": 460,
+        "x": 840,
+        "y": 400,
         "wires": [
             [
                 "c1e3cffdafae7507"
@@ -18089,14 +18085,14 @@
         "type": "function",
         "z": "75e98103856848a6",
         "name": "Formatting",
-        "func": "var str = msg.payload\nstr = str.replaceAll(\"<p>\", \" \")\nstr = str.replaceAll(\"</p>\", \" \")\nstr = str.replaceAll(\">\", \" \")\n\nmsg.payload = str\n\nreturn msg;",
+        "func": "var str = msg.payload\nstr = str.replaceAll(\"<p>\", \" \")\nstr = str.replaceAll(\"</p>\", \" \")\nstr = str.replaceAll(\">\", \" \")\nstr = str.replaceAll(\"<s>\", \" \")\nstr = str.replaceAll(\"</s>\", \" \")\nstr = str.replaceAll(\"<s\", \" \")\nstr = str.replaceAll(\"</s\", \" \")\n\nmsg.payload = str\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
-        "y": 460,
+        "x": 1010,
+        "y": 400,
         "wires": [
             [
                 "dc94d479f37be046"
