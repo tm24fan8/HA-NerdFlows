@@ -746,7 +746,9 @@
             "1ad455bccec8ab46"
         ],
         "x": 14,
-        "y": 699
+        "y": 699,
+        "w": 1192,
+        "h": 362
     },
     {
         "id": "e065b1ed4938b477",
@@ -827,7 +829,9 @@
             "783cfb381b70afc5"
         ],
         "x": 14,
-        "y": 59
+        "y": 59,
+        "w": 2812,
+        "h": 622
     },
     {
         "id": "5c50443a84910fb7",
@@ -17984,7 +17988,7 @@
         "y": 460,
         "wires": [
             [
-                "dc94d479f37be046"
+                "96905a317852d84e"
             ]
         ]
     },
@@ -18001,16 +18005,102 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"kallen_bedroom\",\t    \"message\":\"!include ../templates/speech/kallen_school_status.yaml\"\t}",
+        "data": "{\t    \"who\":\"kallen_bedroom\",\t    \"message\": msg.payload\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 520,
+        "x": 1240,
         "y": 460,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "96905a317852d84e",
+        "type": "file in",
+        "z": "75e98103856848a6",
+        "name": "Read File",
+        "filename": "/config/templates/speech/kallen_school_status.yaml",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 460,
+        "wires": [
+            [
+                "293cc3018a39af5d"
+            ]
+        ]
+    },
+    {
+        "id": "293cc3018a39af5d",
+        "type": "change",
+        "z": "75e98103856848a6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "template",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 460,
+        "wires": [
+            [
+                "0b5a8b6754e8ab37"
+            ]
+        ]
+    },
+    {
+        "id": "0b5a8b6754e8ab37",
+        "type": "api-render-template",
+        "z": "75e98103856848a6",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "",
+        "resultsLocation": "payload",
+        "resultsLocationType": "msg",
+        "templateLocation": "template",
+        "templateLocationType": "msg",
+        "x": 880,
+        "y": 460,
+        "wires": [
+            [
+                "c1e3cffdafae7507"
+            ]
+        ]
+    },
+    {
+        "id": "c1e3cffdafae7507",
+        "type": "function",
+        "z": "75e98103856848a6",
+        "name": "Formatting",
+        "func": "var str = msg.payload\nstr = str.replaceAll(\"<p>\", \" \")\nstr = str.replaceAll(\"</p>\", \" \")\nstr = str.replaceAll(\">\", \" \")\n\nmsg.payload = str\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 460,
+        "wires": [
+            [
+                "dc94d479f37be046"
+            ]
         ]
     },
     {
@@ -19461,11 +19551,12 @@
         "z": "ebd5561c4f077718",
         "name": "",
         "filename": "/config/files/weather_briefing_full.txt",
+        "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 680,
+        "x": 760,
         "y": 180,
         "wires": [
             []
