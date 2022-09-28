@@ -1096,11 +1096,13 @@
             "f34816b23181f21e",
             "aaac8068997af1a5",
             "de4f1b15ce906809",
-            "bd75b077a1c76fce"
+            "bd75b077a1c76fce",
+            "dda150ba32752234",
+            "b69eeb738bbd4bdb"
         ],
         "x": 34,
         "y": 539,
-        "w": 1452,
+        "w": 1592,
         "h": 282
     },
     {
@@ -7410,6 +7412,12 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "triggerId"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "presence",
+                "valueType": "str"
             }
         ],
         "x": 180,
@@ -7533,6 +7541,12 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "triggerId"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "presence",
+                "valueType": "str"
             }
         ],
         "x": 170,
@@ -8861,6 +8875,12 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "triggerId"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "motion",
+                "valueType": "str"
             }
         ],
         "x": 140,
@@ -8905,7 +8925,7 @@
         "wires": [
             [
                 "26bda03370a86d83",
-                "aaac8068997af1a5"
+                "dda150ba32752234"
             ]
         ]
     },
@@ -9212,6 +9232,12 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "triggerId"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "open",
+                "valueType": "str"
             }
         ],
         "x": 120,
@@ -9281,7 +9307,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 960,
+        "x": 1100,
         "y": 580,
         "wires": [
             [
@@ -9312,7 +9338,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1150,
+        "x": 1290,
         "y": 580,
         "wires": [
             [
@@ -9342,9 +9368,89 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1360,
+        "x": 1500,
         "y": 580,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dda150ba32752234",
+        "type": "switch",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "",
+        "property": "detect",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "motion",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 930,
+        "y": 580,
+        "wires": [
+            [
+                "aaac8068997af1a5"
+            ]
+        ]
+    },
+    {
+        "id": "b69eeb738bbd4bdb",
+        "type": "server-state-changed",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Porch Automation Stop",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.front_porch_light_on",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "stop",
+                "valueType": "str"
+            }
+        ],
+        "x": 560,
+        "y": 580,
+        "wires": [
+            [
+                "26bda03370a86d83",
+                "1bf27a631436c914"
+            ],
             []
         ]
     },
