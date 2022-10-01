@@ -675,7 +675,6 @@
         },
         "nodes": [
             "a1ee07ab20229b45",
-            "7e89e4d34a758087",
             "be2ef3afc92034ec",
             "23c3c8fe409e3f94",
             "74c0ced4ac160364",
@@ -700,19 +699,21 @@
             "d1ae15dff680b3b1",
             "39b90ceaed170ac8",
             "31b8c8291d19ffc6",
-            "572168639448c73d",
-            "e70840b82c2bd54b",
-            "2dc5f9d3e00f4ddc",
             "e90e0b2a6d30d855",
             "34e2055344eea8fe",
             "55e84ccb73ae9b74",
             "3a25dfcae623ee00",
             "fc4bcd1c117fa849",
-            "3fa2a7a15d94c156",
-            "017de174925e8c75"
+            "017de174925e8c75",
+            "2d510442b2e79794",
+            "2dc5f9d3e00f4ddc",
+            "86922621398f4b79",
+            "4888e5649042a6d1"
         ],
         "x": 94,
-        "y": 319
+        "y": 339,
+        "w": 1852,
+        "h": 582
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -1259,8 +1260,8 @@
         "type": "junction",
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
-        "x": 1240,
-        "y": 500,
+        "x": 960,
+        "y": 480,
         "wires": [
             [
                 "be2ef3afc92034ec",
@@ -1274,7 +1275,7 @@
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
         "x": 1500,
-        "y": 500,
+        "y": 480,
         "wires": [
             [
                 "2dc5f9d3e00f4ddc"
@@ -9794,7 +9795,7 @@
             }
         ],
         "x": 240,
-        "y": 400,
+        "y": 380,
         "wires": [
             [
                 "ea8536fc853a8af4"
@@ -9807,38 +9808,6 @@
         ]
     },
     {
-        "id": "7e89e4d34a758087",
-        "type": "api-call-service",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Turn on light",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "light.upstairs_bathroom_lights"
-        ],
-        "data": "",
-        "dataType": "json",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 1150,
-        "y": 440,
-        "wires": [
-            [
-                "be2ef3afc92034ec"
-            ]
-        ]
-    },
-    {
         "id": "be2ef3afc92034ec",
         "type": "stoptimer",
         "z": "5e238cbbe6d612c9",
@@ -9848,8 +9817,8 @@
         "payloadtype": "num",
         "payloadval": "0",
         "name": "Wait 5 Minutes",
-        "x": 1360,
-        "y": 420,
+        "x": 1080,
+        "y": 380,
         "wires": [
             [
                 "23c3c8fe409e3f94"
@@ -9890,7 +9859,7 @@
         "forType": "num",
         "forUnits": "minutes",
         "x": 330,
-        "y": 640,
+        "y": 620,
         "wires": [
             [
                 "47fcb13395bcf3f0"
@@ -9924,8 +9893,8 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1050,
-        "y": 660,
+        "x": 1030,
+        "y": 640,
         "wires": [
             []
         ]
@@ -9941,7 +9910,7 @@
         "payloadval": "0",
         "name": "Wait 30 Seconds",
         "x": 330,
-        "y": 580,
+        "y": 560,
         "wires": [
             [
                 "23c3c8fe409e3f94"
@@ -9990,7 +9959,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 460,
-        "y": 400,
+        "y": 380,
         "wires": [
             [
                 "edc283ca40d3c7ef"
@@ -10034,14 +10003,12 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 690,
-        "y": 400,
+        "y": 380,
         "wires": [
             [
-                "3fa2a7a15d94c156"
+                "d2df58b074b9ba08"
             ],
-            [
-                "7e89e4d34a758087"
-            ]
+            []
         ],
         "outputLabels": [
             "On",
@@ -10070,8 +10037,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1150,
-        "y": 360,
+        "x": 890,
+        "y": 380,
         "wires": [
             [
                 "be2ef3afc92034ec"
@@ -10110,10 +10077,10 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 830,
-        "y": 620,
+        "y": 600,
         "wires": [
             [
-                "38d9a4979f22e19f"
+                "2d510442b2e79794"
             ],
             [
                 "74c0ced4ac160364"
@@ -10155,11 +10122,11 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1070,
-        "y": 600,
+        "x": 1310,
+        "y": 580,
         "wires": [
             [
-                "d0cf87bd9c3ba0b1"
+                "4888e5649042a6d1"
             ],
             [
                 "83686fab02a3d825"
@@ -10192,12 +10159,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1300,
-        "y": 540,
+        "x": 1680,
+        "y": 520,
         "wires": [
-            [
-                "e70840b82c2bd54b"
-            ]
+            []
         ]
     },
     {
@@ -10222,12 +10187,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1290,
-        "y": 600,
+        "x": 1510,
+        "y": 620,
         "wires": [
-            [
-                "e70840b82c2bd54b"
-            ]
+            []
         ]
     },
     {
@@ -10325,7 +10288,7 @@
         "to": "",
         "reg": false,
         "x": 260,
-        "y": 500,
+        "y": 480,
         "wires": [
             [
                 "47fcb13395bcf3f0",
@@ -10365,7 +10328,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 580,
-        "y": 640,
+        "y": 620,
         "wires": [
             [
                 "e19f97e448023ade"
@@ -10688,99 +10651,6 @@
         "wires": []
     },
     {
-        "id": "572168639448c73d",
-        "type": "api-call-service",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Turn off lights",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_off",
-        "areaId": [
-            "upstairs_bathroom"
-        ],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1980,
-        "y": 660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e70840b82c2bd54b",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Check Kallen Overnight",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.kallen_overnight",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1550,
-        "y": 660,
-        "wires": [
-            [
-                "2dc5f9d3e00f4ddc"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "2dc5f9d3e00f4ddc",
-        "type": "stoptimer",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "duration": "2",
-        "units": "Minute",
-        "payloadtype": "num",
-        "payloadval": "0",
-        "name": "Wait 2 Minutes",
-        "x": 1780,
-        "y": 660,
-        "wires": [
-            [
-                "572168639448c73d"
-            ],
-            []
-        ]
-    },
-    {
         "id": "55e84ccb73ae9b74",
         "type": "link in",
         "z": "5e238cbbe6d612c9",
@@ -10790,7 +10660,7 @@
             "60ce44747cf3e507"
         ],
         "x": 135,
-        "y": 460,
+        "y": 440,
         "wires": [
             [
                 "bfcb013bbf11611c"
@@ -10880,48 +10750,6 @@
         ]
     },
     {
-        "id": "3fa2a7a15d94c156",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Check Kallen Overnight",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.kallen_overnight",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 930,
-        "y": 360,
-        "wires": [
-            [
-                "7e89e4d34a758087"
-            ],
-            [
-                "d2df58b074b9ba08"
-            ]
-        ]
-    },
-    {
         "id": "017de174925e8c75",
         "type": "server-state-changed",
         "z": "5e238cbbe6d612c9",
@@ -10965,17 +10793,139 @@
                 "valueType": "str"
             }
         ],
-        "x": 1300,
-        "y": 680,
+        "x": 1420,
+        "y": 440,
         "wires": [
             [
-                "e70840b82c2bd54b"
+                "2dc5f9d3e00f4ddc"
             ],
             []
         ],
         "outputLabels": [
             "On",
             "Off"
+        ]
+    },
+    {
+        "id": "2d510442b2e79794",
+        "type": "api-current-state",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "Check Kallen Overnight",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.kallen_overnight",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "kallen-overnight",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1070,
+        "y": 580,
+        "wires": [
+            [
+                "38d9a4979f22e19f"
+            ]
+        ]
+    },
+    {
+        "id": "2dc5f9d3e00f4ddc",
+        "type": "stoptimer",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "duration": "2",
+        "units": "Minute",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "Wait 2 Minutes",
+        "x": 1660,
+        "y": 440,
+        "wires": [
+            [
+                "86922621398f4b79"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "86922621398f4b79",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "Turn off light",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.upstairs_bathroom_lights"
+        ],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1850,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4888e5649042a6d1",
+        "type": "switch",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "",
+        "property": "kallen-overnight",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1490,
+        "y": 520,
+        "wires": [
+            [
+                "2dc5f9d3e00f4ddc"
+            ],
+            [
+                "d0cf87bd9c3ba0b1"
+            ]
         ]
     },
     {
