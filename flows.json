@@ -625,7 +625,6 @@
             "74c0ced4ac160364",
             "47fcb13395bcf3f0",
             "ea8536fc853a8af4",
-            "edc283ca40d3c7ef",
             "d2df58b074b9ba08",
             "e19f97e448023ade",
             "38d9a4979f22e19f",
@@ -692,9 +691,7 @@
             "1ad455bccec8ab46"
         ],
         "x": 14,
-        "y": 699,
-        "w": 1192,
-        "h": 362
+        "y": 699
     },
     {
         "id": "e065b1ed4938b477",
@@ -775,9 +772,7 @@
             "783cfb381b70afc5"
         ],
         "x": 14,
-        "y": 59,
-        "w": 2812,
-        "h": 622
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -803,9 +798,7 @@
             "6f011420f6bb15a7"
         ],
         "x": 34,
-        "y": 159,
-        "w": 882,
-        "h": 302
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -827,9 +820,7 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39,
-        "w": 872,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -851,9 +842,7 @@
             "427cc2991454bbf0"
         ],
         "x": 14,
-        "y": 219,
-        "w": 1012,
-        "h": 202
+        "y": 219
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -898,9 +887,7 @@
             "069a7ab44b04c9ef"
         ],
         "x": 34,
-        "y": 39,
-        "w": 872,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -917,9 +904,7 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 142
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -960,9 +945,7 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1432,
-        "h": 422
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1007,9 +990,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1036,9 +1017,7 @@
             "58b54517ed812db3"
         ],
         "x": 34,
-        "y": 239,
-        "w": 832,
-        "h": 382
+        "y": 239
     },
     {
         "id": "eeafd13be593ae69",
@@ -1067,9 +1046,7 @@
             "b69eeb738bbd4bdb"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1592,
-        "h": 282
+        "y": 539
     },
     {
         "id": "753e14252442d87d",
@@ -1196,9 +1173,7 @@
             "c52cae79eb97bcc0"
         ],
         "x": 14,
-        "y": 439,
-        "w": 1192,
-        "h": 302
+        "y": 439
     },
     {
         "id": "19b0e082db0643ac",
@@ -1229,7 +1204,7 @@
         "type": "junction",
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
-        "x": 960,
+        "x": 720,
         "y": 480,
         "wires": [
             [
@@ -9677,7 +9652,7 @@
         "payloadtype": "num",
         "payloadval": "0",
         "name": "Wait 5 Minutes",
-        "x": 1080,
+        "x": 860,
         "y": 380,
         "wires": [
             [
@@ -9822,57 +9797,13 @@
         "y": 380,
         "wires": [
             [
-                "edc283ca40d3c7ef"
+                "d2df58b074b9ba08"
             ],
             []
         ],
         "outputLabels": [
             "Off",
             "On"
-        ]
-    },
-    {
-        "id": "edc283ca40d3c7ef",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Check Early Night",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.early_night_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 690,
-        "y": 380,
-        "wires": [
-            [
-                "d2df58b074b9ba08"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "On",
-            "Off"
         ]
     },
     {
@@ -9897,7 +9828,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 890,
+        "x": 670,
         "y": 380,
         "wires": [
             [
