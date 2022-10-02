@@ -212,35 +212,6 @@
         "icon": "font-awesome/fa-cloud"
     },
     {
-        "id": "6a62fbf7b4e86589",
-        "type": "subflow",
-        "name": "Text Notifications - All iOS",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 120,
-                "y": 140,
-                "wires": [
-                    {
-                        "id": "c2fbd42b35152df7"
-                    },
-                    {
-                        "id": "5cdbb1186b8c5137"
-                    },
-                    {
-                        "id": "5670c96aacfc9475"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99",
-        "icon": "font-awesome/fa-mobile-phone"
-    },
-    {
         "id": "041613a2b6a0f41f",
         "type": "subflow",
         "name": "TV Notifications",
@@ -543,32 +514,6 @@
         }
     },
     {
-        "id": "6528a66fc0f094dd",
-        "type": "subflow",
-        "name": "Text Notifications - Parents iOS",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 60,
-                "y": 120,
-                "wires": [
-                    {
-                        "id": "f36962af7291fc31"
-                    },
-                    {
-                        "id": "9dca09d493da935e"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99",
-        "icon": "font-awesome/fa-mobile-phone"
-    },
-    {
         "id": "05a2d9f89e72481f",
         "type": "subflow",
         "name": "Alexa Location New",
@@ -747,7 +692,9 @@
             "1ad455bccec8ab46"
         ],
         "x": 14,
-        "y": 699
+        "y": 699,
+        "w": 1192,
+        "h": 362
     },
     {
         "id": "e065b1ed4938b477",
@@ -828,7 +775,9 @@
             "783cfb381b70afc5"
         ],
         "x": 14,
-        "y": 59
+        "y": 59,
+        "w": 2812,
+        "h": 622
     },
     {
         "id": "5c50443a84910fb7",
@@ -854,7 +803,9 @@
             "6f011420f6bb15a7"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 882,
+        "h": 302
     },
     {
         "id": "477e752fcd2e2a19",
@@ -876,7 +827,9 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -898,7 +851,9 @@
             "427cc2991454bbf0"
         ],
         "x": 14,
-        "y": 219
+        "y": 219,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -943,7 +898,9 @@
             "069a7ab44b04c9ef"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -960,7 +917,9 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 142
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1001,7 +960,9 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779
+        "y": 779,
+        "w": 1432,
+        "h": 422
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1046,7 +1007,9 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 832,
+        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -1073,7 +1036,9 @@
             "58b54517ed812db3"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 832,
+        "h": 382
     },
     {
         "id": "eeafd13be593ae69",
@@ -1102,7 +1067,9 @@
             "b69eeb738bbd4bdb"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1592,
+        "h": 282
     },
     {
         "id": "753e14252442d87d",
@@ -1229,7 +1196,9 @@
             "c52cae79eb97bcc0"
         ],
         "x": 14,
-        "y": 439
+        "y": 439,
+        "w": 1192,
+        "h": 302
     },
     {
         "id": "19b0e082db0643ac",
@@ -2317,81 +2286,6 @@
         "libs": [],
         "x": 360,
         "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5cdbb1186b8c5137",
-        "type": "api-call-service",
-        "z": "6a62fbf7b4e86589",
-        "name": "Notify Tony",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_notify_tony",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 270,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c2fbd42b35152df7",
-        "type": "api-call-service",
-        "z": "6a62fbf7b4e86589",
-        "name": "Notify Tina",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_notify_tina",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 270,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5670c96aacfc9475",
-        "type": "api-call-service",
-        "z": "6a62fbf7b4e86589",
-        "name": "Notify Kallen",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_notify_kallen",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 270,
-        "y": 200,
         "wires": [
             []
         ]
@@ -4111,56 +4005,6 @@
             [
                 "39f295bc8480147a"
             ]
-        ]
-    },
-    {
-        "id": "f36962af7291fc31",
-        "type": "api-call-service",
-        "z": "6528a66fc0f094dd",
-        "name": "Notify Tony",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_notify_tony",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 190,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9dca09d493da935e",
-        "type": "api-call-service",
-        "z": "6528a66fc0f094dd",
-        "name": "Notify Tina",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_notify_tina",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 190,
-        "y": 140,
-        "wires": [
-            []
         ]
     },
     {
@@ -6577,8 +6421,8 @@
         "y": 180,
         "wires": [
             [
-                "7e26d76790c3690d",
-                "4809adc3b17655bc"
+                "4809adc3b17655bc",
+                "db751091895c18b8"
             ]
         ]
     },
@@ -7025,19 +6869,10 @@
         "y": 120,
         "wires": [
             [
-                "7e26d76790c3690d",
-                "4809adc3b17655bc"
+                "4809adc3b17655bc",
+                "db751091895c18b8"
             ]
         ]
-    },
-    {
-        "id": "7e26d76790c3690d",
-        "type": "subflow:6a62fbf7b4e86589",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "",
-        "x": 2350,
-        "y": 120,
-        "wires": []
     },
     {
         "id": "4809adc3b17655bc",
@@ -7356,6 +7191,31 @@
         "outputLabels": [
             "Off",
             "On"
+        ]
+    },
+    {
+        "id": "db751091895c18b8",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "iOS Notifications",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2320,
+        "y": 120,
+        "wires": [
+            []
         ]
     },
     {
@@ -13987,15 +13847,6 @@
         ]
     },
     {
-        "id": "a06c762d2c1117ea",
-        "type": "subflow:6528a66fc0f094dd",
-        "z": "72f99805df043603",
-        "name": "",
-        "x": 250,
-        "y": 20,
-        "wires": []
-    },
-    {
         "id": "0652e441425c3875",
         "type": "link out",
         "z": "72f99805df043603",
@@ -14023,7 +13874,7 @@
         "y": 20,
         "wires": [
             [
-                "a06c762d2c1117ea"
+                "1eb13d819ba7e226"
             ]
         ]
     },
@@ -16716,6 +16567,31 @@
             [
                 "1dfb0bcc98f1457b"
             ]
+        ]
+    },
+    {
+        "id": "1eb13d819ba7e226",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "name": "iOS Notifications - Parents",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 240,
+        "y": 20,
+        "wires": [
+            []
         ]
     },
     {
