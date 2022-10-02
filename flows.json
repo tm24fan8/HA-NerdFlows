@@ -626,9 +626,7 @@
             "4888e5649042a6d1"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1852,
-        "h": 582
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -662,9 +660,7 @@
             "1ad455bccec8ab46"
         ],
         "x": 14,
-        "y": 699,
-        "w": 1192,
-        "h": 362
+        "y": 699
     },
     {
         "id": "e065b1ed4938b477",
@@ -747,9 +743,7 @@
             "d50e0d34df443b50"
         ],
         "x": 14,
-        "y": 59,
-        "w": 2812,
-        "h": 622
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -922,9 +916,7 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1432,
-        "h": 422
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -969,9 +961,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -998,9 +988,7 @@
             "58b54517ed812db3"
         ],
         "x": 34,
-        "y": 239,
-        "w": 832,
-        "h": 382
+        "y": 239
     },
     {
         "id": "eeafd13be593ae69",
@@ -1029,9 +1017,7 @@
             "b69eeb738bbd4bdb"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1592,
-        "h": 282
+        "y": 539
     },
     {
         "id": "753e14252442d87d",
@@ -19400,81 +19386,6 @@
         ]
     },
     {
-        "id": "cacac13b4d0c7f07",
-        "type": "api-call-service",
-        "z": "789ba711dc04fad2",
-        "name": "Notify Living Room TV",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "notify",
-        "service": "living_room_tv",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": \"Stream Starting\",\t    \"message\": \"Tony has started a live stream in the studio!\",\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"red\"\t    }\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 780,
-        "y": 20,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "574f6c6e7bd1b747",
-        "type": "api-call-service",
-        "z": "789ba711dc04fad2",
-        "name": "Notify Master Bedroom TV",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "notify",
-        "service": "master_bedroom_tv",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": \"Stream Starting\",\t    \"message\": \"Tony has started a live stream in the studio!\",\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"red\"\t    }\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 800,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2c677d9d0250ba8c",
-        "type": "api-call-service",
-        "z": "789ba711dc04fad2",
-        "name": "Notify Basement TV",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "notify",
-        "service": "basement_tv",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": \"Stream Starting\",\t    \"message\": \"Tony has started a live stream in the studio!\",\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"red\"\t    }\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 780,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "dcf595a3aeb025a4",
         "type": "api-call-service",
         "z": "789ba711dc04fad2",
@@ -19705,10 +19616,8 @@
         "wires": [
             [
                 "dcf595a3aeb025a4",
-                "2c677d9d0250ba8c",
-                "574f6c6e7bd1b747",
-                "cacac13b4d0c7f07",
-                "e6aea47391a1f784"
+                "e6aea47391a1f784",
+                "dc05476aa4d90974"
             ],
             []
         ],
@@ -19767,6 +19676,31 @@
         "queue": "none",
         "x": 770,
         "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc05476aa4d90974",
+        "type": "api-call-service",
+        "z": "789ba711dc04fad2",
+        "name": "TV Notifications",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "tv_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\":\"all\",\t    \"title\": \"Stream Starting\",\t    \"message\": \"Tony has started a live stream in the studio!\",\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"red\"\t    }\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 760,
+        "y": 140,
         "wires": [
             []
         ]
