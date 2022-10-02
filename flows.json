@@ -212,35 +212,6 @@
         "icon": "font-awesome/fa-cloud"
     },
     {
-        "id": "041613a2b6a0f41f",
-        "type": "subflow",
-        "name": "TV Notifications",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 40,
-                "y": 140,
-                "wires": [
-                    {
-                        "id": "ac2a90cbc3a881cc"
-                    },
-                    {
-                        "id": "fa19b82b8077159f"
-                    },
-                    {
-                        "id": "d46d599e70e07c4d"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99",
-        "icon": "font-awesome/fa-tv"
-    },
-    {
         "id": "6429099c4571dd6b",
         "type": "subflow",
         "name": "Speech Engine",
@@ -655,9 +626,7 @@
             "4888e5649042a6d1"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1852,
-        "h": 582
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -2261,81 +2230,6 @@
         "libs": [],
         "x": 360,
         "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ac2a90cbc3a881cc",
-        "type": "api-call-service",
-        "z": "041613a2b6a0f41f",
-        "name": "Notify Basement TV",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "notify",
-        "service": "basement_tv",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"indigo\"\t    }\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 220,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fa19b82b8077159f",
-        "type": "api-call-service",
-        "z": "041613a2b6a0f41f",
-        "name": "Notify Living Room TV",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "notify",
-        "service": "living_room_tv",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"indigo\"\t    }\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 220,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d46d599e70e07c4d",
-        "type": "api-call-service",
-        "z": "041613a2b6a0f41f",
-        "name": "Notify Master Bedroom TV",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "notify",
-        "service": "master_bedroom_tv",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"indigo\"\t    }\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 240,
-        "y": 200,
         "wires": [
             []
         ]
@@ -6396,8 +6290,8 @@
         "y": 180,
         "wires": [
             [
-                "4809adc3b17655bc",
-                "db751091895c18b8"
+                "db751091895c18b8",
+                "4449d5ec66482683"
             ]
         ]
     },
@@ -6844,19 +6738,10 @@
         "y": 120,
         "wires": [
             [
-                "4809adc3b17655bc",
-                "db751091895c18b8"
+                "db751091895c18b8",
+                "4449d5ec66482683"
             ]
         ]
-    },
-    {
-        "id": "4809adc3b17655bc",
-        "type": "subflow:041613a2b6a0f41f",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "",
-        "x": 2320,
-        "y": 180,
-        "wires": []
     },
     {
         "id": "5ee1e29d42eb0b88",
@@ -7189,6 +7074,31 @@
         "queue": "none",
         "x": 2320,
         "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4449d5ec66482683",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "TV Notifications",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "tv_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"indigo\"\t    }\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2320,
+        "y": 180,
         "wires": [
             []
         ]
@@ -7643,18 +7553,9 @@
         "y": 460,
         "wires": [
             [
-                "8c14794c1a67f8c8"
+                "10228956c46b8d7a"
             ]
         ]
-    },
-    {
-        "id": "8c14794c1a67f8c8",
-        "type": "subflow:041613a2b6a0f41f",
-        "z": "3abb5ae57afb4761",
-        "name": "",
-        "x": 600,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "e6bdfba61c73d081",
@@ -7713,18 +7614,9 @@
         "y": 160,
         "wires": [
             [
-                "cfe98915cc1dba48"
+                "0a039e097233b977"
             ]
         ]
-    },
-    {
-        "id": "cfe98915cc1dba48",
-        "type": "subflow:041613a2b6a0f41f",
-        "z": "3abb5ae57afb4761",
-        "name": "",
-        "x": 600,
-        "y": 160,
-        "wires": []
     },
     {
         "id": "41aa4436b55474b2",
@@ -8090,6 +7982,56 @@
             [
                 "fb1afc4c2078ca29"
             ]
+        ]
+    },
+    {
+        "id": "0a039e097233b977",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "TV Notifications",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "tv_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"indigo\"\t    }\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 600,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10228956c46b8d7a",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "TV Notifications",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "tv_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"indigo\"\t    }\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 600,
+        "y": 460,
+        "wires": [
+            []
         ]
     },
     {
