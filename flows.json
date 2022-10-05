@@ -791,7 +791,9 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -813,7 +815,9 @@
             "427cc2991454bbf0"
         ],
         "x": 14,
-        "y": 219
+        "y": 219,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1141,10 +1145,17 @@
             "0145961e8276c53e",
             "fd623c46a558a01a",
             "926fc60ea00ddfb0",
-            "c52cae79eb97bcc0"
+            "c52cae79eb97bcc0",
+            "b2d2662449cd647d",
+            "e8e1ab11cb74c845",
+            "b223f330d8775c38",
+            "b11a4ad5e96d028b",
+            "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 439
+        "y": 439,
+        "w": 1552,
+        "h": 422
     },
     {
         "id": "19b0e082db0643ac",
@@ -18801,7 +18812,7 @@
             }
         ],
         "x": 120,
-        "y": 520,
+        "y": 580,
         "wires": [
             [
                 "e3ef7fe6bcad3b74"
@@ -18839,12 +18850,13 @@
             }
         ],
         "x": 140,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "d2fec32d385dae8c",
                 "0145961e8276c53e",
-                "fd623c46a558a01a"
+                "fd623c46a558a01a",
+                "6b039ef7895476e2"
             ]
         ]
     },
@@ -18880,11 +18892,10 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 440,
-        "y": 520,
+        "y": 580,
         "wires": [
             [
-                "3d5448e57ef666a0",
-                "5de6d772e1ecdd22"
+                "b2d2662449cd647d"
             ]
         ]
     },
@@ -18919,8 +18930,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 620,
-        "y": 480,
+        "x": 760,
+        "y": 540,
         "wires": [
             [
                 "c684d82a2abea389"
@@ -18958,8 +18969,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 610,
-        "y": 560,
+        "x": 750,
+        "y": 620,
         "wires": [
             [
                 "ba18895fef9810bd"
@@ -18984,8 +18995,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 770,
-        "y": 480,
+        "x": 910,
+        "y": 540,
         "wires": [
             [
                 "20666f8c1488d423"
@@ -19010,8 +19021,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 770,
-        "y": 560,
+        "x": 910,
+        "y": 620,
         "wires": [
             [
                 "926fc60ea00ddfb0"
@@ -19030,11 +19041,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 480,
+        "x": 1070,
+        "y": 540,
         "wires": [
             [
-                "db6d955c039873be"
+                "e8e1ab11cb74c845"
             ]
         ]
     },
@@ -19043,7 +19054,7 @@
         "type": "api-call-service",
         "z": "ee67610b4a0578d2",
         "g": "5595964c8367c984",
-        "name": "Phone Notify",
+        "name": "Text Notify",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -19058,7 +19069,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1110,
+        "x": 1430,
         "y": 480,
         "wires": [
             []
@@ -19096,7 +19107,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 290,
-        "y": 520,
+        "y": 580,
         "wires": [
             [
                 "95652a59518e2767"
@@ -19126,7 +19137,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 350,
-        "y": 580,
+        "y": 640,
         "wires": [
             []
         ]
@@ -19154,7 +19165,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 350,
-        "y": 640,
+        "y": 700,
         "wires": [
             []
         ]
@@ -19183,7 +19194,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 360,
-        "y": 700,
+        "y": 760,
         "wires": [
             []
         ]
@@ -19200,8 +19211,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 560,
+        "x": 1070,
+        "y": 620,
         "wires": [
             [
                 "c52cae79eb97bcc0"
@@ -19228,8 +19239,170 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1100,
-        "y": 560,
+        "x": 1240,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2d2662449cd647d",
+        "type": "api-current-state",
+        "z": "ee67610b4a0578d2",
+        "g": "5595964c8367c984",
+        "name": "Priority",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_select.text_notification_priority_level",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "priority",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 600,
+        "y": 580,
+        "wires": [
+            [
+                "3d5448e57ef666a0",
+                "5de6d772e1ecdd22"
+            ]
+        ]
+    },
+    {
+        "id": "e8e1ab11cb74c845",
+        "type": "switch",
+        "z": "ee67610b4a0578d2",
+        "g": "5595964c8367c984",
+        "name": "Priority",
+        "property": "priority",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Normal",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Alert",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Critical",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1240,
+        "y": 540,
+        "wires": [
+            [
+                "db6d955c039873be"
+            ],
+            [
+                "b223f330d8775c38"
+            ],
+            [
+                "b11a4ad5e96d028b"
+            ]
+        ]
+    },
+    {
+        "id": "b223f330d8775c38",
+        "type": "api-call-service",
+        "z": "ee67610b4a0578d2",
+        "g": "5595964c8367c984",
+        "name": "Text Alert",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_alert",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\": msg.phones,\t    \"title\": msg.title,\t    \"message\": msg.payload\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1420,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b11a4ad5e96d028b",
+        "type": "api-call-service",
+        "z": "ee67610b4a0578d2",
+        "g": "5595964c8367c984",
+        "name": "Text Alert Urgent",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_urgent_alert",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\": msg.phones,\t    \"title\": msg.title,\t    \"message\": msg.payload\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1450,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6b039ef7895476e2",
+        "type": "api-call-service",
+        "z": "ee67610b4a0578d2",
+        "g": "5595964c8367c984",
+        "name": "Reset Priority",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.text_notification_priority_level"
+        ],
+        "data": "{\t    \"option\":\"Normal\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 360,
+        "y": 820,
         "wires": [
             []
         ]
