@@ -791,9 +791,7 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39,
-        "w": 872,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -815,9 +813,7 @@
             "427cc2991454bbf0"
         ],
         "x": 14,
-        "y": 219,
-        "w": 1012,
-        "h": 202
+        "y": 219
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -994,9 +990,7 @@
             "59af14a564176ce4"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 382
+        "y": 239
     },
     {
         "id": "eeafd13be593ae69",
@@ -1157,9 +1151,7 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 439,
-        "w": 1552,
-        "h": 422
+        "y": 439
     },
     {
         "id": "19b0e082db0643ac",
@@ -7508,11 +7500,11 @@
         "version": 5,
         "debugenabled": false,
         "domain": "script",
-        "service": "text_notify_tony",
+        "service": "text_notify",
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"title\": \"New Arrival\",\t    \"message\": \"Christina has arrived at home!\",\t    \"data\": {\t        \"url\": \"/lovelace/mobile-devices\"\t    }\t}",
+        "data": "{\t    \"who\":\"tony\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Tina has arrived at home!\",\t    \"data\": {\t        \"url\": \"/lovelace/mobile-devices\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
