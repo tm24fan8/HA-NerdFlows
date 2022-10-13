@@ -16628,12 +16628,12 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Routing",
-        "property": "hot_temp",
+        "property": "hightemp",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "gte",
-                "v": "hightemp",
+                "v": "hot_temp",
                 "vt": "msg"
             },
             {
