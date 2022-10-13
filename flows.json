@@ -641,7 +641,6 @@
             "9e1418c3e9595312",
             "3166f71fdf62748a",
             "4792e2d88f7d533f",
-            "92c0fceb3205cad9",
             "6e10b32a122e8a2c",
             "99e74844b8fd9d1a",
             "da1a1f23bf9429c5",
@@ -657,10 +656,14 @@
             "cc1af8532e3dc820",
             "39d187b7e17d80ab",
             "49eadd57e9728914",
-            "1ad455bccec8ab46"
+            "1ad455bccec8ab46",
+            "d823b8a033f30d40",
+            "c2bb11a2ba39b636"
         ],
         "x": 14,
-        "y": 699
+        "y": 699,
+        "w": 1312,
+        "h": 362
     },
     {
         "id": "e065b1ed4938b477",
@@ -674,10 +677,8 @@
             "8e399b2a287a0905",
             "314752dbc6fd170d",
             "d7261338e6b907f1",
-            "49ad25e2bcd710b0",
             "fa2b43f4eec9f89a",
             "6fb7131d5534350c",
-            "0deeaa74dd6c25c5",
             "fd0a309681a536de",
             "40dc1e930b887eb7",
             "bf1b0d6542ef6b38",
@@ -740,10 +741,16 @@
             "096369136e9e607f",
             "783cfb381b70afc5",
             "5008caa0192238f7",
-            "d50e0d34df443b50"
+            "d50e0d34df443b50",
+            "1c601a60ac7b668f",
+            "29814d3dcc93670c",
+            "0ba87300a6fd6950",
+            "ce3e05090d0848d5"
         ],
         "x": 14,
-        "y": 59
+        "y": 59,
+        "w": 2812,
+        "h": 622
     },
     {
         "id": "5c50443a84910fb7",
@@ -916,9 +923,7 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1432,
-        "h": 422
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -963,9 +968,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -994,9 +997,7 @@
             "59af14a564176ce4"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 382
+        "y": 239
     },
     {
         "id": "eeafd13be593ae69",
@@ -1025,9 +1026,7 @@
             "b69eeb738bbd4bdb"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1592,
-        "h": 282
+        "y": 539
     },
     {
         "id": "753e14252442d87d",
@@ -13534,54 +13533,6 @@
         ]
     },
     {
-        "id": "49ad25e2bcd710b0",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Tonight's Low Temp",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "50",
-        "halt_if_type": "num",
-        "halt_if_compare": "gte",
-        "entity_id": "sensor.tonights_low_temp",
-        "state_type": "num",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "lowtemp",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1490,
-        "y": 240,
-        "wires": [
-            [
-                "0deeaa74dd6c25c5"
-            ],
-            [
-                "d50e0d34df443b50"
-            ]
-        ]
-    },
-    {
         "id": "fa2b43f4eec9f89a",
         "type": "api-current-state",
         "z": "72f99805df043603",
@@ -13636,28 +13587,22 @@
         "type": "api-current-state",
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
-        "name": "Tonight's Low Temp",
+        "name": "Scheduled Mode",
         "server": "9e87348d.9c1c48",
         "version": 3,
         "outputs": 2,
-        "halt_if": "40",
-        "halt_if_type": "num",
-        "halt_if_compare": "gt",
-        "entity_id": "sensor.tonights_low_temp",
-        "state_type": "num",
+        "halt_if": "Fan",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_select.scheduled_climate_mode_master_bedroom_fan",
+        "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
             {
-                "property": "lowtemp",
+                "property": "sched_fan",
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
             }
         ],
         "for": "0",
@@ -13675,54 +13620,6 @@
                 "bf1b0d6542ef6b38"
             ],
             []
-        ]
-    },
-    {
-        "id": "0deeaa74dd6c25c5",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": ">57 / <57",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "57",
-        "halt_if_type": "num",
-        "halt_if_compare": "gte",
-        "entity_id": "sensor.tonights_low_temp",
-        "state_type": "num",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "lowtemp",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1680,
-        "y": 240,
-        "wires": [
-            [
-                "fd0a309681a536de"
-            ],
-            [
-                "40dc1e930b887eb7"
-            ]
         ]
     },
     {
@@ -14037,13 +13934,13 @@
         "type": "api-current-state",
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
-        "name": "High above 80",
+        "name": "High Temp",
         "server": "9e87348d.9c1c48",
         "version": 3,
-        "outputs": 2,
-        "halt_if": "80",
+        "outputs": 1,
+        "halt_if": "",
         "halt_if_type": "num",
-        "halt_if_compare": "gt",
+        "halt_if_compare": "is",
         "entity_id": "sensor.todays_high_temp",
         "state_type": "num",
         "blockInputOverrides": false,
@@ -14053,12 +13950,6 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
             }
         ],
         "for": "0",
@@ -14069,14 +13960,11 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1280,
+        "x": 1270,
         "y": 500,
         "wires": [
             [
-                "24c3166123d5dad0"
-            ],
-            [
-                "b14bcbf98b7e9f91"
+                "0ba87300a6fd6950"
             ]
         ]
     },
@@ -14102,7 +13990,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1470,
+        "x": 1810,
         "y": 480,
         "wires": [
             [
@@ -14132,7 +14020,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2020,
+        "x": 2360,
         "y": 420,
         "wires": [
             []
@@ -14160,7 +14048,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1470,
+        "x": 1810,
         "y": 540,
         "wires": [
             []
@@ -14323,7 +14211,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1640,
+        "x": 1980,
         "y": 460,
         "wires": [
             [
@@ -14535,55 +14423,7 @@
                 "d132875202e85038"
             ],
             [
-                "92c0fceb3205cad9"
-            ]
-        ]
-    },
-    {
-        "id": "92c0fceb3205cad9",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Tonight's Low < 45",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "45",
-        "halt_if_type": "num",
-        "halt_if_compare": "lte",
-        "entity_id": "sensor.tonights_low_temp",
-        "state_type": "num",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 350,
-        "y": 880,
-        "wires": [
-            [
-                "6e10b32a122e8a2c"
-            ],
-            [
-                "2f3666d288d77ad1"
+                "d823b8a033f30d40"
             ]
         ]
     },
@@ -14611,7 +14451,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 540,
+        "x": 680,
         "y": 860,
         "wires": [
             [
@@ -14638,7 +14478,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 700,
+        "x": 840,
         "y": 840,
         "wires": [
             [
@@ -14668,7 +14508,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 870,
+        "x": 1010,
         "y": 840,
         "wires": [
             [
@@ -14698,7 +14538,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1060,
+        "x": 1200,
         "y": 840,
         "wires": [
             []
@@ -14728,7 +14568,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 540,
+        "x": 680,
         "y": 960,
         "wires": [
             [
@@ -14754,7 +14594,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 920,
+        "x": 1060,
         "y": 960,
         "wires": [
             [
@@ -14784,7 +14624,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1090,
+        "x": 1230,
         "y": 960,
         "wires": [
             []
@@ -14812,7 +14652,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 700,
+        "x": 840,
         "y": 960,
         "wires": [
             [
@@ -14940,7 +14780,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
+        "x": 1080,
         "y": 1020,
         "wires": [
             [
@@ -14958,7 +14798,7 @@
         "links": [
             "6f595f2a4713d76d"
         ],
-        "x": 1075,
+        "x": 1215,
         "y": 1020,
         "wires": []
     },
@@ -14996,7 +14836,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
+        "x": 860,
         "y": 900,
         "wires": [
             [
@@ -15086,7 +14926,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1830,
+        "x": 2170,
         "y": 440,
         "wires": [
             [
@@ -16291,7 +16131,7 @@
         "server": "9e87348d.9c1c48",
         "version": 3,
         "outputs": 2,
-        "halt_if": "on",
+        "halt_if": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is",
         "entity_id": "input_boolean.shower_mode",
@@ -16322,10 +16162,10 @@
         "x": 1280,
         "y": 240,
         "wires": [
-            [],
             [
-                "49ad25e2bcd710b0"
-            ]
+                "1c601a60ac7b668f"
+            ],
+            []
         ],
         "outputLabels": [
             "On",
@@ -16586,6 +16426,7 @@
         "id": "1eb13d819ba7e226",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "name": "iOS Notifications - Parents",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -16629,7 +16470,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1840,
+        "x": 2000,
         "y": 140,
         "wires": [
             []
@@ -16653,13 +16494,254 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1680,
+        "x": 1840,
         "y": 140,
         "wires": [
             [
                 "5008caa0192238f7"
             ]
         ]
+    },
+    {
+        "id": "1c601a60ac7b668f",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Scheduled Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_select.scheduled_climate_mode_master_bedroom_aircon",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "sched_mode",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1490,
+        "y": 240,
+        "wires": [
+            [
+                "29814d3dcc93670c"
+            ]
+        ]
+    },
+    {
+        "id": "29814d3dcc93670c",
+        "type": "switch",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Routing",
+        "property": "sched_mode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "AC",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Fan",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "None",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1680,
+        "y": 240,
+        "wires": [
+            [
+                "fd0a309681a536de"
+            ],
+            [
+                "40dc1e930b887eb7"
+            ],
+            [
+                "d50e0d34df443b50"
+            ]
+        ]
+    },
+    {
+        "id": "0ba87300a6fd6950",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Day Threshold",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.master_bedroom_daytime_threshold",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "hot_temp",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1460,
+        "y": 500,
+        "wires": [
+            [
+                "ce3e05090d0848d5"
+            ]
+        ]
+    },
+    {
+        "id": "ce3e05090d0848d5",
+        "type": "switch",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Routing",
+        "property": "hot_temp",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "hightemp",
+                "vt": "msg"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1640,
+        "y": 500,
+        "wires": [
+            [
+                "24c3166123d5dad0"
+            ],
+            [
+                "b14bcbf98b7e9f91"
+            ]
+        ]
+    },
+    {
+        "id": "d823b8a033f30d40",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Scheduled Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_select.scheduled_climate_mode_kallen_fan",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "sched_mode",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 350,
+        "y": 860,
+        "wires": [
+            [
+                "c2bb11a2ba39b636"
+            ]
+        ]
+    },
+    {
+        "id": "c2bb11a2ba39b636",
+        "type": "switch",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "",
+        "property": "sched_mode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "White Noise",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Fan",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "None",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 530,
+        "y": 860,
+        "wires": [
+            [
+                "6e10b32a122e8a2c"
+            ],
+            [
+                "2f3666d288d77ad1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "107212232ffe0e34",
+        "type": "comment",
+        "z": "72f99805df043603",
+        "name": "Fix this",
+        "info": "",
+        "x": 430,
+        "y": 20,
+        "wires": []
     },
     {
         "id": "105271e0816c6a52",
