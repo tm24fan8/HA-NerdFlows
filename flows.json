@@ -13725,7 +13725,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Too cold outside, AC running fan only due to low of lowtemp",
+                "to": "Too cold outside, AC running fan only.",
                 "tot": "str"
             },
             {
@@ -13734,15 +13734,6 @@
                 "pt": "msg",
                 "to": "AC Schedule Skipped",
                 "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "lowtemp",
-                "fromt": "str",
-                "to": "lowtemp",
-                "tot": "msg"
             }
         ],
         "action": "",
@@ -13801,7 +13792,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Master bedroom AC temp has been set to nighttemp as scheduled based on tonight's forecast low of lowtemp",
+                "to": "Master bedroom AC temp has been set to nighttemp as scheduled",
                 "tot": "str"
             },
             {
@@ -13818,15 +13809,6 @@
                 "from": "nighttemp",
                 "fromt": "str",
                 "to": "nighttemp",
-                "tot": "msg"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "lowtemp",
-                "fromt": "str",
-                "to": "lowtemp",
                 "tot": "msg"
             }
         ],
@@ -13884,7 +13866,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Master bedroom fan has been activated, as scheduled based on tonight's forecast low of lowtemp",
+                "to": "Master bedroom fan has been activated as scheduled.",
                 "tot": "str"
             },
             {
@@ -13893,15 +13875,6 @@
                 "pt": "msg",
                 "to": "Fan Schedule Activated",
                 "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "lowtemp",
-                "fromt": "str",
-                "to": "lowtemp",
-                "tot": "msg"
             }
         ],
         "action": "",
@@ -16428,7 +16401,6 @@
         "id": "1eb13d819ba7e226",
         "type": "api-call-service",
         "z": "72f99805df043603",
-        "d": true,
         "name": "iOS Notifications - Parents",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -16736,16 +16708,6 @@
                 "0a4f9c693fccd1f1"
             ]
         ]
-    },
-    {
-        "id": "107212232ffe0e34",
-        "type": "comment",
-        "z": "72f99805df043603",
-        "name": "Fix this",
-        "info": "",
-        "x": 430,
-        "y": 20,
-        "wires": []
     },
     {
         "id": "0a4f9c693fccd1f1",
