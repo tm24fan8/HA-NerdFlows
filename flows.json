@@ -658,12 +658,14 @@
             "49eadd57e9728914",
             "1ad455bccec8ab46",
             "d823b8a033f30d40",
-            "c2bb11a2ba39b636"
+            "c2bb11a2ba39b636",
+            "0a4f9c693fccd1f1",
+            "59d83dd7c5adba1f"
         ],
         "x": 14,
         "y": 699,
         "w": 1312,
-        "h": 362
+        "h": 422
     },
     {
         "id": "e065b1ed4938b477",
@@ -16730,7 +16732,9 @@
             [
                 "2f3666d288d77ad1"
             ],
-            []
+            [
+                "0a4f9c693fccd1f1"
+            ]
         ]
     },
     {
@@ -16742,6 +16746,80 @@
         "x": 430,
         "y": 20,
         "wires": []
+    },
+    {
+        "id": "0a4f9c693fccd1f1",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Lights On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [
+            "kallen_bedroom",
+            "upstairs_bathroom",
+            "upstairs_hallway"
+        ],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 680,
+        "y": 1020,
+        "wires": [
+            [
+                "59d83dd7c5adba1f"
+            ]
+        ]
+    },
+    {
+        "id": "59d83dd7c5adba1f",
+        "type": "change",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Lights are now on in Colin's bedroom. Other actions skipped.",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "everywhere",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "voice",
+                "pt": "msg",
+                "to": "Emma",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 1080,
+        "wires": [
+            [
+                "fce2383754c91a31"
+            ]
+        ]
     },
     {
         "id": "105271e0816c6a52",
