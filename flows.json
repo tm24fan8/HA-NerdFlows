@@ -997,9 +997,7 @@
             "59af14a564176ce4"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 382
+        "y": 239
     },
     {
         "id": "eeafd13be593ae69",
@@ -7350,6 +7348,12 @@
                 "propertyType": "msg",
                 "value": "presence",
                 "valueType": "str"
+            },
+            {
+                "property": "tinawork",
+                "propertyType": "msg",
+                "value": "tinawork",
+                "valueType": "global"
             }
         ],
         "x": 170,
@@ -7359,8 +7363,8 @@
                 "a0c7649e26e66ddb",
                 "35d7371023527600",
                 "edaa6ff605ba6fa7",
-                "abdb3c9694b18a39",
-                "26f15fc8d75a4020"
+                "26f15fc8d75a4020",
+                "7ff36affdeacadba"
             ],
             [
                 "898659d514aa58fd"
@@ -7728,30 +7732,11 @@
         ]
     },
     {
-        "id": "abdb3c9694b18a39",
-        "type": "function",
-        "z": "3abb5ae57afb4761",
-        "name": "Get Variable - Tinawork",
-        "func": "var tinawork = global.get('tinawork')\n\nif (tinawork === \"on\") {\n    msg.payload = \"on\"\n} else if (tinawork === \"off\") {\n    msg.payload = \"off\"\n} else {\n    msg.payload = \"unknown\"\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 340,
-        "wires": [
-            [
-                "7ff36affdeacadba"
-            ]
-        ]
-    },
-    {
         "id": "7ff36affdeacadba",
         "type": "switch",
         "z": "3abb5ae57afb4761",
         "name": "",
-        "property": "payload",
+        "property": "tinawork",
         "propertyType": "msg",
         "rules": [
             {
@@ -7765,15 +7750,13 @@
                 "vt": "str"
             },
             {
-                "t": "eq",
-                "v": "unknown",
-                "vt": "str"
+                "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 650,
+        "x": 370,
         "y": 340,
         "wires": [
             [
