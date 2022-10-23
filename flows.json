@@ -591,10 +591,7 @@
         },
         "nodes": [
             "a1ee07ab20229b45",
-            "be2ef3afc92034ec",
-            "23c3c8fe409e3f94",
             "74c0ced4ac160364",
-            "47fcb13395bcf3f0",
             "ea8536fc853a8af4",
             "d2df58b074b9ba08",
             "e19f97e448023ade",
@@ -623,7 +620,8 @@
             "2d510442b2e79794",
             "2dc5f9d3e00f4ddc",
             "86922621398f4b79",
-            "4888e5649042a6d1"
+            "4888e5649042a6d1",
+            "9fa0fef0f57d5968"
         ],
         "x": 94,
         "y": 339,
@@ -1190,12 +1188,12 @@
         "type": "junction",
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
-        "x": 720,
+        "x": 540,
         "y": 480,
         "wires": [
             [
-                "be2ef3afc92034ec",
-                "34e2055344eea8fe"
+                "34e2055344eea8fe",
+                "9fa0fef0f57d5968"
             ]
         ]
     },
@@ -9656,68 +9654,6 @@
         ]
     },
     {
-        "id": "be2ef3afc92034ec",
-        "type": "stoptimer",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "duration": "5",
-        "units": "Minute",
-        "payloadtype": "num",
-        "payloadval": "0",
-        "name": "Wait 5 Minutes",
-        "x": 860,
-        "y": 380,
-        "wires": [
-            [
-                "23c3c8fe409e3f94"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "23c3c8fe409e3f94",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Motion Detected?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.upstairs_bathroom_motion",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 330,
-        "y": 620,
-        "wires": [
-            [
-                "47fcb13395bcf3f0"
-            ],
-            [
-                "785049971f40b7b2"
-            ]
-        ]
-    },
-    {
         "id": "74c0ced4ac160364",
         "type": "api-call-service",
         "z": "5e238cbbe6d612c9",
@@ -9744,25 +9680,6 @@
         "x": 1030,
         "y": 640,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "47fcb13395bcf3f0",
-        "type": "stoptimer",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "duration": "30",
-        "units": "Second",
-        "payloadtype": "num",
-        "payloadval": "0",
-        "name": "Wait 30 Seconds",
-        "x": 330,
-        "y": 560,
-        "wires": [
-            [
-                "23c3c8fe409e3f94"
-            ],
             []
         ]
     },
@@ -9810,7 +9727,7 @@
         "y": 380,
         "wires": [
             [
-                "d2df58b074b9ba08"
+                "9fa0fef0f57d5968"
             ],
             []
         ],
@@ -9841,12 +9758,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 670,
+        "x": 850,
         "y": 380,
         "wires": [
-            [
-                "be2ef3afc92034ec"
-            ]
+            []
         ]
     },
     {
@@ -10095,7 +10010,6 @@
         "y": 480,
         "wires": [
             [
-                "47fcb13395bcf3f0",
                 "e90e0b2a6d30d855"
             ]
         ]
@@ -10729,6 +10643,35 @@
             ],
             [
                 "d0cf87bd9c3ba0b1"
+            ]
+        ]
+    },
+    {
+        "id": "9fa0fef0f57d5968",
+        "type": "trigger",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "stop",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 670,
+        "y": 380,
+        "wires": [
+            [
+                "d2df58b074b9ba08"
+            ],
+            [
+                "785049971f40b7b2"
             ]
         ]
     },
@@ -22515,6 +22458,141 @@
         "wires": [
             [
                 "2a6fe7c07c6b34e1"
+            ]
+        ]
+    },
+    {
+        "id": "7ddf9ea.ce1666",
+        "type": "trigger",
+        "z": "d49b385d8b582b20",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "stop",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 260,
+        "y": 540,
+        "wires": [
+            [
+                "9cd45d14.c50fc",
+                "d0e34d98.f2042"
+            ],
+            [
+                "9cd45d14.c50fc",
+                "4666b91c.95c868"
+            ]
+        ]
+    },
+    {
+        "id": "4f9f0445.d36d2c",
+        "type": "inject",
+        "z": "d49b385d8b582b20",
+        "name": "motion",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "7ddf9ea.ce1666"
+            ]
+        ]
+    },
+    {
+        "id": "d0e34d98.f2042",
+        "type": "debug",
+        "z": "d49b385d8b582b20",
+        "name": "Switch on",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "4666b91c.95c868",
+        "type": "debug",
+        "z": "d49b385d8b582b20",
+        "name": "Switch off",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "9cd45d14.c50fc",
+        "type": "debug",
+        "z": "d49b385d8b582b20",
+        "name": "The Lamp",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 560,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4c6b1c69069e01e9",
+        "type": "inject",
+        "z": "d49b385d8b582b20",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 110,
+        "y": 600,
+        "wires": [
+            [
+                "7ddf9ea.ce1666"
             ]
         ]
     }
