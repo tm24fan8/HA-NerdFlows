@@ -626,7 +626,9 @@
             "4888e5649042a6d1"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1852,
+        "h": 582
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -663,7 +665,9 @@
             "59d83dd7c5adba1f"
         ],
         "x": 14,
-        "y": 699
+        "y": 699,
+        "w": 1312,
+        "h": 422
     },
     {
         "id": "e065b1ed4938b477",
@@ -748,7 +752,9 @@
             "ce3e05090d0848d5"
         ],
         "x": 14,
-        "y": 59
+        "y": 59,
+        "w": 2812,
+        "h": 622
     },
     {
         "id": "5c50443a84910fb7",
@@ -774,7 +780,9 @@
             "6f011420f6bb15a7"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 882,
+        "h": 302
     },
     {
         "id": "477e752fcd2e2a19",
@@ -863,7 +871,9 @@
             "069a7ab44b04c9ef"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -880,7 +890,9 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 142
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -921,7 +933,9 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779
+        "y": 779,
+        "w": 1432,
+        "h": 422
     },
     {
         "id": "f55a52c40b8b8749",
@@ -966,7 +980,9 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 832,
+        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -995,7 +1011,9 @@
             "59af14a564176ce4"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1032,
+        "h": 382
     },
     {
         "id": "eeafd13be593ae69",
@@ -1024,7 +1042,9 @@
             "b69eeb738bbd4bdb"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1592,
+        "h": 282
     },
     {
         "id": "753e14252442d87d",
@@ -3313,7 +3333,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"25%\",\t        color: \"red\"\t    }\t}",
+        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\",\t        \"color\": \"red\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -3338,7 +3358,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"red\"\t    }\t}",
+        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"30%\",\t        \"color\": \"red\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -3831,7 +3851,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"red\"\t    }\t}",
+        "data": "{\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"30%\",\t        \"color\": \"red\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -7142,7 +7162,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"25%\",\t        color: \"indigo\"\t    }\t}",
+        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -8048,7 +8068,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"25%\",\t        color: \"indigo\"\t    }\t}",
+        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\",\t        \"color\": \"green\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -8073,7 +8093,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"25%\",\t        color: \"indigo\"\t    }\t}",
+        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\",\t        \"color\": \"green\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -20146,7 +20166,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": \"Stream Starting\",\t    \"message\": \"Tony has started a live stream in the studio!\",\t    \"data\": {\t        fontsize: \"large\",\t        duration: 3,\t        transparency: \"30%\",\t        color: \"red\"\t    }\t}",
+        "data": "{\t    \"who\":\"all\",\t    \"title\": \"Stream Starting\",\t    \"message\": \"Tony has started a live stream in the studio!\",\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"30%\",\t        \"color\": \"indigo\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
