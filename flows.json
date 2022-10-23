@@ -131,7 +131,7 @@
         "id": "d3dcbe534743b01d",
         "type": "tab",
         "label": "Discord",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
