@@ -1014,9 +1014,6 @@
         "nodes": [
             "05547a934bbcab4d",
             "091390f43bfeddf5",
-            "26bda03370a86d83",
-            "f65b2eccda530bcd",
-            "1bf27a631436c914",
             "7a7229eb69c9b1a3",
             "edef3ad58f6e9bbd",
             "780ad4c1a1d5204b",
@@ -1027,10 +1024,17 @@
             "de4f1b15ce906809",
             "bd75b077a1c76fce",
             "dda150ba32752234",
-            "b69eeb738bbd4bdb"
+            "b69eeb738bbd4bdb",
+            "cfdcc7c9c168dc17",
+            "f56b84619fd19f18",
+            "8f3c66f06ed3f7b2",
+            "d8a2fa45040cce43",
+            "aeae503fd214ff93"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1772,
+        "h": 282
     },
     {
         "id": "753e14252442d87d",
@@ -7232,7 +7236,7 @@
                 "77857e77d43a9d2e",
                 "7169f007c32ccc46",
                 "e6bdfba61c73d081",
-                "26f15fc8d75a4020"
+                "77bb530373808a86"
             ],
             [
                 "379edcf9fe985ebe"
@@ -7367,8 +7371,8 @@
                 "a0c7649e26e66ddb",
                 "35d7371023527600",
                 "edaa6ff605ba6fa7",
-                "26f15fc8d75a4020",
-                "7ff36affdeacadba"
+                "7ff36affdeacadba",
+                "77bb530373808a86"
             ],
             [
                 "898659d514aa58fd"
@@ -7867,7 +7871,7 @@
         "links": [
             "f34816b23181f21e"
         ],
-        "x": 195,
+        "x": 305,
         "y": 300,
         "wires": []
     },
@@ -8106,6 +8110,33 @@
         "wires": [
             [
                 "edaa6ff605ba6fa7"
+            ]
+        ]
+    },
+    {
+        "id": "77bb530373808a86",
+        "type": "change",
+        "z": "3abb5ae57afb4761",
+        "name": "Formatting",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "26f15fc8d75a4020"
             ]
         ]
     },
@@ -8695,10 +8726,10 @@
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
-        "haltifstate": "on",
+        "haltifstate": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
+        "outputs": 1,
         "output_only_on_state_change": true,
         "for": "0",
         "forType": "num",
@@ -8716,18 +8747,6 @@
                 "valueType": "entityState"
             },
             {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
                 "property": "detect",
                 "propertyType": "msg",
                 "value": "motion",
@@ -8738,13 +8757,11 @@
         "y": 640,
         "wires": [
             [
-                "edef3ad58f6e9bbd"
-            ],
-            []
+                "cfdcc7c9c168dc17"
+            ]
         ],
         "outputLabels": [
-            "On",
-            "Off"
+            "On"
         ]
     },
     {
@@ -8771,94 +8788,12 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 770,
+        "x": 950,
         "y": 640,
         "wires": [
             [
-                "26bda03370a86d83",
                 "dda150ba32752234"
             ]
-        ]
-    },
-    {
-        "id": "26bda03370a86d83",
-        "type": "stoptimer",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "duration": "10",
-        "units": "Minute",
-        "payloadtype": "num",
-        "payloadval": "0",
-        "name": "Wait 10 Minutes",
-        "x": 960,
-        "y": 640,
-        "wires": [
-            [
-                "f65b2eccda530bcd"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "f65b2eccda530bcd",
-        "type": "api-current-state",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "Motion Detected?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.upstairs_bathroom_motion",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "x": 210,
-        "y": 780,
-        "wires": [
-            [
-                "1bf27a631436c914"
-            ],
-            [
-                "51237623ed73ba98"
-            ]
-        ]
-    },
-    {
-        "id": "1bf27a631436c914",
-        "type": "stoptimer",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "duration": "30",
-        "units": "Second",
-        "payloadtype": "num",
-        "payloadval": "0",
-        "name": "Wait 30 Seconds",
-        "x": 590,
-        "y": 720,
-        "wires": [
-            [
-                "f65b2eccda530bcd"
-            ],
-            []
         ]
     },
     {
@@ -8885,7 +8820,7 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 650,
+        "x": 1110,
         "y": 780,
         "wires": [
             []
@@ -8928,7 +8863,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 350,
+        "x": 530,
         "y": 640,
         "wires": [
             [
@@ -8974,7 +8909,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 570,
+        "x": 750,
         "y": 640,
         "wires": [
             [
@@ -9020,7 +8955,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 430,
+        "x": 910,
         "y": 780,
         "wires": [
             [
@@ -9052,37 +8987,25 @@
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
-        "haltifstate": "on",
+        "haltifstate": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
+        "outputs": 1,
         "output_only_on_state_change": true,
         "for": "0",
         "forType": "num",
         "forUnits": "minutes",
         "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
                 "property": "payload",
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
             },
             {
                 "property": "detect",
@@ -9095,9 +9018,8 @@
         "y": 700,
         "wires": [
             [
-                "edef3ad58f6e9bbd"
-            ],
-            []
+                "cfdcc7c9c168dc17"
+            ]
         ],
         "outputLabels": [
             "Open",
@@ -9117,7 +9039,7 @@
         "y": 580,
         "wires": [
             [
-                "edef3ad58f6e9bbd"
+                "cfdcc7c9c168dc17"
             ]
         ]
     },
@@ -9158,7 +9080,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1100,
+        "x": 1280,
         "y": 580,
         "wires": [
             [
@@ -9189,7 +9111,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1290,
+        "x": 1470,
         "y": 580,
         "wires": [
             [
@@ -9219,7 +9141,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1500,
+        "x": 1680,
         "y": 580,
         "wires": [
             []
@@ -9243,7 +9165,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 930,
+        "x": 1110,
         "y": 580,
         "wires": [
             [
@@ -9283,26 +9205,173 @@
         "forType": "num",
         "forUnits": "minutes",
         "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "stop",
-                "valueType": "str"
+                "value": "",
+                "valueType": "date"
             }
         ],
-        "x": 560,
+        "x": 380,
         "y": 580,
         "wires": [
             [
-                "26bda03370a86d83",
-                "1bf27a631436c914"
+                "d8a2fa45040cce43"
             ],
             []
+        ]
+    },
+    {
+        "id": "cfdcc7c9c168dc17",
+        "type": "switch",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 640,
+        "wires": [
+            [
+                "edef3ad58f6e9bbd",
+                "d8a2fa45040cce43"
+            ],
+            [
+                "8f3c66f06ed3f7b2"
+            ]
+        ]
+    },
+    {
+        "id": "f56b84619fd19f18",
+        "type": "trigger",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "trigger",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "10",
+        "extend": true,
+        "overrideDelay": true,
+        "units": "min",
+        "reset": "stop",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 730,
+        "y": 780,
+        "wires": [
+            [
+                "51237623ed73ba98"
+            ]
+        ]
+    },
+    {
+        "id": "8f3c66f06ed3f7b2",
+        "type": "api-current-state",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Delay",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.front_porch_motion_off_delay",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "delay",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 450,
+        "y": 780,
+        "wires": [
+            [
+                "aeae503fd214ff93"
+            ]
+        ]
+    },
+    {
+        "id": "d8a2fa45040cce43",
+        "type": "change",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Stop",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 720,
+        "wires": [
+            [
+                "f56b84619fd19f18"
+            ]
+        ]
+    },
+    {
+        "id": "aeae503fd214ff93",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "math",
+        "func": "const delay = msg.delay\nconst multiplier = 60000\n\nmsg.delay = (delay * multiplier)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 780,
+        "wires": [
+            [
+                "f56b84619fd19f18"
+            ]
         ]
     },
     {
