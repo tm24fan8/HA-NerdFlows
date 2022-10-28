@@ -627,7 +627,9 @@
             "909d1a99a02620dd"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1932,
+        "h": 582
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -778,9 +780,7 @@
             "6f011420f6bb15a7"
         ],
         "x": 34,
-        "y": 159,
-        "w": 882,
-        "h": 302
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -838,38 +838,40 @@
             "c2972c7728c99c43",
             "bc09f451754ba126",
             "fdefcd6a64aa9bca",
-            "1d09b6c6a3773d9a",
-            "6cf8f103906c1a49",
             "da305ace22579c07",
             "7ecdec08d9698a19",
-            "9c9d7870a5204f13",
             "1b5678e80095a461",
-            "5248dc02bf48733e",
             "c88179f1facb8646",
             "7af97720032b4609",
             "08aadf619537949e",
-            "d819e61c0895affe",
             "a0adec284cd8162a",
             "46e0046a27f4bc89",
             "a6038f6bd028bd2f",
-            "8006b0b34776ec34",
             "d5c7d4f4714a6cd6",
             "d1ac8b45d7baa4ed",
             "35847fc20196c4ce",
-            "5fa5b04e2b1b3ae2",
-            "6f429b0dcaa5c607",
-            "9f53af3ad747cd62",
             "c002b47a53a0e203",
             "0008fb5b70ae6aea",
             "a46a88d4fb03cceb",
             "8d26310ed06bb045",
             "67119024666b68bd",
             "e235145192886939",
-            "80d831ad0265a01f",
-            "069a7ab44b04c9ef"
+            "b0fee451dea6b00c",
+            "adc20601e249dc44",
+            "ea300ecd15cbc07f",
+            "4f0c3e053e317dbc",
+            "bdd8715ce3cc4713",
+            "9b66a631492c2023",
+            "c0813ccdec033370",
+            "d681fa96683511c1",
+            "e5cc046624cd5453",
+            "7ffbdab6daa40cd9",
+            "d00db0647d1c4034"
         ],
-        "x": 34,
-        "y": 39
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
     },
     {
         "id": "46275dd0f9461013",
@@ -1032,7 +1034,9 @@
             "aeae503fd214ff93"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1772,
+        "h": 282
     },
     {
         "id": "753e14252442d87d",
@@ -1363,7 +1367,7 @@
         "id": "9e87348d.9c1c48",
         "type": "server",
         "name": "Home Assistant",
-        "version": 4,
+        "version": 5,
         "addon": true,
         "rejectUnauthorizedCerts": true,
         "ha_boolean": "",
@@ -1379,7 +1383,8 @@
         "statusMonth": "short",
         "statusDay": "numeric",
         "statusHourCycle": "h23",
-        "statusTimeFormat": "h:m"
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": true
     },
     {
         "id": "fd29421fc00140a8",
@@ -1412,7 +1417,8 @@
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Start YouTube in Living Room",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1426,15 +1432,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "eaeb8fcb37fa8585",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Stop YouTube in Living Room",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1448,8 +1454,7 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "c8312629c112d43a",
@@ -1478,7 +1483,8 @@
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Start Twitch in Living Room",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1492,15 +1498,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "73718265ac9a1389",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Stop Twitch in Living Room",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1514,15 +1520,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "5d20015e8a70767a",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Start Plex in Living Room",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1536,15 +1542,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "c1da63449b303e84",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Stop Plex in Living Room",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1558,15 +1564,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "eb813ad296813ab2",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Start Netflix in Living Room",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1580,15 +1586,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "2a115fc593b081ac",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Stop Netflix in Living Room",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1602,15 +1608,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "f14ef3df2209e9a7",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Send Alexa Message",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1624,15 +1630,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "1c6757ac2fa1a199",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Reset Alexa Message",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1646,15 +1652,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "ad5b1d9f1ea8fea1",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Good Morning",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1668,15 +1674,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "a8da4d03a2922c42",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Weather Briefing",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1690,15 +1696,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "30f1658baee9378e",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Goodnight",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1712,15 +1718,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "04976a7418728aa3",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Restart AppDaemon",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1734,8 +1740,7 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "457914a2c9dc72c1",
@@ -1752,7 +1757,8 @@
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Weather Briefing Google",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1766,8 +1772,7 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "359a4a5e8f156ab5",
@@ -1784,7 +1789,8 @@
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Daily Briefing",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1798,15 +1804,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "9c84afc610ced7b6",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Daily Briefing Google",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1820,15 +1826,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "738e7f8f2ac71049",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Sunset Lights Trigger",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1842,15 +1848,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "be9ed28696adcdb0",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Master Bedroom Night Mode",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1864,15 +1870,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "59cb8692ed7accd1",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Master Bedroom Day Mode",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1886,15 +1892,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "9c63750f16f845ea",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Master Bedroom Bedtime Mode",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1908,8 +1914,7 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "f19eac517a138c66",
@@ -1921,7 +1926,8 @@
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Send Report",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1935,15 +1941,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "7df85e301aad3a3d",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Reset Report",
-        "version": 2,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1957,15 +1963,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "fbc65f8185932b5f",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Kallen Timer Start",
-        "version": 4,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -1979,15 +1985,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "a11aaf0288452997",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Cleanup",
-        "version": 4,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -2001,15 +2007,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "d3f8c4466cc1deeb",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Master Bedroom Fan Only",
-        "version": 4,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -2023,15 +2029,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "d9da4bd707013bc5",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Kallen School Status",
-        "version": 4,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -2045,15 +2051,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "2c222901ee192ba1",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Kallen School Status Google",
-        "version": 4,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -2067,8 +2073,7 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "60eb53fb94cd64e4",
@@ -2080,7 +2085,8 @@
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Kallen Timer Pause",
-        "version": 4,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -2094,15 +2100,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "f040a57e80fda8ee",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Send Text Notification",
-        "version": 4,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -2116,15 +2122,15 @@
                 "property": "device_class",
                 "value": ""
             }
-        ],
-        "entityType": "button"
+        ]
     },
     {
         "id": "56690d428d1d2022",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
         "name": "Reset Text Notification",
-        "version": 4,
+        "version": 6,
+        "entityType": "button",
         "haConfig": [
             {
                 "property": "name",
@@ -2138,8 +2144,403 @@
                 "property": "device_class",
                 "value": ""
             }
+        ]
+    },
+    {
+        "id": "1d09b6c6a3773d9a",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Basement Server - CPU Temperature",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - CPU Temperature"
+            },
+            {
+                "property": "device_class",
+                "value": "temperature"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:thermometer"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "C"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
         ],
-        "entityType": "button"
+        "resend": true
+    },
+    {
+        "id": "6cf8f103906c1a49",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Basement Server - Memory Used",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - Memory Used"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": "mdi:memory"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "GB"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
+        ],
+        "resend": true
+    },
+    {
+        "id": "9c9d7870a5204f13",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Basement Server - CPU Usage",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - CPU Usage"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": "mdi:speedometer"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "%"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
+        ],
+        "resend": true
+    },
+    {
+        "id": "5248dc02bf48733e",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Basement Server - Uptime",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - Uptime"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": "mdi:timer-outline"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "hours"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
+        ],
+        "resend": true
+    },
+    {
+        "id": "d819e61c0895affe",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Basement Server - Memory Usage",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - Memory Usage"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": "mdi:memory"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "%"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
+        ],
+        "resend": true
+    },
+    {
+        "id": "8006b0b34776ec34",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Basement Server - Free Space Root",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - Free Space Root"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": "mdi:harddisk"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "GB"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
+        ],
+        "resend": true
+    },
+    {
+        "id": "5fa5b04e2b1b3ae2",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Basement Server - CPU Average Loads 1 min",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - CPU Average Loads 1 min"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": "mdi:speedometer"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
+        ],
+        "resend": true
+    },
+    {
+        "id": "6f429b0dcaa5c607",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Basement Server - CPU Average Loads 5 min",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - CPU Average Loads 5 min"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": "mdi:speedometer"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
+        ],
+        "resend": true
+    },
+    {
+        "id": "9f53af3ad747cd62",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Basement Server - CPU Average Loads 15 min",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - CPU Average Loads 15 min"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": "mdi:speedometer"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
+        ],
+        "resend": true
+    },
+    {
+        "id": "80d831ad0265a01f",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Network RX",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - Network RX"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": "mdi:download-network"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "MB/s"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
+        ],
+        "resend": true
+    },
+    {
+        "id": "069a7ab44b04c9ef",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "sensor config for Network TX",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement Server - Network TX"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": "mdi:upload-network"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "MB/s"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            },
+            {
+                "property": "last_reset",
+                "value": ""
+            }
+        ],
+        "resend": true
     },
     {
         "id": "05e66e9e1092e6ea",
@@ -4413,8 +4814,8 @@
         "g": "1ca205a84922c8c2",
         "name": "Timer Finished",
         "server": "9e87348d.9c1c48",
-        "version": 1,
-        "event_type": "timer.finished",
+        "version": 2,
+        "eventType": "timer.finished",
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -18314,8 +18715,8 @@
         "z": "bb961e59e2ef86c9",
         "name": "iOS Action Fired",
         "server": "9e87348d.9c1c48",
-        "version": 1,
-        "event_type": "ios.action_fired",
+        "version": 2,
+        "eventType": "ios.action_fired",
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -20355,7 +20756,7 @@
         "y": 200,
         "wires": [
             [
-                "6cf8f103906c1a49"
+                "adc20601e249dc44"
             ]
         ]
     },
@@ -20377,114 +20778,8 @@
         "y": 80,
         "wires": [
             [
-                "1d09b6c6a3773d9a"
+                "b0fee451dea6b00c"
             ]
-        ]
-    },
-    {
-        "id": "1d09b6c6a3773d9a",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - CPU Temperature",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - CPU Temperature"
-            },
-            {
-                "property": "device_class",
-                "value": "temperature"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:thermometer"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "C"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 370,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6cf8f103906c1a49",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - Memory Used",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - Memory Used"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": "mdi:memory"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "GB"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 720,
-        "y": 200,
-        "wires": [
-            []
         ]
     },
     {
@@ -20527,61 +20822,8 @@
         "y": 140,
         "wires": [
             [
-                "9c9d7870a5204f13"
+                "ea300ecd15cbc07f"
             ]
-        ]
-    },
-    {
-        "id": "9c9d7870a5204f13",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - CPU Usage",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - CPU Usage"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "%"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 370,
-        "y": 140,
-        "wires": [
-            []
         ]
     },
     {
@@ -20604,59 +20846,6 @@
             [
                 "c88179f1facb8646"
             ]
-        ]
-    },
-    {
-        "id": "5248dc02bf48733e",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - Uptime",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - Uptime"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": "mdi:timer-outline"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "hours"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 660,
-        "y": 320,
-        "wires": [
-            []
         ]
     },
     {
@@ -20695,7 +20884,7 @@
         "y": 320,
         "wires": [
             [
-                "5248dc02bf48733e"
+                "4f0c3e053e317dbc"
             ]
         ]
     },
@@ -20717,61 +20906,8 @@
         "y": 260,
         "wires": [
             [
-                "d819e61c0895affe"
+                "bdd8715ce3cc4713"
             ]
-        ]
-    },
-    {
-        "id": "d819e61c0895affe",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - Memory Usage",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - Memory Usage"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": "mdi:memory"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "%"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 400,
-        "y": 260,
-        "wires": [
-            []
         ]
     },
     {
@@ -20832,61 +20968,8 @@
         "y": 380,
         "wires": [
             [
-                "8006b0b34776ec34"
+                "9b66a631492c2023"
             ]
-        ]
-    },
-    {
-        "id": "8006b0b34776ec34",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - Free Space Root",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - Free Space Root"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": "mdi:harddisk"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "GB"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 730,
-        "y": 380,
-        "wires": [
-            []
         ]
     },
     {
@@ -20959,7 +21042,7 @@
         "y": 440,
         "wires": [
             [
-                "5fa5b04e2b1b3ae2"
+                "c0813ccdec033370"
             ]
         ]
     },
@@ -20981,7 +21064,7 @@
         "y": 500,
         "wires": [
             [
-                "6f429b0dcaa5c607"
+                "d681fa96683511c1"
             ]
         ]
     },
@@ -21003,167 +21086,8 @@
         "y": 560,
         "wires": [
             [
-                "9f53af3ad747cd62"
+                "e5cc046624cd5453"
             ]
-        ]
-    },
-    {
-        "id": "5fa5b04e2b1b3ae2",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - CPU Average Loads 1 min",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - CPU Average Loads 1 min"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": ""
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 460,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6f429b0dcaa5c607",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - CPU Average Loads 5 min",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - CPU Average Loads 5 min"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": ""
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 460,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9f53af3ad747cd62",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - CPU Average Loads 15 min",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - CPU Average Loads 15 min"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": ""
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 460,
-        "y": 560,
-        "wires": [
-            []
         ]
     },
     {
@@ -21246,7 +21170,7 @@
         "y": 620,
         "wires": [
             [
-                "80d831ad0265a01f"
+                "7ffbdab6daa40cd9"
             ]
         ]
     },
@@ -21286,114 +21210,8 @@
         "y": 680,
         "wires": [
             [
-                "069a7ab44b04c9ef"
+                "d00db0647d1c4034"
             ]
-        ]
-    },
-    {
-        "id": "80d831ad0265a01f",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Network RX",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - Network RX"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": "mdi:download-network"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "MB/s"
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 650,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "069a7ab44b04c9ef",
-        "type": "ha-entity",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Network TX",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "Basement Server - Network TX"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": "mdi:upload-network"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "MB/s"
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "",
-        "outputPayloadType": "str",
-        "x": 650,
-        "y": 680,
-        "wires": [
-            []
         ]
     },
     {
@@ -21447,6 +21265,215 @@
         "x": 235,
         "y": 840,
         "wires": []
+    },
+    {
+        "id": "b0fee451dea6b00c",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Basement Server - CPU Temperature",
+        "entityConfig": "1d09b6c6a3773d9a",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 370,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "adc20601e249dc44",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Basement Server - Memory Used",
+        "entityConfig": "6cf8f103906c1a49",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 720,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea300ecd15cbc07f",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Basement Server - CPU Usage",
+        "entityConfig": "9c9d7870a5204f13",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 370,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f0c3e053e317dbc",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Basement Server - Uptime",
+        "entityConfig": "5248dc02bf48733e",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 660,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bdd8715ce3cc4713",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Basement Server - Memory Usage",
+        "entityConfig": "d819e61c0895affe",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 400,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b66a631492c2023",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Basement Server - Free Space Root",
+        "entityConfig": "8006b0b34776ec34",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 730,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0813ccdec033370",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Basement Server - CPU Average Loads 1 min",
+        "entityConfig": "5fa5b04e2b1b3ae2",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 460,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d681fa96683511c1",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Basement Server - CPU Average Loads 5 min",
+        "entityConfig": "6f429b0dcaa5c607",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 460,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e5cc046624cd5453",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Basement Server - CPU Average Loads 15 min",
+        "entityConfig": "9f53af3ad747cd62",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 460,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ffbdab6daa40cd9",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Network RX",
+        "entityConfig": "80d831ad0265a01f",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 650,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d00db0647d1c4034",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "fbbe69a14cbe0236",
+        "name": "Network TX",
+        "entityConfig": "069a7ab44b04c9ef",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 650,
+        "y": 680,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "e8d2135bb5564a4a",
