@@ -754,7 +754,8 @@
             "e238631130b2c316",
             "09a31110ed0a8630",
             "0f6d425791646818",
-            "bc9d4a0d7a7c5c79"
+            "bc9d4a0d7a7c5c79",
+            "67509a5554fc091f"
         ],
         "x": 14,
         "y": 59,
@@ -15624,7 +15625,9 @@
         "x": 980,
         "y": 100,
         "wires": [
-            []
+            [
+                "67509a5554fc091f"
+            ]
         ]
     },
     {
@@ -17499,6 +17502,34 @@
         "queue": "none",
         "x": 2540,
         "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67509a5554fc091f",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Set Fan to Auto",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_fan_mode",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.master_bedroom_aircon"
+        ],
+        "data": "{\t    \"fan_mode\":\"Auto\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1160,
+        "y": 100,
         "wires": [
             []
         ]
