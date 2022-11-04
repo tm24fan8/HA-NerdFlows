@@ -664,7 +664,9 @@
             "59d83dd7c5adba1f"
         ],
         "x": 14,
-        "y": 759
+        "y": 759,
+        "w": 1312,
+        "h": 422
     },
     {
         "id": "e065b1ed4938b477",
@@ -749,10 +751,13 @@
             "ce3e05090d0848d5",
             "76d51b3279d6630c",
             "722337dd4775a357",
-            "e238631130b2c316"
+            "e238631130b2c316",
+            "09a31110ed0a8630"
         ],
         "x": 14,
-        "y": 59
+        "y": 59,
+        "w": 2812,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1031,9 +1036,7 @@
             "16029ccf061bdd10"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1912,
-        "h": 282
+        "y": 539
     },
     {
         "id": "753e14252442d87d",
@@ -14262,7 +14265,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2340,
+        "x": 2540,
         "y": 280,
         "wires": [
             [
@@ -14280,7 +14283,7 @@
         "links": [
             "aba7b09fe1ea30df"
         ],
-        "x": 2475,
+        "x": 2675,
         "y": 280,
         "wires": []
     },
@@ -14681,7 +14684,7 @@
         "y": 280,
         "wires": [
             [
-                "c6537f1924370c8c"
+                "09a31110ed0a8630"
             ]
         ]
     },
@@ -16538,7 +16541,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 2170,
+        "x": 2370,
         "y": 280,
         "wires": [
             [
@@ -17405,6 +17408,36 @@
         "wires": [
             [
                 "cefb338fa0c6931e"
+            ]
+        ]
+    },
+    {
+        "id": "09a31110ed0a8630",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Set Fan to Auto",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_fan_mode",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.master_bedroom_aircon"
+        ],
+        "data": "{\t    \"fan_mode\":\"Auto\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2200,
+        "y": 280,
+        "wires": [
+            [
+                "c6537f1924370c8c"
             ]
         ]
     },
