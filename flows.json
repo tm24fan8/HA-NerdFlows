@@ -664,9 +664,7 @@
             "59d83dd7c5adba1f"
         ],
         "x": 14,
-        "y": 759,
-        "w": 1312,
-        "h": 422
+        "y": 759
     },
     {
         "id": "e065b1ed4938b477",
@@ -758,9 +756,7 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 59,
-        "w": 3012,
-        "h": 682
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -20412,7 +20408,7 @@
         "name": "",
         "server": "9e87348d.9c1c48",
         "version": 0,
-        "template": "{{ states('sensor.current_conditions_detail') }} \n{{ states('sensor.tomorrow_forecast_detail') }} \n{{ states('sensor.clothing_forecast_detail') }}",
+        "template": "  {%- macro getReport() -%}\n\n      {{ states('sensor.current_conditions_detail') }}\n      {{ states('sensor.tomorrow_forecast_detail') }}\n      {{ states('sensor.clothing_forecast_detail') }}\n\n      {% if states('sensor.weatheralerts_active_alerts') > '0' %}\n        Currently there are weather alerts active. The total number of alerts is {{ states('sensor.weatheralerts_active_alerts') }}. They are as follows.\n          {% if is_state('sensor.weatheralerts_alert_1','on') %}\n            {{ state_attr('sensor.weatheralerts_alert_1','alert_event') }}\n          {% endif %}\n          {% if is_state('sensor.weatheralerts_alert_2','on') %}\n            {{ state_attr('sensor.weatheralerts_alert_2','alert_event') }}\n          {% endif %}\n          {% if is_state('sensor.weatheralerts_alert_3','on') %}\n            {{ state_attr('sensor.weatheralerts_alert_3','alert_event') }}\n          {% endif %}\n          {% if is_state('sensor.weatheralerts_alert_4','on') %}\n            {{ state_attr('sensor.weatheralerts_alert_4','alert_event') }}\n          {% endif %}\n          {% if is_state('sensor.weatheralerts_alert_5','on') %}\n            {{ state_attr('sensor.weatheralerts_alert_5','alert_event') }}\n          {% endif %}\n      {% endif %}\n\n  {%- endmacro -%}\n\n\n  {# a macro that removes all newline characters, empty spaces, and returns formatted text  #}\n    {%- macro cleanup(data) -%}\n      {%- for item in data.split(\"\\n\")  if item | trim != \"\" -%}\n        {{ item | trim }} {% endfor -%}\n  {%- endmacro -%}\n\n  {# a macro to call all macros :)  #}\n    {%- macro mother_of_all_macros() -%}\n      {{ getReport() }}\n    {%- endmacro -%}\n    \n    {# Call the macro  #}\n    {{- cleanup(mother_of_all_macros()) -}}",
         "resultsLocation": "payload",
         "resultsLocationType": "msg",
         "templateLocation": "template",
@@ -20485,6 +20481,35 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "99567f8bca08ccd9",
+        "type": "api-render-template",
+        "z": "ebd5561c4f077718",
+        "d": true,
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{{ states('sensor.current_conditions_detail') }} \n{{ states('sensor.tomorrow_forecast_detail') }} \n{{ states('sensor.clothing_forecast_detail') }}\n{% if states('sensor.weatheralerts_active_alerts') > '0' %}\n  \"Currently there are weather alerts active. The total number of alerts is {{ states('sensor.weatheralerts_active_alerts') }}. They are as follows. \"\n    {% if is_state('sensor.weatheralerts_alert_1','on') %}\n      \"{{ state_attr('sensor.weatheralerts_alert_1','alert_event') }}\"\n    {% endif %}\n    {% if is_state('sensor.weatheralerts_alert_2','on') %}\n      \"{{ state_attr('sensor.weatheralerts_alert_2','alert_event') }}\"\n    {% endif %}\n    {% if is_state('sensor.weatheralerts_alert_3','on') %}\n      \"{{ state_attr('sensor.weatheralerts_alert_3','alert_event') }}\"\n    {% endif %}\n    {% if is_state('sensor.weatheralerts_alert_4','on') %}\n      \"{{ state_attr('sensor.weatheralerts_alert_4','alert_event') }}\"\n    {% endif %}\n    {% if is_state('sensor.weatheralerts_alert_5','on') %}\n      \"{{ state_attr('sensor.weatheralerts_alert_5','alert_event') }}\"\n    {% endif %}\n{% endif %}\n",
+        "resultsLocation": "payload",
+        "resultsLocationType": "msg",
+        "templateLocation": "template",
+        "templateLocationType": "msg",
+        "x": 280,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e5c8d1a91523ce32",
+        "type": "comment",
+        "z": "ebd5561c4f077718",
+        "name": "Old Template",
+        "info": "The node below is the template that was previously used.\nKeeping this in case we need to revert for any reason.",
+        "x": 290,
+        "y": 320,
+        "wires": []
     },
     {
         "id": "1031080bdf3b95bf",
