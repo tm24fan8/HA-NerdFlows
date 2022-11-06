@@ -870,8 +870,10 @@
             "7ffbdab6daa40cd9",
             "d00db0647d1c4034"
         ],
-        "x": 0,
-        "y": 0
+        "x": 34,
+        "y": 39,
+        "w": 872,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -888,7 +890,9 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 142
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -2540,6 +2544,76 @@
             }
         ],
         "resend": true
+    },
+    {
+        "id": "0df0d4b823c241ca",
+        "type": "ical-config",
+        "url": "webcal://p72-caldav.icloud.com/published/2/ODM5MDk5NTE5ODM5MDk5NR0HVUW-Vl-m45F7V86TDotlk2-IoVPJ7u9SJ4CgaxkUnwXfBv2X3Td4TIRw64EwIf2-usGEsd6zG21yi63A5PY",
+        "caldav": "",
+        "caltype": "ical",
+        "name": "Family Calendar",
+        "replacedates": false,
+        "usecache": false,
+        "username": "",
+        "password": "",
+        "calendar": "",
+        "pastWeeks": "0",
+        "futureWeeks": "4"
+    },
+    {
+        "id": "62fd7b9130a358b9",
+        "type": "ha-device-config",
+        "name": "Tina Work Schedule",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "626df4326c73f5d4",
+        "type": "ha-device-config",
+        "name": "Tina Work Schedule Binary",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "527f99f7a7aa36c2",
+        "type": "ha-device-config",
+        "name": "Tina Work Tomorrow",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "781adad6153d9661",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "527f99f7a7aa36c2",
+        "name": "Tina Work Tomorrow",
+        "version": "6",
+        "entityType": "binary_sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Tina Work Tomorrow"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:calendar"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false
     },
     {
         "id": "05e66e9e1092e6ea",
@@ -7564,6 +7638,207 @@
         "y": 180,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "3d97e97025c63331",
+        "type": "ical-upcoming",
+        "z": "e44b1e7a8ef7ae1d",
+        "confignode": "0df0d4b823c241ca",
+        "timeout": "300",
+        "timeoutUnits": "seconds",
+        "cron": "",
+        "name": "",
+        "offsettype": "",
+        "offset": "",
+        "offsetUnitstype": "",
+        "offsetUnits": "",
+        "eventtypes": "events",
+        "eventtypestype": "eventtypes",
+        "calendar": "",
+        "calendartype": "str",
+        "triggertype": "trigger",
+        "trigger": "match",
+        "timezone": "",
+        "timezonetype": "str",
+        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
+        "dateformattype": "json",
+        "language": "en",
+        "languagetype": "language",
+        "filterProperty": "summary",
+        "filterPropertytype": "filterProperty",
+        "filterOperator": "between",
+        "filterOperatortype": "filterOperator",
+        "filtertype": "str",
+        "filter2type": "str",
+        "filter2": "",
+        "filter": "Work",
+        "checkall": false,
+        "endpreview": "",
+        "endpreviewUnits": "",
+        "previewtype": "num",
+        "preview": "",
+        "previewUnitstype": "previewUnits",
+        "previewUnits": "days",
+        "pastviewtype": "num",
+        "pastview": "",
+        "pastviewUnits": "days",
+        "pastviewUnitstype": "pastviewUnits",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "828e99767076eae5"
+            ]
+        ]
+    },
+    {
+        "id": "828e99767076eae5",
+        "type": "switch",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Is Event Tomorrow",
+        "property": "tomorrow",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "f5eb76f93946aad3"
+            ],
+            [
+                "62b61a9d45d27b46"
+            ]
+        ]
+    },
+    {
+        "id": "798ff6ede18394ea",
+        "type": "ha-binary-sensor",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Work Tomorrow",
+        "entityConfig": "781adad6153d9661",
+        "version": 0,
+        "state": "work_tomorrow",
+        "stateType": "msg",
+        "attributes": [
+            {
+                "property": "date",
+                "value": "payload.0.date",
+                "valueType": "msg"
+            },
+            {
+                "property": "eventStart",
+                "value": "payload.0.eventStart",
+                "valueType": "msg"
+            },
+            {
+                "property": "eventEnd",
+                "value": "payload.0.eventEnd",
+                "valueType": "msg"
+            },
+            {
+                "property": "summary",
+                "value": "payload.0.summary",
+                "valueType": "msg"
+            },
+            {
+                "property": "location",
+                "value": "payload.0.location",
+                "valueType": "msg"
+            },
+            {
+                "property": "isRecurring",
+                "value": "payload.0.isRecurring",
+                "valueType": "msg"
+            },
+            {
+                "property": "allDay",
+                "value": "payload.0.allDay",
+                "valueType": "msg"
+            },
+            {
+                "property": "calendarName",
+                "value": "payload.0.calendarName",
+                "valueType": "msg"
+            },
+            {
+                "property": "countdown",
+                "value": "payload.0.countdown",
+                "valueType": "msg"
+            }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 740,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5eb76f93946aad3",
+        "type": "change",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Set True",
+        "rules": [
+            {
+                "t": "set",
+                "p": "work_tomorrow",
+                "pt": "msg",
+                "to": "true",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 360,
+        "wires": [
+            [
+                "798ff6ede18394ea"
+            ]
+        ]
+    },
+    {
+        "id": "62b61a9d45d27b46",
+        "type": "change",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Set False",
+        "rules": [
+            {
+                "t": "set",
+                "p": "work_tomorrow",
+                "pt": "msg",
+                "to": "false",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 440,
+        "wires": [
+            [
+                "798ff6ede18394ea"
+            ]
         ]
     },
     {
