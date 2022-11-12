@@ -661,10 +661,14 @@
             "d823b8a033f30d40",
             "c2bb11a2ba39b636",
             "0a4f9c693fccd1f1",
-            "59d83dd7c5adba1f"
+            "59d83dd7c5adba1f",
+            "57651381835f659c",
+            "acb52adc50d34045"
         ],
         "x": 14,
-        "y": 759
+        "y": 759,
+        "w": 1312,
+        "h": 442
     },
     {
         "id": "e065b1ed4938b477",
@@ -756,7 +760,9 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 59
+        "y": 59,
+        "w": 3012,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -15045,7 +15051,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 800,
+        "y": 820,
         "wires": [
             [
                 "39d187b7e17d80ab"
@@ -15107,7 +15113,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "39d187b7e17d80ab"
@@ -15152,7 +15158,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 550,
-        "y": 840,
+        "y": 860,
         "wires": [
             [
                 "4792e2d88f7d533f"
@@ -15188,10 +15194,11 @@
         "repair": false,
         "outputs": 2,
         "x": 730,
-        "y": 840,
+        "y": 860,
         "wires": [
             [
-                "d132875202e85038"
+                "d132875202e85038",
+                "57651381835f659c"
             ],
             [
                 "d823b8a033f30d40"
@@ -15223,7 +15230,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 680,
-        "y": 920,
+        "y": 940,
         "wires": [
             [
                 "99e74844b8fd9d1a",
@@ -15250,7 +15257,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 840,
-        "y": 900,
+        "y": 920,
         "wires": [
             [
                 "da1a1f23bf9429c5"
@@ -15280,7 +15287,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1010,
-        "y": 900,
+        "y": 920,
         "wires": [
             [
                 "6418c17768ed363d"
@@ -15310,7 +15317,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1200,
-        "y": 900,
+        "y": 920,
         "wires": [
             []
         ]
@@ -15340,7 +15347,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 680,
-        "y": 1020,
+        "y": 1040,
         "wires": [
             [
                 "265b54394cc42f53"
@@ -15366,7 +15373,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1060,
-        "y": 1020,
+        "y": 1040,
         "wires": [
             [
                 "73b51e79d20c7982"
@@ -15396,7 +15403,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1230,
-        "y": 1020,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -15424,7 +15431,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 840,
-        "y": 1020,
+        "y": 1040,
         "wires": [
             [
                 "ed138e629ed0809f",
@@ -15455,7 +15462,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 920,
-        "y": 840,
+        "y": 860,
         "wires": [
             [
                 "a6f4af0aaabcc2c1"
@@ -15485,7 +15492,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1100,
-        "y": 840,
+        "y": 860,
         "wires": [
             []
         ]
@@ -15542,7 +15549,7 @@
                 "t": "set",
                 "p": "voice",
                 "pt": "msg",
-                "to": "Emma",
+                "to": "Joanna",
                 "tot": "str"
             }
         ],
@@ -15552,7 +15559,7 @@
         "to": "",
         "reg": false,
         "x": 1080,
-        "y": 1080,
+        "y": 1100,
         "wires": [
             [
                 "fce2383754c91a31"
@@ -15570,7 +15577,7 @@
             "6f595f2a4713d76d"
         ],
         "x": 1215,
-        "y": 1080,
+        "y": 1100,
         "wires": []
     },
     {
@@ -15598,7 +15605,7 @@
                 "t": "set",
                 "p": "voice",
                 "pt": "msg",
-                "to": "Emma",
+                "to": "Joanna",
                 "tot": "str"
             }
         ],
@@ -15608,7 +15615,7 @@
         "to": "",
         "reg": false,
         "x": 860,
-        "y": 960,
+        "y": 980,
         "wires": [
             [
                 "fce2383754c91a31"
@@ -16085,7 +16092,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 340,
-        "y": 840,
+        "y": 860,
         "wires": [
             [
                 "3166f71fdf62748a"
@@ -16317,7 +16324,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 350,
-        "y": 1000,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -16345,7 +16352,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 1000,
+        "y": 1020,
         "wires": [
             [
                 "49eadd57e9728914"
@@ -17458,7 +17465,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 350,
-        "y": 920,
+        "y": 940,
         "wires": [
             [
                 "c2bb11a2ba39b636"
@@ -17494,7 +17501,7 @@
         "repair": false,
         "outputs": 3,
         "x": 530,
-        "y": 920,
+        "y": 940,
         "wires": [
             [
                 "6e10b32a122e8a2c"
@@ -17532,7 +17539,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 680,
-        "y": 1080,
+        "y": 1100,
         "wires": [
             [
                 "59d83dd7c5adba1f"
@@ -17564,7 +17571,7 @@
                 "t": "set",
                 "p": "voice",
                 "pt": "msg",
-                "to": "Emma",
+                "to": "Joanna",
                 "tot": "str"
             }
         ],
@@ -17574,7 +17581,7 @@
         "to": "",
         "reg": false,
         "x": 1080,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             [
                 "fce2383754c91a31"
@@ -17797,6 +17804,74 @@
         "queue": "none",
         "x": 1180,
         "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "57651381835f659c",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "School Today?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.school_today",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "school_today",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 940,
+        "y": 800,
+        "wires": [
+            [
+                "acb52adc50d34045"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "acb52adc50d34045",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Lights On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [
+            "kallen_bedroom"
+        ],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1120,
+        "y": 800,
         "wires": [
             []
         ]
