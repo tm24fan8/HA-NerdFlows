@@ -873,7 +873,9 @@
             "d00db0647d1c4034"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -890,7 +892,9 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 142
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1992,8 +1996,9 @@
         "id": "a11aaf0288452997",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
+        "deviceConfig": "415bf4eba63b9a50",
         "name": "Cleanup",
-        "version": 6,
+        "version": "6",
         "entityType": "button",
         "haConfig": [
             {
@@ -2005,10 +2010,15 @@
                 "value": "mdi:broom"
             },
             {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
                 "property": "device_class",
                 "value": ""
             }
-        ]
+        ],
+        "resend": false
     },
     {
         "id": "d3f8c4466cc1deeb",
@@ -2612,6 +2622,15 @@
             }
         ],
         "resend": false
+    },
+    {
+        "id": "415bf4eba63b9a50",
+        "type": "ha-device-config",
+        "name": "Cleanup",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
     },
     {
         "id": "05e66e9e1092e6ea",
