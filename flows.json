@@ -666,9 +666,7 @@
             "acb52adc50d34045"
         ],
         "x": 14,
-        "y": 759,
-        "w": 1312,
-        "h": 442
+        "y": 759
     },
     {
         "id": "e065b1ed4938b477",
@@ -760,9 +758,7 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 59,
-        "w": 3012,
-        "h": 682
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -2568,24 +2564,6 @@
         "calendar": "",
         "pastWeeks": "0",
         "futureWeeks": "4"
-    },
-    {
-        "id": "62fd7b9130a358b9",
-        "type": "ha-device-config",
-        "name": "Tina Work Schedule",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
-    },
-    {
-        "id": "626df4326c73f5d4",
-        "type": "ha-device-config",
-        "name": "Tina Work Schedule Binary",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
     },
     {
         "id": "527f99f7a7aa36c2",
