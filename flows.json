@@ -627,7 +627,9 @@
             "909d1a99a02620dd"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1932,
+        "h": 582
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -1005,7 +1007,9 @@
             "59af14a564176ce4"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1032,
+        "h": 382
     },
     {
         "id": "eeafd13be593ae69",
@@ -6803,7 +6807,8 @@
             ],
             [
                 "d394df04f71de37a",
-                "4781b749d186cd7f"
+                "4781b749d186cd7f",
+                "7ef7610b2f402829"
             ]
         ]
     },
@@ -6933,7 +6938,6 @@
         "service": "turn_off",
         "areaId": [
             "front_porch",
-            "upstairs_bathroom",
             "upstairs_hallway"
         ],
         "deviceId": [],
@@ -7735,7 +7739,7 @@
         "pastviewUnits": "days",
         "pastviewUnitstype": "pastviewUnits",
         "x": 150,
-        "y": 400,
+        "y": 500,
         "wires": [
             [
                 "828e99767076eae5"
@@ -7763,7 +7767,7 @@
         "repair": false,
         "outputs": 2,
         "x": 370,
-        "y": 400,
+        "y": 500,
         "wires": [
             [
                 "f5eb76f93946aad3"
@@ -7832,7 +7836,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 740,
-        "y": 400,
+        "y": 500,
         "wires": [
             []
         ]
@@ -7857,7 +7861,7 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 360,
+        "y": 460,
         "wires": [
             [
                 "798ff6ede18394ea"
@@ -7884,11 +7888,81 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 440,
+        "y": 540,
         "wires": [
             [
                 "798ff6ede18394ea"
             ]
+        ]
+    },
+    {
+        "id": "7ef7610b2f402829",
+        "type": "api-current-state",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Motion On?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.upstairs_bathroom_motion",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 730,
+        "y": 360,
+        "wires": [
+            [
+                "80a2c88e730484cc"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "Off",
+            "On"
+        ]
+    },
+    {
+        "id": "80a2c88e730484cc",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Upstairs Bathroom Lights Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [
+            "upstairs_bathroom"
+        ],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 980,
+        "y": 360,
+        "wires": [
+            []
         ]
     },
     {
