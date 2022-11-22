@@ -6981,7 +6981,7 @@
             "switch.adaptive_lighting_sleep_mode_living_room",
             "switch.adaptive_lighting_sleep_mode_master_bedroom",
             "switch.adaptive_lighting_sleep_mode_mud_room",
-            "switch.adaptive_lighting_sleep_mode_nursery",
+            "switch.adaptive_lighting_sleep_mode_emma_bedroom",
             "switch.adaptive_lighting_sleep_mode_tina_lamp",
             "switch.adaptive_lighting_sleep_mode_upstairs_bathroom",
             "switch.adaptive_lighting_sleep_mode_upstairs_hallway"
@@ -7307,7 +7307,7 @@
             "switch.adaptive_lighting_living_room",
             "switch.adaptive_lighting_master_bedroom",
             "switch.adaptive_lighting_mud_room",
-            "switch.adaptive_lighting_nursery",
+            "switch.adaptive_lighting_emma_bedroom",
             "switch.adaptive_lighting_tina_lamp",
             "switch.adaptive_lighting_upstairs_bathroom",
             "switch.adaptive_lighting_upstairs_hallway"
@@ -7429,7 +7429,7 @@
             "input_text.living_room_selected_scene",
             "input_text.master_bedroom_selected_scene",
             "input_text.mud_room_selected_scene",
-            "input_text.nursery_selected_scene",
+            "input_text.emma_bedroom_selected_scene",
             "input_text.tina_lamp_selected_scene",
             "input_text.upstairs_bathroom_selected_scene",
             "input_text.upstairs_hallway_selected_scene"
@@ -10420,7 +10420,7 @@
         "id": "f28e7fd88f75041e",
         "type": "server-state-changed",
         "z": "5e238cbbe6d612c9",
-        "name": "Nursery Scenes",
+        "name": "Emma Bedroom Scenes",
         "server": "9e87348d.9c1c48",
         "version": 4,
         "exposeToHomeAssistant": false,
@@ -10434,7 +10434,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "input_select.nursery_scenes",
+        "entityidfilter": "input_select.emma_bedroom_scenes",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
@@ -10461,7 +10461,7 @@
             {
                 "property": "topic",
                 "propertyType": "msg",
-                "value": "nursery",
+                "value": "emma_bedroom",
                 "valueType": "str"
             }
         ],
@@ -18351,7 +18351,7 @@
             "living_room",
             "master_bedroom",
             "mud_room",
-            "nursery",
+            "emma_bedroom",
             "upstairs_hallway"
         ],
         "deviceId": [],
@@ -18487,7 +18487,7 @@
         "type": "function",
         "z": "5c4ac37140a54ac9",
         "name": "",
-        "func": "if (msg.percentage === 1) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 2) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 3) {\n    msg.topic = \"dining_room_lamp\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 4) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 5) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 6) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 7) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 8) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 9) {\n    msg.topic = \"nursery\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 10) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 11) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 12) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 13) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 14) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Energize\"\n} else if (msg.percentage === 15) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Concentrate\"\n} else if (msg.percentage === 16) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Savanna Sunset\"\n} else if (msg.percentage === 17) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Tropical Twilight\"\n} else if (msg.percentage === 18) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Tokyo\"\n} else if (msg.percentage === 19) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Forest Adventure\"\n} else if (msg.percentage === 20) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 21) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 22) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 23) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 24) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 25) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 26) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 27) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 28) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 29) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 30) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 31) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 32) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Single Nightlight\"\n} else if (msg.percentage === 33) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 34) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 35) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 36) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Front Nightlight\"\n} else if (msg.percentage === 37) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Side Nightlight\"\n} else if (msg.percentage === 38) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 39) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 40) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 41) {\n    msg.topic = \"nursery\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 42) {\n    msg.topic = \"nursery\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 43) {\n    msg.topic = \"nursery\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 44) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Energize\"\n} else if (msg.percentage === 45) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Concentrate\"\n} else if (msg.percentage === 46) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 47) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 48) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 49) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Relax\"\n} else if (msg.percentage === 50) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Purple\"\n} else if (msg.percentage === 51) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Pink\"\n} else if (msg.percentage === 52) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Kallen Reading\"\n} else if (msg.percentage === 53) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Baby Is Napping\"\n} else if (msg.percentage === 54) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Stairwell\"\n}\nreturn msg;",
+        "func": "if (msg.percentage === 1) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 2) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 3) {\n    msg.topic = \"dining_room_lamp\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 4) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 5) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 6) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 7) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 8) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 9) {\n    msg.topic = \"emma_bedroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 10) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 11) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 12) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 13) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 14) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Energize\"\n} else if (msg.percentage === 15) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Concentrate\"\n} else if (msg.percentage === 16) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Savanna Sunset\"\n} else if (msg.percentage === 17) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Tropical Twilight\"\n} else if (msg.percentage === 18) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Tokyo\"\n} else if (msg.percentage === 19) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Forest Adventure\"\n} else if (msg.percentage === 20) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 21) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 22) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 23) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 24) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 25) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 26) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 27) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 28) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 29) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 30) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 31) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 32) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Single Nightlight\"\n} else if (msg.percentage === 33) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 34) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 35) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 36) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Front Nightlight\"\n} else if (msg.percentage === 37) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Side Nightlight\"\n} else if (msg.percentage === 38) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 39) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 40) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 41) {\n    msg.topic = \"emma_bedroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 42) {\n    msg.topic = \"emma_bedroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 43) {\n    msg.topic = \"emma_bedroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 44) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Energize\"\n} else if (msg.percentage === 45) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Concentrate\"\n} else if (msg.percentage === 46) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 47) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 48) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 49) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Relax\"\n} else if (msg.percentage === 50) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Purple\"\n} else if (msg.percentage === 51) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Pink\"\n} else if (msg.percentage === 52) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Kallen Reading\"\n} else if (msg.percentage === 53) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Baby Is Napping\"\n} else if (msg.percentage === 54) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Stairwell\"\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19057,7 +19057,7 @@
             "kallen_bedroom",
             "living_room",
             "master_bedroom",
-            "nursery"
+            "emma_bedroom"
         ],
         "deviceId": [],
         "entityId": [],
@@ -19752,7 +19752,7 @@
         "type": "function",
         "z": "bb961e59e2ef86c9",
         "name": "Rooms",
-        "func": "var room = msg.payload.event.actionName\n\nif (room === \"lights-basement-studio\") {\n    msg.room = \"light.basement_studio_lights\"\n} else if (room === \"lights-living-room\") {\n    msg.room = \"light.living_room_lights\"\n} else if (room === \"lights-dining-room-lamp\") {\n    msg.room = \"light.dining_room_lamp\"\n} else if (room === \"lights-tina-lamp\") {\n    msg.room = \"light.tina_lamp\"\n} else if (room === \"lights-mud-room\") {\n    msg.room = \"light.mud_room_overhead\"\n} else if (room === \"lights-upstairs-hallway\") {\n    msg.room = \"light.hallway_overhead\"\n} else if (room === \"lights-upstairs-bathroom\") {\n    msg.room = \"light.upstairs_bathroom_lights\"\n} else if (room === \"lights-master-bedroom\") {\n    msg.room = \"light.master_bedroom_lights\"\n} else if (room === \"lights-kallen-bedroom\") {\n    msg.room = \"light.kallen_bedroom_lights\"\n} else if (room === \"lights-nursery\") {\n    msg.room = \"light.nursery_light\"\n} else if (room === \"lights-front-porch\") {\n    msg.room = \"light.front_porch_light\"\n} else if (room === \"lights-furnace-room\") {\n    msg.room = \"light.furnace_room_overhead\"\n}\n\nreturn msg;",
+        "func": "var room = msg.payload.event.actionName\n\nif (room === \"lights-basement-studio\") {\n    msg.room = \"light.basement_studio_lights\"\n} else if (room === \"lights-living-room\") {\n    msg.room = \"light.living_room_lights\"\n} else if (room === \"lights-dining-room-lamp\") {\n    msg.room = \"light.dining_room_lamp\"\n} else if (room === \"lights-tina-lamp\") {\n    msg.room = \"light.tina_lamp\"\n} else if (room === \"lights-mud-room\") {\n    msg.room = \"light.mud_room_overhead\"\n} else if (room === \"lights-upstairs-hallway\") {\n    msg.room = \"light.hallway_overhead\"\n} else if (room === \"lights-upstairs-bathroom\") {\n    msg.room = \"light.upstairs_bathroom_lights\"\n} else if (room === \"lights-master-bedroom\") {\n    msg.room = \"light.master_bedroom_lights\"\n} else if (room === \"lights-kallen-bedroom\") {\n    msg.room = \"light.kallen_bedroom_lights\"\n} else if (room === \"lights-emma_bedroom\") {\n    msg.room = \"light.emma_bedroom_light\"\n} else if (room === \"lights-front-porch\") {\n    msg.room = \"light.front_porch_light\"\n} else if (room === \"lights-furnace-room\") {\n    msg.room = \"light.furnace_room_overhead\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
