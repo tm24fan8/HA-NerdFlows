@@ -1042,10 +1042,20 @@
             "8f3c66f06ed3f7b2",
             "d8a2fa45040cce43",
             "aeae503fd214ff93",
-            "16029ccf061bdd10"
+            "16029ccf061bdd10",
+            "d2751bc2cfc5af8f",
+            "479d97a8cb23431c",
+            "2ea96df492605d77",
+            "2858899020f2661e",
+            "46e89e0bb777ec12",
+            "435280acadb9f364",
+            "ec5937bc60874009",
+            "defcae57f9916394"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 2592,
+        "h": 282
     },
     {
         "id": "753e14252442d87d",
@@ -7313,11 +7323,12 @@
             "switch.adaptive_lighting_basement_studio",
             "switch.adaptive_lighting_dining_room",
             "switch.adaptive_lighting_downstairs_bathroom",
+            "switch.adaptive_lighting_emma_bedroom",
+            "switch.adaptive_lighting_front_porch",
             "switch.adaptive_lighting_kallen_bedroom",
             "switch.adaptive_lighting_living_room",
             "switch.adaptive_lighting_master_bedroom",
             "switch.adaptive_lighting_mud_room",
-            "switch.adaptive_lighting_emma_bedroom",
             "switch.adaptive_lighting_tina_lamp",
             "switch.adaptive_lighting_upstairs_bathroom",
             "switch.adaptive_lighting_upstairs_hallway"
@@ -7435,11 +7446,12 @@
         "entityId": [
             "input_text.basement_studio_selected_scene",
             "input_text.downstairs_bathroom_selected_scene",
+            "input_text.emma_bedroom_selected_scene",
+            "input_text.front_porch_selected_scene",
             "input_text.kallen_bedroom_selected_scene",
             "input_text.living_room_selected_scene",
             "input_text.master_bedroom_selected_scene",
             "input_text.mud_room_selected_scene",
-            "input_text.emma_bedroom_selected_scene",
             "input_text.tina_lamp_selected_scene",
             "input_text.upstairs_bathroom_selected_scene",
             "input_text.upstairs_hallway_selected_scene"
@@ -9605,7 +9617,7 @@
         "y": 640,
         "wires": [
             [
-                "cfdcc7c9c168dc17"
+                "479d97a8cb23431c"
             ]
         ],
         "outputLabels": [
@@ -9636,7 +9648,7 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1090,
+        "x": 1750,
         "y": 640,
         "wires": [
             [
@@ -9668,7 +9680,7 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1110,
+        "x": 1650,
         "y": 780,
         "wires": [
             []
@@ -9711,7 +9723,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 670,
+        "x": 1130,
         "y": 640,
         "wires": [
             [
@@ -9757,11 +9769,11 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 890,
+        "x": 1350,
         "y": 640,
         "wires": [
             [
-                "091390f43bfeddf5"
+                "ec5937bc60874009"
             ],
             []
         ]
@@ -9803,11 +9815,11 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 910,
+        "x": 1290,
         "y": 780,
         "wires": [
             [
-                "7a7229eb69c9b1a3"
+                "2ea96df492605d77"
             ],
             []
         ]
@@ -9866,7 +9878,7 @@
         "y": 700,
         "wires": [
             [
-                "cfdcc7c9c168dc17"
+                "479d97a8cb23431c"
             ]
         ],
         "outputLabels": [
@@ -9887,7 +9899,7 @@
         "y": 580,
         "wires": [
             [
-                "cfdcc7c9c168dc17"
+                "479d97a8cb23431c"
             ]
         ]
     },
@@ -9928,7 +9940,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1420,
+        "x": 2100,
         "y": 580,
         "wires": [
             [
@@ -9959,7 +9971,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1610,
+        "x": 2290,
         "y": 580,
         "wires": [
             [
@@ -9989,7 +10001,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1820,
+        "x": 2500,
         "y": 580,
         "wires": [
             []
@@ -10000,7 +10012,7 @@
         "type": "switch",
         "z": "eff21041cc941fef",
         "g": "eeafd13be593ae69",
-        "name": "",
+        "name": "If Motion",
         "property": "detect",
         "propertyType": "msg",
         "rules": [
@@ -10008,16 +10020,22 @@
                 "t": "eq",
                 "v": "motion",
                 "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
-        "x": 1250,
-        "y": 580,
+        "outputs": 2,
+        "x": 1920,
+        "y": 640,
         "wires": [
             [
                 "aaac8068997af1a5"
+            ],
+            [
+                "d2751bc2cfc5af8f"
             ]
         ]
     },
@@ -10079,7 +10097,7 @@
         "type": "switch",
         "z": "eff21041cc941fef",
         "g": "eeafd13be593ae69",
-        "name": "",
+        "name": "On/Off",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -10097,7 +10115,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 330,
+        "x": 710,
         "y": 640,
         "wires": [
             [
@@ -10127,7 +10145,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 730,
+        "x": 1110,
         "y": 780,
         "wires": [
             [
@@ -10166,7 +10184,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 450,
+        "x": 830,
         "y": 780,
         "wires": [
             [
@@ -10194,7 +10212,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 590,
+        "x": 970,
         "y": 720,
         "wires": [
             [
@@ -10214,7 +10232,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
+        "x": 970,
         "y": 780,
         "wires": [
             [
@@ -10227,7 +10245,7 @@
         "type": "switch",
         "z": "eff21041cc941fef",
         "g": "eeafd13be593ae69",
-        "name": "",
+        "name": "Method",
         "property": "detect",
         "propertyType": "msg",
         "rules": [
@@ -10243,7 +10261,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
+        "x": 860,
         "y": 640,
         "wires": [
             [
@@ -10252,6 +10270,254 @@
             ],
             [
                 "edef3ad58f6e9bbd"
+            ]
+        ]
+    },
+    {
+        "id": "d2751bc2cfc5af8f",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Set Adaptive",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.front_porch_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2090,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "479d97a8cb23431c",
+        "type": "api-current-state",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Holiday Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.holiday_mode",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "holiday-mode",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 340,
+        "y": 640,
+        "wires": [
+            [
+                "46e89e0bb777ec12"
+            ]
+        ]
+    },
+    {
+        "id": "2ea96df492605d77",
+        "type": "switch",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Holiday?",
+        "property": "holiday-mode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1480,
+        "y": 780,
+        "wires": [
+            [
+                "2858899020f2661e"
+            ],
+            [
+                "7a7229eb69c9b1a3"
+            ]
+        ]
+    },
+    {
+        "id": "2858899020f2661e",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Formatting",
+        "func": "var holiday = msg.holiday.toLowerCase()\n\nmsg.holiday = holiday\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 720,
+        "wires": [
+            [
+                "defcae57f9916394"
+            ]
+        ]
+    },
+    {
+        "id": "46e89e0bb777ec12",
+        "type": "api-current-state",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Current Holiday",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_select.holiday_animation",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "holiday",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 540,
+        "y": 640,
+        "wires": [
+            [
+                "cfdcc7c9c168dc17"
+            ]
+        ]
+    },
+    {
+        "id": "435280acadb9f364",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Holiday Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.animated_scene_{{holiday}}"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2020,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec5937bc60874009",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Animations Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.animated_scene_{{holiday}}"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1560,
+        "y": 640,
+        "wires": [
+            [
+                "091390f43bfeddf5"
+            ]
+        ]
+    },
+    {
+        "id": "defcae57f9916394",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Adaptive Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.adaptive_lighting_front_porch"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1830,
+        "y": 720,
+        "wires": [
+            [
+                "435280acadb9f364"
             ]
         ]
     },
