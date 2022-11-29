@@ -666,9 +666,7 @@
             "acb52adc50d34045"
         ],
         "x": 14,
-        "y": 759,
-        "w": 1312,
-        "h": 442
+        "y": 759
     },
     {
         "id": "e065b1ed4938b477",
@@ -760,9 +758,7 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 59,
-        "w": 3012,
-        "h": 682
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -785,10 +781,20 @@
             "39f78e9aa56bc51e",
             "a32c37ccf0102258",
             "d5c6b45df763e57e",
-            "6f011420f6bb15a7"
+            "6f011420f6bb15a7",
+            "d6e563414b1612f0",
+            "8bcf629a3ddd86b1",
+            "d4b42e41189b6b3c",
+            "4857e3af9d5250e3",
+            "8ed3d0b6a1a6359f",
+            "b5c4c258c8ec7f99",
+            "1bb64ed65666e9ca",
+            "82dcd22b8e2adf7c"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 882,
+        "h": 542
     },
     {
         "id": "477e752fcd2e2a19",
@@ -810,9 +816,7 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39,
-        "w": 872,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -834,9 +838,7 @@
             "427cc2991454bbf0"
         ],
         "x": 14,
-        "y": 219,
-        "w": 1012,
-        "h": 202
+        "y": 219
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1044,17 +1046,15 @@
             "aeae503fd214ff93",
             "16029ccf061bdd10",
             "d2751bc2cfc5af8f",
-            "479d97a8cb23431c",
-            "2ea96df492605d77",
-            "2858899020f2661e",
-            "46e89e0bb777ec12",
             "435280acadb9f364",
             "ec5937bc60874009",
-            "defcae57f9916394"
+            "defcae57f9916394",
+            "dfa6bff034d7d522",
+            "94faa23771cc9cd6"
         ],
         "x": 34,
         "y": 539,
-        "w": 2592,
+        "w": 2212,
         "h": 282
     },
     {
@@ -1189,9 +1189,7 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 439,
-        "w": 1552,
-        "h": 422
+        "y": 439
     },
     {
         "id": "19b0e082db0643ac",
@@ -6806,7 +6804,8 @@
             [
                 "d394df04f71de37a",
                 "4781b749d186cd7f",
-                "7ef7610b2f402829"
+                "7ef7610b2f402829",
+                "47862a29a4c2efd1"
             ]
         ]
     },
@@ -6881,7 +6880,8 @@
         "wires": [
             [
                 "db751091895c18b8",
-                "4449d5ec66482683"
+                "4449d5ec66482683",
+                "65a3169bc9301a4d"
             ]
         ]
     },
@@ -7303,7 +7303,8 @@
         "wires": [
             [
                 "db751091895c18b8",
-                "4449d5ec66482683"
+                "4449d5ec66482683",
+                "65a3169bc9301a4d"
             ]
         ]
     },
@@ -7572,7 +7573,8 @@
         "wires": [
             [
                 "4781b749d186cd7f",
-                "1e365f7e5ba78955"
+                "1e365f7e5ba78955",
+                "47862a29a4c2efd1"
             ]
         ]
     },
@@ -8055,6 +8057,133 @@
             [
                 "1de987d9202de646"
             ]
+        ]
+    },
+    {
+        "id": "65a3169bc9301a4d",
+        "type": "function",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Holiday Code",
+        "func": "var holidaymode = global.get('holidaymode')\nvar currentholiday = global.get('currentholiday')\nvar holiday = currentholiday.toLowerCase()\n\nif (holidaymode === 'on') {\n    msg.holiday = holiday\n    return msg;\n} else {\n    return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2520,
+        "y": 240,
+        "wires": [
+            [
+                "3f695f3f93209060"
+            ]
+        ],
+        "outputLabels": [
+            "Holiday On"
+        ]
+    },
+    {
+        "id": "63e29e0cab0d4579",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Holiday Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.animated_scene_{{holiday}}"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2900,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f695f3f93209060",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Adaptive Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.adaptive_lighting_front_porch"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2710,
+        "y": 240,
+        "wires": [
+            [
+                "63e29e0cab0d4579"
+            ]
+        ]
+    },
+    {
+        "id": "47862a29a4c2efd1",
+        "type": "function",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Holiday Code",
+        "func": "var holidaymode = global.get('holidaymode')\nvar currentholiday = global.get('currentholiday')\nvar holiday = currentholiday.toLowerCase()\n\nif (holidaymode === 'on') {\n    msg.holiday = holiday\n    return msg;\n} else {\n    return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 420,
+        "wires": [
+            [
+                "5c7200b067eb96eb"
+            ]
+        ],
+        "outputLabels": [
+            "Holiday On"
+        ]
+    },
+    {
+        "id": "5c7200b067eb96eb",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Holiday Animation Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.animated_scene_{{holiday}}"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 960,
+        "y": 420,
+        "wires": [
+            []
         ]
     },
     {
@@ -9617,7 +9746,7 @@
         "y": 640,
         "wires": [
             [
-                "479d97a8cb23431c"
+                "cfdcc7c9c168dc17"
             ]
         ],
         "outputLabels": [
@@ -9648,7 +9777,7 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1750,
+        "x": 1370,
         "y": 640,
         "wires": [
             [
@@ -9680,7 +9809,7 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1650,
+        "x": 1330,
         "y": 780,
         "wires": [
             []
@@ -9707,12 +9836,6 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
             }
         ],
         "for": "0",
@@ -9723,7 +9846,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1130,
+        "x": 750,
         "y": 640,
         "wires": [
             [
@@ -9753,12 +9876,6 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
             }
         ],
         "for": "0",
@@ -9769,11 +9886,11 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1350,
+        "x": 970,
         "y": 640,
         "wires": [
             [
-                "ec5937bc60874009"
+                "94faa23771cc9cd6"
             ],
             []
         ]
@@ -9799,12 +9916,6 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
             }
         ],
         "for": "0",
@@ -9815,11 +9926,11 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1290,
+        "x": 910,
         "y": 780,
         "wires": [
             [
-                "2ea96df492605d77"
+                "dfa6bff034d7d522"
             ],
             []
         ]
@@ -9878,7 +9989,7 @@
         "y": 700,
         "wires": [
             [
-                "479d97a8cb23431c"
+                "cfdcc7c9c168dc17"
             ]
         ],
         "outputLabels": [
@@ -9899,7 +10010,7 @@
         "y": 580,
         "wires": [
             [
-                "479d97a8cb23431c"
+                "cfdcc7c9c168dc17"
             ]
         ]
     },
@@ -9940,7 +10051,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 2100,
+        "x": 1720,
         "y": 580,
         "wires": [
             [
@@ -9971,7 +10082,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2290,
+        "x": 1910,
         "y": 580,
         "wires": [
             [
@@ -10001,7 +10112,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2500,
+        "x": 2120,
         "y": 580,
         "wires": [
             []
@@ -10028,7 +10139,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1920,
+        "x": 1540,
         "y": 640,
         "wires": [
             [
@@ -10115,7 +10226,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 710,
+        "x": 330,
         "y": 640,
         "wires": [
             [
@@ -10145,7 +10256,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1110,
+        "x": 730,
         "y": 780,
         "wires": [
             [
@@ -10184,7 +10295,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 830,
+        "x": 450,
         "y": 780,
         "wires": [
             [
@@ -10212,7 +10323,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
+        "x": 590,
         "y": 720,
         "wires": [
             [
@@ -10232,7 +10343,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
+        "x": 590,
         "y": 780,
         "wires": [
             [
@@ -10261,7 +10372,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 860,
+        "x": 480,
         "y": 640,
         "wires": [
             [
@@ -10295,142 +10406,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2090,
+        "x": 1710,
         "y": 640,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "479d97a8cb23431c",
-        "type": "api-current-state",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "Holiday Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.holiday_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "holiday-mode",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 340,
-        "y": 640,
-        "wires": [
-            [
-                "46e89e0bb777ec12"
-            ]
-        ]
-    },
-    {
-        "id": "2ea96df492605d77",
-        "type": "switch",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "Holiday?",
-        "property": "holiday-mode",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1480,
-        "y": 780,
-        "wires": [
-            [
-                "2858899020f2661e"
-            ],
-            [
-                "7a7229eb69c9b1a3"
-            ]
-        ]
-    },
-    {
-        "id": "2858899020f2661e",
-        "type": "function",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "Formatting",
-        "func": "var holiday = msg.holiday.toLowerCase()\n\nmsg.holiday = holiday\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1650,
-        "y": 720,
-        "wires": [
-            [
-                "defcae57f9916394"
-            ]
-        ]
-    },
-    {
-        "id": "46e89e0bb777ec12",
-        "type": "api-current-state",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "Current Holiday",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.holiday_animation",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "holiday",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 540,
-        "y": 640,
-        "wires": [
-            [
-                "cfdcc7c9c168dc17"
-            ]
         ]
     },
     {
@@ -10455,7 +10434,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2020,
+        "x": 1520,
         "y": 720,
         "wires": [
             []
@@ -10483,12 +10462,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1560,
-        "y": 640,
+        "x": 1380,
+        "y": 580,
         "wires": [
-            [
-                "091390f43bfeddf5"
-            ]
+            []
         ]
     },
     {
@@ -10513,12 +10490,67 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1830,
+        "x": 1330,
         "y": 720,
         "wires": [
             [
                 "435280acadb9f364"
             ]
+        ]
+    },
+    {
+        "id": "dfa6bff034d7d522",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Holiday Code",
+        "func": "var holidaymode = global.get('holidaymode')\nvar currentholiday = global.get('currentholiday')\nvar holiday = currentholiday.toLowerCase()\n\nif (holidaymode === 'on') {\n    msg.holiday = holiday\n    return [msg,null]\n} else {\n    return [null,msg]\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 780,
+        "wires": [
+            [
+                "defcae57f9916394"
+            ],
+            [
+                "7a7229eb69c9b1a3"
+            ]
+        ],
+        "outputLabels": [
+            "Holiday On",
+            "Holiday Off"
+        ]
+    },
+    {
+        "id": "94faa23771cc9cd6",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Holiday Code",
+        "func": "var holidaymode = global.get('holidaymode')\nvar currentholiday = global.get('currentholiday')\nvar holiday = currentholiday.toLowerCase()\n\nif (holidaymode === 'on') {\n    msg.holiday = holiday\n    return [msg,null]\n} else {\n    return [null,msg]\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 640,
+        "wires": [
+            [
+                "091390f43bfeddf5",
+                "ec5937bc60874009"
+            ],
+            [
+                "091390f43bfeddf5"
+            ]
+        ],
+        "outputLabels": [
+            "Holiday On",
+            "Holiday Off"
         ]
     },
     {
@@ -22946,6 +22978,272 @@
         "wires": [
             [
                 "1c84bd4e8ca6566d"
+            ]
+        ]
+    },
+    {
+        "id": "d6e563414b1612f0",
+        "type": "server-state-changed",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Holiday Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.holiday_mode",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "8bcf629a3ddd86b1"
+            ]
+        ]
+    },
+    {
+        "id": "8bcf629a3ddd86b1",
+        "type": "function",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Store to Variable",
+        "func": "global.set('holidaymode',msg.payload);\n\nreturn msg;",
+        "outputs": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d4b42e41189b6b3c",
+        "type": "inject",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Set Holiday Mode on Reboot",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "120",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 540,
+        "wires": [
+            [
+                "4857e3af9d5250e3"
+            ]
+        ]
+    },
+    {
+        "id": "4857e3af9d5250e3",
+        "type": "api-current-state",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Holiday Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.holiday_mode",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 440,
+        "y": 540,
+        "wires": [
+            [
+                "8bcf629a3ddd86b1"
+            ]
+        ]
+    },
+    {
+        "id": "8ed3d0b6a1a6359f",
+        "type": "server-state-changed",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Current Holiday",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_select.holiday_animation",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 140,
+        "y": 600,
+        "wires": [
+            [
+                "b5c4c258c8ec7f99"
+            ]
+        ]
+    },
+    {
+        "id": "b5c4c258c8ec7f99",
+        "type": "function",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Store to Variable",
+        "func": "global.set('currentholiday',msg.payload);\n\nreturn msg;",
+        "outputs": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "82dcd22b8e2adf7c",
+        "type": "inject",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Set Current Holiday on Reboot",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "120",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 660,
+        "wires": [
+            [
+                "1bb64ed65666e9ca"
+            ]
+        ]
+    },
+    {
+        "id": "1bb64ed65666e9ca",
+        "type": "api-current-state",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Current Holiday",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_select.holiday_animation",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 460,
+        "y": 660,
+        "wires": [
+            [
+                "b5c4c258c8ec7f99"
             ]
         ]
     },
