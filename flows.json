@@ -792,9 +792,7 @@
             "82dcd22b8e2adf7c"
         ],
         "x": 34,
-        "y": 159,
-        "w": 882,
-        "h": 542
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1053,9 +1051,7 @@
             "94faa23771cc9cd6"
         ],
         "x": 34,
-        "y": 539,
-        "w": 2212,
-        "h": 282
+        "y": 539
     },
     {
         "id": "753e14252442d87d",
@@ -7716,7 +7712,7 @@
         "pastviewUnits": "days",
         "pastviewUnitstype": "pastviewUnits",
         "x": 150,
-        "y": 500,
+        "y": 580,
         "wires": [
             [
                 "828e99767076eae5"
@@ -7744,7 +7740,7 @@
         "repair": false,
         "outputs": 2,
         "x": 370,
-        "y": 500,
+        "y": 580,
         "wires": [
             [
                 "f5eb76f93946aad3"
@@ -7813,7 +7809,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 740,
-        "y": 500,
+        "y": 580,
         "wires": [
             []
         ]
@@ -7838,7 +7834,7 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 460,
+        "y": 540,
         "wires": [
             [
                 "798ff6ede18394ea"
@@ -7865,7 +7861,7 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 540,
+        "y": 620,
         "wires": [
             [
                 "798ff6ede18394ea"
@@ -8074,7 +8070,8 @@
         "y": 240,
         "wires": [
             [
-                "3f695f3f93209060"
+                "3f695f3f93209060",
+                "16d9572e576c9488"
             ]
         ],
         "outputLabels": [
@@ -8152,7 +8149,8 @@
         "y": 420,
         "wires": [
             [
-                "5c7200b067eb96eb"
+                "5c7200b067eb96eb",
+                "6987f02f09134764"
             ]
         ],
         "outputLabels": [
@@ -8182,6 +8180,60 @@
         "queue": "none",
         "x": 960,
         "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "16d9572e576c9488",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Xmas Lights On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.front_window_christmas_lights"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2720,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6987f02f09134764",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Xmas Lights Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.front_window_christmas_lights"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 940,
+        "y": 480,
         "wires": [
             []
         ]
