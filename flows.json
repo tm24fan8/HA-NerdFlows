@@ -8200,7 +8200,8 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "light.front_window_christmas_lights"
+            "light.front_window_christmas_lights",
+            "light.living_room_christmas_tree"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -8227,7 +8228,8 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "light.front_window_christmas_lights"
+            "light.front_window_christmas_lights",
+            "light.living_room_christmas_tree"
         ],
         "data": "",
         "dataType": "jsonata",
