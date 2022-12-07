@@ -627,7 +627,9 @@
             "909d1a99a02620dd"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1932,
+        "h": 582
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -939,7 +941,9 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779
+        "y": 779,
+        "w": 1432,
+        "h": 422
     },
     {
         "id": "f55a52c40b8b8749",
@@ -984,7 +988,9 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 832,
+        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -999,21 +1005,25 @@
             "d45ac7361e128558",
             "fbe3667814a51f6f",
             "ec543bc9adac3d08",
-            "cb4d95e0ee4e1f05",
             "3563f62312975002",
             "d4019d35bf5a5f98",
             "29b9f573370571cf",
             "25e12d8e4a0a7f11",
             "e91c3392b59ff9d1",
-            "5a19347b1a570e9c",
             "753ad45c3685897b",
             "d32a407e1c701563",
             "58b54517ed812db3",
             "981191938ab4ee2f",
-            "59af14a564176ce4"
+            "59af14a564176ce4",
+            "3c83c0ab0aa96e3d",
+            "1a7c87f9713e5349",
+            "7b71cb1967ec5255",
+            "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1212,
+        "h": 382
     },
     {
         "id": "eeafd13be593ae69",
@@ -1052,7 +1062,9 @@
             "4f330c52abf707de"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 2212,
+        "h": 282
     },
     {
         "id": "753e14252442d87d",
@@ -12475,7 +12487,7 @@
         "y": 280,
         "wires": [
             [
-                "ec543bc9adac3d08"
+                "3c83c0ab0aa96e3d"
             ]
         ]
     },
@@ -12493,7 +12505,7 @@
         "cycles": "5",
         "persist": "false",
         "power_on": "true",
-        "x": 790,
+        "x": 970,
         "y": 340,
         "wires": []
     },
@@ -12557,7 +12569,7 @@
         "y": 340,
         "wires": [
             [
-                "ec543bc9adac3d08"
+                "3c83c0ab0aa96e3d"
             ],
             []
         ]
@@ -12599,40 +12611,12 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 380,
+        "x": 560,
         "y": 340,
         "wires": [
             [
                 "981191938ab4ee2f"
             ],
-            []
-        ]
-    },
-    {
-        "id": "cb4d95e0ee4e1f05",
-        "type": "api-call-service",
-        "z": "47f17992fab9b4f5",
-        "g": "208284848b13b85b",
-        "name": "Reset Adaptive",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.basement_studio_scenes"
-        ],
-        "data": "{\t    \"option\":\"Adaptive\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 960,
-        "y": 280,
-        "wires": [
             []
         ]
     },
@@ -12654,11 +12638,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 780,
+        "x": 960,
         "y": 280,
         "wires": [
             [
-                "cb4d95e0ee4e1f05"
+                "1a7c87f9713e5349"
             ]
         ]
     },
@@ -12684,7 +12668,7 @@
         "y": 460,
         "wires": [
             [
-                "e91c3392b59ff9d1"
+                "7b71cb1967ec5255"
             ]
         ]
     },
@@ -12702,7 +12686,7 @@
         "cycles": "8",
         "persist": "false",
         "power_on": "true",
-        "x": 790,
+        "x": 970,
         "y": 520,
         "wires": []
     },
@@ -12766,7 +12750,7 @@
         "y": 520,
         "wires": [
             [
-                "e91c3392b59ff9d1"
+                "7b71cb1967ec5255"
             ],
             []
         ]
@@ -12808,40 +12792,12 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 380,
+        "x": 560,
         "y": 520,
         "wires": [
             [
                 "59af14a564176ce4"
             ],
-            []
-        ]
-    },
-    {
-        "id": "5a19347b1a570e9c",
-        "type": "api-call-service",
-        "z": "47f17992fab9b4f5",
-        "g": "208284848b13b85b",
-        "name": "Reset Adaptive",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.basement_studio_scenes"
-        ],
-        "data": "{\t    \"option\":\"Adaptive\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 960,
-        "y": 460,
-        "wires": [
             []
         ]
     },
@@ -12863,11 +12819,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 780,
+        "x": 960,
         "y": 460,
         "wires": [
             [
-                "5a19347b1a570e9c"
+                "1e1891c23a6e7e64"
             ]
         ]
     },
@@ -12895,7 +12851,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 790,
+        "x": 970,
         "y": 400,
         "wires": [
             []
@@ -12925,7 +12881,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 790,
+        "x": 970,
         "y": 580,
         "wires": [
             []
@@ -12968,7 +12924,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 600,
+        "x": 780,
         "y": 340,
         "wires": [
             [
@@ -13016,7 +12972,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 600,
+        "x": 780,
         "y": 520,
         "wires": [
             [
@@ -13024,6 +12980,118 @@
                 "29b9f573370571cf",
                 "58b54517ed812db3"
             ],
+            []
+        ]
+    },
+    {
+        "id": "3c83c0ab0aa96e3d",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "208284848b13b85b",
+        "name": "Save State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t   \"scene_id\":\"basement_restore\",\t   \"snapshot_entities\":[\"light.basement_led_strip_1\",\"light.basement_tall_lamp\",\"light.basement_short_lamp\",\"light.basement_stairwell\"]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 350,
+        "y": 340,
+        "wires": [
+            [
+                "ec543bc9adac3d08"
+            ]
+        ]
+    },
+    {
+        "id": "1a7c87f9713e5349",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "208284848b13b85b",
+        "name": "Restore State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "scene.basement_restore"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1140,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b71cb1967ec5255",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "208284848b13b85b",
+        "name": "Save State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t   \"scene_id\":\"basement_restore\",\t   \"snapshot_entities\":[\"light.basement_led_strip_1\",\"light.basement_tall_lamp\",\"light.basement_short_lamp\",\"light.basement_stairwell\"]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 350,
+        "y": 520,
+        "wires": [
+            [
+                "e91c3392b59ff9d1"
+            ]
+        ]
+    },
+    {
+        "id": "1e1891c23a6e7e64",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "208284848b13b85b",
+        "name": "Restore State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "scene.basement_restore"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1140,
+        "y": 460,
+        "wires": [
             []
         ]
     },
