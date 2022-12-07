@@ -627,9 +627,7 @@
             "909d1a99a02620dd"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1932,
-        "h": 582
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -941,9 +939,7 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1432,
-        "h": 422
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -988,9 +984,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1021,9 +1015,7 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1212,
-        "h": 382
+        "y": 239
     },
     {
         "id": "eeafd13be593ae69",
@@ -1059,12 +1051,13 @@
             "defcae57f9916394",
             "dfa6bff034d7d522",
             "94faa23771cc9cd6",
-            "4f330c52abf707de"
+            "4f330c52abf707de",
+            "c46dfcaa9a2798f0"
         ],
         "x": 34,
         "y": 539,
         "w": 2212,
-        "h": 282
+        "h": 322
     },
     {
         "id": "753e14252442d87d",
@@ -10334,7 +10327,7 @@
             }
         ],
         "x": 160,
-        "y": 760,
+        "y": 820,
         "wires": [
             [
                 "d8a2fa45040cce43"
@@ -10730,6 +10723,64 @@
                 "dfa6bff034d7d522"
             ],
             []
+        ]
+    },
+    {
+        "id": "c46dfcaa9a2798f0",
+        "type": "server-state-changed",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Doorbell",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.front_doorbell_ding_mqtt",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "doorbell",
+                "valueType": "str"
+            }
+        ],
+        "x": 120,
+        "y": 760,
+        "wires": [
+            [
+                "cfdcc7c9c168dc17"
+            ]
         ]
     },
     {
