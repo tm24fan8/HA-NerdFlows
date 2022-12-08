@@ -666,7 +666,9 @@
             "acb52adc50d34045"
         ],
         "x": 14,
-        "y": 759
+        "y": 759,
+        "w": 1312,
+        "h": 442
     },
     {
         "id": "e065b1ed4938b477",
@@ -758,7 +760,9 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 59
+        "y": 59,
+        "w": 3012,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -792,7 +796,9 @@
             "82dcd22b8e2adf7c"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 882,
+        "h": 542
     },
     {
         "id": "477e752fcd2e2a19",
@@ -881,7 +887,9 @@
             "d00db0647d1c4034"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -898,7 +906,9 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 142
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1055,9 +1065,7 @@
             "c46dfcaa9a2798f0"
         ],
         "x": 34,
-        "y": 539,
-        "w": 2212,
-        "h": 322
+        "y": 539
     },
     {
         "id": "753e14252442d87d",
@@ -19031,101 +19039,6 @@
         ]
     },
     {
-        "id": "e18616ffd95b1074",
-        "type": "amazon-echo-hub",
-        "z": "5c4ac37140a54ac9",
-        "port": "80",
-        "processinput": 0,
-        "discovery": true,
-        "x": 55,
-        "y": 640,
-        "wires": [
-            [
-                "932df233e423c6ed"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "932df233e423c6ed",
-        "type": "amazon-echo-device",
-        "z": "5c4ac37140a54ac9",
-        "name": "Virtual Scenes Light",
-        "topic": "virtual_scenes_light",
-        "x": 220,
-        "y": 640,
-        "wires": [
-            [
-                "466b39f277505de4"
-            ]
-        ]
-    },
-    {
-        "id": "f76504ca785dfba6",
-        "type": "debug",
-        "z": "5c4ac37140a54ac9",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "466b39f277505de4",
-        "type": "function",
-        "z": "5c4ac37140a54ac9",
-        "name": "",
-        "func": "if (msg.percentage === 1) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 2) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 3) {\n    msg.topic = \"dining_room_lamp\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 4) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 5) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 6) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 7) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 8) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 9) {\n    msg.topic = \"emma_bedroom\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 10) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Reset\"\n} else if (msg.percentage === 11) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 12) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 13) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 14) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Energize\"\n} else if (msg.percentage === 15) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Concentrate\"\n} else if (msg.percentage === 16) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Savanna Sunset\"\n} else if (msg.percentage === 17) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Tropical Twilight\"\n} else if (msg.percentage === 18) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Tokyo\"\n} else if (msg.percentage === 19) {\n    msg.topic = \"living_room\",\n    msg.payload = \"Forest Adventure\"\n} else if (msg.percentage === 20) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 21) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 22) {\n    msg.topic = \"downstairs_bathroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 23) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 24) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 25) {\n    msg.topic = \"mud_room\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 26) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 27) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 28) {\n    msg.topic = \"upstairs_hallway\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 29) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 30) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 31) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 32) {\n    msg.topic = \"upstairs_bathroom\",\n    msg.payload = \"Single Nightlight\"\n} else if (msg.percentage === 33) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 34) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 35) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 36) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Front Nightlight\"\n} else if (msg.percentage === 37) {\n    msg.topic = \"master_bedroom\",\n    msg.payload = \"Side Nightlight\"\n} else if (msg.percentage === 38) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 39) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 40) {\n    msg.topic = \"kallen_bedroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 41) {\n    msg.topic = \"emma_bedroom\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 42) {\n    msg.topic = \"emma_bedroom\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 43) {\n    msg.topic = \"emma_bedroom\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 44) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Energize\"\n} else if (msg.percentage === 45) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Concentrate\"\n} else if (msg.percentage === 46) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Bright\"\n} else if (msg.percentage === 47) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Dimmed\"\n} else if (msg.percentage === 48) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Nightlight\"\n} else if (msg.percentage === 49) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Relax\"\n} else if (msg.percentage === 50) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Purple\"\n} else if (msg.percentage === 51) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Pink\"\n} else if (msg.percentage === 52) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Kallen Reading\"\n} else if (msg.percentage === 53) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Baby Is Napping\"\n} else if (msg.percentage === 54) {\n    msg.topic = \"basement_studio\",\n    msg.payload = \"Stairwell\"\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 640,
-        "wires": [
-            [
-                "442e52ed95a5fd73"
-            ]
-        ]
-    },
-    {
-        "id": "442e52ed95a5fd73",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Set Scene",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.{{topic}}_scenes"
-        ],
-        "data": "{\t    \"option\": msg.payload\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 590,
-        "y": 640,
-        "wires": [
-            [
-                "f76504ca785dfba6"
-            ]
-        ]
-    },
-    {
         "id": "a58bc61a625f47af",
         "type": "ha-button",
         "z": "5c4ac37140a54ac9",
@@ -19143,7 +19056,7 @@
             }
         ],
         "x": 110,
-        "y": 700,
+        "y": 640,
         "wires": [
             [
                 "1d121bd0f1f5d628"
@@ -19164,7 +19077,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 650,
-        "y": 700,
+        "y": 640,
         "wires": []
     },
     {
@@ -19187,7 +19100,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 510,
-        "y": 700,
+        "y": 640,
         "wires": [
             [
                 "5eb7493d13b65a60"
@@ -19354,7 +19267,7 @@
         "z": "5c4ac37140a54ac9",
         "name": "",
         "x": 320,
-        "y": 700,
+        "y": 640,
         "wires": [
             [
                 "804c40c435c342fc"
@@ -19523,7 +19436,7 @@
             }
         ],
         "x": 130,
-        "y": 760,
+        "y": 700,
         "wires": [
             [
                 "ed96b2ce33128205"
@@ -19536,7 +19449,7 @@
         "z": "5c4ac37140a54ac9",
         "name": "",
         "x": 360,
-        "y": 760,
+        "y": 700,
         "wires": [
             [
                 "08eafe762d6146ee"
@@ -19563,7 +19476,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 550,
-        "y": 760,
+        "y": 700,
         "wires": [
             [
                 "e39da18ec3ecc852"
@@ -19584,7 +19497,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 760,
+        "y": 700,
         "wires": []
     },
     {
