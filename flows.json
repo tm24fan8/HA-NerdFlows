@@ -939,7 +939,9 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779
+        "y": 779,
+        "w": 1432,
+        "h": 422
     },
     {
         "id": "f55a52c40b8b8749",
@@ -984,7 +986,9 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 832,
+        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -1026,13 +1030,11 @@
             "label": true
         },
         "nodes": [
-            "05547a934bbcab4d",
             "091390f43bfeddf5",
             "7a7229eb69c9b1a3",
             "edef3ad58f6e9bbd",
             "780ad4c1a1d5204b",
             "51237623ed73ba98",
-            "47aa56df01f697fc",
             "f34816b23181f21e",
             "aaac8068997af1a5",
             "de4f1b15ce906809",
@@ -1051,13 +1053,12 @@
             "defcae57f9916394",
             "dfa6bff034d7d522",
             "94faa23771cc9cd6",
-            "4f330c52abf707de",
-            "c46dfcaa9a2798f0"
+            "4f330c52abf707de"
         ],
         "x": 14,
         "y": 599,
         "w": 2212,
-        "h": 322
+        "h": 282
     },
     {
         "id": "753e14252442d87d",
@@ -9021,8 +9022,8 @@
         "links": [
             "f34816b23181f21e"
         ],
-        "x": 305,
-        "y": 300,
+        "x": 985,
+        "y": 40,
         "wires": []
     },
     {
@@ -9253,12 +9254,189 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 190,
-        "y": 300,
+        "x": 390,
+        "y": 40,
         "wires": [
             [
                 "26f15fc8d75a4020"
             ]
+        ]
+    },
+    {
+        "id": "47aa56df01f697fc",
+        "type": "server-state-changed",
+        "z": "3abb5ae57afb4761",
+        "name": "Front Door Open",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.front_door",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "door",
+                "valueType": "str"
+            }
+        ],
+        "x": 840,
+        "y": 60,
+        "wires": [
+            [
+                "26f15fc8d75a4020"
+            ]
+        ],
+        "outputLabels": [
+            "Open"
+        ]
+    },
+    {
+        "id": "c46dfcaa9a2798f0",
+        "type": "server-state-changed",
+        "z": "3abb5ae57afb4761",
+        "name": "Doorbell",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.front_doorbell_ding_mqtt",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "doorbell",
+                "valueType": "str"
+            }
+        ],
+        "x": 860,
+        "y": 180,
+        "wires": [
+            [
+                "26f15fc8d75a4020"
+            ]
+        ]
+    },
+    {
+        "id": "05547a934bbcab4d",
+        "type": "server-state-changed",
+        "z": "3abb5ae57afb4761",
+        "name": "Motion Detected",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.front_doorbell_motion_mqtt",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "motion",
+                "valueType": "str"
+            }
+        ],
+        "x": 840,
+        "y": 120,
+        "wires": [
+            [
+                "26f15fc8d75a4020"
+            ]
+        ],
+        "outputLabels": [
+            "On"
         ]
     },
     {
@@ -9825,67 +10003,6 @@
         ]
     },
     {
-        "id": "05547a934bbcab4d",
-        "type": "server-state-changed",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "Motion Detected",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.front_doorbell_motion_mqtt",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": true,
-        "ignorePrevStateUnavailable": true,
-        "ignoreCurrentStateUnknown": true,
-        "ignoreCurrentStateUnavailable": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "detect",
-                "propertyType": "msg",
-                "value": "motion",
-                "valueType": "str"
-            }
-        ],
-        "x": 120,
-        "y": 700,
-        "wires": [
-            [
-                "cfdcc7c9c168dc17"
-            ]
-        ],
-        "outputLabels": [
-            "On"
-        ]
-    },
-    {
         "id": "091390f43bfeddf5",
         "type": "api-call-service",
         "z": "eff21041cc941fef",
@@ -10068,67 +10185,6 @@
         ]
     },
     {
-        "id": "47aa56df01f697fc",
-        "type": "server-state-changed",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "Door Open",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.front_door",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": true,
-        "ignorePrevStateUnavailable": true,
-        "ignoreCurrentStateUnknown": true,
-        "ignoreCurrentStateUnavailable": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "detect",
-                "propertyType": "msg",
-                "value": "door",
-                "valueType": "str"
-            }
-        ],
-        "x": 100,
-        "y": 760,
-        "wires": [
-            [
-                "cfdcc7c9c168dc17"
-            ]
-        ],
-        "outputLabels": [
-            "Open"
-        ]
-    },
-    {
         "id": "f34816b23181f21e",
         "type": "link in",
         "z": "eff21041cc941fef",
@@ -10138,7 +10194,7 @@
             "26f15fc8d75a4020"
         ],
         "x": 185,
-        "y": 640,
+        "y": 700,
         "wires": [
             [
                 "cfdcc7c9c168dc17"
@@ -10326,7 +10382,7 @@
             }
         ],
         "x": 140,
-        "y": 880,
+        "y": 840,
         "wires": [
             [
                 "d8a2fa45040cce43"
@@ -10722,64 +10778,6 @@
                 "dfa6bff034d7d522"
             ],
             []
-        ]
-    },
-    {
-        "id": "c46dfcaa9a2798f0",
-        "type": "server-state-changed",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "Doorbell",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "binary_sensor.front_doorbell_ding_mqtt",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": true,
-        "ignorePrevStateUnavailable": true,
-        "ignoreCurrentStateUnknown": true,
-        "ignoreCurrentStateUnavailable": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "detect",
-                "propertyType": "msg",
-                "value": "doorbell",
-                "valueType": "str"
-            }
-        ],
-        "x": 100,
-        "y": 820,
-        "wires": [
-            [
-                "cfdcc7c9c168dc17"
-            ]
         ]
     },
     {
