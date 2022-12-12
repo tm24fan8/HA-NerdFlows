@@ -663,10 +663,13 @@
             "0a4f9c693fccd1f1",
             "59d83dd7c5adba1f",
             "57651381835f659c",
-            "acb52adc50d34045"
+            "acb52adc50d34045",
+            "e0751f3bf2a2e610"
         ],
         "x": 14,
-        "y": 759
+        "y": 759,
+        "w": 1312,
+        "h": 482
     },
     {
         "id": "e065b1ed4938b477",
@@ -758,7 +761,9 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 59
+        "y": 59,
+        "w": 3012,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -2625,6 +2630,35 @@
         "manufacturer": "Node-RED",
         "model": "",
         "swVersion": ""
+    },
+    {
+        "id": "7cf78f522e860d42",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "Kallen Bedtime",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Kallen Bedtime"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:bed"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
     },
     {
         "id": "05e66e9e1092e6ea",
@@ -16058,7 +16092,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 820,
+        "y": 860,
         "wires": [
             [
                 "39d187b7e17d80ab"
@@ -16120,7 +16154,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 900,
+        "y": 940,
         "wires": [
             [
                 "39d187b7e17d80ab"
@@ -16165,7 +16199,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 550,
-        "y": 860,
+        "y": 900,
         "wires": [
             [
                 "4792e2d88f7d533f"
@@ -16201,7 +16235,7 @@
         "repair": false,
         "outputs": 2,
         "x": 730,
-        "y": 860,
+        "y": 900,
         "wires": [
             [
                 "d132875202e85038",
@@ -16237,7 +16271,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 680,
-        "y": 940,
+        "y": 980,
         "wires": [
             [
                 "99e74844b8fd9d1a",
@@ -16264,7 +16298,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 840,
-        "y": 920,
+        "y": 960,
         "wires": [
             [
                 "da1a1f23bf9429c5"
@@ -16294,7 +16328,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1010,
-        "y": 920,
+        "y": 960,
         "wires": [
             [
                 "6418c17768ed363d"
@@ -16324,7 +16358,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1200,
-        "y": 920,
+        "y": 960,
         "wires": [
             []
         ]
@@ -16354,7 +16388,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 680,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "265b54394cc42f53"
@@ -16380,7 +16414,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1060,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "73b51e79d20c7982"
@@ -16410,7 +16444,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1230,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -16438,7 +16472,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 840,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "ed138e629ed0809f",
@@ -16469,7 +16503,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 920,
-        "y": 860,
+        "y": 900,
         "wires": [
             [
                 "a6f4af0aaabcc2c1"
@@ -16499,7 +16533,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1100,
-        "y": 860,
+        "y": 900,
         "wires": [
             []
         ]
@@ -16566,7 +16600,7 @@
         "to": "",
         "reg": false,
         "x": 1080,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "fce2383754c91a31"
@@ -16584,7 +16618,7 @@
             "6f595f2a4713d76d"
         ],
         "x": 1215,
-        "y": 1100,
+        "y": 1140,
         "wires": []
     },
     {
@@ -16622,7 +16656,7 @@
         "to": "",
         "reg": false,
         "x": 860,
-        "y": 980,
+        "y": 1020,
         "wires": [
             [
                 "fce2383754c91a31"
@@ -17099,7 +17133,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 340,
-        "y": 860,
+        "y": 900,
         "wires": [
             [
                 "3166f71fdf62748a"
@@ -17331,7 +17365,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 350,
-        "y": 1020,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -17359,7 +17393,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 1020,
+        "y": 1060,
         "wires": [
             [
                 "49eadd57e9728914"
@@ -18473,7 +18507,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 350,
-        "y": 940,
+        "y": 980,
         "wires": [
             [
                 "c2bb11a2ba39b636"
@@ -18509,7 +18543,7 @@
         "repair": false,
         "outputs": 3,
         "x": 530,
-        "y": 940,
+        "y": 980,
         "wires": [
             [
                 "6e10b32a122e8a2c"
@@ -18547,7 +18581,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 680,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "59d83dd7c5adba1f"
@@ -18589,7 +18623,7 @@
         "to": "",
         "reg": false,
         "x": 1080,
-        "y": 1160,
+        "y": 1200,
         "wires": [
             [
                 "fce2383754c91a31"
@@ -18848,7 +18882,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 940,
-        "y": 800,
+        "y": 840,
         "wires": [
             [
                 "acb52adc50d34045"
@@ -18879,9 +18913,47 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1120,
-        "y": 800,
+        "y": 840,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "e0751f3bf2a2e610",
+        "type": "ha-button",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Manual Bedtime",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "7cf78f522e860d42",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "kallen-night",
+                "valueType": "str"
+            }
+        ],
+        "x": 120,
+        "y": 800,
+        "wires": [
+            [
+                "39d187b7e17d80ab"
+            ]
         ]
     },
     {
