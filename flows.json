@@ -611,7 +611,6 @@
             "d1ae15dff680b3b1",
             "39b90ceaed170ac8",
             "31b8c8291d19ffc6",
-            "e90e0b2a6d30d855",
             "34e2055344eea8fe",
             "55e84ccb73ae9b74",
             "3a25dfcae623ee00",
@@ -1021,9 +1020,7 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1212,
-        "h": 382
+        "y": 239
     },
     {
         "id": "eeafd13be593ae69",
@@ -11021,7 +11018,7 @@
         "entityId": [
             "timer.front_porch_motion_timer"
         ],
-        "data": "{\t    \"duration\":{{duration}}\t}",
+        "data": "{\t    \"duration\": msg.duration\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -12571,7 +12568,7 @@
         "entityId": [
             "timer.upstairs_bathroom_motion_timer"
         ],
-        "data": "{\t    \"duration\":{{duration}}\t}",
+        "data": "{    \t    \"duration\": msg.duration\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
