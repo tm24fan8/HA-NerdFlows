@@ -621,13 +621,18 @@
             "2dc5f9d3e00f4ddc",
             "86922621398f4b79",
             "4888e5649042a6d1",
-            "9fa0fef0f57d5968",
             "73bf42069fe27d3a",
             "32559cd9120b4916",
-            "909d1a99a02620dd"
+            "a1fa2d2d1f55af4b",
+            "463689442b9d2046",
+            "5350d2264880d0ad",
+            "0852e64607df9f3a",
+            "1d03ecbe4448d224"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1932,
+        "h": 582
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -667,9 +672,7 @@
             "e0751f3bf2a2e610"
         ],
         "x": 14,
-        "y": 759,
-        "w": 1312,
-        "h": 482
+        "y": 759
     },
     {
         "id": "e065b1ed4938b477",
@@ -761,9 +764,7 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 59,
-        "w": 3012,
-        "h": 682
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -1020,7 +1021,9 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1212,
+        "h": 382
     },
     {
         "id": "eeafd13be593ae69",
@@ -1043,10 +1046,7 @@
             "dda150ba32752234",
             "b69eeb738bbd4bdb",
             "cfdcc7c9c168dc17",
-            "f56b84619fd19f18",
             "8f3c66f06ed3f7b2",
-            "d8a2fa45040cce43",
-            "aeae503fd214ff93",
             "16029ccf061bdd10",
             "d2751bc2cfc5af8f",
             "435280acadb9f364",
@@ -1054,10 +1054,17 @@
             "defcae57f9916394",
             "dfa6bff034d7d522",
             "94faa23771cc9cd6",
-            "4f330c52abf707de"
+            "4f330c52abf707de",
+            "459433738b64d14d",
+            "cfd6c59d35ffa1dc",
+            "a2ec35a79d79bf2f",
+            "9a8c39dc1a0c20e6",
+            "528d5448879fd3db"
         ],
-        "x": 14,
-        "y": 599
+        "x": 54,
+        "y": 599,
+        "w": 2132,
+        "h": 282
     },
     {
         "id": "753e14252442d87d",
@@ -1214,20 +1221,6 @@
         "wires": [
             [
                 "a17d58585048335d"
-            ]
-        ]
-    },
-    {
-        "id": "e90e0b2a6d30d855",
-        "type": "junction",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "x": 380,
-        "y": 480,
-        "wires": [
-            [
-                "34e2055344eea8fe",
-                "9fa0fef0f57d5968"
             ]
         ]
     },
@@ -10160,7 +10153,7 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1350,
+        "x": 1270,
         "y": 700,
         "wires": [
             [
@@ -10192,7 +10185,7 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1530,
+        "x": 1890,
         "y": 840,
         "wires": [
             []
@@ -10229,7 +10222,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 730,
+        "x": 650,
         "y": 700,
         "wires": [
             [
@@ -10269,7 +10262,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 950,
+        "x": 870,
         "y": 700,
         "wires": [
             [
@@ -10309,7 +10302,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 890,
+        "x": 1250,
         "y": 840,
         "wires": [
             [
@@ -10327,7 +10320,7 @@
         "links": [
             "26f15fc8d75a4020"
         ],
-        "x": 185,
+        "x": 105,
         "y": 700,
         "wires": [
             [
@@ -10372,7 +10365,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1700,
+        "x": 1620,
         "y": 640,
         "wires": [
             [
@@ -10403,7 +10396,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1890,
+        "x": 1810,
         "y": 640,
         "wires": [
             [
@@ -10433,7 +10426,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2100,
+        "x": 2020,
         "y": 640,
         "wires": [
             []
@@ -10460,7 +10453,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1520,
+        "x": 1440,
         "y": 700,
         "wires": [
             [
@@ -10515,11 +10508,11 @@
                 "valueType": "date"
             }
         ],
-        "x": 140,
-        "y": 840,
+        "x": 180,
+        "y": 640,
         "wires": [
             [
-                "d8a2fa45040cce43"
+                "459433738b64d14d"
             ],
             []
         ]
@@ -10547,41 +10540,15 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 310,
+        "x": 230,
         "y": 700,
         "wires": [
             [
-                "d8a2fa45040cce43",
-                "16029ccf061bdd10"
+                "16029ccf061bdd10",
+                "459433738b64d14d"
             ],
             [
                 "8f3c66f06ed3f7b2"
-            ]
-        ]
-    },
-    {
-        "id": "f56b84619fd19f18",
-        "type": "trigger",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "trigger",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "10",
-        "extend": true,
-        "overrideDelay": true,
-        "units": "min",
-        "reset": "stop",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 710,
-        "y": 840,
-        "wires": [
-            [
-                "51237623ed73ba98"
             ]
         ]
     },
@@ -10602,7 +10569,7 @@
         "blockInputOverrides": false,
         "outputProperties": [
             {
-                "property": "delay",
+                "property": "duration",
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
@@ -10616,59 +10583,11 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 430,
+        "x": 350,
         "y": 840,
         "wires": [
             [
-                "aeae503fd214ff93"
-            ]
-        ]
-    },
-    {
-        "id": "d8a2fa45040cce43",
-        "type": "change",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "Stop",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "stop",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 570,
-        "y": 780,
-        "wires": [
-            [
-                "f56b84619fd19f18"
-            ]
-        ]
-    },
-    {
-        "id": "aeae503fd214ff93",
-        "type": "function",
-        "z": "eff21041cc941fef",
-        "g": "eeafd13be593ae69",
-        "name": "math",
-        "func": "const delay = msg.delay\nconst multiplier = 60000\n\nmsg.delay = (delay * multiplier)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 570,
-        "y": 840,
-        "wires": [
-            [
-                "f56b84619fd19f18"
+                "cfd6c59d35ffa1dc"
             ]
         ]
     },
@@ -10693,7 +10612,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 460,
+        "x": 380,
         "y": 700,
         "wires": [
             [
@@ -10727,7 +10646,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1690,
+        "x": 1610,
         "y": 700,
         "wires": [
             []
@@ -10755,7 +10674,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1720,
+        "x": 2080,
         "y": 780,
         "wires": [
             []
@@ -10783,7 +10702,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1360,
+        "x": 1280,
         "y": 640,
         "wires": [
             []
@@ -10811,7 +10730,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1530,
+        "x": 1890,
         "y": 780,
         "wires": [
             [
@@ -10831,7 +10750,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1320,
+        "x": 1680,
         "y": 840,
         "wires": [
             [
@@ -10858,7 +10777,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
+        "x": 1080,
         "y": 700,
         "wires": [
             [
@@ -10905,7 +10824,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1110,
+        "x": 1470,
         "y": 840,
         "wires": [
             [
@@ -11036,6 +10955,145 @@
                 "5e7a082800eeb73c"
             ],
             []
+        ]
+    },
+    {
+        "id": "459433738b64d14d",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Cancel Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "cancel",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.front_porch_motion_timer"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 390,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cfd6c59d35ffa1dc",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Convert to seconds",
+        "func": "msg.duration = msg.duration * 60\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 840,
+        "wires": [
+            [
+                "a2ec35a79d79bf2f"
+            ]
+        ]
+    },
+    {
+        "id": "a2ec35a79d79bf2f",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Start Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "start",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.front_porch_motion_timer"
+        ],
+        "data": "{\t    \"duration\":{{duration}}\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 730,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a8c39dc1a0c20e6",
+        "type": "server-events",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "Timer Finished",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "eventType": "timer.finished",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").entity_id",
+                "valueType": "jsonata"
+            }
+        ],
+        "x": 900,
+        "y": 840,
+        "wires": [
+            [
+                "528d5448879fd3db"
+            ]
+        ]
+    },
+    {
+        "id": "528d5448879fd3db",
+        "type": "switch",
+        "z": "eff21041cc941fef",
+        "g": "eeafd13be593ae69",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "timer.front_porch_motion_timer",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 840,
+        "wires": [
+            [
+                "51237623ed73ba98"
+            ]
         ]
     },
     {
@@ -11698,14 +11756,14 @@
         "y": 820,
         "wires": [
             [
-                "bfcb013bbf11611c",
                 "2ad7be43ccdbdeaf",
-                "31b8c8291d19ffc6"
+                "31b8c8291d19ffc6",
+                "a1fa2d2d1f55af4b"
             ],
             [
                 "2e299ac73c696afc",
                 "31b8c8291d19ffc6",
-                "bfcb013bbf11611c"
+                "a1fa2d2d1f55af4b"
             ]
         ],
         "outputLabels": [
@@ -11733,11 +11791,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 260,
+        "x": 460,
         "y": 480,
         "wires": [
             [
-                "e90e0b2a6d30d855"
+                "34e2055344eea8fe"
             ]
         ]
     },
@@ -11773,7 +11831,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 660,
-        "y": 620,
+        "y": 560,
         "wires": [
             [
                 "e19f97e448023ade"
@@ -12108,7 +12166,7 @@
         "y": 440,
         "wires": [
             [
-                "bfcb013bbf11611c"
+                "a1fa2d2d1f55af4b"
             ]
         ]
     },
@@ -12374,32 +12432,6 @@
         ]
     },
     {
-        "id": "9fa0fef0f57d5968",
-        "type": "trigger",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "trigger",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "4",
-        "extend": true,
-        "overrideDelay": true,
-        "units": "min",
-        "reset": "stop",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 470,
-        "y": 620,
-        "wires": [
-            [
-                "785049971f40b7b2"
-            ]
-        ]
-    },
-    {
         "id": "73bf42069fe27d3a",
         "type": "switch",
         "z": "5e238cbbe6d612c9",
@@ -12427,7 +12459,7 @@
         "wires": [
             [
                 "ea8536fc853a8af4",
-                "bfcb013bbf11611c"
+                "a1fa2d2d1f55af4b"
             ],
             [
                 "32559cd9120b4916"
@@ -12451,7 +12483,7 @@
         "blockInputOverrides": false,
         "outputProperties": [
             {
-                "property": "delay",
+                "property": "duration",
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
@@ -12465,31 +12497,152 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 190,
+        "x": 270,
         "y": 620,
         "wires": [
             [
-                "909d1a99a02620dd"
+                "1d03ecbe4448d224"
             ]
         ]
     },
     {
-        "id": "909d1a99a02620dd",
+        "id": "a1fa2d2d1f55af4b",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "Cancel Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "cancel",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.upstairs_bathroom_motion_timer"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 270,
+        "y": 480,
+        "wires": [
+            [
+                "bfcb013bbf11611c"
+            ]
+        ]
+    },
+    {
+        "id": "1d03ecbe4448d224",
         "type": "function",
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
-        "name": "math",
-        "func": "const delay = msg.delay\nconst multiplier = 60000\n\nmsg.delay = (delay * multiplier)\n\nreturn msg;",
+        "name": "Math",
+        "func": "msg.duration = msg.duration * 60\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
+        "x": 410,
         "y": 620,
         "wires": [
             [
-                "9fa0fef0f57d5968"
+                "463689442b9d2046"
+            ]
+        ]
+    },
+    {
+        "id": "463689442b9d2046",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "Start Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "start",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.upstairs_bathroom_motion_timer"
+        ],
+        "data": "{\t    \"duration\":{{duration}}\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 570,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5350d2264880d0ad",
+        "type": "server-events",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "Timer Finished",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "eventType": "timer.finished",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").entity_id",
+                "valueType": "jsonata"
+            }
+        ],
+        "x": 300,
+        "y": 560,
+        "wires": [
+            [
+                "0852e64607df9f3a"
+            ]
+        ]
+    },
+    {
+        "id": "0852e64607df9f3a",
+        "type": "switch",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "timer.upstairs_bathroom_motion_timer",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 560,
+        "wires": [
+            [
+                "785049971f40b7b2"
             ]
         ]
     },
