@@ -626,7 +626,8 @@
             "463689442b9d2046",
             "5350d2264880d0ad",
             "0852e64607df9f3a",
-            "1d03ecbe4448d224"
+            "1d03ecbe4448d224",
+            "da70285e80c3f195"
         ],
         "x": 94,
         "y": 339,
@@ -1059,9 +1060,7 @@
             "528d5448879fd3db"
         ],
         "x": 54,
-        "y": 599,
-        "w": 2132,
-        "h": 282
+        "y": 599
     },
     {
         "id": "753e14252442d87d",
@@ -12494,7 +12493,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 270,
+        "x": 190,
         "y": 620,
         "wires": [
             [
@@ -12544,11 +12543,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
+        "x": 330,
         "y": 620,
         "wires": [
             [
-                "463689442b9d2046"
+                "da70285e80c3f195"
             ]
         ]
     },
@@ -12574,7 +12573,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 570,
+        "x": 730,
         "y": 620,
         "wires": [
             []
@@ -12641,6 +12640,50 @@
             [
                 "785049971f40b7b2"
             ]
+        ]
+    },
+    {
+        "id": "da70285e80c3f195",
+        "type": "api-current-state",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "Check Shower Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.shower_mode",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 520,
+        "y": 620,
+        "wires": [
+            [
+                "463689442b9d2046"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "Off",
+            "On"
         ]
     },
     {
