@@ -903,7 +903,9 @@
             "d00db0647d1c4034"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 652,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -920,7 +922,9 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 142
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -22512,13 +22516,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 255,
         "y": 200,
         "wires": [
             [
                 "bc09f451754ba126"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "bc09f451754ba126",
@@ -22532,13 +22537,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
+        "x": 315,
         "y": 200,
         "wires": [
             [
                 "adc20601e249dc44"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "fdefcd6a64aa9bca",
@@ -22640,13 +22646,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
+        "x": 215,
         "y": 320,
         "wires": [
             [
                 "7af97720032b4609"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "7af97720032b4609",
@@ -22660,13 +22667,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
+        "x": 275,
         "y": 320,
         "wires": [
             [
                 "4f0c3e053e317dbc"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "08aadf619537949e",
@@ -22724,13 +22732,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 255,
         "y": 380,
         "wires": [
             [
                 "a6038f6bd028bd2f"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "a6038f6bd028bd2f",
@@ -22744,13 +22753,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
+        "x": 315,
         "y": 380,
         "wires": [
             [
                 "9b66a631492c2023"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "b109c8db1c2cd259",
@@ -22926,13 +22936,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 255,
         "y": 620,
         "wires": [
             [
                 "8d26310ed06bb045"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "8d26310ed06bb045",
@@ -22946,13 +22957,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
+        "x": 315,
         "y": 620,
         "wires": [
             [
                 "7ffbdab6daa40cd9"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "67119024666b68bd",
@@ -22966,13 +22978,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 255,
         "y": 680,
         "wires": [
             [
                 "e235145192886939"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "e235145192886939",
@@ -22986,13 +22999,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
+        "x": 315,
         "y": 680,
         "wires": [
             [
                 "d00db0647d1c4034"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "baae5d6f53900594",
@@ -23078,7 +23092,7 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 720,
+        "x": 520,
         "y": 200,
         "wires": [
             []
@@ -23116,7 +23130,7 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 660,
+        "x": 440,
         "y": 320,
         "wires": [
             []
@@ -23154,7 +23168,7 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 730,
+        "x": 510,
         "y": 380,
         "wires": [
             []
@@ -23230,7 +23244,7 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 650,
+        "x": 430,
         "y": 620,
         "wires": [
             []
@@ -23249,7 +23263,7 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 650,
+        "x": 430,
         "y": 680,
         "wires": [
             []
