@@ -20530,7 +20530,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 390,
+        "x": 355,
         "y": 360,
         "wires": [
             [
@@ -20545,7 +20545,8 @@
             [
                 "e21a948e9523bce7"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "65240dc52617459d",
@@ -20569,7 +20570,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 580,
+        "x": 500,
         "y": 260,
         "wires": [
             [
@@ -20601,7 +20602,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 790,
+        "x": 710,
         "y": 220,
         "wires": [
             []
@@ -20628,7 +20629,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 790,
+        "x": 710,
         "y": 280,
         "wires": [
             []
@@ -20655,7 +20656,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 750,
+        "x": 670,
         "y": 340,
         "wires": [
             []
@@ -20680,7 +20681,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 770,
+        "x": 690,
         "y": 400,
         "wires": [
             []
@@ -20706,7 +20707,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 570,
+        "x": 490,
         "y": 480,
         "wires": [
             [
@@ -20739,7 +20740,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 730,
+        "x": 650,
         "y": 480,
         "wires": [
             [
@@ -20771,7 +20772,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 950,
+        "x": 870,
         "y": 460,
         "wires": [
             []
@@ -20798,7 +20799,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 940,
+        "x": 860,
         "y": 520,
         "wires": [
             []
@@ -20815,7 +20816,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
+        "x": 660,
         "y": 580,
         "wires": [
             [
@@ -20844,7 +20845,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 950,
+        "x": 870,
         "y": 580,
         "wires": [
             []
