@@ -88,6 +88,14 @@
         "env": []
     },
     {
+        "id": "9a8e84bd2945505e",
+        "type": "tab",
+        "label": "Announcements",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "bb961e59e2ef86c9",
         "type": "tab",
         "label": "Apple",
@@ -1205,6 +1213,44 @@
         ],
         "x": 54,
         "y": 19
+    },
+    {
+        "id": "0c81dfaed25d225c",
+        "type": "group",
+        "z": "9a8e84bd2945505e",
+        "name": "Amazon Package Delivered",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "11f5f6e0f1e4da25",
+            "3250ca66d8342dd8",
+            "6091f5e58812f97f",
+            "32816b7834e1b318",
+            "02cd94391e205cd9",
+            "059eaa30829a743e",
+            "a71c61b06a3e7b0d",
+            "1504548e7ebc3844",
+            "d8b6743cb853018d",
+            "ddbbde89f52be826",
+            "9726bd70b6b83774",
+            "5fbac3420d43ef9d",
+            "d95966e7140ca760",
+            "31f76539e145f45a",
+            "d336afe957a65e33",
+            "e2f0e53daa198581",
+            "398d300c5d0b6db5",
+            "d92ae2f7fd3171b5",
+            "96496719d1c09515",
+            "91bb74eec18f93f1",
+            "5a1ea9eea27df8ef",
+            "15fde8d3275b8455",
+            "fe7b309fe37cf8e2"
+        ],
+        "x": 54,
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "19b0e082db0643ac",
@@ -20483,6 +20529,711 @@
             [
                 "dc94d479f37be046"
             ]
+        ]
+    },
+    {
+        "id": "11f5f6e0f1e4da25",
+        "type": "server-state-changed",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Package Delivered",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.mail_amazon_packages_delivered",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "0",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "A package has been delivered by Amazon! I repeat, a package has been delivered by Amazon!",
+                "valueType": "str"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "common",
+                "valueType": "str"
+            }
+        ],
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "15fde8d3275b8455"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3250ca66d8342dd8",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Save Light State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t   \"scene_id\":\"amazon_package_delivered_restore\",\t   \"snapshot_entities\":[\"light.basement_led_strip_1\",\"light.basement_tall_lamp\",\"light.basement_short_lamp\",\"light.basement_stairwell\",\"light.living_room_color_1\",\"light.living_room_color_2\",\"light.living_room_color_3\",\"light.tina_lamp_top\",\"light.tina_lamp_side\"]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 800,
+        "y": 140,
+        "wires": [
+            [
+                "02cd94391e205cd9"
+            ]
+        ]
+    },
+    {
+        "id": "6091f5e58812f97f",
+        "type": "api-current-state",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Studio Quiet?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.studio_quiet",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "studio-quiet",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 600,
+        "y": 180,
+        "wires": [
+            [
+                "3250ca66d8342dd8"
+            ],
+            [
+                "32816b7834e1b318"
+            ]
+        ],
+        "outputLabels": [
+            "off",
+            "on"
+        ]
+    },
+    {
+        "id": "32816b7834e1b318",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Save Light State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t   \"scene_id\":\"amazon_package_delivered_restore\",\t   \"snapshot_entities\":[\"light.living_room_color_1\",\"light.living_room_color_2\",\"light.living_room_color_3\",\"light.tina_lamp_top\",\"light.tina_lamp_side\"]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 800,
+        "y": 320,
+        "wires": [
+            [
+                "059eaa30829a743e"
+            ]
+        ]
+    },
+    {
+        "id": "02cd94391e205cd9",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Save Adaptive State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t   \"scene_id\":\"amazon_package_delivered_adaptive_restore\",\t   \"snapshot_entities\":[\"switch.adaptive_lighting_basement_studio\",\"switch.adaptive_lighting_living_room\",\"switch.adaptive_lighting_tina_lamp\"]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1020,
+        "y": 140,
+        "wires": [
+            [
+                "1504548e7ebc3844",
+                "a71c61b06a3e7b0d",
+                "d8b6743cb853018d"
+            ]
+        ]
+    },
+    {
+        "id": "059eaa30829a743e",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Save Adaptive State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t   \"scene_id\":\"amazon_package_delivered_adaptive_restore\",\t   \"snapshot_entities\":[\"switch.adaptive_lighting_living_room\",\"switch.adaptive_lighting_tina_lamp\"]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1020,
+        "y": 320,
+        "wires": [
+            [
+                "d336afe957a65e33",
+                "e2f0e53daa198581"
+            ]
+        ]
+    },
+    {
+        "id": "a71c61b06a3e7b0d",
+        "type": "lifx-pulse-effect",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "",
+        "api": "60eb53fb94cd64e4",
+        "selector": "group:Basement Studio",
+        "color": "blue",
+        "from_color": "",
+        "period": "0.5",
+        "cycles": "20",
+        "persist": "false",
+        "power_on": "true",
+        "x": 1250,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1504548e7ebc3844",
+        "type": "delay",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1195,
+        "y": 80,
+        "wires": [
+            [
+                "ddbbde89f52be826"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "d8b6743cb853018d",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Hue Lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.basement_short_lamp",
+            "light.basement_stairwell",
+            "light.basement_tall_lamp",
+            "light.living_room_lights",
+            "light.tina_lamp"
+        ],
+        "data": "{\t    \"color_name\":\"blue\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1250,
+        "y": 200,
+        "wires": [
+            [
+                "31f76539e145f45a"
+            ]
+        ]
+    },
+    {
+        "id": "ddbbde89f52be826",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Restore State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "scene.amazon_package_delivered_restore"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1320,
+        "y": 80,
+        "wires": [
+            [
+                "9726bd70b6b83774"
+            ]
+        ]
+    },
+    {
+        "id": "9726bd70b6b83774",
+        "type": "delay",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1455,
+        "y": 80,
+        "wires": [
+            [
+                "5fbac3420d43ef9d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "5fbac3420d43ef9d",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Restore State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "scene.amazon_package_delivered_adaptive_restore"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1600,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d95966e7140ca760",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Hue Lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.basement_short_lamp",
+            "light.basement_stairwell",
+            "light.basement_tall_lamp",
+            "light.living_room_lights",
+            "light.tina_lamp"
+        ],
+        "data": "{\t    \"flash\":\"true\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1510,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31f76539e145f45a",
+        "type": "delay",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1375,
+        "y": 200,
+        "wires": [
+            [
+                "d95966e7140ca760"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "d336afe957a65e33",
+        "type": "delay",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1195,
+        "y": 320,
+        "wires": [
+            [
+                "398d300c5d0b6db5"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "e2f0e53daa198581",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Hue Lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.living_room_lights",
+            "light.tina_lamp"
+        ],
+        "data": "{\t    \"color_name\":\"blue\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1250,
+        "y": 380,
+        "wires": [
+            [
+                "5a1ea9eea27df8ef"
+            ]
+        ]
+    },
+    {
+        "id": "398d300c5d0b6db5",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Restore State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "scene.amazon_package_delivered_restore"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1320,
+        "y": 320,
+        "wires": [
+            [
+                "d92ae2f7fd3171b5"
+            ]
+        ]
+    },
+    {
+        "id": "d92ae2f7fd3171b5",
+        "type": "delay",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1455,
+        "y": 320,
+        "wires": [
+            [
+                "96496719d1c09515"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "96496719d1c09515",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Restore State",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "scene.amazon_package_delivered_adaptive_restore"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1600,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "91bb74eec18f93f1",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Hue Lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.living_room_lights",
+            "light.tina_lamp"
+        ],
+        "data": "{\t    \"flash\":\"true\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1510,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a1ea9eea27df8ef",
+        "type": "delay",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1375,
+        "y": 380,
+        "wires": [
+            [
+                "91bb74eec18f93f1"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "15fde8d3275b8455",
+        "type": "api-current-state",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "People Present?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.people_present",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "people-present",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 390,
+        "y": 180,
+        "wires": [
+            [
+                "6091f5e58812f97f",
+                "fe7b309fe37cf8e2"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "yes",
+            "no"
+        ]
+    },
+    {
+        "id": "fe7b309fe37cf8e2",
+        "type": "subflow:6429099c4571dd6b",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "",
+        "x": 600,
+        "y": 80,
+        "wires": [
+            []
         ]
     },
     {
