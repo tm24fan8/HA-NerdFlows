@@ -1036,9 +1036,7 @@
             "2d5ec93a6ad16ce2"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1332,
-        "h": 382
+        "y": 239
     },
     {
         "id": "753e14252442d87d",
@@ -1245,11 +1243,13 @@
             "91bb74eec18f93f1",
             "5a1ea9eea27df8ef",
             "15fde8d3275b8455",
-            "fe7b309fe37cf8e2"
+            "fe7b309fe37cf8e2",
+            "458ddfa9d748f88f",
+            "37bdac2c9a4e2837"
         ],
         "x": 54,
         "y": 39,
-        "w": 1652,
+        "w": 1732,
         "h": 382
     },
     {
@@ -20724,7 +20724,7 @@
             [
                 "1504548e7ebc3844",
                 "a71c61b06a3e7b0d",
-                "d8b6743cb853018d"
+                "458ddfa9d748f88f"
             ]
         ]
     },
@@ -20753,7 +20753,7 @@
         "wires": [
             [
                 "d336afe957a65e33",
-                "e2f0e53daa198581"
+                "37bdac2c9a4e2837"
             ]
         ]
     },
@@ -20768,7 +20768,7 @@
         "color": "blue",
         "from_color": "",
         "period": "0.5",
-        "cycles": "20",
+        "cycles": "30",
         "persist": "false",
         "power_on": "true",
         "x": 1250,
@@ -20782,7 +20782,7 @@
         "g": "0c81dfaed25d225c",
         "name": "",
         "pauseType": "delay",
-        "timeout": "10",
+        "timeout": "15",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -20828,7 +20828,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1250,
+        "x": 1430,
         "y": 200,
         "wires": [
             [
@@ -20941,13 +20941,13 @@
             "light.living_room_lights",
             "light.tina_lamp"
         ],
-        "data": "{\t    \"flash\":\"true\"\t}",
+        "data": "{\t    \"flash\":\"long\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1510,
+        "x": 1690,
         "y": 200,
         "wires": [
             []
@@ -20971,7 +20971,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1375,
+        "x": 1555,
         "y": 200,
         "wires": [
             [
@@ -20987,7 +20987,7 @@
         "g": "0c81dfaed25d225c",
         "name": "",
         "pauseType": "delay",
-        "timeout": "10",
+        "timeout": "15",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -21030,7 +21030,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1250,
+        "x": 1430,
         "y": 380,
         "wires": [
             [
@@ -21140,13 +21140,13 @@
             "light.living_room_lights",
             "light.tina_lamp"
         ],
-        "data": "{\t    \"flash\":\"true\"\t}",
+        "data": "{\t    \"flash\":\"long\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1510,
+        "x": 1690,
         "y": 380,
         "wires": [
             []
@@ -21170,7 +21170,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1375,
+        "x": 1555,
         "y": 380,
         "wires": [
             [
@@ -21234,6 +21234,69 @@
         "y": 80,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "458ddfa9d748f88f",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Adaptive Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.adaptive_lighting_basement_studio",
+            "switch.adaptive_lighting_living_room",
+            "switch.adaptive_lighting_tina_lamp"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1250,
+        "y": 200,
+        "wires": [
+            [
+                "d8b6743cb853018d"
+            ]
+        ]
+    },
+    {
+        "id": "37bdac2c9a4e2837",
+        "type": "api-call-service",
+        "z": "9a8e84bd2945505e",
+        "g": "0c81dfaed25d225c",
+        "name": "Adaptive Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.adaptive_lighting_living_room",
+            "switch.adaptive_lighting_tina_lamp"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1250,
+        "y": 380,
+        "wires": [
+            [
+                "e2f0e53daa198581"
+            ]
         ]
     },
     {
