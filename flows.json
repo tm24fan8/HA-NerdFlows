@@ -16904,7 +16904,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Colin's fan is now on. Stay cool!",
+                "to": "Collin's fan is now on. Stay cool!",
                 "tot": "str"
             },
             {
@@ -16961,7 +16961,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "No fan in Colin's room tonight, too cold outside! Brrrr!",
+                "to": "No fan in Collin's room tonight, too cold outside! Brrrr!",
                 "tot": "str"
             },
             {
@@ -18936,7 +18936,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Lights are now on in Colin's bedroom. Other actions skipped.",
+                "to": "Lights are now on in Collin's bedroom. Other actions skipped.",
                 "tot": "str"
             },
             {
