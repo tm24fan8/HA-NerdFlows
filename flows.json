@@ -686,7 +686,9 @@
             "e0751f3bf2a2e610"
         ],
         "x": 14,
-        "y": 759
+        "y": 759,
+        "w": 1172,
+        "h": 482
     },
     {
         "id": "e065b1ed4938b477",
@@ -778,7 +780,9 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 59
+        "y": 59,
+        "w": 2722,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -901,7 +905,9 @@
             "d00db0647d1c4034"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 652,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -918,7 +924,9 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 142
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1248,9 +1256,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1732,
-        "h": 382
+        "y": 39
     },
     {
         "id": "19b0e082db0643ac",
@@ -7790,9 +7796,9 @@
         "calendartype": "str",
         "triggertype": "trigger",
         "trigger": "match",
-        "timezone": "",
+        "timezone": "America/New_York",
         "timezonetype": "str",
-        "dateformat": "{ \"timeStyle\": \"short\", \"dateStyle\": \"short\" }",
+        "dateformat": "{\"timeStyle\":\"short\",\"dateStyle\":\"short\"}",
         "dateformattype": "json",
         "language": "en",
         "languagetype": "language",
@@ -7907,6 +7913,11 @@
             {
                 "property": "countdown",
                 "value": "payload.0.countdown",
+                "valueType": "msg"
+            },
+            {
+                "property": "start_timestamp",
+                "value": "payload.0.uid.date",
                 "valueType": "msg"
             }
         ],
