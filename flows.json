@@ -4842,15 +4842,21 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "Reset",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "x": 470,
         "y": 340,
         "wires": [
+            [],
             [],
             [
                 "78a73c2d816658d8",
@@ -7241,7 +7247,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1360,
+        "x": 1420,
         "y": 240,
         "wires": [
             []
@@ -7574,7 +7580,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1380,
+        "x": 1440,
         "y": 300,
         "wires": [
             []
@@ -7663,7 +7669,9 @@
         "x": 940,
         "y": 300,
         "wires": [
-            []
+            [
+                "344119e7ca7012d5"
+            ]
         ]
     },
     {
@@ -7697,7 +7705,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1370,
+        "x": 1430,
         "y": 360,
         "wires": [
             [
@@ -7753,7 +7761,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1590,
+        "x": 1650,
         "y": 360,
         "wires": [
             [
@@ -8577,8 +8585,35 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1810,
+        "x": 1870,
         "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "344119e7ca7012d5",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Give Me Darkness Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.give_me_darkness"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1160,
+        "y": 300,
         "wires": [
             []
         ]
@@ -9241,7 +9276,7 @@
         "wires": [
             [
                 "9ae7e308f889137d",
-                "d97b9088ab92e31d"
+                "8a22032494f84cae"
             ],
             []
         ]
@@ -9797,96 +9832,26 @@
         ]
     },
     {
-        "id": "ddf5b7633f597aef",
+        "id": "8a22032494f84cae",
         "type": "api-call-service",
         "z": "3abb5ae57afb4761",
-        "name": "Night Mode",
+        "name": "Lights Handler",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
+        "domain": "script",
+        "service": "tina_desk_lights_handler",
         "areaId": [],
         "deviceId": [],
-        "entityId": [
-            "input_select.tina_desk_scenes"
-        ],
-        "data": "{\t    \"option\":\"Night Mode\"\t}",
+        "entityId": [],
+        "data": "",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1310,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d97b9088ab92e31d",
-        "type": "api-current-state",
-        "z": "3abb5ae57afb4761",
-        "name": "Early Night Mode?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.early_night_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1110,
+        "x": 1100,
         "y": 280,
-        "wires": [
-            [
-                "ddf5b7633f597aef"
-            ],
-            [
-                "b8e7db3f58ef8d8d"
-            ]
-        ]
-    },
-    {
-        "id": "b8e7db3f58ef8d8d",
-        "type": "api-call-service",
-        "z": "3abb5ae57afb4761",
-        "name": "Day Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.tina_desk_scenes"
-        ],
-        "data": "{\t    \"option\":\"Day Mode\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1310,
-        "y": 300,
         "wires": [
             []
         ]
