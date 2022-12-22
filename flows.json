@@ -19897,7 +19897,7 @@
         "y": 220,
         "wires": [
             [
-                "09c7a61f7a4c4d05"
+                "9cbe2333acb0e1f5"
             ]
         ]
     },
@@ -20098,7 +20098,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1060,
+        "x": 1260,
         "y": 180,
         "wires": [
             [
@@ -20126,7 +20126,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1250,
+        "x": 1450,
         "y": 180,
         "wires": [
             []
@@ -20489,11 +20489,11 @@
             "basement_studio",
             "dining_room",
             "downstairs_bathroom",
+            "emma_bedroom",
             "furnace_room",
             "kallen_bedroom",
             "living_room",
-            "master_bedroom",
-            "emma_bedroom"
+            "master_bedroom"
         ],
         "deviceId": [],
         "entityId": [],
@@ -20535,6 +20535,35 @@
         "queue": "none",
         "x": 870,
         "y": 160,
+        "wires": [
+            [
+                "9cbe2333acb0e1f5"
+            ]
+        ]
+    },
+    {
+        "id": "9cbe2333acb0e1f5",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Desk Lights Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.tina_desk_lights"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1060,
+        "y": 180,
         "wires": [
             [
                 "09c7a61f7a4c4d05"
