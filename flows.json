@@ -9839,11 +9839,13 @@
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "script",
-        "service": "tina_desk_lights_handler",
+        "domain": "input_boolean",
+        "service": "turn_on",
         "areaId": [],
         "deviceId": [],
-        "entityId": [],
+        "entityId": [
+            "input_boolean.tina_desk_lights"
+        ],
         "data": "",
         "dataType": "jsonata",
         "mergeContext": "",
