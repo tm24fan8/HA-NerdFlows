@@ -16515,7 +16515,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "switch.master_bedroom_fan_socket_1"
+            "switch.master_bedroom_fan"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -16723,7 +16723,7 @@
         "deviceId": [],
         "entityId": [
             "switch.master_bedroom_echo_dot_do_not_disturb_switch",
-            "switch.master_bedroom_fan_socket_1"
+            "switch.master_bedroom_fan"
         ],
         "data": "",
         "dataType": "jsonata",
