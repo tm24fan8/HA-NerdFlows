@@ -17302,7 +17302,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "fan.kallen_fan_socket_1"
+            "fan.kallen_bedroom_fan"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -17333,7 +17333,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "fan.kallen_fan_socket_1"
+            "fan.kallen_bedroom_fan"
         ],
         "data": "",
         "dataType": "jsonata",
