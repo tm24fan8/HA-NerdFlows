@@ -850,9 +850,7 @@
             "82dcd22b8e2adf7c"
         ],
         "x": 34,
-        "y": 159,
-        "w": 882,
-        "h": 542
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -999,9 +997,7 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1432,
-        "h": 462
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1046,9 +1042,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1080,9 +1074,7 @@
             "2d5ec93a6ad16ce2"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1332,
-        "h": 382
+        "y": 239
     },
     {
         "id": "753e14252442d87d",
@@ -1256,9 +1248,7 @@
             "528d5448879fd3db"
         ],
         "x": 54,
-        "y": 19,
-        "w": 2092,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1296,9 +1286,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1732,
-        "h": 382
+        "y": 39
     },
     {
         "id": "19b0e082db0643ac",
@@ -26303,5 +26291,66 @@
                 "7ddf9ea.ce1666"
             ]
         ]
+    },
+    {
+        "id": "e1e9f6fcdc3bb5b0",
+        "type": "server-events",
+        "z": "d49b385d8b582b20",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "eventType": "alexa_actionable_notification",
+        "exposeToHomeAssistant": false,
+        "eventData": "",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "event_type": "",
+        "x": 680,
+        "y": 320,
+        "wires": [
+            [
+                "4b2ffb86973bb4be"
+            ]
+        ]
+    },
+    {
+        "id": "4b2ffb86973bb4be",
+        "type": "debug",
+        "z": "d49b385d8b582b20",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 320,
+        "wires": []
     }
 ]
