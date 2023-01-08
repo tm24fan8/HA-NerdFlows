@@ -9812,7 +9812,8 @@
         "wires": [
             [
                 "26f15fc8d75a4020",
-                "5f8b61ddc9963e99"
+                "5f8b61ddc9963e99",
+                "025e65a78727f99e"
             ],
             [
                 "26f15fc8d75a4020"
@@ -9876,7 +9877,8 @@
         "y": 240,
         "wires": [
             [
-                "26f15fc8d75a4020"
+                "26f15fc8d75a4020",
+                "025e65a78727f99e"
             ]
         ]
     },
@@ -9933,7 +9935,8 @@
         "y": 180,
         "wires": [
             [
-                "26f15fc8d75a4020"
+                "26f15fc8d75a4020",
+                "025e65a78727f99e"
             ]
         ],
         "outputLabels": [
@@ -10060,6 +10063,51 @@
         "y": 280,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "0ba46659c49cf39a",
+        "type": "mqtt out",
+        "z": "3abb5ae57afb4761",
+        "name": "MQTT Last Trigger",
+        "topic": "house/presence/outdoor/last_trigger",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fd29421fc00140a8",
+        "x": 1290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "025e65a78727f99e",
+        "type": "change",
+        "z": "3abb5ae57afb4761",
+        "name": "Set Payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "detect",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 140,
+        "wires": [
+            [
+                "0ba46659c49cf39a"
+            ]
         ]
     },
     {
