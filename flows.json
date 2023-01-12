@@ -1068,7 +1068,9 @@
             "2d5ec93a6ad16ce2"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1332,
+        "h": 382
     },
     {
         "id": "753e14252442d87d",
@@ -1244,9 +1246,7 @@
             "8c29a2e1a06c5524"
         ],
         "x": 54,
-        "y": 19,
-        "w": 2152,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -2758,6 +2758,35 @@
         "manufacturer": "Iron Nerd",
         "model": "",
         "swVersion": ""
+    },
+    {
+        "id": "23e5e32354cf867a",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "Basement On Manual",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Basement On Manual"
+            },
+            {
+                "property": "icon",
+                "value": "hue:room-stairs"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
     },
     {
         "id": "05e66e9e1092e6ea",
@@ -13431,6 +13460,104 @@
         ]
     },
     {
+        "id": "1f5808147fa975cf",
+        "type": "link in",
+        "z": "47f17992fab9b4f5",
+        "name": "Basement On - iOS",
+        "links": [
+            "572b2040be874f4e"
+        ],
+        "x": 135,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1966d10d8f4467c7",
+        "type": "server-state-changed",
+        "z": "47f17992fab9b4f5",
+        "name": "Alexa Button",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_button.basement_on",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "alexa",
+                "valueType": "str"
+            }
+        ],
+        "x": 190,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9bc78f321149316",
+        "type": "ha-button",
+        "z": "47f17992fab9b4f5",
+        "name": "Manual Button",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "23e5e32354cf867a",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "manual",
+                "valueType": "str"
+            }
+        ],
+        "x": 190,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "091390f43bfeddf5",
         "type": "api-call-service",
         "z": "b5717a86ce55bc29",
@@ -22054,11 +22181,16 @@
                 "t": "cont",
                 "v": "lights",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Basement On",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 4,
+        "outputs": 5,
         "x": 355,
         "y": 360,
         "wires": [
@@ -22073,6 +22205,9 @@
             ],
             [
                 "e21a948e9523bce7"
+            ],
+            [
+                "b57e12eb73074535"
             ]
         ],
         "l": false
@@ -22379,6 +22514,47 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "572b2040be874f4e",
+        "type": "link out",
+        "z": "bb961e59e2ef86c9",
+        "name": "iOS Action - Basement On",
+        "mode": "link",
+        "links": [
+            "1f5808147fa975cf"
+        ],
+        "x": 525,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "b57e12eb73074535",
+        "type": "change",
+        "z": "bb961e59e2ef86c9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ios",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 455,
+        "y": 640,
+        "wires": [
+            [
+                "572b2040be874f4e"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "a4c477269b22f766",
