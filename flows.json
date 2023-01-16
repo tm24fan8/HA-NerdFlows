@@ -844,7 +844,9 @@
             "82dcd22b8e2adf7c"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 882,
+        "h": 542
     },
     {
         "id": "477e752fcd2e2a19",
@@ -866,7 +868,9 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -888,7 +892,9 @@
             "427cc2991454bbf0"
         ],
         "x": 14,
-        "y": 219
+        "y": 219,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -933,7 +939,9 @@
             "d00db0647d1c4034"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 652,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -950,7 +958,9 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 142
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1068,7 +1078,9 @@
             "2d5ec93a6ad16ce2"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1332,
+        "h": 382
     },
     {
         "id": "753e14252442d87d",
@@ -1203,7 +1215,9 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 439
+        "y": 439,
+        "w": 1452,
+        "h": 422
     },
     {
         "id": "eeafd13be593ae69",
@@ -1282,7 +1296,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1732,
+        "h": 382
     },
     {
         "id": "19b0e082db0643ac",
@@ -2773,6 +2789,35 @@
             {
                 "property": "icon",
                 "value": "hue:room-stairs"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "e27ae85e2a296e7c",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "Early Night Mode",
+        "version": "6",
+        "entityType": "binary_sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Early Night Mode"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:lightbulb-night-outline"
             },
             {
                 "property": "entity_category",
@@ -7052,7 +7097,9 @@
         "x": 130,
         "y": 180,
         "wires": [
-            [],
+            [
+                "15a73af2f8ea690c"
+            ],
             [
                 "6ee65c58bd763ecf"
             ]
@@ -8852,6 +8899,55 @@
                 "8556daf4bc9df581"
             ]
         ]
+    },
+    {
+        "id": "84d40e607426c66f",
+        "type": "ha-binary-sensor",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Early Night Mode",
+        "entityConfig": "e27ae85e2a296e7c",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [
+            {
+                "property": "off",
+                "value": "start",
+                "valueType": "msg"
+            },
+            {
+                "property": "on",
+                "value": "end",
+                "valueType": "msg"
+            }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 510,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15a73af2f8ea690c",
+        "type": "function",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Invert",
+        "func": "var daynight = msg.payload\n\nif (daynight = 1) {\n    msg.payload = 0\n} else if (daynight = 0) {\n    msg.payload = 1\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 255,
+        "y": 40,
+        "wires": [
+            [
+                "84d40e607426c66f"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "134433d6e21dab5b",
