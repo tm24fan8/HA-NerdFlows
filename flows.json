@@ -678,7 +678,9 @@
             "da70285e80c3f195"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 582
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -1283,6 +1285,29 @@
         ],
         "x": 54,
         "y": 39
+    },
+    {
+        "id": "8aee4d340a136bac",
+        "type": "group",
+        "z": "eff21041cc941fef",
+        "name": "Downstairs Bathroom",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1f9d72079343bf75",
+            "5123a607588fa737",
+            "d3134b1002edbb93",
+            "f84e6b5157e857cf",
+            "b7d94cd0e420c650",
+            "41a8d5ef20cf55d7",
+            "3e40025ac99ec712",
+            "6f84db50867abc7b"
+        ],
+        "x": 14,
+        "y": 519,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "19b0e082db0643ac",
@@ -10452,6 +10477,7 @@
         "id": "1f9d72079343bf75",
         "type": "server-state-changed",
         "z": "eff21041cc941fef",
+        "g": "8aee4d340a136bac",
         "name": "Light turned on",
         "server": "9e87348d.9c1c48",
         "version": 4,
@@ -10479,10 +10505,10 @@
         "forType": "num",
         "forUnits": "minutes",
         "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
                 "property": "payload",
@@ -10491,76 +10517,28 @@
                 "valueType": "entityState"
             },
             {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
                 "property": "topic",
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "triggerId"
             }
         ],
-        "x": 100,
+        "x": 120,
         "y": 620,
         "wires": [
             [
-                "dfac5d681cf62083"
+                "d3134b1002edbb93"
             ],
-            []
-        ]
-    },
-    {
-        "id": "6755b1d81f7356ad",
-        "type": "change",
-        "z": "eff21041cc941fef",
-        "name": "Stop Timer",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "stop",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 290,
-        "y": 680,
-        "wires": [
             [
-                "dfac5d681cf62083"
+                "41a8d5ef20cf55d7"
             ]
-        ]
-    },
-    {
-        "id": "dfac5d681cf62083",
-        "type": "stoptimer",
-        "z": "eff21041cc941fef",
-        "duration": "30",
-        "units": "Minute",
-        "payloadtype": "num",
-        "payloadval": "0",
-        "name": "",
-        "x": 500,
-        "y": 620,
-        "wires": [
-            [
-                "5123a607588fa737"
-            ],
-            []
         ]
     },
     {
         "id": "5123a607588fa737",
         "type": "api-call-service",
         "z": "eff21041cc941fef",
+        "g": "8aee4d340a136bac",
         "name": "Turn off light",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -10580,85 +10558,11 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 690,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "893e87b0e366077b",
-        "type": "server-state-changed",
-        "z": "eff21041cc941fef",
-        "name": "Light turned off",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "light.downstairs_bathroom_lights",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 100,
+        "x": 530,
         "y": 680,
         "wires": [
-            [
-                "6755b1d81f7356ad"
-            ],
             []
         ]
-    },
-    {
-        "id": "604ebdb19002182c",
-        "type": "comment",
-        "z": "eff21041cc941fef",
-        "name": "Downstairs Bathroom",
-        "info": "",
-        "x": 300,
-        "y": 620,
-        "wires": []
     },
     {
         "id": "d790134891fedfcc",
@@ -10775,8 +10679,8 @@
                 "valueType": "str"
             }
         ],
-        "x": 100,
-        "y": 740,
+        "x": 120,
+        "y": 800,
         "wires": [
             [
                 "f0ef9a565f72dcae"
@@ -10805,8 +10709,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 530,
-        "y": 740,
+        "x": 550,
+        "y": 800,
         "wires": [
             []
         ]
@@ -10841,8 +10745,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 310,
-        "y": 740,
+        "x": 330,
+        "y": 800,
         "wires": [
             [
                 "5e7a082800eeb73c"
@@ -10921,6 +10825,186 @@
         "x": 590,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "d3134b1002edbb93",
+        "type": "api-current-state",
+        "z": "eff21041cc941fef",
+        "g": "8aee4d340a136bac",
+        "name": "Delay",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.downstairs_bathroom_lights_off_delay",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "duration",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 290,
+        "y": 620,
+        "wires": [
+            [
+                "f84e6b5157e857cf"
+            ]
+        ]
+    },
+    {
+        "id": "f84e6b5157e857cf",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "g": "8aee4d340a136bac",
+        "name": "Math",
+        "func": "msg.duration = msg.duration * 60\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 405,
+        "y": 620,
+        "wires": [
+            [
+                "b7d94cd0e420c650"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "b7d94cd0e420c650",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "8aee4d340a136bac",
+        "name": "Start Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "start",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.downstairs_bathroom_lights_timer"
+        ],
+        "data": "{    \t    \"duration\": msg.duration\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 530,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41a8d5ef20cf55d7",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "8aee4d340a136bac",
+        "name": "Cancel Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "cancel",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.downstairs_bathroom_lights_timer"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 530,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e40025ac99ec712",
+        "type": "server-events",
+        "z": "eff21041cc941fef",
+        "g": "8aee4d340a136bac",
+        "name": "Timer Finished",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "eventType": "timer.finished",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").entity_id",
+                "valueType": "jsonata"
+            }
+        ],
+        "x": 120,
+        "y": 680,
+        "wires": [
+            [
+                "6f84db50867abc7b"
+            ]
+        ]
+    },
+    {
+        "id": "6f84db50867abc7b",
+        "type": "switch",
+        "z": "eff21041cc941fef",
+        "g": "8aee4d340a136bac",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "timer.downstairs_bathroom_lights_timer",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 255,
+        "y": 680,
+        "wires": [
+            [
+                "5123a607588fa737"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "879ee8903841b8f0",
