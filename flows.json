@@ -935,9 +935,7 @@
             "d00db0647d1c4034"
         ],
         "x": 34,
-        "y": 39,
-        "w": 652,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -954,9 +952,7 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 142
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -10279,7 +10275,9 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
+            "input_boolean.text_notify_all",
             "input_boolean.text_notify_kallen",
+            "input_boolean.text_notify_nerds",
             "input_boolean.text_notify_parents"
         ],
         "data": "",
@@ -10307,7 +10305,9 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
+            "input_boolean.text_notify_all",
             "input_boolean.text_notify_kallen",
+            "input_boolean.text_notify_nerds",
             "input_boolean.text_notify_parents"
         ],
         "data": "",
