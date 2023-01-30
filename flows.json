@@ -680,9 +680,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -937,7 +935,9 @@
             "d00db0647d1c4034"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 652,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -954,7 +954,9 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 142
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -10186,6 +10188,138 @@
             [
                 "0ba46659c49cf39a"
             ]
+        ]
+    },
+    {
+        "id": "028e16d90ac7433d",
+        "type": "server-state-changed",
+        "z": "3abb5ae57afb4761",
+        "name": "Family Presence",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "group.family",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": true,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "presence",
+                "valueType": "str"
+            }
+        ],
+        "x": 180,
+        "y": 860,
+        "wires": [
+            [
+                "d5a9248680297b56"
+            ],
+            [
+                "b8ef333da370f91e"
+            ]
+        ],
+        "outputLabels": [
+            "home",
+            "not_home"
+        ]
+    },
+    {
+        "id": "d5a9248680297b56",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "Enable Texts",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.text_notify_kallen",
+            "input_boolean.text_notify_parents"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 390,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8ef333da370f91e",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "Disable Texts",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.text_notify_kallen",
+            "input_boolean.text_notify_parents"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 390,
+        "y": 860,
+        "wires": [
+            []
         ]
     },
     {
