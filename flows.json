@@ -9605,7 +9605,10 @@
             [
                 "bf504c30194524b9",
                 "ec497068c3a61d02",
-                "43048b96595e3e97"
+                "43048b96595e3e97",
+                "df53af0726555079",
+                "802ff36b76e55809",
+                "1ac137ebc9f53e3c"
             ]
         ]
     },
@@ -10248,7 +10251,7 @@
             }
         ],
         "x": 180,
-        "y": 860,
+        "y": 1040,
         "wires": [
             [
                 "d5a9248680297b56"
@@ -10266,7 +10269,7 @@
         "id": "d5a9248680297b56",
         "type": "api-call-service",
         "z": "3abb5ae57afb4761",
-        "name": "Enable Texts",
+        "name": "Enable Texts (All)",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -10275,10 +10278,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_boolean.text_notify_all",
-            "input_boolean.text_notify_kallen",
-            "input_boolean.text_notify_nerds",
-            "input_boolean.text_notify_parents"
+            "input_boolean.text_notify_all"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -10286,8 +10286,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 390,
-        "y": 800,
+        "x": 450,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -10296,7 +10296,7 @@
         "id": "b8ef333da370f91e",
         "type": "api-call-service",
         "z": "3abb5ae57afb4761",
-        "name": "Disable Texts",
+        "name": "Disable Texts (All)",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -10305,9 +10305,152 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_boolean.text_notify_all",
-            "input_boolean.text_notify_kallen",
-            "input_boolean.text_notify_nerds",
+            "input_boolean.text_notify_all"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 450,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "351ac66c934832eb",
+        "type": "server-state-changed",
+        "z": "3abb5ae57afb4761",
+        "name": "Parents Presence",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.parents_home",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": true,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "presence",
+                "valueType": "str"
+            }
+        ],
+        "x": 190,
+        "y": 800,
+        "wires": [
+            [
+                "331ed2d217025fd1"
+            ],
+            [
+                "0eaa398b977e03b5"
+            ]
+        ]
+    },
+    {
+        "id": "df53af0726555079",
+        "type": "api-current-state",
+        "z": "3abb5ae57afb4761",
+        "name": "Parents Presence?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.parents_home",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 190,
+        "y": 860,
+        "wires": [
+            [
+                "331ed2d217025fd1"
+            ],
+            [
+                "0eaa398b977e03b5"
+            ]
+        ]
+    },
+    {
+        "id": "331ed2d217025fd1",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "Enable Texts (Parents)",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
             "input_boolean.text_notify_parents"
         ],
         "data": "",
@@ -10316,10 +10459,257 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 390,
+        "x": 460,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0eaa398b977e03b5",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "Disable Texts (Parents)",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.text_notify_parents"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 470,
         "y": 860,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "663b5401ea953d2d",
+        "type": "server-state-changed",
+        "z": "3abb5ae57afb4761",
+        "name": "Nerds Presence",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.nerds_home",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": true,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "presence",
+                "valueType": "str"
+            }
+        ],
+        "x": 180,
+        "y": 920,
+        "wires": [
+            [
+                "a999c33047fc3b61"
+            ],
+            [
+                "84a2692b31e7d7d8"
+            ]
+        ]
+    },
+    {
+        "id": "802ff36b76e55809",
+        "type": "api-current-state",
+        "z": "3abb5ae57afb4761",
+        "name": "Nerds Presence?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.nerds_home",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 190,
+        "y": 980,
+        "wires": [
+            [
+                "a999c33047fc3b61"
+            ],
+            [
+                "84a2692b31e7d7d8"
+            ]
+        ]
+    },
+    {
+        "id": "a999c33047fc3b61",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "Enable Texts (Nerds)",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.text_notify_nerds"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 460,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84a2692b31e7d7d8",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "Disable Texts (Nerds)",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.text_notify_nerds"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 460,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ac137ebc9f53e3c",
+        "type": "api-current-state",
+        "z": "3abb5ae57afb4761",
+        "name": "Family Presence?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "group.family",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 190,
+        "y": 1100,
+        "wires": [
+            [
+                "d5a9248680297b56"
+            ],
+            [
+                "b8ef333da370f91e"
+            ]
         ]
     },
     {
