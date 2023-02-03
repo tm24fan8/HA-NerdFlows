@@ -720,9 +720,7 @@
             "e0751f3bf2a2e610"
         ],
         "x": 14,
-        "y": 759,
-        "w": 1172,
-        "h": 482
+        "y": 759
     },
     {
         "id": "e065b1ed4938b477",
@@ -814,9 +812,7 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 59,
-        "w": 2722,
-        "h": 682
+        "y": 59
     },
     {
         "id": "5c50443a84910fb7",
@@ -2963,7 +2959,7 @@
         "type": "function",
         "z": "6429099c4571dd6b",
         "name": "Name Conversion",
-        "func": "if (msg.topic === \"Living Room\") {\n    msg.topic = \"living_room\"\n} else if (msg.topic === \"Living Room Echo Dot\") {\n    msg.topic = \"living_room\"\n} else if (msg.topic === \"Basement\") {\n    msg.topic = \"basement\"\n} else if (msg.topic === \"Basement Echo Dot\") {\n    msg.topic = \"basement\"\n} else if (msg.topic === \"Kallen Bedroom\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (msg.topic === \"Kallen Bedroom Speaker\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (msg.topic === \"Master Bedroom\") {\n    msg.topic = \"master_bedroom\"\n} else if (msg.topic === \"Master Bedroom Echo Dot\") {\n    msg.topic = \"master_bedroom\"\n} else if (msg.topic === \"Common Areas\") {\n    msg.topic = \"common\"\n} else if (msg.topic === \"Everywhere\") {\n    msg.topic = \"everywhere\"\n}\nreturn msg;",
+        "func": "if (msg.topic === \"Living Room\") {\n    msg.topic = \"living_room\"\n} else if (msg.topic === \"Living Room Echo Dot\") {\n    msg.topic = \"living_room\"\n} else if (msg.topic === \"Basement\") {\n    msg.topic = \"basement\"\n} else if (msg.topic === \"Basement Echo Dot\") {\n    msg.topic = \"basement\"\n} else if (msg.topic === \"Kallen Bedroom\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (msg.topic === \"Kallen Bedroom Speaker\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (msg.topic === \"Emma Bedroom\") {\n    msg.topic = \"emma_bedroom\"\n} else if (msg.topic === \"Emma Bedroom Speaker\") {\n    msg.topic = \"emma_bedroom\"\n} else if (msg.topic === \"Kids Bedrooms\") {\n    msg.topic = \"kids_bedrooms\"\n} else if (msg.topic === \"All Bedrooms\") {\n    msg.topic = \"all_bedrooms\"\n} else if (msg.topic === \"Master Bedroom\") {\n    msg.topic = \"master_bedroom\"\n} else if (msg.topic === \"Master Bedroom Echo Dot\") {\n    msg.topic = \"master_bedroom\"\n} else if (msg.topic === \"Common Areas\") {\n    msg.topic = \"common\"\n} else if (msg.topic === \"Everywhere\") {\n    msg.topic = \"everywhere\"\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
