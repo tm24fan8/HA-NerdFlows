@@ -672,7 +672,6 @@
             "d132875202e85038",
             "a6f4af0aaabcc2c1",
             "eb0e4c095dbe898e",
-            "fce2383754c91a31",
             "cc1af8532e3dc820",
             "39d187b7e17d80ab",
             "49eadd57e9728914",
@@ -683,10 +682,14 @@
             "59d83dd7c5adba1f",
             "57651381835f659c",
             "acb52adc50d34045",
-            "e0751f3bf2a2e610"
+            "e0751f3bf2a2e610",
+            "a52d249ed43537c7",
+            "b4dbbf788c5a30d2"
         ],
         "x": 14,
-        "y": 759
+        "y": 719,
+        "w": 1432,
+        "h": 442
     },
     {
         "id": "e065b1ed4938b477",
@@ -706,7 +709,6 @@
             "40dc1e930b887eb7",
             "bf1b0d6542ef6b38",
             "512b9dd5177ebeec",
-            "f36181bb272eabe8",
             "7d9666e1ce61f8df",
             "24c3166123d5dad0",
             "40f52ef656550cf6",
@@ -719,7 +721,6 @@
             "c0408b03c3cf8f23",
             "444acaf315688ac9",
             "9949527a728eaf42",
-            "0652e441425c3875",
             "a11946e3ceb59514",
             "2915ba19778e3fee",
             "dc440dfc78c41b8a",
@@ -778,7 +779,9 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 59
+        "y": 19,
+        "w": 2722,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -17124,7 +17127,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 170,
-        "y": 260,
+        "y": 220,
         "wires": [
             [
                 "ed6649edf0128951"
@@ -17186,7 +17189,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 160,
-        "y": 320,
+        "y": 280,
         "wires": [
             [
                 "ed6649edf0128951"
@@ -17248,7 +17251,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 170,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
                 "ed6649edf0128951"
@@ -17293,7 +17296,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 540,
-        "y": 360,
+        "y": 320,
         "wires": [
             [
                 "bd5119ed04776902"
@@ -17337,7 +17340,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 1030,
-        "y": 360,
+        "y": 320,
         "wires": [
             [
                 "bf1b0d6542ef6b38"
@@ -17368,7 +17371,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1770,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
                 "20f407c978d14863"
@@ -17398,7 +17401,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 2320,
-        "y": 160,
+        "y": 120,
         "wires": [
             [
                 "0f6d425791646818"
@@ -17428,7 +17431,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1770,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
                 "36c671c1520680e7"
@@ -17463,45 +17466,13 @@
         "to": "",
         "reg": false,
         "x": 2315,
-        "y": 280,
-        "wires": [
-            [
-                "0652e441425c3875"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "0652e441425c3875",
-        "type": "link out",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "MB Cooling",
-        "mode": "link",
-        "links": [
-            "aba7b09fe1ea30df"
-        ],
-        "x": 2375,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "aba7b09fe1ea30df",
-        "type": "link in",
-        "z": "72f99805df043603",
-        "name": "Climate Notifier",
-        "links": [
-            "0652e441425c3875",
-            "f36181bb272eabe8",
-            "b9e8acfb06e816f7"
-        ],
-        "x": 65,
-        "y": 20,
+        "y": 240,
         "wires": [
             [
                 "1eb13d819ba7e226"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "9949527a728eaf42",
@@ -17540,10 +17511,10 @@
         "to": "",
         "reg": false,
         "x": 2695,
-        "y": 120,
+        "y": 80,
         "wires": [
             [
-                "0652e441425c3875"
+                "1eb13d819ba7e226"
             ]
         ],
         "l": false
@@ -17571,7 +17542,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1230,
-        "y": 360,
+        "y": 320,
         "wires": [
             [
                 "c324cf8a87c3b388"
@@ -17606,27 +17577,13 @@
         "to": "",
         "reg": false,
         "x": 1415,
-        "y": 360,
+        "y": 320,
         "wires": [
             [
-                "f36181bb272eabe8"
+                "1eb13d819ba7e226"
             ]
         ],
         "l": false
-    },
-    {
-        "id": "f36181bb272eabe8",
-        "type": "link out",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "MB Fan",
-        "mode": "link",
-        "links": [
-            "aba7b09fe1ea30df"
-        ],
-        "x": 1475,
-        "y": 360,
-        "wires": []
     },
     {
         "id": "7d9666e1ce61f8df",
@@ -17660,7 +17617,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 1270,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "0ba87300a6fd6950"
@@ -17690,7 +17647,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1810,
-        "y": 480,
+        "y": 440,
         "wires": [
             [
                 "efe1917ebdcef673"
@@ -17720,7 +17677,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 2360,
-        "y": 420,
+        "y": 380,
         "wires": [
             [
                 "bc9d4a0d7a7c5c79"
@@ -17750,7 +17707,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1810,
-        "y": 540,
+        "y": 500,
         "wires": [
             []
         ]
@@ -17779,7 +17736,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1270,
-        "y": 560,
+        "y": 520,
         "wires": [
             []
         ]
@@ -17822,7 +17779,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 380,
-        "y": 360,
+        "y": 320,
         "wires": [
             [
                 "fa2b43f4eec9f89a"
@@ -17853,7 +17810,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1940,
-        "y": 200,
+        "y": 160,
         "wires": [
             [
                 "a11946e3ceb59514"
@@ -17883,7 +17840,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1940,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
                 "09a31110ed0a8630"
@@ -17913,7 +17870,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1980,
-        "y": 460,
+        "y": 420,
         "wires": [
             [
                 "2915ba19778e3fee"
@@ -17975,10 +17932,10 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 860,
+        "y": 820,
         "wires": [
             [
-                "39d187b7e17d80ab"
+                "a52d249ed43537c7"
             ]
         ]
     },
@@ -18037,7 +17994,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 940,
+        "y": 900,
         "wires": [
             [
                 "39d187b7e17d80ab"
@@ -18081,8 +18038,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 550,
-        "y": 900,
+        "x": 790,
+        "y": 820,
         "wires": [
             [
                 "4792e2d88f7d533f"
@@ -18117,8 +18074,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 695,
-        "y": 900,
+        "x": 935,
+        "y": 820,
         "wires": [
             [
                 "d132875202e85038",
@@ -18154,8 +18111,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 640,
-        "y": 980,
+        "x": 880,
+        "y": 900,
         "wires": [
             [
                 "99e74844b8fd9d1a",
@@ -18181,8 +18138,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 755,
-        "y": 960,
+        "x": 995,
+        "y": 880,
         "wires": [
             [
                 "da1a1f23bf9429c5"
@@ -18212,8 +18169,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 870,
-        "y": 960,
+        "x": 1110,
+        "y": 880,
         "wires": [
             [
                 "6418c17768ed363d"
@@ -18242,8 +18199,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1060,
-        "y": 960,
+        "x": 1300,
+        "y": 880,
         "wires": [
             []
         ]
@@ -18272,8 +18229,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 640,
-        "y": 1080,
+        "x": 880,
+        "y": 1000,
         "wires": [
             [
                 "265b54394cc42f53"
@@ -18298,8 +18255,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 975,
-        "y": 1080,
+        "x": 1215,
+        "y": 1000,
         "wires": [
             [
                 "73b51e79d20c7982"
@@ -18329,8 +18286,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1090,
-        "y": 1080,
+        "x": 1330,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -18357,8 +18314,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 800,
-        "y": 1080,
+        "x": 1040,
+        "y": 1000,
         "wires": [
             [
                 "ed138e629ed0809f",
@@ -18388,8 +18345,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 820,
-        "y": 900,
+        "x": 1060,
+        "y": 820,
         "wires": [
             [
                 "a6f4af0aaabcc2c1"
@@ -18418,8 +18375,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1000,
-        "y": 900,
+        "x": 1240,
+        "y": 820,
         "wires": [
             []
         ]
@@ -18428,27 +18385,12 @@
         "id": "b4dbbf788c5a30d2",
         "type": "subflow:6429099c4571dd6b",
         "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
         "name": "",
-        "x": 740,
-        "y": 20,
+        "x": 1340,
+        "y": 1060,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "6f595f2a4713d76d",
-        "type": "link in",
-        "z": "72f99805df043603",
-        "name": "Climate Speech Engine",
-        "links": [
-            "fce2383754c91a31"
-        ],
-        "x": 605,
-        "y": 20,
-        "wires": [
-            [
-                "b4dbbf788c5a30d2"
-            ]
         ]
     },
     {
@@ -18485,28 +18427,14 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 975,
-        "y": 1140,
+        "x": 1215,
+        "y": 1060,
         "wires": [
             [
-                "fce2383754c91a31"
+                "b4dbbf788c5a30d2"
             ]
         ],
         "l": false
-    },
-    {
-        "id": "fce2383754c91a31",
-        "type": "link out",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Kallen Bedtime Protocol",
-        "mode": "link",
-        "links": [
-            "6f595f2a4713d76d"
-        ],
-        "x": 1055,
-        "y": 1140,
-        "wires": []
     },
     {
         "id": "cc1af8532e3dc820",
@@ -18542,11 +18470,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 975,
-        "y": 1020,
+        "x": 1215,
+        "y": 940,
         "wires": [
             [
-                "fce2383754c91a31"
+                "b4dbbf788c5a30d2"
             ]
         ],
         "l": false
@@ -18589,7 +18517,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 2130,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "444acaf315688ac9"
@@ -18634,7 +18562,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 2170,
-        "y": 440,
+        "y": 400,
         "wires": [
             [
                 "40f52ef656550cf6"
@@ -18651,7 +18579,7 @@
             "5c9c73b7adb72896"
         ],
         "x": 415,
-        "y": 320,
+        "y": 280,
         "wires": [
             [
                 "fa2b43f4eec9f89a"
@@ -18687,7 +18615,7 @@
         "repair": false,
         "outputs": 3,
         "x": 865,
-        "y": 360,
+        "y": 320,
         "wires": [
             [
                 "10d9b30654ef759c"
@@ -18732,7 +18660,7 @@
             }
         ],
         "x": 740,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "6fb7131d5534350c",
@@ -18759,7 +18687,7 @@
         "repair": false,
         "outputs": 1,
         "x": 2635,
-        "y": 120,
+        "y": 80,
         "wires": [
             [
                 "9949527a728eaf42"
@@ -18798,7 +18726,7 @@
             }
         ],
         "x": 1010,
-        "y": 420,
+        "y": 380,
         "wires": [
             [
                 "90afa6409f3fcac3"
@@ -18828,7 +18756,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1000,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "67509a5554fc091f"
@@ -18873,7 +18801,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 800,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "9179e99207e9f8f3"
@@ -18911,7 +18839,7 @@
             }
         ],
         "x": 130,
-        "y": 160,
+        "y": 120,
         "wires": [
             [
                 "6e89b3464496e0e8"
@@ -18956,7 +18884,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 560,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "7674985a03ff3355"
@@ -18978,7 +18906,7 @@
             "028351e8c4e2faf5"
         ],
         "x": 195,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "929b5cd6a4d7dc30"
@@ -19022,8 +18950,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 340,
-        "y": 900,
+        "x": 580,
+        "y": 820,
         "wires": [
             [
                 "3166f71fdf62748a"
@@ -19058,7 +18986,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 530,
-        "y": 160,
+        "y": 120,
         "wires": [
             [
                 "7674985a03ff3355"
@@ -19103,7 +19031,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 330,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "63c1bc35f7c35360"
@@ -19149,7 +19077,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 730,
-        "y": 360,
+        "y": 320,
         "wires": [
             [
                 "99f6abc4d215980a"
@@ -19185,7 +19113,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1080,
-        "y": 240,
+        "y": 200,
         "wires": [
             [
                 "a1315d3be8da5c2f"
@@ -19219,7 +19147,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1080,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "7d9666e1ce61f8df",
@@ -19254,8 +19182,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 350,
-        "y": 1060,
+        "x": 590,
+        "y": 980,
         "wires": [
             []
         ]
@@ -19282,8 +19210,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 1060,
+        "x": 400,
+        "y": 980,
         "wires": [
             [
                 "49eadd57e9728914"
@@ -19300,7 +19228,7 @@
             "31b8c8291d19ffc6"
         ],
         "x": 145,
-        "y": 440,
+        "y": 400,
         "wires": [
             [
                 "fa78faf38adfa49d"
@@ -19331,7 +19259,7 @@
         "repair": false,
         "outputs": 2,
         "x": 295,
-        "y": 620,
+        "y": 580,
         "wires": [
             [
                 "722337dd4775a357"
@@ -19365,7 +19293,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 480,
-        "y": 580,
+        "y": 540,
         "wires": [
             [
                 "66e85878d60c7d65"
@@ -19395,7 +19323,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 620,
-        "y": 580,
+        "y": 540,
         "wires": [
             [
                 "f797103d28ab6d1c"
@@ -19440,7 +19368,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 790,
-        "y": 580,
+        "y": 540,
         "wires": [
             [
                 "bcba065aa5ecb2be"
@@ -19470,7 +19398,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 960,
-        "y": 580,
+        "y": 540,
         "wires": [
             []
         ]
@@ -19498,7 +19426,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 880,
-        "y": 240,
+        "y": 200,
         "wires": [
             [
                 "a1ca104dbc102bfc"
@@ -19528,7 +19456,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 880,
-        "y": 460,
+        "y": 420,
         "wires": [
             [
                 "ab9ff37610258694"
@@ -19573,7 +19501,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 440,
-        "y": 660,
+        "y": 620,
         "wires": [
             [
                 "11ed2afea8133e8f"
@@ -19610,7 +19538,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 640,
-        "y": 640,
+        "y": 600,
         "wires": [
             [
                 "ae35b5c6578777a0"
@@ -19640,7 +19568,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 840,
-        "y": 640,
+        "y": 600,
         "wires": [
             []
         ]
@@ -19668,7 +19596,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 640,
-        "y": 700,
+        "y": 660,
         "wires": [
             [
                 "81901cd811f2c733"
@@ -19698,7 +19626,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 840,
-        "y": 700,
+        "y": 660,
         "wires": [
             []
         ]
@@ -19711,7 +19639,7 @@
         "name": "Shower Mode",
         "info": "",
         "x": 170,
-        "y": 620,
+        "y": 580,
         "wires": []
     },
     {
@@ -19722,7 +19650,7 @@
         "name": "Goodnight",
         "info": "",
         "x": 100,
-        "y": 120,
+        "y": 80,
         "wires": []
     },
     {
@@ -19733,7 +19661,7 @@
         "name": "Main Flow",
         "info": "",
         "x": 540,
-        "y": 300,
+        "y": 260,
         "wires": []
     },
     {
@@ -19755,7 +19683,7 @@
         "repair": false,
         "outputs": 1,
         "x": 2255,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
                 "c0408b03c3cf8f23"
@@ -19782,7 +19710,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1355,
-        "y": 360,
+        "y": 320,
         "wires": [
             [
                 "512b9dd5177ebeec"
@@ -19828,7 +19756,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 330,
-        "y": 160,
+        "y": 120,
         "wires": [
             [
                 "404c42d6fea46839"
@@ -19874,7 +19802,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 1280,
-        "y": 240,
+        "y": 200,
         "wires": [
             [
                 "1c601a60ac7b668f"
@@ -19924,7 +19852,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 950,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "a1ca104dbc102bfc"
@@ -19976,7 +19904,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 1210,
-        "y": 420,
+        "y": 380,
         "wires": [
             [
                 "ab9ff37610258694"
@@ -20028,7 +19956,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 280,
-        "y": 440,
+        "y": 400,
         "wires": [
             [
                 "76d51b3279d6630c"
@@ -20063,7 +19991,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1430,
-        "y": 640,
+        "y": 600,
         "wires": [
             [
                 "096369136e9e607f"
@@ -20093,7 +20021,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1600,
-        "y": 640,
+        "y": 600,
         "wires": [
             []
         ]
@@ -20129,36 +20057,11 @@
             }
         ],
         "x": 1260,
-        "y": 640,
+        "y": 600,
         "wires": [
             [
                 "1dfb0bcc98f1457b"
             ]
-        ]
-    },
-    {
-        "id": "1eb13d819ba7e226",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "name": "iOS Notifications",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_notify",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 200,
-        "y": 20,
-        "wires": [
-            []
         ]
     },
     {
@@ -20184,7 +20087,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1920,
-        "y": 140,
+        "y": 100,
         "wires": [
             []
         ]
@@ -20208,7 +20111,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1760,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "5008caa0192238f7"
@@ -20247,7 +20150,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 1490,
-        "y": 240,
+        "y": 200,
         "wires": [
             [
                 "29814d3dcc93670c"
@@ -20283,7 +20186,7 @@
         "repair": false,
         "outputs": 3,
         "x": 1635,
-        "y": 240,
+        "y": 200,
         "wires": [
             [
                 "fd0a309681a536de"
@@ -20330,7 +20233,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 1460,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "ce3e05090d0848d5"
@@ -20359,7 +20262,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1640,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "24c3166123d5dad0"
@@ -20400,8 +20303,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 350,
-        "y": 980,
+        "x": 590,
+        "y": 900,
         "wires": [
             [
                 "c2bb11a2ba39b636"
@@ -20436,8 +20339,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 495,
-        "y": 980,
+        "x": 735,
+        "y": 900,
         "wires": [
             [
                 "6e10b32a122e8a2c"
@@ -20475,8 +20378,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 640,
-        "y": 1140,
+        "x": 880,
+        "y": 1060,
         "wires": [
             [
                 "59d83dd7c5adba1f"
@@ -20517,11 +20420,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 975,
-        "y": 1200,
+        "x": 1215,
+        "y": 1120,
         "wires": [
             [
-                "fce2383754c91a31"
+                "b4dbbf788c5a30d2"
             ]
         ],
         "l": false
@@ -20558,7 +20461,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 450,
-        "y": 440,
+        "y": 400,
         "wires": [
             [
                 "e238631130b2c316"
@@ -20584,7 +20487,7 @@
         "repair": false,
         "outputs": 1,
         "x": 375,
-        "y": 580,
+        "y": 540,
         "wires": [
             [
                 "f541ad53e32f703b"
@@ -20624,7 +20527,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 600,
-        "y": 440,
+        "y": 400,
         "wires": [
             [
                 "cefb338fa0c6931e"
@@ -20654,7 +20557,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 2120,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
                 "c6537f1924370c8c"
@@ -20684,7 +20587,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 2500,
-        "y": 120,
+        "y": 80,
         "wires": [
             [
                 "7659d7b193fc7fb5"
@@ -20714,7 +20617,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 2540,
-        "y": 420,
+        "y": 380,
         "wires": [
             []
         ]
@@ -20742,7 +20645,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1180,
-        "y": 100,
+        "y": 60,
         "wires": [
             []
         ]
@@ -20778,8 +20681,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 840,
-        "y": 840,
+        "x": 1080,
+        "y": 760,
         "wires": [
             [
                 "acb52adc50d34045"
@@ -20809,8 +20712,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1020,
-        "y": 840,
+        "x": 1260,
+        "y": 760,
         "wires": [
             []
         ]
@@ -20846,11 +20749,82 @@
             }
         ],
         "x": 120,
-        "y": 800,
+        "y": 760,
         "wires": [
             [
                 "39d187b7e17d80ab"
             ]
+        ]
+    },
+    {
+        "id": "a52d249ed43537c7",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Kallen Home?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.kallen_home",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 320,
+        "y": 820,
+        "wires": [
+            [
+                "39d187b7e17d80ab"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1eb13d819ba7e226",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "name": "iOS Notifications",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2540,
+        "y": 360,
+        "wires": [
+            []
         ]
     },
     {
