@@ -3,7 +3,6 @@
     "description": "Version control for my Node-RED flows",
     "version": "1.0.0",
     "dependencies": {
-        "@foxleigh81/node-red-contrib-todoist-api": "0.1.0",
         "node-red-contrib-alexa-home-skill": "0.1.19",
         "node-red-contrib-alexa-remote2-applestrudel": "5.0.20",
         "node-red-contrib-discord-advanced": "3.3.3",
