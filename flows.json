@@ -683,11 +683,16 @@
             "57651381835f659c",
             "acb52adc50d34045",
             "e0751f3bf2a2e610",
+            "b4dbbf788c5a30d2",
+            "d6b56cb65c2ff140",
+            "e32aaeb51d3f2e95",
             "a52d249ed43537c7",
-            "b4dbbf788c5a30d2"
+            "95812f5094f32d6b"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1332,
+        "h": 562
     },
     {
         "id": "e065b1ed4938b477",
@@ -777,7 +782,9 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2722,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -833,9 +840,7 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39,
-        "w": 872,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -857,9 +862,7 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 219,
-        "w": 1012,
-        "h": 202
+        "y": 219
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1174,9 +1177,7 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 439,
-        "w": 1452,
-        "h": 422
+        "y": 439
     },
     {
         "id": "eeafd13be593ae69",
@@ -1272,9 +1273,7 @@
             "6f84db50867abc7b"
         ],
         "x": 14,
-        "y": 519,
-        "w": 612,
-        "h": 202
+        "y": 519
     },
     {
         "id": "550e5b2d99316b12",
@@ -17976,6 +17975,12 @@
                 "propertyType": "msg",
                 "value": "kallen-night",
                 "valueType": "str"
+            },
+            {
+                "property": "switch",
+                "propertyType": "msg",
+                "value": "on",
+                "valueType": "str"
             }
         ],
         "sunday": true,
@@ -17990,7 +17995,7 @@
         "y": 820,
         "wires": [
             [
-                "a52d249ed43537c7"
+                "d6b56cb65c2ff140"
             ]
         ]
     },
@@ -18038,6 +18043,12 @@
                 "propertyType": "msg",
                 "value": "kallen-morning",
                 "valueType": "str"
+            },
+            {
+                "property": "switch",
+                "propertyType": "msg",
+                "value": "off",
+                "valueType": "str"
             }
         ],
         "sunday": true,
@@ -18049,10 +18060,10 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 900,
+        "y": 880,
         "wires": [
             [
-                "39d187b7e17d80ab"
+                "d6b56cb65c2ff140"
             ]
         ]
     },
@@ -18093,13 +18104,15 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 790,
-        "y": 820,
+        "x": 510,
+        "y": 940,
         "wires": [
             [
-                "4792e2d88f7d533f"
+                "a52d249ed43537c7"
             ],
-            []
+            [
+                "95812f5094f32d6b"
+            ]
         ],
         "outputLabels": [
             "Off",
@@ -18112,25 +18125,25 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "",
-        "property": "topic",
+        "property": "switch",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "kallen-morning",
+                "v": "off",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "kallen-night",
+                "v": "on",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 935,
-        "y": 820,
+        "x": 865,
+        "y": 940,
         "wires": [
             [
                 "d132875202e85038",
@@ -18166,8 +18179,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 880,
-        "y": 900,
+        "x": 600,
+        "y": 1020,
         "wires": [
             [
                 "99e74844b8fd9d1a",
@@ -18193,8 +18206,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 995,
-        "y": 880,
+        "x": 935,
+        "y": 1000,
         "wires": [
             [
                 "da1a1f23bf9429c5"
@@ -18224,8 +18237,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1110,
-        "y": 880,
+        "x": 1050,
+        "y": 1000,
         "wires": [
             [
                 "6418c17768ed363d"
@@ -18254,8 +18267,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1300,
-        "y": 880,
+        "x": 1240,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -18284,8 +18297,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 880,
-        "y": 1000,
+        "x": 600,
+        "y": 1120,
         "wires": [
             [
                 "265b54394cc42f53"
@@ -18310,8 +18323,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1215,
-        "y": 1000,
+        "x": 935,
+        "y": 1120,
         "wires": [
             [
                 "73b51e79d20c7982"
@@ -18341,8 +18354,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1330,
-        "y": 1000,
+        "x": 1050,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -18369,8 +18382,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1040,
-        "y": 1000,
+        "x": 760,
+        "y": 1120,
         "wires": [
             [
                 "ed138e629ed0809f",
@@ -18400,8 +18413,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1060,
-        "y": 820,
+        "x": 1000,
+        "y": 940,
         "wires": [
             [
                 "a6f4af0aaabcc2c1"
@@ -18430,8 +18443,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1240,
-        "y": 820,
+        "x": 1180,
+        "y": 940,
         "wires": [
             []
         ]
@@ -18442,8 +18455,8 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "",
-        "x": 1340,
-        "y": 1060,
+        "x": 1060,
+        "y": 1180,
         "wires": [
             []
         ]
@@ -18482,8 +18495,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1215,
-        "y": 1060,
+        "x": 935,
+        "y": 1180,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -18525,8 +18538,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1215,
-        "y": 940,
+        "x": 935,
+        "y": 1060,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -19005,13 +19018,15 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 580,
-        "y": 820,
+        "x": 300,
+        "y": 940,
         "wires": [
             [
                 "3166f71fdf62748a"
             ],
-            []
+            [
+                "95812f5094f32d6b"
+            ]
         ],
         "outputLabels": [
             "Off",
@@ -19237,8 +19252,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 590,
-        "y": 980,
+        "x": 310,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -19265,8 +19280,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 400,
-        "y": 980,
+        "x": 120,
+        "y": 1100,
         "wires": [
             [
                 "49eadd57e9728914"
@@ -20358,8 +20373,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 590,
-        "y": 900,
+        "x": 310,
+        "y": 1020,
         "wires": [
             [
                 "c2bb11a2ba39b636"
@@ -20394,8 +20409,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 735,
-        "y": 900,
+        "x": 455,
+        "y": 1020,
         "wires": [
             [
                 "6e10b32a122e8a2c"
@@ -20433,8 +20448,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 880,
-        "y": 1060,
+        "x": 600,
+        "y": 1180,
         "wires": [
             [
                 "59d83dd7c5adba1f"
@@ -20475,8 +20490,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1215,
-        "y": 1120,
+        "x": 935,
+        "y": 1240,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -20736,8 +20751,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1080,
-        "y": 760,
+        "x": 1020,
+        "y": 880,
         "wires": [
             [
                 "acb52adc50d34045"
@@ -20767,8 +20782,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1260,
-        "y": 760,
+        "x": 1200,
+        "y": 880,
         "wires": [
             []
         ]
@@ -20805,6 +20820,111 @@
         ],
         "x": 120,
         "y": 760,
+        "wires": [
+            [
+                "d6b56cb65c2ff140"
+            ]
+        ]
+    },
+    {
+        "id": "1eb13d819ba7e226",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "name": "iOS Notifications",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2540,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6b56cb65c2ff140",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Toggle Boolean",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_{{switch}}",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.kallen_sleeping"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1100,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e32aaeb51d3f2e95",
+        "type": "server-state-changed",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Boolean State",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.kallen_sleeping",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": true,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "switch",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 110,
+        "y": 940,
         "wires": [
             [
                 "39d187b7e17d80ab"
@@ -20848,39 +20968,49 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 320,
-        "y": 820,
+        "x": 720,
+        "y": 940,
         "wires": [
             [
-                "39d187b7e17d80ab"
+                "4792e2d88f7d533f"
             ],
-            []
+            [
+                "95812f5094f32d6b"
+            ]
+        ],
+        "outputLabels": [
+            "Home",
+            "Away"
         ]
     },
     {
-        "id": "1eb13d819ba7e226",
-        "type": "api-call-service",
+        "id": "95812f5094f32d6b",
+        "type": "change",
         "z": "72f99805df043603",
-        "name": "iOS Notifications",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_notify",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2540,
-        "y": 360,
+        "g": "39a7ac02f2727f1d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "switch",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 955,
+        "y": 820,
         "wires": [
-            []
-        ]
+            [
+                "d6b56cb65c2ff140"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "105271e0816c6a52",
