@@ -1041,77 +1041,6 @@
         "y": 239
     },
     {
-        "id": "753e14252442d87d",
-        "type": "group",
-        "z": "4a8821853d4dd1ad",
-        "name": "Start",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "cc8645ebae721601",
-            "b2d071ca42e4a3c6",
-            "7fc67fc156c0f4be",
-            "797d3e7cc53d773f",
-            "cb399b9e54bcf0f0",
-            "4d4e55cea59da9ad",
-            "600f4c2dcc3e0c51",
-            "908543f7b78f7beb",
-            "d6728df5d1fdf67e",
-            "ae7073e78053da5d",
-            "715c94772f02e398",
-            "736d7433005436b3",
-            "0aa29248b560c45d",
-            "b8ca8a1a2655570b",
-            "6a84cfeac66e9b29",
-            "c43df123937fd07d",
-            "fc26a2c43e3a3faa"
-        ],
-        "x": 34,
-        "y": 39,
-        "w": 1642,
-        "h": 262
-    },
-    {
-        "id": "56c26bcb1de77e0e",
-        "type": "group",
-        "z": "4a8821853d4dd1ad",
-        "name": "Pause",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "afeb1d238a623c3d",
-            "34dcb204b421710d",
-            "e69ad4771494c458",
-            "fdf9b6820eb7289a",
-            "5c44fd504453ae63",
-            "dd0be4a0dd77e1db",
-            "6b086807971b2618",
-            "6736626753b33834",
-            "24abb932c4cd0b1f",
-            "b0f2bb3aef2890a1",
-            "70888fea017c3e69",
-            "c0521b53f7efeb17",
-            "95d5ac486b4f9ee0",
-            "392d8c474c89b9f0",
-            "3ba243a44893f620",
-            "49767cbfa622a734",
-            "04113ab4977bf725",
-            "eeab9b390a3115fb",
-            "1801227eeba9a397",
-            "cc053eef18a0b08c",
-            "6df16ceae69c8c2e",
-            "7f20a02b0b8f860a",
-            "3dcc1f88969d9a0b",
-            "f34f7a348bd2d5ee"
-        ],
-        "x": 34,
-        "y": 319,
-        "w": 1792,
-        "h": 222
-    },
-    {
         "id": "1ca205a84922c8c2",
         "type": "group",
         "z": "4a8821853d4dd1ad",
@@ -1323,9 +1252,7 @@
             "c8af362d48d5c0ad"
         ],
         "x": 54,
-        "y": 39,
-        "w": 852,
-        "h": 622
+        "y": 39
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1342,9 +1269,62 @@
             "e97b782efaaf5976"
         ],
         "x": 64,
-        "y": 699,
-        "w": 672,
-        "h": 82
+        "y": 699
+    },
+    {
+        "id": "a46fc8e7e70ca893",
+        "type": "group",
+        "z": "4a8821853d4dd1ad",
+        "name": "Start/Pause",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "cc8645ebae721601",
+            "b2d071ca42e4a3c6",
+            "7fc67fc156c0f4be",
+            "afeb1d238a623c3d",
+            "34dcb204b421710d",
+            "797d3e7cc53d773f",
+            "cb399b9e54bcf0f0",
+            "4d4e55cea59da9ad",
+            "600f4c2dcc3e0c51",
+            "e69ad4771494c458",
+            "fdf9b6820eb7289a",
+            "5c44fd504453ae63",
+            "908543f7b78f7beb",
+            "dd0be4a0dd77e1db",
+            "d6728df5d1fdf67e",
+            "ae7073e78053da5d",
+            "6b086807971b2618",
+            "6736626753b33834",
+            "715c94772f02e398",
+            "736d7433005436b3",
+            "0aa29248b560c45d",
+            "b8ca8a1a2655570b",
+            "6a84cfeac66e9b29",
+            "c43df123937fd07d",
+            "fc26a2c43e3a3faa",
+            "24abb932c4cd0b1f",
+            "b0f2bb3aef2890a1",
+            "70888fea017c3e69",
+            "c0521b53f7efeb17",
+            "95d5ac486b4f9ee0",
+            "392d8c474c89b9f0",
+            "3ba243a44893f620",
+            "49767cbfa622a734",
+            "04113ab4977bf725",
+            "6df16ceae69c8c2e",
+            "7f20a02b0b8f860a",
+            "f34f7a348bd2d5ee",
+            "3dcc1f88969d9a0b",
+            "9f6498380a05390b",
+            "452660fbaf11396c"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 1902,
+        "h": 502
     },
     {
         "id": "19b0e082db0643ac",
@@ -2229,28 +2209,6 @@
         "id": "60eb53fb94cd64e4",
         "type": "lifx-config",
         "token": "c120128708971c253cfdb4c0fcaeac0b392b068b4f02764f1161765591dc3eb0"
-    },
-    {
-        "id": "3144aa42556ea257",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Kallen Timer Pause",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Kallen Timer Pause"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:pause"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
     },
     {
         "id": "f040a57e80fda8ee",
@@ -4879,7 +4837,7 @@
         "id": "cc8645ebae721601",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Get duration",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -4912,7 +4870,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 950,
+        "x": 1210,
         "y": 200,
         "wires": [
             [
@@ -4925,7 +4883,7 @@
         "id": "b2d071ca42e4a3c6",
         "type": "function",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Convert to seconds",
         "func": "msg.duration = msg.duration * 60\nreturn msg;",
         "outputs": 1,
@@ -4933,7 +4891,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1085,
+        "x": 1345,
         "y": 200,
         "wires": [
             [
@@ -4946,7 +4904,7 @@
         "id": "7fc67fc156c0f4be",
         "type": "api-call-service",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Start Timer",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -4964,7 +4922,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1200,
+        "x": 1460,
         "y": 200,
         "wires": [
             []
@@ -4974,7 +4932,7 @@
         "id": "afeb1d238a623c3d",
         "type": "api-call-service",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -5004,7 +4962,7 @@
         "id": "34dcb204b421710d",
         "type": "api-call-service",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Start Timer",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -5206,7 +5164,7 @@
         "id": "797d3e7cc53d773f",
         "type": "ha-button",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Start Button",
         "version": 0,
         "debugenabled": false,
@@ -5233,10 +5191,10 @@
             }
         ],
         "x": 130,
-        "y": 200,
+        "y": 300,
         "wires": [
             [
-                "cb399b9e54bcf0f0"
+                "452660fbaf11396c"
             ]
         ]
     },
@@ -5272,7 +5230,7 @@
         "id": "cb399b9e54bcf0f0",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Room",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -5305,7 +5263,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 310,
+        "x": 570,
         "y": 200,
         "wires": [
             [
@@ -5317,7 +5275,7 @@
         "id": "4d4e55cea59da9ad",
         "type": "api-call-service",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Basement Lights Scene",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -5335,7 +5293,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1240,
+        "x": 1500,
         "y": 80,
         "wires": [
             []
@@ -5345,7 +5303,7 @@
         "id": "600f4c2dcc3e0c51",
         "type": "switch",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Routing",
         "property": "room",
         "propertyType": "msg",
@@ -5367,7 +5325,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 815,
+        "x": 1075,
         "y": 200,
         "wires": [
             [
@@ -5427,7 +5385,7 @@
         "id": "e69ad4771494c458",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Room",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -5472,7 +5430,7 @@
         "id": "fdf9b6820eb7289a",
         "type": "switch",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Routing",
         "property": "room",
         "propertyType": "msg",
@@ -5503,7 +5461,7 @@
         "id": "5c44fd504453ae63",
         "type": "api-call-service",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Turn on K's bedroom lights",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -5533,7 +5491,7 @@
         "id": "908543f7b78f7beb",
         "type": "api-call-service",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Turn on K's bedroom lights",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -5551,7 +5509,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1250,
+        "x": 1510,
         "y": 140,
         "wires": [
             [
@@ -5563,7 +5521,7 @@
         "id": "dd0be4a0dd77e1db",
         "type": "delay",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
@@ -5590,7 +5548,7 @@
         "id": "d6728df5d1fdf67e",
         "type": "delay",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
@@ -5604,7 +5562,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1425,
+        "x": 1685,
         "y": 140,
         "wires": [
             [
@@ -5617,7 +5575,7 @@
         "id": "ae7073e78053da5d",
         "type": "api-call-service",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Set to Adaptive",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -5635,7 +5593,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1570,
+        "x": 1830,
         "y": 140,
         "wires": [
             []
@@ -5645,7 +5603,7 @@
         "id": "6b086807971b2618",
         "type": "api-call-service",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Set to Adaptive",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -5673,7 +5631,7 @@
         "id": "6736626753b33834",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Check lights",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -5723,7 +5681,7 @@
         "id": "715c94772f02e398",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Activity",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -5756,7 +5714,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 490,
+        "x": 750,
         "y": 200,
         "wires": [
             [
@@ -5970,7 +5928,7 @@
         "id": "736d7433005436b3",
         "type": "change",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Formatting",
         "rules": [
             {
@@ -6027,7 +5985,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1145,
+        "x": 1405,
         "y": 260,
         "wires": [
             [
@@ -6040,9 +5998,9 @@
         "id": "0aa29248b560c45d",
         "type": "subflow:6429099c4571dd6b",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "",
-        "x": 1270,
+        "x": 1530,
         "y": 260,
         "wires": [
             []
@@ -6052,7 +6010,7 @@
         "id": "b8ca8a1a2655570b",
         "type": "function",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Rounding",
         "func": "var readout = msg.duration\n\nmsg.duration = +readout.toFixed(0)\n\nreturn msg;",
         "outputs": 1,
@@ -6060,7 +6018,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1085,
+        "x": 1345,
         "y": 260,
         "wires": [
             [
@@ -6073,7 +6031,7 @@
         "id": "6a84cfeac66e9b29",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Control Lights?",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -6106,7 +6064,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 680,
+        "x": 940,
         "y": 200,
         "wires": [
             [
@@ -6125,7 +6083,7 @@
         "id": "c43df123937fd07d",
         "type": "switch",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Lights?",
         "property": "lights",
         "propertyType": "msg",
@@ -6144,7 +6102,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 940,
+        "x": 1200,
         "y": 120,
         "wires": [
             [
@@ -6157,7 +6115,7 @@
         "id": "fc26a2c43e3a3faa",
         "type": "switch",
         "z": "4a8821853d4dd1ad",
-        "g": "753e14252442d87d",
+        "g": "a46fc8e7e70ca893",
         "name": "Routing",
         "property": "room",
         "propertyType": "msg",
@@ -6176,7 +6134,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1065,
+        "x": 1325,
         "y": 120,
         "wires": [
             [
@@ -6192,7 +6150,7 @@
         "id": "24abb932c4cd0b1f",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Control Lights?",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -6242,7 +6200,7 @@
         "id": "b0f2bb3aef2890a1",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Room",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -6287,7 +6245,7 @@
         "id": "70888fea017c3e69",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Activity",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -6332,7 +6290,7 @@
         "id": "c0521b53f7efeb17",
         "type": "change",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Formatting",
         "rules": [
             {
@@ -6411,7 +6369,7 @@
         "id": "95d5ac486b4f9ee0",
         "type": "subflow:6429099c4571dd6b",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "",
         "x": 1540,
         "y": 360,
@@ -6423,7 +6381,7 @@
         "id": "392d8c474c89b9f0",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Room",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -6468,7 +6426,7 @@
         "id": "3ba243a44893f620",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Activity",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -6513,7 +6471,7 @@
         "id": "49767cbfa622a734",
         "type": "change",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Formatting",
         "rules": [
             {
@@ -6592,7 +6550,7 @@
         "id": "04113ab4977bf725",
         "type": "subflow:6429099c4571dd6b",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "",
         "x": 1700,
         "y": 500,
@@ -6601,134 +6559,10 @@
         ]
     },
     {
-        "id": "eeab9b390a3115fb",
-        "type": "ha-button",
-        "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
-        "name": "Pause Button",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "3144aa42556ea257",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 130,
-        "y": 400,
-        "wires": [
-            [
-                "1801227eeba9a397"
-            ]
-        ]
-    },
-    {
-        "id": "1801227eeba9a397",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
-        "name": "Timer State",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "timer.kallen_timer",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "timerstate",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "timerdata",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 310,
-        "y": 400,
-        "wires": [
-            [
-                "cc053eef18a0b08c"
-            ]
-        ]
-    },
-    {
-        "id": "cc053eef18a0b08c",
-        "type": "switch",
-        "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
-        "name": "Routing",
-        "property": "timerstate",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "active",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "paused",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "idle",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 435,
-        "y": 400,
-        "wires": [
-            [
-                "f34f7a348bd2d5ee"
-            ],
-            [
-                "34dcb204b421710d"
-            ],
-            []
-        ],
-        "l": false
-    },
-    {
         "id": "6df16ceae69c8c2e",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Minutes",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -6773,7 +6607,7 @@
         "id": "7f20a02b0b8f860a",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Seconds",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -6818,7 +6652,7 @@
         "id": "f34f7a348bd2d5ee",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Minutes",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -6863,7 +6697,7 @@
         "id": "3dcc1f88969d9a0b",
         "type": "api-current-state",
         "z": "4a8821853d4dd1ad",
-        "g": "56c26bcb1de77e0e",
+        "g": "a46fc8e7e70ca893",
         "name": "Get Seconds",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -6968,6 +6802,94 @@
         "x": 800,
         "y": 820,
         "wires": []
+    },
+    {
+        "id": "9f6498380a05390b",
+        "type": "switch",
+        "z": "4a8821853d4dd1ad",
+        "g": "a46fc8e7e70ca893",
+        "name": "Routing",
+        "property": "timerstate",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "idle",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "active",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "paused",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 435,
+        "y": 300,
+        "wires": [
+            [
+                "cb399b9e54bcf0f0"
+            ],
+            [
+                "f34f7a348bd2d5ee"
+            ],
+            [
+                "34dcb204b421710d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "452660fbaf11396c",
+        "type": "api-current-state",
+        "z": "4a8821853d4dd1ad",
+        "g": "a46fc8e7e70ca893",
+        "name": "Timer State",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "timer.kallen_timer",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "timerstate",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "timerdata",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 310,
+        "y": 300,
+        "wires": [
+            [
+                "9f6498380a05390b"
+            ]
+        ]
     },
     {
         "id": "fd4bbf481e16e6ea",
