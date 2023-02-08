@@ -690,9 +690,7 @@
             "95812f5094f32d6b"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1332,
-        "h": 562
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -782,9 +780,7 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2722,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -1323,10 +1319,13 @@
             "15ae48c0b6e70f36",
             "572b2040be874f4e",
             "b57e12eb73074535",
-            "93b718cd47747ccc"
+            "93b718cd47747ccc",
+            "c8af362d48d5c0ad"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 622
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1343,7 +1342,9 @@
             "e97b782efaaf5976"
         ],
         "x": 64,
-        "y": 699
+        "y": 699,
+        "w": 672,
+        "h": 82
     },
     {
         "id": "19b0e082db0643ac",
@@ -22962,7 +22963,7 @@
             }
         ],
         "x": 160,
-        "y": 260,
+        "y": 340,
         "wires": [
             [
                 "533921a587f031d4"
@@ -23007,13 +23008,18 @@
                 "t": "eq",
                 "v": "Dinner Is Ready",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Prepare To Leave",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 6,
+        "outputs": 7,
         "x": 295,
-        "y": 260,
+        "y": 340,
         "wires": [
             [
                 "65240dc52617459d"
@@ -23032,6 +23038,9 @@
             ],
             [
                 "93b718cd47747ccc"
+            ],
+            [
+                "c8af362d48d5c0ad"
             ]
         ],
         "l": false
@@ -23545,6 +23554,32 @@
         "queue": "none",
         "x": 460,
         "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8af362d48d5c0ad",
+        "type": "api-call-service",
+        "z": "bb961e59e2ef86c9",
+        "g": "f519aff597ece351",
+        "name": "Prepare To Leave",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "we_are_leaving",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 470,
+        "y": 620,
         "wires": [
             []
         ]
