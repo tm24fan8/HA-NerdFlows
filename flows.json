@@ -903,7 +903,9 @@
             "d00db0647d1c4034"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 652,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -920,7 +922,9 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 142
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1325,6 +1329,27 @@
         "y": 39,
         "w": 1902,
         "h": 502
+    },
+    {
+        "id": "6504d94aaaf9b8d9",
+        "type": "group",
+        "z": "ffa6a885ac41a5ed",
+        "name": "Power Stats",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ce8a6bb6e9460f13",
+            "ce5a2ea26f26e421",
+            "abb6e16585d7fe61",
+            "aa9b2f0ddc5b77d3",
+            "0a8426dd99cbaeec",
+            "8813b152ed76b96c"
+        ],
+        "x": 714,
+        "y": 39,
+        "w": 632,
+        "h": 202
     },
     {
         "id": "19b0e082db0643ac",
@@ -25915,6 +25940,219 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "ce8a6bb6e9460f13",
+        "type": "server-state-changed",
+        "z": "ffa6a885ac41a5ed",
+        "g": "6504d94aaaf9b8d9",
+        "name": "Tony Desktop Power",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.tony_desktop_power",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 830,
+        "y": 80,
+        "wires": [
+            [
+                "ce5a2ea26f26e421"
+            ]
+        ]
+    },
+    {
+        "id": "ce5a2ea26f26e421",
+        "type": "mqtt out",
+        "z": "ffa6a885ac41a5ed",
+        "g": "6504d94aaaf9b8d9",
+        "name": "",
+        "topic": "house/power/basement/tony_desktop",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fd29421fc00140a8",
+        "x": 1150,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "abb6e16585d7fe61",
+        "type": "server-state-changed",
+        "z": "ffa6a885ac41a5ed",
+        "g": "6504d94aaaf9b8d9",
+        "name": "Kallen Desktop Power",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.kallen_desktop_power",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 840,
+        "y": 140,
+        "wires": [
+            [
+                "aa9b2f0ddc5b77d3"
+            ]
+        ]
+    },
+    {
+        "id": "aa9b2f0ddc5b77d3",
+        "type": "mqtt out",
+        "z": "ffa6a885ac41a5ed",
+        "g": "6504d94aaaf9b8d9",
+        "name": "",
+        "topic": "house/power/basement/kallen_desktop",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fd29421fc00140a8",
+        "x": 1150,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0a8426dd99cbaeec",
+        "type": "server-state-changed",
+        "z": "ffa6a885ac41a5ed",
+        "g": "6504d94aaaf9b8d9",
+        "name": "Basement Server Power",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.basement_server_power",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 850,
+        "y": 200,
+        "wires": [
+            [
+                "8813b152ed76b96c"
+            ]
+        ]
+    },
+    {
+        "id": "8813b152ed76b96c",
+        "type": "mqtt out",
+        "z": "ffa6a885ac41a5ed",
+        "g": "6504d94aaaf9b8d9",
+        "name": "",
+        "topic": "house/power/basement/basement_server",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fd29421fc00140a8",
+        "x": 1160,
+        "y": 200,
+        "wires": []
     },
     {
         "id": "e8d2135bb5564a4a",
