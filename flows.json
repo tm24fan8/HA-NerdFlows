@@ -1344,12 +1344,14 @@
             "abb6e16585d7fe61",
             "aa9b2f0ddc5b77d3",
             "0a8426dd99cbaeec",
-            "8813b152ed76b96c"
+            "8813b152ed76b96c",
+            "9833b2aff0f97ea9",
+            "51d05298561cfddb"
         ],
         "x": 714,
         "y": 39,
-        "w": 632,
-        "h": 202
+        "w": 672,
+        "h": 262
     },
     {
         "id": "19b0e082db0643ac",
@@ -26128,7 +26130,7 @@
             }
         ],
         "x": 850,
-        "y": 200,
+        "y": 260,
         "wires": [
             [
                 "8813b152ed76b96c"
@@ -26151,6 +26153,77 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 1160,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9833b2aff0f97ea9",
+        "type": "server-state-changed",
+        "z": "ffa6a885ac41a5ed",
+        "g": "6504d94aaaf9b8d9",
+        "name": "Tina Desktop Power",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.tina_desktop_power",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 830,
+        "y": 200,
+        "wires": [
+            [
+                "51d05298561cfddb"
+            ]
+        ]
+    },
+    {
+        "id": "51d05298561cfddb",
+        "type": "mqtt out",
+        "z": "ffa6a885ac41a5ed",
+        "g": "6504d94aaaf9b8d9",
+        "name": "",
+        "topic": "house/power/first_floor/tina_desk/tina_desktop",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fd29421fc00140a8",
+        "x": 1180,
         "y": 200,
         "wires": []
     },
