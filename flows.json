@@ -690,7 +690,9 @@
             "95812f5094f32d6b"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1332,
+        "h": 562
     },
     {
         "id": "e065b1ed4938b477",
@@ -780,7 +782,9 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2722,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -903,9 +907,7 @@
             "d00db0647d1c4034"
         ],
         "x": 34,
-        "y": 39,
-        "w": 652,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -922,9 +924,7 @@
             "619d1474239faf58"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 142
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1349,9 +1349,25 @@
             "51d05298561cfddb"
         ],
         "x": 714,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
+    },
+    {
+        "id": "b708cb6d93f40dee",
+        "type": "group",
+        "z": "5c4ac37140a54ac9",
+        "name": "Old Good Morning Flow",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c01d647c6091a47b",
+            "b83b6e027c21a133",
+            "e59180a1a6ae0a90"
+        ],
+        "x": 1094,
+        "y": 599,
+        "w": 572,
+        "h": 82
     },
     {
         "id": "19b0e082db0643ac",
@@ -20989,8 +21005,8 @@
         "y": 60,
         "wires": [
             [
-                "c01d647c6091a47b",
-                "2854170262757e84"
+                "4b8ad472472c7bff",
+                "c18d27a9438bfa08"
             ]
         ]
     },
@@ -20998,15 +21014,17 @@
         "id": "c01d647c6091a47b",
         "type": "file in",
         "z": "5c4ac37140a54ac9",
+        "g": "b708cb6d93f40dee",
         "name": "Read File",
         "filename": "/config/files/weather_briefing_full.txt",
+        "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 280,
-        "y": 60,
+        "x": 1180,
+        "y": 640,
         "wires": [
             [
                 "e59180a1a6ae0a90"
@@ -21017,6 +21035,7 @@
         "id": "b83b6e027c21a133",
         "type": "alexa-remote-routine",
         "z": "5c4ac37140a54ac9",
+        "g": "b708cb6d93f40dee",
         "name": "",
         "account": "be975ce229701797",
         "routineNode": {
@@ -21102,8 +21121,8 @@
                 ]
             }
         },
-        "x": 660,
-        "y": 60,
+        "x": 1560,
+        "y": 640,
         "wires": [
             []
         ]
@@ -21131,7 +21150,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 310,
+        "x": 490,
         "y": 120,
         "wires": [
             [
@@ -21293,9 +21312,10 @@
         "id": "e59180a1a6ae0a90",
         "type": "subflow:a42343e035e3313c",
         "z": "5c4ac37140a54ac9",
+        "g": "b708cb6d93f40dee",
         "name": "",
-        "x": 460,
-        "y": 60,
+        "x": 1360,
+        "y": 640,
         "wires": [
             [
                 "b83b6e027c21a133"
@@ -21574,7 +21594,7 @@
         "links": [
             "dc440dfc78c41b8a"
         ],
-        "x": 455,
+        "x": 635,
         "y": 120,
         "wires": []
     },
@@ -21930,6 +21950,87 @@
         "wires": [
             [
                 "09c7a61f7a4c4d05"
+            ]
+        ]
+    },
+    {
+        "id": "4b8ad472472c7bff",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Mark as ran",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.good_morning"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 290,
+        "y": 60,
+        "wires": [
+            [
+                "2fb85204eb56f86b"
+            ]
+        ]
+    },
+    {
+        "id": "2fb85204eb56f86b",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "TTS Briefing",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "morning_briefing",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 470,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c18d27a9438bfa08",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Morning Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "morning_scene",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "2854170262757e84"
             ]
         ]
     },
