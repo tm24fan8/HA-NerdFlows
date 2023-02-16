@@ -690,9 +690,7 @@
             "95812f5094f32d6b"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1332,
-        "h": 562
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -782,9 +780,7 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2722,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -818,7 +814,9 @@
             "82dcd22b8e2adf7c"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 882,
+        "h": 542
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1365,7 +1363,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 599,
+        "y": 839,
         "w": 572,
         "h": 82
     },
@@ -21006,7 +21004,9 @@
         "wires": [
             [
                 "4b8ad472472c7bff",
-                "c18d27a9438bfa08"
+                "c18d27a9438bfa08",
+                "ef0efdc23805d872",
+                "bad6373b442c58a1"
             ]
         ]
     },
@@ -21024,7 +21024,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 1180,
-        "y": 640,
+        "y": 880,
         "wires": [
             [
                 "e59180a1a6ae0a90"
@@ -21122,7 +21122,7 @@
             }
         },
         "x": 1560,
-        "y": 640,
+        "y": 880,
         "wires": [
             []
         ]
@@ -21176,7 +21176,7 @@
             }
         ],
         "x": 120,
-        "y": 580,
+        "y": 700,
         "wires": [
             [
                 "fa09d8a69bcbfbb5"
@@ -21201,7 +21201,7 @@
             }
         ],
         "x": 100,
-        "y": 180,
+        "y": 300,
         "wires": [
             [
                 "f30486c8e11db0e4",
@@ -21238,7 +21238,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 310,
-        "y": 180,
+        "y": 300,
         "wires": [
             [
                 "2916b53a91f17ca1"
@@ -21276,7 +21276,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 690,
-        "y": 220,
+        "y": 340,
         "wires": [
             [
                 "9cbe2333acb0e1f5"
@@ -21303,7 +21303,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 360,
-        "y": 380,
+        "y": 500,
         "wires": [
             []
         ]
@@ -21315,7 +21315,7 @@
         "g": "b708cb6d93f40dee",
         "name": "",
         "x": 1360,
-        "y": 640,
+        "y": 880,
         "wires": [
             [
                 "b83b6e027c21a133"
@@ -21344,7 +21344,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 330,
-        "y": 320,
+        "y": 440,
         "wires": [
             []
         ]
@@ -21367,7 +21367,7 @@
             }
         ],
         "x": 110,
-        "y": 640,
+        "y": 760,
         "wires": [
             [
                 "1d121bd0f1f5d628"
@@ -21388,7 +21388,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 650,
-        "y": 640,
+        "y": 760,
         "wires": []
     },
     {
@@ -21411,7 +21411,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 510,
-        "y": 640,
+        "y": 760,
         "wires": [
             [
                 "5eb7493d13b65a60"
@@ -21440,7 +21440,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 320,
-        "y": 440,
+        "y": 560,
         "wires": [
             []
         ]
@@ -21482,7 +21482,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 1260,
-        "y": 180,
+        "y": 300,
         "wires": [
             [
                 "280e2a7895ca63fb"
@@ -21510,7 +21510,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1450,
-        "y": 180,
+        "y": 300,
         "wires": [
             []
         ]
@@ -21529,7 +21529,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 670,
-        "y": 580,
+        "y": 700,
         "wires": []
     },
     {
@@ -21552,7 +21552,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 530,
-        "y": 580,
+        "y": 700,
         "wires": [
             [
                 "28a99bbb21540cbc"
@@ -21565,7 +21565,7 @@
         "z": "5c4ac37140a54ac9",
         "name": "",
         "x": 340,
-        "y": 580,
+        "y": 700,
         "wires": [
             [
                 "3363b9392f425a55"
@@ -21578,7 +21578,7 @@
         "z": "5c4ac37140a54ac9",
         "name": "",
         "x": 320,
-        "y": 640,
+        "y": 760,
         "wires": [
             [
                 "804c40c435c342fc"
@@ -21608,7 +21608,7 @@
             "bc592ba259667f9d"
         ],
         "x": 255,
-        "y": 240,
+        "y": 360,
         "wires": []
     },
     {
@@ -21633,7 +21633,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 650,
-        "y": 520,
+        "y": 640,
         "wires": [
             []
         ]
@@ -21675,7 +21675,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 330,
-        "y": 500,
+        "y": 620,
         "wires": [
             [
                 "26454728352212e8"
@@ -21711,7 +21711,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 630,
-        "y": 460,
+        "y": 580,
         "wires": [
             []
         ]
@@ -21726,7 +21726,7 @@
             "55e84ccb73ae9b74"
         ],
         "x": 255,
-        "y": 280,
+        "y": 400,
         "wires": []
     },
     {
@@ -21747,7 +21747,7 @@
             }
         ],
         "x": 130,
-        "y": 700,
+        "y": 820,
         "wires": [
             [
                 "ed96b2ce33128205"
@@ -21760,7 +21760,7 @@
         "z": "5c4ac37140a54ac9",
         "name": "",
         "x": 360,
-        "y": 700,
+        "y": 820,
         "wires": [
             [
                 "08eafe762d6146ee"
@@ -21787,7 +21787,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 550,
-        "y": 700,
+        "y": 820,
         "wires": [
             [
                 "e39da18ec3ecc852"
@@ -21808,7 +21808,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 700,
+        "y": 820,
         "wires": []
     },
     {
@@ -21848,7 +21848,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 500,
-        "y": 180,
+        "y": 300,
         "wires": [
             [
                 "8a473793e8acc9db"
@@ -21887,7 +21887,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 689,
-        "y": 157,
+        "y": 277,
         "wires": [
             [
                 "2dba21a1c020e079"
@@ -21917,7 +21917,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 870,
-        "y": 160,
+        "y": 280,
         "wires": [
             [
                 "9cbe2333acb0e1f5"
@@ -21946,7 +21946,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1060,
-        "y": 180,
+        "y": 300,
         "wires": [
             [
                 "09c7a61f7a4c4d05"
@@ -22032,6 +22032,190 @@
             [
                 "2854170262757e84"
             ]
+        ]
+    },
+    {
+        "id": "ef0efdc23805d872",
+        "type": "api-current-state",
+        "z": "5c4ac37140a54ac9",
+        "name": "Morning?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.morning",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "time",
+                "propertyType": "msg",
+                "value": "morning",
+                "valueType": "str"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 280,
+        "y": 180,
+        "wires": [
+            [
+                "54b8bca62d27e659"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "bad6373b442c58a1",
+        "type": "api-current-state",
+        "z": "5c4ac37140a54ac9",
+        "name": "Late Morning?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.late_morning",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "time",
+                "propertyType": "msg",
+                "value": "late-morning",
+                "valueType": "str"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "54b8bca62d27e659"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "54b8bca62d27e659",
+        "type": "api-current-state",
+        "z": "5c4ac37140a54ac9",
+        "name": "Security State",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "armed_home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "alarm_control_panel.stratton_ave_alarm",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "security",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 520,
+        "y": 200,
+        "wires": [
+            [
+                "708843ea29ee6626"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "armed_home",
+            "else"
+        ]
+    },
+    {
+        "id": "708843ea29ee6626",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Disarm Security",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "security_disarm",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 720,
+        "y": 200,
+        "wires": [
+            [
+                "bb77b36dd4d9cc96"
+            ]
+        ]
+    },
+    {
+        "id": "bb77b36dd4d9cc96",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Disable Automations",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "automation",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "automation.scheduled_alarm_disarm",
+            "automation.scheduled_alarm_rearm"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 940,
+        "y": 200,
+        "wires": [
+            []
         ]
     },
     {
