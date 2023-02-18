@@ -814,9 +814,7 @@
             "82dcd22b8e2adf7c"
         ],
         "x": 34,
-        "y": 159,
-        "w": 882,
-        "h": 542
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1190,17 +1188,20 @@
             "label": true
         },
         "nodes": [
-            "1f9d72079343bf75",
             "5123a607588fa737",
             "d3134b1002edbb93",
             "f84e6b5157e857cf",
             "b7d94cd0e420c650",
             "41a8d5ef20cf55d7",
             "3e40025ac99ec712",
-            "6f84db50867abc7b"
+            "6f84db50867abc7b",
+            "8d2e7fb5f214879c",
+            "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 519
+        "y": 539,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1363,9 +1364,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839,
-        "w": 572,
-        "h": 82
+        "y": 839
     },
     {
         "id": "19b0e082db0643ac",
@@ -10847,67 +10846,6 @@
         ]
     },
     {
-        "id": "1f9d72079343bf75",
-        "type": "server-state-changed",
-        "z": "eff21041cc941fef",
-        "g": "8aee4d340a136bac",
-        "name": "Light turned on",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "light.downstairs_bathroom_lights",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": true,
-        "ignorePrevStateUnavailable": true,
-        "ignoreCurrentStateUnknown": true,
-        "ignoreCurrentStateUnavailable": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 120,
-        "y": 620,
-        "wires": [
-            [
-                "d3134b1002edbb93"
-            ],
-            [
-                "41a8d5ef20cf55d7"
-            ]
-        ]
-    },
-    {
         "id": "5123a607588fa737",
         "type": "api-call-service",
         "z": "eff21041cc941fef",
@@ -10932,7 +10870,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 530,
-        "y": 680,
+        "y": 700,
         "wires": [
             []
         ]
@@ -11231,7 +11169,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 290,
-        "y": 620,
+        "y": 640,
         "wires": [
             [
                 "f84e6b5157e857cf"
@@ -11251,7 +11189,7 @@
         "finalize": "",
         "libs": [],
         "x": 405,
-        "y": 620,
+        "y": 640,
         "wires": [
             [
                 "b7d94cd0e420c650"
@@ -11282,7 +11220,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 530,
-        "y": 620,
+        "y": 640,
         "wires": [
             []
         ]
@@ -11310,7 +11248,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 530,
-        "y": 560,
+        "y": 580,
         "wires": [
             []
         ]
@@ -11345,7 +11283,7 @@
             }
         ],
         "x": 120,
-        "y": 680,
+        "y": 700,
         "wires": [
             [
                 "6f84db50867abc7b"
@@ -11371,13 +11309,108 @@
         "repair": false,
         "outputs": 1,
         "x": 255,
-        "y": 680,
+        "y": 700,
         "wires": [
             [
                 "5123a607588fa737"
             ]
         ],
         "l": false
+    },
+    {
+        "id": "8d2e7fb5f214879c",
+        "type": "server-state-changed",
+        "z": "eff21041cc941fef",
+        "g": "8aee4d340a136bac",
+        "name": "Door Sensor",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.downstairs_bathroom_door",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "door",
+                "valueType": "str"
+            }
+        ],
+        "x": 110,
+        "y": 640,
+        "wires": [
+            [
+                "b281061a4b08d2eb"
+            ],
+            [
+                "d3134b1002edbb93"
+            ]
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "b281061a4b08d2eb",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "8aee4d340a136bac",
+        "name": "Lights On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.downstairs_bathroom_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 300,
+        "y": 580,
+        "wires": [
+            [
+                "41a8d5ef20cf55d7"
+            ]
+        ]
     },
     {
         "id": "879ee8903841b8f0",
