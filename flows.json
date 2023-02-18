@@ -646,7 +646,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -1038,7 +1040,9 @@
             "2d5ec93a6ad16ce2"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1332,
+        "h": 382
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1225,7 +1229,9 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639
+        "y": 639,
+        "w": 1232,
+        "h": 202
     },
     {
         "id": "f519aff597ece351",
@@ -9959,8 +9965,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1070,
-        "y": 80,
+        "x": 1330,
+        "y": 140,
         "wires": [
             []
         ]
@@ -10007,7 +10013,7 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 1290,
-        "y": 140,
+        "y": 80,
         "wires": []
     },
     {
@@ -10030,7 +10036,7 @@
         "to": "",
         "reg": false,
         "x": 1090,
-        "y": 140,
+        "y": 80,
         "wires": [
             [
                 "0ba46659c49cf39a"
@@ -10558,6 +10564,142 @@
             [
                 "b8ef333da370f91e"
             ]
+        ]
+    },
+    {
+        "id": "788f7cfdfa2fdef9",
+        "type": "server-state-changed",
+        "z": "3abb5ae57afb4761",
+        "name": "Basement Door",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.basement_studio_door",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "door",
+                "valueType": "str"
+            },
+            {
+                "property": "whichdoor",
+                "propertyType": "msg",
+                "value": "basement_studio",
+                "valueType": "str"
+            }
+        ],
+        "x": 1060,
+        "y": 160,
+        "wires": [
+            [
+                "5f8b61ddc9963e99"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "Open",
+            ""
+        ]
+    },
+    {
+        "id": "e7a73ec2ec0f9018",
+        "type": "server-state-changed",
+        "z": "3abb5ae57afb4761",
+        "name": "Downstairs Bathroom Door",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.basement_studio_door",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "door",
+                "valueType": "str"
+            },
+            {
+                "property": "whichdoor",
+                "propertyType": "msg",
+                "value": "downstairs_bathroom",
+                "valueType": "str"
+            }
+        ],
+        "x": 1090,
+        "y": 220,
+        "wires": [
+            [
+                "5f8b61ddc9963e99"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "Open",
+            ""
         ]
     },
     {
