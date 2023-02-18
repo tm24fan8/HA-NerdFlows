@@ -646,9 +646,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -1040,9 +1038,7 @@
             "2d5ec93a6ad16ce2"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1332,
-        "h": 382
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1203,9 +1199,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539,
-        "w": 612,
-        "h": 202
+        "y": 539
     },
     {
         "id": "550e5b2d99316b12",
@@ -1229,9 +1223,7 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639,
-        "w": 1232,
-        "h": 202
+        "y": 639
     },
     {
         "id": "f519aff597ece351",
@@ -10652,7 +10644,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "binary_sensor.basement_studio_door",
+        "entityidfilter": "binary_sensor.downstairs_bathroom_door",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
