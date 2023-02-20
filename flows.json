@@ -690,9 +690,7 @@
             "95812f5094f32d6b"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1332,
-        "h": 562
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -782,9 +780,7 @@
             "67509a5554fc091f"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2722,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -820,9 +816,7 @@
             "420322f4757ddf6e"
         ],
         "x": 34,
-        "y": 159,
-        "w": 1052,
-        "h": 482
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -844,9 +838,7 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39,
-        "w": 872,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -868,9 +860,7 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 219,
-        "w": 1012,
-        "h": 202
+        "y": 219
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -915,9 +905,7 @@
             "d00db0647d1c4034"
         ],
         "x": 34,
-        "y": 39,
-        "w": 652,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -935,9 +923,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -978,9 +964,7 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1432,
-        "h": 462
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1025,9 +1009,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1123,9 +1105,7 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 439,
-        "w": 1452,
-        "h": 422
+        "y": 439
     },
     {
         "id": "eeafd13be593ae69",
@@ -1166,9 +1146,7 @@
             "8c29a2e1a06c5524"
         ],
         "x": 54,
-        "y": 19,
-        "w": 2152,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1202,9 +1180,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1652,
-        "h": 382
+        "y": 39
     },
     {
         "id": "8aee4d340a136bac",
@@ -1280,9 +1256,7 @@
             "c8af362d48d5c0ad"
         ],
         "x": 54,
-        "y": 39,
-        "w": 852,
-        "h": 622
+        "y": 39
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1299,9 +1273,7 @@
             "e97b782efaaf5976"
         ],
         "x": 64,
-        "y": 699,
-        "w": 672,
-        "h": 82
+        "y": 699
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1377,9 +1349,7 @@
             "51d05298561cfddb"
         ],
         "x": 714,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "b708cb6d93f40dee",
@@ -7598,7 +7568,7 @@
         "id": "4781b749d186cd7f",
         "type": "api-call-service",
         "z": "e44b1e7a8ef7ae1d",
-        "name": "Night Mode Off",
+        "name": "Turn off booleans",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -7607,6 +7577,8 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
+            "input_boolean.give_me_darkness",
+            "input_boolean.goodnight",
             "input_boolean.night_mode"
         ],
         "data": "",
@@ -7615,12 +7587,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 740,
+        "x": 750,
         "y": 320,
         "wires": [
-            [
-                "344119e7ca7012d5"
-            ]
+            []
         ]
     },
     {
@@ -8509,33 +8479,6 @@
         "queue": "none",
         "x": 2090,
         "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "344119e7ca7012d5",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Give Me Darkness Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.give_me_darkness"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 960,
-        "y": 320,
         "wires": [
             []
         ]
@@ -21795,7 +21738,7 @@
             }
         ],
         "x": 120,
-        "y": 700,
+        "y": 740,
         "wires": [
             [
                 "fa09d8a69bcbfbb5"
@@ -21824,12 +21767,13 @@
         "wires": [
             [
                 "f30486c8e11db0e4",
-                "d9e39b8ebb86c941",
                 "582a6e14b94a5a6d",
                 "57772c8b792e014d",
                 "028351e8c4e2faf5",
                 "f935318d262547d5",
-                "60ce44747cf3e507"
+                "60ce44747cf3e507",
+                "50e351d1ee6108b3",
+                "33773b3aaa551b79"
             ]
         ]
     },
@@ -21921,7 +21865,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 360,
+        "x": 640,
         "y": 500,
         "wires": [
             []
@@ -21986,7 +21930,7 @@
             }
         ],
         "x": 110,
-        "y": 760,
+        "y": 800,
         "wires": [
             [
                 "1d121bd0f1f5d628"
@@ -22007,7 +21951,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 650,
-        "y": 760,
+        "y": 800,
         "wires": []
     },
     {
@@ -22030,7 +21974,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 510,
-        "y": 760,
+        "y": 800,
         "wires": [
             [
                 "5eb7493d13b65a60"
@@ -22148,7 +22092,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 670,
-        "y": 700,
+        "y": 740,
         "wires": []
     },
     {
@@ -22171,7 +22115,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 530,
-        "y": 700,
+        "y": 740,
         "wires": [
             [
                 "28a99bbb21540cbc"
@@ -22184,7 +22128,7 @@
         "z": "5c4ac37140a54ac9",
         "name": "",
         "x": 340,
-        "y": 700,
+        "y": 740,
         "wires": [
             [
                 "3363b9392f425a55"
@@ -22197,7 +22141,7 @@
         "z": "5c4ac37140a54ac9",
         "name": "",
         "x": 320,
-        "y": 760,
+        "y": 800,
         "wires": [
             [
                 "804c40c435c342fc"
@@ -22366,7 +22310,7 @@
             }
         ],
         "x": 130,
-        "y": 820,
+        "y": 860,
         "wires": [
             [
                 "ed96b2ce33128205"
@@ -22379,7 +22323,7 @@
         "z": "5c4ac37140a54ac9",
         "name": "",
         "x": 360,
-        "y": 820,
+        "y": 860,
         "wires": [
             [
                 "08eafe762d6146ee"
@@ -22406,7 +22350,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 550,
-        "y": 820,
+        "y": 860,
         "wires": [
             [
                 "e39da18ec3ecc852"
@@ -22427,7 +22371,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 820,
+        "y": 860,
         "wires": []
     },
     {
@@ -22833,6 +22777,76 @@
         "queue": "none",
         "x": 940,
         "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "50e351d1ee6108b3",
+        "type": "api-current-state",
+        "z": "5c4ac37140a54ac9",
+        "name": "Kallen Computer Updates?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.kallen_computer_updates",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 360,
+        "y": 500,
+        "wires": [
+            [
+                "d9e39b8ebb86c941"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "Off",
+            "On"
+        ]
+    },
+    {
+        "id": "33773b3aaa551b79",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Goodnight Switch",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.goodnight"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 330,
+        "y": 680,
         "wires": [
             []
         ]
