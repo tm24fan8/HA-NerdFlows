@@ -1365,9 +1365,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839,
-        "w": 572,
-        "h": 82
+        "y": 839
     },
     {
         "id": "19b0e082db0643ac",
@@ -7579,6 +7577,7 @@
         "entityId": [
             "input_boolean.give_me_darkness",
             "input_boolean.goodnight",
+            "input_boolean.kallen_computer_updates",
             "input_boolean.night_mode"
         ],
         "data": "",
