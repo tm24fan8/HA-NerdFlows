@@ -937,7 +937,6 @@
             "7611921cadb91b1e",
             "3a29cecbefa6cbe2",
             "4a2031f363418db1",
-            "2c9b9e4fbaa17b8a",
             "984386fa0a6369d6",
             "0beae13503166379",
             "6c77ade442a47a30",
@@ -7111,13 +7110,13 @@
         "deviceId": [],
         "entityId": [
             "switch.adaptive_lighting_sleep_mode_basement_studio",
-            "switch.adaptive_lighting_sleep_mode_dining_room",
+            "switch.adaptive_lighting_sleep_mode_dining_room_lamp",
             "switch.adaptive_lighting_sleep_mode_downstairs_bathroom",
+            "switch.adaptive_lighting_sleep_mode_emma_bedroom",
             "switch.adaptive_lighting_sleep_mode_kallen_bedroom",
             "switch.adaptive_lighting_sleep_mode_living_room",
             "switch.adaptive_lighting_sleep_mode_master_bedroom",
             "switch.adaptive_lighting_sleep_mode_mud_room",
-            "switch.adaptive_lighting_sleep_mode_emma_bedroom",
             "switch.adaptive_lighting_sleep_mode_tina_lamp",
             "switch.adaptive_lighting_sleep_mode_upstairs_bathroom",
             "switch.adaptive_lighting_sleep_mode_upstairs_hallway"
@@ -7443,7 +7442,7 @@
         "deviceId": [],
         "entityId": [
             "switch.adaptive_lighting_basement_studio",
-            "switch.adaptive_lighting_dining_room",
+            "switch.adaptive_lighting_dining_room_lamp",
             "switch.adaptive_lighting_downstairs_bathroom",
             "switch.adaptive_lighting_emma_bedroom",
             "switch.adaptive_lighting_kallen_bedroom",
@@ -7540,6 +7539,7 @@
         "deviceId": [],
         "entityId": [
             "input_text.basement_studio_selected_scene",
+            "input_text.dining_room_lamp_selected_scene",
             "input_text.downstairs_bathroom_selected_scene",
             "input_text.emma_bedroom_selected_scene",
             "input_text.front_porch_selected_scene",
@@ -7558,35 +7558,6 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1650,
-        "y": 420,
-        "wires": [
-            [
-                "8471f96e468c13f7"
-            ]
-        ]
-    },
-    {
-        "id": "8471f96e468c13f7",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Reset Scene Text",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_text",
-        "service": "set_value",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_text.dining_room_lamp_selected_scene"
-        ],
-        "data": "{\t    \"value\":\"Full\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1870,
         "y": 420,
         "wires": [
             [
@@ -8410,7 +8381,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2090,
+        "x": 1910,
         "y": 420,
         "wires": [
             []
@@ -16064,9 +16035,10 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_select.dining_room_lamp_scenes"
+            "input_select.dining_room_lamp_scenes",
+            "input_select.living_room_scenes"
         ],
-        "data": "{\t    \"option\":\"Full\"\t}",
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -16075,9 +16047,7 @@
         "x": 1090,
         "y": 1020,
         "wires": [
-            [
-                "2c9b9e4fbaa17b8a"
-            ]
+            []
         ]
     },
     {
@@ -16740,34 +16710,6 @@
         "queue": "none",
         "x": 1370,
         "y": 900,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2c9b9e4fbaa17b8a",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Reset Scene",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.living_room_scenes"
-        ],
-        "data": "{\t    \"option\":\"Adaptive\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1270,
-        "y": 1000,
         "wires": [
             []
         ]
