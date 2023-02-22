@@ -837,7 +837,9 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -859,7 +861,9 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 219
+        "y": 219,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1097,13 +1101,12 @@
             "926fc60ea00ddfb0",
             "c52cae79eb97bcc0",
             "b2d2662449cd647d",
-            "e8e1ab11cb74c845",
-            "b223f330d8775c38",
-            "b11a4ad5e96d028b",
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 439
+        "y": 499,
+        "w": 1252,
+        "h": 362
     },
     {
         "id": "eeafd13be593ae69",
@@ -1363,9 +1366,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839,
-        "w": 572,
-        "h": 82
+        "y": 839
     },
     {
         "id": "0c68af85cc3c8f07",
@@ -25211,7 +25212,7 @@
         "y": 540,
         "wires": [
             [
-                "e8e1ab11cb74c845"
+                "db6d955c039873be"
             ]
         ]
     },
@@ -25229,14 +25230,14 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\": msg.phones,\t    \"title\": msg.title,\t    \"message\": msg.payload\t}",
+        "data": "{\t    \"type\": msg.priority,\t    \"who\": msg.phones,\t    \"title\": msg.title,\t    \"message\": msg.payload\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1330,
-        "y": 480,
+        "x": 1170,
+        "y": 540,
         "wires": [
             []
         ]
@@ -25449,101 +25450,6 @@
                 "3d5448e57ef666a0",
                 "5de6d772e1ecdd22"
             ]
-        ]
-    },
-    {
-        "id": "e8e1ab11cb74c845",
-        "type": "switch",
-        "z": "ee67610b4a0578d2",
-        "g": "5595964c8367c984",
-        "name": "Priority",
-        "property": "priority",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Normal",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Alert",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Critical",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 1115,
-        "y": 540,
-        "wires": [
-            [
-                "db6d955c039873be"
-            ],
-            [
-                "b223f330d8775c38"
-            ],
-            [
-                "b11a4ad5e96d028b"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "b223f330d8775c38",
-        "type": "api-call-service",
-        "z": "ee67610b4a0578d2",
-        "g": "5595964c8367c984",
-        "name": "Text Alert",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_alert",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"who\": msg.phones,\t    \"title\": msg.title,\t    \"message\": msg.payload\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1320,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b11a4ad5e96d028b",
-        "type": "api-call-service",
-        "z": "ee67610b4a0578d2",
-        "g": "5595964c8367c984",
-        "name": "Text Alert Urgent",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_urgent_alert",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"who\": msg.phones,\t    \"title\": msg.title,\t    \"message\": msg.payload\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1350,
-        "y": 600,
-        "wires": [
-            []
         ]
     },
     {
