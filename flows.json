@@ -687,9 +687,7 @@
             "274d63b8df8f2dd0"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1272,
-        "h": 502
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -781,9 +779,7 @@
             "2c74eec67f3ff8d8"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2722,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -21558,10 +21554,10 @@
         "y": 60,
         "wires": [
             [
-                "4b8ad472472c7bff",
                 "c18d27a9438bfa08",
                 "ef0efdc23805d872",
-                "bad6373b442c58a1"
+                "bad6373b442c58a1",
+                "2fb85204eb56f86b"
             ]
         ]
     },
@@ -22510,35 +22506,6 @@
         ]
     },
     {
-        "id": "4b8ad472472c7bff",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Mark as ran",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.good_morning"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 290,
-        "y": 60,
-        "wires": [
-            [
-                "2fb85204eb56f86b"
-            ]
-        ]
-    },
-    {
         "id": "2fb85204eb56f86b",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
@@ -22557,7 +22524,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 470,
+        "x": 290,
         "y": 60,
         "wires": [
             []
