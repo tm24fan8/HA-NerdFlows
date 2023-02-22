@@ -663,19 +663,14 @@
             "4792e2d88f7d533f",
             "6e10b32a122e8a2c",
             "99e74844b8fd9d1a",
-            "da1a1f23bf9429c5",
             "6418c17768ed363d",
             "2f3666d288d77ad1",
-            "ed138e629ed0809f",
-            "73b51e79d20c7982",
             "265b54394cc42f53",
             "d132875202e85038",
             "a6f4af0aaabcc2c1",
             "eb0e4c095dbe898e",
             "cc1af8532e3dc820",
             "39d187b7e17d80ab",
-            "49eadd57e9728914",
-            "1ad455bccec8ab46",
             "d823b8a033f30d40",
             "c2bb11a2ba39b636",
             "0a4f9c693fccd1f1",
@@ -687,10 +682,14 @@
             "d6b56cb65c2ff140",
             "e32aaeb51d3f2e95",
             "a52d249ed43537c7",
-            "95812f5094f32d6b"
+            "95812f5094f32d6b",
+            "e87486569f962cb3",
+            "274d63b8df8f2dd0"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1272,
+        "h": 502
     },
     {
         "id": "e065b1ed4938b477",
@@ -777,10 +776,14 @@
             "09a31110ed0a8630",
             "0f6d425791646818",
             "bc9d4a0d7a7c5c79",
-            "67509a5554fc091f"
+            "67509a5554fc091f",
+            "af53020956a6acb5",
+            "2c74eec67f3ff8d8"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2722,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1364,7 +1367,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839
+        "y": 839,
+        "w": 572,
+        "h": 82
     },
     {
         "id": "0c68af85cc3c8f07",
@@ -1379,9 +1384,7 @@
             "8808e39fba362206"
         ],
         "x": 1134,
-        "y": 671.5,
-        "w": 422,
-        "h": 97
+        "y": 671.5
     },
     {
         "id": "19b0e082db0643ac",
@@ -18677,7 +18680,8 @@
                 "57651381835f659c"
             ],
             [
-                "d823b8a033f30d40"
+                "d823b8a033f30d40",
+                "e87486569f962cb3"
             ]
         ],
         "l": false
@@ -18737,40 +18741,10 @@
         "y": 1000,
         "wires": [
             [
-                "da1a1f23bf9429c5"
+                "6418c17768ed363d"
             ]
         ],
         "l": false
-    },
-    {
-        "id": "da1a1f23bf9429c5",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Volume Set",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "volume_set",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.kallen_bedroom_speaker"
-        ],
-        "data": "{\t    \"volume_level\": 0.3\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1050,
-        "y": 1000,
-        "wires": [
-            [
-                "6418c17768ed363d"
-            ]
-        ]
     },
     {
         "id": "6418c17768ed363d",
@@ -18794,7 +18768,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1240,
+        "x": 1060,
         "y": 1000,
         "wires": [
             []
@@ -18833,61 +18807,6 @@
         ]
     },
     {
-        "id": "ed138e629ed0809f",
-        "type": "delay",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "10",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 935,
-        "y": 1120,
-        "wires": [
-            [
-                "73b51e79d20c7982"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "73b51e79d20c7982",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Volume Set",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "volume_set",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.kallen_bedroom_speaker"
-        ],
-        "data": "{\t    \"volume_level\": 0.3\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1050,
-        "y": 1120,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "265b54394cc42f53",
         "type": "api-call-service",
         "z": "72f99805df043603",
@@ -18913,7 +18832,6 @@
         "y": 1120,
         "wires": [
             [
-                "ed138e629ed0809f",
                 "eb0e4c095dbe898e"
             ]
         ]
@@ -18982,8 +18900,8 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "",
-        "x": 1060,
-        "y": 1180,
+        "x": 1080,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -19023,7 +18941,7 @@
         "to": "",
         "reg": false,
         "x": 935,
-        "y": 1180,
+        "y": 1120,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -19216,7 +19134,8 @@
                 "10d9b30654ef759c"
             ],
             [
-                "6fb7131d5534350c"
+                "6fb7131d5534350c",
+                "af53020956a6acb5"
             ],
             [
                 "0a783dc1cb68b4bf"
@@ -19259,7 +19178,8 @@
         "wires": [
             [
                 "6fb7131d5534350c",
-                "f6e9317205ba7c78"
+                "f6e9317205ba7c78",
+                "af53020956a6acb5"
             ]
         ]
     },
@@ -19757,62 +19677,6 @@
         "outputLabels": [
             "Yes",
             "No"
-        ]
-    },
-    {
-        "id": "49eadd57e9728914",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Announce Bedtime",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "status_annc",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"who\":\"basement\",\t    \"call_time_for_bed\": 1\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 310,
-        "y": 1100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1ad455bccec8ab46",
-        "type": "inject",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 1100,
-        "wires": [
-            [
-                "49eadd57e9728914"
-            ]
         ]
     },
     {
@@ -21018,7 +20882,7 @@
         "to": "",
         "reg": false,
         "x": 935,
-        "y": 1240,
+        "y": 1180,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -21327,16 +21191,10 @@
         "entityConfig": "7cf78f522e860d42",
         "outputProperties": [
             {
-                "property": "payload",
+                "property": "switch",
                 "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
+                "value": "on",
+                "valueType": "str"
             },
             {
                 "property": "topic",
@@ -21538,6 +21396,140 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "e87486569f962cb3",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Night Volume",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.kallen_bedroom_google_speaker_night_volume",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "volume",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 190,
+        "y": 1080,
+        "wires": [
+            [
+                "274d63b8df8f2dd0"
+            ]
+        ]
+    },
+    {
+        "id": "274d63b8df8f2dd0",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Set Volume",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "media_player",
+        "service": "volume_set",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "media_player.kallen_bedroom_speaker"
+        ],
+        "data": "{\t    \"volume_level\": msg.volume\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 370,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af53020956a6acb5",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Night Volume",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.master_bedroom_echo_dot_night_volume",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "volume",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1010,
+        "y": 260,
+        "wires": [
+            [
+                "2c74eec67f3ff8d8"
+            ]
+        ]
+    },
+    {
+        "id": "2c74eec67f3ff8d8",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Set Volume",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "media_player",
+        "service": "volume_set",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "media_player.master_bedroom_echo_dot"
+        ],
+        "data": "{\t    \"volume_level\": msg.volume\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1230,
+        "y": 260,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "105271e0816c6a52",
@@ -22847,6 +22839,35 @@
         "outputProperties": [],
         "queue": "none",
         "x": 330,
+        "y": 680,
+        "wires": [
+            [
+                "ad2442ca534bfcfd"
+            ]
+        ]
+    },
+    {
+        "id": "ad2442ca534bfcfd",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Sleep Switch",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.master_bedroom_sleeping"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 530,
         "y": 680,
         "wires": [
             []
