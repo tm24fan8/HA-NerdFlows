@@ -646,7 +646,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -684,7 +686,10 @@
             "a52d249ed43537c7",
             "95812f5094f32d6b",
             "e87486569f962cb3",
-            "274d63b8df8f2dd0"
+            "274d63b8df8f2dd0",
+            "90329b0683f81550",
+            "43ea4107912bf0f2",
+            "11993e61de14f592"
         ],
         "x": 14,
         "y": 719,
@@ -842,7 +847,9 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -864,7 +871,9 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 219
+        "y": 219,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1105,7 +1114,9 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 499
+        "y": 499,
+        "w": 1252,
+        "h": 362
     },
     {
         "id": "eeafd13be593ae69",
@@ -1180,7 +1191,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "8aee4d340a136bac",
@@ -1202,7 +1215,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1365,7 +1380,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839
+        "y": 839,
+        "w": 572,
+        "h": 82
     },
     {
         "id": "0c68af85cc3c8f07",
@@ -1380,9 +1397,7 @@
             "8808e39fba362206"
         ],
         "x": 1134,
-        "y": 671.5,
-        "w": 422,
-        "h": 97
+        "y": 671.5
     },
     {
         "id": "19b0e082db0643ac",
@@ -18713,7 +18728,7 @@
         "wires": [
             [
                 "99e74844b8fd9d1a",
-                "cc1af8532e3dc820"
+                "90329b0683f81550"
             ]
         ]
     },
@@ -18830,7 +18845,7 @@
         "y": 1120,
         "wires": [
             [
-                "eb0e4c095dbe898e"
+                "43ea4107912bf0f2"
             ]
         ]
     },
@@ -18898,7 +18913,7 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "",
-        "x": 1080,
+        "x": 1180,
         "y": 1120,
         "wires": [
             []
@@ -18911,13 +18926,6 @@
         "g": "39a7ac02f2727f1d",
         "name": "",
         "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Collin's fan is now on. Stay cool!",
-                "tot": "str"
-            },
             {
                 "t": "set",
                 "p": "topic",
@@ -18938,7 +18946,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 935,
+        "x": 1035,
         "y": 1120,
         "wires": [
             [
@@ -18956,13 +18964,6 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "No fan in Collin's room tonight, too cold outside! Brrrr!",
-                "tot": "str"
-            },
-            {
-                "t": "set",
                 "p": "topic",
                 "pt": "msg",
                 "to": "everywhere",
@@ -18981,7 +18982,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 935,
+        "x": 1035,
         "y": 1060,
         "wires": [
             [
@@ -20841,7 +20842,7 @@
         "y": 1180,
         "wires": [
             [
-                "59d83dd7c5adba1f"
+                "11993e61de14f592"
             ]
         ]
     },
@@ -20852,13 +20853,6 @@
         "g": "39a7ac02f2727f1d",
         "name": "",
         "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Lights are now on in Collin's bedroom. Other actions skipped.",
-                "tot": "str"
-            },
             {
                 "t": "set",
                 "p": "topic",
@@ -20879,7 +20873,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 935,
+        "x": 1035,
         "y": 1180,
         "wires": [
             [
@@ -21528,6 +21522,69 @@
         "y": 260,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "90329b0683f81550",
+        "type": "api-render-template",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Random Line",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{{ [\n    \"No fan in Collin's room tonight. Too cold outside. Brr. Enjoy your white noise.\",\n    \"It is a little too cold for a fan tonight. I will play white noise for Collin\",\n    \"Collin will not need any help staying cool tonight. I will play white noise instead.\",\n    \"My sources are telling me that it is not fan weather tonight. White noise it is.\"\n] | random }} Goodnight!",
+        "resultsLocation": "payload",
+        "resultsLocationType": "msg",
+        "templateLocation": "template",
+        "templateLocationType": "msg",
+        "x": 930,
+        "y": 1060,
+        "wires": [
+            [
+                "cc1af8532e3dc820"
+            ]
+        ]
+    },
+    {
+        "id": "43ea4107912bf0f2",
+        "type": "api-render-template",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Random Line",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{{ [\n    \"Collin's fan is now on. Stay cool!\",\n    \"It is rather warm outside, so I am turning on Collin's fan.\",\n    \"To prevent an ocean of sweat from drowning us all, I have enabled Collin's fan.\",\n    \"My sensors indicate that for optimal comfort, a cooling device is needed for Collin tonight.\",\n    \"I am a fan of Collin. So I have turned on a fan for Collin.\"\n] | random }} Goodnight!",
+        "resultsLocation": "payload",
+        "resultsLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
+        "x": 930,
+        "y": 1120,
+        "wires": [
+            [
+                "eb0e4c095dbe898e"
+            ]
+        ]
+    },
+    {
+        "id": "11993e61de14f592",
+        "type": "api-render-template",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Random Line",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{{ [\n    \"Lights are now on in Collin's bedroom. Other actions skipped.\",\n    \"It seems as though I do not have any requests for Collin's room tonight. Lights on.\",\n    \"Neither Collin's fan nor white noise will be active tonight. Only his lights.\",\n    \"Collin, your bedroom lights are on. This is all I was instructed to do tonight.\"\n] | random }} Goodnight!",
+        "resultsLocation": "payload",
+        "resultsLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
+        "x": 930,
+        "y": 1180,
+        "wires": [
+            [
+                "59d83dd7c5adba1f"
+            ]
         ]
     },
     {
