@@ -645,9 +645,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -691,7 +689,9 @@
             "11993e61de14f592"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1272,
+        "h": 502
     },
     {
         "id": "e065b1ed4938b477",
@@ -784,7 +784,9 @@
             "1eb13d819ba7e226"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2722,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1144,9 +1146,7 @@
             "8c29a2e1a06c5524"
         ],
         "x": 54,
-        "y": 19,
-        "w": 2152,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1201,9 +1201,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539,
-        "w": 612,
-        "h": 202
+        "y": 539
     },
     {
         "id": "550e5b2d99316b12",
@@ -1380,9 +1378,7 @@
             "8808e39fba362206"
         ],
         "x": 1134,
-        "y": 671.5,
-        "w": 422,
-        "h": 97
+        "y": 671.5
     },
     {
         "id": "19b0e082db0643ac",
@@ -9209,11 +9205,12 @@
             }
         ],
         "x": 180,
-        "y": 680,
+        "y": 720,
         "wires": [
             [
                 "5193627a30d1b32d",
-                "77bb530373808a86"
+                "77bb530373808a86",
+                "8a450e797b413418"
             ],
             [
                 "fb1afc4c2078ca29"
@@ -9242,7 +9239,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 420,
-        "y": 660,
+        "y": 700,
         "wires": [
             [
                 "8e081e76e5f19ead"
@@ -9271,7 +9268,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 420,
-        "y": 720,
+        "y": 760,
         "wires": [
             []
         ]
@@ -9289,7 +9286,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"tony\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Tina has arrived at home!\",\t    \"data\": {\t        \"url\": \"/lovelace/mobile-devices\"\t    }\t}",
+        "data": "{\t    \"type\":\"normal\",\t    \"who\":\"tony\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Tina has arrived at home!\",\t    \"sound\":\"US-EN-Morgan-Freeman-Wife-Is-Arriving.wav\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -9365,7 +9362,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "\t{\t    \"who\":\"tina\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Tony has arrived at home!\",\t    \"data\": {\t        \"url\": \"/lovelace/mobile-devices\"\t    }\t}",
+        "data": "\t{\t    \"type\":\"normal\"\t    \"who\":\"tina\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Tony has arrived at home!\",\t    \"sound\":\"US-EN-Alexa-Husband-Is-Arriving.wav\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -9427,7 +9424,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"kallen\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Tony has arrived at home!\",\t    \"data\": {\t        \"url\": \"/lovelace/mobile-devices\"\t    }\t}",
+        "data": "{\t    \"type\":\"normal\",\t    \"who\":\"kallen\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Tony has arrived at home!\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -9452,7 +9449,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"kallen\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Christina has arrived at home!\",\t    \"data\": {\t        \"url\": \"/lovelace/mobile-devices\"\t    }\t}",
+        "data": "{\t    \"type\":\"normal\",\t    \"who\":\"kallen\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Christina has arrived at home!\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -9736,7 +9733,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 190,
-        "y": 740,
+        "y": 780,
         "wires": [
             [
                 "5193627a30d1b32d"
@@ -10244,7 +10241,7 @@
             }
         ],
         "x": 180,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "d5a9248680297b56"
@@ -10280,7 +10277,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 450,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "66b7ec9a7e332cca"
@@ -10309,7 +10306,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 450,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "bebba6e7a61461b8"
@@ -10378,7 +10375,7 @@
             }
         ],
         "x": 190,
-        "y": 800,
+        "y": 840,
         "wires": [
             [
                 "331ed2d217025fd1"
@@ -10425,7 +10422,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 190,
-        "y": 860,
+        "y": 900,
         "wires": [
             [
                 "331ed2d217025fd1"
@@ -10457,7 +10454,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 460,
-        "y": 800,
+        "y": 840,
         "wires": [
             [
                 "63dc161e193d33c5"
@@ -10486,7 +10483,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 470,
-        "y": 860,
+        "y": 900,
         "wires": [
             [
                 "84a56bf51e79fd4d"
@@ -10555,7 +10552,7 @@
             }
         ],
         "x": 180,
-        "y": 920,
+        "y": 960,
         "wires": [
             [
                 "a999c33047fc3b61"
@@ -10602,7 +10599,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 190,
-        "y": 980,
+        "y": 1020,
         "wires": [
             [
                 "a999c33047fc3b61"
@@ -10634,7 +10631,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 460,
-        "y": 920,
+        "y": 960,
         "wires": [
             [
                 "bf5f6c5af1c02315"
@@ -10663,7 +10660,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 460,
-        "y": 980,
+        "y": 1020,
         "wires": [
             [
                 "dafcce5a61b19f8b"
@@ -10707,7 +10704,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 190,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "d5a9248680297b56"
@@ -10940,7 +10937,7 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 620,
-        "y": 660,
+        "y": 700,
         "wires": []
     },
     {
@@ -10958,7 +10955,7 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 620,
-        "y": 720,
+        "y": 760,
         "wires": []
     },
     {
@@ -10976,7 +10973,7 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 680,
-        "y": 800,
+        "y": 840,
         "wires": []
     },
     {
@@ -10994,7 +10991,7 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 680,
-        "y": 860,
+        "y": 900,
         "wires": []
     },
     {
@@ -11012,7 +11009,7 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 680,
-        "y": 920,
+        "y": 960,
         "wires": []
     },
     {
@@ -11030,7 +11027,7 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 680,
-        "y": 980,
+        "y": 1020,
         "wires": []
     },
     {
@@ -11048,7 +11045,7 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 680,
-        "y": 1040,
+        "y": 1080,
         "wires": []
     },
     {
@@ -11066,8 +11063,33 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 680,
-        "y": 1100,
+        "y": 1140,
         "wires": []
+    },
+    {
+        "id": "8a450e797b413418",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "Notify Parents",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"type\":\"normal\",\t    \"who\":\"parents\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Kallen has arrived at home!\",\t    \"sound\":\"US-EN-Morgan-Freeman-Son-Is-Arriving.wav\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 400,
+        "y": 640,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "d95d9964546768a5",
