@@ -689,9 +689,7 @@
             "11993e61de14f592"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1272,
-        "h": 502
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -784,9 +782,7 @@
             "1eb13d819ba7e226"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2722,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -10131,7 +10127,9 @@
         "x": 1100,
         "y": 280,
         "wires": [
-            []
+            [
+                "7fbab2c7cb7ecc92"
+            ]
         ]
     },
     {
@@ -11087,6 +11085,73 @@
         "queue": "none",
         "x": 400,
         "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7fbab2c7cb7ecc92",
+        "type": "api-current-state",
+        "z": "3abb5ae57afb4761",
+        "name": "Give Me Darkness?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.give_me_darkness",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "givemedarkness",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1225,
+        "y": 280,
+        "wires": [
+            [
+                "5e72a180d8f0232d"
+            ],
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "5e72a180d8f0232d",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "Living Room Lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.living_room_lights"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1370,
+        "y": 280,
         "wires": [
             []
         ]
