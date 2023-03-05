@@ -246,8 +246,8 @@
         ],
         "out": [
             {
-                "x": 1220,
-                "y": 220,
+                "x": 820,
+                "y": 160,
                 "wires": [
                     {
                         "id": "98bf66889d4287db",
@@ -1142,9 +1142,7 @@
             "c7a8df4ebeb3b5c5"
         ],
         "x": 54,
-        "y": 19,
-        "w": 2092,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1529,18 +1527,6 @@
         "wires": [
             [
                 "51d86d6064f084d2"
-            ]
-        ]
-    },
-    {
-        "id": "0dd0e5b7bace6c62",
-        "type": "junction",
-        "z": "6429099c4571dd6b",
-        "x": 1140,
-        "y": 140,
-        "wires": [
-            [
-                "98bf66889d4287db"
             ]
         ]
     },
@@ -3018,14 +3004,14 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\": msg.topic,\t    \"message\": msg.payload,\t    \"voice\": msg.voice\t}",
+        "data": "{\t    \"who\": msg.topic,\t    \"message\": msg.payload,\t    \"voice\": msg.voice,\t    \"type\": msg.type\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1080,
-        "y": 220,
+        "x": 680,
+        "y": 160,
         "wires": [
             []
         ]
@@ -3045,183 +3031,26 @@
         "y": 160,
         "wires": [
             [
-                "c8bf676e64a58c64"
+                "1d325524a8e8d1c6"
             ]
         ]
     },
     {
-        "id": "c8bf676e64a58c64",
-        "type": "api-current-state",
+        "id": "1d325524a8e8d1c6",
+        "type": "function",
         "z": "6429099c4571dd6b",
-        "name": "Is stream live?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.studio_quiet",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "streamlive",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 540,
+        "name": "Type",
+        "func": "if (msg.type) {\n    msg.type = msg.type\n} else {\n    msg.type = \"normal\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
         "y": 160,
         "wires": [
             [
-                "42a0978dfdc73f5d"
-            ],
-            [
                 "98bf66889d4287db"
-            ]
-        ]
-    },
-    {
-        "id": "82403ec40dbe9330",
-        "type": "change",
-        "z": "6429099c4571dd6b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "living_room",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 990,
-        "y": 20,
-        "wires": [
-            [
-                "0dd0e5b7bace6c62"
-            ]
-        ]
-    },
-    {
-        "id": "42a0978dfdc73f5d",
-        "type": "switch",
-        "z": "6429099c4571dd6b",
-        "name": "Dest Switch",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "common",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "basement",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "everywhere",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 4,
-        "x": 770,
-        "y": 140,
-        "wires": [
-            [
-                "82403ec40dbe9330"
-            ],
-            [
-                "a793ddc6663c5b63"
-            ],
-            [
-                "055cd6fbc76af001"
-            ],
-            [
-                "98bf66889d4287db"
-            ]
-        ]
-    },
-    {
-        "id": "a793ddc6663c5b63",
-        "type": "change",
-        "z": "6429099c4571dd6b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "living_room",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "I cannot play notifications in the basement while the stream is live",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1000,
-        "y": 80,
-        "wires": [
-            [
-                "0dd0e5b7bace6c62"
-            ]
-        ]
-    },
-    {
-        "id": "055cd6fbc76af001",
-        "type": "change",
-        "z": "6429099c4571dd6b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "alexa_no_basement",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 990,
-        "y": 140,
-        "wires": [
-            [
-                "0dd0e5b7bace6c62"
             ]
         ]
     },
