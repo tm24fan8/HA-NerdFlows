@@ -1374,7 +1374,9 @@
             "8808e39fba362206"
         ],
         "x": 1134,
-        "y": 671.5
+        "y": 671.5,
+        "w": 422,
+        "h": 97
     },
     {
         "id": "19b0e082db0643ac",
@@ -8736,7 +8738,7 @@
         "type": "switch",
         "z": "e44b1e7a8ef7ae1d",
         "name": "",
-        "property": "payload",
+        "property": "weather",
         "propertyType": "msg",
         "rules": [
             {
