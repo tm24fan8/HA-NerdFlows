@@ -645,9 +645,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -1361,9 +1359,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839,
-        "w": 572,
-        "h": 82
+        "y": 839
     },
     {
         "id": "0c68af85cc3c8f07",
@@ -25311,7 +25307,7 @@
         "name": "",
         "server": "9e87348d.9c1c48",
         "version": 0,
-        "template": "  {%- macro getReport() -%}\n\n      {{ states('sensor.current_conditions_detail') }}\n      {{ states('sensor.tomorrow_forecast_detail') }}\n      {{ states('sensor.clothing_forecast_detail') }}\n\n      {% if states('sensor.weatheralerts_active_alerts') > '0' %}\n        Currently there are weather alerts active. The total number of alerts is {{ states('sensor.weatheralerts_active_alerts') }}. They are as follows.\n          {% if is_state('sensor.weatheralerts_alert_1','on') %}\n            {{ state_attr('sensor.weatheralerts_alert_1','alert_event') }}\n          {% endif %}\n          {% if is_state('sensor.weatheralerts_alert_2','on') %}\n            {{ state_attr('sensor.weatheralerts_alert_2','alert_event') }}\n          {% endif %}\n          {% if is_state('sensor.weatheralerts_alert_3','on') %}\n            {{ state_attr('sensor.weatheralerts_alert_3','alert_event') }}\n          {% endif %}\n          {% if is_state('sensor.weatheralerts_alert_4','on') %}\n            {{ state_attr('sensor.weatheralerts_alert_4','alert_event') }}\n          {% endif %}\n          {% if is_state('sensor.weatheralerts_alert_5','on') %}\n            {{ state_attr('sensor.weatheralerts_alert_5','alert_event') }}\n          {% endif %}\n      {% endif %}\n\n  {%- endmacro -%}\n\n\n  {# a macro that removes all newline characters, empty spaces, and returns formatted text  #}\n    {%- macro cleanup(data) -%}\n      {%- for item in data.split(\"\\n\")  if item | trim != \"\" -%}\n        {{ item | trim }} {% endfor -%}\n  {%- endmacro -%}\n\n  {# a macro to call all macros :)  #}\n    {%- macro mother_of_all_macros() -%}\n      {{ getReport() }}\n    {%- endmacro -%}\n    \n    {# Call the macro  #}\n    {{- cleanup(mother_of_all_macros()) -}}",
+        "template": "{%- macro getReport() -%}\n\n  {{ states('sensor.current_conditions_detail') }}\n  {{ states('sensor.tomorrow_forecast_detail') }}\n  {{ states('sensor.clothing_forecast_detail') }}\n\n  {% if states('sensor.weatheralerts_active_alerts') > '0' %}\n    Currently there are weather alerts active. The total number of alerts is {{ states('sensor.weather_alerts_active_corrected') }}. They are as follows.\n      {{ states('sensor.weather_alert_string') }}.\n  {% endif %}\n\n{%- endmacro -%}\n\n\n{# a macro that removes all newline characters, empty spaces, and returns formatted text  #}\n{%- macro cleanup(data) -%}\n  {%- for item in data.split(\"\\n\")  if item | trim != \"\" -%}\n    {{ item | trim }} {% endfor -%}\n{%- endmacro -%}\n\n{# a macro to call all macros :)  #}\n{%- macro mother_of_all_macros() -%}\n  {{ getReport() }}\n{%- endmacro -%}\n    \n{# Call the macro  #}\n{{- cleanup(mother_of_all_macros()) -}}",
         "resultsLocation": "payload",
         "resultsLocationType": "msg",
         "templateLocation": "template",
@@ -25320,7 +25316,7 @@
         "y": 180,
         "wires": [
             [
-                "4eda62ff7310026d"
+                "6b5d3e550ad76528"
             ]
         ]
     },
@@ -25350,25 +25346,6 @@
         ]
     },
     {
-        "id": "4eda62ff7310026d",
-        "type": "function",
-        "z": "ebd5561c4f077718",
-        "name": "",
-        "func": "str = msg.payload\nmsg.payload = str.replaceAll(\"possible.\",\"possible. \")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 440,
-        "y": 180,
-        "wires": [
-            [
-                "6b5d3e550ad76528"
-            ]
-        ]
-    },
-    {
         "id": "6b5d3e550ad76528",
         "type": "file",
         "z": "ebd5561c4f077718",
@@ -25379,40 +25356,11 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 760,
+        "x": 520,
         "y": 180,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "99567f8bca08ccd9",
-        "type": "api-render-template",
-        "z": "ebd5561c4f077718",
-        "d": true,
-        "name": "",
-        "server": "9e87348d.9c1c48",
-        "version": 0,
-        "template": "{{ states('sensor.current_conditions_detail') }} \n{{ states('sensor.tomorrow_forecast_detail') }} \n{{ states('sensor.clothing_forecast_detail') }}\n{% if states('sensor.weatheralerts_active_alerts') > '0' %}\n  \"Currently there are weather alerts active. The total number of alerts is {{ states('sensor.weatheralerts_active_alerts') }}. They are as follows. \"\n    {% if is_state('sensor.weatheralerts_alert_1','on') %}\n      \"{{ state_attr('sensor.weatheralerts_alert_1','alert_event') }}\"\n    {% endif %}\n    {% if is_state('sensor.weatheralerts_alert_2','on') %}\n      \"{{ state_attr('sensor.weatheralerts_alert_2','alert_event') }}\"\n    {% endif %}\n    {% if is_state('sensor.weatheralerts_alert_3','on') %}\n      \"{{ state_attr('sensor.weatheralerts_alert_3','alert_event') }}\"\n    {% endif %}\n    {% if is_state('sensor.weatheralerts_alert_4','on') %}\n      \"{{ state_attr('sensor.weatheralerts_alert_4','alert_event') }}\"\n    {% endif %}\n    {% if is_state('sensor.weatheralerts_alert_5','on') %}\n      \"{{ state_attr('sensor.weatheralerts_alert_5','alert_event') }}\"\n    {% endif %}\n{% endif %}\n",
-        "resultsLocation": "payload",
-        "resultsLocationType": "msg",
-        "templateLocation": "template",
-        "templateLocationType": "msg",
-        "x": 280,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e5c8d1a91523ce32",
-        "type": "comment",
-        "z": "ebd5561c4f077718",
-        "name": "Old Template",
-        "info": "The node below is the template that was previously used.\nKeeping this in case we need to revert for any reason.",
-        "x": 290,
-        "y": 320,
-        "wires": []
     },
     {
         "id": "1031080bdf3b95bf",
