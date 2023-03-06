@@ -645,7 +645,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -1359,7 +1361,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839
+        "y": 839,
+        "w": 572,
+        "h": 82
     },
     {
         "id": "0c68af85cc3c8f07",
@@ -1374,9 +1378,7 @@
             "8808e39fba362206"
         ],
         "x": 1134,
-        "y": 671.5,
-        "w": 422,
-        "h": 97
+        "y": 671.5
     },
     {
         "id": "19b0e082db0643ac",
@@ -21624,7 +21626,6 @@
             [
                 "f30486c8e11db0e4",
                 "582a6e14b94a5a6d",
-                "57772c8b792e014d",
                 "028351e8c4e2faf5",
                 "f935318d262547d5",
                 "60ce44747cf3e507",
@@ -21838,33 +21839,6 @@
         ]
     },
     {
-        "id": "57772c8b792e014d",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Night Mode On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.night_mode"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 320,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "09c7a61f7a4c4d05",
         "type": "api-current-state",
         "z": "5c4ac37140a54ac9",
@@ -22051,7 +22025,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 650,
+        "x": 610,
         "y": 640,
         "wires": [
             []
@@ -22129,7 +22103,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 630,
+        "x": 590,
         "y": 580,
         "wires": [
             []
@@ -22664,7 +22638,9 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_boolean.goodnight"
+            "input_boolean.goodnight",
+            "input_boolean.master_bedroom_sleeping",
+            "input_boolean.night_mode"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -22673,36 +22649,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 330,
-        "y": 680,
-        "wires": [
-            [
-                "ad2442ca534bfcfd"
-            ]
-        ]
-    },
-    {
-        "id": "ad2442ca534bfcfd",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Sleep Switch",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.master_bedroom_sleeping"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 530,
-        "y": 680,
+        "y": 560,
         "wires": [
             []
         ]
