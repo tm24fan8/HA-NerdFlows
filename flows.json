@@ -686,12 +686,15 @@
             "274d63b8df8f2dd0",
             "90329b0683f81550",
             "43ea4107912bf0f2",
-            "11993e61de14f592"
+            "11993e61de14f592",
+            "308fce46bd959bce",
+            "4341325f7ca23f24",
+            "1c98de289e42377f"
         ],
         "x": 14,
         "y": 719,
-        "w": 1272,
-        "h": 502
+        "w": 1292,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -969,7 +972,9 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779
+        "y": 779,
+        "w": 1432,
+        "h": 462
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1014,7 +1019,9 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 832,
+        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -1363,9 +1370,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839,
-        "w": 572,
-        "h": 82
+        "y": 839
     },
     {
         "id": "0c68af85cc3c8f07",
@@ -18535,7 +18540,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 600,
-        "y": 1020,
+        "y": 1140,
         "wires": [
             [
                 "99e74844b8fd9d1a",
@@ -18561,8 +18566,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 935,
-        "y": 1000,
+        "x": 835,
+        "y": 1320,
         "wires": [
             [
                 "6418c17768ed363d"
@@ -18592,8 +18597,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1060,
-        "y": 1000,
+        "x": 960,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -18623,7 +18628,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 600,
-        "y": 1120,
+        "y": 1200,
         "wires": [
             [
                 "265b54394cc42f53"
@@ -18652,8 +18657,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 760,
-        "y": 1120,
+        "x": 780,
+        "y": 1200,
         "wires": [
             [
                 "43ea4107912bf0f2"
@@ -18695,7 +18700,7 @@
         "type": "api-call-service",
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
-        "name": "White Noise Off",
+        "name": "Booleans Off",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -18704,6 +18709,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
+            "input_boolean.kallen_early_fan",
             "input_boolean.white_noise_kallen_bedroom"
         ],
         "data": "",
@@ -18712,7 +18718,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1180,
+        "x": 1170,
         "y": 940,
         "wires": [
             []
@@ -18724,8 +18730,8 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "",
-        "x": 1180,
-        "y": 1120,
+        "x": 1200,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -18757,8 +18763,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1035,
-        "y": 1120,
+        "x": 1055,
+        "y": 1200,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -18793,8 +18799,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1035,
-        "y": 1060,
+        "x": 1055,
+        "y": 1140,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -20574,8 +20580,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 310,
-        "y": 1020,
+        "x": 330,
+        "y": 1100,
         "wires": [
             [
                 "c2bb11a2ba39b636"
@@ -20610,8 +20616,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 455,
-        "y": 1020,
+        "x": 475,
+        "y": 1100,
         "wires": [
             [
                 "6e10b32a122e8a2c"
@@ -20650,7 +20656,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 600,
-        "y": 1180,
+        "y": 1260,
         "wires": [
             [
                 "11993e61de14f592"
@@ -20684,8 +20690,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1035,
-        "y": 1180,
+        "x": 1055,
+        "y": 1260,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -21110,6 +21116,12 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "boolean",
+                "valueType": "str"
             }
         ],
         "x": 110,
@@ -21232,7 +21244,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 190,
+        "x": 950,
         "y": 1080,
         "wires": [
             [
@@ -21262,7 +21274,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 370,
+        "x": 1130,
         "y": 1080,
         "wires": [
             []
@@ -21348,8 +21360,8 @@
         "resultsLocationType": "msg",
         "templateLocation": "template",
         "templateLocationType": "msg",
-        "x": 930,
-        "y": 1060,
+        "x": 950,
+        "y": 1140,
         "wires": [
             [
                 "cc1af8532e3dc820"
@@ -21369,8 +21381,8 @@
         "resultsLocationType": "msg",
         "templateLocation": "",
         "templateLocationType": "none",
-        "x": 930,
-        "y": 1120,
+        "x": 950,
+        "y": 1200,
         "wires": [
             [
                 "eb0e4c095dbe898e"
@@ -21385,17 +21397,142 @@
         "name": "Random Line",
         "server": "9e87348d.9c1c48",
         "version": 0,
-        "template": "{{ [\n    \"Lights are now on in Collin's bedroom. Other actions skipped.\",\n    \"It seems as though I do not have any requests for Collin's room tonight. Lights on.\",\n    \"Neither Collin's fan nor white noise will be active tonight. Only his lights.\",\n    \"Collin, your bedroom lights are on. This is all I was instructed to do tonight.\"\n] | random }} Goodnight!",
+        "template": "{{ [\n    \"Lights are now on in Collin's bedroom.\",\n    \"Collin, your bedroom lights are now on.\"\n] | random }} Goodnight!",
         "resultsLocation": "payload",
         "resultsLocationType": "msg",
         "templateLocation": "",
         "templateLocationType": "none",
-        "x": 930,
-        "y": 1180,
+        "x": 950,
+        "y": 1260,
         "wires": [
             [
                 "59d83dd7c5adba1f"
             ]
+        ]
+    },
+    {
+        "id": "308fce46bd959bce",
+        "type": "ha-time",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Kallen Fan Time",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityId": "input_datetime.kallen_fan",
+        "property": "",
+        "offset": "0",
+        "offsetType": "num",
+        "offsetUnits": "minutes",
+        "randomOffset": false,
+        "repeatDaily": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "kallen-fan",
+                "valueType": "str"
+            }
+        ],
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true,
+        "debugenabled": false,
+        "x": 120,
+        "y": 1260,
+        "wires": [
+            [
+                "4341325f7ca23f24"
+            ]
+        ]
+    },
+    {
+        "id": "4341325f7ca23f24",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Scheduled Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "Fan",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_select.scheduled_climate_mode_kallen_fan",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "sched_mode",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 255,
+        "y": 1260,
+        "wires": [
+            [
+                "1c98de289e42377f"
+            ],
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "1c98de289e42377f",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Fan On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "fan",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "fan.kallen_bedroom_fan"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 360,
+        "y": 1260,
+        "wires": [
+            []
         ]
     },
     {
