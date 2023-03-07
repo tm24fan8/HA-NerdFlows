@@ -645,7 +645,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -692,9 +694,7 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1292,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -787,9 +787,7 @@
             "1eb13d819ba7e226"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2722,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -972,9 +970,7 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1432,
-        "h": 462
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1019,9 +1015,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1049,11 +1043,12 @@
             "3c83c0ab0aa96e3d",
             "1a7c87f9713e5349",
             "7b71cb1967ec5255",
-            "1e1891c23a6e7e64",
-            "2d5ec93a6ad16ce2"
+            "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1132,
+        "h": 382
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1208,7 +1203,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1231,7 +1228,9 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639
+        "y": 639,
+        "w": 1072,
+        "h": 202
     },
     {
         "id": "f519aff597ece351",
@@ -14053,7 +14052,7 @@
         "cycles": "8",
         "persist": "false",
         "power_on": "true",
-        "x": 1190,
+        "x": 990,
         "y": 520,
         "wires": []
     },
@@ -14163,7 +14162,7 @@
         "y": 520,
         "wires": [
             [
-                "2d5ec93a6ad16ce2"
+                "59af14a564176ce4"
             ],
             []
         ]
@@ -14186,7 +14185,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1135,
+        "x": 935,
         "y": 460,
         "wires": [
             [
@@ -14249,7 +14248,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1190,
+        "x": 990,
         "y": 580,
         "wires": [
             []
@@ -14340,7 +14339,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 980,
+        "x": 780,
         "y": 520,
         "wires": [
             [
@@ -14457,55 +14456,9 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1260,
+        "x": 1060,
         "y": 460,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2d5ec93a6ad16ce2",
-        "type": "api-current-state",
-        "z": "47f17992fab9b4f5",
-        "g": "208284848b13b85b",
-        "name": "Doorbell State",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.front_doorbell_ding_mqtt",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 780,
-        "y": 520,
-        "wires": [
-            [
-                "59af14a564176ce4"
-            ],
             []
         ]
     },
