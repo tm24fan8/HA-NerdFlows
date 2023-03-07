@@ -689,7 +689,9 @@
             "11993e61de14f592"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1272,
+        "h": 502
     },
     {
         "id": "e065b1ed4938b477",
@@ -782,7 +784,9 @@
             "1eb13d819ba7e226"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2722,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1359,7 +1363,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839
+        "y": 839,
+        "w": 572,
+        "h": 82
     },
     {
         "id": "0c68af85cc3c8f07",
@@ -21421,8 +21427,7 @@
             [
                 "c18d27a9438bfa08",
                 "ef0efdc23805d872",
-                "bad6373b442c58a1",
-                "2fb85204eb56f86b"
+                "bad6373b442c58a1"
             ]
         ]
     },
@@ -21566,11 +21571,12 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 490,
-        "y": 120,
+        "x": 510,
+        "y": 60,
         "wires": [
             [
-                "5c9c73b7adb72896"
+                "5c9c73b7adb72896",
+                "2fb85204eb56f86b"
             ]
         ]
     },
@@ -21983,8 +21989,8 @@
         "links": [
             "dc440dfc78c41b8a"
         ],
-        "x": 635,
-        "y": 120,
+        "x": 675,
+        "y": 60,
         "wires": []
     },
     {
@@ -22343,31 +22349,6 @@
         ]
     },
     {
-        "id": "2fb85204eb56f86b",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "TTS Briefing",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "morning_briefing",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 290,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "c18d27a9438bfa08",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
@@ -22386,8 +22367,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 300,
-        "y": 120,
+        "x": 320,
+        "y": 60,
         "wires": [
             [
                 "2854170262757e84"
@@ -22424,8 +22405,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 280,
-        "y": 180,
+        "x": 300,
+        "y": 120,
         "wires": [
             [
                 "54b8bca62d27e659"
@@ -22467,8 +22448,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 300,
-        "y": 240,
+        "x": 320,
+        "y": 180,
         "wires": [
             [
                 "54b8bca62d27e659"
@@ -22510,8 +22491,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 520,
-        "y": 200,
+        "x": 540,
+        "y": 180,
         "wires": [
             [
                 "708843ea29ee6626"
@@ -22542,8 +22523,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 720,
-        "y": 200,
+        "x": 740,
+        "y": 180,
         "wires": [
             [
                 "bb77b36dd4d9cc96"
@@ -22572,8 +22553,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 940,
-        "y": 200,
+        "x": 960,
+        "y": 180,
         "wires": [
             []
         ]
@@ -22646,6 +22627,31 @@
         "queue": "none",
         "x": 330,
         "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2fb85204eb56f86b",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "TTS Briefing",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "morning_briefing",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 730,
+        "y": 120,
         "wires": [
             []
         ]
