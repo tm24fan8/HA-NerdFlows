@@ -645,9 +645,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -694,7 +692,9 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1292,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -787,7 +787,9 @@
             "1eb13d819ba7e226"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2722,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1046,9 +1048,7 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1132,
-        "h": 382
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1203,9 +1203,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539,
-        "w": 612,
-        "h": 202
+        "y": 539
     },
     {
         "id": "550e5b2d99316b12",
@@ -1228,9 +1226,7 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639,
-        "w": 1072,
-        "h": 202
+        "y": 639
     },
     {
         "id": "f519aff597ece351",
@@ -18247,6 +18243,7 @@
         "id": "d5784e5baa80a105",
         "type": "ha-time",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Kallen Bedtime",
         "server": "9e87348d.9c1c48",
@@ -18315,6 +18312,7 @@
         "id": "9e1418c3e9595312",
         "type": "ha-time",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Kallen Wakeup",
         "server": "9e87348d.9c1c48",
@@ -18383,6 +18381,7 @@
         "id": "3166f71fdf62748a",
         "type": "api-current-state",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Kallen Overnight",
         "server": "9e87348d.9c1c48",
@@ -18435,6 +18434,7 @@
         "id": "4792e2d88f7d533f",
         "type": "switch",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "property": "switch",
@@ -18472,6 +18472,7 @@
         "id": "6e10b32a122e8a2c",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Lights On",
         "server": "9e87348d.9c1c48",
@@ -18505,6 +18506,7 @@
         "id": "99e74844b8fd9d1a",
         "type": "delay",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "pauseType": "delay",
@@ -18532,6 +18534,7 @@
         "id": "6418c17768ed363d",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "White Noise On",
         "server": "9e87348d.9c1c48",
@@ -18560,6 +18563,7 @@
         "id": "2f3666d288d77ad1",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Lights On",
         "server": "9e87348d.9c1c48",
@@ -18592,6 +18596,7 @@
         "id": "265b54394cc42f53",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Fan On",
         "server": "9e87348d.9c1c48",
@@ -18622,6 +18627,7 @@
         "id": "d132875202e85038",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Fan Off",
         "server": "9e87348d.9c1c48",
@@ -18652,6 +18658,7 @@
         "id": "a6f4af0aaabcc2c1",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Booleans Off",
         "server": "9e87348d.9c1c48",
@@ -18662,7 +18669,6 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_boolean.kallen_early_fan",
             "input_boolean.white_noise_kallen_bedroom"
         ],
         "data": "",
@@ -18681,6 +18687,7 @@
         "id": "b4dbbf788c5a30d2",
         "type": "subflow:6429099c4571dd6b",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "x": 1200,
@@ -18693,6 +18700,7 @@
         "id": "eb0e4c095dbe898e",
         "type": "change",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "rules": [
@@ -18729,6 +18737,7 @@
         "id": "cc1af8532e3dc820",
         "type": "change",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "rules": [
@@ -19201,6 +19210,7 @@
         "id": "39d187b7e17d80ab",
         "type": "api-current-state",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Vacation Mode",
         "server": "9e87348d.9c1c48",
@@ -20506,6 +20516,7 @@
         "id": "d823b8a033f30d40",
         "type": "api-current-state",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Scheduled Mode",
         "server": "9e87348d.9c1c48",
@@ -20545,6 +20556,7 @@
         "id": "c2bb11a2ba39b636",
         "type": "switch",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "property": "sched_mode",
@@ -20588,6 +20600,7 @@
         "id": "0a4f9c693fccd1f1",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Lights On",
         "server": "9e87348d.9c1c48",
@@ -20620,6 +20633,7 @@
         "id": "59d83dd7c5adba1f",
         "type": "change",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "rules": [
@@ -20877,6 +20891,7 @@
         "id": "57651381835f659c",
         "type": "api-current-state",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "School Today?",
         "server": "9e87348d.9c1c48",
@@ -20917,6 +20932,7 @@
         "id": "acb52adc50d34045",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Lights On",
         "server": "9e87348d.9c1c48",
@@ -20945,6 +20961,7 @@
         "id": "e0751f3bf2a2e610",
         "type": "ha-button",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Manual Bedtime",
         "version": 0,
@@ -21003,6 +21020,7 @@
         "id": "d6b56cb65c2ff140",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Toggle Boolean",
         "server": "9e87348d.9c1c48",
@@ -21031,6 +21049,7 @@
         "id": "e32aaeb51d3f2e95",
         "type": "server-state-changed",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Boolean State",
         "server": "9e87348d.9c1c48",
@@ -21089,6 +21108,7 @@
         "id": "a52d249ed43537c7",
         "type": "api-current-state",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Kallen Home?",
         "server": "9e87348d.9c1c48",
@@ -21141,6 +21161,7 @@
         "id": "95812f5094f32d6b",
         "type": "change",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "rules": [
@@ -21170,6 +21191,7 @@
         "id": "e87486569f962cb3",
         "type": "api-current-state",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Night Volume",
         "server": "9e87348d.9c1c48",
@@ -21209,6 +21231,7 @@
         "id": "274d63b8df8f2dd0",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Set Volume",
         "server": "9e87348d.9c1c48",
@@ -21304,6 +21327,7 @@
         "id": "90329b0683f81550",
         "type": "api-render-template",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Random Line",
         "server": "9e87348d.9c1c48",
@@ -21325,6 +21349,7 @@
         "id": "43ea4107912bf0f2",
         "type": "api-render-template",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Random Line",
         "server": "9e87348d.9c1c48",
@@ -21346,6 +21371,7 @@
         "id": "11993e61de14f592",
         "type": "api-render-template",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Random Line",
         "server": "9e87348d.9c1c48",
@@ -21367,6 +21393,7 @@
         "id": "308fce46bd959bce",
         "type": "ha-time",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Kallen Fan Time",
         "server": "9e87348d.9c1c48",
@@ -21423,6 +21450,7 @@
         "id": "4341325f7ca23f24",
         "type": "api-current-state",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Scheduled Mode",
         "server": "9e87348d.9c1c48",
@@ -21464,6 +21492,7 @@
         "id": "1c98de289e42377f",
         "type": "api-call-service",
         "z": "72f99805df043603",
+        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Fan On",
         "server": "9e87348d.9c1c48",
