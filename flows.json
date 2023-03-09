@@ -692,9 +692,7 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1292,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -787,9 +785,7 @@
             "1eb13d819ba7e226"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2722,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -1365,7 +1361,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839
+        "y": 839,
+        "w": 572,
+        "h": 82
     },
     {
         "id": "0c68af85cc3c8f07",
@@ -22636,7 +22634,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "",
+        "data": "{\t    \"silent\": 1\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -22763,7 +22761,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "",
+        "data": "{\t    \"who\":\"alexa_everywhere\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
