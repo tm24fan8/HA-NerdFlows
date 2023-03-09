@@ -1044,7 +1044,9 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1132,
+        "h": 382
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1222,7 +1224,9 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639
+        "y": 639,
+        "w": 1072,
+        "h": 202
     },
     {
         "id": "f519aff597ece351",
@@ -1252,7 +1256,9 @@
             "c8af362d48d5c0ad"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 622
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1266,10 +1272,15 @@
             "f5aff29df4e07a4a",
             "7107656a6cbecce7",
             "6bb57058f0a576e7",
-            "e97b782efaaf5976"
+            "e97b782efaaf5976",
+            "d8c62e34298105b4",
+            "900c251ff10a2f5b",
+            "2a0e3a76af7ab628"
         ],
         "x": 64,
-        "y": 699
+        "y": 699,
+        "w": 1022,
+        "h": 82
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1361,9 +1372,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839,
-        "w": 572,
-        "h": 82
+        "y": 839
     },
     {
         "id": "0c68af85cc3c8f07",
@@ -14663,7 +14672,7 @@
         "z": "47f17992fab9b4f5",
         "g": "550e5b2d99316b12",
         "name": "user conversion",
-        "func": "var userTrigger = msg.payload.context.user_id\n\nif (userTrigger === \"c3909d27048140729f002aaef0391775\") {\n    msg.user = \"ios_tony\"\n} else if (userTrigger === \"f387a983651a4321a7411ff8cf36f949\") {\n    msg.user = \"ios_tina\"\n} else if (userTrigger === \"879b4c04e32841b3ad1d2763a11b4e70\") {\n    msg.user = \"ios_kallen\"\n}\n\nreturn msg;",
+        "func": "var userTrigger = msg.payload.context.user_id\n\nif (userTrigger === \"c3909d27048140729f002aaef0391775\") {\n    msg.user = \"tony\"\n} else if (userTrigger === \"f387a983651a4321a7411ff8cf36f949\") {\n    msg.user = \"tina\"\n} else if (userTrigger === \"879b4c04e32841b3ad1d2763a11b4e70\") {\n    msg.user = \"kallen\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14687,12 +14696,12 @@
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "notify",
-        "service": "{{user}}",
+        "domain": "script",
+        "service": "text_notify",
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"title\":\"Basement On\",\t    \"message\": \"Should I turn on Kallen's computer?\",\t    \"data\": {\t        \"actions\": [\t            {\t                \"action\": \"KALLEN_PC_YES\",\t                \"title\": \"Yes\",\t                \"icon\": \"mdi:thumb-up\"\t            },\t            {\t                \"action\": \"KALLEN_PC_NO\",\t                \"title\": \"No\",\t                \"icon\": \"mdi:thumb-down\"\t            }\t        ]\t    }\t}",
+        "data": "{\t    \"title\":\"Basement On\",\t    \"message\": \"Should I turn on Kallen's computer?\",\t    \"tag\":\"kallen_PC\",\t    \"who\": msg.user,\t    \"type\":\"alert\",\t    \"actions\": [\t        {\t            \"action\": \"KALLEN_PC_YES\",\t            \"title\": \"Yes\",\t            \"icon\": \"mdi:thumb-up\"\t        },\t        {\t            \"action\": \"KALLEN_PC_NO\",\t            \"title\": \"No\",\t            \"icon\": \"mdi:thumb-down\"\t        }\t    ]\t\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -24214,7 +24223,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 475,
+        "x": 535,
         "y": 740,
         "wires": [
             [
@@ -24244,10 +24253,12 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 630,
+        "x": 680,
         "y": 740,
         "wires": [
-            []
+            [
+                "d8c62e34298105b4"
+            ]
         ]
     },
     {
@@ -24316,7 +24327,7 @@
         "y": 740,
         "wires": [
             [
-                "f5aff29df4e07a4a"
+                "2a0e3a76af7ab628"
             ]
         ],
         "l": false
@@ -24372,6 +24383,80 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "d8c62e34298105b4",
+        "type": "delay",
+        "z": "bb961e59e2ef86c9",
+        "g": "26f91eb2ef77450d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 815,
+        "y": 740,
+        "wires": [
+            [
+                "900c251ff10a2f5b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "900c251ff10a2f5b",
+        "type": "api-call-service",
+        "z": "bb961e59e2ef86c9",
+        "g": "26f91eb2ef77450d",
+        "name": "Clear Notification",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\": msg.user,\t    \"type\":\"alert\",\t    \"message\":\"clear_notification\",\t    \"tag\":\"kallen_PC\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 970,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2a0e3a76af7ab628",
+        "type": "function",
+        "z": "bb961e59e2ef86c9",
+        "g": "26f91eb2ef77450d",
+        "name": "user conversion",
+        "func": "var userTrigger = msg.payload.context.user_id\n\nif (userTrigger === \"c3909d27048140729f002aaef0391775\") {\n    msg.user = \"tony\"\n} else if (userTrigger === \"f387a983651a4321a7411ff8cf36f949\") {\n    msg.user = \"tina\"\n} else if (userTrigger === \"879b4c04e32841b3ad1d2763a11b4e70\") {\n    msg.user = \"kallen\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 465,
+        "y": 740,
+        "wires": [
+            [
+                "f5aff29df4e07a4a"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "a4c477269b22f766",
