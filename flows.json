@@ -1044,9 +1044,7 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1132,
-        "h": 382
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1224,9 +1222,7 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639,
-        "w": 1072,
-        "h": 202
+        "y": 639
     },
     {
         "id": "f519aff597ece351",
@@ -1256,9 +1252,7 @@
             "c8af362d48d5c0ad"
         ],
         "x": 54,
-        "y": 39,
-        "w": 852,
-        "h": 622
+        "y": 39
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1278,9 +1272,7 @@
             "2a0e3a76af7ab628"
         ],
         "x": 64,
-        "y": 699,
-        "w": 1022,
-        "h": 82
+        "y": 699
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1373,21 +1365,6 @@
         ],
         "x": 1094,
         "y": 839
-    },
-    {
-        "id": "0c68af85cc3c8f07",
-        "type": "group",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Old Weather Check",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "663856ad61059510",
-            "8808e39fba362206"
-        ],
-        "x": 1134,
-        "y": 671.5
     },
     {
         "id": "19b0e082db0643ac",
@@ -8582,128 +8559,6 @@
             [
                 "9d4ffc704e9ff81e"
             ]
-        ]
-    },
-    {
-        "id": "663856ad61059510",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "d": true,
-        "g": "0c68af85cc3c8f07",
-        "name": "Weather check",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "num",
-        "halt_if_compare": "is",
-        "entity_id": "weather.iron_nerd_weather_station",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1240,
-        "y": 720,
-        "wires": [
-            [
-                "8808e39fba362206"
-            ]
-        ]
-    },
-    {
-        "id": "8808e39fba362206",
-        "type": "switch",
-        "z": "e44b1e7a8ef7ae1d",
-        "d": true,
-        "g": "0c68af85cc3c8f07",
-        "name": "Is it nice out?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "sunny",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "clear-night",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 1460,
-        "y": 720,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "bd66a7b61fdbef47",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Cloud Cover Check",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "50",
-        "halt_if_type": "num",
-        "halt_if_compare": "lt",
-        "entity_id": "sensor.pirateweather_cloud_coverage",
-        "state_type": "num",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "cloudcover",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1410,
-        "y": 540,
-        "wires": [
-            [],
-            []
-        ],
-        "outputLabels": [
-            "< 50",
-            "> 50"
         ]
     },
     {
