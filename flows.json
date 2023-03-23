@@ -913,9 +913,7 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -933,9 +931,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1355,9 +1351,7 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "b708cb6d93f40dee",
@@ -29056,5 +29050,66 @@
         "x": 800,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "77ba0ad52b2a9e2e",
+        "type": "server-events",
+        "z": "d49b385d8b582b20",
+        "name": "Overwolf Events Dump",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "eventType": "overwolf_game_event",
+        "exposeToHomeAssistant": true,
+        "eventData": "",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Overwolf Events Dump"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:test-tube"
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "event_type": "",
+        "x": 160,
+        "y": 720,
+        "wires": [
+            [
+                "59892c31142ac295"
+            ]
+        ]
+    },
+    {
+        "id": "59892c31142ac295",
+        "type": "file",
+        "z": "d49b385d8b582b20",
+        "name": "Write to overwolf.txt",
+        "filename": "/config/files/overwolf.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 390,
+        "y": 720,
+        "wires": [
+            []
+        ]
     }
 ]
