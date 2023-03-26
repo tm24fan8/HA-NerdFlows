@@ -178,7 +178,7 @@
         ],
         "out": [
             {
-                "x": 620,
+                "x": 460,
                 "y": 80,
                 "wires": [
                     {
@@ -519,7 +519,7 @@
         ],
         "out": [
             {
-                "x": 640,
+                "x": 500,
                 "y": 80,
                 "wires": [
                     {
@@ -594,6 +594,40 @@
                 }
             ]
         }
+    },
+    {
+        "id": "b88bb63bb13eeb27",
+        "type": "subflow",
+        "name": "Alexa Location New (Entity ID)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "b05ef328b90665d5"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 500,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "c2a8a3f1f00bc4b7",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "icon": "node-red-contrib-alexa-remote2-applestrudel/alexa-remote-icon.png"
     },
     {
         "id": "eccca853a916b662",
@@ -821,7 +855,9 @@
             "420322f4757ddf6e"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 1052,
+        "h": 482
     },
     {
         "id": "477e752fcd2e2a19",
@@ -843,7 +879,9 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -865,7 +903,9 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 219
+        "y": 219,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -913,7 +953,9 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -931,7 +973,9 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 202
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1107,7 +1151,9 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 499
+        "y": 499,
+        "w": 1252,
+        "h": 362
     },
     {
         "id": "eeafd13be593ae69",
@@ -1181,7 +1227,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "8aee4d340a136bac",
@@ -1255,7 +1303,9 @@
             "c8af362d48d5c0ad"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 622
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1275,7 +1325,9 @@
             "2a0e3a76af7ab628"
         ],
         "x": 64,
-        "y": 699
+        "y": 699,
+        "w": 1022,
+        "h": 82
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1351,7 +1403,9 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39
+        "y": 39,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1367,7 +1421,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839
+        "y": 839,
+        "w": 572,
+        "h": 82
     },
     {
         "id": "19b0e082db0643ac",
@@ -2850,55 +2906,46 @@
         "debugEnabled": false
     },
     {
-        "id": "05e66e9e1092e6ea",
-        "type": "api-current-state",
-        "z": "a42343e035e3313c",
-        "name": "Where?",
+        "id": "503ba5fd53d97d51",
+        "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.alexa_audio",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
+        "deviceConfig": "",
+        "name": "Kallen Activities",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
             {
-                "property": "where",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
+                "property": "name",
+                "value": "Kallen Activities"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:timer"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
             }
         ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 340,
-        "y": 80,
-        "wires": [
-            [
-                "afead614fabc01bb"
-            ]
-        ]
+        "resend": false,
+        "debugEnabled": false
     },
     {
         "id": "afead614fabc01bb",
         "type": "function",
         "z": "a42343e035e3313c",
         "name": "",
-        "func": "if (msg.where === \"Basement Echo Dot\") {\n    msg.where = \"G090XG0894470SK6\"\n} else if (msg.where === \"Living Room Echo Dot\") {\n    msg.where = \"G6G1EV08101206J4\"\n} else if (msg.where === \"Master Bedroom Echo Dot\") {\n    msg.where = \"G6G0XG1212820GD9\"\n}\nreturn msg;",
+        "func": "const alexa = global.get('alexa_audio')\n\nif (alexa === \"Basement Echo Dot\") {\n    msg.where = \"G090XG0894470SK6\"\n} else if (alexa === \"Living Room Echo Dot\") {\n    msg.where = \"G6G1EV08101206J4\"\n} else if (alexa === \"Master Bedroom Echo Dot\") {\n    msg.where = \"G6G0XG1212820GD9\"\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 340,
         "y": 80,
         "wires": [
             []
@@ -2925,7 +2972,7 @@
         "y": 80,
         "wires": [
             [
-                "05e66e9e1092e6ea"
+                "afead614fabc01bb"
             ]
         ]
     },
@@ -4475,44 +4522,6 @@
         "y": 80,
         "wires": [
             [
-                "406ed95a336485b0"
-            ]
-        ]
-    },
-    {
-        "id": "406ed95a336485b0",
-        "type": "api-current-state",
-        "z": "05a2d9f89e72481f",
-        "name": "Who?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.alexa_audio",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "who",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 350,
-        "y": 80,
-        "wires": [
-            [
                 "8e803251d3e3c3ae"
             ]
         ]
@@ -4522,13 +4531,13 @@
         "type": "function",
         "z": "05a2d9f89e72481f",
         "name": "",
-        "func": "if (msg.who === \"Basement Echo Dot\") {\n    msg.who = \"basement\"\n} else if (msg.who === \"Living Room Echo Dot\") {\n    msg.who = \"living_room\"\n} else if (msg.who === \"Master Bedroom Echo Dot\") {\n    msg.who = \"master_bedroom\"\n}\nreturn msg;",
+        "func": "const alexa = global.get('alexa_audio')\n\nif (alexa === \"Basement Echo Dot\") {\n    msg.who = \"basement\"\n} else if (alexa === \"Living Room Echo Dot\") {\n    msg.who = \"living_room\"\n} else if (alexa === \"Master Bedroom Echo Dot\") {\n    msg.who = \"master_bedroom\"\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 360,
         "y": 80,
         "wires": [
             []
@@ -4705,6 +4714,48 @@
             [
                 "493106346f58ba03"
             ]
+        ]
+    },
+    {
+        "id": "b05ef328b90665d5",
+        "type": "delay",
+        "z": "b88bb63bb13eeb27",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "c2a8a3f1f00bc4b7"
+            ]
+        ]
+    },
+    {
+        "id": "c2a8a3f1f00bc4b7",
+        "type": "function",
+        "z": "b88bb63bb13eeb27",
+        "name": "",
+        "func": "const alexa = global.get('alexa_audio')\n\nif (alexa === \"Basement Echo Dot\") {\n    msg.who = \"media_player.basement_echo_dot\"\n} else if (alexa === \"Living Room Echo Dot\") {\n    msg.who = \"media_player.living_room_echo_dot\"\n} else if (alexa === \"Master Bedroom Echo Dot\") {\n    msg.who = \"media_player.master_bedroom_echo_dot\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 80,
+        "wires": [
+            []
         ]
     },
     {
@@ -21793,7 +21844,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 650,
+        "x": 490,
         "y": 800,
         "wires": []
     },
@@ -21816,7 +21867,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 510,
+        "x": 350,
         "y": 800,
         "wires": [
             [
@@ -21907,7 +21958,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
+        "x": 510,
         "y": 740,
         "wires": []
     },
@@ -21930,7 +21981,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 530,
+        "x": 370,
         "y": 740,
         "wires": [
             [
@@ -21943,26 +21994,28 @@
         "type": "subflow:05a2d9f89e72481f",
         "z": "5c4ac37140a54ac9",
         "name": "",
-        "x": 340,
+        "x": 255,
         "y": 740,
         "wires": [
             [
                 "3363b9392f425a55"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "1d121bd0f1f5d628",
         "type": "subflow:05a2d9f89e72481f",
         "z": "5c4ac37140a54ac9",
         "name": "",
-        "x": 320,
+        "x": 235,
         "y": 800,
         "wires": [
             [
                 "804c40c435c342fc"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "5c9c73b7adb72896",
@@ -22138,13 +22191,14 @@
         "type": "subflow:05a2d9f89e72481f",
         "z": "5c4ac37140a54ac9",
         "name": "",
-        "x": 360,
+        "x": 275,
         "y": 860,
         "wires": [
             [
                 "08eafe762d6146ee"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "08eafe762d6146ee",
@@ -22165,7 +22219,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 550,
+        "x": 390,
         "y": 860,
         "wires": [
             [
@@ -22186,7 +22240,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
+        "x": 530,
         "y": 860,
         "wires": []
     },
@@ -22638,6 +22692,530 @@
         "y": 120,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "8c4d01db6f6ef33e",
+        "type": "ha-button",
+        "z": "5c4ac37140a54ac9",
+        "name": "Kallen Activities",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "503ba5fd53d97d51",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "date"
+            }
+        ],
+        "x": 120,
+        "y": 940,
+        "wires": [
+            [
+                "88c56b0964f9a6db"
+            ]
+        ]
+    },
+    {
+        "id": "20ede2b52515bc63",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Ask Activity",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "activate_alexa_actionable_notification",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"text\":\"<voice name='Joanna'>What activity are we timing?</voice>\",\t    \"event_id\":\"actionable_notification_kallen_timer_activity\",\t    \"alexa_device\": msg.who\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 710,
+        "y": 940,
+        "wires": [
+            [
+                "38e168a79848fa19"
+            ]
+        ]
+    },
+    {
+        "id": "88c56b0964f9a6db",
+        "type": "subflow:b88bb63bb13eeb27",
+        "z": "5c4ac37140a54ac9",
+        "name": "",
+        "x": 275,
+        "y": 940,
+        "wires": [
+            [
+                "20ede2b52515bc63"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "38e168a79848fa19",
+        "type": "debug",
+        "z": "5c4ac37140a54ac9",
+        "name": "Activity",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "86cd67e28114a585",
+        "type": "server-events",
+        "z": "5c4ac37140a54ac9",
+        "name": "Activity Response",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "eventType": "alexa_actionable_notification",
+        "exposeToHomeAssistant": false,
+        "eventData": "{\"event_id\":\"actionable_notification_kallen_timer_activity\"}",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "event_type": "",
+        "x": 130,
+        "y": 1000,
+        "wires": [
+            [
+                "5926b0004a47dfd1"
+            ]
+        ]
+    },
+    {
+        "id": "5926b0004a47dfd1",
+        "type": "subflow:b88bb63bb13eeb27",
+        "z": "5c4ac37140a54ac9",
+        "name": "",
+        "x": 275,
+        "y": 1000,
+        "wires": [
+            [
+                "2aa8397f85a8ceed"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "50982205a91e63c5",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Ask Duration",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "activate_alexa_actionable_notification",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"text\":\"<voice name='Joanna'>How long would you like the timer set for?</voice>\",\t    \"event_id\":\"actionable_notification_kallen_timer_duration\",\t    \"alexa_device\": msg.who\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 710,
+        "y": 1000,
+        "wires": [
+            [
+                "254ffc8e8bd1d414"
+            ]
+        ]
+    },
+    {
+        "id": "254ffc8e8bd1d414",
+        "type": "debug",
+        "z": "5c4ac37140a54ac9",
+        "name": "Duration",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "c43b69d84deb44a4",
+        "type": "server-events",
+        "z": "5c4ac37140a54ac9",
+        "name": "Duration Response",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "eventType": "alexa_actionable_notification",
+        "exposeToHomeAssistant": false,
+        "eventData": "{\"event_id\":\"actionable_notification_kallen_timer_duration\"}",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "event_type": "",
+        "x": 130,
+        "y": 1060,
+        "wires": [
+            [
+                "6167d4da61990bfb"
+            ]
+        ]
+    },
+    {
+        "id": "65589264d77f668d",
+        "type": "debug",
+        "z": "5c4ac37140a54ac9",
+        "name": "Location",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "6167d4da61990bfb",
+        "type": "subflow:b88bb63bb13eeb27",
+        "z": "5c4ac37140a54ac9",
+        "name": "",
+        "x": 275,
+        "y": 1060,
+        "wires": [
+            [
+                "c83a4ca397473239"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "2aa8397f85a8ceed",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Set Activity",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.kallen_activities"
+        ],
+        "data": "{\t    \"option\": msg.payload.event.event_response\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 470,
+        "y": 1000,
+        "wires": [
+            [
+                "50982205a91e63c5"
+            ]
+        ]
+    },
+    {
+        "id": "9f1c60a822a2b550",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Set Duration",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_number",
+        "service": "set_value",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_number.kallen_activity_duration"
+        ],
+        "data": "{\t    \"value\": msg.duration\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 470,
+        "y": 1060,
+        "wires": [
+            [
+                "dff1ff1e18a1bc74"
+            ]
+        ]
+    },
+    {
+        "id": "c83a4ca397473239",
+        "type": "function",
+        "z": "5c4ac37140a54ac9",
+        "name": "Conversions",
+        "func": "msg.duration = (msg.payload.event.event_response / 60)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 345,
+        "y": 1060,
+        "wires": [
+            [
+                "9f1c60a822a2b550"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "dff1ff1e18a1bc74",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Ask Location",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "activate_alexa_actionable_notification",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"text\":\"<voice name='Joanna'>Which room would you like the timer to run in?</voice>\",\t    \"event_id\":\"actionable_notification_kallen_timer_location\",\t    \"alexa_device\": msg.who\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 710,
+        "y": 1060,
+        "wires": [
+            [
+                "65589264d77f668d"
+            ]
+        ]
+    },
+    {
+        "id": "9e3c9006ff125d9b",
+        "type": "server-events",
+        "z": "5c4ac37140a54ac9",
+        "name": "Location Response",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "eventType": "alexa_actionable_notification",
+        "exposeToHomeAssistant": false,
+        "eventData": "{\"event_id\":\"actionable_notification_kallen_timer_location\"}",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "event_type": "",
+        "x": 130,
+        "y": 1120,
+        "wires": [
+            [
+                "fda5f3b3ecc5f1a9"
+            ]
+        ]
+    },
+    {
+        "id": "fda5f3b3ecc5f1a9",
+        "type": "subflow:b88bb63bb13eeb27",
+        "z": "5c4ac37140a54ac9",
+        "name": "",
+        "x": 275,
+        "y": 1120,
+        "wires": [
+            [
+                "efd47cbc26ed2810"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "efd47cbc26ed2810",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Set Location",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.kallen_activity_room"
+        ],
+        "data": "{\t    \"option\": msg.payload.event.event_response\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 470,
+        "y": 1120,
+        "wires": [
+            [
+                "c2212b77414c61f3"
+            ]
+        ]
+    },
+    {
+        "id": "75e1b9f265ecb4e5",
+        "type": "debug",
+        "z": "5c4ac37140a54ac9",
+        "name": "End",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "c2212b77414c61f3",
+        "type": "delay",
+        "z": "5c4ac37140a54ac9",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 585,
+        "y": 1120,
+        "wires": [
+            [
+                "1383f8e6ebf8ad88"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "1383f8e6ebf8ad88",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Start Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "button",
+        "service": "press",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "button.kallen_timer_start"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 710,
+        "y": 1120,
+        "wires": [
+            [
+                "75e1b9f265ecb4e5"
+            ]
         ]
     },
     {
@@ -27854,6 +28432,137 @@
         "wires": []
     },
     {
+        "id": "3aba4c35b4dc9618",
+        "type": "server-state-changed",
+        "z": "3e4ba157b540d183",
+        "name": "Alexa Audio",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.alexa_audio",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 110,
+        "y": 680,
+        "wires": [
+            [
+                "b7b5febbd91169d0"
+            ]
+        ]
+    },
+    {
+        "id": "b7b5febbd91169d0",
+        "type": "function",
+        "z": "3e4ba157b540d183",
+        "name": "Store Alexa Audio Variable",
+        "func": "global.set('alexa_audio',msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41e81c6e9a506658",
+        "type": "api-current-state",
+        "z": "3e4ba157b540d183",
+        "name": "Alexa Audio",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.alexa_audio",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 290,
+        "y": 760,
+        "wires": [
+            [
+                "b7b5febbd91169d0"
+            ]
+        ]
+    },
+    {
+        "id": "2379aab1d51b1f37",
+        "type": "inject",
+        "z": "3e4ba157b540d183",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "120",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 760,
+        "wires": [
+            [
+                "41e81c6e9a506658"
+            ]
+        ]
+    },
+    {
         "id": "e038489eca14b1dd",
         "type": "discordMessage",
         "z": "d3dcbe534743b01d",
@@ -28754,6 +29463,7 @@
         "id": "e1e9f6fcdc3bb5b0",
         "type": "server-events",
         "z": "d49b385d8b582b20",
+        "d": true,
         "name": "",
         "server": "9e87348d.9c1c48",
         "version": 2,
@@ -28798,6 +29508,7 @@
         "id": "4b2ffb86973bb4be",
         "type": "debug",
         "z": "d49b385d8b582b20",
+        "d": true,
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -28809,236 +29520,6 @@
         "statusType": "auto",
         "x": 940,
         "y": 320,
-        "wires": []
-    },
-    {
-        "id": "37a6dae6087598a2",
-        "type": "function",
-        "z": "d49b385d8b582b20",
-        "name": "Phone Clear {}",
-        "func": "var tag = \"trash-day\"\nmsg.payload =\n{\n  \"data\": {\n    \"message\": \"clear_notification\",\n    \"data\": {\n      \"tag\": tag\n    }\n  }\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1000,
-        "y": 680,
-        "wires": [
-            [
-                "b232b793f5a2db25"
-            ]
-        ]
-    },
-    {
-        "id": "96960c7fa6844fed",
-        "type": "function",
-        "z": "d49b385d8b582b20",
-        "name": "Phone Notify {}",
-        "func": "var title = \"Trash day tomorrow!!!\"\nvar message = \"Put out the {{states.calendar.garbage.attributes.message | title }}!!\"\nvar color = \"blue\"\nvar tag = \"trash-day\"\nvar icon = \"mdi:delete-circle-outline\"\nvar group = \"Chores\"\nvar imp = \"high\"\nvar action = \"mark-bin-chore-done\"\nvar actiontitle = \"Done\"\nmsg.payload =\n{\n  \"data\": {\n    \"message\": message,\n    \"title\": title,\n    \"data\": {\n      \"actions\": [\n        {\n          \"action\": action,\n          \"title\": actiontitle\n        }\n      ],\n      \"persistent\": true,\n      \"color\": color,\n      \"importance\": imp,\n      \"tag\": tag,\n      \"notification_icon\": icon,\n      \"channel\": group,\n      \"group\": group\n    }\n  }\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1000,
-        "y": 640,
-        "wires": [
-            [
-                "b232b793f5a2db25"
-            ]
-        ]
-    },
-    {
-        "id": "c5da8c331c8cc0de",
-        "type": "server-events",
-        "z": "d49b385d8b582b20",
-        "name": "Notification Marked Done",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "eventType": "mobile_app_notification_action",
-        "exposeToHomeAssistant": false,
-        "eventData": "",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "waitForRunning": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            }
-        ],
-        "x": 730,
-        "y": 700,
-        "wires": [
-            [
-                "93aa1cbe91280dd5"
-            ]
-        ]
-    },
-    {
-        "id": "93aa1cbe91280dd5",
-        "type": "switch",
-        "z": "d49b385d8b582b20",
-        "name": "",
-        "property": "payload.event.action",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "mark-bin-chore-done",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 875,
-        "y": 700,
-        "wires": [
-            [
-                "37a6dae6087598a2",
-                "b84f59365bf804ce"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "b232b793f5a2db25",
-        "type": "api-call-service",
-        "z": "d49b385d8b582b20",
-        "name": "Push to Phone",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "notify",
-        "service": "mobile_app_chris_pixel_4_xl",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{}",
-        "dataType": "json",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1180,
-        "y": 660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "13f03d5ea1783af6",
-        "type": "server-state-changed",
-        "z": "d49b385d8b582b20",
-        "name": "Chore needs doing",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "script.activate_alexa_actionable_notification",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 750,
-        "y": 660,
-        "wires": [
-            [
-                "96960c7fa6844fed"
-            ],
-            [
-                "37a6dae6087598a2"
-            ]
-        ]
-    },
-    {
-        "id": "b84f59365bf804ce",
-        "type": "api-call-service",
-        "z": "d49b385d8b582b20",
-        "name": "Mark Chore Done",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.chore_conditional_put_out_bins"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1010,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2167dda9544af7b7",
-        "type": "comment",
-        "z": "d49b385d8b582b20",
-        "name": "iOS Actionable Notifications Example",
-        "info": "",
-        "x": 980,
-        "y": 580,
         "wires": []
     },
     {
@@ -29111,5 +29592,70 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "c2f2980d28b57e61",
+        "type": "inject",
+        "z": "d49b385d8b582b20",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 680,
+        "y": 420,
+        "wires": [
+            [
+                "36fb7b09d4a84184"
+            ]
+        ]
+    },
+    {
+        "id": "36fb7b09d4a84184",
+        "type": "function",
+        "z": "d49b385d8b582b20",
+        "name": "Store Alexa Audio Variable",
+        "func": "const alexa = global.get('alexa_audio');\n\nmsg.payload = alexa\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 420,
+        "wires": [
+            [
+                "a47427ab3e8ce48b"
+            ]
+        ]
+    },
+    {
+        "id": "a47427ab3e8ce48b",
+        "type": "debug",
+        "z": "d49b385d8b582b20",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 420,
+        "wires": []
     }
 ]
