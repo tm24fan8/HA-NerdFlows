@@ -685,7 +685,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -732,7 +734,9 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1292,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -825,7 +829,9 @@
             "1eb13d819ba7e226"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2722,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -838,7 +844,6 @@
         "nodes": [
             "4d724735025b0ed8",
             "6ec62f6cf4fcf994",
-            "ca8ea9d126cc13ae",
             "71bee01e93d372c4",
             "31ce8ad28dd41226",
             "20271b0662a4d5df",
@@ -849,19 +854,22 @@
             "d5c6b45df763e57e",
             "6f011420f6bb15a7",
             "d6e563414b1612f0",
-            "8bcf629a3ddd86b1",
             "d4b42e41189b6b3c",
             "4857e3af9d5250e3",
             "8ed3d0b6a1a6359f",
-            "b5c4c258c8ec7f99",
             "1bb64ed65666e9ca",
             "82dcd22b8e2adf7c",
             "74bb3d48dd17bef9",
             "3cd66ee80d7b2715",
-            "420322f4757ddf6e"
+            "420322f4757ddf6e",
+            "30a87624bbab1d74",
+            "6757f301f06e1483",
+            "486bca43ddc48fb8"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 1072,
+        "h": 482
     },
     {
         "id": "477e752fcd2e2a19",
@@ -883,9 +891,7 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39,
-        "w": 872,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -907,9 +913,7 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 219,
-        "w": 1012,
-        "h": 202
+        "y": 219
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1015,7 +1019,9 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779
+        "y": 779,
+        "w": 1432,
+        "h": 462
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1060,7 +1066,9 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 832,
+        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -1091,7 +1099,9 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1132,
+        "h": 382
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1151,9 +1161,7 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 499,
-        "w": 1252,
-        "h": 362
+        "y": 499
     },
     {
         "id": "eeafd13be593ae69",
@@ -1193,7 +1201,9 @@
             "c7a8df4ebeb3b5c5"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 2092,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1227,9 +1237,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1652,
-        "h": 382
+        "y": 39
     },
     {
         "id": "8aee4d340a136bac",
@@ -1250,7 +1258,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1273,7 +1283,9 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639
+        "y": 639,
+        "w": 1072,
+        "h": 202
     },
     {
         "id": "f519aff597ece351",
@@ -1415,9 +1427,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839,
-        "w": 632,
-        "h": 82
+        "y": 839
     },
     {
         "id": "a705cecb0997a43a",
@@ -1429,18 +1439,20 @@
         },
         "nodes": [
             "3aba4c35b4dc9618",
-            "b7b5febbd91169d0",
             "41e81c6e9a506658",
             "2379aab1d51b1f37",
             "e3bf8fabda3a0377",
-            "9bbe5f9258577611",
             "dcd71942bab4a11b",
             "66139388c1e59508",
             "c93ac8d2ddc907c0",
-            "fbf1f34ae9ec10a7"
+            "fbf1f34ae9ec10a7",
+            "391b739e5ad50419",
+            "1a278235669d49ac"
         ],
         "x": 34,
-        "y": 659
+        "y": 659,
+        "w": 952,
+        "h": 302
     },
     {
         "id": "19b0e082db0643ac",
@@ -27690,26 +27702,7 @@
         "y": 40,
         "wires": [
             [
-                "1c84bd4e8ca6566d"
-            ]
-        ]
-    },
-    {
-        "id": "1c84bd4e8ca6566d",
-        "type": "function",
-        "z": "3e4ba157b540d183",
-        "name": "Store Voice Variable",
-        "func": "global.set('jarvis_voice',msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 40,
-        "wires": [
-            [
-                "b49f0642ce0153c6"
+                "a75651492e779bfc"
             ]
         ]
     },
@@ -27787,27 +27780,7 @@
         "y": 300,
         "wires": [
             [
-                "ca8ea9d126cc13ae"
-            ]
-        ]
-    },
-    {
-        "id": "ca8ea9d126cc13ae",
-        "type": "function",
-        "z": "3e4ba157b540d183",
-        "g": "5c50443a84910fb7",
-        "name": "Store to Variable",
-        "func": "global.set('tinawork',msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 780,
-        "y": 300,
-        "wires": [
-            [
-                "74bb3d48dd17bef9"
+                "486bca43ddc48fb8"
             ]
         ]
     },
@@ -27833,7 +27806,7 @@
         "y": 360,
         "wires": [
             [
-                "ca8ea9d126cc13ae"
+                "486bca43ddc48fb8"
             ]
         ]
     },
@@ -28000,7 +27973,7 @@
         "y": 360,
         "wires": [
             [
-                "ca8ea9d126cc13ae"
+                "486bca43ddc48fb8"
             ]
         ]
     },
@@ -28095,7 +28068,7 @@
         "y": 100,
         "wires": [
             [
-                "1c84bd4e8ca6566d"
+                "a75651492e779bfc"
             ]
         ]
     },
@@ -28147,27 +28120,7 @@
         "y": 420,
         "wires": [
             [
-                "8bcf629a3ddd86b1"
-            ]
-        ]
-    },
-    {
-        "id": "8bcf629a3ddd86b1",
-        "type": "function",
-        "z": "3e4ba157b540d183",
-        "g": "5c50443a84910fb7",
-        "name": "Store to Variable",
-        "func": "global.set('holidaymode',msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 640,
-        "y": 420,
-        "wires": [
-            [
-                "3cd66ee80d7b2715"
+                "6757f301f06e1483"
             ]
         ]
     },
@@ -28232,7 +28185,7 @@
         "y": 480,
         "wires": [
             [
-                "8bcf629a3ddd86b1"
+                "6757f301f06e1483"
             ]
         ]
     },
@@ -28284,27 +28237,7 @@
         "y": 540,
         "wires": [
             [
-                "b5c4c258c8ec7f99"
-            ]
-        ]
-    },
-    {
-        "id": "b5c4c258c8ec7f99",
-        "type": "function",
-        "z": "3e4ba157b540d183",
-        "g": "5c50443a84910fb7",
-        "name": "Store to Variable",
-        "func": "global.set('currentholiday',msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 640,
-        "y": 540,
-        "wires": [
-            [
-                "420322f4757ddf6e"
+                "30a87624bbab1d74"
             ]
         ]
     },
@@ -28369,7 +28302,7 @@
         "y": 600,
         "wires": [
             [
-                "b5c4c258c8ec7f99"
+                "30a87624bbab1d74"
             ]
         ]
     },
@@ -28388,7 +28321,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 980,
+        "x": 1000,
         "y": 300,
         "wires": []
     },
@@ -28407,7 +28340,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 840,
+        "x": 900,
         "y": 420,
         "wires": []
     },
@@ -28426,7 +28359,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 840,
+        "x": 900,
         "y": 540,
         "wires": []
     },
@@ -28496,26 +28429,8 @@
         "y": 700,
         "wires": [
             [
-                "b7b5febbd91169d0"
+                "391b739e5ad50419"
             ]
-        ]
-    },
-    {
-        "id": "b7b5febbd91169d0",
-        "type": "function",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "Store Alexa Audio Variable",
-        "func": "global.set('alexa_audio',msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 700,
-        "wires": [
-            []
         ]
     },
     {
@@ -28553,7 +28468,7 @@
         "y": 780,
         "wires": [
             [
-                "b7b5febbd91169d0"
+                "391b739e5ad50419"
             ]
         ]
     },
@@ -28631,26 +28546,8 @@
         "y": 840,
         "wires": [
             [
-                "9bbe5f9258577611"
+                "1a278235669d49ac"
             ]
-        ]
-    },
-    {
-        "id": "9bbe5f9258577611",
-        "type": "function",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "Store Last Alexa Variable",
-        "func": "global.set('last_alexa',msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 590,
-        "y": 840,
-        "wires": [
-            []
         ]
     },
     {
@@ -28688,7 +28585,7 @@
         "y": 920,
         "wires": [
             [
-                "9bbe5f9258577611"
+                "1a278235669d49ac"
             ]
         ]
     },
@@ -28739,6 +28636,169 @@
         "x": 860,
         "y": 840,
         "wires": []
+    },
+    {
+        "id": "391b739e5ad50419",
+        "type": "change",
+        "z": "3e4ba157b540d183",
+        "g": "a705cecb0997a43a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "alexa_audio",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a278235669d49ac",
+        "type": "change",
+        "z": "3e4ba157b540d183",
+        "g": "a705cecb0997a43a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "last_alexa",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "30a87624bbab1d74",
+        "type": "change",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "currentholiday",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 540,
+        "wires": [
+            [
+                "420322f4757ddf6e"
+            ]
+        ]
+    },
+    {
+        "id": "6757f301f06e1483",
+        "type": "change",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "holidaymode",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 420,
+        "wires": [
+            [
+                "3cd66ee80d7b2715"
+            ]
+        ]
+    },
+    {
+        "id": "486bca43ddc48fb8",
+        "type": "change",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tinawork",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 300,
+        "wires": [
+            [
+                "74bb3d48dd17bef9"
+            ]
+        ]
+    },
+    {
+        "id": "a75651492e779bfc",
+        "type": "change",
+        "z": "3e4ba157b540d183",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "jarvis_voice",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 40,
+        "wires": [
+            [
+                "b49f0642ce0153c6"
+            ]
+        ]
     },
     {
         "id": "e038489eca14b1dd",
