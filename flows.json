@@ -237,18 +237,18 @@
         "category": "",
         "in": [
             {
-                "x": 40,
+                "x": 100,
                 "y": 160,
                 "wires": [
                     {
-                        "id": "7fa8765ef1373ee0"
+                        "id": "cee17a2c2fbb48ee"
                     }
                 ]
             }
         ],
         "out": [
             {
-                "x": 820,
+                "x": 560,
                 "y": 160,
                 "wires": [
                     {
@@ -685,9 +685,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -864,7 +862,9 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -886,7 +886,9 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 219
+        "y": 219,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1068,9 +1070,7 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1132,
-        "h": 382
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1129,7 +1129,9 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 499
+        "y": 499,
+        "w": 1252,
+        "h": 362
     },
     {
         "id": "eeafd13be593ae69",
@@ -1197,7 +1199,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "8aee4d340a136bac",
@@ -1209,7 +1213,6 @@
         },
         "nodes": [
             "5123a607588fa737",
-            "d3134b1002edbb93",
             "f84e6b5157e857cf",
             "b7d94cd0e420c650",
             "41a8d5ef20cf55d7",
@@ -1243,9 +1246,7 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639,
-        "w": 1072,
-        "h": 202
+        "y": 639
     },
     {
         "id": "f519aff597ece351",
@@ -1377,7 +1378,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839
+        "y": 839,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "a705cecb0997a43a",
@@ -2990,25 +2993,6 @@
         ]
     },
     {
-        "id": "7fa8765ef1373ee0",
-        "type": "function",
-        "z": "6429099c4571dd6b",
-        "name": "Name Conversion",
-        "func": "if (msg.topic === \"Living Room\") {\n    msg.topic = \"living_room\"\n} else if (msg.topic === \"Living Room Echo Dot\") {\n    msg.topic = \"living_room\"\n} else if (msg.topic === \"Basement\") {\n    msg.topic = \"basement\"\n} else if (msg.topic === \"Basement Echo Dot\") {\n    msg.topic = \"basement\"\n} else if (msg.topic === \"Kallen Bedroom\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (msg.topic === \"Kallen Bedroom Speaker\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (msg.topic === \"Emma Bedroom\") {\n    msg.topic = \"emma_bedroom\"\n} else if (msg.topic === \"Emma Bedroom Speaker\") {\n    msg.topic = \"emma_bedroom\"\n} else if (msg.topic === \"Kids Bedrooms\") {\n    msg.topic = \"kids_bedrooms\"\n} else if (msg.topic === \"All Bedrooms\") {\n    msg.topic = \"all_bedrooms\"\n} else if (msg.topic === \"Master Bedroom\") {\n    msg.topic = \"master_bedroom\"\n} else if (msg.topic === \"Master Bedroom Echo Dot\") {\n    msg.topic = \"master_bedroom\"\n} else if (msg.topic === \"Common Areas\") {\n    msg.topic = \"common\"\n} else if (msg.topic === \"Everywhere\") {\n    msg.topic = \"everywhere\"\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 190,
-        "y": 160,
-        "wires": [
-            [
-                "0dd8c543fc452334"
-            ]
-        ]
-    },
-    {
         "id": "98bf66889d4287db",
         "type": "api-call-service",
         "z": "6429099c4571dd6b",
@@ -3027,43 +3011,24 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 680,
+        "x": 420,
         "y": 160,
         "wires": [
             []
         ]
     },
     {
-        "id": "0dd8c543fc452334",
+        "id": "cee17a2c2fbb48ee",
         "type": "function",
         "z": "6429099c4571dd6b",
-        "name": "Voice",
-        "func": "if (msg.voice) {\n    msg.voice = msg.voice\n} else {\n    msg.voice = global.get('jarvis_voice')\n}\nreturn msg;",
+        "name": "Processing",
+        "func": "if (msg.topic === \"Living Room\") {\n    msg.topic = \"living_room\"\n} else if (msg.topic === \"Living Room Echo Dot\") {\n    msg.topic = \"living_room\"\n} else if (msg.topic === \"Basement\") {\n    msg.topic = \"basement\"\n} else if (msg.topic === \"Basement Echo Dot\") {\n    msg.topic = \"basement\"\n} else if (msg.topic === \"Basement Google\") {\n    msg.topic = \"basement_google\"\n} else if (msg.topic === \"basement_google\") {\n    msg.topic = \"basement_google\"\n} else if (msg.topic === \"Kallen Bedroom\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (msg.topic === \"Kallen Bedroom Speaker\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (msg.topic === \"Emma Bedroom\") {\n    msg.topic = \"emma_bedroom\"\n} else if (msg.topic === \"Emma Bedroom Speaker\") {\n    msg.topic = \"emma_bedroom\"\n} else if (msg.topic === \"Kids Bedrooms\") {\n    msg.topic = \"kids_bedrooms\"\n} else if (msg.topic === \"All Bedrooms\") {\n    msg.topic = \"all_bedrooms\"\n} else if (msg.topic === \"Master Bedroom\") {\n    msg.topic = \"master_bedroom\"\n} else if (msg.topic === \"Master Bedroom Echo Dot\") {\n    msg.topic = \"master_bedroom\"\n} else if (msg.topic === \"Common Areas\") {\n    msg.topic = \"common\"\n} else if (msg.topic === \"Everywhere\") {\n    msg.topic = \"everywhere\"\n}\n\nif (msg.voice) {\n    msg.voice = msg.voice\n} else {\n    msg.voice = global.get('jarvis_voice')\n}\n\nif (msg.type) {\n    msg.type = msg.type\n} else {\n    msg.type = \"normal\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 160,
-        "wires": [
-            [
-                "1d325524a8e8d1c6"
-            ]
-        ]
-    },
-    {
-        "id": "1d325524a8e8d1c6",
-        "type": "function",
-        "z": "6429099c4571dd6b",
-        "name": "Type",
-        "func": "if (msg.type) {\n    msg.type = msg.type\n} else {\n    msg.type = \"normal\"\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 510,
+        "x": 230,
         "y": 160,
         "wires": [
             [
@@ -10855,64 +10820,24 @@
         "wires": []
     },
     {
-        "id": "d3134b1002edbb93",
-        "type": "api-current-state",
-        "z": "eff21041cc941fef",
-        "g": "8aee4d340a136bac",
-        "name": "Delay",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_number.downstairs_bathroom_lights_off_delay",
-        "state_type": "num",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "duration",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 290,
-        "y": 640,
-        "wires": [
-            [
-                "f84e6b5157e857cf"
-            ]
-        ]
-    },
-    {
         "id": "f84e6b5157e857cf",
         "type": "function",
         "z": "eff21041cc941fef",
         "g": "8aee4d340a136bac",
-        "name": "Math",
-        "func": "msg.duration = msg.duration * 60\nreturn msg;",
+        "name": "Delay",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar duration = states['input_number.downstairs_bathroom_lights_off_delay'].state\nvar newDuration = duration * 60\n\nmsg.duration = newDuration\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 405,
+        "x": 290,
         "y": 640,
         "wires": [
             [
                 "b7d94cd0e420c650"
             ]
-        ],
-        "l": false
+        ]
     },
     {
         "id": "b7d94cd0e420c650",
@@ -11065,7 +10990,7 @@
                 "b281061a4b08d2eb"
             ],
             [
-                "d3134b1002edbb93"
+                "f84e6b5157e857cf"
             ]
         ],
         "outputLabels": [
