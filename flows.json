@@ -685,7 +685,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -826,21 +828,13 @@
             "a32c37ccf0102258",
             "d5c6b45df763e57e",
             "6f011420f6bb15a7",
-            "d6e563414b1612f0",
-            "d4b42e41189b6b3c",
-            "4857e3af9d5250e3",
-            "8ed3d0b6a1a6359f",
-            "1bb64ed65666e9ca",
-            "82dcd22b8e2adf7c",
             "74bb3d48dd17bef9",
-            "3cd66ee80d7b2715",
-            "420322f4757ddf6e",
-            "30a87624bbab1d74",
-            "6757f301f06e1483",
             "486bca43ddc48fb8"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 1072,
+        "h": 242
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1070,7 +1064,9 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1132,
+        "h": 382
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1165,7 +1161,9 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1492,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1246,7 +1244,9 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639
+        "y": 639,
+        "w": 1072,
+        "h": 202
     },
     {
         "id": "f519aff597ece351",
@@ -1403,7 +1403,9 @@
             "1a278235669d49ac"
         ],
         "x": 34,
-        "y": 659
+        "y": 419,
+        "w": 952,
+        "h": 302
     },
     {
         "id": "19b0e082db0643ac",
@@ -26133,246 +26135,6 @@
         ]
     },
     {
-        "id": "d6e563414b1612f0",
-        "type": "server-state-changed",
-        "z": "3e4ba157b540d183",
-        "d": true,
-        "g": "5c50443a84910fb7",
-        "name": "Holiday Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "input_boolean.holiday_mode",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 130,
-        "y": 420,
-        "wires": [
-            [
-                "6757f301f06e1483"
-            ]
-        ]
-    },
-    {
-        "id": "d4b42e41189b6b3c",
-        "type": "inject",
-        "z": "3e4ba157b540d183",
-        "d": true,
-        "g": "5c50443a84910fb7",
-        "name": "Set Holiday Mode on Reboot",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "120",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 480,
-        "wires": [
-            [
-                "4857e3af9d5250e3"
-            ]
-        ]
-    },
-    {
-        "id": "4857e3af9d5250e3",
-        "type": "api-current-state",
-        "z": "3e4ba157b540d183",
-        "d": true,
-        "g": "5c50443a84910fb7",
-        "name": "Holiday Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.holiday_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 440,
-        "y": 480,
-        "wires": [
-            [
-                "6757f301f06e1483"
-            ]
-        ]
-    },
-    {
-        "id": "8ed3d0b6a1a6359f",
-        "type": "server-state-changed",
-        "z": "3e4ba157b540d183",
-        "d": true,
-        "g": "5c50443a84910fb7",
-        "name": "Current Holiday",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "input_select.holiday_animation",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 140,
-        "y": 540,
-        "wires": [
-            [
-                "30a87624bbab1d74"
-            ]
-        ]
-    },
-    {
-        "id": "82dcd22b8e2adf7c",
-        "type": "inject",
-        "z": "3e4ba157b540d183",
-        "d": true,
-        "g": "5c50443a84910fb7",
-        "name": "Set Current Holiday on Reboot",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "120",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 210,
-        "y": 600,
-        "wires": [
-            [
-                "1bb64ed65666e9ca"
-            ]
-        ]
-    },
-    {
-        "id": "1bb64ed65666e9ca",
-        "type": "api-current-state",
-        "z": "3e4ba157b540d183",
-        "d": true,
-        "g": "5c50443a84910fb7",
-        "name": "Current Holiday",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.holiday_animation",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 460,
-        "y": 600,
-        "wires": [
-            [
-                "30a87624bbab1d74"
-            ]
-        ]
-    },
-    {
         "id": "74bb3d48dd17bef9",
         "type": "mqtt out",
         "z": "3e4ba157b540d183",
@@ -26389,46 +26151,6 @@
         "broker": "fd29421fc00140a8",
         "x": 1000,
         "y": 300,
-        "wires": []
-    },
-    {
-        "id": "3cd66ee80d7b2715",
-        "type": "mqtt out",
-        "z": "3e4ba157b540d183",
-        "d": true,
-        "g": "5c50443a84910fb7",
-        "name": "MQTT Publish",
-        "topic": "house/modes/holiday/state",
-        "qos": "2",
-        "retain": "true",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "fd29421fc00140a8",
-        "x": 900,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "420322f4757ddf6e",
-        "type": "mqtt out",
-        "z": "3e4ba157b540d183",
-        "d": true,
-        "g": "5c50443a84910fb7",
-        "name": "MQTT Publish",
-        "topic": "house/modes/holiday/current",
-        "qos": "2",
-        "retain": "true",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "fd29421fc00140a8",
-        "x": 900,
-        "y": 540,
         "wires": []
     },
     {
@@ -26494,7 +26216,7 @@
             }
         ],
         "x": 150,
-        "y": 700,
+        "y": 460,
         "wires": [
             [
                 "391b739e5ad50419"
@@ -26533,7 +26255,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 330,
-        "y": 780,
+        "y": 540,
         "wires": [
             [
                 "391b739e5ad50419"
@@ -26559,7 +26281,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 780,
+        "y": 540,
         "wires": [
             [
                 "41e81c6e9a506658"
@@ -26611,7 +26333,7 @@
             }
         ],
         "x": 140,
-        "y": 840,
+        "y": 600,
         "wires": [
             [
                 "1a278235669d49ac"
@@ -26650,7 +26372,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 330,
-        "y": 920,
+        "y": 680,
         "wires": [
             [
                 "1a278235669d49ac"
@@ -26676,7 +26398,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 920,
+        "y": 680,
         "wires": [
             [
                 "dcd71942bab4a11b"
@@ -26691,7 +26413,7 @@
         "name": "Friendly Name",
         "info": "",
         "x": 880,
-        "y": 700,
+        "y": 460,
         "wires": []
     },
     {
@@ -26702,7 +26424,7 @@
         "name": "Entity ID",
         "info": "",
         "x": 860,
-        "y": 840,
+        "y": 600,
         "wires": []
     },
     {
@@ -26726,7 +26448,7 @@
         "to": "",
         "reg": false,
         "x": 580,
-        "y": 700,
+        "y": 460,
         "wires": [
             []
         ]
@@ -26752,67 +26474,9 @@
         "to": "",
         "reg": false,
         "x": 580,
-        "y": 840,
+        "y": 600,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "30a87624bbab1d74",
-        "type": "change",
-        "z": "3e4ba157b540d183",
-        "d": true,
-        "g": "5c50443a84910fb7",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "currentholiday",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 670,
-        "y": 540,
-        "wires": [
-            [
-                "420322f4757ddf6e"
-            ]
-        ]
-    },
-    {
-        "id": "6757f301f06e1483",
-        "type": "change",
-        "z": "3e4ba157b540d183",
-        "d": true,
-        "g": "5c50443a84910fb7",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "holidaymode",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 660,
-        "y": 420,
-        "wires": [
-            [
-                "3cd66ee80d7b2715"
-            ]
         ]
     },
     {
