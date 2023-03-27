@@ -734,7 +734,9 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1292,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -806,7 +808,9 @@
             "a3ef2faca9922113"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2112,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -866,7 +870,9 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 872,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -888,7 +894,9 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 219
+        "y": 219,
+        "w": 1012,
+        "h": 202
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -936,7 +944,9 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -954,7 +964,9 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 202
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -994,7 +1006,9 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779
+        "y": 779,
+        "w": 1432,
+        "h": 462
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1039,7 +1053,9 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 832,
+        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -1131,7 +1147,9 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 499
+        "y": 499,
+        "w": 1252,
+        "h": 362
     },
     {
         "id": "eeafd13be593ae69",
@@ -1201,7 +1219,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "8aee4d340a136bac",
@@ -1279,7 +1299,9 @@
             "c8af362d48d5c0ad"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 622
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1299,7 +1321,9 @@
             "2a0e3a76af7ab628"
         ],
         "x": 64,
-        "y": 699
+        "y": 699,
+        "w": 1022,
+        "h": 82
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1365,7 +1389,9 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39
+        "y": 39,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "b708cb6d93f40dee",
@@ -24454,10 +24480,10 @@
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
-        "haltifstate": "streaming",
+        "haltifstate": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
+        "outputs": 1,
         "output_only_on_state_change": true,
         "for": "0",
         "forType": "num",
@@ -24465,8 +24491,8 @@
         "ignorePrevStateNull": false,
         "ignorePrevStateUnknown": false,
         "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
                 "property": "payload",
@@ -24479,10 +24505,7 @@
         "y": 220,
         "wires": [
             [
-                "aee33a6f3ea97d9d"
-            ],
-            [
-                "0ea48caad418290a"
+                "4a51b2cf2fe4c02c"
             ]
         ],
         "outputLabels": [
@@ -24511,7 +24534,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 760,
+        "x": 600,
         "y": 200,
         "wires": [
             []
@@ -24538,187 +24561,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 760,
+        "x": 600,
         "y": 320,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "0ea48caad418290a",
-        "type": "api-current-state",
-        "z": "789ba711dc04fad2",
-        "name": "Vacation Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.vacation_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "vacation",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 360,
-        "y": 320,
-        "wires": [
-            [
-                "8e858e7fb6a75a5b"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
-        ]
-    },
-    {
-        "id": "aee33a6f3ea97d9d",
-        "type": "api-current-state",
-        "z": "789ba711dc04fad2",
-        "name": "Vacation Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.vacation_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "vacation",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 360,
-        "y": 200,
-        "wires": [
-            [
-                "5b46031b9a69e041"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
-        ]
-    },
-    {
-        "id": "8e858e7fb6a75a5b",
-        "type": "api-current-state",
-        "z": "789ba711dc04fad2",
-        "name": "People Present",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.people_present",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "people_present",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 560,
-        "y": 320,
-        "wires": [
-            [
-                "21deb99e77dfa74d",
-                "3f97e618415f37c5",
-                "3eef2b6b25a9b04f"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "On",
-            "Off"
-        ]
-    },
-    {
-        "id": "5b46031b9a69e041",
-        "type": "api-current-state",
-        "z": "789ba711dc04fad2",
-        "name": "People Present",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.people_present",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "people_present",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 560,
-        "y": 200,
-        "wires": [
-            [
-                "dcf595a3aeb025a4",
-                "e6aea47391a1f784",
-                "dc05476aa4d90974",
-                "efade953371aa59e"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "On",
-            "Off"
         ]
     },
     {
@@ -24742,7 +24588,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 770,
+        "x": 610,
         "y": 260,
         "wires": [
             []
@@ -24769,7 +24615,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 770,
+        "x": 610,
         "y": 380,
         "wires": [
             []
@@ -24794,7 +24640,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 760,
+        "x": 600,
         "y": 140,
         "wires": [
             []
@@ -24814,7 +24660,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 760,
+        "x": 600,
         "y": 80,
         "wires": []
     },
@@ -24832,7 +24678,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 760,
+        "x": 600,
         "y": 440,
         "wires": []
     },
@@ -24859,8 +24705,8 @@
         "name": "State",
         "server": "9e87348d.9c1c48",
         "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
+        "outputs": 1,
+        "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
         "entity_id": "sensor.twitch_ironnerd24",
@@ -24886,15 +24732,39 @@
         "y": 320,
         "wires": [
             [
-                "aee33a6f3ea97d9d"
-            ],
-            [
-                "0ea48caad418290a"
+                "4a51b2cf2fe4c02c"
             ]
         ],
         "outputLabels": [
             "Live",
             "Offline"
+        ]
+    },
+    {
+        "id": "4a51b2cf2fe4c02c",
+        "type": "function",
+        "z": "789ba711dc04fad2",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar peoplePresent = states['binary_sensor.people_present'].state\nvar streamLive = msg.payload\n\nif (vacationMode === 'off' && peoplePresent === 'on') {\n    if (streamLive === 'streaming') {\n        return[msg,null]\n    } else {\n        return[null,msg]\n    }\n} else {\n    return null\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "e6aea47391a1f784",
+                "dcf595a3aeb025a4",
+                "dc05476aa4d90974",
+                "efade953371aa59e"
+            ],
+            [
+                "21deb99e77dfa74d",
+                "3f97e618415f37c5",
+                "3eef2b6b25a9b04f"
+            ]
         ]
     },
     {
