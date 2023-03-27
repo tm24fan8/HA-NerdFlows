@@ -444,7 +444,7 @@
                 "y": 360,
                 "wires": [
                     {
-                        "id": "6362db9ef6632b4f"
+                        "id": "ca51f6e6bd51fb55"
                     }
                 ]
             }
@@ -579,7 +579,7 @@
                 "y": 340,
                 "wires": [
                     {
-                        "id": "d0822c2e7fdff092"
+                        "id": "9cd0aa12d56438c6"
                     }
                 ]
             }
@@ -734,9 +734,7 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1292,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -808,9 +806,7 @@
             "a3ef2faca9922113"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2112,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -846,9 +842,7 @@
             "486bca43ddc48fb8"
         ],
         "x": 34,
-        "y": 159,
-        "w": 1072,
-        "h": 482
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -870,9 +864,7 @@
             "b2bc83c9195efe0f"
         ],
         "x": 14,
-        "y": 39,
-        "w": 872,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -894,9 +886,7 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 219,
-        "w": 1012,
-        "h": 202
+        "y": 219
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -944,9 +934,7 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -964,9 +952,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1006,9 +992,7 @@
             "0968727f2138ac62"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1432,
-        "h": 462
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1053,9 +1037,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1147,9 +1129,7 @@
             "6b039ef7895476e2"
         ],
         "x": 14,
-        "y": 499,
-        "w": 1252,
-        "h": 362
+        "y": 499
     },
     {
         "id": "eeafd13be593ae69",
@@ -1183,9 +1163,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1219,9 +1197,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1652,
-        "h": 382
+        "y": 39
     },
     {
         "id": "8aee4d340a136bac",
@@ -1299,9 +1275,7 @@
             "c8af362d48d5c0ad"
         ],
         "x": 54,
-        "y": 39,
-        "w": 852,
-        "h": 622
+        "y": 39
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1321,9 +1295,7 @@
             "2a0e3a76af7ab628"
         ],
         "x": 64,
-        "y": 699,
-        "w": 1022,
-        "h": 82
+        "y": 699
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1389,9 +1361,7 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1407,9 +1377,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839,
-        "w": 632,
-        "h": 82
+        "y": 839
     },
     {
         "id": "a705cecb0997a43a",
@@ -1432,9 +1400,7 @@
             "1a278235669d49ac"
         ],
         "x": 34,
-        "y": 659,
-        "w": 952,
-        "h": 302
+        "y": 659
     },
     {
         "id": "19b0e082db0643ac",
@@ -3869,55 +3835,6 @@
         "wires": []
     },
     {
-        "id": "23dafb85ab2671c9",
-        "type": "switch",
-        "z": "a4ee891237e460a2",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Adaptive",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Reset",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Select",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 4,
-        "x": 370,
-        "y": 360,
-        "wires": [
-            [
-                "bd8c5a7b9e7b24b2",
-                "de5a484b79c5d0e4",
-                "97400c5ff0842570"
-            ],
-            [
-                "a89c7e8905a07998"
-            ],
-            [],
-            [
-                "b14287e013bba748",
-                "a81fd188d89faa25",
-                "dc0972a3964e6513"
-            ]
-        ]
-    },
-    {
         "id": "60924f02885cc3c8",
         "type": "api-call-service",
         "z": "a4ee891237e460a2",
@@ -3968,22 +3885,37 @@
         ]
     },
     {
-        "id": "6362db9ef6632b4f",
+        "id": "ca51f6e6bd51fb55",
         "type": "function",
         "z": "a4ee891237e460a2",
-        "name": "Remove Spaces",
-        "func": "var str = msg.payload\nmsg.payload = str.replaceAll(\" \",\"_\")\nreturn msg;",
-        "outputs": 1,
+        "name": "Routing",
+        "func": "var str = msg.payload\nvar newPayload = str.replaceAll(\" \",\"_\")\n\nmsg.payload = newPayload\n\nif (newPayload === 'Select') {\n    return null\n} else if (newPayload === 'Adaptive') {\n    return[msg,null,null]\n} else if (newPayload === 'Reset') {\n    return[null,msg,null]\n} else {\n    return[null,null,msg]\n}",
+        "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 200,
+        "x": 360,
         "y": 360,
         "wires": [
             [
-                "23dafb85ab2671c9"
+                "de5a484b79c5d0e4",
+                "97400c5ff0842570",
+                "bd8c5a7b9e7b24b2"
+            ],
+            [
+                "a89c7e8905a07998"
+            ],
+            [
+                "b14287e013bba748",
+                "dc0972a3964e6513",
+                "a81fd188d89faa25"
             ]
+        ],
+        "outputLabels": [
+            "Adaptive",
+            "Reset",
+            "Otherwise"
         ]
     },
     {
@@ -4399,47 +4331,6 @@
         "wires": []
     },
     {
-        "id": "4fb67560e7a11361",
-        "type": "switch",
-        "z": "74d3a55b70dc2d6c",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Adaptive",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Select",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 390,
-        "y": 300,
-        "wires": [
-            [
-                "464d7284c477d2f3",
-                "49ec3fb036ff367f",
-                "6d40624de5c75c9d"
-            ],
-            [],
-            [
-                "6a5da3eff6ace96d",
-                "16d9d3387751c4d4",
-                "e6a15d04a48511a7"
-            ]
-        ]
-    },
-    {
         "id": "15484a2c724cc88d",
         "type": "api-call-service",
         "z": "74d3a55b70dc2d6c",
@@ -4468,18 +4359,25 @@
         "id": "622b8178adf9d4a8",
         "type": "function",
         "z": "74d3a55b70dc2d6c",
-        "name": "Remove Spaces",
-        "func": "var str = msg.payload\nmsg.payload = str.replaceAll(\" \",\"_\")\nreturn msg;",
-        "outputs": 1,
+        "name": "Routing",
+        "func": "var str = msg.payload\nvar newPayload = str.replaceAll(\" \",\"_\")\n\nmsg.payload = newPayload\n\nif (newPayload === 'Select') {\n    return null\n} else if (newPayload === 'Adaptive') {\n    return[msg,null]\n} else {\n    return[null,msg]\n}",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
+        "x": 380,
         "y": 300,
         "wires": [
             [
-                "4fb67560e7a11361"
+                "464d7284c477d2f3",
+                "49ec3fb036ff367f",
+                "6d40624de5c75c9d"
+            ],
+            [
+                "e6a15d04a48511a7",
+                "16d9d3387751c4d4",
+                "6a5da3eff6ace96d"
             ]
         ]
     },
@@ -4673,58 +4571,28 @@
         "wires": []
     },
     {
-        "id": "493106346f58ba03",
-        "type": "switch",
-        "z": "85c4f81ca9628aea",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Select",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Reset",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 470,
-        "y": 340,
-        "wires": [
-            [],
-            [],
-            [
-                "78a73c2d816658d8",
-                "655050669e5ccf85"
-            ]
-        ]
-    },
-    {
-        "id": "d0822c2e7fdff092",
+        "id": "9cd0aa12d56438c6",
         "type": "function",
         "z": "85c4f81ca9628aea",
-        "name": "Remove Spaces",
-        "func": "var str = msg.payload\nmsg.payload = str.replaceAll(\" \",\"_\")\nreturn msg;",
+        "name": "Routing",
+        "func": "var str = msg.payload\nvar newPayload = str.replaceAll(\" \",\"_\")\n\nmsg.payload = newPayload\n\nif (newPayload != 'Select' && newPayload != 'Reset') {\n    return msg;\n} else {\n    return null\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
+        "x": 380,
         "y": 340,
         "wires": [
             [
-                "493106346f58ba03"
+                "655050669e5ccf85",
+                "78a73c2d816658d8"
             ]
+        ],
+        "outputLabels": [
+            "Adaptive",
+            "Reset",
+            "Otherwise"
         ]
     },
     {
