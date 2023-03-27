@@ -1081,13 +1081,11 @@
             "label": true
         },
         "nodes": [
-            "602437ba010cc43d",
             "923538ef97772f0c",
             "a3e3dc438a7b95fc",
             "fe1ba086baf93ec0",
             "50056b099a24a824",
             "d8e2d16e313b938a",
-            "646450ddef26f6f6",
             "b0c92a72557d0ac6",
             "408795055634e897",
             "0a441953c41a18ae",
@@ -1095,7 +1093,8 @@
             "d580c539c554a4c1",
             "f0cc7b3b9622312a",
             "e9e8bc8b535c232f",
-            "206e512c5268020f"
+            "206e512c5268020f",
+            "4da18a3f1e0298db"
         ],
         "x": 34,
         "y": 559,
@@ -1309,15 +1308,11 @@
             "label": true
         },
         "nodes": [
-            "cc8645ebae721601",
             "b2d071ca42e4a3c6",
             "7fc67fc156c0f4be",
-            "afeb1d238a623c3d",
             "34dcb204b421710d",
             "797d3e7cc53d773f",
-            "cb399b9e54bcf0f0",
             "4d4e55cea59da9ad",
-            "600f4c2dcc3e0c51",
             "e69ad4771494c458",
             "fdf9b6820eb7289a",
             "5c44fd504453ae63",
@@ -1327,32 +1322,26 @@
             "ae7073e78053da5d",
             "6b086807971b2618",
             "6736626753b33834",
-            "715c94772f02e398",
             "736d7433005436b3",
             "0aa29248b560c45d",
             "b8ca8a1a2655570b",
-            "6a84cfeac66e9b29",
             "c43df123937fd07d",
             "fc26a2c43e3a3faa",
             "24abb932c4cd0b1f",
-            "b0f2bb3aef2890a1",
-            "70888fea017c3e69",
             "c0521b53f7efeb17",
             "95d5ac486b4f9ee0",
-            "392d8c474c89b9f0",
-            "3ba243a44893f620",
             "49767cbfa622a734",
             "04113ab4977bf725",
-            "6df16ceae69c8c2e",
-            "7f20a02b0b8f860a",
-            "f34f7a348bd2d5ee",
-            "3dcc1f88969d9a0b",
             "9f6498380a05390b",
-            "452660fbaf11396c"
+            "452660fbaf11396c",
+            "93a52960301bb3a3",
+            "0e39331337b021bb",
+            "82172c8ab1a9c8e2",
+            "afeb1d238a623c3d"
         ],
         "x": 34,
         "y": 39,
-        "w": 1902,
+        "w": 1792,
         "h": 502
     },
     {
@@ -4751,52 +4740,6 @@
         ]
     },
     {
-        "id": "cc8645ebae721601",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get duration",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_number.kallen_activity_duration",
-        "state_type": "num",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "duration",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1210,
-        "y": 200,
-        "wires": [
-            [
-                "b2d071ca42e4a3c6",
-                "b8ca8a1a2655570b"
-            ]
-        ]
-    },
-    {
         "id": "b2d071ca42e4a3c6",
         "type": "function",
         "z": "4a8821853d4dd1ad",
@@ -4808,7 +4751,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1345,
+        "x": 675,
         "y": 200,
         "wires": [
             [
@@ -4839,40 +4782,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1460,
+        "x": 790,
         "y": 200,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "afeb1d238a623c3d",
-        "type": "api-call-service",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "timer",
-        "service": "pause",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "timer.kallen_timer"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 930,
-        "y": 360,
-        "wires": [
-            [
-                "b0f2bb3aef2890a1"
-            ]
         ]
     },
     {
@@ -4902,52 +4815,7 @@
         "wires": [
             [
                 "e69ad4771494c458",
-                "392d8c474c89b9f0"
-            ]
-        ]
-    },
-    {
-        "id": "602437ba010cc43d",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "1ca205a84922c8c2",
-        "name": "Get Room",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.kallen_activity_room",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "activity timer completed, good job!",
-                "valueType": "str"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 550,
-        "y": 600,
-        "wires": [
-            [
-                "0a441953c41a18ae"
+                "93a52960301bb3a3"
             ]
         ]
     },
@@ -5079,51 +4947,6 @@
         ]
     },
     {
-        "id": "cb399b9e54bcf0f0",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get Room",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.kallen_activity_room",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "room",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 570,
-        "y": 200,
-        "wires": [
-            [
-                "715c94772f02e398"
-            ]
-        ]
-    },
-    {
         "id": "4d4e55cea59da9ad",
         "type": "api-call-service",
         "z": "4a8821853d4dd1ad",
@@ -5145,54 +4968,11 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1500,
+        "x": 1020,
         "y": 80,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "600f4c2dcc3e0c51",
-        "type": "switch",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Routing",
-        "property": "room",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Basement",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Kallen Bedroom",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 1075,
-        "y": 200,
-        "wires": [
-            [
-                "cc8645ebae721601",
-                "c43df123937fd07d"
-            ],
-            [
-                "cc8645ebae721601",
-                "c43df123937fd07d"
-            ],
-            [
-                "cc8645ebae721601"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "50056b099a24a824",
@@ -5200,7 +4980,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "1ca205a84922c8c2",
         "name": "",
-        "x": 820,
+        "x": 640,
         "y": 600,
         "wires": [
             []
@@ -5361,7 +5141,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1510,
+        "x": 1030,
         "y": 140,
         "wires": [
             [
@@ -5414,7 +5194,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1685,
+        "x": 1205,
         "y": 140,
         "wires": [
             [
@@ -5445,7 +5225,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1830,
+        "x": 1350,
         "y": 140,
         "wires": [
             []
@@ -5527,98 +5307,6 @@
         "outputLabels": [
             "off",
             "on"
-        ]
-    },
-    {
-        "id": "715c94772f02e398",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get Activity",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.kallen_activities",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "activity",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 750,
-        "y": 200,
-        "wires": [
-            [
-                "6a84cfeac66e9b29"
-            ]
-        ]
-    },
-    {
-        "id": "646450ddef26f6f6",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "1ca205a84922c8c2",
-        "name": "Get Activity",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.kallen_activities",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "activity",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 350,
-        "y": 600,
-        "wires": [
-            [
-                "602437ba010cc43d",
-                "a3e3dc438a7b95fc",
-                "b0c92a72557d0ac6"
-            ]
         ]
     },
     {
@@ -5728,7 +5416,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 675,
+        "x": 495,
         "y": 600,
         "wires": [
             [
@@ -5837,7 +5525,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1405,
+        "x": 735,
         "y": 260,
         "wires": [
             [
@@ -5852,7 +5540,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "a46fc8e7e70ca893",
         "name": "",
-        "x": 1530,
+        "x": 860,
         "y": 260,
         "wires": [
             []
@@ -5870,7 +5558,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1345,
+        "x": 675,
         "y": 260,
         "wires": [
             [
@@ -5878,58 +5566,6 @@
             ]
         ],
         "l": false
-    },
-    {
-        "id": "6a84cfeac66e9b29",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Control Lights?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.kallen_timer_control_lights",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "lights",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 940,
-        "y": 200,
-        "wires": [
-            [
-                "600f4c2dcc3e0c51"
-            ],
-            [
-                "600f4c2dcc3e0c51"
-            ]
-        ],
-        "outputLabels": [
-            "on",
-            "off"
-        ]
     },
     {
         "id": "c43df123937fd07d",
@@ -5954,7 +5590,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1200,
+        "x": 720,
         "y": 120,
         "wires": [
             [
@@ -5986,7 +5622,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1325,
+        "x": 845,
         "y": 120,
         "wires": [
             [
@@ -6046,96 +5682,6 @@
         "outputLabels": [
             "on",
             "off"
-        ]
-    },
-    {
-        "id": "b0f2bb3aef2890a1",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get Room",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.kallen_activity_room",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "room",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1110,
-        "y": 360,
-        "wires": [
-            [
-                "70888fea017c3e69"
-            ]
-        ]
-    },
-    {
-        "id": "70888fea017c3e69",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get Activity",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.kallen_activities",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "activity",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1290,
-        "y": 360,
-        "wires": [
-            [
-                "c0521b53f7efeb17"
-            ]
         ]
     },
     {
@@ -6208,7 +5754,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1405,
+        "x": 865,
         "y": 360,
         "wires": [
             [
@@ -6223,100 +5769,10 @@
         "z": "4a8821853d4dd1ad",
         "g": "a46fc8e7e70ca893",
         "name": "",
-        "x": 1540,
+        "x": 1000,
         "y": 360,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "392d8c474c89b9f0",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get Room",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.kallen_activity_room",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "room",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 750,
-        "y": 500,
-        "wires": [
-            [
-                "3ba243a44893f620"
-            ]
-        ]
-    },
-    {
-        "id": "3ba243a44893f620",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get Activity",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.kallen_activities",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "activity",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 930,
-        "y": 500,
-        "wires": [
-            [
-                "6df16ceae69c8c2e"
-            ]
         ]
     },
     {
@@ -6389,7 +5845,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1565,
+        "x": 865,
         "y": 500,
         "wires": [
             [
@@ -6404,190 +5860,10 @@
         "z": "4a8821853d4dd1ad",
         "g": "a46fc8e7e70ca893",
         "name": "",
-        "x": 1700,
+        "x": 1000,
         "y": 500,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "6df16ceae69c8c2e",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get Minutes",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.kallen_timer_remaining_minutes",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "remainingmin",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1270,
-        "y": 500,
-        "wires": [
-            [
-                "7f20a02b0b8f860a"
-            ]
-        ]
-    },
-    {
-        "id": "7f20a02b0b8f860a",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get Seconds",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.kallen_timer_remaining_seconds",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "remainingsec",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1450,
-        "y": 500,
-        "wires": [
-            [
-                "49767cbfa622a734"
-            ]
-        ]
-    },
-    {
-        "id": "f34f7a348bd2d5ee",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get Minutes",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.kallen_timer_remaining_minutes",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "remainingmin",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 570,
-        "y": 360,
-        "wires": [
-            [
-                "3dcc1f88969d9a0b"
-            ]
-        ]
-    },
-    {
-        "id": "3dcc1f88969d9a0b",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Get Seconds",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.kallen_timer_remaining_seconds",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "remainingsec",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 750,
-        "y": 360,
-        "wires": [
-            [
-                "afeb1d238a623c3d"
-            ]
         ]
     },
     {
@@ -6687,10 +5963,10 @@
         "y": 300,
         "wires": [
             [
-                "cb399b9e54bcf0f0"
+                "0e39331337b021bb"
             ],
             [
-                "f34f7a348bd2d5ee"
+                "82172c8ab1a9c8e2"
             ],
             [
                 "34dcb204b421710d"
@@ -6777,8 +6053,131 @@
         "y": 600,
         "wires": [
             [
-                "646450ddef26f6f6",
-                "fe1ba086baf93ec0"
+                "fe1ba086baf93ec0",
+                "4da18a3f1e0298db"
+            ]
+        ]
+    },
+    {
+        "id": "93a52960301bb3a3",
+        "type": "function",
+        "z": "4a8821853d4dd1ad",
+        "g": "a46fc8e7e70ca893",
+        "name": "Announce",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\nvar minutes = states['sensor.kallen_timer_remaining_minutes'].state\nvar seconds = states['sensor.kallen_timer_remaining_seconds'].state\n\nmsg.room = room\nmsg.activity = activity\nmsg.remainingmin = minutes\nmsg.remainingsec = seconds\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 500,
+        "wires": [
+            [
+                "49767cbfa622a734"
+            ]
+        ]
+    },
+    {
+        "id": "0e39331337b021bb",
+        "type": "function",
+        "z": "4a8821853d4dd1ad",
+        "g": "a46fc8e7e70ca893",
+        "name": "Start",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\nvar controlLights = states['input_boolean.kallen_timer_control_lights'].state\nvar duration = states['input_number.kallen_activity_duration'].state\nvar fixDuration = parseFloat(duration)\n\nmsg.room = room\nmsg.activity = activity\nmsg.lights = controlLights\nmsg.duration = fixDuration\n\nif (room === 'Basement') {\n    return[msg,null,null]\n} else if (room === 'Kallen Bedroom') {\n    return [null,msg,null]\n} else {\n    return[null,null,msg]\n}\n\nreturn msg;",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 160,
+        "wires": [
+            [
+                "c43df123937fd07d",
+                "b2d071ca42e4a3c6",
+                "b8ca8a1a2655570b"
+            ],
+            [
+                "c43df123937fd07d",
+                "b2d071ca42e4a3c6",
+                "b8ca8a1a2655570b"
+            ],
+            [
+                "b2d071ca42e4a3c6",
+                "b8ca8a1a2655570b"
+            ]
+        ]
+    },
+    {
+        "id": "82172c8ab1a9c8e2",
+        "type": "function",
+        "z": "4a8821853d4dd1ad",
+        "g": "a46fc8e7e70ca893",
+        "name": "Announce",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\nvar minutes = states['sensor.kallen_timer_remaining_minutes'].state\nvar seconds = states['sensor.kallen_timer_remaining_seconds'].state\n\nmsg.room = room\nmsg.activity = activity\nmsg.remainingmin = minutes\nmsg.remainingsec = seconds\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 360,
+        "wires": [
+            [
+                "afeb1d238a623c3d"
+            ]
+        ]
+    },
+    {
+        "id": "afeb1d238a623c3d",
+        "type": "api-call-service",
+        "z": "4a8821853d4dd1ad",
+        "g": "a46fc8e7e70ca893",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "pause",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.kallen_timer"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 750,
+        "y": 360,
+        "wires": [
+            [
+                "c0521b53f7efeb17"
+            ]
+        ]
+    },
+    {
+        "id": "4da18a3f1e0298db",
+        "type": "function",
+        "z": "4a8821853d4dd1ad",
+        "g": "1ca205a84922c8c2",
+        "name": "Announce",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\n\nmsg.topic = room\nmsg.activity = activity\nmsg.payload = 'activity timer completed, good job!'\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 600,
+        "wires": [
+            [
+                "a3e3dc438a7b95fc",
+                "b0c92a72557d0ac6",
+                "0a441953c41a18ae"
             ]
         ]
     },
