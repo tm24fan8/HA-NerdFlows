@@ -261,7 +261,17 @@
         "env": [],
         "meta": {},
         "color": "#DDAA99",
-        "icon": "font-awesome/fa-comment"
+        "icon": "font-awesome/fa-comment",
+        "status": {
+            "x": 560,
+            "y": 220,
+            "wires": [
+                {
+                    "id": "cee17a2c2fbb48ee",
+                    "port": 1
+                }
+            ]
+        }
     },
     {
         "id": "a062d9e6d44506dc",
@@ -685,7 +695,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -732,9 +744,7 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1292,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -806,9 +816,7 @@
             "a3ef2faca9922113"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2112,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -963,27 +971,17 @@
             "6c77ade442a47a30",
             "6392f2f0586d988a",
             "e505e9f24bf919dd",
-            "c1c0d3ee514fa085",
-            "88580ff9416f69c7",
             "9efd5346a1ca1972",
-            "3596959961544947",
-            "9cbcdb825b0a60ad",
-            "40cab913b75a5507",
-            "c9ca600850fc6a76",
-            "a57d15aac606dfb1",
             "8b53b9f4d5ba0bf0",
-            "1ddcce6ef3293779",
             "cc8f6ab710549be2",
-            "24c5dfc33d4685c2",
-            "6019fc13d70a69c7",
-            "f505205962d4e214",
-            "966547ac9d93eee1",
-            "63a9f9055e287a53",
-            "0845a18537933359",
-            "0968727f2138ac62"
+            "346379575efad516",
+            "8b0b39deb5142557",
+            "7cb8056b3b41a9e8"
         ],
         "x": 34,
-        "y": 779
+        "y": 779,
+        "w": 1012,
+        "h": 442
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1028,7 +1026,9 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 832,
+        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -1059,7 +1059,9 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1132,
+        "h": 382
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1146,7 +1148,9 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1492,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1180,9 +1184,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1652,
-        "h": 382
+        "y": 39
     },
     {
         "id": "8aee4d340a136bac",
@@ -1202,7 +1204,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1225,7 +1229,9 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639
+        "y": 639,
+        "w": 1072,
+        "h": 202
     },
     {
         "id": "f519aff597ece351",
@@ -1418,19 +1424,6 @@
         "wires": [
             [
                 "2dc5f9d3e00f4ddc"
-            ]
-        ]
-    },
-    {
-        "id": "0968727f2138ac62",
-        "type": "junction",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "x": 520,
-        "y": 1140,
-        "wires": [
-            [
-                "cc8f6ab710549be2"
             ]
         ]
     },
@@ -3001,8 +2994,8 @@
         "type": "function",
         "z": "6429099c4571dd6b",
         "name": "Processing",
-        "func": "if (msg.topic === \"Living Room\") {\n    msg.topic = \"living_room\"\n} else if (msg.topic === \"Living Room Echo Dot\") {\n    msg.topic = \"living_room\"\n} else if (msg.topic === \"Basement\") {\n    msg.topic = \"basement\"\n} else if (msg.topic === \"Basement Echo Dot\") {\n    msg.topic = \"basement\"\n} else if (msg.topic === \"Basement Google\") {\n    msg.topic = \"basement_google\"\n} else if (msg.topic === \"basement_google\") {\n    msg.topic = \"basement_google\"\n} else if (msg.topic === \"Kallen Bedroom\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (msg.topic === \"Kallen Bedroom Speaker\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (msg.topic === \"Emma Bedroom\") {\n    msg.topic = \"emma_bedroom\"\n} else if (msg.topic === \"Emma Bedroom Speaker\") {\n    msg.topic = \"emma_bedroom\"\n} else if (msg.topic === \"Kids Bedrooms\") {\n    msg.topic = \"kids_bedrooms\"\n} else if (msg.topic === \"All Bedrooms\") {\n    msg.topic = \"all_bedrooms\"\n} else if (msg.topic === \"Master Bedroom\") {\n    msg.topic = \"master_bedroom\"\n} else if (msg.topic === \"Master Bedroom Echo Dot\") {\n    msg.topic = \"master_bedroom\"\n} else if (msg.topic === \"Common Areas\") {\n    msg.topic = \"common\"\n} else if (msg.topic === \"Everywhere\") {\n    msg.topic = \"everywhere\"\n}\n\nif (msg.voice) {\n    msg.voice = msg.voice\n} else {\n    msg.voice = global.get('jarvis_voice')\n}\n\nif (msg.type) {\n    msg.type = msg.type\n} else {\n    msg.type = \"normal\"\n}\n\nreturn msg;",
-        "outputs": 1,
+        "func": "var room = msg.topic\n\nif (room === \"Living Room\") {\n    msg.topic = \"living_room\"\n} else if (room === \"Living Room Echo Dot\") {\n    msg.topic = \"living_room\"\n} else if (room === \"Basement\") {\n    msg.topic = \"basement\"\n} else if (room === \"Basement Echo Dot\") {\n    msg.topic = \"basement\"\n} else if (room === \"Basement Google\") {\n    msg.topic = \"basement_google\"\n} else if (room === \"basement_google\") {\n    msg.topic = \"basement_google\"\n} else if (room === \"Kallen Bedroom\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (room === \"Kallen Bedroom Speaker\") {\n    msg.topic = \"kallen_bedroom\"\n} else if (room === \"Emma Bedroom\") {\n    msg.topic = \"emma_bedroom\"\n} else if (room === \"Emma Bedroom Speaker\") {\n    msg.topic = \"emma_bedroom\"\n} else if (room === \"Kids Bedrooms\") {\n    msg.topic = \"kids_bedrooms\"\n} else if (room === \"All Bedrooms\") {\n    msg.topic = \"all_bedrooms\"\n} else if (room === \"Master Bedroom\") {\n    msg.topic = \"master_bedroom\"\n} else if (room === \"Master Bedroom Echo Dot\") {\n    msg.topic = \"master_bedroom\"\n} else if (room === \"Common Areas\") {\n    msg.topic = \"common\"\n} else if (room === \"Everywhere\") {\n    msg.topic = \"everywhere\"\n}\n\nif (msg.voice) {\n    msg.voice = msg.voice\n} else {\n    msg.voice = global.get('jarvis_voice')\n}\n\nif (msg.type) {\n    msg.type = msg.type\n} else {\n    msg.type = \"normal\"\n}\n\nvar statusMsg = {\n    \"payload\": msg.voice + \" speaking in \" + room\n}\n\nreturn[msg,statusMsg];",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -3012,7 +3005,8 @@
         "wires": [
             [
                 "98bf66889d4287db"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -4587,7 +4581,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "a46fc8e7e70ca893",
         "name": "Convert to seconds",
-        "func": "msg.duration = msg.duration * 60\nreturn msg;",
+        "func": "msg.duration = msg.duration * 60\n\nnode.status({ fill: \"green\", shape: \"dot\", text: msg.duration + \"s\"});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5394,7 +5388,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "a46fc8e7e70ca893",
         "name": "Rounding",
-        "func": "var readout = msg.duration\n\nmsg.duration = +readout.toFixed(0)\n\nreturn msg;",
+        "func": "var readout = msg.duration\n\nmsg.duration = +readout.toFixed(0)\n\nnode.status({fill:\"green\",shape:\"dot\",text:msg.duration + \"m\"});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14405,7 +14399,7 @@
         "g": "eeafd13be593ae69",
         "name": "",
         "pauseType": "delay",
-        "timeout": "5",
+        "timeout": "10",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -14599,7 +14593,7 @@
         "z": "b5717a86ce55bc29",
         "g": "eeafd13be593ae69",
         "name": "Delay",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar delay = states['input_number.front_porch_motion_off_delay'].state\nvar duration = delay * 60\n\nmsg.duration = duration\n\nnode.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + \" minutes\"});\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar delay = states['input_number.front_porch_motion_off_delay'].state\nvar duration = delay * 60\nvar lights = states['light.front_porch_light'].state\n\nmsg.duration = duration\n\nif (lights === 'on') {\n    node.status({ fill: \"green\", shape: \"dot\", text: parseInt(delay) + \" minutes\" });\n    return msg;\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Light Off\"});\n    return null\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14817,8 +14811,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1010,
-        "y": 940,
+        "x": 590,
+        "y": 980,
         "wires": [
             [
                 "8b53b9f4d5ba0bf0"
@@ -14914,8 +14908,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1090,
-        "y": 1020,
+        "x": 950,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -15578,8 +15572,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1370,
-        "y": 900,
+        "x": 950,
+        "y": 940,
         "wires": [
             []
         ]
@@ -15618,8 +15612,8 @@
         "ignorePrevStateNull": false,
         "ignorePrevStateUnknown": false,
         "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
                 "property": "payload",
@@ -15742,10 +15736,10 @@
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
-        "haltifstate": "on",
+        "haltifstate": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
+        "outputs": 1,
         "output_only_on_state_change": true,
         "for": "0",
         "forType": "num",
@@ -15753,8 +15747,8 @@
         "ignorePrevStateNull": false,
         "ignorePrevStateUnknown": false,
         "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
                 "property": "payload",
@@ -15779,107 +15773,12 @@
         "y": 980,
         "wires": [
             [
-                "6019fc13d70a69c7"
-            ],
-            [
-                "f505205962d4e214"
+                "346379575efad516"
             ]
         ],
         "outputLabels": [
             "On",
             "Off"
-        ]
-    },
-    {
-        "id": "c1c0d3ee514fa085",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Are Lights On?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "light.living_room_lights",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 560,
-        "y": 940,
-        "wires": [
-            [
-                "1ddcce6ef3293779"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "88580ff9416f69c7",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Are Lights On?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "light.living_room_lights",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 560,
-        "y": 1020,
-        "wires": [
-            [
-                "3a29cecbefa6cbe2"
-            ],
-            []
         ]
     },
     {
@@ -15905,10 +15804,10 @@
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
-        "haltifstate": "paused",
+        "haltifstate": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "outputs": 2,
+        "outputs": 1,
         "output_only_on_state_change": true,
         "for": "0",
         "forType": "num",
@@ -15916,8 +15815,8 @@
         "ignorePrevStateNull": false,
         "ignorePrevStateUnknown": false,
         "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
                 "property": "payload",
@@ -15930,215 +15829,12 @@
         "y": 1140,
         "wires": [
             [
-                "0845a18537933359"
-            ],
-            [
-                "966547ac9d93eee1",
-                "63a9f9055e287a53"
+                "8b0b39deb5142557"
             ]
         ],
         "outputLabels": [
             "paused",
             "playing"
-        ]
-    },
-    {
-        "id": "3596959961544947",
-        "type": "switch",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "playing",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 415,
-        "y": 1080,
-        "wires": [
-            [
-                "9cbcdb825b0a60ad"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "9cbcdb825b0a60ad",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Check Toggle",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.living_room_entertainment_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 540,
-        "y": 1080,
-        "wires": [
-            [
-                "c9ca600850fc6a76"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "40cab913b75a5507",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Check Toggle",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.living_room_entertainment_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 880,
-        "y": 1180,
-        "wires": [
-            [
-                "a57d15aac606dfb1"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "c9ca600850fc6a76",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Are Lights On?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "light.living_room_lights",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 740,
-        "y": 1080,
-        "wires": [
-            [
-                "1ddcce6ef3293779"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "a57d15aac606dfb1",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Are Lights On?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "light.living_room_lights",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1080,
-        "y": 1180,
-        "wires": [
-            [
-                "3a29cecbefa6cbe2"
-            ],
-            []
         ]
     },
     {
@@ -16163,58 +15859,12 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1190,
-        "y": 920,
+        "x": 770,
+        "y": 960,
         "wires": [
             [
                 "4a2031f363418db1"
             ]
-        ]
-    },
-    {
-        "id": "1ddcce6ef3293779",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Prevent Duplicate",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "Tokyo",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
-        "entity_id": "input_text.living_room_selected_scene",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 810,
-        "y": 940,
-        "wires": [
-            [
-                "7611921cadb91b1e"
-            ],
-            []
         ]
     },
     {
@@ -16227,271 +15877,91 @@
         "payloadtype": "num",
         "payloadval": "0",
         "name": "",
-        "x": 670,
+        "x": 510,
         "y": 1180,
         "wires": [
             [
-                "40cab913b75a5507"
+                "7cb8056b3b41a9e8"
             ],
             []
         ]
     },
     {
-        "id": "24c5dfc33d4685c2",
-        "type": "change",
+        "id": "346379575efad516",
+        "type": "function",
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
-        "name": "Stop Timer",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "stop",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 1180,
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar lights = states['light.living_room_lights'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar payload = msg.payload\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != 'Tokyo') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (selectedScene === 'Tokyo') {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 980,
         "wires": [
             [
-                "cc8f6ab710549be2"
+                "7611921cadb91b1e"
+            ],
+            [
+                "3a29cecbefa6cbe2"
             ]
+        ],
+        "outputLabels": [
+            "On",
+            "Off"
         ]
     },
     {
-        "id": "6019fc13d70a69c7",
-        "type": "api-current-state",
+        "id": "8b0b39deb5142557",
+        "type": "function",
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
-        "name": "Allowed?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.living_room_entertainment_control",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 380,
-        "y": 940,
-        "wires": [
-            [
-                "c1c0d3ee514fa085"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "f505205962d4e214",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Allowed?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.living_room_entertainment_control",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 380,
-        "y": 1020,
-        "wires": [
-            [
-                "88580ff9416f69c7"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "966547ac9d93eee1",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Allowed?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.living_room_entertainment_control",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "control",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 300,
-        "y": 1080,
-        "wires": [
-            [
-                "3596959961544947"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "63a9f9055e287a53",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Allowed?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.living_room_entertainment_control",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "control",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 300,
-        "y": 1200,
-        "wires": [
-            [
-                "24c5dfc33d4685c2"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "0845a18537933359",
-        "type": "api-current-state",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Allowed?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.living_room_entertainment_control",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "control",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 300,
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar lights = states['light.living_room_lights'].state\nvar active = states['input_boolean.living_room_entertainment_mode'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar payload = msg.payload\nvar stopMsg = {\n    \"payload\":\"stop\"\n}\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'paused') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Paused\"});\n        return [null,msg,null]\n    } else if (payload === 'playing') {\n        if (allowed === 'on' && lights === 'on' && active === 'on' && selectedScene != 'Tokyo') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Playing\" });\n            return[msg,null,stopMsg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n            return[null,null,stopMsg]\n        }\n    } else {\n        node.status({fill:\"grey\",shape:\"dot\",text:\"Timer Stopped\"});\n        return[null,null,stopMsg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
         "y": 1140,
         "wires": [
             [
-                "0968727f2138ac62"
+                "7611921cadb91b1e"
             ],
-            []
+            [
+                "cc8f6ab710549be2"
+            ],
+            [
+                "cc8f6ab710549be2"
+            ]
+        ],
+        "outputLabels": [
+            "Playing",
+            "Paused",
+            "Stop Timer"
+        ]
+    },
+    {
+        "id": "7cb8056b3b41a9e8",
+        "type": "function",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "Check",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar active = states['input_boolean.living_room_entertainment_mode'].state\nvar lights = states['light.living_room_lights'].state\n\nif (active === 'on' && lights === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Sent\"});\n    return msg;\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1180,
+        "wires": [
+            [
+                "3a29cecbefa6cbe2"
+            ]
         ]
     },
     {
