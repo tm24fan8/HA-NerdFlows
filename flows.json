@@ -193,7 +193,17 @@
             "type": "Alexa Subflow"
         },
         "color": "#DDAA99",
-        "icon": "node-red-contrib-alexa-remote2-applestrudel/alexa-remote-icon.png"
+        "icon": "node-red-contrib-alexa-remote2-applestrudel/alexa-remote-icon.png",
+        "status": {
+            "x": 460,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "afead614fabc01bb",
+                    "port": 1
+                }
+            ]
+        }
     },
     {
         "id": "4107976aa434eb03",
@@ -546,7 +556,17 @@
             "type": "Alexa Subflow"
         },
         "color": "#DDAA99",
-        "icon": "node-red-contrib-alexa-remote2-applestrudel/alexa-remote-icon.png"
+        "icon": "node-red-contrib-alexa-remote2-applestrudel/alexa-remote-icon.png",
+        "status": {
+            "x": 500,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "8e803251d3e3c3ae",
+                    "port": 1
+                }
+            ]
+        }
     },
     {
         "id": "3aa2aec226246753",
@@ -643,7 +663,17 @@
             "type": "Alexa Subflow"
         },
         "color": "#DDAA99",
-        "icon": "node-red-contrib-alexa-remote2-applestrudel/alexa-remote-icon.png"
+        "icon": "node-red-contrib-alexa-remote2-applestrudel/alexa-remote-icon.png",
+        "status": {
+            "x": 500,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "c2a8a3f1f00bc4b7",
+                    "port": 1
+                }
+            ]
+        }
     },
     {
         "id": "eccca853a916b662",
@@ -695,9 +725,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -842,7 +870,9 @@
             "486bca43ddc48fb8"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 1072,
+        "h": 242
     },
     {
         "id": "477e752fcd2e2a19",
@@ -862,9 +892,7 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39,
-        "w": 792,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -884,9 +912,7 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 199,
-        "w": 712,
-        "h": 142
+        "y": 199
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -979,9 +1005,7 @@
             "7cb8056b3b41a9e8"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1012,
-        "h": 442
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1026,9 +1050,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1112,9 +1134,7 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 359,
-        "w": 1012,
-        "h": 222
+        "y": 359
     },
     {
         "id": "eeafd13be593ae69",
@@ -1148,9 +1168,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1204,9 +1222,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539,
-        "w": 612,
-        "h": 202
+        "y": 539
     },
     {
         "id": "550e5b2d99316b12",
@@ -1221,12 +1237,12 @@
             "1966d10d8f4467c7",
             "a9bc78f321149316",
             "b3bb08ff51e46985",
-            "eed94e04df746efe",
             "0c7ef72bd0ef47d4",
             "11aabd786c07244f",
             "795c53ad6642733a",
             "ea5306d6f92d9550",
-            "4829663e9913e2aa"
+            "4829663e9913e2aa",
+            "61cb79c998ee0b59"
         ],
         "x": 34,
         "y": 639,
@@ -1368,27 +1384,23 @@
         "h": 82
     },
     {
-        "id": "a705cecb0997a43a",
+        "id": "265593f442864b6a",
         "type": "group",
         "z": "3e4ba157b540d183",
-        "name": "Alexa Variables",
+        "name": "Climate Variables",
         "style": {
             "label": true
         },
         "nodes": [
-            "3aba4c35b4dc9618",
-            "41e81c6e9a506658",
-            "2379aab1d51b1f37",
-            "e3bf8fabda3a0377",
-            "dcd71942bab4a11b",
-            "66139388c1e59508",
-            "c93ac8d2ddc907c0",
-            "fbf1f34ae9ec10a7",
-            "391b739e5ad50419",
-            "1a278235669d49ac"
+            "a09f10883f07aad0",
+            "464e9271285f8450",
+            "9c8056404bfcafed",
+            "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 419
+        "y": 419,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "19b0e082db0643ac",
@@ -2887,12 +2899,144 @@
         "debugEnabled": false
     },
     {
+        "id": "a26fa856149e18bd",
+        "type": "ha-device-config",
+        "name": "Last Alexa Sensors",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "4118a859da3ae01f",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "a26fa856149e18bd",
+        "name": "Last Alexa Name",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Last Alexa Name"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-high"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "790a5433342e7eb5",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "a26fa856149e18bd",
+        "name": "Last Alexa Serial",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Last Alexa Serial"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-high"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "4d3001dabc174efe",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "a26fa856149e18bd",
+        "name": "Last Alexa Entity ID",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Last Alexa Entity ID"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-high"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "afead614fabc01bb",
         "type": "function",
         "z": "a42343e035e3313c",
         "name": "",
-        "func": "const alexa = global.get('alexa_audio')\n\nif (alexa === \"Basement Echo Dot\") {\n    msg.where = \"G090XG0894470SK6\"\n} else if (alexa === \"Living Room Echo Dot\") {\n    msg.where = \"G6G1EV08101206J4\"\n} else if (alexa === \"Master Bedroom Echo Dot\") {\n    msg.where = \"G6G0XG1212820GD9\"\n}\nreturn msg;",
-        "outputs": 1,
+        "func": "const alexa = global.get('lastAlexaSerial')\nvar statusMsg = {\n    \"payload\": alexa\n}\n\nmsg.where = alexa\n\nreturn[msg,statusMsg]",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -2900,6 +3044,7 @@
         "x": 340,
         "y": 80,
         "wires": [
+            [],
             []
         ]
     },
@@ -2909,7 +3054,7 @@
         "z": "a42343e035e3313c",
         "name": "",
         "pauseType": "delay",
-        "timeout": "2",
+        "timeout": "1",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -4354,7 +4499,7 @@
         "z": "05a2d9f89e72481f",
         "name": "",
         "pauseType": "delay",
-        "timeout": "2",
+        "timeout": "1",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -4378,8 +4523,8 @@
         "type": "function",
         "z": "05a2d9f89e72481f",
         "name": "",
-        "func": "const alexa = global.get('alexa_audio')\n\nif (alexa === \"Basement Echo Dot\") {\n    msg.who = \"basement\"\n} else if (alexa === \"Living Room Echo Dot\") {\n    msg.who = \"living_room\"\n} else if (alexa === \"Master Bedroom Echo Dot\") {\n    msg.who = \"master_bedroom\"\n}\nreturn msg;",
-        "outputs": 1,
+        "func": "const alexa = global.get('lastAlexaName')\nvar statusMsg = {\n    \"payload\": alexa\n}\n\nif (alexa === \"Basement Echo Dot\") {\n    msg.who = \"basement\"\n} else if (alexa === \"Living Room Echo Dot\") {\n    msg.who = \"living_room\"\n} else if (alexa === \"Master Bedroom Echo Dot\") {\n    msg.who = \"master_bedroom\"\n}\n\nreturn[msg,statusMsg]",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -4387,6 +4532,7 @@
         "x": 360,
         "y": 80,
         "wires": [
+            [],
             []
         ]
     },
@@ -4539,7 +4685,7 @@
         "z": "b88bb63bb13eeb27",
         "name": "",
         "pauseType": "delay",
-        "timeout": "2",
+        "timeout": "1",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -4563,8 +4709,8 @@
         "type": "function",
         "z": "b88bb63bb13eeb27",
         "name": "",
-        "func": "const alexa = global.get('last_alexa')\n\nmsg.who = alexa\n\nreturn msg;",
-        "outputs": 1,
+        "func": "const alexa = global.get('lastAlexaEntityId')\nvar statusMsg = {\n    \"payload\": alexa\n}\n\nmsg.who = alexa\n\nreturn[msg,statusMsg]",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -4572,6 +4718,7 @@
         "x": 360,
         "y": 80,
         "wires": [
+            [],
             []
         ]
     },
@@ -7159,7 +7306,7 @@
         "type": "function",
         "z": "e44b1e7a8ef7ae1d",
         "name": "Holiday Code",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar holidaymode = states['input_boolean.holiday_mode'].state\nvar currentholiday = states['input_select.holiday_animation'].state\nvar holiday = currentholiday.toLowerCase()\n\nif (holidaymode === 'on') {\n    msg.holiday = holiday\n    return msg;\n} else {\n    return null;\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar holidayMode = states['input_boolean.holiday_mode'].state\nvar currentHoliday = states['input_select.holiday_animation'].state\nvar holiday = currentHoliday.toLowerCase()\n\nif (holidayMode === 'on') {\n    msg.holiday = holiday\n    node.status({fill:\"green\",shape:\"dot\",text:\"Holiday On\"});\n    return msg;\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Holiday Off\"});\n    return null;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7238,7 +7385,7 @@
         "type": "function",
         "z": "e44b1e7a8ef7ae1d",
         "name": "Holiday Code",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar holidaymode = states['input_boolean.holiday_mode'].state\nvar currentholiday = states['input_select.holiday_animation'].state\nvar holiday = currentholiday.toLowerCase()\n\nif (holidaymode === 'on') {\n    msg.holiday = holiday\n    return msg;\n} else {\n    return null;\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar holidayMode = states['input_boolean.holiday_mode'].state\nvar holidayHold = states['input_boolean.holiday_mode_hold'].state\nvar currentHoliday = states['input_select.holiday_animation'].state\nvar holiday = currentHoliday.toLowerCase()\n\nif (holidayMode === 'on') {\n    if (holidayHold === 'off') {\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Holiday On\" });\n        msg.holiday = holiday\n        return msg;\n    } else {\n        node.status({fill:\"yellow\",shape:\"dot\",text:\"Holiday Hold On\"});\n        msg.holiday = holiday\n        return msg;\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Holiday Off\"});\n    return null;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7248,7 +7395,8 @@
         "y": 440,
         "wires": [
             [
-                "fd4f6fac7f649cb3"
+                "5c7200b067eb96eb",
+                "6987f02f09134764"
             ]
         ],
         "outputLabels": [
@@ -7276,7 +7424,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1140,
+        "x": 960,
         "y": 440,
         "wires": [
             []
@@ -7333,7 +7481,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1120,
+        "x": 940,
         "y": 500,
         "wires": [
             []
@@ -7503,50 +7651,6 @@
         ]
     },
     {
-        "id": "fd4f6fac7f649cb3",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Holiday Hold",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.holiday_mode_hold",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 930,
-        "y": 440,
-        "wires": [
-            [
-                "5c7200b067eb96eb",
-                "6987f02f09134764"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
-        ]
-    },
-    {
         "id": "24685bfd0b3069f3",
         "type": "api-current-state",
         "z": "e44b1e7a8ef7ae1d",
@@ -7656,7 +7760,7 @@
         "type": "function",
         "z": "e44b1e7a8ef7ae1d",
         "name": "Invert",
-        "func": "var daynight = msg.payload\n\nif (daynight === 1) {\n    msg.payload = 0\n} else if (daynight === 0) {\n    msg.payload = 1\n}\n\nreturn msg;",
+        "func": "var daynight = msg.payload\n\nif (daynight === 1) {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Day\"});\n    msg.payload = 0\n} else if (daynight === 0) {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Night\"});\n    msg.payload = 1\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7694,7 +7798,7 @@
         "type": "function",
         "z": "e44b1e7a8ef7ae1d",
         "name": "Invert",
-        "func": "var daynight = msg.payload\n\nif (daynight === 0) {\n    msg.payload = \"off\"\n} else if (daynight === 1) {\n    msg.payload = \"on\"\n}\n\nreturn msg;",
+        "func": "var daynight = msg.payload\n\nif (daynight === 0) {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n    msg.payload = \"off\"\n} else if (daynight === 1) {\n    node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n    msg.payload = \"on\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -13687,7 +13791,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"text\": \"<voice name='Brian'><prosody rate='150%'>Would you like me to turn on the computer for Collin?</prosody></voice>\",\t    \"event_id\": \"actionable_notification_kallen_computer_on\",\t    \"alexa_device\": msg.last_alexa\t}",
+        "data": "{\t    \"text\": \"<voice name='Brian'><prosody rate='150%'>Would you like me to turn on the computer for Collin?</prosody></voice>\",\t    \"event_id\": \"actionable_notification_kallen_computer_on\",\t    \"alexa_device\": $globalContext('lastAlexaEntityId')\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -13698,45 +13802,6 @@
         "wires": [
             [
                 "ea5306d6f92d9550"
-            ]
-        ]
-    },
-    {
-        "id": "eed94e04df746efe",
-        "type": "api-current-state",
-        "z": "47f17992fab9b4f5",
-        "g": "550e5b2d99316b12",
-        "name": "Last Alexa",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.last_alexa",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "last_alexa",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 390,
-        "y": 680,
-        "wires": [
-            [
-                "b3bb08ff51e46985"
             ]
         ]
     },
@@ -13762,7 +13827,7 @@
         "y": 680,
         "wires": [
             [
-                "eed94e04df746efe"
+                "61cb79c998ee0b59"
             ]
         ],
         "l": false
@@ -13870,6 +13935,34 @@
         "y": 740,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "61cb79c998ee0b59",
+        "type": "change",
+        "z": "47f17992fab9b4f5",
+        "g": "550e5b2d99316b12",
+        "name": "Last Alexa",
+        "rules": [
+            {
+                "t": "set",
+                "p": "last_alexa",
+                "pt": "msg",
+                "to": "lastAlexaEntityId",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 680,
+        "wires": [
+            [
+                "b3bb08ff51e46985"
+            ]
         ]
     },
     {
@@ -19129,6 +19222,7 @@
         "id": "c01d647c6091a47b",
         "type": "file in",
         "z": "5c4ac37140a54ac9",
+        "d": true,
         "g": "b708cb6d93f40dee",
         "name": "Read File",
         "filename": "/config/files/weather_briefing_full.txt",
@@ -19150,6 +19244,7 @@
         "id": "b83b6e027c21a133",
         "type": "alexa-remote-routine",
         "z": "5c4ac37140a54ac9",
+        "d": true,
         "g": "b708cb6d93f40dee",
         "name": "",
         "account": "be975ce229701797",
@@ -19434,6 +19529,7 @@
         "id": "e59180a1a6ae0a90",
         "type": "subflow:a42343e035e3313c",
         "z": "5c4ac37140a54ac9",
+        "d": true,
         "g": "b708cb6d93f40dee",
         "name": "",
         "x": 1390,
@@ -25152,314 +25248,6 @@
         "wires": []
     },
     {
-        "id": "3aba4c35b4dc9618",
-        "type": "server-state-changed",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "Alexa Audio",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "sensor.alexa_audio",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": true,
-        "ignoreCurrentStateUnavailable": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 150,
-        "y": 460,
-        "wires": [
-            [
-                "391b739e5ad50419"
-            ]
-        ]
-    },
-    {
-        "id": "41e81c6e9a506658",
-        "type": "api-current-state",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "Alexa Audio",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.alexa_audio",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 330,
-        "y": 540,
-        "wires": [
-            [
-                "391b739e5ad50419"
-            ]
-        ]
-    },
-    {
-        "id": "2379aab1d51b1f37",
-        "type": "inject",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "120",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 540,
-        "wires": [
-            [
-                "41e81c6e9a506658"
-            ]
-        ]
-    },
-    {
-        "id": "e3bf8fabda3a0377",
-        "type": "server-state-changed",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "Last Alexa",
-        "server": "9e87348d.9c1c48",
-        "version": 4,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "sensor.last_alexa",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": true,
-        "ignoreCurrentStateUnavailable": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 140,
-        "y": 600,
-        "wires": [
-            [
-                "1a278235669d49ac"
-            ]
-        ]
-    },
-    {
-        "id": "dcd71942bab4a11b",
-        "type": "api-current-state",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "Last Alexa",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.last_alexa",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 330,
-        "y": 680,
-        "wires": [
-            [
-                "1a278235669d49ac"
-            ]
-        ]
-    },
-    {
-        "id": "66139388c1e59508",
-        "type": "inject",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "120",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 680,
-        "wires": [
-            [
-                "dcd71942bab4a11b"
-            ]
-        ]
-    },
-    {
-        "id": "c93ac8d2ddc907c0",
-        "type": "comment",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "Friendly Name",
-        "info": "",
-        "x": 880,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "fbf1f34ae9ec10a7",
-        "type": "comment",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "Entity ID",
-        "info": "",
-        "x": 860,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "391b739e5ad50419",
-        "type": "change",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "alexa_audio",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 580,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1a278235669d49ac",
-        "type": "change",
-        "z": "3e4ba157b540d183",
-        "g": "a705cecb0997a43a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "last_alexa",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 580,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "486bca43ddc48fb8",
         "type": "change",
         "z": "3e4ba157b540d183",
@@ -25518,6 +25306,7 @@
         "id": "a09f10883f07aad0",
         "type": "server-state-changed",
         "z": "3e4ba157b540d183",
+        "g": "265593f442864b6a",
         "name": "MB Aircon Installed",
         "server": "9e87348d.9c1c48",
         "version": 4,
@@ -25558,7 +25347,7 @@
             }
         ],
         "x": 170,
-        "y": 1020,
+        "y": 460,
         "wires": [
             [
                 "a8d7f5e5d4f549b0"
@@ -25569,6 +25358,7 @@
         "id": "464e9271285f8450",
         "type": "api-current-state",
         "z": "3e4ba157b540d183",
+        "g": "265593f442864b6a",
         "name": "MB Aircon Installed",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -25596,7 +25386,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 350,
-        "y": 1100,
+        "y": 540,
         "wires": [
             [
                 "a8d7f5e5d4f549b0"
@@ -25607,6 +25397,7 @@
         "id": "9c8056404bfcafed",
         "type": "inject",
         "z": "3e4ba157b540d183",
+        "g": "265593f442864b6a",
         "name": "",
         "props": [
             {
@@ -25621,7 +25412,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 1100,
+        "y": 540,
         "wires": [
             [
                 "464e9271285f8450"
@@ -25632,6 +25423,7 @@
         "id": "a8d7f5e5d4f549b0",
         "type": "change",
         "z": "3e4ba157b540d183",
+        "g": "265593f442864b6a",
         "name": "",
         "rules": [
             {
@@ -25648,10 +25440,127 @@
         "to": "",
         "reg": false,
         "x": 610,
-        "y": 1020,
+        "y": 460,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "04fdddae578ee136",
+        "type": "alexa-remote-event",
+        "z": "3e4ba157b540d183",
+        "name": "",
+        "account": "be975ce229701797",
+        "event": "ws-device-activity",
+        "x": 170,
+        "y": 680,
+        "wires": [
+            [
+                "266634bf3c6019c8",
+                "f9bc4d36a0df7947"
+            ]
+        ]
+    },
+    {
+        "id": "266634bf3c6019c8",
+        "type": "function",
+        "z": "3e4ba157b540d183",
+        "name": "Set Global Variables",
+        "func": "var name = msg.payload.name\nvar serial = msg.payload.deviceSerialNumber\nvar entityId = '{}'\n\nif (name === 'Basement Echo Dot') {\n    var entityId = 'media_player.basement_echo_dot'\n} else if (name === 'Living Room Echo Dot') {\n    var entityId = 'media_player.living_room_echo_dot'\n} else if (name === 'Master Bedroom Echo Dot') {\n    var entityId = 'media_player.master_bedroom_echo_dot'\n}\n\nvar nameMsg = {\n    \"payload\": name\n}\nvar serialMsg = {\n    \"payload\": serial\n}\nvar entityMsg = {\n    \"payload\": entityId\n}\n\nglobal.set('lastAlexaName',name)\nglobal.set('lastAlexaEntityId',entityId)\nglobal.set('lastAlexaSerial',serial)\n\nnode.status({fill:\"green\",shape:\"dot\",text:name});\n\nreturn[nameMsg,serialMsg,entityMsg];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 680,
+        "wires": [
+            [
+                "4560584de593b5c1"
+            ],
+            [
+                "488e4f61d16705d4"
+            ],
+            [
+                "1f3142828a586d08"
+            ]
+        ],
+        "outputLabels": [
+            "Name",
+            "Serial",
+            "Entity ID"
+        ]
+    },
+    {
+        "id": "4560584de593b5c1",
+        "type": "ha-sensor",
+        "z": "3e4ba157b540d183",
+        "name": "Name",
+        "entityConfig": "4118a859da3ae01f",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 630,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "488e4f61d16705d4",
+        "type": "ha-sensor",
+        "z": "3e4ba157b540d183",
+        "name": "Serial",
+        "entityConfig": "790a5433342e7eb5",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 630,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f3142828a586d08",
+        "type": "ha-sensor",
+        "z": "3e4ba157b540d183",
+        "name": "Entity ID",
+        "entityConfig": "4d3001dabc174efe",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 640,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9bc4d36a0df7947",
+        "type": "debug",
+        "z": "3e4ba157b540d183",
+        "name": "Alexa Activities",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 760,
+        "wires": []
     },
     {
         "id": "e038489eca14b1dd",
