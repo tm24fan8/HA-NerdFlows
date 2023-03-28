@@ -685,9 +685,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -734,7 +732,9 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1292,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -806,7 +806,9 @@
             "a3ef2faca9922113"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2112,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -852,7 +854,9 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 792,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -872,7 +876,9 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 199
+        "y": 199,
+        "w": 712,
+        "h": 142
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -955,7 +961,6 @@
             "984386fa0a6369d6",
             "0beae13503166379",
             "6c77ade442a47a30",
-            "bc363dcf2c3aaf3c",
             "6392f2f0586d988a",
             "e505e9f24bf919dd",
             "c1c0d3ee514fa085",
@@ -1105,7 +1110,9 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 359
+        "y": 359,
+        "w": 1012,
+        "h": 222
     },
     {
         "id": "eeafd13be593ae69",
@@ -1173,7 +1180,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "8aee4d340a136bac",
@@ -1348,7 +1357,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 839
+        "y": 839,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "a705cecb0997a43a",
@@ -5895,7 +5906,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "a46fc8e7e70ca893",
         "name": "Announce",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\nvar minutes = states['sensor.kallen_timer_remaining_minutes'].state\nvar seconds = states['sensor.kallen_timer_remaining_seconds'].state\n\nmsg.room = room\nmsg.activity = activity\nmsg.remainingmin = minutes\nmsg.remainingsec = seconds\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\nvar minutes = states['sensor.kallen_timer_remaining_minutes'].state\nvar seconds = states['sensor.kallen_timer_remaining_seconds'].state\n\nmsg.room = room\nmsg.activity = activity\nmsg.remainingmin = minutes\nmsg.remainingsec = seconds\n\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Sent\" });\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5915,7 +5926,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "a46fc8e7e70ca893",
         "name": "Start",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\nvar controlLights = states['input_boolean.kallen_timer_control_lights'].state\nvar duration = states['input_number.kallen_activity_duration'].state\nvar fixDuration = parseFloat(duration)\n\nmsg.room = room\nmsg.activity = activity\nmsg.lights = controlLights\nmsg.duration = fixDuration\n\nif (room === 'Basement') {\n    return[msg,null,null]\n} else if (room === 'Kallen Bedroom') {\n    return [null,msg,null]\n} else {\n    return[null,null,msg]\n}\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\nvar controlLights = states['input_boolean.kallen_timer_control_lights'].state\nvar duration = states['input_number.kallen_activity_duration'].state\nvar fixDuration = parseFloat(duration)\n\nmsg.room = room\nmsg.activity = activity\nmsg.lights = controlLights\nmsg.duration = fixDuration\n\nnode.status({fill:\"green\",shape:\"dot\",text:room});\n\nif (room === 'Basement') {\n    return[msg,null,null]\n} else if (room === 'Kallen Bedroom') {\n    return [null,msg,null]\n} else {\n    return[null,null,msg]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -5951,7 +5962,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "a46fc8e7e70ca893",
         "name": "Announce",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\nvar minutes = states['sensor.kallen_timer_remaining_minutes'].state\nvar seconds = states['sensor.kallen_timer_remaining_seconds'].state\n\nmsg.room = room\nmsg.activity = activity\nmsg.remainingmin = minutes\nmsg.remainingsec = seconds\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\nvar minutes = states['sensor.kallen_timer_remaining_minutes'].state\nvar seconds = states['sensor.kallen_timer_remaining_seconds'].state\n\nmsg.room = room\nmsg.activity = activity\nmsg.remainingmin = minutes\nmsg.remainingsec = seconds\n\nnode.status({fill:\"green\",shape:\"dot\",text:\"Sent\"});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6001,7 +6012,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "1ca205a84922c8c2",
         "name": "Announce",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\n\nmsg.topic = room\nmsg.activity = activity\nmsg.payload = 'activity timer completed, good job!'\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar room = states['input_select.kallen_activity_room'].state\nvar activity = states['input_select.kallen_activities'].state\n\nmsg.topic = room\nmsg.activity = activity\nmsg.payload = 'activity timer completed, good job!'\n\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Sent\" });\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10793,7 +10804,7 @@
         "z": "eff21041cc941fef",
         "g": "8aee4d340a136bac",
         "name": "Delay",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar duration = states['input_number.downstairs_bathroom_lights_off_delay'].state\nvar newDuration = duration * 60\n\nmsg.duration = newDuration\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar duration = states['input_number.downstairs_bathroom_lights_off_delay'].state\nvar newDuration = duration * 60\n\nmsg.duration = newDuration\n\nnode.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14420,7 +14431,7 @@
         "z": "b5717a86ce55bc29",
         "g": "eeafd13be593ae69",
         "name": "Check Parameters",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar earlyNightMode = states['binary_sensor.early_night_mode'].state\nvar frontPorchToggle = states['input_boolean.front_porch_light_on'].state\nvar holidaymode = states['input_boolean.holiday_mode'].state\nvar currentholiday = states['input_select.holiday_animation'].state\nvar holiday = currentholiday.toLowerCase()\n\nif (earlyNightMode === 'on' && frontPorchToggle === 'on') {\n    if (holidaymode === 'on') {\n        msg.holiday = holiday\n        return[msg,null]\n    } else {\n        return[null,msg]\n    }\n} else {\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar earlyNightMode = states['binary_sensor.early_night_mode'].state\nvar frontPorchToggle = states['input_boolean.front_porch_light_on'].state\nvar holidaymode = states['input_boolean.holiday_mode'].state\nvar currentholiday = states['input_select.holiday_animation'].state\nvar holiday = currentholiday.toLowerCase()\n\nif (earlyNightMode === 'on' && frontPorchToggle === 'on') {\n    if (holidaymode === 'on') {\n        msg.holiday = holiday\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Holiday On\"});\n        return[msg,null]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Holiday Off\"});\n        return[null,msg]\n    }\n} else {\n    if (frontPorchToggle === 'off') {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Disabled\" });\n    } else if (earlyNightMode === 'off') {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Daytime\" });\n    }\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -14551,7 +14562,7 @@
         "z": "b5717a86ce55bc29",
         "g": "eeafd13be593ae69",
         "name": "If Motion",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar deliveryMode = states['input_boolean.delivery_mode'].state\nvar detect = msg.detect\n\nif (detect === 'motion') {\n    if (deliveryMode === 'on') {\n        return[msg,null]\n    } else {\n        return null\n    }\n} else {\n    return[null,msg]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar deliveryMode = states['input_boolean.delivery_mode'].state\nvar detect = msg.detect\n\nif (detect === 'motion') {\n    if (deliveryMode === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Motion/Delivery\"});\n        return[msg,null]\n    } else {\n        node.status({});\n        return null\n    }\n} else {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Not Motion\"});\n    return[null,msg]\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -14588,7 +14599,7 @@
         "z": "b5717a86ce55bc29",
         "g": "eeafd13be593ae69",
         "name": "Delay",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar delay = states['input_number.front_porch_motion_off_delay'].state\nvar duration = delay * 60\n\nmsg.duration = duration\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar delay = states['input_number.front_porch_motion_off_delay'].state\nvar duration = delay * 60\n\nmsg.duration = duration\n\nnode.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + \" minutes\"});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14608,7 +14619,7 @@
         "z": "b5717a86ce55bc29",
         "g": "eeafd13be593ae69",
         "name": "Shut Off",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar frontPorchToggle = states['input_boolean.front_porch_light_on'].state\nvar deliveryMode = states['input_boolean.delivery_mode'].state\nvar holidaymode = states['input_boolean.holiday_mode'].state\nvar currentholiday = states['input_select.holiday_animation'].state\nvar holiday = currentholiday.toLowerCase()\n\nif (frontPorchToggle === 'on' && deliveryMode === 'off') {\n    if (holidaymode === 'on') {\n        return[msg,null]\n    } else {\n        return[null,msg]\n    }\n} else {\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar frontPorchToggle = states['input_boolean.front_porch_light_on'].state\nvar deliveryMode = states['input_boolean.delivery_mode'].state\nvar holidaymode = states['input_boolean.holiday_mode'].state\nvar currentholiday = states['input_select.holiday_animation'].state\nvar holiday = currentholiday.toLowerCase()\n\nif (frontPorchToggle === 'on' && deliveryMode === 'off') {\n    if (holidaymode === 'on') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Holiday On\"});\n        return[msg,null]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Holiday Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Disabled\"});\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -15630,21 +15641,27 @@
         "type": "function",
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
-        "name": "",
-        "func": "if (msg.payload === \"YouTube\") {\n    msg.payload = \"start\"\n} else if (msg.payload === \"Netflix\") {\n    msg.payload = \"start\"\n} else if (msg.payload === \"Plex\") {\n    msg.payload = \"start\"\n} else if (msg.payload === \"Twitch\") {\n    msg.payload = \"start\"\n} else if (msg.payload === \"Hulu\") {\n    msg.payload = \"start\"\n} else {\n    msg.payload = \"stop\"\n}\nreturn msg;",
-        "outputs": 1,
+        "name": "Processing",
+        "func": "var app = msg.payload\nvar payload = {}\n\nif (app === \"YouTube\") {\n    payload = \"start\"\n} else if (app === \"Netflix\") {\n    payload = \"start\"\n} else if (app === \"Plex\") {\n    payload = \"start\"\n} else if (app === \"Twitch\") {\n    payload = \"start\"\n} else if (app === \"Hulu\") {\n    payload = \"start\"\n} else {\n    payload = \"stop\"\n}\n\nmsg.payload = payload\n\nif (payload === 'start') {\n    node.status({fill:\"green\",shape:\"dot\",text:app});\n    return[msg,null]\n} else if (payload === 'stop') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Stopped\"});\n    return[null,msg]\n}",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 355,
+        "x": 410,
         "y": 860,
         "wires": [
             [
-                "bc363dcf2c3aaf3c"
+                "6c77ade442a47a30"
+            ],
+            [
+                "6392f2f0586d988a"
             ]
         ],
-        "l": false
+        "outputLabels": [
+            "Start",
+            "Stop"
+        ]
     },
     {
         "id": "6c77ade442a47a30",
@@ -15668,46 +15685,11 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 610,
+        "x": 630,
         "y": 820,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "bc363dcf2c3aaf3c",
-        "type": "switch",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "start",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "stop",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 425,
-        "y": 860,
-        "wires": [
-            [
-                "6c77ade442a47a30"
-            ],
-            [
-                "6392f2f0586d988a"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "6392f2f0586d988a",
@@ -15731,7 +15713,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 610,
+        "x": 630,
         "y": 880,
         "wires": [
             []
@@ -19497,7 +19479,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Shower Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = states['sensor.pirateweather_temperature'].state\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar nighttemp = states['input_number.master_bedroom_night_temp'].state\nvar showerMode = msg.payload\n\nmsg.temp = temp\nmsg.nighttemp = nighttemp\nmsg.threshold = threshold\n\nif (ac === 'off') {\n    if (showerMode === 'on') {\n        if (temp >= threshold) {\n            return[msg,null]\n        } else {\n            return null\n        }\n    } else if (showerMode === 'off') {\n        return[null,msg]\n    }\n} else {\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = states['sensor.pirateweather_temperature'].state\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar nighttemp = states['input_number.master_bedroom_night_temp'].state\nvar showerMode = msg.payload\n\nmsg.temp = temp\nmsg.nighttemp = nighttemp\nmsg.threshold = threshold\n\nif (ac === 'on') {\n    if (showerMode === 'on') {\n        if (temp >= threshold) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Shower Mode On\"});\n            return[msg,null]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Too Cold\"});\n            return null\n        }\n    } else if (showerMode === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Shower Mode Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -19524,7 +19506,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar topic = msg.topic\nvar vacation = states['input_boolean.vacation_mode'].state\nvar highTemp = states['sensor.todays_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar showerMode = states['input_boolean.shower_mode'].state\nvar nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\n\nmsg.acInstalled = ac\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\nmsg.daythreshold = dayThreshold\nmsg.showermode = showerMode\nmsg.nightvolume = nightVolume\n\nif (vacation === 'off') {\n    if (topic === 'mrbedroom-cooling') {\n        return [msg,null,null]\n    } else if (topic === 'manual-night') {\n        return [msg,msg,null]\n    } else if (topic === 'mrbedroom-fan') {\n        return [null,msg,null]\n    } else if (topic === 'mrbedroom-wakeup' || topic === 'manual-day') {\n        return [null,null,msg]\n    }\n} else {\n    return [null,null,null]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar topic = msg.topic\nvar vacation = states['input_boolean.vacation_mode'].state\nvar highTemp = states['sensor.todays_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar showerMode = states['input_boolean.shower_mode'].state\nvar nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\n\nmsg.acInstalled = ac\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\nmsg.daythreshold = dayThreshold\nmsg.showermode = showerMode\nmsg.nightvolume = nightVolume\n\nif (vacation === 'off') {\n    if (topic === 'mrbedroom-cooling') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Cooling Schedule\"});\n        return[msg,null,null]\n    } else if (topic === 'manual-night') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night\"});\n        return[msg,msg,null]\n    } else if (topic === 'mrbedroom-fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"});\n        return[null,msg,null]\n    } else if (topic === 'mrbedroom-wakeup') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup Schedule\"});\n        return[null,null,msg]\n    } else if (topic === 'manual-day'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Day\"});\n        return[null,null,msg]\n    }\n} else {\n    return[null,null,null]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -19587,7 +19569,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Cooling Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar showerMode = msg.showermode\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\n\nif (ac === 'on' && showerMode === 'off') {\n    if (schedMode === 'AC') {\n        return [msg,null,null]\n    } else if (schedMode === 'Fan') {\n        return [null,msg,null]\n    } else if (schedMode === 'N/A') {\n        return [null,null,msg]\n    }\n} else {\n    return [null,null,null]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar showerMode = msg.showermode\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\n\nif (ac === 'on' && showerMode === 'off') {\n    if (schedMode === 'AC') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC\"});\n        return[msg,null,null]\n    } else if (schedMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,msg,null]\n    } else if (schedMode === 'N/A') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n        return[null,null,msg]\n    }\n} else {\n    if (ac === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    } else if (showerMode === 'on') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Shower Mode On\"});\n    }\n    return[null,null,null]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -19619,7 +19601,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Bedtime Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar bedtimeTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar topic = msg.topic\n\nmsg.bedtimetemp = bedtimeTemp\n\nif (ac === 'on') {\n    if (topic === 'mrbedroom-bedtime'){\n        if (schedMode === 'AC') {\n            return[msg,null]\n        } else {\n            return null\n        }\n    } else if (topic === 'manual-bedtime'){\n        return[null,msg]\n    }\n} else {\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar bedtimeTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar topic = msg.topic\n\nmsg.bedtimetemp = bedtimeTemp\n\nif (ac === 'on') {\n    if (topic === 'mrbedroom-bedtime'){\n        if (schedMode === 'AC') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"A/C\"});\n            return[msg,null]\n        } else {\n            node.status({fill:\"grey\",shape:\"ring\",text:\"No A/C\"});\n            return null\n        }\n    } else if (topic === 'manual-bedtime'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Trigger\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -23314,7 +23296,7 @@
         "z": "ee67610b4a0578d2",
         "g": "50e4d951ee7b3e54",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar text = states['input_text.report_system'].state\nvar type = states['input_select.report_type'].state\n\nmsg.text = text\n\nif (type === \"New Idea\") {\n    msg.type = \"81234669\"\n} else if (type === \"Bug Report\") {\n    msg.type = \"94865633\"\n}\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar text = states['input_text.report_system'].state\nvar type = states['input_select.report_type'].state\n\nmsg.text = text\n\nif (type === \"New Idea\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"New Idea\"});\n    msg.type = \"81234669\"\n} else if (type === \"Bug Report\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Bug Report\"});\n    msg.type = \"94865633\"\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -23682,7 +23664,7 @@
         "z": "ee67610b4a0578d2",
         "g": "477e752fcd2e2a19",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar message = states['input_text.tts_message'].state\nvar who = states['input_select.tts_devices'].state\nvar voice = states['input_select.announcement_voice'].state\n\nmsg.payload = message\nmsg.topic = who\nmsg.voice = voice\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar message = states['input_text.tts_message'].state\nvar who = states['input_select.tts_devices'].state\nvar voice = states['input_select.announcement_voice'].state\n\nmsg.payload = message\nmsg.topic = who\nmsg.voice = voice\n\nnode.status({fill:\"green\",shape:\"dot\",text:voice + \" speaking in \" + who});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -23702,7 +23684,7 @@
         "z": "ee67610b4a0578d2",
         "g": "5595964c8367c984",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar title = states['input_text.text_notification_title'].state\nvar message = states['input_text.text_notification'].state\nvar priority = states['input_select.text_notification_priority_level'].state\nvar phones = states['input_select.select_phones'].state.toLowerCase()\nvar tvs = states['input_select.select_tvs'].state.toLowerCase()\n\nvar phoneMsg = {\n    \"title\": title,\n    \"payload\": message,\n    \"priority\": priority,\n    \"phones\": phones\n}\nvar tvsMsg = {\n    \"title\": title,\n    \"payload\": message,\n    \"priority\": priority,\n    \"tvs\": tvs\n}\n\nif (phones != 'none' && tvs != 'none') {\n    return[phoneMsg,tvsMsg]\n} else if (phones === 'none' && tvs != 'none') {\n    return[null,tvsMsg]\n} else if (phones != 'none' && tvs === 'none') {\n    return[phoneMsg,null]\n} else {\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar title = states['input_text.text_notification_title'].state\nvar message = states['input_text.text_notification'].state\nvar priority = states['input_select.text_notification_priority_level'].state\nvar phones = states['input_select.select_phones'].state.toLowerCase()\nvar tvs = states['input_select.select_tvs'].state.toLowerCase()\n\nvar phoneMsg = {\n    \"title\": title,\n    \"payload\": message,\n    \"priority\": priority,\n    \"phones\": phones\n}\nvar tvsMsg = {\n    \"title\": title,\n    \"payload\": message,\n    \"priority\": priority,\n    \"tvs\": tvs\n}\n\nif (phones != 'none' && tvs != 'none') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Phones and TVs\"});\n    return[phoneMsg,tvsMsg]\n} else if (phones === 'none' && tvs != 'none') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"TVs Only\"});\n    return[null,tvsMsg]\n} else if (phones != 'none' && tvs === 'none') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Phones Only\"});\n    return[phoneMsg,null]\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No devices selected\"});\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -24068,7 +24050,7 @@
         "type": "function",
         "z": "789ba711dc04fad2",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar peoplePresent = states['binary_sensor.people_present'].state\nvar streamLive = msg.payload\n\nif (vacationMode === 'off' && peoplePresent === 'on') {\n    if (streamLive === 'streaming') {\n        return[msg,null]\n    } else {\n        return[null,msg]\n    }\n} else {\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar peoplePresent = states['binary_sensor.people_present'].state\nvar streamLive = msg.payload\n\nif (vacationMode === 'off' && peoplePresent === 'on') {\n    if (streamLive === 'streaming') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Stream Live\"});\n        return[msg,null]\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Stream Offline\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Skipped\"});\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
