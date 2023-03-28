@@ -685,7 +685,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -732,9 +734,7 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1292,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -806,9 +806,7 @@
             "a3ef2faca9922113"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2112,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -834,9 +832,7 @@
             "486bca43ddc48fb8"
         ],
         "x": 34,
-        "y": 159,
-        "w": 1072,
-        "h": 242
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -856,9 +852,7 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39,
-        "w": 792,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -878,9 +872,7 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 199,
-        "w": 712,
-        "h": 142
+        "y": 199
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -928,9 +920,7 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -948,9 +938,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1066,9 +1054,7 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1132,
-        "h": 382
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1119,9 +1105,7 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 359,
-        "w": 1012,
-        "h": 222
+        "y": 359
     },
     {
         "id": "eeafd13be593ae69",
@@ -1155,9 +1139,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1234,9 +1216,7 @@
             "4829663e9913e2aa"
         ],
         "x": 34,
-        "y": 639,
-        "w": 1072,
-        "h": 202
+        "y": 639
     },
     {
         "id": "f519aff597ece351",
@@ -1352,9 +1332,7 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1393,9 +1371,7 @@
             "1a278235669d49ac"
         ],
         "x": 34,
-        "y": 419,
-        "w": 952,
-        "h": 302
+        "y": 419
     },
     {
         "id": "19b0e082db0643ac",
@@ -7021,7 +6997,7 @@
         "halt_if": "off",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "binary_sensor.upstairs_bathroom_motion",
+        "entity_id": "binary_sensor.upstairs_bathroom_occupied",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -12607,7 +12583,7 @@
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "binary_sensor.upstairs_bathroom_motion",
+        "entity_id": "binary_sensor.upstairs_bathroom_occupied",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
