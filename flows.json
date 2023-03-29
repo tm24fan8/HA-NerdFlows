@@ -20753,7 +20753,7 @@
         "y": 1120,
         "wires": [
             [
-                "efd47cbc26ed2810"
+                "716d4f60c2af0f2e"
             ]
         ]
     },
@@ -20912,6 +20912,25 @@
         "wires": [
             [
                 "9f1c60a822a2b550"
+            ]
+        ]
+    },
+    {
+        "id": "716d4f60c2af0f2e",
+        "type": "function",
+        "z": "5c4ac37140a54ac9",
+        "name": "Filtering",
+        "func": "var responseType = msg.payload.event.event_response_type\n\nif (responseType === 'ResponseNone') {\n    return null\n} else {\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1120,
+        "wires": [
+            [
+                "efd47cbc26ed2810"
             ]
         ]
     },
