@@ -870,9 +870,7 @@
             "486bca43ddc48fb8"
         ],
         "x": 34,
-        "y": 159,
-        "w": 1072,
-        "h": 242
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1394,9 +1392,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 419,
-        "w": 732,
-        "h": 162
+        "y": 419
     },
     {
         "id": "19b0e082db0643ac",
@@ -20867,7 +20863,7 @@
         "type": "function",
         "z": "5c4ac37140a54ac9",
         "name": "Filtering",
-        "func": "var who = msg.who\nvar responseType = msg.payload.event.event_response_type\n\nif (responseType != 'ResponseNone') {\n    if (who === 'media_player.master_bedroom_echo_dot') {\n        msg.who = 'media_player.living_room_echo_dot'\n        node.status({fill:\"red\",shape:\"dot\",text:\"Rerouted\"});\n        return msg;\n    } else {\n        msg.who = who\n        node.status({fill:\"green\",shape:\"dot\",text:\"Unchanged\"});\n        return msg;\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No Response\"});\n    return null\n}",
+        "func": "var who = msg.who\n\nif (who === 'media_player.master_bedroom_echo_dot') {\n    msg.who = 'media_player.living_room_echo_dot'\n    node.status({ fill: \"red\", shape: \"dot\", text: \"Rerouted\" });\n    return msg;\n} else {\n    msg.who = who\n    node.status({ fill: \"green\", shape: \"dot\", text: \"Unchanged\" });\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
