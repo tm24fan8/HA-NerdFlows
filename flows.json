@@ -725,7 +725,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -772,7 +774,9 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1292,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -790,7 +794,6 @@
             "fd0a309681a536de",
             "40dc1e930b887eb7",
             "bf1b0d6542ef6b38",
-            "512b9dd5177ebeec",
             "24c3166123d5dad0",
             "40f52ef656550cf6",
             "b14bcbf98b7e9f91",
@@ -799,12 +802,9 @@
             "20f407c978d14863",
             "36c671c1520680e7",
             "efe1917ebdcef673",
-            "c0408b03c3cf8f23",
             "444acaf315688ac9",
-            "9949527a728eaf42",
             "dc440dfc78c41b8a",
             "1aa901d26ce8ac46",
-            "7659d7b193fc7fb5",
             "21001f5409130f44",
             "bc592ba259667f9d",
             "1f7ac875e593d434",
@@ -825,8 +825,6 @@
             "6c06c2eec1583c66",
             "0c680585239e7f60",
             "e2581a5f3f4888df",
-            "c6537f1924370c8c",
-            "c324cf8a87c3b388",
             "1dfb0bcc98f1457b",
             "096369136e9e607f",
             "783cfb381b70afc5",
@@ -835,16 +833,18 @@
             "0f6d425791646818",
             "bc9d4a0d7a7c5c79",
             "67509a5554fc091f",
-            "2c74eec67f3ff8d8",
             "1eb13d819ba7e226",
             "48abdc71d77186ef",
             "a10629857d60f774",
             "a370aec30428ffb1",
             "e2ad91fc748ca519",
-            "a3ef2faca9922113"
+            "a3ef2faca9922113",
+            "a8ef744455bb4c0a"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2112,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -870,7 +870,9 @@
             "486bca43ddc48fb8"
         ],
         "x": 34,
-        "y": 159
+        "y": 159,
+        "w": 1072,
+        "h": 242
     },
     {
         "id": "477e752fcd2e2a19",
@@ -890,7 +892,9 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 792,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -910,7 +914,9 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 199
+        "y": 199,
+        "w": 712,
+        "h": 142
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -958,7 +964,9 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -976,7 +984,9 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 202
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1003,7 +1013,9 @@
             "7cb8056b3b41a9e8"
         ],
         "x": 34,
-        "y": 779
+        "y": 779,
+        "w": 1012,
+        "h": 442
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1048,7 +1060,9 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 832,
+        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -1079,7 +1093,9 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1132,
+        "h": 382
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1130,7 +1146,9 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 359
+        "y": 359,
+        "w": 1012,
+        "h": 222
     },
     {
         "id": "eeafd13be593ae69",
@@ -1164,7 +1182,9 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1492,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1218,7 +1238,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1241,7 +1263,9 @@
             "61cb79c998ee0b59"
         ],
         "x": 34,
-        "y": 639
+        "y": 639,
+        "w": 1072,
+        "h": 202
     },
     {
         "id": "f519aff597ece351",
@@ -1271,7 +1295,9 @@
             "c8af362d48d5c0ad"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 622
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1291,7 +1317,9 @@
             "2a0e3a76af7ab628"
         ],
         "x": 64,
-        "y": 699
+        "y": 699,
+        "w": 1022,
+        "h": 82
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1355,7 +1383,9 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39
+        "y": 39,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1371,7 +1401,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659
+        "y": 659,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "265593f442864b6a",
@@ -1388,7 +1420,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 419
+        "y": 419,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "19b0e082db0643ac",
@@ -16195,7 +16229,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1030,
+        "x": 850,
         "y": 320,
         "wires": [
             [
@@ -16295,87 +16329,6 @@
         ]
     },
     {
-        "id": "c0408b03c3cf8f23",
-        "type": "change",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Too cold outside, AC running fan only.",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "AC Schedule Skipped",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1775,
-        "y": 220,
-        "wires": [
-            [
-                "1eb13d819ba7e226"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "9949527a728eaf42",
-        "type": "change",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Master bedroom AC temp has been set to nighttemp as scheduled",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "AC Schedule Activated",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "nighttemp",
-                "fromt": "str",
-                "to": "nighttemp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1935,
-        "y": 120,
-        "wires": [
-            [
-                "1eb13d819ba7e226"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "bf1b0d6542ef6b38",
         "type": "api-call-service",
         "z": "72f99805df043603",
@@ -16401,45 +16354,9 @@
         "y": 320,
         "wires": [
             [
-                "c324cf8a87c3b388"
+                "a8ef744455bb4c0a"
             ]
         ]
-    },
-    {
-        "id": "512b9dd5177ebeec",
-        "type": "change",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Master bedroom fan has been activated as scheduled.",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Fan Schedule Activated",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1455,
-        "y": 320,
-        "wires": [
-            [
-                "1eb13d819ba7e226"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "24c3166123d5dad0",
@@ -17281,33 +17198,6 @@
         ]
     },
     {
-        "id": "7659d7b193fc7fb5",
-        "type": "switch",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "manual-night",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1875,
-        "y": 120,
-        "wires": [
-            [
-                "9949527a728eaf42"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "21001f5409130f44",
         "type": "ha-button",
         "z": "72f99805df043603",
@@ -17917,60 +17807,6 @@
         "wires": []
     },
     {
-        "id": "c6537f1924370c8c",
-        "type": "switch",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "manual-night",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1715,
-        "y": 220,
-        "wires": [
-            [
-                "c0408b03c3cf8f23"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "c324cf8a87c3b388",
-        "type": "switch",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "manual-night",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1395,
-        "y": 320,
-        "wires": [
-            [
-                "512b9dd5177ebeec"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "1dfb0bcc98f1457b",
         "type": "api-call-service",
         "z": "72f99805df043603",
@@ -18274,7 +18110,7 @@
         "y": 220,
         "wires": [
             [
-                "c6537f1924370c8c"
+                "a8ef744455bb4c0a"
             ]
         ]
     },
@@ -18304,7 +18140,7 @@
         "y": 120,
         "wires": [
             [
-                "7659d7b193fc7fb5"
+                "a8ef744455bb4c0a"
             ]
         ]
     },
@@ -18734,36 +18570,6 @@
         ]
     },
     {
-        "id": "2c74eec67f3ff8d8",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set Volume",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "volume_set",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.master_bedroom_echo_dot"
-        ],
-        "data": "{\t    \"volume_level\": msg.nightvolume\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 830,
-        "y": 320,
-        "wires": [
-            [
-                "6fb7131d5534350c"
-            ]
-        ]
-    },
-    {
         "id": "90329b0683f81550",
         "type": "api-render-template",
         "z": "72f99805df043603",
@@ -19004,7 +18810,7 @@
                 "10d9b30654ef759c"
             ],
             [
-                "2c74eec67f3ff8d8"
+                "6fb7131d5534350c"
             ],
             [
                 "0a783dc1cb68b4bf"
@@ -19055,7 +18861,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Cooling Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar showerMode = msg.showermode\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\n\nif (ac === 'on' && showerMode === 'off') {\n    if (schedMode === 'AC') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC\"});\n        return[msg,null,null]\n    } else if (schedMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,msg,null]\n    } else if (schedMode === 'N/A') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n        return[null,null,msg]\n    }\n} else {\n    if (ac === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    } else if (showerMode === 'on') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Shower Mode On\"});\n    }\n    return[null,null,null]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar showerMode = msg.showermode\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\n\nmsg.schedmode = schedMode\n\nif (ac === 'on' && showerMode === 'off') {\n    if (schedMode === 'AC') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC\"});\n        return[msg,null,null]\n    } else if (schedMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,msg,null]\n    } else if (schedMode === 'N/A') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n        return[null,null,msg]\n    }\n} else {\n    if (ac === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    } else if (showerMode === 'on') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Shower Mode On\"});\n    }\n    return[null,null,null]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -19109,6 +18915,26 @@
             "Manual"
         ],
         "icon": "font-awesome/fa-bed"
+    },
+    {
+        "id": "a8ef744455bb4c0a",
+        "type": "function",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Notifications",
+        "func": "var topic = msg.topic\nvar nightTemp = msg.nighttemp\n\nvar coolMsg = {\n    \"payload\": 'Master bedroom AC temp has been set to ' + nightTemp + '°F as scheduled',\n    \"topic\": 'AC Mode: Cooling'\n}\nvar fanOnlyMsg = {\n    \"payload\": 'Too cold outside, AC running fan only.',\n    \"topic\": \"AC Mode: Fan Only\"\n}\nvar fanSchedMsg = {\n    \"payload\": 'Master bedroom fan has been activated as scheduled.',\n    \"topic\": 'Fan Schedule Activated'\n}\n\nif (topic === 'mrbedroom-cooling') {\n    var schedMode = msg.schedmode\n    if (schedMode === 'AC') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC Cooling\"});\n        return coolMsg;\n    } else if (schedMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC Fan Only\"});\n        return fanOnlyMsg;\n    }\n} else if (topic === 'mrbedroom-fan') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"});\n    return fanSchedMsg;\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Manual Trigger Blocked\"});\n    return null\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1830,
+        "y": 320,
+        "wires": [
+            [
+                "1eb13d819ba7e226"
+            ]
+        ]
     },
     {
         "id": "105271e0816c6a52",
