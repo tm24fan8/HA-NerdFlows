@@ -725,9 +725,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -774,9 +772,7 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1292,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -842,9 +838,7 @@
             "a8ef744455bb4c0a"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2112,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -870,9 +864,7 @@
             "486bca43ddc48fb8"
         ],
         "x": 34,
-        "y": 159,
-        "w": 1072,
-        "h": 242
+        "y": 159
     },
     {
         "id": "477e752fcd2e2a19",
@@ -892,9 +884,7 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39,
-        "w": 792,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -914,9 +904,7 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 199,
-        "w": 712,
-        "h": 142
+        "y": 199
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -964,9 +952,7 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -984,9 +970,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1013,9 +997,7 @@
             "7cb8056b3b41a9e8"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1012,
-        "h": 442
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1060,9 +1042,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1093,9 +1073,7 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1132,
-        "h": 382
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1146,9 +1124,7 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 359,
-        "w": 1012,
-        "h": 222
+        "y": 359
     },
     {
         "id": "eeafd13be593ae69",
@@ -1182,9 +1158,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1263,9 +1237,7 @@
             "61cb79c998ee0b59"
         ],
         "x": 34,
-        "y": 639,
-        "w": 1072,
-        "h": 202
+        "y": 639
     },
     {
         "id": "f519aff597ece351",
@@ -1295,9 +1267,7 @@
             "c8af362d48d5c0ad"
         ],
         "x": 54,
-        "y": 39,
-        "w": 852,
-        "h": 622
+        "y": 39
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1317,9 +1287,7 @@
             "2a0e3a76af7ab628"
         ],
         "x": 64,
-        "y": 699,
-        "w": 1022,
-        "h": 82
+        "y": 699
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1383,9 +1351,7 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1401,9 +1367,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -1420,21 +1384,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 419,
-        "w": 732,
-        "h": 162
-    },
-    {
-        "id": "19b0e082db0643ac",
-        "type": "junction",
-        "z": "eff21041cc941fef",
-        "x": 300,
-        "y": 40,
-        "wires": [
-            [
-                "d790134891fedfcc"
-            ]
-        ]
+        "y": 419
     },
     {
         "id": "fba69dfc80829db7",
@@ -3462,7 +3412,7 @@
         "entityId": [
             "switch.adaptive_lighting_{{topic}}"
         ],
-        "data": "",
+        "data": "{\t    \"adapt_brightness\" : msg.brightness,\t    \"adapt_color\" : msg.color\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -10315,10 +10265,10 @@
             }
         ],
         "x": 140,
-        "y": 40,
+        "y": 100,
         "wires": [
             [
-                "19b0e082db0643ac"
+                "d790134891fedfcc"
             ]
         ]
     },
@@ -10372,10 +10322,10 @@
             }
         ],
         "x": 110,
-        "y": 100,
+        "y": 40,
         "wires": [
             [
-                "19b0e082db0643ac"
+                "85e820743550308b"
             ]
         ]
     },
@@ -10432,7 +10382,7 @@
         "y": 160,
         "wires": [
             [
-                "19b0e082db0643ac"
+                "d790134891fedfcc"
             ]
         ]
     },
@@ -10489,7 +10439,7 @@
         "y": 280,
         "wires": [
             [
-                "19b0e082db0643ac"
+                "d790134891fedfcc"
             ]
         ]
     },
@@ -10546,7 +10496,7 @@
         "y": 220,
         "wires": [
             [
-                "19b0e082db0643ac"
+                "d790134891fedfcc"
             ]
         ]
     },
@@ -10642,7 +10592,7 @@
         "y": 340,
         "wires": [
             [
-                "19b0e082db0643ac"
+                "d790134891fedfcc"
             ]
         ]
     },
@@ -10829,7 +10779,8 @@
         "y": 400,
         "wires": [
             [
-                "b19f4a996fd4c2ee"
+                "b19f4a996fd4c2ee",
+                "d790134891fedfcc"
             ]
         ]
     },
@@ -11049,6 +11000,25 @@
         "wires": [
             [
                 "41a8d5ef20cf55d7"
+            ]
+        ]
+    },
+    {
+        "id": "85e820743550308b",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "name": "Adaptive",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar adaptBrt = states['switch.adaptive_lighting_adapt_brightness_living_room'].state\nvar adaptColor = states['switch.adaptive_lighting_adapt_color_living_room'].state\n\nif (adaptBrt === 'on' && adaptColor === 'off') {\n    msg.brightness = 'true'\n    msg.color = 'false'\n} else if (adaptColor === 'on' && adaptBrt === 'off') {\n    msg.brightness = 'false'\n    msg.color = 'true'\n} else {\n    msg.brightness = 'true'\n    msg.color = 'true'\n}\n\nmsg.brt = adaptBrt\nmsg.clr = adaptColor\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 40,
+        "wires": [
+            [
+                "d790134891fedfcc"
             ]
         ]
     },
