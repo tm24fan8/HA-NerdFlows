@@ -11008,7 +11008,7 @@
         "type": "function",
         "z": "eff21041cc941fef",
         "name": "Adaptive",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar adaptBrt = states['switch.adaptive_lighting_adapt_brightness_living_room'].state\nvar adaptColor = states['switch.adaptive_lighting_adapt_color_living_room'].state\n\nif (adaptBrt === 'on' && adaptColor === 'off') {\n    msg.brightness = 'true'\n    msg.color = 'false'\n} else if (adaptColor === 'on' && adaptBrt === 'off') {\n    msg.brightness = 'false'\n    msg.color = 'true'\n} else {\n    msg.brightness = 'true'\n    msg.color = 'true'\n}\n\nmsg.brt = adaptBrt\nmsg.clr = adaptColor\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar adaptBrt = states['switch.adaptive_lighting_adapt_brightness_living_room'].state\nvar adaptColor = states['switch.adaptive_lighting_adapt_color_living_room'].state\n\nif (adaptBrt === 'on' && adaptColor === 'off') {\n    msg.brightness = 'true'\n    msg.color = 'false'\n} else if (adaptColor === 'on' && adaptBrt === 'off') {\n    msg.brightness = 'false'\n    msg.color = 'true'\n} else {\n    msg.brightness = 'true'\n    msg.color = 'true'\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
