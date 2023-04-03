@@ -1212,9 +1212,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539,
-        "w": 612,
-        "h": 202
+        "y": 539
     },
     {
         "id": "550e5b2d99316b12",
@@ -6229,14 +6227,14 @@
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "light",
+        "domain": "script",
         "service": "turn_on",
-        "areaId": [
-            "living_room",
-            "mud_room"
-        ],
+        "areaId": [],
         "deviceId": [],
-        "entityId": [],
+        "entityId": [
+            "script.evening_on_first_floor",
+            "script.evening_on_second_floor"
+        ],
         "data": "",
         "dataType": "jsonata",
         "mergeContext": "",
@@ -6378,8 +6376,7 @@
         "y": 60,
         "wires": [
             [
-                "e9aba9f5312297b7",
-                "453ea64f2d207692"
+                "e9aba9f5312297b7"
             ]
         ],
         "l": false
@@ -6414,8 +6411,7 @@
         "y": 180,
         "wires": [
             [
-                "e9aba9f5312297b7",
-                "453ea64f2d207692"
+                "e9aba9f5312297b7"
             ]
         ],
         "l": false
@@ -7426,76 +7422,6 @@
         "queue": "none",
         "x": 940,
         "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "453ea64f2d207692",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Upstairs Bathroom State",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "light.upstairs_bathroom_lights",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 2090,
-        "y": 360,
-        "wires": [
-            [
-                "0b690d62ae351afc"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
-        ]
-    },
-    {
-        "id": "0b690d62ae351afc",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Upstairs Bathroom Nightlight",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.upstairs_bathroom_scenes"
-        ],
-        "data": "{\t    \"option\":\"Nightlight\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2360,
-        "y": 360,
         "wires": [
             []
         ]
