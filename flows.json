@@ -838,7 +838,8 @@
             "e2ad91fc748ca519",
             "a3ef2faca9922113",
             "a8ef744455bb4c0a",
-            "6ed7feb3956038ed"
+            "6ed7feb3956038ed",
+            "4a1db30e164dadc8"
         ],
         "x": 14,
         "y": 19,
@@ -16372,7 +16373,9 @@
         "x": 1510,
         "y": 500,
         "wires": [
-            []
+            [
+                "4a1db30e164dadc8"
+            ]
         ]
     },
     {
@@ -18726,7 +18729,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar topic = msg.topic\nvar vacation = states['input_boolean.vacation_mode'].state\nvar highTemp = states['sensor.todays_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar showerMode = states['input_boolean.shower_mode'].state\nvar nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\n\nmsg.acInstalled = ac\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\nmsg.daythreshold = dayThreshold\nmsg.showermode = showerMode\nmsg.nightvolume = nightVolume\n\nif (vacation === 'off') {\n    if (topic === 'mrbedroom-cooling') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Cooling Schedule\"});\n        return[msg,null,null]\n    } else if (topic === 'manual-night') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night\"});\n        return[msg,msg,null]\n    } else if (topic === 'mrbedroom-fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"});\n        return[null,msg,null]\n    } else if (topic === 'mrbedroom-wakeup') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup Schedule\"});\n        return[null,null,msg]\n    } else if (topic === 'manual-day'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Day\"});\n        return[null,null,msg]\n    }\n} else {\n    return[null,null,null]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar topic = msg.topic\nvar vacation = states['input_boolean.vacation_mode'].state\nvar highTemp = states['sensor.todays_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar showerMode = states['input_boolean.shower_mode'].state\nvar nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\n\nmsg.acInstalled = ac\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\nmsg.bedtemp = bedTemp\nmsg.daythreshold = dayThreshold\nmsg.showermode = showerMode\nmsg.nightvolume = nightVolume\n\nif (vacation === 'off') {\n    if (topic === 'mrbedroom-cooling') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Cooling Schedule\"});\n        return[msg,null,null]\n    } else if (topic === 'manual-night') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night\"});\n        return[msg,msg,null]\n    } else if (topic === 'mrbedroom-fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"});\n        return[null,msg,null]\n    } else if (topic === 'mrbedroom-wakeup') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup Schedule\"});\n        return[null,null,msg]\n    } else if (topic === 'manual-day'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Day\"});\n        return[null,null,msg]\n    }\n} else {\n    return[null,null,null]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -18823,7 +18826,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Bedtime Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar bedtimeTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar topic = msg.topic\n\nmsg.bedtimetemp = bedtimeTemp\n\nif (ac === 'on') {\n    if (topic === 'mrbedroom-bedtime'){\n        if (schedMode === 'AC') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"A/C\"});\n            return[msg,null]\n        } else {\n            node.status({fill:\"grey\",shape:\"ring\",text:\"No A/C\"});\n            return null\n        }\n    } else if (topic === 'manual-bedtime'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Trigger\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar topic = msg.topic\n\nmsg.bedtemp = bedTemp\n\nif (ac === 'on') {\n    if (topic === 'mrbedroom-bedtime'){\n        if (schedMode === 'AC') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"A/C\"});\n            return[msg,null]\n        } else {\n            node.status({fill:\"grey\",shape:\"ring\",text:\"No A/C\"});\n            return null\n        }\n    } else if (topic === 'manual-bedtime'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Trigger\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -18893,6 +18896,34 @@
             [
                 "67509a5554fc091f"
             ]
+        ]
+    },
+    {
+        "id": "4a1db30e164dadc8",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Eco On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_preset_mode",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.master_bedroom_aircon"
+        ],
+        "data": "{\t    \"preset_mode\":\"eco\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1680,
+        "y": 500,
+        "wires": [
+            []
         ]
     },
     {
