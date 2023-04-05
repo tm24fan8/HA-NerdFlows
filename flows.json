@@ -837,7 +837,8 @@
             "a370aec30428ffb1",
             "e2ad91fc748ca519",
             "a3ef2faca9922113",
-            "a8ef744455bb4c0a"
+            "a8ef744455bb4c0a",
+            "6ed7feb3956038ed"
         ],
         "x": 14,
         "y": 19,
@@ -16454,7 +16455,7 @@
         "type": "api-call-service",
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
-        "name": "Eco Off",
+        "name": "Eco Set",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -16465,7 +16466,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"preset_mode\":\"none\"\t}",
+        "data": "{\t    \"preset_mode\": msg.preset\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -17189,7 +17190,7 @@
         "y": 60,
         "wires": [
             [
-                "67509a5554fc091f"
+                "6ed7feb3956038ed"
             ]
         ]
     },
@@ -18122,7 +18123,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 900,
+        "x": 1060,
         "y": 60,
         "wires": [
             []
@@ -18789,7 +18790,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Cooling Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar showerMode = msg.showermode\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\n\nmsg.schedmode = schedMode\n\nif (ac === 'on' && showerMode === 'off') {\n    if (schedMode === 'AC') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC\"});\n        return[msg,null,null]\n    } else if (schedMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,msg,null]\n    } else if (schedMode === 'N/A') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n        return[null,null,msg]\n    }\n} else {\n    if (ac === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    } else if (showerMode === 'on') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Shower Mode On\"});\n    }\n    return[null,null,null]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar showerMode = msg.showermode\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar hotDay = states['input_boolean.hot_day'].state\n\nmsg.schedmode = schedMode\n\nif (ac === 'on' && showerMode === 'off') {\n    if (schedMode === 'AC') {\n        if (hotDay === 'on') {\n            msg.preset = 'none'\n        } else {\n            msg.preset = 'eco'\n        }\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC\"});\n        return[msg,null,null]\n    } else if (schedMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,msg,null]\n    } else if (schedMode === 'N/A') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n        return[null,null,msg]\n    }\n} else {\n    if (ac === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    } else if (showerMode === 'on') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Shower Mode On\"});\n    }\n    return[null,null,null]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -18861,6 +18862,36 @@
         "wires": [
             [
                 "1eb13d819ba7e226"
+            ]
+        ]
+    },
+    {
+        "id": "6ed7feb3956038ed",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Eco Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_preset_mode",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.master_bedroom_aircon"
+        ],
+        "data": "{\t    \"preset_mode\":\"none\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 880,
+        "y": 60,
+        "wires": [
+            [
+                "67509a5554fc091f"
             ]
         ]
     },
