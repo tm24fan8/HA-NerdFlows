@@ -772,7 +772,9 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1292,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -838,7 +840,9 @@
             "a8ef744455bb4c0a"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2112,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -6223,7 +6227,7 @@
         "id": "e9aba9f5312297b7",
         "type": "api-call-service",
         "z": "e44b1e7a8ef7ae1d",
-        "name": "Turn lights on",
+        "name": "Second Floor Lights",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -6232,7 +6236,6 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "script.evening_on_first_floor",
             "script.evening_on_second_floor"
         ],
         "data": "",
@@ -6241,7 +6244,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2060,
+        "x": 2080,
         "y": 180,
         "wires": [
             [
@@ -6411,7 +6414,8 @@
         "y": 180,
         "wires": [
             [
-                "e9aba9f5312297b7"
+                "e9aba9f5312297b7",
+                "9ad55ef9e0a89d3c"
             ]
         ],
         "l": false
@@ -7850,6 +7854,34 @@
             "Disabled"
         ],
         "icon": "font-awesome/fa-cloud"
+    },
+    {
+        "id": "9ad55ef9e0a89d3c",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "First Floor Lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [
+            "living_room",
+            "mud_room"
+        ],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2070,
+        "y": 240,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "134433d6e21dab5b",
