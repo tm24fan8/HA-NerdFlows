@@ -772,9 +772,7 @@
             "1c98de289e42377f"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1292,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -840,9 +838,7 @@
             "96f6dcaa16f8ee6f"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2112,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -1544,7 +1540,7 @@
         "id": "fd29421fc00140a8",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "192.168.1.26",
+        "broker": "192.168.1.251",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -1564,6 +1560,7 @@
         "willQos": "0",
         "willPayload": "",
         "willMsg": {},
+        "userProps": "",
         "sessionExpiry": ""
     },
     {
