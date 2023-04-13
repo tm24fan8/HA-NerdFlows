@@ -6229,13 +6229,10 @@
         "version": 5,
         "debugenabled": false,
         "domain": "script",
-        "service": "turn_on",
+        "service": "evening_on_first_floor",
         "areaId": [],
         "deviceId": [],
-        "entityId": [
-            "script.evening_on_first_floor",
-            "script.evening_on_second_floor"
-        ],
+        "entityId": [],
         "data": "{\t    \"sunset_lights\": 1\t}",
         "dataType": "jsonata",
         "mergeContext": "",
@@ -6377,7 +6374,8 @@
         "y": 60,
         "wires": [
             [
-                "e9aba9f5312297b7"
+                "e9aba9f5312297b7",
+                "df102c847233f0b5"
             ]
         ],
         "l": false
@@ -6412,7 +6410,8 @@
         "y": 180,
         "wires": [
             [
-                "e9aba9f5312297b7"
+                "e9aba9f5312297b7",
+                "df102c847233f0b5"
             ]
         ],
         "l": false
@@ -7851,6 +7850,31 @@
             "Disabled"
         ],
         "icon": "font-awesome/fa-cloud"
+    },
+    {
+        "id": "df102c847233f0b5",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Set Scenes",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "evening_on_second_floor",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"sunset_lights\": 1\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2070,
+        "y": 240,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "134433d6e21dab5b",
