@@ -6224,7 +6224,7 @@
         "id": "e9aba9f5312297b7",
         "type": "api-call-service",
         "z": "e44b1e7a8ef7ae1d",
-        "name": "Second Floor Lights",
+        "name": "Set Scenes",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -6233,15 +6233,16 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
+            "script.evening_on_first_floor",
             "script.evening_on_second_floor"
         ],
-        "data": "",
+        "data": "{\t    \"sunset_lights\": 1\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2080,
+        "x": 2070,
         "y": 180,
         "wires": [
             [
@@ -6411,8 +6412,7 @@
         "y": 180,
         "wires": [
             [
-                "e9aba9f5312297b7",
-                "9ad55ef9e0a89d3c"
+                "e9aba9f5312297b7"
             ]
         ],
         "l": false
@@ -7851,34 +7851,6 @@
             "Disabled"
         ],
         "icon": "font-awesome/fa-cloud"
-    },
-    {
-        "id": "9ad55ef9e0a89d3c",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "First Floor Lights",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_on",
-        "areaId": [
-            "living_room",
-            "mud_room"
-        ],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2070,
-        "y": 240,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "134433d6e21dab5b",
