@@ -738,9 +738,6 @@
         "nodes": [
             "d5784e5baa80a105",
             "9e1418c3e9595312",
-            "3166f71fdf62748a",
-            "4792e2d88f7d533f",
-            "6e10b32a122e8a2c",
             "99e74844b8fd9d1a",
             "6418c17768ed363d",
             "2f3666d288d77ad1",
@@ -749,10 +746,6 @@
             "a6f4af0aaabcc2c1",
             "eb0e4c095dbe898e",
             "cc1af8532e3dc820",
-            "39d187b7e17d80ab",
-            "d823b8a033f30d40",
-            "c2bb11a2ba39b636",
-            "0a4f9c693fccd1f1",
             "59d83dd7c5adba1f",
             "57651381835f659c",
             "acb52adc50d34045",
@@ -760,19 +753,20 @@
             "b4dbbf788c5a30d2",
             "d6b56cb65c2ff140",
             "e32aaeb51d3f2e95",
-            "a52d249ed43537c7",
-            "95812f5094f32d6b",
-            "e87486569f962cb3",
-            "274d63b8df8f2dd0",
             "90329b0683f81550",
             "43ea4107912bf0f2",
             "11993e61de14f592",
             "308fce46bd959bce",
             "4341325f7ca23f24",
-            "1c98de289e42377f"
+            "1c98de289e42377f",
+            "61405a43f61f3d60",
+            "af209a80e9174433",
+            "274d63b8df8f2dd0"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1152,
+        "h": 582
     },
     {
         "id": "e065b1ed4938b477",
@@ -838,7 +832,9 @@
             "96f6dcaa16f8ee6f"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2112,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -16538,7 +16534,6 @@
         "id": "d5784e5baa80a105",
         "type": "ha-time",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Kallen Bedtime",
         "server": "9e87348d.9c1c48",
@@ -16581,7 +16576,7 @@
                 "valueType": "str"
             },
             {
-                "property": "switch",
+                "property": "toggle",
                 "propertyType": "msg",
                 "value": "on",
                 "valueType": "str"
@@ -16607,7 +16602,6 @@
         "id": "9e1418c3e9595312",
         "type": "ha-time",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Kallen Wakeup",
         "server": "9e87348d.9c1c48",
@@ -16650,7 +16644,7 @@
                 "valueType": "str"
             },
             {
-                "property": "switch",
+                "property": "toggle",
                 "propertyType": "msg",
                 "value": "off",
                 "valueType": "str"
@@ -16673,135 +16667,9 @@
         ]
     },
     {
-        "id": "3166f71fdf62748a",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "Kallen Overnight",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.kallen_overnight",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 510,
-        "y": 940,
-        "wires": [
-            [
-                "a52d249ed43537c7"
-            ],
-            [
-                "95812f5094f32d6b"
-            ]
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
-        ]
-    },
-    {
-        "id": "4792e2d88f7d533f",
-        "type": "switch",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "",
-        "property": "switch",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 865,
-        "y": 940,
-        "wires": [
-            [
-                "d132875202e85038",
-                "57651381835f659c"
-            ],
-            [
-                "d823b8a033f30d40",
-                "e87486569f962cb3"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "6e10b32a122e8a2c",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "Lights On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_on",
-        "areaId": [
-            "kallen_bedroom",
-            "upstairs_bathroom",
-            "upstairs_hallway"
-        ],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 600,
-        "y": 1140,
-        "wires": [
-            [
-                "99e74844b8fd9d1a",
-                "90329b0683f81550"
-            ]
-        ]
-    },
-    {
         "id": "99e74844b8fd9d1a",
         "type": "delay",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "pauseType": "delay",
@@ -16816,8 +16684,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 835,
-        "y": 1320,
+        "x": 695,
+        "y": 1080,
         "wires": [
             [
                 "6418c17768ed363d"
@@ -16829,7 +16697,6 @@
         "id": "6418c17768ed363d",
         "type": "api-call-service",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "White Noise On",
         "server": "9e87348d.9c1c48",
@@ -16848,8 +16715,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 960,
-        "y": 1320,
+        "x": 820,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -16858,7 +16725,6 @@
         "id": "2f3666d288d77ad1",
         "type": "api-call-service",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Lights On",
         "server": "9e87348d.9c1c48",
@@ -16879,19 +16745,16 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 600,
-        "y": 1200,
+        "x": 500,
+        "y": 1120,
         "wires": [
-            [
-                "265b54394cc42f53"
-            ]
+            []
         ]
     },
     {
         "id": "265b54394cc42f53",
         "type": "api-call-service",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Fan On",
         "server": "9e87348d.9c1c48",
@@ -16910,7 +16773,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 780,
+        "x": 640,
         "y": 1200,
         "wires": [
             [
@@ -16922,7 +16785,6 @@
         "id": "d132875202e85038",
         "type": "api-call-service",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Fan Off",
         "server": "9e87348d.9c1c48",
@@ -16941,7 +16803,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1000,
+        "x": 680,
         "y": 940,
         "wires": [
             [
@@ -16953,7 +16815,6 @@
         "id": "a6f4af0aaabcc2c1",
         "type": "api-call-service",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Booleans Off",
         "server": "9e87348d.9c1c48",
@@ -16972,7 +16833,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1170,
+        "x": 850,
         "y": 940,
         "wires": [
             []
@@ -16982,10 +16843,9 @@
         "id": "b4dbbf788c5a30d2",
         "type": "subflow:6429099c4571dd6b",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
-        "x": 1200,
+        "x": 1060,
         "y": 1200,
         "wires": [
             []
@@ -16995,7 +16855,6 @@
         "id": "eb0e4c095dbe898e",
         "type": "change",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "rules": [
@@ -17019,7 +16878,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1055,
+        "x": 915,
         "y": 1200,
         "wires": [
             [
@@ -17032,7 +16891,6 @@
         "id": "cc1af8532e3dc820",
         "type": "change",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "rules": [
@@ -17056,7 +16914,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1055,
+        "x": 915,
         "y": 1140,
         "wires": [
             [
@@ -17241,59 +17099,6 @@
             [
                 "a3ef2faca9922113"
             ]
-        ]
-    },
-    {
-        "id": "39d187b7e17d80ab",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "Vacation Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.vacation_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 300,
-        "y": 940,
-        "wires": [
-            [
-                "3166f71fdf62748a"
-            ],
-            [
-                "95812f5094f32d6b"
-            ]
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
         ]
     },
     {
@@ -17742,127 +17547,9 @@
         ]
     },
     {
-        "id": "d823b8a033f30d40",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "Scheduled Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.scheduled_climate_mode_kallen_fan",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "sched_mode",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 330,
-        "y": 1100,
-        "wires": [
-            [
-                "c2bb11a2ba39b636"
-            ]
-        ]
-    },
-    {
-        "id": "c2bb11a2ba39b636",
-        "type": "switch",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "",
-        "property": "sched_mode",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "White Noise",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Fan",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "N/A",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 475,
-        "y": 1100,
-        "wires": [
-            [
-                "6e10b32a122e8a2c"
-            ],
-            [
-                "2f3666d288d77ad1"
-            ],
-            [
-                "0a4f9c693fccd1f1"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "0a4f9c693fccd1f1",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "Lights On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_on",
-        "areaId": [
-            "kallen_bedroom",
-            "upstairs_bathroom",
-            "upstairs_hallway"
-        ],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 600,
-        "y": 1260,
-        "wires": [
-            [
-                "11993e61de14f592"
-            ]
-        ]
-    },
-    {
         "id": "59d83dd7c5adba1f",
         "type": "change",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "",
         "rules": [
@@ -17886,7 +17573,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1055,
+        "x": 915,
         "y": 1260,
         "wires": [
             [
@@ -18015,7 +17702,6 @@
         "id": "57651381835f659c",
         "type": "api-current-state",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "School Today?",
         "server": "9e87348d.9c1c48",
@@ -18043,7 +17729,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1020,
+        "x": 700,
         "y": 880,
         "wires": [
             [
@@ -18056,7 +17742,6 @@
         "id": "acb52adc50d34045",
         "type": "api-call-service",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Lights On",
         "server": "9e87348d.9c1c48",
@@ -18075,7 +17760,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1200,
+        "x": 880,
         "y": 880,
         "wires": [
             []
@@ -18085,7 +17770,6 @@
         "id": "e0751f3bf2a2e610",
         "type": "ha-button",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Manual Bedtime",
         "version": 0,
@@ -18094,7 +17778,7 @@
         "entityConfig": "7cf78f522e860d42",
         "outputProperties": [
             {
-                "property": "switch",
+                "property": "toggle",
                 "propertyType": "msg",
                 "value": "on",
                 "valueType": "str"
@@ -18144,14 +17828,13 @@
         "id": "d6b56cb65c2ff140",
         "type": "api-call-service",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Toggle Boolean",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
         "domain": "input_boolean",
-        "service": "turn_{{switch}}",
+        "service": "turn_{{toggle}}",
         "areaId": [],
         "deviceId": [],
         "entityId": [
@@ -18163,7 +17846,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1100,
+        "x": 700,
         "y": 760,
         "wires": [
             []
@@ -18173,7 +17856,6 @@
         "id": "e32aaeb51d3f2e95",
         "type": "server-state-changed",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Boolean State",
         "server": "9e87348d.9c1c48",
@@ -18208,7 +17890,7 @@
         "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
-                "property": "switch",
+                "property": "toggle",
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
@@ -18224,167 +17906,14 @@
         "y": 940,
         "wires": [
             [
-                "39d187b7e17d80ab"
+                "61405a43f61f3d60"
             ]
-        ]
-    },
-    {
-        "id": "a52d249ed43537c7",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "Kallen Home?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.kallen_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 720,
-        "y": 940,
-        "wires": [
-            [
-                "4792e2d88f7d533f"
-            ],
-            [
-                "95812f5094f32d6b"
-            ]
-        ],
-        "outputLabels": [
-            "Home",
-            "Away"
-        ]
-    },
-    {
-        "id": "95812f5094f32d6b",
-        "type": "change",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "switch",
-                "pt": "msg",
-                "to": "off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 955,
-        "y": 820,
-        "wires": [
-            [
-                "d6b56cb65c2ff140"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "e87486569f962cb3",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "Night Volume",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_number.kallen_bedroom_google_speaker_night_volume",
-        "state_type": "num",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "volume",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 950,
-        "y": 1080,
-        "wires": [
-            [
-                "274d63b8df8f2dd0"
-            ]
-        ]
-    },
-    {
-        "id": "274d63b8df8f2dd0",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "d": true,
-        "g": "39a7ac02f2727f1d",
-        "name": "Set Volume",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "volume_set",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.kallen_bedroom_speaker"
-        ],
-        "data": "{\t    \"volume_level\": msg.volume\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1130,
-        "y": 1080,
-        "wires": [
-            []
         ]
     },
     {
         "id": "90329b0683f81550",
         "type": "api-render-template",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Random Line",
         "server": "9e87348d.9c1c48",
@@ -18394,7 +17923,7 @@
         "resultsLocationType": "msg",
         "templateLocation": "template",
         "templateLocationType": "msg",
-        "x": 950,
+        "x": 810,
         "y": 1140,
         "wires": [
             [
@@ -18406,7 +17935,6 @@
         "id": "43ea4107912bf0f2",
         "type": "api-render-template",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Random Line",
         "server": "9e87348d.9c1c48",
@@ -18416,7 +17944,7 @@
         "resultsLocationType": "msg",
         "templateLocation": "",
         "templateLocationType": "none",
-        "x": 950,
+        "x": 810,
         "y": 1200,
         "wires": [
             [
@@ -18428,7 +17956,6 @@
         "id": "11993e61de14f592",
         "type": "api-render-template",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Random Line",
         "server": "9e87348d.9c1c48",
@@ -18438,7 +17965,7 @@
         "resultsLocationType": "msg",
         "templateLocation": "",
         "templateLocationType": "none",
-        "x": 950,
+        "x": 810,
         "y": 1260,
         "wires": [
             [
@@ -18450,7 +17977,6 @@
         "id": "308fce46bd959bce",
         "type": "ha-time",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Kallen Fan Time",
         "server": "9e87348d.9c1c48",
@@ -18496,7 +18022,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 1260,
+        "y": 1000,
         "wires": [
             [
                 "4341325f7ca23f24"
@@ -18507,7 +18033,6 @@
         "id": "4341325f7ca23f24",
         "type": "api-current-state",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Scheduled Mode",
         "server": "9e87348d.9c1c48",
@@ -18536,7 +18061,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 255,
-        "y": 1260,
+        "y": 1000,
         "wires": [
             [
                 "1c98de289e42377f"
@@ -18549,7 +18074,6 @@
         "id": "1c98de289e42377f",
         "type": "api-call-service",
         "z": "72f99805df043603",
-        "d": true,
         "g": "39a7ac02f2727f1d",
         "name": "Fan On",
         "server": "9e87348d.9c1c48",
@@ -18569,7 +18093,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 360,
-        "y": 1260,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -18839,6 +18363,103 @@
         "y": 540,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "61405a43f61f3d60",
+        "type": "function",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenHome = states['binary_sensor.kallen_home'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar toggle = msg.toggle\n\nif (vacationMode === 'off' && overnight === 'off' && kallenHome === 'on') {\n    if (toggle === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg]\n    }\n} else {\n    msg.toggle = 'off'\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return [msg,null,null]\n}",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 940,
+        "wires": [
+            [
+                "d6b56cb65c2ff140"
+            ],
+            [
+                "57651381835f659c",
+                "d132875202e85038"
+            ],
+            [
+                "274d63b8df8f2dd0"
+            ]
+        ],
+        "outputLabels": [
+            "wake",
+            "sleep",
+            ""
+        ]
+    },
+    {
+        "id": "af209a80e9174433",
+        "type": "function",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Scheduled Mode",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar schedMode = states['input_select.scheduled_climate_mode_kallen_fan'].state\n\nmsg.topic = 'everywhere'\nmsg.voice = 'Joanna'\n\nif (schedMode === 'White Noise') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"White Noise\"});\n    return[msg,null,null]\n} else if (schedMode === 'Fan') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n    return[null,msg,null]\n} else {\n    node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n    return[null,null,msg]\n}\n",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1200,
+        "wires": [
+            [
+                "2f3666d288d77ad1",
+                "99e74844b8fd9d1a",
+                "90329b0683f81550"
+            ],
+            [
+                "2f3666d288d77ad1",
+                "265b54394cc42f53"
+            ],
+            [
+                "2f3666d288d77ad1",
+                "11993e61de14f592"
+            ]
+        ],
+        "outputLabels": [
+            "White Noise",
+            "Fan",
+            "N/A"
+        ]
+    },
+    {
+        "id": "274d63b8df8f2dd0",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Set Volume",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "media_player",
+        "service": "volume_set",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "media_player.kallen_bedroom_speaker"
+        ],
+        "data": "{\t    \"volume_level\": msg.volume\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 210,
+        "y": 1200,
+        "wires": [
+            [
+                "af209a80e9174433"
+            ]
         ]
     },
     {
