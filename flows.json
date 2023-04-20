@@ -744,9 +744,6 @@
             "265b54394cc42f53",
             "d132875202e85038",
             "a6f4af0aaabcc2c1",
-            "eb0e4c095dbe898e",
-            "cc1af8532e3dc820",
-            "59d83dd7c5adba1f",
             "57651381835f659c",
             "acb52adc50d34045",
             "e0751f3bf2a2e610",
@@ -765,7 +762,7 @@
         ],
         "x": 14,
         "y": 719,
-        "w": 1152,
+        "w": 1112,
         "h": 582
     },
     {
@@ -16845,83 +16842,11 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "",
-        "x": 1060,
+        "x": 1020,
         "y": 1200,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "eb0e4c095dbe898e",
-        "type": "change",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "everywhere",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "voice",
-                "pt": "msg",
-                "to": "Joanna",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 915,
-        "y": 1200,
-        "wires": [
-            [
-                "b4dbbf788c5a30d2"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "cc1af8532e3dc820",
-        "type": "change",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "everywhere",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "voice",
-                "pt": "msg",
-                "to": "Joanna",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 915,
-        "y": 1140,
-        "wires": [
-            [
-                "b4dbbf788c5a30d2"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "dc440dfc78c41b8a",
@@ -17547,42 +17472,6 @@
         ]
     },
     {
-        "id": "59d83dd7c5adba1f",
-        "type": "change",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "everywhere",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "voice",
-                "pt": "msg",
-                "to": "Joanna",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 915,
-        "y": 1260,
-        "wires": [
-            [
-                "b4dbbf788c5a30d2"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "09a31110ed0a8630",
         "type": "api-call-service",
         "z": "72f99805df043603",
@@ -17921,13 +17810,13 @@
         "template": "{{ [\n    \"No fan in Collin's room tonight. Too cold outside. Brr. Enjoy your white noise.\",\n    \"It is a little too cold for a fan tonight. I will play white noise for Collin\",\n    \"Collin will not need any help staying cool tonight. I will play white noise instead.\",\n    \"My sources are telling me that it is not fan weather tonight. White noise it is.\"\n] | random }} Goodnight!",
         "resultsLocation": "payload",
         "resultsLocationType": "msg",
-        "templateLocation": "template",
-        "templateLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
         "x": 810,
         "y": 1140,
         "wires": [
             [
-                "cc1af8532e3dc820"
+                "b4dbbf788c5a30d2"
             ]
         ]
     },
@@ -17948,7 +17837,7 @@
         "y": 1200,
         "wires": [
             [
-                "eb0e4c095dbe898e"
+                "b4dbbf788c5a30d2"
             ]
         ]
     },
@@ -17969,7 +17858,7 @@
         "y": 1260,
         "wires": [
             [
-                "59d83dd7c5adba1f"
+                "b4dbbf788c5a30d2"
             ]
         ]
     },
@@ -18403,7 +18292,7 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "Scheduled Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar schedMode = states['input_select.scheduled_climate_mode_kallen_fan'].state\n\nmsg.topic = 'everywhere'\nmsg.voice = 'Joanna'\n\nif (schedMode === 'White Noise') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"White Noise\"});\n    return[msg,null,null]\n} else if (schedMode === 'Fan') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n    return[null,msg,null]\n} else {\n    node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n    return[null,null,msg]\n}\n",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar schedMode = states['input_select.scheduled_climate_mode_kallen_fan'].state\n\nmsg.topic = 'common'\nmsg.voice = 'Joanna'\n\nif (schedMode === 'White Noise') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"White Noise\"});\n    return[msg,null,null]\n} else if (schedMode === 'Fan') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n    return[null,msg,null]\n} else {\n    node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n    return[null,null,msg]\n}\n",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
