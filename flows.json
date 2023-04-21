@@ -7887,11 +7887,11 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "binary_sensor.tony_home",
+        "entityidfilter": "person.tony_stork",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
-        "haltifstate": "on",
+        "haltifstate": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
         "outputs": 2,
@@ -7942,6 +7942,10 @@
             [
                 "379edcf9fe985ebe"
             ]
+        ],
+        "outputLabels": [
+            "home",
+            "away"
         ]
     },
     {
@@ -8020,11 +8024,11 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "binary_sensor.tina_home",
+        "entityidfilter": "person.christina_stork",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
-        "haltifstate": "on",
+        "haltifstate": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
         "outputs": 2,
@@ -8082,6 +8086,10 @@
             [
                 "898659d514aa58fd"
             ]
+        ],
+        "outputLabels": [
+            "home",
+            "away"
         ]
     },
     {
@@ -8160,11 +8168,11 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "binary_sensor.kallen_home",
+        "entityidfilter": "person.kallen_stork",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
-        "haltifstate": "on",
+        "haltifstate": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
         "outputs": 2,
@@ -8214,6 +8222,10 @@
             [
                 "fb1afc4c2078ca29"
             ]
+        ],
+        "outputLabels": [
+            "home",
+            "away"
         ]
     },
     {
@@ -8361,7 +8373,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "\t{\t    \"type\":\"normal\"\t    \"who\":\"tina\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Tony has arrived at home!\",\t    \"sound\":\"US-EN-Alexa-Husband-Is-Arriving.wav\"\t}",
+        "data": "\t{\t    \"type\":\"normal\",\t    \"who\":\"tina\",\t    \"title\": \"New Arrival\",\t    \"message\": \"Tony has arrived at home!\",\t    \"sound\":\"US-EN-Alexa-Husband-Is-Arriving.wav\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -8609,10 +8621,10 @@
         "server": "9e87348d.9c1c48",
         "version": 3,
         "outputs": 2,
-        "halt_if": "on",
+        "halt_if": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "binary_sensor.tony_home",
+        "entity_id": "person.tony_stork",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -8646,6 +8658,10 @@
             [
                 "379edcf9fe985ebe"
             ]
+        ],
+        "outputLabels": [
+            "home",
+            "away"
         ]
     },
     {
@@ -8656,10 +8672,10 @@
         "server": "9e87348d.9c1c48",
         "version": 3,
         "outputs": 2,
-        "halt_if": "on",
+        "halt_if": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "binary_sensor.tina_home",
+        "entity_id": "person.christina_stork",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -8693,6 +8709,10 @@
             [
                 "898659d514aa58fd"
             ]
+        ],
+        "outputLabels": [
+            "home",
+            "away"
         ]
     },
     {
@@ -8703,10 +8723,10 @@
         "server": "9e87348d.9c1c48",
         "version": 3,
         "outputs": 2,
-        "halt_if": "on",
+        "halt_if": "home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "binary_sensor.kallen_home",
+        "entity_id": "person.kallen_stork",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -8740,6 +8760,10 @@
             [
                 "fb1afc4c2078ca29"
             ]
+        ],
+        "outputLabels": [
+            "home",
+            "away"
         ]
     },
     {
@@ -18260,7 +18284,7 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenHome = states['binary_sensor.kallen_home'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar toggle = msg.toggle\n\nif (vacationMode === 'off' && overnight === 'off' && kallenHome === 'on') {\n    if (toggle === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg]\n    }\n} else {\n    msg.toggle = 'off'\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return [msg,null,null]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenLoc = states['person.kallen_stork'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar toggle = msg.toggle\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (toggle === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg]\n    }\n} else {\n    msg.toggle = 'off'\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return [msg,null,null]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
