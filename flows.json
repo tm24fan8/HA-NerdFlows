@@ -758,10 +758,16 @@
             "1c98de289e42377f",
             "61405a43f61f3d60",
             "af209a80e9174433",
-            "274d63b8df8f2dd0"
+            "274d63b8df8f2dd0",
+            "62211bf089bc5b04",
+            "d0dacbae4513b1ad",
+            "7b390a3b24fc3197",
+            "a417e93366843249"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1432,
+        "h": 582
     },
     {
         "id": "e065b1ed4938b477",
@@ -827,7 +833,9 @@
             "96f6dcaa16f8ee6f"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2112,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -17452,7 +17460,7 @@
         "y": 880,
         "wires": [
             [
-                "acb52adc50d34045"
+                "62211bf089bc5b04"
             ],
             []
         ]
@@ -17473,16 +17481,18 @@
         ],
         "deviceId": [],
         "entityId": [],
-        "data": "",
+        "data": "{\t    \"brightness_pct\": msg.adaptive.attributes.brightness_pct,\t    \"transition\": 300\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 880,
+        "x": 1120,
         "y": 880,
         "wires": [
-            []
+            [
+                "7b390a3b24fc3197"
+            ]
         ]
     },
     {
@@ -18090,7 +18100,7 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenLoc = states['person.kallen_stork'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar toggle = msg.toggle\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (toggle === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg]\n    }\n} else {\n    msg.toggle = 'off'\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return [msg,null,null]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenLoc = states['person.kallen_stork'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nvar toggle = msg.toggle\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (toggle === 'off') {\n        msg.brightness = brightness\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg]\n    }\n} else {\n    msg.toggle = 'off'\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return [msg,null,null]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -18179,6 +18189,118 @@
             [
                 "af209a80e9174433"
             ]
+        ]
+    },
+    {
+        "id": "62211bf089bc5b04",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Adaptive Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.adaptive_lighting_kallen_bedroom"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 890,
+        "y": 880,
+        "wires": [
+            [
+                "d0dacbae4513b1ad"
+            ]
+        ]
+    },
+    {
+        "id": "d0dacbae4513b1ad",
+        "type": "delay",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1015,
+        "y": 880,
+        "wires": [
+            [
+                "acb52adc50d34045"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7b390a3b24fc3197",
+        "type": "delay",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1225,
+        "y": 880,
+        "wires": [
+            [
+                "a417e93366843249"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "a417e93366843249",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Adaptive On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.kallen_bedroom_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1350,
+        "y": 880,
+        "wires": [
+            []
         ]
     },
     {
