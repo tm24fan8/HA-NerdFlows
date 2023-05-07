@@ -765,9 +765,7 @@
             "a417e93366843249"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1432,
-        "h": 582
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -834,9 +832,7 @@
             "1967e5238d3aa5a1"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2112,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -950,7 +946,9 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -968,7 +966,9 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 202
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1347,7 +1347,9 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39
+        "y": 39,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1381,6 +1383,49 @@
         ],
         "x": 34,
         "y": 419
+    },
+    {
+        "id": "4886967d0f8c0156",
+        "type": "group",
+        "z": "ffa6a885ac41a5ed",
+        "name": "Minecraft VM Sensors",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "39ba20ccdc0d3291",
+            "be219cd63a50687b",
+            "be46f7e1c3d82b99",
+            "6ba34dc18fbc940f",
+            "41ff21a8194cd9c8",
+            "f3ed9c6c6beeaaf3",
+            "6b368cf77a061795",
+            "c947f0b38745ac21",
+            "3d1df2ce8b0b3388",
+            "82d1a3d67d7b541e",
+            "b43388fd2c52ca59",
+            "186b89f637e64299",
+            "8aace1da7153a6b4",
+            "533f7ea9ff79fc13",
+            "f09bb064e2beade2",
+            "1641a391e57e7e24",
+            "a3bf61521dbb4dba",
+            "218a23a093cc070e",
+            "c3b53f37978e8fff",
+            "24c50ae79a4c9884",
+            "9ee545081e378ada",
+            "1159bd946a485e91",
+            "e81a5055a5060326",
+            "771cc9650d25ef9e",
+            "da4ebf48cc4bd6c4",
+            "aa5f280744935821",
+            "81a2ac8ed788454e",
+            "5ba9cfc0194ef62a"
+        ],
+        "x": 754,
+        "y": 319,
+        "w": 672,
+        "h": 622
     },
     {
         "id": "fba69dfc80829db7",
@@ -2997,6 +3042,425 @@
             }
         ],
         "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "e8c9ceddca18e396",
+        "type": "ha-device-config",
+        "name": "Minecraft VM",
+        "hwVersion": "",
+        "manufacturer": "Iron Nerd",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "0d6712bde7f2c2aa",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "e8c9ceddca18e396",
+        "name": "Minecraft VM - CPU Usage",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Minecraft VM - CPU Usage"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:speedometer"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "%"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "3dd7cd5953460bf0",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "e8c9ceddca18e396",
+        "name": "Minecraft VM - Uptime",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Minecraft VM - Uptime"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:timer-outline"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "hours"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "76cd1049416dcd40",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "e8c9ceddca18e396",
+        "name": "Minecraft VM - Memory Used",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Minecraft VM - Memory Used"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:memory"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "GB"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "cb79060b1357cc09",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "e8c9ceddca18e396",
+        "name": "Minecraft VM - Memory Usage",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Minecraft VM - Memory Usage"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:memory"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "%"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "c8f428ea43d3c0c7",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "e8c9ceddca18e396",
+        "name": "Minecraft VM - Free Space Root",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Minecraft VM - Free Space Root"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:harddisk"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "GB"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "a3a6fbcbe94daddf",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "e8c9ceddca18e396",
+        "name": "Minecraft VM - CPU Average Loads 1 min",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Minecraft VM - CPU Average Loads 1 min"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:speedometer"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "704b90ceb496c18d",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "e8c9ceddca18e396",
+        "name": "Minecraft VM - CPU Average Loads 5 min",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Minecraft VM - CPU Average Loads 5 min"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:speedometer"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "61ba199207e4396e",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "e8c9ceddca18e396",
+        "name": "Minecraft VM - CPU Average Loads 15 min",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Minecraft VM - CPU Average Loads 15 min"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:speedometer"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "63218fa218b9ed68",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "e8c9ceddca18e396",
+        "name": "Minecraft VM - Network RX",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Minecraft VM - Network RX"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:download-network"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "MB/s"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "c8bb405fd48982d7",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "e8c9ceddca18e396",
+        "name": "Minecraft VM - Network TX",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Minecraft VM - Network TX"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:upload-network"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "MB/s"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": true,
         "debugEnabled": false
     },
     {
@@ -23972,6 +24436,584 @@
         "wires": [
             [
                 "e5cc046624cd5453"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "39ba20ccdc0d3291",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "CPU Usage",
+        "topic": "glances/minecraft/cpu/total",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 850,
+        "y": 360,
+        "wires": [
+            [
+                "be219cd63a50687b"
+            ]
+        ]
+    },
+    {
+        "id": "be219cd63a50687b",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Minecraft VM - CPU Usage",
+        "entityConfig": "0d6712bde7f2c2aa",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1080,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be46f7e1c3d82b99",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Uptime",
+        "topic": "glances/minecraft/uptime/seconds",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 830,
+        "y": 420,
+        "wires": [
+            [
+                "6ba34dc18fbc940f"
+            ]
+        ]
+    },
+    {
+        "id": "6ba34dc18fbc940f",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Conversions",
+        "func": "var readout = (msg.payload / 60) / 60\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 935,
+        "y": 420,
+        "wires": [
+            [
+                "41ff21a8194cd9c8"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "41ff21a8194cd9c8",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Minecraft VM - Uptime",
+        "entityConfig": "3dd7cd5953460bf0",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1100,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3ed9c6c6beeaaf3",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Conversions",
+        "func": "var readout = (msg.payload / 1024000000)\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 975,
+        "y": 480,
+        "wires": [
+            [
+                "218a23a093cc070e"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "6b368cf77a061795",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Memory Used",
+        "topic": "glances/minecraft/mem/used",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 850,
+        "y": 480,
+        "wires": [
+            [
+                "f3ed9c6c6beeaaf3"
+            ]
+        ]
+    },
+    {
+        "id": "c947f0b38745ac21",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Memory Usage",
+        "topic": "glances/minecraft/mem/percent",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 860,
+        "y": 540,
+        "wires": [
+            [
+                "c3b53f37978e8fff"
+            ]
+        ]
+    },
+    {
+        "id": "3d1df2ce8b0b3388",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Free Space - /",
+        "topic": "glances/minecraft/fs/_/free",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 850,
+        "y": 600,
+        "wires": [
+            [
+                "82d1a3d67d7b541e"
+            ]
+        ]
+    },
+    {
+        "id": "82d1a3d67d7b541e",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Conversions",
+        "func": "var readout = (msg.payload / 1024000000)\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 975,
+        "y": 600,
+        "wires": [
+            [
+                "24c50ae79a4c9884"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "b43388fd2c52ca59",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "CPU Load - 1 min",
+        "topic": "glances/minecraft/load/min1",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 870,
+        "y": 660,
+        "wires": [
+            [
+                "aa5f280744935821"
+            ]
+        ]
+    },
+    {
+        "id": "186b89f637e64299",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "CPU Load - 5 min",
+        "topic": "glances/minecraft/load/min5",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 870,
+        "y": 720,
+        "wires": [
+            [
+                "81a2ac8ed788454e"
+            ]
+        ]
+    },
+    {
+        "id": "8aace1da7153a6b4",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "CPU Load - 15 min",
+        "topic": "glances/minecraft/load/min15",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 870,
+        "y": 780,
+        "wires": [
+            [
+                "5ba9cfc0194ef62a"
+            ]
+        ]
+    },
+    {
+        "id": "533f7ea9ff79fc13",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Network RX",
+        "topic": "glances/minecraft/network/ens18/rx",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 850,
+        "y": 840,
+        "wires": [
+            [
+                "1641a391e57e7e24"
+            ]
+        ]
+    },
+    {
+        "id": "f09bb064e2beade2",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Network TX",
+        "topic": "glances/minecraft/network/ens18/tx",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 850,
+        "y": 900,
+        "wires": [
+            [
+                "a3bf61521dbb4dba"
+            ]
+        ]
+    },
+    {
+        "id": "1641a391e57e7e24",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Conversions",
+        "func": "var readout = msg.payload / 1000000\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 975,
+        "y": 840,
+        "wires": [
+            [
+                "771cc9650d25ef9e"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "a3bf61521dbb4dba",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Conversions",
+        "func": "var readout = msg.payload / 1000000\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 975,
+        "y": 900,
+        "wires": [
+            [
+                "da4ebf48cc4bd6c4"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "218a23a093cc070e",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Minecraft VM - Memory Used",
+        "entityConfig": "76cd1049416dcd40",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1140,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3b53f37978e8fff",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Minecraft VM - Memory Usage",
+        "entityConfig": "cb79060b1357cc09",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1110,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "24c50ae79a4c9884",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Minecraft VM - Free Space Root",
+        "entityConfig": "c8f428ea43d3c0c7",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1170,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ee545081e378ada",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Minecraft VM - CPU Average Loads 1 min",
+        "entityConfig": "a3a6fbcbe94daddf",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1220,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1159bd946a485e91",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Minecraft VM - CPU Average Loads 5 min",
+        "entityConfig": "704b90ceb496c18d",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1220,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e81a5055a5060326",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Minecraft VM - CPU Average Loads 15 min",
+        "entityConfig": "61ba199207e4396e",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1230,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "771cc9650d25ef9e",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Minecraft VM - Network RX",
+        "entityConfig": "63218fa218b9ed68",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1160,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da4ebf48cc4bd6c4",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Minecraft VM - Network TX",
+        "entityConfig": "c8bb405fd48982d7",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1140,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa5f280744935821",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Rounding",
+        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1005,
+        "y": 660,
+        "wires": [
+            [
+                "9ee545081e378ada"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "81a2ac8ed788454e",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Rounding",
+        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1005,
+        "y": 720,
+        "wires": [
+            [
+                "1159bd946a485e91"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "5ba9cfc0194ef62a",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "4886967d0f8c0156",
+        "name": "Rounding",
+        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1005,
+        "y": 780,
+        "wires": [
+            [
+                "e81a5055a5060326"
             ]
         ],
         "l": false
