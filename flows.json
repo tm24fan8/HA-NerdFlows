@@ -765,7 +765,9 @@
             "a417e93366843249"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1432,
+        "h": 582
     },
     {
         "id": "e065b1ed4938b477",
@@ -832,7 +834,9 @@
             "1967e5238d3aa5a1"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2112,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -946,9 +950,7 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -966,9 +968,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1347,9 +1347,7 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1423,9 +1421,7 @@
             "5ba9cfc0194ef62a"
         ],
         "x": 754,
-        "y": 319,
-        "w": 672,
-        "h": 622
+        "y": 319
     },
     {
         "id": "fba69dfc80829db7",
@@ -18217,7 +18213,7 @@
         "y": 1000,
         "wires": [
             [
-                "4341325f7ca23f24"
+                "61405a43f61f3d60"
             ]
         ]
     },
@@ -18252,8 +18248,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 255,
-        "y": 1000,
+        "x": 695,
+        "y": 1020,
         "wires": [
             [
                 "1c98de289e42377f"
@@ -18284,8 +18280,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 360,
-        "y": 1000,
+        "x": 830,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -18565,8 +18561,8 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenLoc = states['person.kallen_stork'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nvar fadeDay = states['input_number.wakeup_lights_fade_day'].state\nvar fadeNight = states['input_number.wakeup_lights_fade_night'].state\nvar toggle = msg.toggle\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (toggle === 'off') {\n        msg.brightness = brightness\n        msg.fade_day = fadeDay * 60\n        msg.fade_night = fadeNight * 60\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg]\n    }\n} else {\n    msg.toggle = 'off'\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return [msg,null,null]\n}",
-        "outputs": 3,
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenLoc = states['person.kallen_stork'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nvar fadeDay = states['input_number.wakeup_lights_fade_day'].state\nvar fadeNight = states['input_number.wakeup_lights_fade_night'].state\nvar topic = msg.topic\nvar toggle = msg.toggle\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,null,null,msg]\n    } else if (toggle === 'off') {\n        msg.brightness = brightness\n        msg.fade_day = fadeDay * 60\n        msg.fade_night = fadeNight * 60\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg,null]\n    }\n} else {\n    if (topic === 'boolean') {\n        msg.toggle = 'off'\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return [msg,null,null,null]\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return null\n    }\n}",
+        "outputs": 4,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -18583,12 +18579,16 @@
             ],
             [
                 "274d63b8df8f2dd0"
+            ],
+            [
+                "4341325f7ca23f24"
             ]
         ],
         "outputLabels": [
             "blocked",
             "wake",
-            "sleep"
+            "sleep",
+            "fan"
         ]
     },
     {
