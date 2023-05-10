@@ -725,9 +725,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -832,11 +830,19 @@
             "9c01880c6319d29b",
             "96f6dcaa16f8ee6f",
             "1967e5238d3aa5a1",
-            "f8cc9d6657bff329"
+            "f8cc9d6657bff329",
+            "94eec3b9d4b18a3d",
+            "a06fa6d20358b887",
+            "69c655d75dda13be",
+            "0d15cbcd3afaac79",
+            "2803126a83be1823",
+            "723cd46ceb02f152",
+            "90637fbeaa21f3ca",
+            "3c6cb0ed0847f8ee"
         ],
         "x": 14,
         "y": 19,
-        "w": 2112,
+        "w": 2252,
         "h": 682
     },
     {
@@ -855,15 +861,31 @@
             "20271b0662a4d5df",
             "69886cf636bf4f70",
             "16bf625c802d7910",
-            "39f78e9aa56bc51e",
             "a32c37ccf0102258",
             "d5c6b45df763e57e",
             "6f011420f6bb15a7",
             "74bb3d48dd17bef9",
-            "486bca43ddc48fb8"
+            "486bca43ddc48fb8",
+            "d2c017d8f8c1dc68",
+            "7a6299413cbbbdcf",
+            "92c97bdd3ffb345d",
+            "1fd2518454b8b8a1",
+            "cc54107a01eca8c2",
+            "33845d78dadbb4df",
+            "2a2e328746eed124",
+            "80fcb34c004369e7",
+            "5f0f296e4f242dfe",
+            "d2d529b327823c22",
+            "8fe032f757ed2b62",
+            "1e1eb662bad16e38",
+            "149704b9f6497881",
+            "b6cb206d9cb34610",
+            "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 159
+        "y": 179,
+        "w": 1292,
+        "h": 382
     },
     {
         "id": "477e752fcd2e2a19",
@@ -951,7 +973,9 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -969,7 +993,9 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 202
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1072,9 +1098,7 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1132,
-        "h": 382
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1159,9 +1183,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1215,9 +1237,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539,
-        "w": 612,
-        "h": 202
+        "y": 539
     },
     {
         "id": "550e5b2d99316b12",
@@ -1240,9 +1260,7 @@
             "61cb79c998ee0b59"
         ],
         "x": 34,
-        "y": 639,
-        "w": 1072,
-        "h": 202
+        "y": 639
     },
     {
         "id": "f519aff597ece351",
@@ -1356,7 +1374,9 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39
+        "y": 39,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1389,7 +1409,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 419
+        "y": 579,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "4886967d0f8c0156",
@@ -1430,7 +1452,50 @@
             "5ba9cfc0194ef62a"
         ],
         "x": 754,
-        "y": 319
+        "y": 319,
+        "w": 672,
+        "h": 622
+    },
+    {
+        "id": "931cc27100c9317e",
+        "type": "group",
+        "z": "3e4ba157b540d183",
+        "name": "Last Alexa",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "04fdddae578ee136",
+            "266634bf3c6019c8",
+            "4560584de593b5c1",
+            "488e4f61d16705d4",
+            "1f3142828a586d08",
+            "f9bc4d36a0df7947"
+        ],
+        "x": 34,
+        "y": 759,
+        "w": 672,
+        "h": 222
+    },
+    {
+        "id": "6e83103b5c5311e9",
+        "type": "group",
+        "z": "3e4ba157b540d183",
+        "name": "Jarvis Voice",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e8d2135bb5564a4a",
+            "f6f45d3e3cf9aeab",
+            "40c9c33453179a21",
+            "b49f0642ce0153c6",
+            "a75651492e779bfc"
+        ],
+        "x": 34,
+        "y": 19,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "fba69dfc80829db7",
@@ -3463,6 +3528,81 @@
             {
                 "property": "state_class",
                 "value": "measurement"
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "d7208904f97a76d6",
+        "type": "ha-device-config",
+        "name": "Tina Work",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "3577b1d6ba521c18",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "d7208904f97a76d6",
+        "name": "Tina Work Start Zone",
+        "version": "6",
+        "entityType": "binary_sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Tina Work Start Zone"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "e5f345a03a1ef184",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "d7208904f97a76d6",
+        "name": "Tina Work End Zone",
+        "version": "6",
+        "entityType": "binary_sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Tina Work End Zone"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
             }
         ],
         "resend": true,
@@ -8554,8 +8694,8 @@
                 "a0c7649e26e66ddb",
                 "35d7371023527600",
                 "edaa6ff605ba6fa7",
-                "7ff36affdeacadba",
-                "77bb530373808a86"
+                "77bb530373808a86",
+                "9d03fda88310da78"
             ],
             [
                 "898659d514aa58fd"
@@ -8797,8 +8937,8 @@
         "numpackets": 3,
         "interval": 100,
         "name": "Boot Tina's Computer",
-        "x": 1120,
-        "y": 340,
+        "x": 900,
+        "y": 360,
         "wires": []
     },
     {
@@ -8949,44 +9089,6 @@
         ]
     },
     {
-        "id": "7ff36affdeacadba",
-        "type": "switch",
-        "z": "3abb5ae57afb4761",
-        "name": "",
-        "property": "tinawork",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 335,
-        "y": 340,
-        "wires": [
-            [
-                "f167c4463ecaaf5c"
-            ],
-            [],
-            [
-                "7992545819db1a42"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "7992545819db1a42",
         "type": "api-call-service",
         "z": "3abb5ae57afb4761",
@@ -9006,53 +9108,9 @@
         "outputProperties": [],
         "queue": "none",
         "x": 870,
-        "y": 400,
+        "y": 420,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "f167c4463ecaaf5c",
-        "type": "subflow:7cc13ada.b6712c",
-        "z": "3abb5ae57afb4761",
-        "name": "",
-        "env": [
-            {
-                "name": "start",
-                "value": "15:00",
-                "type": "str"
-            },
-            {
-                "name": "stop",
-                "value": "17:00",
-                "type": "str"
-            }
-        ],
-        "x": 860,
-        "y": 340,
-        "wires": [
-            [
-                "9ae7e308f889137d",
-                "8a22032494f84cae"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "76f6b8bed6de3f97",
-        "type": "link in",
-        "z": "3abb5ae57afb4761",
-        "name": "Schedule Settings - Receive",
-        "links": [
-            "fbf61a9e5ca3db94",
-            "39f78e9aa56bc51e"
-        ],
-        "x": 755,
-        "y": 360,
-        "wires": [
-            [
-                "f167c4463ecaaf5c"
-            ]
         ]
     },
     {
@@ -9627,8 +9685,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1100,
-        "y": 280,
+        "x": 880,
+        "y": 300,
         "wires": [
             [
                 "7fbab2c7cb7ecc92"
@@ -10622,8 +10680,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1225,
-        "y": 280,
+        "x": 1005,
+        "y": 300,
         "wires": [
             [
                 "5e72a180d8f0232d"
@@ -10653,8 +10711,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1370,
-        "y": 280,
+        "x": 1150,
+        "y": 300,
         "wires": [
             []
         ]
@@ -10687,6 +10745,34 @@
                 "fb1afc4c2078ca29"
             ]
         ]
+    },
+    {
+        "id": "9d03fda88310da78",
+        "type": "function",
+        "z": "3abb5ae57afb4761",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar workEndZone = states['binary_sensor.tina_work_end_zone'].state\nvar tinawork = msg.tinawork\n\nif (tinawork === 'on' && workEndZone === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Activated\"});\n    return[msg,null]\n} else if (tinawork === 'off') {\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"No Work Today\"});\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"We fucked up\"});\n    return[null,msg]\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "8a22032494f84cae",
+                "9ae7e308f889137d"
+            ],
+            [
+                "7992545819db1a42"
+            ]
+        ],
+        "outputLabels": [
+            "Activated",
+            "We fucked up"
+        ],
+        "icon": "node-red-contrib-cpu/cpu.png"
     },
     {
         "id": "d95d9964546768a5",
@@ -16442,7 +16528,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1230,
+        "x": 1050,
         "y": 180,
         "wires": [
             [
@@ -16472,7 +16558,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1560,
+        "x": 1380,
         "y": 140,
         "wires": [
             [
@@ -16502,7 +16588,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1230,
+        "x": 1050,
         "y": 260,
         "wires": [
             [
@@ -16562,8 +16648,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1510,
-        "y": 440,
+        "x": 1650,
+        "y": 520,
         "wires": [
             [
                 "efe1917ebdcef673"
@@ -16592,8 +16678,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1840,
-        "y": 400,
+        "x": 1980,
+        "y": 480,
         "wires": [
             [
                 "bc9d4a0d7a7c5c79"
@@ -16622,8 +16708,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1830,
-        "y": 480,
+        "x": 1970,
+        "y": 560,
         "wires": [
             []
         ]
@@ -16651,8 +16737,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1270,
-        "y": 520,
+        "x": 1410,
+        "y": 600,
         "wires": [
             []
         ]
@@ -16725,7 +16811,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1400,
+        "x": 1220,
         "y": 160,
         "wires": [
             [
@@ -16755,7 +16841,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1400,
+        "x": 1220,
         "y": 240,
         "wires": [
             [
@@ -16785,8 +16871,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1680,
-        "y": 420,
+        "x": 1820,
+        "y": 500,
         "wires": [
             [
                 "40f52ef656550cf6"
@@ -17449,12 +17535,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 840,
-        "y": 200,
+        "x": 1060,
+        "y": 120,
         "wires": [
-            [
-                "e2ad91fc748ca519"
-            ]
+            []
         ]
     },
     {
@@ -17479,12 +17563,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 840,
-        "y": 420,
+        "x": 1040,
+        "y": 480,
         "wires": [
-            [
-                "f8cc9d6657bff329"
-            ]
+            []
         ]
     },
     {
@@ -17682,7 +17764,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1400,
+        "x": 1220,
         "y": 80,
         "wires": [
             []
@@ -17710,7 +17792,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1580,
+        "x": 1400,
         "y": 220,
         "wires": [
             [
@@ -17740,7 +17822,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1740,
+        "x": 1560,
         "y": 120,
         "wires": [
             [
@@ -17770,8 +17852,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2020,
-        "y": 380,
+        "x": 2160,
+        "y": 460,
         "wires": [
             []
         ]
@@ -18222,13 +18304,15 @@
         "y": 320,
         "wires": [
             [
-                "10d9b30654ef759c"
+                "e2ad91fc748ca519",
+                "90637fbeaa21f3ca"
             ],
             [
                 "bf1b0d6542ef6b38"
             ],
             [
-                "0a783dc1cb68b4bf"
+                "94eec3b9d4b18a3d",
+                "3c6cb0ed0847f8ee"
             ]
         ],
         "outputLabels": [
@@ -18250,7 +18334,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1020,
+        "x": 840,
         "y": 200,
         "wires": [
             [
@@ -18371,8 +18455,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1660,
-        "y": 500,
+        "x": 1800,
+        "y": 580,
         "wires": [
             [
                 "b14bcbf98b7e9f91"
@@ -18678,8 +18762,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1500,
-        "y": 520,
+        "x": 1640,
+        "y": 600,
         "wires": [
             [
                 "4a1db30e164dadc8"
@@ -18743,8 +18827,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1100,
-        "y": 420,
+        "x": 1240,
+        "y": 500,
         "wires": [
             [
                 "24c3166123d5dad0"
@@ -18762,6 +18846,251 @@
             "No A/C"
         ],
         "icon": "font-awesome/fa-thermometer"
+    },
+    {
+        "id": "94eec3b9d4b18a3d",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Early Night Mode?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.early_night_mode",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "earlynight",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1050,
+        "y": 420,
+        "wires": [
+            [
+                "a06fa6d20358b887"
+            ],
+            [
+                "f8cc9d6657bff329"
+            ]
+        ],
+        "outputLabels": [
+            "On",
+            "Off"
+        ]
+    },
+    {
+        "id": "a06fa6d20358b887",
+        "type": "function",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar fanMode = states['input_select.scheduled_climate_mode_master_bedroom_fan'].state\nvar acMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\n\nmsg.nighttemp = nightTemp\n\nif (fanMode === 'Fan') {\n    var fan = 'on'\n} else {\n    var fan = 'off'\n}\nif (acMode === 'AC') {\n    var hvac = 'cool'\n} else if (acMode === 'Fan') {\n    var hvac = 'fan_only'\n} else {\n    var hvac = 'off'\n}\n\nif (ac === 'on') {\n    msg.fan = fan\n    msg.acmode = hvac\n    node.status({fill:\"green\",shape:\"dot\",text:\"Sent\"});\n    return[msg,null]\n} else if (ac === 'off') {\n    msg.fan = fan\n    node.status({fill:\"green\",shape:\"dot\",text:\"Sent\"});\n    return[null,msg]\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"We fucked up\"});\n    return null\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 400,
+        "wires": [
+            [
+                "69c655d75dda13be",
+                "2803126a83be1823"
+            ],
+            [
+                "69c655d75dda13be"
+            ]
+        ],
+        "outputLabels": [
+            "AC Installed",
+            "AC Not Installed"
+        ],
+        "icon": "node-red-contrib-cpu/cpu.png"
+    },
+    {
+        "id": "69c655d75dda13be",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Fan",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "fan",
+        "service": "turn_{{fan}}",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "fan.master_bedroom_fan"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1430,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d15cbcd3afaac79",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Set Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_hvac_mode",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.master_bedroom_aircon"
+        ],
+        "data": "{\t    \"hvac_mode\": msg.acmode\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1760,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2803126a83be1823",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Set Temp",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_temperature",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.master_bedroom_aircon"
+        ],
+        "data": "{\t    \"temperature\": msg.nighttemp\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1440,
+        "y": 380,
+        "wires": [
+            [
+                "723cd46ceb02f152"
+            ]
+        ]
+    },
+    {
+        "id": "723cd46ceb02f152",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Eco On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_preset_mode",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.master_bedroom_aircon"
+        ],
+        "data": "{\t    \"preset_mode\":\"eco\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1600,
+        "y": 380,
+        "wires": [
+            [
+                "0d15cbcd3afaac79"
+            ]
+        ]
+    },
+    {
+        "id": "90637fbeaa21f3ca",
+        "type": "switch",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "manual-night",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 775,
+        "y": 120,
+        "wires": [
+            [
+                "10d9b30654ef759c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3c6cb0ed0847f8ee",
+        "type": "switch",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "manual-day",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 775,
+        "y": 420,
+        "wires": [
+            [
+                "0a783dc1cb68b4bf"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "105271e0816c6a52",
@@ -24987,6 +25316,7 @@
         "id": "e8d2135bb5564a4a",
         "type": "server-state-changed",
         "z": "3e4ba157b540d183",
+        "g": "6e83103b5c5311e9",
         "name": "Voice Change",
         "server": "9e87348d.9c1c48",
         "version": 4,
@@ -25038,8 +25368,8 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 110,
-        "y": 40,
+        "x": 150,
+        "y": 60,
         "wires": [
             [
                 "a75651492e779bfc"
@@ -25091,7 +25421,7 @@
             }
         ],
         "x": 130,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "6ec62f6cf4fcf994"
@@ -25117,7 +25447,7 @@
         "repair": false,
         "outputs": 1,
         "x": 430,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "486bca43ddc48fb8"
@@ -25143,7 +25473,7 @@
         "payload": "off",
         "payloadType": "str",
         "x": 610,
-        "y": 360,
+        "y": 400,
         "wires": [
             [
                 "486bca43ddc48fb8"
@@ -25164,7 +25494,7 @@
         "templateLocation": "",
         "templateLocationType": "none",
         "x": 410,
-        "y": 200,
+        "y": 240,
         "wires": [
             [
                 "20271b0662a4d5df"
@@ -25185,7 +25515,7 @@
         "templateLocation": "",
         "templateLocationType": "none",
         "x": 590,
-        "y": 200,
+        "y": 240,
         "wires": [
             [
                 "16bf625c802d7910"
@@ -25211,7 +25541,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 200,
+        "y": 240,
         "wires": [
             [
                 "31ce8ad28dd41226"
@@ -25231,27 +25561,13 @@
         "finalize": "",
         "libs": [],
         "x": 760,
-        "y": 200,
+        "y": 240,
         "wires": [
             [
-                "39f78e9aa56bc51e"
+                "b6cb206d9cb34610"
             ]
         ],
         "icon": "font-awesome/fa-clock-o"
-    },
-    {
-        "id": "39f78e9aa56bc51e",
-        "type": "link out",
-        "z": "3e4ba157b540d183",
-        "g": "5c50443a84910fb7",
-        "name": "Schedule Settings - Send",
-        "mode": "link",
-        "links": [
-            "76f6b8bed6de3f97"
-        ],
-        "x": 875,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "a32c37ccf0102258",
@@ -25272,7 +25588,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 190,
-        "y": 360,
+        "y": 400,
         "wires": [
             [
                 "d5c6b45df763e57e"
@@ -25311,7 +25627,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 410,
-        "y": 360,
+        "y": 400,
         "wires": [
             [
                 "486bca43ddc48fb8"
@@ -25337,7 +25653,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 190,
-        "y": 240,
+        "y": 280,
         "wires": [
             [
                 "31ce8ad28dd41226"
@@ -25348,6 +25664,7 @@
         "id": "f6f45d3e3cf9aeab",
         "type": "inject",
         "z": "3e4ba157b540d183",
+        "g": "6e83103b5c5311e9",
         "name": "Set Voice on Reboot",
         "props": [
             {
@@ -25361,8 +25678,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 100,
+        "x": 180,
+        "y": 120,
         "wires": [
             [
                 "40c9c33453179a21"
@@ -25373,6 +25690,7 @@
         "id": "40c9c33453179a21",
         "type": "api-current-state",
         "z": "3e4ba157b540d183",
+        "g": "6e83103b5c5311e9",
         "name": "Jarvis Voice",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -25405,8 +25723,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 350,
-        "y": 100,
+        "x": 390,
+        "y": 120,
         "wires": [
             [
                 "a75651492e779bfc"
@@ -25429,13 +25747,14 @@
         "expiry": "",
         "broker": "fd29421fc00140a8",
         "x": 1000,
-        "y": 300,
+        "y": 340,
         "wires": []
     },
     {
         "id": "b49f0642ce0153c6",
         "type": "mqtt out",
         "z": "3e4ba157b540d183",
+        "g": "6e83103b5c5311e9",
         "name": "MQTT Publish",
         "topic": "house/jarvis/voice",
         "qos": "2",
@@ -25446,8 +25765,8 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 800,
-        "y": 40,
+        "x": 840,
+        "y": 60,
         "wires": []
     },
     {
@@ -25471,7 +25790,7 @@
         "to": "",
         "reg": false,
         "x": 790,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "74bb3d48dd17bef9"
@@ -25482,6 +25801,7 @@
         "id": "a75651492e779bfc",
         "type": "change",
         "z": "3e4ba157b540d183",
+        "g": "6e83103b5c5311e9",
         "name": "",
         "rules": [
             {
@@ -25497,8 +25817,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
-        "y": 40,
+        "x": 620,
+        "y": 60,
         "wires": [
             [
                 "b49f0642ce0153c6"
@@ -25550,7 +25870,7 @@
             }
         ],
         "x": 170,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "a8d7f5e5d4f549b0"
@@ -25589,7 +25909,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 350,
-        "y": 540,
+        "y": 700,
         "wires": [
             [
                 "a8d7f5e5d4f549b0"
@@ -25615,7 +25935,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 540,
+        "y": 700,
         "wires": [
             [
                 "464e9271285f8450"
@@ -25643,7 +25963,7 @@
         "to": "",
         "reg": false,
         "x": 610,
-        "y": 460,
+        "y": 620,
         "wires": [
             []
         ]
@@ -25652,11 +25972,12 @@
         "id": "04fdddae578ee136",
         "type": "alexa-remote-event",
         "z": "3e4ba157b540d183",
+        "g": "931cc27100c9317e",
         "name": "",
         "account": "be975ce229701797",
         "event": "ws-device-activity",
-        "x": 170,
-        "y": 680,
+        "x": 150,
+        "y": 860,
         "wires": [
             [
                 "266634bf3c6019c8",
@@ -25668,6 +25989,7 @@
         "id": "266634bf3c6019c8",
         "type": "function",
         "z": "3e4ba157b540d183",
+        "g": "931cc27100c9317e",
         "name": "Set Global Variables",
         "func": "var name = msg.payload.name\nvar serial = msg.payload.deviceSerialNumber\nvar entityId = '{}'\n\nif (name === 'Basement Echo Dot') {\n    var entityId = 'media_player.basement_echo_dot'\n} else if (name === 'Living Room Echo Dot') {\n    var entityId = 'media_player.living_room_echo_dot'\n} else if (name === 'Master Bedroom Echo Dot') {\n    var entityId = 'media_player.master_bedroom_echo_dot'\n}\n\nvar nameMsg = {\n    \"payload\": name\n}\nvar serialMsg = {\n    \"payload\": serial\n}\nvar entityMsg = {\n    \"payload\": entityId\n}\n\nglobal.set('lastAlexaName',name)\nglobal.set('lastAlexaEntityId',entityId)\nglobal.set('lastAlexaSerial',serial)\n\nnode.status({fill:\"green\",shape:\"dot\",text:name});\n\nreturn[nameMsg,serialMsg,entityMsg];",
         "outputs": 3,
@@ -25675,8 +25997,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 680,
+        "x": 380,
+        "y": 860,
         "wires": [
             [
                 "4560584de593b5c1"
@@ -25699,6 +26021,7 @@
         "id": "4560584de593b5c1",
         "type": "ha-sensor",
         "z": "3e4ba157b540d183",
+        "g": "931cc27100c9317e",
         "name": "Name",
         "entityConfig": "4118a859da3ae01f",
         "version": 0,
@@ -25707,8 +26030,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 630,
-        "y": 620,
+        "x": 610,
+        "y": 800,
         "wires": [
             []
         ]
@@ -25717,6 +26040,7 @@
         "id": "488e4f61d16705d4",
         "type": "ha-sensor",
         "z": "3e4ba157b540d183",
+        "g": "931cc27100c9317e",
         "name": "Serial",
         "entityConfig": "790a5433342e7eb5",
         "version": 0,
@@ -25725,8 +26049,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 630,
-        "y": 680,
+        "x": 610,
+        "y": 860,
         "wires": [
             []
         ]
@@ -25735,6 +26059,7 @@
         "id": "1f3142828a586d08",
         "type": "ha-sensor",
         "z": "3e4ba157b540d183",
+        "g": "931cc27100c9317e",
         "name": "Entity ID",
         "entityConfig": "4d3001dabc174efe",
         "version": 0,
@@ -25743,8 +26068,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 640,
-        "y": 740,
+        "x": 620,
+        "y": 920,
         "wires": [
             []
         ]
@@ -25753,6 +26078,7 @@
         "id": "f9bc4d36a0df7947",
         "type": "debug",
         "z": "3e4ba157b540d183",
+        "g": "931cc27100c9317e",
         "name": "Alexa Activities",
         "active": false,
         "tosidebar": true,
@@ -25762,9 +26088,388 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 380,
-        "y": 760,
+        "x": 360,
+        "y": 940,
         "wires": []
+    },
+    {
+        "id": "d2c017d8f8c1dc68",
+        "type": "subflow:7cc13ada.b6712c",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "",
+        "env": [
+            {
+                "name": "start",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "name": "stop",
+                "value": "17:00",
+                "type": "str"
+            }
+        ],
+        "x": 920,
+        "y": 500,
+        "wires": [
+            [
+                "5f0f296e4f242dfe"
+            ],
+            [
+                "80fcb34c004369e7"
+            ]
+        ]
+    },
+    {
+        "id": "7a6299413cbbbdcf",
+        "type": "api-render-template",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Offset Before",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{{ (state_attr('input_datetime.tina_workday_start', 'timestamp') - 5400) | timestamp_custom('%H:%M', false) }}",
+        "resultsLocation": "start",
+        "resultsLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "92c97bdd3ffb345d"
+            ]
+        ]
+    },
+    {
+        "id": "92c97bdd3ffb345d",
+        "type": "api-render-template",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Offset After",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{{ (state_attr('input_datetime.tina_workday_start', 'timestamp') + 900) | timestamp_custom('%H:%M', false) }}",
+        "resultsLocation": "stop",
+        "resultsLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
+        "x": 590,
+        "y": 460,
+        "wires": [
+            [
+                "1fd2518454b8b8a1"
+            ]
+        ]
+    },
+    {
+        "id": "1fd2518454b8b8a1",
+        "type": "function",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Set Times",
+        "func": "msg.payload = {\n    \"start\": msg.start,\n    \"stop\": msg.stop,\n    \"days\": [\n        1,\n        2,\n        3,\n        4,\n        5,\n        6,\n        7\n    ]\n}\nmsg.topic = \"override\"\nnode.status({fill:\"green\",shape:\"dot\",text:msg.start + \" - \" + msg.stop});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 460,
+        "wires": [
+            [
+                "d2c017d8f8c1dc68"
+            ]
+        ],
+        "icon": "font-awesome/fa-clock-o"
+    },
+    {
+        "id": "33845d78dadbb4df",
+        "type": "inject",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Set Schedule",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "58 03 * * *",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "7a6299413cbbbdcf"
+            ]
+        ]
+    },
+    {
+        "id": "cc54107a01eca8c2",
+        "type": "inject",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Set Schedule on Reboot",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "120",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 500,
+        "wires": [
+            [
+                "7a6299413cbbbdcf"
+            ]
+        ]
+    },
+    {
+        "id": "2a2e328746eed124",
+        "type": "inject",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 750,
+        "y": 520,
+        "wires": [
+            [
+                "d2c017d8f8c1dc68"
+            ]
+        ]
+    },
+    {
+        "id": "80fcb34c004369e7",
+        "type": "change",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1035,
+        "y": 500,
+        "wires": [
+            [
+                "d2d529b327823c22"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "5f0f296e4f242dfe",
+        "type": "change",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1035,
+        "y": 440,
+        "wires": [
+            [
+                "d2d529b327823c22"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "d2d529b327823c22",
+        "type": "ha-binary-sensor",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Tina Work Start Zone",
+        "entityConfig": "3577b1d6ba521c18",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1200,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6cb206d9cb34610",
+        "type": "subflow:7cc13ada.b6712c",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "",
+        "env": [
+            {
+                "name": "start",
+                "value": "15:00",
+                "type": "str"
+            },
+            {
+                "name": "stop",
+                "value": "17:00",
+                "type": "str"
+            }
+        ],
+        "x": 920,
+        "y": 280,
+        "wires": [
+            [
+                "149704b9f6497881"
+            ],
+            [
+                "1e1eb662bad16e38"
+            ]
+        ]
+    },
+    {
+        "id": "51b11f9d5b8bfbb0",
+        "type": "inject",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 750,
+        "y": 300,
+        "wires": [
+            [
+                "b6cb206d9cb34610"
+            ]
+        ]
+    },
+    {
+        "id": "1e1eb662bad16e38",
+        "type": "change",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1035,
+        "y": 280,
+        "wires": [
+            [
+                "8fe032f757ed2b62"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "149704b9f6497881",
+        "type": "change",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1035,
+        "y": 220,
+        "wires": [
+            [
+                "8fe032f757ed2b62"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8fe032f757ed2b62",
+        "type": "ha-binary-sensor",
+        "z": "3e4ba157b540d183",
+        "g": "5c50443a84910fb7",
+        "name": "Tina Work End Zone",
+        "entityConfig": "e5f345a03a1ef184",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1200,
+        "y": 260,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "e038489eca14b1dd",
