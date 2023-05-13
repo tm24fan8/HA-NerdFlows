@@ -766,9 +766,7 @@
             "b371dfa2ee57b577"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1432,
-        "h": 582
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -841,9 +839,7 @@
             "3c6cb0ed0847f8ee"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2252,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -883,9 +879,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -973,9 +967,7 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -993,9 +985,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1287,10 +1277,13 @@
             "572b2040be874f4e",
             "b57e12eb73074535",
             "93b718cd47747ccc",
-            "c8af362d48d5c0ad"
+            "c8af362d48d5c0ad",
+            "3463c4f2bf6388fe"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 682
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1307,10 +1300,16 @@
             "e97b782efaaf5976",
             "d8c62e34298105b4",
             "900c251ff10a2f5b",
-            "2a0e3a76af7ab628"
+            "2a0e3a76af7ab628",
+            "53102bdc5d885602",
+            "a169eca7f3f1df15",
+            "2b63f908be8296d0",
+            "0be3c318e9e6df0a"
         ],
         "x": 64,
-        "y": 699
+        "y": 759,
+        "w": 1022,
+        "h": 162
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1374,9 +1373,7 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1409,9 +1406,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1452,9 +1447,7 @@
             "5ba9cfc0194ef62a"
         ],
         "x": 754,
-        "y": 319,
-        "w": 672,
-        "h": 622
+        "y": 319
     },
     {
         "id": "931cc27100c9317e",
@@ -1473,9 +1466,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1493,9 +1484,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "fba69dfc80829db7",
@@ -21950,6 +21939,11 @@
             },
             {
                 "t": "eq",
+                "v": "Basement Off",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "Dinner Is Ready",
                 "vt": "str"
             },
@@ -21961,7 +21955,7 @@
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 7,
+        "outputs": 8,
         "x": 295,
         "y": 340,
         "wires": [
@@ -21979,6 +21973,9 @@
             ],
             [
                 "b57e12eb73074535"
+            ],
+            [
+                "3463c4f2bf6388fe"
             ],
             [
                 "93b718cd47747ccc"
@@ -22314,7 +22311,7 @@
             "1f5808147fa975cf"
         ],
         "x": 465,
-        "y": 500,
+        "y": 560,
         "wires": []
     },
     {
@@ -22338,7 +22335,7 @@
         "to": "",
         "reg": false,
         "x": 395,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "572b2040be874f4e"
@@ -22370,7 +22367,7 @@
         "repair": false,
         "outputs": 2,
         "x": 535,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "7107656a6cbecce7"
@@ -22400,7 +22397,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 680,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "d8c62e34298105b4"
@@ -22444,10 +22441,10 @@
             }
         ],
         "x": 210,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
-                "e97b782efaaf5976"
+                "2a0e3a76af7ab628"
             ]
         ]
     },
@@ -22464,16 +22461,24 @@
                 "t": "cont",
                 "v": "KALLEN_PC",
                 "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "TONY_COMPUTER",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
-        "x": 395,
-        "y": 740,
+        "outputs": 2,
+        "x": 465,
+        "y": 800,
         "wires": [
             [
-                "2a0e3a76af7ab628"
+                "f5aff29df4e07a4a"
+            ],
+            [
+                "53102bdc5d885602"
             ]
         ],
         "l": false
@@ -22499,7 +22504,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 460,
-        "y": 560,
+        "y": 620,
         "wires": [
             []
         ]
@@ -22525,7 +22530,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 470,
-        "y": 620,
+        "y": 680,
         "wires": [
             []
         ]
@@ -22549,7 +22554,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 815,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "900c251ff10a2f5b"
@@ -22578,7 +22583,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 970,
-        "y": 740,
+        "y": 800,
         "wires": [
             []
         ]
@@ -22595,14 +22600,145 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 465,
-        "y": 740,
+        "x": 395,
+        "y": 800,
         "wires": [
             [
-                "f5aff29df4e07a4a"
+                "e97b782efaaf5976"
             ]
         ],
         "l": false
+    },
+    {
+        "id": "3463c4f2bf6388fe",
+        "type": "api-call-service",
+        "z": "bb961e59e2ef86c9",
+        "g": "f519aff597ece351",
+        "name": "Basement Shutdown",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "basement_shutdown",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 480,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53102bdc5d885602",
+        "type": "function",
+        "z": "bb961e59e2ef86c9",
+        "g": "26f91eb2ef77450d",
+        "name": "function 1",
+        "func": "var action = msg.payload.event.actionName\n\nif (action === 'TONY_COMPUTER_SHUTDOWN') {\n    msg.action = 'shutdown'\n    node.status({fill:\"green\",shape:\"dot\",text:\"Shutdown\"});\n    return[msg,null]\n} else if (action === 'TONY_COMPUTER_LOCK') {\n    msg.action = 'lock'\n    node.status({fill:\"green\",shape:\"dot\",text:\"Shutdown\"});\n    return[msg,null]\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Ignore\"});\n    return[null,msg]\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 535,
+        "y": 880,
+        "wires": [
+            [
+                "a169eca7f3f1df15"
+            ],
+            [
+                "0be3c318e9e6df0a"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "a169eca7f3f1df15",
+        "type": "api-call-service",
+        "z": "bb961e59e2ef86c9",
+        "g": "26f91eb2ef77450d",
+        "name": "Take Action",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "tony_desktop_{{action}}",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 670,
+        "y": 880,
+        "wires": [
+            [
+                "2b63f908be8296d0"
+            ]
+        ]
+    },
+    {
+        "id": "2b63f908be8296d0",
+        "type": "delay",
+        "z": "bb961e59e2ef86c9",
+        "g": "26f91eb2ef77450d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 815,
+        "y": 880,
+        "wires": [
+            [
+                "0be3c318e9e6df0a"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "0be3c318e9e6df0a",
+        "type": "api-call-service",
+        "z": "bb961e59e2ef86c9",
+        "g": "26f91eb2ef77450d",
+        "name": "Clear Notification",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\": msg.user,\t    \"type\":\"alert\",\t    \"message\":\"clear_notification\",\t    \"tag\":\"tony-pc-shutdown\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 970,
+        "y": 880,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "a4c477269b22f766",
