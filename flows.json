@@ -766,7 +766,9 @@
             "b371dfa2ee57b577"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1432,
+        "h": 582
     },
     {
         "id": "e065b1ed4938b477",
@@ -839,7 +841,9 @@
             "3c6cb0ed0847f8ee"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2252,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -899,9 +903,7 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39,
-        "w": 792,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -921,9 +923,7 @@
             "3c03edd9c35f85f8"
         ],
         "x": 14,
-        "y": 199,
-        "w": 712,
-        "h": 142
+        "y": 199
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1143,9 +1143,7 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 359,
-        "w": 1012,
-        "h": 222
+        "y": 359
     },
     {
         "id": "eeafd13be593ae69",
@@ -1213,9 +1211,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1652,
-        "h": 382
+        "y": 39
     },
     {
         "id": "8aee4d340a136bac",
@@ -1393,7 +1389,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659
+        "y": 659,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "265593f442864b6a",
@@ -17935,7 +17933,7 @@
         ],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"brightness_pct\": msg.adaptive.attributes.brightness_pct,\t    \"transition\": msg.fade_night\t}",
+        "data": "{\t    \"brightness_pct\": msg.brightness,\t    \"transition\": msg.fade_night\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -18354,7 +18352,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Bedtime Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar topic = msg.topic\n\nmsg.bedtemp = bedTemp\n\nif (ac === 'on') {\n    if (topic === 'mrbedroom-bedtime'){\n        if (schedMode === 'AC') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"A/C\"});\n            return[msg,null]\n        } else {\n            node.status({fill:\"grey\",shape:\"ring\",text:\"No A/C\"});\n            return null\n        }\n    } else if (topic === 'manual-bedtime'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Trigger\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar topic = msg.topic\n\nmsg.bedtemp = bedTemp\n\nif (ac === 'on') {\n    if (topic === 'mrbedroom-bedtime'){\n        if (schedMode === 'AC') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"A/C set to \" + bedTemp + \" degrees\"});\n            return[msg,null]\n        } else {\n            node.status({fill:\"grey\",shape:\"ring\",text:\"No A/C\"});\n            return null\n        }\n    } else if (topic === 'manual-bedtime'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Trigger\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
