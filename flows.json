@@ -763,12 +763,16 @@
             "d0dacbae4513b1ad",
             "7b390a3b24fc3197",
             "a417e93366843249",
-            "b371dfa2ee57b577"
+            "b371dfa2ee57b577",
+            "17e5f9acd57c2819",
+            "a8070806c0f88856",
+            "7b0648758704fad4",
+            "3937c38bc1bd0ee0"
         ],
         "x": 14,
         "y": 719,
         "w": 1432,
-        "h": 582
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -1389,9 +1393,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -3354,7 +3356,7 @@
             },
             {
                 "property": "state_class",
-                "value": ""
+                "value": "measurement"
             }
         ],
         "resend": true,
@@ -3395,7 +3397,7 @@
             },
             {
                 "property": "state_class",
-                "value": ""
+                "value": "measurement"
             }
         ],
         "resend": true,
@@ -3436,7 +3438,7 @@
             },
             {
                 "property": "state_class",
-                "value": ""
+                "value": "measurement"
             }
         ],
         "resend": true,
@@ -17074,7 +17076,6 @@
         "service": "turn_on",
         "areaId": [
             "kallen_bedroom",
-            "upstairs_bathroom",
             "upstairs_hallway"
         ],
         "deviceId": [],
@@ -17085,10 +17086,12 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 500,
-        "y": 1120,
+        "x": 800,
+        "y": 1320,
         "wires": [
-            []
+            [
+                "3937c38bc1bd0ee0"
+            ]
         ]
     },
     {
@@ -17928,11 +17931,11 @@
         "debugenabled": false,
         "domain": "light",
         "service": "turn_on",
-        "areaId": [
-            "kallen_bedroom"
-        ],
+        "areaId": [],
         "deviceId": [],
-        "entityId": [],
+        "entityId": [
+            "light.kallen_bedroom_lights"
+        ],
         "data": "{\t    \"brightness_pct\": msg.brightness,\t    \"transition\": msg.fade_night\t}",
         "dataType": "jsonata",
         "mergeContext": "",
@@ -18538,10 +18541,11 @@
             ],
             [
                 "57651381835f659c",
-                "d132875202e85038"
+                "d132875202e85038",
+                "17e5f9acd57c2819"
             ],
             [
-                "274d63b8df8f2dd0"
+                "7b0648758704fad4"
             ],
             [
                 "4341325f7ca23f24"
@@ -19079,6 +19083,106 @@
         "wires": [
             [
                 "0a783dc1cb68b4bf"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "17e5f9acd57c2819",
+        "type": "api-render-template",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{{ as_timestamp(now()) | timestamp_custom('%H:%M') }}",
+        "resultsLocation": "waketime",
+        "resultsLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
+        "x": 635,
+        "y": 820,
+        "wires": [
+            [
+                "a8070806c0f88856"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "a8070806c0f88856",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Set Wakeup Time",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_datetime",
+        "service": "set_datetime",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_datetime.kallen_wakeup_time"
+        ],
+        "data": "{\t    \"time\": msg.waketime\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 770,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3937c38bc1bd0ee0",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Set Sleep Time",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_datetime",
+        "service": "set_datetime",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_datetime.kallen_bedtime"
+        ],
+        "data": "{\t    \"time\": msg.sleeptime\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 980,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b0648758704fad4",
+        "type": "api-render-template",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{{ as_timestamp(now()) | timestamp_custom('%H:%M') }}",
+        "resultsLocation": "sleeptime",
+        "resultsLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
+        "x": 95,
+        "y": 1200,
+        "wires": [
+            [
+                "274d63b8df8f2dd0"
             ]
         ],
         "l": false
