@@ -725,7 +725,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -843,7 +845,8 @@
             "2803126a83be1823",
             "723cd46ceb02f152",
             "90637fbeaa21f3ca",
-            "3c6cb0ed0847f8ee"
+            "3c6cb0ed0847f8ee",
+            "64ad1f28cd8d243f"
         ],
         "x": 14,
         "y": 19,
@@ -17501,11 +17504,11 @@
         "links": [
             "31b8c8291d19ffc6"
         ],
-        "x": 145,
+        "x": 125,
         "y": 540,
         "wires": [
             [
-                "9c01880c6319d29b"
+                "64ad1f28cd8d243f"
             ]
         ]
     },
@@ -18555,7 +18558,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Shower Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = states['sensor.pirateweather_temperature'].state\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar goodnight = states['input_boolean.goodnight'].state\nvar coolState = states['input_boolean.master_bedroom_cooling_on'].state\nvar showerMode = msg.payload\n\nmsg.temp = temp\nmsg.nighttemp = nightTemp\nmsg.threshold = threshold\n\nif (ac === 'on') {\n    if (showerMode === 'on') {\n        if (temp >= threshold) {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Shower Mode On\" });\n            return [msg, null, null, null]\n        } else {\n            node.status({ fill: \"red\", shape: \"ring\", text: \"Too Cold\" });\n            return null\n        }\n    } else if (showerMode === 'off') {\n        if (coolState === 'on') {\n            if (goodnight === 'on') {\n                node.status({ fill: \"green\", shape: \"dot\", text: \"Bedtime Mode\" });\n                return [null, msg, null, null]\n            } else if (goodnight === 'off') {\n                node.status({ fill: \"green\", shape: \"dot\", text: \"Night Mode\" });\n                return [null, null, msg, null]\n            }\n        } else {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Day Mode\" });\n            return [null, null, null, msg]\n        }\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"A/C Not Installed\" });\n    return null\n}\n\n",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = states['sensor.pirateweather_temperature'].state\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar goodnight = states['input_boolean.goodnight'].state\nvar coolingTime = states['input_datetime.master_bedroom_cooling'].attributes.timestamp\nvar nightMode = states['input_boolean.night_mode'].state\nvar ct = msg.ct\nvar showerMode = msg.payload\n\nmsg.temp = temp\nmsg.nighttemp = nightTemp\nmsg.threshold = threshold\n\nif (ac === 'on') {\n    if (showerMode === 'on') {\n        if (temp >= threshold) {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Shower Mode On\" });\n            return [msg, null, null, null]\n        } else {\n            node.status({ fill: \"red\", shape: \"ring\", text: \"Too Cold\" });\n            return null\n        }\n    } else if (showerMode === 'off') {\n        if (ct > 21600 && ct < coolingTime) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Day Mode\"});\n            return [null, null, null, msg]\n        } else if (nightMode === 'on' || goodnight === 'on') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Bedtime Mode\"});\n            return [null, msg, null, null]\n        } else {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Night Mode\"});\n            return [null, null, msg, null]\n        }\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"A/C Not Installed\" });\n    return null\n}\n\n",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -19318,6 +19321,28 @@
             ],
             []
         ]
+    },
+    {
+        "id": "64ad1f28cd8d243f",
+        "type": "api-render-template",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{% from 'time.jinja' import ct %}\n{{ ct() | int }}",
+        "resultsLocation": "ct",
+        "resultsLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
+        "x": 185,
+        "y": 540,
+        "wires": [
+            [
+                "9c01880c6319d29b"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "105271e0816c6a52",
