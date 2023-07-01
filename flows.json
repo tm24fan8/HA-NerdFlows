@@ -725,9 +725,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -773,9 +771,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1552,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -849,9 +845,7 @@
             "64ad1f28cd8d243f"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2252,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -1100,7 +1094,9 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1132,
+        "h": 382
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1264,7 +1260,9 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619
+        "y": 619,
+        "w": 1112,
+        "h": 282
     },
     {
         "id": "f519aff597ece351",
@@ -14209,7 +14207,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"text\": \"<voice name='Brian'><prosody rate='150%'>Would you like me to turn on the computer for Collin?</prosody></voice>\",\t    \"event_id\": \"actionable_notification_kallen_computer_on\",\t    \"alexa_device\": $globalContext('lastAlexaEntityId')\t}",
+        "data": "{\t    \"text\": \"<voice name='Joanna'><prosody rate='150%'>Would you like me to turn on the computer for Collin?</prosody></voice>\",\t    \"event_id\": \"actionable_notification_kallen_computer_on\",\t    \"alexa_device\": $globalContext('lastAlexaEntityId')\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
