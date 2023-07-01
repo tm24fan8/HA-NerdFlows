@@ -771,9 +771,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1552,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -847,9 +845,7 @@
             "64ad1f28cd8d243f"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2252,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -23624,7 +23620,7 @@
         "name": "",
         "server": "9e87348d.9c1c48",
         "version": 0,
-        "template": "{%- macro getReport() -%}\n\n  {{ states('sensor.current_conditions_detail') }}\n  {{ states('sensor.tomorrow_forecast_detail') }}\n  {{ states('sensor.clothing_forecast_detail') }}\n\n  {% if states('sensor.weatheralerts_active_alerts') > '0' %}\n    Currently there are weather alerts active. The total number of alerts is {{ states('sensor.weather_alerts_active_corrected') }}. They are as follows.\n      {{ states('sensor.weather_alert_string') }}.\n  {% endif %}\n\n{%- endmacro -%}\n\n\n{# a macro that removes all newline characters, empty spaces, and returns formatted text  #}\n{%- macro cleanup(data) -%}\n  {%- for item in data.split(\"\\n\")  if item | trim != \"\" -%}\n    {{ item | trim }} {% endfor -%}\n{%- endmacro -%}\n\n{# a macro to call all macros :)  #}\n{%- macro mother_of_all_macros() -%}\n  {{ getReport() }}\n{%- endmacro -%}\n    \n{# Call the macro  #}\n{{- cleanup(mother_of_all_macros()) -}}",
+        "template": "{% from 'formatting.jinja' import cleanup %}\n\n{%- macro getReport() -%}\n\n  {{ states('sensor.current_conditions_detail') }}\n  {{ states('sensor.tomorrow_forecast_detail') }}\n  {{ states('sensor.clothing_forecast_detail') }}\n\n  {% if states('sensor.weatheralerts_active_alerts') > '0' %}\n    Currently there are weather alerts active. The total number of alerts is {{ states('sensor.weather_alerts_active_corrected') }}. They are as follows.\n      {{ states('sensor.weather_alert_string') }}.\n  {% endif %}\n\n{%- endmacro -%}\n{{- cleanup(getReport()) -}}",
         "resultsLocation": "payload",
         "resultsLocationType": "msg",
         "templateLocation": "template",
