@@ -771,7 +771,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -845,7 +847,9 @@
             "64ad1f28cd8d243f"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2252,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1094,9 +1098,7 @@
             "1e1891c23a6e7e64"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1132,
-        "h": 382
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1260,9 +1262,7 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619,
-        "w": 1112,
-        "h": 282
+        "y": 619
     },
     {
         "id": "f519aff597ece351",
@@ -17220,12 +17220,12 @@
         "type": "api-call-service",
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
-        "name": "Fan Off",
+        "name": "Fan",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
         "domain": "fan",
-        "service": "turn_off",
+        "service": "turn_{{fan}}",
         "areaId": [],
         "deviceId": [],
         "entityId": [
@@ -17237,7 +17237,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 680,
+        "x": 670,
         "y": 960,
         "wires": [
             [
@@ -17267,7 +17267,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 850,
+        "x": 830,
         "y": 960,
         "wires": [
             []
@@ -18620,7 +18620,7 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenLoc = states['person.kallen_stork'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nvar fadeDay = states['input_number.wakeup_lights_fade_day'].state\nvar fadeNight = states['input_number.wakeup_lights_fade_night'].state\nvar topic = msg.topic\nvar toggle = msg.toggle\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,null,null,msg]\n    } else if (toggle === 'off') {\n        msg.brightness = brightness\n        msg.fade_day = fadeDay * 60\n        msg.fade_night = fadeNight * 60\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg,null]\n    }\n} else {\n    if (topic === 'boolean') {\n        msg.toggle = 'off'\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return [msg,null,null,null]\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return null\n    }\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenLoc = states['person.kallen_stork'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nvar fadeDay = states['input_number.wakeup_lights_fade_day'].state\nvar fadeNight = states['input_number.wakeup_lights_fade_night'].state\nvar hotDay = states['input_boolean.hot_day'].state\nvar topic = msg.topic\nvar toggle = msg.toggle\n\nif (hotDay === 'on') {\n    msg.fan = 'on'\n} else {\n    msg.fan = 'off'\n}\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,null,null,msg]\n    } else if (toggle === 'off') {\n        msg.brightness = brightness\n        msg.fade_day = fadeDay * 60\n        msg.fade_night = fadeNight * 60\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg,null]\n    }\n} else {\n    if (topic === 'boolean') {\n        msg.toggle = 'off'\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return [msg,null,null,null]\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return null\n    }\n}",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
