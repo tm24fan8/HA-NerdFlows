@@ -905,7 +905,9 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 792,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -922,10 +924,12 @@
             "788eb0a1551db9b8",
             "7674185d1e5ee489",
             "427cc2991454bbf0",
-            "3c03edd9c35f85f8"
+            "603140fef1e2edaf"
         ],
         "x": 14,
-        "y": 199
+        "y": 199,
+        "w": 712,
+        "h": 142
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1116,9 +1120,9 @@
             "08a22fa71fce5e91",
             "d580c539c554a4c1",
             "f0cc7b3b9622312a",
-            "e9e8bc8b535c232f",
             "206e512c5268020f",
-            "4da18a3f1e0298db"
+            "4da18a3f1e0298db",
+            "283661388275a459"
         ],
         "x": 34,
         "y": 559,
@@ -1145,7 +1149,9 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 359
+        "y": 359,
+        "w": 1012,
+        "h": 222
     },
     {
         "id": "eeafd13be593ae69",
@@ -3602,6 +3608,11 @@
         "debugEnabled": false
     },
     {
+        "id": "81cb9d95d14a3e5a",
+        "type": "add-todoist-api-token",
+        "name": "Tony"
+    },
+    {
         "id": "afead614fabc01bb",
         "type": "function",
         "z": "a42343e035e3313c",
@@ -5537,7 +5548,9 @@
         "x": 575,
         "y": 720,
         "wires": [
-            []
+            [
+                "283661388275a459"
+            ]
         ],
         "l": false
     },
@@ -5911,7 +5924,9 @@
         "x": 575,
         "y": 780,
         "wires": [
-            []
+            [
+                "283661388275a459"
+            ]
         ],
         "l": false
     },
@@ -6350,7 +6365,9 @@
         "x": 575,
         "y": 840,
         "wires": [
-            []
+            [
+                "283661388275a459"
+            ]
         ],
         "l": false
     },
@@ -6377,20 +6394,11 @@
         "x": 575,
         "y": 900,
         "wires": [
-            []
+            [
+                "283661388275a459"
+            ]
         ],
         "l": false
-    },
-    {
-        "id": "e9e8bc8b535c232f",
-        "type": "comment",
-        "z": "4a8821853d4dd1ad",
-        "g": "1ca205a84922c8c2",
-        "name": "Complete a task",
-        "info": "",
-        "x": 740,
-        "y": 820,
-        "wires": []
     },
     {
         "id": "9f6498380a05390b",
@@ -6758,6 +6766,19 @@
         "queue": "none",
         "x": 1300,
         "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "283661388275a459",
+        "type": "todoist-task-complete",
+        "z": "4a8821853d4dd1ad",
+        "g": "1ca205a84922c8c2",
+        "name": "",
+        "token": "81cb9d95d14a3e5a",
+        "x": 740,
+        "y": 820,
         "wires": [
             []
         ]
@@ -18377,7 +18398,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar topic = msg.topic\nvar vacation = states['input_boolean.vacation_mode'].state\nvar highTemp = states['sensor.todays_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar showerMode = states['input_boolean.shower_mode'].state\nvar nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\nvar schedModeFan = states['input_select.scheduled_climate_mode_master_bedroom_fan'].state\n\nmsg.acInstalled = ac\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\nmsg.bedtemp = bedTemp\nmsg.daythreshold = dayThreshold\nmsg.showermode = showerMode\nmsg.nightvolume = nightVolume\n\nif (vacation === 'off') {\n    if (topic === 'mrbedroom-cooling') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Cooling Schedule\"});\n        return[msg,null,null]\n    } else if (topic === 'manual-night') {\n        if (schedModeFan === 'Fan') {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (Fan)\"});\n            return[msg,msg,null]\n        } else {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (No Fan)\"});\n            return[msg,null,null]\n        }\n    } else if (topic === 'mrbedroom-fan' && schedModeFan == 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"});\n        return[null,msg,null]\n    } else if (topic === 'mrbedroom-wakeup') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup Schedule\"});\n        return[null,null,msg]\n    } else if (topic === 'manual-day'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Day\"});\n        return[null,null,msg]\n    }\n} else {\n    return[null,null,null]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar topic = msg.topic\nvar vacation = states['input_boolean.vacation_mode'].state\nvar highTemp = states['sensor.today_corrected_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar showerMode = states['input_boolean.shower_mode'].state\nvar nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\nvar schedModeFan = states['input_select.scheduled_climate_mode_master_bedroom_fan'].state\n\nmsg.acInstalled = ac\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\nmsg.bedtemp = bedTemp\nmsg.daythreshold = dayThreshold\nmsg.showermode = showerMode\nmsg.nightvolume = nightVolume\n\nif (vacation === 'off') {\n    if (topic === 'mrbedroom-cooling') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Cooling Schedule\"});\n        return[msg,null,null]\n    } else if (topic === 'manual-night') {\n        if (schedModeFan === 'Fan') {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (Fan)\"});\n            return[msg,msg,null]\n        } else {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (No Fan)\"});\n            return[msg,null,null]\n        }\n    } else if (topic === 'mrbedroom-fan' && schedModeFan == 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"});\n        return[null,msg,null]\n    } else if (topic === 'mrbedroom-wakeup') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup Schedule\"});\n        return[null,null,msg]\n    } else if (topic === 'manual-day'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Day\"});\n        return[null,null,msg]\n    }\n} else {\n    return[null,null,null]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -18905,7 +18926,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Hot Day?",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar highTemp = states['sensor.todays_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\n\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\n\nif (ac === 'on') {\n    if (highTemp > dayThreshold) {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Hot Day\"});\n        return[msg,null,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Normal\"});\n        return[null,msg,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No A/C\"});\n    return[null,null,msg]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar highTemp = states['sensor.today_corrected_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\n\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\n\nif (ac === 'on') {\n    if (highTemp > dayThreshold) {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Hot Day\"});\n        return[msg,null,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Normal\"});\n        return[null,msg,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No A/C\"});\n    return[null,null,msg]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -23196,7 +23217,9 @@
         "x": 460,
         "y": 240,
         "wires": [
-            []
+            [
+                "603140fef1e2edaf"
+            ]
         ]
     },
     {
@@ -23205,7 +23228,7 @@
         "z": "ee67610b4a0578d2",
         "g": "50e4d951ee7b3e54",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar text = states['input_text.report_system'].state\nvar type = states['input_select.report_type'].state\n\nmsg.text = text\n\nif (type === \"New Idea\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"New Idea\"});\n    msg.type = \"81234669\"\n} else if (type === \"Bug Report\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Bug Report\"});\n    msg.type = \"94865633\"\n}\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar text = states['input_text.report_system'].state\nvar type = states['input_select.report_type'].state\n\nmsg.text = text\n\nif (type === \"New Idea\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"New Idea\"});\n    msg.type = \"114199257\"\n} else if (type === \"Bug Report\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Bug Report\"});\n    msg.type = \"94865633\"\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -23558,17 +23581,6 @@
         ]
     },
     {
-        "id": "3c03edd9c35f85f8",
-        "type": "comment",
-        "z": "ee67610b4a0578d2",
-        "g": "50e4d951ee7b3e54",
-        "name": "Create Task",
-        "info": "",
-        "x": 630,
-        "y": 240,
-        "wires": []
-    },
-    {
         "id": "f4bfbaca4d7fb1df",
         "type": "function",
         "z": "ee67610b4a0578d2",
@@ -23612,6 +23624,19 @@
             ]
         ],
         "icon": "node-red-contrib-cpu/cpu.png"
+    },
+    {
+        "id": "603140fef1e2edaf",
+        "type": "todoist-task-create",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "",
+        "token": "81cb9d95d14a3e5a",
+        "x": 630,
+        "y": 240,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "5d7c63526234945e",
@@ -27943,7 +27968,7 @@
         "type": "function",
         "z": "d49b385d8b582b20",
         "name": "Heat Threshold",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar hightemp = states['sensor.todays_high_temp'].state\nvar threshold = states['input_number.master_bedroom_daytime_threshold'].state\n\nif (hightemp >= threshold) {\n    return [msg,null];\n} else {\n    return [null,msg];\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar hightemp = states['sensor.today_corrected_high_temp'].state\nvar threshold = states['input_number.master_bedroom_daytime_threshold'].state\n\nif (hightemp >= threshold) {\n    return [msg,null];\n} else {\n    return [null,msg];\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
