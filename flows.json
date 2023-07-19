@@ -5180,35 +5180,6 @@
         "wires": []
     },
     {
-        "id": "655050669e5ccf85",
-        "type": "api-call-service",
-        "z": "85c4f81ca9628aea",
-        "name": "Set Scene",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "scene",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "scene.{{payload}}_in_{{topic}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 670,
-        "y": 340,
-        "wires": [
-            [
-                "8ad119b6c6e11ddd"
-            ]
-        ]
-    },
-    {
         "id": "8ad119b6c6e11ddd",
         "type": "function",
         "z": "85c4f81ca9628aea",
@@ -5249,14 +5220,43 @@
         "y": 340,
         "wires": [
             [
-                "655050669e5ccf85",
-                "78a73c2d816658d8"
+                "78a73c2d816658d8",
+                "138fc130a014b26e"
             ]
         ],
         "outputLabels": [
             "Adaptive",
             "Reset",
             "Otherwise"
+        ]
+    },
+    {
+        "id": "138fc130a014b26e",
+        "type": "api-call-service",
+        "z": "85c4f81ca9628aea",
+        "name": "Set Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "script.{{payload}}_in_{{topic}}"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 670,
+        "y": 340,
+        "wires": [
+            [
+                "8ad119b6c6e11ddd"
+            ]
         ]
     },
     {
