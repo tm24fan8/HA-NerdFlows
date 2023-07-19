@@ -725,7 +725,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -771,9 +773,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1552,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -847,9 +847,7 @@
             "64ad1f28cd8d243f"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2252,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -1022,9 +1020,7 @@
             "7cb8056b3b41a9e8"
         ],
         "x": 34,
-        "y": 779,
-        "w": 1012,
-        "h": 442
+        "y": 779
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1069,9 +1065,7 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1187,9 +1181,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1403,7 +1395,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659
+        "y": 659,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "265593f442864b6a",
@@ -7311,7 +7305,9 @@
         "x": 750,
         "y": 320,
         "wires": [
-            []
+            [
+                "e8410752f5521714"
+            ]
         ]
     },
     {
@@ -8497,6 +8493,33 @@
         "queue": "none",
         "x": 2070,
         "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e8410752f5521714",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Disable automation",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "automation",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "automation.living_room_night_lighting"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 950,
+        "y": 320,
         "wires": [
             []
         ]
@@ -19605,7 +19628,8 @@
                 "f935318d262547d5",
                 "60ce44747cf3e507",
                 "50e351d1ee6108b3",
-                "33773b3aaa551b79"
+                "33773b3aaa551b79",
+                "1187fea902cbb7a9"
             ]
         ]
     },
@@ -21197,6 +21221,33 @@
             [
                 "efd47cbc26ed2810"
             ]
+        ]
+    },
+    {
+        "id": "1187fea902cbb7a9",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Enable Automation",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "automation",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "automation.living_room_night_lighting"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 330,
+        "y": 680,
+        "wires": [
+            []
         ]
     },
     {
