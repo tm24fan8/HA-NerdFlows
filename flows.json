@@ -725,9 +725,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -1235,7 +1233,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1395,9 +1395,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -5215,7 +5213,7 @@
         "type": "function",
         "z": "85c4f81ca9628aea",
         "name": "Format",
-        "func": "const str = msg.payload\nvar scene = str.replaceAll(\"_\",\" \")\n\nmsg.dest = msg.topic\n\nmsg.topic = \"Lights Changed\"\nmsg.payload = ('Lights changed to a new scene: ' + scene)\n\nif (msg.payload === 'Lights changed to a new scene: Reset') {\n    return null;\n} else {\n    return msg;\n}\nreturn msg;",
+        "func": "const str = msg.payload\nvar scene = str.replaceAll(\"_\",\" \")\n\nmsg.dest = msg.topic\n\nmsg.topic = \"Lights Changed\"\nmsg.payload = ('Lights changed to a new scene: ' + scene)\n\nif (msg.payload === 'Lights changed to a new scene: Reset') {\n    return null;\n} else {\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
