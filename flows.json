@@ -771,7 +771,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -845,7 +847,9 @@
             "64ad1f28cd8d243f"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2252,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1233,9 +1237,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539,
-        "w": 612,
-        "h": 202
+        "y": 539
     },
     {
         "id": "550e5b2d99316b12",
@@ -18423,7 +18425,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar topic = msg.topic\nvar vacation = states['input_boolean.vacation_mode'].state\nvar highTemp = states['sensor.today_corrected_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar showerMode = states['input_boolean.shower_mode'].state\nvar nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\nvar schedModeFan = states['input_select.scheduled_climate_mode_master_bedroom_fan'].state\n\nmsg.acInstalled = ac\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\nmsg.bedtemp = bedTemp\nmsg.daythreshold = dayThreshold\nmsg.showermode = showerMode\nmsg.nightvolume = nightVolume\n\nif (vacation === 'off') {\n    if (topic === 'mrbedroom-cooling') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Cooling Schedule\"});\n        return[msg,null,null]\n    } else if (topic === 'manual-night') {\n        if (schedModeFan === 'Fan') {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (Fan)\"});\n            return[msg,msg,null]\n        } else {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (No Fan)\"});\n            return[msg,null,null]\n        }\n    } else if (topic === 'mrbedroom-fan' && schedModeFan == 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"});\n        return[null,msg,null]\n    } else if (topic === 'mrbedroom-wakeup') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup Schedule\"});\n        return[null,null,msg]\n    } else if (topic === 'manual-day'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Day\"});\n        return[null,null,msg]\n    }\n} else {\n    return[null,null,null]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar topic = msg.topic\nvar vacation = states['input_boolean.vacation_mode'].state\nvar highTemp = states['sensor.today_corrected_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar showerMode = states['input_boolean.shower_mode'].state\nvar nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\nvar schedModeFan = states['input_select.scheduled_climate_mode_master_bedroom_fan'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nmsg.acInstalled = ac\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\nmsg.bedtemp = bedTemp\nmsg.daythreshold = dayThreshold\nmsg.showermode = showerMode\nmsg.nightvolume = nightVolume\n\nif (sleeping === 'on') {\n    if (topic === 'mrbedroom-cooling' || topic === 'mrbedroom-fan') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked (sleep mode)\"});\n        return null\n    }\n} else if (vacation === 'off') {\n    if (topic === 'mrbedroom-cooling') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Cooling Schedule\"});\n        return[msg,null,null]\n    } else if (topic === 'manual-night') {\n        if (schedModeFan === 'Fan') {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (Fan)\"});\n            return[msg,msg,null]\n        } else {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (No Fan)\"});\n            return[msg,null,null]\n        }\n    } else if (topic === 'mrbedroom-fan' && schedModeFan == 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"});\n        return[null,msg,null]\n    } else if (topic === 'mrbedroom-wakeup') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup Schedule\"});\n        return[null,null,msg]\n    } else if (topic === 'manual-day'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Day\"});\n        return[null,null,msg]\n    }\n} else {\n    return[null,null,null]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
