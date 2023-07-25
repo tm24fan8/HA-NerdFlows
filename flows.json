@@ -1399,9 +1399,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -1519,9 +1517,7 @@
             "99c141f21de4feda"
         ],
         "x": 54,
-        "y": 1339,
-        "w": 1132,
-        "h": 262
+        "y": 1339
     },
     {
         "id": "a6de35af12739885",
@@ -1543,9 +1539,7 @@
             "724f186878227dad"
         ],
         "x": 54,
-        "y": 1639,
-        "w": 1132,
-        "h": 202
+        "y": 1639
     },
     {
         "id": "0804d9edeca1c9fa",
@@ -1566,9 +1560,7 @@
             "4523045453de0a33"
         ],
         "x": 54,
-        "y": 1879,
-        "w": 1092,
-        "h": 202
+        "y": 1879
     },
     {
         "id": "fba69dfc80829db7",
@@ -16374,11 +16366,11 @@
         "name": "Master Bedroom Cooling",
         "server": "9e87348d.9c1c48",
         "version": 2,
-        "exposeToHomeAssistant": false,
+        "exposeToHomeAssistant": true,
         "haConfig": [
             {
                 "property": "name",
-                "value": ""
+                "value": "Master Bedroom Cooling Schedule"
             },
             {
                 "property": "icon",
@@ -16436,11 +16428,11 @@
         "name": "Master Bedroom Fan",
         "server": "9e87348d.9c1c48",
         "version": 2,
-        "exposeToHomeAssistant": false,
+        "exposeToHomeAssistant": true,
         "haConfig": [
             {
                 "property": "name",
-                "value": ""
+                "value": "Master Bedroom Fan Schedule"
             },
             {
                 "property": "icon",
@@ -16498,11 +16490,11 @@
         "name": "Master Bedroom Wakeup",
         "server": "9e87348d.9c1c48",
         "version": 2,
-        "exposeToHomeAssistant": false,
+        "exposeToHomeAssistant": true,
         "haConfig": [
             {
                 "property": "name",
-                "value": ""
+                "value": "Master Bedroom Wakeup Schedule"
             },
             {
                 "property": "icon",
@@ -16933,11 +16925,11 @@
         "name": "Kallen Bedtime",
         "server": "9e87348d.9c1c48",
         "version": 2,
-        "exposeToHomeAssistant": false,
+        "exposeToHomeAssistant": true,
         "haConfig": [
             {
                 "property": "name",
-                "value": ""
+                "value": "Kallen Bedtime Schedule"
             },
             {
                 "property": "icon",
@@ -17001,11 +16993,11 @@
         "name": "Kallen Wakeup",
         "server": "9e87348d.9c1c48",
         "version": 2,
-        "exposeToHomeAssistant": false,
+        "exposeToHomeAssistant": true,
         "haConfig": [
             {
                 "property": "name",
-                "value": ""
+                "value": "Kallen Wakeup Schedule"
             },
             {
                 "property": "icon",
@@ -18220,11 +18212,11 @@
         "name": "Kallen Fan Time",
         "server": "9e87348d.9c1c48",
         "version": 2,
-        "exposeToHomeAssistant": false,
+        "exposeToHomeAssistant": true,
         "haConfig": [
             {
                 "property": "name",
-                "value": ""
+                "value": "Kallen Fan Schedule"
             },
             {
                 "property": "icon",
