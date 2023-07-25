@@ -72,6 +72,14 @@
         "env": []
     },
     {
+        "id": "458e4c0055c8c533",
+        "type": "tab",
+        "label": "Alarm Clocks",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "5c4ac37140a54ac9",
         "type": "tab",
         "label": "Alexa",
@@ -771,7 +779,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -845,7 +855,9 @@
             "64ad1f28cd8d243f"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2252,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1088,9 +1100,7 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 322
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1254,9 +1264,7 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619,
-        "w": 1112,
-        "h": 282
+        "y": 619
     },
     {
         "id": "f519aff597ece351",
@@ -1391,7 +1399,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659
+        "y": 659,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "265593f442864b6a",
@@ -1487,6 +1497,78 @@
         ],
         "x": 34,
         "y": 19
+    },
+    {
+        "id": "88f099618e56926d",
+        "type": "group",
+        "z": "458e4c0055c8c533",
+        "name": "Master Bedroom",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9256f78107619596",
+            "fbd0b0d52ef452d5",
+            "1f44e8f6e98317a7",
+            "efec6f0b8a4ea382",
+            "cfcebd8452629535",
+            "0bfb330d42161fe7",
+            "216ebd5138f63087",
+            "e82fb1576245b7c7",
+            "67e6798433b7bc37",
+            "99c141f21de4feda"
+        ],
+        "x": 54,
+        "y": 1339,
+        "w": 1132,
+        "h": 262
+    },
+    {
+        "id": "a6de35af12739885",
+        "type": "group",
+        "z": "458e4c0055c8c533",
+        "name": "Kallen Bedroom",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "5f4a234984a654e1",
+            "9ad1aee4f432c0da",
+            "33f1bded52754848",
+            "72052e61710200f9",
+            "9c2ea97d481e6428",
+            "56140b60b6406bd7",
+            "067bcc91d6a04be5",
+            "7f3909f76041b209",
+            "724f186878227dad"
+        ],
+        "x": 54,
+        "y": 1639,
+        "w": 1132,
+        "h": 202
+    },
+    {
+        "id": "0804d9edeca1c9fa",
+        "type": "group",
+        "z": "458e4c0055c8c533",
+        "name": "Emma Bedroom",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "eff279edcac37798",
+            "adcce6ca1e459cd1",
+            "49a842a41a52f8f3",
+            "e036fd18c5d20645",
+            "9621d4c881da0188",
+            "a5a387d3522f49ed",
+            "53f8d279114dd476",
+            "4523045453de0a33"
+        ],
+        "x": 54,
+        "y": 1879,
+        "w": 1092,
+        "h": 202
     },
     {
         "id": "fba69dfc80829db7",
@@ -19221,6 +19303,943 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "9256f78107619596",
+        "type": "ha-time",
+        "z": "458e4c0055c8c533",
+        "g": "88f099618e56926d",
+        "name": "Alarm Time",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityId": "input_datetime.master_bedroom_alarm_clock",
+        "property": "",
+        "offset": "0",
+        "offsetType": "num",
+        "offsetUnits": "minutes",
+        "randomOffset": false,
+        "repeatDaily": true,
+        "outputProperties": [
+            {
+                "property": "time",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "alarm",
+                "propertyType": "msg",
+                "value": "triggered",
+                "valueType": "str"
+            }
+        ],
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true,
+        "debugenabled": false,
+        "x": 150,
+        "y": 1380,
+        "wires": [
+            [
+                "fbd0b0d52ef452d5"
+            ]
+        ]
+    },
+    {
+        "id": "fbd0b0d52ef452d5",
+        "type": "function",
+        "z": "458e4c0055c8c533",
+        "g": "88f099618e56926d",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar enabled = states['input_boolean.master_bedroom_alarm_clock'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\nvar goodnight = states['input_boolean.goodnight'].state\n\nmsg.topic = \"master_bedroom\"\nmsg.payload = \"This is your alarm clock speaking, it is time to wake up!\"\nmsg.type = \"alert\"\n\nif (enabled === 'on' && sleeping === 'on' && goodnight === 'off') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Proceed\"});\n    return msg\n} else if (enabled === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Disabled\"});\n    return null\n} else if (sleeping === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Not Sleeping\"});\n    return null\n} else if (goodnight === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Goodnight On\"});\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Unknown Error\"});\n    return null\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1380,
+        "wires": [
+            [
+                "1f44e8f6e98317a7"
+            ]
+        ]
+    },
+    {
+        "id": "1f44e8f6e98317a7",
+        "type": "api-call-service",
+        "z": "458e4c0055c8c533",
+        "g": "88f099618e56926d",
+        "name": "Turn off sleep mode",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.master_bedroom_sleeping"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 540,
+        "y": 1380,
+        "wires": [
+            [
+                "efec6f0b8a4ea382"
+            ]
+        ]
+    },
+    {
+        "id": "efec6f0b8a4ea382",
+        "type": "stoptimer",
+        "z": "458e4c0055c8c533",
+        "g": "88f099618e56926d",
+        "duration": "5",
+        "units": "Minute",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "",
+        "x": 820,
+        "y": 1380,
+        "wires": [
+            [
+                "216ebd5138f63087",
+                "e82fb1576245b7c7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "cfcebd8452629535",
+        "type": "server-state-changed",
+        "z": "458e4c0055c8c533",
+        "g": "88f099618e56926d",
+        "name": "Lights Off",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "light.master_bedroom_lights",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "stop",
+                "valueType": "str"
+            },
+            {
+                "property": "stop-reason",
+                "propertyType": "msg",
+                "value": "lights",
+                "valueType": "str"
+            }
+        ],
+        "x": 340,
+        "y": 1440,
+        "wires": [
+            [
+                "67e6798433b7bc37"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0bfb330d42161fe7",
+        "type": "server-state-changed",
+        "z": "458e4c0055c8c533",
+        "g": "88f099618e56926d",
+        "name": "Bathroom Motion",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.upstairs_bathroom_motion",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "stop",
+                "valueType": "str"
+            },
+            {
+                "property": "stop-reason",
+                "propertyType": "msg",
+                "value": "bathroom",
+                "valueType": "str"
+            }
+        ],
+        "x": 320,
+        "y": 1500,
+        "wires": [
+            [
+                "67e6798433b7bc37"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "216ebd5138f63087",
+        "type": "subflow:6429099c4571dd6b",
+        "z": "458e4c0055c8c533",
+        "g": "88f099618e56926d",
+        "name": "",
+        "x": 1080,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e82fb1576245b7c7",
+        "type": "api-call-service",
+        "z": "458e4c0055c8c533",
+        "g": "88f099618e56926d",
+        "name": "Disable",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.master_bedroom_alarm_clock"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1060,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f4a234984a654e1",
+        "type": "ha-time",
+        "z": "458e4c0055c8c533",
+        "g": "a6de35af12739885",
+        "name": "Alarm Time",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityId": "input_datetime.kallen_alarm_clock",
+        "property": "",
+        "offset": "0",
+        "offsetType": "num",
+        "offsetUnits": "minutes",
+        "randomOffset": false,
+        "repeatDaily": true,
+        "outputProperties": [
+            {
+                "property": "time",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "alarm",
+                "propertyType": "msg",
+                "value": "triggered",
+                "valueType": "str"
+            }
+        ],
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true,
+        "debugenabled": false,
+        "x": 150,
+        "y": 1680,
+        "wires": [
+            [
+                "9ad1aee4f432c0da"
+            ]
+        ]
+    },
+    {
+        "id": "9ad1aee4f432c0da",
+        "type": "function",
+        "z": "458e4c0055c8c533",
+        "g": "a6de35af12739885",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar enabled = states['input_boolean.kallen_alarm_clock'].state\nvar sleeping = states['input_boolean.kallen_sleeping'].state\nvar goodnight = states['input_boolean.goodnight'].state\n\nmsg.topic = \"kallen_bedroom\"\nmsg.payload = \"This is your alarm clock speaking, it is time to wake up!\"\nmsg.type = \"alert\"\n\nif (enabled === 'on' && sleeping === 'on' && goodnight === 'off') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Proceed\"});\n    return msg\n} else if (enabled === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Disabled\"});\n    return null\n} else if (sleeping === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Not Sleeping\"});\n    return null\n} else if (goodnight === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Goodnight On\"});\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Unknown Error\"});\n    return null\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1680,
+        "wires": [
+            [
+                "33f1bded52754848"
+            ]
+        ]
+    },
+    {
+        "id": "33f1bded52754848",
+        "type": "api-call-service",
+        "z": "458e4c0055c8c533",
+        "g": "a6de35af12739885",
+        "name": "Turn off sleep mode",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.kallen_sleeping"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 540,
+        "y": 1680,
+        "wires": [
+            [
+                "72052e61710200f9"
+            ]
+        ]
+    },
+    {
+        "id": "72052e61710200f9",
+        "type": "stoptimer",
+        "z": "458e4c0055c8c533",
+        "g": "a6de35af12739885",
+        "duration": "5",
+        "units": "Minute",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "",
+        "x": 820,
+        "y": 1680,
+        "wires": [
+            [
+                "067bcc91d6a04be5",
+                "7f3909f76041b209"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9c2ea97d481e6428",
+        "type": "server-state-changed",
+        "z": "458e4c0055c8c533",
+        "g": "a6de35af12739885",
+        "name": "Lights Off",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "light.kallen_bedroom_lights",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "stop",
+                "valueType": "str"
+            }
+        ],
+        "x": 340,
+        "y": 1740,
+        "wires": [
+            [
+                "724f186878227dad"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "56140b60b6406bd7",
+        "type": "server-state-changed",
+        "z": "458e4c0055c8c533",
+        "g": "a6de35af12739885",
+        "name": "Lights Adaptive",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_select.kallen_bedroom_scenes",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Adaptive",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "stop",
+                "valueType": "str"
+            }
+        ],
+        "x": 320,
+        "y": 1800,
+        "wires": [
+            [
+                "724f186878227dad"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "067bcc91d6a04be5",
+        "type": "subflow:6429099c4571dd6b",
+        "z": "458e4c0055c8c533",
+        "g": "a6de35af12739885",
+        "name": "",
+        "x": 1080,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f3909f76041b209",
+        "type": "api-call-service",
+        "z": "458e4c0055c8c533",
+        "g": "a6de35af12739885",
+        "name": "Disable",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.kallen_alarm_clock"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1060,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "724f186878227dad",
+        "type": "function",
+        "z": "458e4c0055c8c533",
+        "g": "a6de35af12739885",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar enabled = states['input_boolean.kallen_alarm_clock'].state\nvar sleeping = states['input_boolean.kallen_sleeping'].state\n\nif (enabled === 'on' && sleeping === 'off') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Proceed\"});\n    return msg\n} else if (enabled === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Disabled\"});\n    return null\n} else if (sleeping === 'on') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Sleeping\"});\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Unknown Error\"});\n    return null\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1740,
+        "wires": [
+            [
+                "7f3909f76041b209",
+                "72052e61710200f9"
+            ]
+        ]
+    },
+    {
+        "id": "67e6798433b7bc37",
+        "type": "function",
+        "z": "458e4c0055c8c533",
+        "g": "88f099618e56926d",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar enabled = states['input_boolean.master_bedroom_alarm_clock'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nif (enabled === 'on' && sleeping === 'off') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Proceed\"});\n    return msg\n} else if (enabled === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Disabled\"});\n    return null\n} else if (sleeping === 'on') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Sleeping\"});\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Unknown Error\"});\n    return null\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1440,
+        "wires": [
+            [
+                "e82fb1576245b7c7",
+                "efec6f0b8a4ea382"
+            ]
+        ]
+    },
+    {
+        "id": "99c141f21de4feda",
+        "type": "server-state-changed",
+        "z": "458e4c0055c8c533",
+        "g": "88f099618e56926d",
+        "name": "Lights Adaptive",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_select.master_bedroom_scenes",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Adaptive",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "stop",
+                "valueType": "str"
+            },
+            {
+                "property": "stop-reason",
+                "propertyType": "msg",
+                "value": "adaptive",
+                "valueType": "str"
+            }
+        ],
+        "x": 320,
+        "y": 1560,
+        "wires": [
+            [
+                "67e6798433b7bc37"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "eff279edcac37798",
+        "type": "ha-time",
+        "z": "458e4c0055c8c533",
+        "g": "0804d9edeca1c9fa",
+        "name": "Alarm Time",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityId": "input_datetime.emma_alarm_clock",
+        "property": "",
+        "offset": "0",
+        "offsetType": "num",
+        "offsetUnits": "minutes",
+        "randomOffset": false,
+        "repeatDaily": true,
+        "outputProperties": [
+            {
+                "property": "time",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "alarm",
+                "propertyType": "msg",
+                "value": "triggered",
+                "valueType": "str"
+            }
+        ],
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true,
+        "debugenabled": false,
+        "x": 150,
+        "y": 1920,
+        "wires": [
+            [
+                "adcce6ca1e459cd1"
+            ]
+        ]
+    },
+    {
+        "id": "adcce6ca1e459cd1",
+        "type": "function",
+        "z": "458e4c0055c8c533",
+        "g": "0804d9edeca1c9fa",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar enabled = states['input_boolean.emma_alarm_clock'].state\nvar sleeping = states['input_boolean.emma_sleeping'].state\nvar goodnight = states['input_boolean.goodnight'].state\n\nmsg.topic = \"emma_bedroom\"\nmsg.payload = \"This is your alarm clock speaking, it is time to wake up!\"\nmsg.type = \"alert\"\n\nif (enabled === 'on' && sleeping === 'on' && goodnight === 'off') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Proceed\"});\n    return msg\n} else if (enabled === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Disabled\"});\n    return null\n} else if (sleeping === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Not Sleeping\"});\n    return null\n} else if (goodnight === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Goodnight On\"});\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Unknown Error\"});\n    return null\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1920,
+        "wires": [
+            [
+                "49a842a41a52f8f3"
+            ]
+        ]
+    },
+    {
+        "id": "49a842a41a52f8f3",
+        "type": "api-call-service",
+        "z": "458e4c0055c8c533",
+        "g": "0804d9edeca1c9fa",
+        "name": "Turn off sleep mode",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.emma_sleeping"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 540,
+        "y": 1920,
+        "wires": [
+            [
+                "e036fd18c5d20645"
+            ]
+        ]
+    },
+    {
+        "id": "e036fd18c5d20645",
+        "type": "stoptimer",
+        "z": "458e4c0055c8c533",
+        "g": "0804d9edeca1c9fa",
+        "duration": "5",
+        "units": "Minute",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "",
+        "x": 820,
+        "y": 1920,
+        "wires": [
+            [
+                "53f8d279114dd476"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9621d4c881da0188",
+        "type": "server-state-changed",
+        "z": "458e4c0055c8c533",
+        "g": "0804d9edeca1c9fa",
+        "name": "Lights Off",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "light.emma_bedroom_light",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "stop",
+                "valueType": "str"
+            }
+        ],
+        "x": 340,
+        "y": 1980,
+        "wires": [
+            [
+                "4523045453de0a33"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a5a387d3522f49ed",
+        "type": "server-state-changed",
+        "z": "458e4c0055c8c533",
+        "g": "0804d9edeca1c9fa",
+        "name": "Lights Adaptive",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_select.emma_bedroom_scenes",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Adaptive",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "stop",
+                "valueType": "str"
+            }
+        ],
+        "x": 320,
+        "y": 2040,
+        "wires": [
+            [
+                "4523045453de0a33"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "53f8d279114dd476",
+        "type": "api-call-service",
+        "z": "458e4c0055c8c533",
+        "g": "0804d9edeca1c9fa",
+        "name": "Disable",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.emma_alarm_clock"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1060,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4523045453de0a33",
+        "type": "function",
+        "z": "458e4c0055c8c533",
+        "g": "0804d9edeca1c9fa",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar enabled = states['input_boolean.emma_alarm_clock'].state\nvar sleeping = states['input_boolean.emma_sleeping'].state\n\nif (enabled === 'on' && sleeping === 'off') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Proceed\"});\n    return msg\n} else if (enabled === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Disabled\"});\n    return null\n} else if (sleeping === 'on') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Sleeping\"});\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Unknown Error\"});\n    return null\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1980,
+        "wires": [
+            [
+                "53f8d279114dd476",
+                "e036fd18c5d20645"
+            ]
+        ]
     },
     {
         "id": "105271e0816c6a52",
