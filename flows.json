@@ -733,7 +733,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -820,8 +822,6 @@
             "bcba065aa5ecb2be",
             "10d9b30654ef759c",
             "0a783dc1cb68b4bf",
-            "11ed2afea8133e8f",
-            "be70ec3d9b852b89",
             "6c06c2eec1583c66",
             "0c680585239e7f60",
             "e2581a5f3f4888df",
@@ -841,7 +841,6 @@
             "6ed7feb3956038ed",
             "4a1db30e164dadc8",
             "9c01880c6319d29b",
-            "96f6dcaa16f8ee6f",
             "1967e5238d3aa5a1",
             "f8cc9d6657bff329",
             "94eec3b9d4b18a3d",
@@ -852,7 +851,14 @@
             "723cd46ceb02f152",
             "90637fbeaa21f3ca",
             "3c6cb0ed0847f8ee",
-            "64ad1f28cd8d243f"
+            "94c022d2eb71e7d5",
+            "ce5d8005cbf08144",
+            "7646c6833d5a1df2",
+            "01c0448b4889d754",
+            "17b6f73d75f480fd",
+            "7852593ec89f150a",
+            "8286284fc9598efa",
+            "ed625c0b4f7c98ff"
         ],
         "x": 14,
         "y": 19,
@@ -12271,22 +12277,16 @@
         "ignoreCurrentStateUnavailable": false,
         "outputProperties": [
             {
-                "property": "payload",
+                "property": "showermode",
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
             },
             {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
                 "property": "topic",
                 "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
+                "value": "toggle",
+                "valueType": "str"
             }
         ],
         "x": 210,
@@ -17460,7 +17460,7 @@
         "y": 540,
         "wires": [
             [
-                "64ad1f28cd8d243f"
+                "ce5d8005cbf08144"
             ]
         ]
     },
@@ -17486,8 +17486,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 480,
-        "y": 480,
+        "x": 540,
+        "y": 500,
         "wires": [
             [
                 "66e85878d60c7d65"
@@ -17516,8 +17516,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 640,
-        "y": 480,
+        "x": 700,
+        "y": 500,
         "wires": [
             [
                 "bcba065aa5ecb2be"
@@ -17540,14 +17540,14 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"temperature\": msg.nighttemp\t}",
+        "data": "{\t    \"temperature\": msg.set\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 800,
-        "y": 480,
+        "x": 860,
+        "y": 500,
         "wires": [
             []
         ]
@@ -17609,62 +17609,6 @@
         ]
     },
     {
-        "id": "11ed2afea8133e8f",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set night mode",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "button",
-        "service": "press",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "button.master_bedroom_night_mode"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 500,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "be70ec3d9b852b89",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set day mode",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "button",
-        "service": "press",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "button.master_bedroom_day_mode"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 500,
-        "y": 660,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "6c06c2eec1583c66",
         "type": "comment",
         "z": "72f99805df043603",
@@ -17672,7 +17616,7 @@
         "name": "Shower Mode",
         "info": "",
         "x": 290,
-        "y": 620,
+        "y": 660,
         "wires": []
     },
     {
@@ -18352,8 +18296,8 @@
                 "bf1b0d6542ef6b38"
             ],
             [
-                "94eec3b9d4b18a3d",
-                "3c6cb0ed0847f8ee"
+                "3c6cb0ed0847f8ee",
+                "ed625c0b4f7c98ff"
             ]
         ],
         "outputLabels": [
@@ -18369,7 +18313,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Cooling Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar showerMode = msg.showermode\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar hotDay = states['input_boolean.hot_day'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nmsg.schedmode = schedMode\n\nif (ac === 'on' && showerMode === 'off') {\n    if (schedMode === 'AC') {\n        if (hotDay === 'on' || sleeping === 'on') {\n            msg.preset = 'none'\n        } else {\n            msg.preset = 'eco'\n        }\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC\"});\n        return[msg,null,null]\n    } else if (schedMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,msg,null]\n    } else if (schedMode === 'N/A') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n        return[null,null,msg]\n    }\n} else {\n    if (ac === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    } else if (showerMode === 'on') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Shower Mode On\"});\n    }\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar showerMode = msg.showermode\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar hotDay = states['input_boolean.hot_day'].state\nvar timer = states['timer.shower_mode_cooldown'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nmsg.schedmode = schedMode\n\nif (ac === 'on' && showerMode === 'off' && timer === 'idle') {\n    if (schedMode === 'AC') {\n        if (hotDay === 'on' || sleeping === 'on') {\n            msg.preset = 'none'\n        } else {\n            msg.preset = 'eco'\n        }\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC\"});\n        return[msg,null,null]\n    } else if (schedMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,msg,null]\n    } else if (schedMode === 'N/A') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n        return[null,null,msg]\n    }\n} else {\n    if (ac === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    } else if (showerMode === 'on') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Shower Mode On\"});\n    } else if (timer != 'idle') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Shower Mode Cooldown\"});\n    }\n    return null\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -18509,64 +18453,21 @@
         "type": "function",
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
-        "name": "Shower Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = states['sensor.pirateweather_temperature'].state\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar goodnight = states['input_boolean.goodnight'].state\nvar coolingTime = states['input_datetime.master_bedroom_cooling'].attributes.timestamp\nvar nightMode = states['input_boolean.night_mode'].state\nvar ct = msg.ct\nvar showerMode = msg.payload\n\nmsg.temp = temp\nmsg.nighttemp = nightTemp\nmsg.threshold = threshold\n\nif (ac === 'on') {\n    if (showerMode === 'on') {\n        if (temp >= threshold) {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Shower Mode On\" });\n            return [msg, null, null, null]\n        } else {\n            node.status({ fill: \"red\", shape: \"ring\", text: \"Too Cold\" });\n            return null\n        }\n    } else if (showerMode === 'off') {\n        if (ct > 21600 && ct < coolingTime) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Day Mode\"});\n            return [null, null, null, msg]\n        } else if (nightMode === 'on' || goodnight === 'on') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Bedtime Mode\"});\n            return [null, msg, null, null]\n        } else {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Night Mode\"});\n            return [null, null, msg, null]\n        }\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"A/C Not Installed\" });\n    return null\n}\n\n",
-        "outputs": 4,
+        "name": "On",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = states['sensor.pirateweather_temperature'].state\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nif (ac === 'on') {\n    if (temp >= threshold) {\n        if (sleeping === 'on') {\n            msg.set = bedTemp\n            node.status({fill:\"green\",shape:\"dot\",text:\"Shower Mode On: \" + bedTemp});\n            return msg\n        } else {\n            msg.set = nightTemp\n            node.status({fill:\"green\",shape:\"dot\",text:\"Shower Mode On: \" + nightTemp});\n            return msg\n        }\n    } else {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Too Cold\" });\n        return null\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"A/C Not Installed\" });\n    return null\n}\n",
+        "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 540,
+        "x": 350,
+        "y": 500,
         "wires": [
             [
                 "f541ad53e32f703b"
-            ],
-            [
-                "96f6dcaa16f8ee6f"
-            ],
-            [
-                "11ed2afea8133e8f"
-            ],
-            [
-                "be70ec3d9b852b89"
             ]
         ],
-        "outputLabels": [
-            "On",
-            "Off - Bedtime",
-            "Off - Night",
-            "Off - Day"
-        ],
         "icon": "node-red/switch.svg"
-    },
-    {
-        "id": "96f6dcaa16f8ee6f",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set bedtime mode",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "button",
-        "service": "press",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "button.master_bedroom_bedtime_mode"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 510,
-        "y": 540,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "61405a43f61f3d60",
@@ -19275,24 +19176,269 @@
         ]
     },
     {
-        "id": "64ad1f28cd8d243f",
-        "type": "api-render-template",
+        "id": "94c022d2eb71e7d5",
+        "type": "server-events",
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
-        "name": "",
+        "name": "Timer Finished",
         "server": "9e87348d.9c1c48",
-        "version": 0,
-        "template": "{% from 'time.jinja' import ct %}\n{{ ct() | int }}",
-        "resultsLocation": "ct",
-        "resultsLocationType": "msg",
-        "templateLocation": "",
-        "templateLocationType": "none",
-        "x": 185,
+        "version": 2,
+        "eventType": "timer.finished",
+        "exposeToHomeAssistant": false,
+        "eventData": "{\"entity_id\":\"timer.shower_mode_cooldown\"}",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "timer",
+                "valueType": "str"
+            },
+            {
+                "property": "showermode",
+                "propertyType": "msg",
+                "value": "off",
+                "valueType": "str"
+            }
+        ],
+        "x": 120,
+        "y": 600,
+        "wires": [
+            [
+                "ce5d8005cbf08144"
+            ]
+        ]
+    },
+    {
+        "id": "ce5d8005cbf08144",
+        "type": "switch",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "On or Off",
+        "property": "showermode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 255,
         "y": 540,
         "wires": [
             [
                 "9c01880c6319d29b"
+            ],
+            [
+                "7646c6833d5a1df2"
             ]
+        ],
+        "outputLabels": [
+            "On",
+            "Off"
+        ],
+        "l": false
+    },
+    {
+        "id": "7646c6833d5a1df2",
+        "type": "function",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Off",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = states['sensor.pirateweather_temperature'].state\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar currentSetTemp = states['climate.master_bedroom_aircon'].attributes.temperature\nvar coolingTime = states['input_boolean.master_bedroom_cooling_on'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\nvar hotDay = states['input_boolean.hot_day'].state\nvar topic = msg.topic\n\nif (topic === 'toggle') {\n    if (hotDay === 'on' || sleeping === 'on') {\n        var setTemp = bedTemp\n        var ecoMode = 'none'\n    } else {\n        var setTemp = nightTemp\n        var ecoMode = 'eco'\n    }\n} else if (topic === 'timer') {\n    if (currentSetTemp == bedTemp) {\n        var setTemp = nightTemp\n        if (hotDay === 'on') {\n            var ecoMode = 'none'\n        } else {\n            var ecoMode = 'eco'\n        }\n    } else {\n        var setTemp = dayTemp\n        var ecoMode = 'eco'\n    }\n}\n\nif (setTemp == bedTemp) {\n    var duration = 3600\n} else {\n    var duration = 1800\n}\n\nif (setTemp == dayTemp) {\n    var end = true\n    if (hotDay === 'off') {\n        var hvac = 'off'\n    } else {\n        var hvac = 'cool'\n    }\n} else if (setTemp != bedTemp && coolingTime === 'on') {\n    var end = true\n    var hvac = 'cool'\n} else {\n    var end = false\n    var hvac = 'cool'\n}\n\nvar setMsg = {\n    \"set\": setTemp,\n    \"eco\": ecoMode,\n    \"hvac\": hvac,\n    \"end\": end\n}\n\nvar timerStart = {\n    \"duration\": duration\n}\n\nif (ac === 'on' && temp >= threshold) {\n    if (sleeping === 'on' || coolingTime === 'on' || end === true) {\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Finished\" });\n        return [setMsg, null]\n    } else {\n        node.status({ fill: \"blue\", shape: \"dot\", text: \"Next Cycle\" });\n        return [setMsg, timerStart]\n    }\n} else if (ac === 'off') {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"A/C Not Installed\" });\n    return null\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Too Cold\" });\n    return null\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 580,
+        "wires": [
+            [
+                "01c0448b4889d754"
+            ],
+            [
+                "8286284fc9598efa"
+            ]
+        ],
+        "outputLabels": [
+            "Set",
+            "Timer"
+        ]
+    },
+    {
+        "id": "01c0448b4889d754",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "HVAC",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_hvac_mode",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.master_bedroom_aircon"
+        ],
+        "data": "{\t    \"hvac_mode\": msg.hvac\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 530,
+        "y": 560,
+        "wires": [
+            [
+                "17b6f73d75f480fd"
+            ]
+        ]
+    },
+    {
+        "id": "17b6f73d75f480fd",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Eco",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_preset_mode",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.master_bedroom_aircon"
+        ],
+        "data": "{\t    \"preset_mode\": msg.eco\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 690,
+        "y": 560,
+        "wires": [
+            [
+                "7852593ec89f150a"
+            ]
+        ]
+    },
+    {
+        "id": "7852593ec89f150a",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Set Temp",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "climate",
+        "service": "set_temperature",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.master_bedroom_aircon"
+        ],
+        "data": "{\t    \"temperature\": msg.set\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 860,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8286284fc9598efa",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Start Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "start",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.shower_mode_cooldown"
+        ],
+        "data": "{\t    \"duration\": msg.duration\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 550,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed625c0b4f7c98ff",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "idle",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "timer.shower_mode_cooldown",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "timer",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 905,
+        "y": 420,
+        "wires": [
+            [
+                "94eec3b9d4b18a3d"
+            ],
+            []
         ],
         "l": false
     },
