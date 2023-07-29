@@ -901,7 +901,9 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179
+        "y": 179,
+        "w": 1292,
+        "h": 382
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1189,7 +1191,9 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1492,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1243,7 +1247,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1403,9 +1409,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -1422,7 +1426,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579
+        "y": 579,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "4886967d0f8c0156",
@@ -1482,7 +1488,9 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 672,
+        "h": 222
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1500,7 +1508,9 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "88f099618e56926d",
@@ -1523,9 +1533,7 @@
             "99c141f21de4feda"
         ],
         "x": 74,
-        "y": 39,
-        "w": 1132,
-        "h": 262
+        "y": 39
     },
     {
         "id": "a6de35af12739885",
@@ -1547,9 +1555,7 @@
             "724f186878227dad"
         ],
         "x": 74,
-        "y": 339,
-        "w": 1132,
-        "h": 202
+        "y": 339
     },
     {
         "id": "0804d9edeca1c9fa",
@@ -1570,9 +1576,25 @@
             "4523045453de0a33"
         ],
         "x": 74,
-        "y": 579,
-        "w": 1092,
-        "h": 202
+        "y": 579
+    },
+    {
+        "id": "385f03591bc34bcc",
+        "type": "group",
+        "z": "3e4ba157b540d183",
+        "name": "Temperature",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "274be2385ae894ce",
+            "dcc947fe66b6342b",
+            "15f7382daddb4b3e"
+        ],
+        "x": 34,
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "fba69dfc80829db7",
@@ -18460,7 +18482,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "On",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = states['sensor.pirateweather_temperature'].state\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nif (ac === 'on') {\n    if (temp >= threshold) {\n        if (sleeping === 'on') {\n            msg.set = bedTemp\n            node.status({fill:\"green\",shape:\"dot\",text:\"Shower Mode On: \" + bedTemp});\n            return msg\n        } else {\n            msg.set = nightTemp\n            node.status({fill:\"green\",shape:\"dot\",text:\"Shower Mode On: \" + nightTemp});\n            return msg\n        }\n    } else {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Too Cold\" });\n        return null\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"A/C Not Installed\" });\n    return null\n}\n",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = global.get('tempStr')\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nif (ac === 'on') {\n    if (temp >= threshold) {\n        if (sleeping === 'on') {\n            msg.set = bedTemp\n            node.status({fill:\"green\",shape:\"dot\",text:\"Shower Mode On: \" + bedTemp});\n            return msg\n        } else {\n            msg.set = nightTemp\n            node.status({fill:\"green\",shape:\"dot\",text:\"Shower Mode On: \" + nightTemp});\n            return msg\n        }\n    } else {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Too Cold\" });\n        return null\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"A/C Not Installed\" });\n    return null\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19270,7 +19292,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Off",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = states['sensor.pirateweather_temperature'].state\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar currentSetTemp = states['climate.master_bedroom_aircon'].attributes.temperature\nvar coolingTime = states['input_boolean.master_bedroom_cooling_on'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\nvar hotDay = states['input_boolean.hot_day'].state\nvar topic = msg.topic\n\nif (topic === 'toggle') {\n    if (hotDay === 'on' || sleeping === 'on') {\n        var setTemp = bedTemp\n        var ecoMode = 'none'\n    } else {\n        var setTemp = nightTemp\n        var ecoMode = 'eco'\n    }\n} else if (topic === 'timer') {\n    if (currentSetTemp == bedTemp) {\n        var setTemp = nightTemp\n        if (hotDay === 'on') {\n            var ecoMode = 'none'\n        } else {\n            var ecoMode = 'eco'\n        }\n    } else {\n        var setTemp = dayTemp\n        var ecoMode = 'eco'\n    }\n}\n\nif (setTemp == bedTemp) {\n    var duration = 3600\n} else if (setTemp == nightTemp && hotDay === 'off') {\n    var duration = 3600\n} else {\n    var duration = 1800\n}\n\nif (setTemp == dayTemp) {\n    var end = true\n    if (hotDay === 'off') {\n        var hvac = 'off'\n    } else {\n        var hvac = 'cool'\n    }\n} else if (setTemp != bedTemp && coolingTime === 'on') {\n    var end = true\n    var hvac = 'cool'\n} else {\n    var end = false\n    var hvac = 'cool'\n}\n\nvar setMsg = {\n    \"set\": setTemp,\n    \"eco\": ecoMode,\n    \"hvac\": hvac,\n    \"end\": end\n}\n\nvar timerStart = {\n    \"duration\": duration\n}\n\nif (ac === 'on' && temp >= threshold) {\n    if (sleeping === 'on' || coolingTime === 'on' || end === true) {\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Finished\" });\n        return [setMsg, null]\n    } else {\n        node.status({ fill: \"blue\", shape: \"dot\", text: \"Next Cycle\" });\n        return [setMsg, timerStart]\n    }\n} else if (ac === 'off') {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"A/C Not Installed\" });\n    return null\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Too Cold\" });\n    return null\n}\n",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = global.get('tempStr')\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar currentSetTemp = states['climate.master_bedroom_aircon'].attributes.temperature\nvar coolingTime = states['input_boolean.master_bedroom_cooling_on'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\nvar hotDay = states['input_boolean.hot_day'].state\nvar topic = msg.topic\n\nif (topic === 'toggle') {\n    if (hotDay === 'on' || sleeping === 'on') {\n        var setTemp = bedTemp\n        var ecoMode = 'none'\n    } else {\n        var setTemp = nightTemp\n        var ecoMode = 'eco'\n    }\n} else if (topic === 'timer') {\n    if (currentSetTemp == bedTemp) {\n        var setTemp = nightTemp\n        if (hotDay === 'on') {\n            var ecoMode = 'none'\n        } else {\n            var ecoMode = 'eco'\n        }\n    } else {\n        var setTemp = dayTemp\n        var ecoMode = 'eco'\n    }\n}\n\nif (setTemp == bedTemp) {\n    var duration = 3600\n} else if (setTemp == nightTemp && hotDay === 'off') {\n    var duration = 3600\n} else {\n    var duration = 1800\n}\n\nif (setTemp == dayTemp) {\n    var end = true\n    if (hotDay === 'off') {\n        var hvac = 'off'\n    } else {\n        var hvac = 'cool'\n    }\n} else if (setTemp != bedTemp && coolingTime === 'on') {\n    var end = true\n    var hvac = 'cool'\n} else {\n    var end = false\n    var hvac = 'cool'\n}\n\nvar setMsg = {\n    \"set\": setTemp,\n    \"eco\": ecoMode,\n    \"hvac\": hvac,\n    \"end\": end\n}\n\nvar timerStart = {\n    \"duration\": duration\n}\n\nif (ac === 'on' && temp >= threshold) {\n    if (sleeping === 'on' || coolingTime === 'on' || end === true) {\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Finished\" });\n        return [setMsg, null]\n    } else {\n        node.status({ fill: \"blue\", shape: \"dot\", text: \"Next Cycle\" });\n        return [setMsg, timerStart]\n    }\n} else if (ac === 'off') {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"A/C Not Installed\" });\n    return null\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Too Cold\" });\n    return null\n}\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -27943,6 +27965,69 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "274be2385ae894ce",
+        "type": "api-render-template",
+        "z": "3e4ba157b540d183",
+        "g": "385f03591bc34bcc",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{% set temps = [\n    states.sensor.pirateweather_temperature,\n    states.sensor.kdfi_temperature,\n    states.sensor.openweathermap_temperature,\n    states.sensor.myradar_temperature\n] %}\n{% set sensor = temps | selectattr('state','ne','unavailable') | selectattr('state','ne','unknown') | map(attribute='entity_id') | list | first %}\n{{ states(sensor) | float }}\n",
+        "resultsLocation": "temperature",
+        "resultsLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
+        "x": 320,
+        "y": 1040,
+        "wires": [
+            [
+                "15f7382daddb4b3e"
+            ]
+        ]
+    },
+    {
+        "id": "dcc947fe66b6342b",
+        "type": "inject",
+        "z": "3e4ba157b540d183",
+        "g": "385f03591bc34bcc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "30",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1040,
+        "wires": [
+            [
+                "274be2385ae894ce"
+            ]
+        ]
+    },
+    {
+        "id": "15f7382daddb4b3e",
+        "type": "function",
+        "z": "3e4ba157b540d183",
+        "g": "385f03591bc34bcc",
+        "name": "Set Global Variables",
+        "func": "var temp = msg.temperature\n\nglobal.set('tempInt',parseInt(temp))\nglobal.set('tempFloat',parseFloat(temp))\nglobal.set('tempStr',temp)\n\nnode.status({fill:\"green\",shape:\"dot\",text:temp});",
+        "outputs": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1040,
+        "wires": []
     },
     {
         "id": "e038489eca14b1dd",
