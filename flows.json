@@ -901,9 +901,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1247,9 +1245,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539,
-        "w": 612,
-        "h": 202
+        "y": 539
     },
     {
         "id": "550e5b2d99316b12",
@@ -1426,9 +1422,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1488,9 +1482,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1508,9 +1500,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "88f099618e56926d",
@@ -1592,9 +1582,7 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "fba69dfc80829db7",
@@ -18503,7 +18491,7 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenLoc = states['person.kallen_stork'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nvar fadeDay = states['input_number.wakeup_lights_fade_day'].state\nvar fadeNight = states['input_number.wakeup_lights_fade_night'].state\nvar hotDay = states['input_boolean.hot_day'].state\nvar topic = msg.topic\nvar toggle = msg.toggle\n\nif (hotDay === 'on') {\n    msg.fan = 'on'\n} else {\n    msg.fan = 'off'\n}\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,null,null,msg]\n    } else if (toggle === 'off') {\n        msg.brightness = brightness\n        msg.fade_day = fadeDay * 60\n        msg.fade_night = fadeNight * 60\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg,null]\n    }\n} else {\n    if (topic === 'boolean') {\n        msg.toggle = 'off'\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return [msg,null,null,null]\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return null\n    }\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenLoc = states['person.kallen_stork'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nvar fadeDay = states['input_number.wakeup_lights_fade_day'].state\nvar fadeNight = states['input_number.wakeup_lights_fade_night'].state\nvar hotDay = states['input_boolean.hot_day'].state\nvar heatWarning = states['binary_sensor.heat_warning'].state\nvar topic = msg.topic\nvar toggle = msg.toggle\n\nif (hotDay === 'on' || heatWarning === 'on') {\n    msg.fan = 'on'\n} else {\n    msg.fan = 'off'\n}\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,null,null,msg]\n    } else if (toggle === 'off') {\n        msg.brightness = brightness\n        msg.fade_day = fadeDay * 60\n        msg.fade_night = fadeNight * 60\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg,null]\n    }\n} else {\n    if (topic === 'boolean') {\n        msg.toggle = 'off'\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return [msg,null,null,null]\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return null\n    }\n}",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -18792,7 +18780,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Hot Day?",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar highTemp = states['sensor.today_corrected_high_temp'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar hotDay = states['input_boolean.hot_day'].state\n\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\n\nif (ac === 'on') {\n    if (highTemp > dayThreshold || hotDay === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Hot Day\"});\n        return[msg,null,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Normal\"});\n        return[null,msg,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No A/C\"});\n    return[null,null,msg]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar temp = global.get('tempStr')\nvar heatWarning = states['binary_sensor.heat_warning'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar hotDay = states['input_boolean.hot_day'].state\n\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\n\nif (ac === 'on') {\n    if (temp >= dayThreshold || hotDay === 'on' || heatWarning === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Hot Day\"});\n        return[msg,null,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Normal\"});\n        return[null,msg,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No A/C\"});\n    return[null,null,msg]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
