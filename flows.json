@@ -733,7 +733,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -779,9 +781,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1552,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -859,9 +859,7 @@
             "ed625c0b4f7c98ff"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2252,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -1189,9 +1187,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1245,7 +1241,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1405,7 +1403,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659
+        "y": 659,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "265593f442864b6a",
@@ -6925,7 +6925,8 @@
                 "d394df04f71de37a",
                 "4781b749d186cd7f",
                 "7ef7610b2f402829",
-                "47862a29a4c2efd1"
+                "47862a29a4c2efd1",
+                "d652a9f518f9b876"
             ]
         ]
     },
@@ -7084,7 +7085,8 @@
         "wires": [
             [
                 "e9aba9f5312297b7",
-                "df102c847233f0b5"
+                "df102c847233f0b5",
+                "c5d3148ae7226051"
             ]
         ],
         "l": false
@@ -7120,7 +7122,8 @@
         "wires": [
             [
                 "e9aba9f5312297b7",
-                "df102c847233f0b5"
+                "df102c847233f0b5",
+                "c5d3148ae7226051"
             ]
         ],
         "l": false
@@ -7489,7 +7492,8 @@
                 "4781b749d186cd7f",
                 "47862a29a4c2efd1",
                 "24685bfd0b3069f3",
-                "7ef7610b2f402829"
+                "7ef7610b2f402829",
+                "d652a9f518f9b876"
             ]
         ]
     },
@@ -7631,7 +7635,7 @@
         "pastviewUnits": "days",
         "pastviewUnitstype": "pastviewUnits",
         "x": 150,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "828e99767076eae5"
@@ -7659,7 +7663,7 @@
         "repair": false,
         "outputs": 2,
         "x": 370,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "f5eb76f93946aad3"
@@ -7733,7 +7737,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 740,
-        "y": 580,
+        "y": 640,
         "wires": [
             []
         ]
@@ -7758,7 +7762,7 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 540,
+        "y": 600,
         "wires": [
             [
                 "798ff6ede18394ea"
@@ -7785,7 +7789,7 @@
         "to": "",
         "reg": false,
         "x": 560,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "798ff6ede18394ea"
@@ -8610,6 +8614,115 @@
         "queue": "none",
         "x": 950,
         "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d652a9f518f9b876",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Stairwell Reset",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.stairwell_led_strip"
+        ],
+        "data": "{\t    \"color_temp_kelvin\": 2000,\t    \"brightness\": 255\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 740,
+        "y": 500,
+        "wires": [
+            [
+                "e2c9d18f69e5a3d3"
+            ]
+        ]
+    },
+    {
+        "id": "1f3d3f08e760d0c1",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Turn off stairwell",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.stairwell_led_strip"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1000,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2c9d18f69e5a3d3",
+        "type": "delay",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 875,
+        "y": 560,
+        "wires": [
+            [
+                "1f3d3f08e760d0c1"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "c5d3148ae7226051",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Stairwell",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.stairwell_led_strip"
+        ],
+        "data": "{\t    \"color_temp_kelvin\": 2000,\t    \"brightness\": 150\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 2060,
+        "y": 300,
         "wires": [
             []
         ]
@@ -20707,7 +20820,7 @@
         "y": 340,
         "wires": [
             [
-                "9cbe2333acb0e1f5"
+                "272706b066068cf8"
             ]
         ]
     },
@@ -20883,7 +20996,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1260,
+        "x": 1440,
         "y": 300,
         "wires": [
             [
@@ -20911,7 +21024,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1450,
+        "x": 1630,
         "y": 300,
         "wires": [
             []
@@ -21325,7 +21438,7 @@
         "y": 280,
         "wires": [
             [
-                "9cbe2333acb0e1f5"
+                "272706b066068cf8"
             ]
         ]
     },
@@ -21350,7 +21463,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1060,
+        "x": 1240,
         "y": 300,
         "wires": [
             [
@@ -22257,6 +22370,35 @@
         "y": 680,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "272706b066068cf8",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Stairwell",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.stairwell_led_strip"
+        ],
+        "data": "{\t    \"color_temp_kelvin\": 2000,\t    \"brightness\": 50\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1060,
+        "y": 300,
+        "wires": [
+            [
+                "9cbe2333acb0e1f5"
+            ]
         ]
     },
     {
