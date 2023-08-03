@@ -733,9 +733,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -1029,10 +1027,16 @@
             "cc8f6ab710549be2",
             "346379575efad516",
             "8b0b39deb5142557",
-            "7cb8056b3b41a9e8"
+            "7cb8056b3b41a9e8",
+            "d2390789a8b3101a",
+            "d961ffeaea408909",
+            "107f2c88924975fe",
+            "ed2e0f4f214ad76c"
         ],
         "x": 34,
-        "y": 779
+        "y": 779,
+        "w": 1232,
+        "h": 442
     },
     {
         "id": "f55a52c40b8b8749",
@@ -1077,7 +1081,9 @@
             "318bee4424125dd5"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 832,
+        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -1403,9 +1409,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -11754,7 +11758,7 @@
         "type": "function",
         "z": "eff21041cc941fef",
         "name": "Adaptive",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar adaptBrt = states['switch.adaptive_lighting_adapt_brightness_living_room'].state\nvar adaptColor = states['switch.adaptive_lighting_adapt_color_living_room'].state\n\nif (adaptBrt === 'on' && adaptColor === 'off') {\n    msg.brightness = 'true'\n    msg.color = 'false'\n} else if (adaptColor === 'on' && adaptBrt === 'off') {\n    msg.brightness = 'false'\n    msg.color = 'true'\n} else {\n    msg.brightness = 'true'\n    msg.color = 'true'\n}\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar adaptBrt = states['switch.adaptive_lighting_adapt_brightness_living_room'].state\nvar adaptColor = states['switch.adaptive_lighting_adapt_color_living_room'].state\n\nif (adaptBrt === 'on' && adaptColor === 'off') {\n    msg.brightness = 'true'\n    msg.color = 'false'\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"Brightness Only\"});\n} else if (adaptColor === 'on' && adaptBrt === 'off') {\n    msg.brightness = 'false'\n    msg.color = 'true'\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"Color Only\"});\n} else {\n    msg.brightness = 'true'\n    msg.color = 'true'\n    node.status({fill:\"green\",shape:\"dot\",text:\"Both\"});\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -15313,24 +15317,24 @@
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
-        "name": "Dim Lights",
+        "name": "Lamp Off",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
+        "domain": "light",
+        "service": "turn_off",
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_select.dining_room_lamp_scenes"
+            "light.dining_room_lamp"
         ],
-        "data": "{\t    \"option\":\"Nightlight\"\t}",
+        "data": "",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 590,
+        "x": 760,
         "y": 980,
         "wires": [
             [
@@ -15430,7 +15434,9 @@
         "x": 950,
         "y": 1060,
         "wires": [
-            []
+            [
+                "ed2e0f4f214ad76c"
+            ]
         ]
     },
     {
@@ -16085,13 +16091,13 @@
         "entityId": [
             "input_select.living_room_scenes"
         ],
-        "data": "{\t    \"option\":\"Tokyo\"\t}",
+        "data": "{\t    \"option\": msg.huescene\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 950,
+        "x": 1130,
         "y": 940,
         "wires": [
             []
@@ -16155,7 +16161,7 @@
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
-        "func": "var app = msg.payload\nvar payload = {}\n\nif (app === \"YouTube\") {\n    payload = \"start\"\n} else if (app === \"Netflix\") {\n    payload = \"start\"\n} else if (app === \"Plex\") {\n    payload = \"start\"\n} else if (app === \"Twitch\") {\n    payload = \"start\"\n} else if (app === \"Hulu\") {\n    payload = \"start\"\n} else {\n    payload = \"stop\"\n}\n\nmsg.payload = payload\n\nif (payload === 'start') {\n    node.status({fill:\"green\",shape:\"dot\",text:app});\n    return[msg,null]\n} else if (payload === 'stop') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Stopped\"});\n    return[null,msg]\n}",
+        "func": "var app = msg.payload\nvar payload = {}\n\nif (app === \"YouTube\") {\n    payload = \"start\"\n} else if (app === \"Netflix\") {\n    payload = \"start\"\n} else if (app === \"MLB\") {\n    payload = \"start\"\n} else if (app === \"Jellyfin\") {\n    payload = \"start\"\n} else if (app === \"Twitch\") {\n    payload = \"start\"\n} else if (app === \"Hulu\") {\n    payload = \"start\"\n} else {\n    payload = \"stop\"\n}\n\nmsg.payload = payload\n\nglobal.set('tvAppLivingRoom',app)\n\nif (payload === 'start') {\n    node.status({fill:\"green\",shape:\"dot\",text:app});\n    return[msg,null]\n} else if (payload === 'stop') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Stopped\"});\n    return[null,msg]\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -16379,11 +16385,12 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 770,
+        "x": 950,
         "y": 960,
         "wires": [
             [
-                "4a2031f363418db1"
+                "4a2031f363418db1",
+                "d2390789a8b3101a"
             ]
         ]
     },
@@ -16412,7 +16419,7 @@
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar lights = states['light.living_room_lights'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar payload = msg.payload\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != 'Tokyo') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (selectedScene === 'Tokyo') {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar currentApp = global.get('tvAppLivingRoom')\nvar lights = states['light.living_room_lights'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar payload = msg.payload\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -16422,7 +16429,7 @@
         "y": 980,
         "wires": [
             [
-                "7611921cadb91b1e"
+                "107f2c88924975fe"
             ],
             [
                 "3a29cecbefa6cbe2"
@@ -16450,7 +16457,7 @@
         "y": 1140,
         "wires": [
             [
-                "7611921cadb91b1e"
+                "107f2c88924975fe"
             ],
             [
                 "cc8f6ab710549be2"
@@ -16486,6 +16493,120 @@
             ]
         ],
         "icon": "font-awesome/fa-check"
+    },
+    {
+        "id": "d2390789a8b3101a",
+        "type": "api-call-service",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "LIFX",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "lifx",
+        "service": "effect_move",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.living_room_led_strip"
+        ],
+        "data": "{\t    \"speed\": 8,\t    \"direction\": \"right\",\t    \"theme\": msg.lifxscene,\t    \"power_on\": \"true\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1110,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d961ffeaea408909",
+        "type": "api-call-service",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "LIFX Stop",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "lifx",
+        "service": "effect_stop",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.living_room_led_strip"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1180,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "107f2c88924975fe",
+        "type": "api-call-service",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "Adaptive Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.adaptive_lighting_dining_room_lamp",
+            "switch.adaptive_lighting_living_room"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 590,
+        "y": 980,
+        "wires": [
+            [
+                "7611921cadb91b1e"
+            ]
+        ]
+    },
+    {
+        "id": "ed2e0f4f214ad76c",
+        "type": "delay",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1075,
+        "y": 1060,
+        "wires": [
+            [
+                "d961ffeaea408909"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "8e399b2a287a0905",
