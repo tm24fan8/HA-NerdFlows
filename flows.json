@@ -1034,12 +1034,14 @@
             "ed2e0f4f214ad76c",
             "68f00dbd3a4baca0",
             "d09061428e9c694d",
-            "d5d36b9c1bd30b29"
+            "d5d36b9c1bd30b29",
+            "6110b45c374a5b7f",
+            "e5af55b177f37c65"
         ],
         "x": 34,
         "y": 19,
         "w": 1232,
-        "h": 442
+        "h": 502
     },
     {
         "id": "208284848b13b85b",
@@ -1064,7 +1066,9 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1032,
+        "h": 322
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1202,8 +1206,10 @@
             "8d2e7fb5f214879c",
             "b281061a4b08d2eb"
         ],
-        "x": 14,
-        "y": 539
+        "x": 34,
+        "y": 759,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1228,7 +1234,9 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619
+        "y": 619,
+        "w": 1112,
+        "h": 282
     },
     {
         "id": "f519aff597ece351",
@@ -1541,6 +1549,35 @@
         ],
         "x": 34,
         "y": 999
+    },
+    {
+        "id": "31767ffd6a647579",
+        "type": "group",
+        "z": "eff21041cc941fef",
+        "name": "Doorbell Alert",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "7d2b67c31769ed69",
+            "c983b44381b46ab5",
+            "bc3e0a041efec910",
+            "2c351b21e13b7289",
+            "71e6ae54dc1b958b",
+            "2593383937f292b3",
+            "41ababe9cfbe1297",
+            "c0ce3c040d25e0a1",
+            "e67a2b594c648ac6",
+            "e8510a6c66cd84e6",
+            "2ebe03f5023de47c",
+            "12e827e7416c9dac",
+            "e3ecd23a34c7f82e",
+            "58b11f0c0353d67b"
+        ],
+        "x": 14,
+        "y": 399,
+        "w": 1352,
+        "h": 282
     },
     {
         "id": "fba69dfc80829db7",
@@ -10943,8 +10980,8 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 530,
-        "y": 700,
+        "x": 550,
+        "y": 920,
         "wires": [
             []
         ]
@@ -11064,8 +11101,8 @@
                 "valueType": "str"
             }
         ],
-        "x": 120,
-        "y": 800,
+        "x": 140,
+        "y": 1020,
         "wires": [
             [
                 "f0ef9a565f72dcae"
@@ -11094,8 +11131,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 550,
-        "y": 800,
+        "x": 570,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -11130,8 +11167,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 330,
-        "y": 800,
+        "x": 350,
+        "y": 1020,
         "wires": [
             [
                 "5e7a082800eeb73c"
@@ -11224,8 +11261,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
-        "y": 640,
+        "x": 310,
+        "y": 860,
         "wires": [
             [
                 "b7d94cd0e420c650"
@@ -11255,8 +11292,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 530,
-        "y": 640,
+        "x": 550,
+        "y": 860,
         "wires": [
             []
         ]
@@ -11283,8 +11320,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 530,
-        "y": 580,
+        "x": 550,
+        "y": 800,
         "wires": [
             []
         ]
@@ -11319,8 +11356,8 @@
                 "valueType": "date"
             }
         ],
-        "x": 120,
-        "y": 700,
+        "x": 140,
+        "y": 920,
         "wires": [
             [
                 "5123a607588fa737"
@@ -11377,8 +11414,8 @@
                 "valueType": "str"
             }
         ],
-        "x": 110,
-        "y": 640,
+        "x": 130,
+        "y": 860,
         "wires": [
             [
                 "b281061a4b08d2eb"
@@ -11414,8 +11451,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 300,
-        "y": 580,
+        "x": 320,
+        "y": 800,
         "wires": [
             [
                 "41a8d5ef20cf55d7"
@@ -11440,6 +11477,438 @@
                 "d790134891fedfcc"
             ]
         ]
+    },
+    {
+        "id": "7d2b67c31769ed69",
+        "type": "server-state-changed",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Doorbell Rings",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.front_doorbell_ding_mqtt",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 120,
+        "y": 440,
+        "wires": [
+            [
+                "c983b44381b46ab5"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c983b44381b46ab5",
+        "type": "api-current-state",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Home?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "home",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "group.adults",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "presence",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "bc3e0a041efec910",
+                "2c351b21e13b7289"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bc3e0a041efec910",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Lights Backup",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"scene_id\":\"doorbell_lights_restore\",\t    \"snapshot_entities\":[\"light.living_room_overhead\",\"light.living_room_led_strip\",\"light.dining_room_lamp\",\"light.tina_lamp_top\",\"light.tina_desk_strip\"]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "2593383937f292b3"
+            ]
+        ]
+    },
+    {
+        "id": "2c351b21e13b7289",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Adaptive Backup",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"scene_id\":\"doorbell_adaptive_restore\",\t    \"snapshot_entities\":[\"switch.adaptive_lighting_tina_lamp\",\"switch.adaptive_lighting_living_room\"]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 190,
+        "y": 580,
+        "wires": [
+            [
+                "71e6ae54dc1b958b"
+            ]
+        ]
+    },
+    {
+        "id": "71e6ae54dc1b958b",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Adaptive Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.adaptive_lighting_living_room",
+            "switch.adaptive_lighting_tina_lamp"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 390,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2593383937f292b3",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Lamp Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.dining_room_lamp"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 380,
+        "y": 520,
+        "wires": [
+            [
+                "41ababe9cfbe1297"
+            ]
+        ]
+    },
+    {
+        "id": "41ababe9cfbe1297",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Lights Green",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.living_room_led_strip",
+            "light.living_room_lights",
+            "light.tina_desk_strip",
+            "light.tina_lamp"
+        ],
+        "data": "{\t    \"color_name\":\"green\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 550,
+        "y": 520,
+        "wires": [
+            [
+                "c0ce3c040d25e0a1"
+            ]
+        ]
+    },
+    {
+        "id": "c0ce3c040d25e0a1",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Flash LED Strip",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "lifx",
+        "service": "effect_pulse",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.living_room_led_strip"
+        ],
+        "data": "{\t    \"power_on\":\"true\",\t    \"mode\":\"ping\",\t    \"period\": 1,\t    \"cycles\": 30,\t    \"color_name\":\"white\",\t    \"brightness\": 255\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 740,
+        "y": 520,
+        "wires": [
+            [
+                "e67a2b594c648ac6"
+            ]
+        ]
+    },
+    {
+        "id": "e67a2b594c648ac6",
+        "type": "ha-wait-until",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Wait for door",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "outputs": 2,
+        "entityId": "binary_sensor.front_door",
+        "entityIdFilterType": "exact",
+        "property": "state",
+        "comparator": "is",
+        "value": "on",
+        "valueType": "str",
+        "timeout": "30",
+        "timeoutType": "num",
+        "timeoutUnits": "seconds",
+        "checkCurrentState": true,
+        "blockInputOverrides": true,
+        "outputProperties": [],
+        "entityLocation": "data",
+        "entityLocationType": "none",
+        "x": 610,
+        "y": 620,
+        "wires": [
+            [
+                "e8510a6c66cd84e6"
+            ],
+            [
+                "e8510a6c66cd84e6"
+            ]
+        ]
+    },
+    {
+        "id": "e8510a6c66cd84e6",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Lights Restore",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "scene.doorbell_lights_restore"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 800,
+        "y": 620,
+        "wires": [
+            [
+                "2ebe03f5023de47c"
+            ]
+        ]
+    },
+    {
+        "id": "2ebe03f5023de47c",
+        "type": "delay",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 925,
+        "y": 620,
+        "wires": [
+            [
+                "12e827e7416c9dac"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "12e827e7416c9dac",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Stop Effect",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "lifx",
+        "service": "effect_stop",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.living_room_led_strip"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1050,
+        "y": 620,
+        "wires": [
+            [
+                "e3ecd23a34c7f82e"
+            ]
+        ]
+    },
+    {
+        "id": "e3ecd23a34c7f82e",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Adaptive Restore",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "scene.doorbell_adaptive_restore"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1250,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "58b11f0c0353d67b",
+        "type": "comment",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Still need to add support for returning to living room media scenes",
+        "info": "",
+        "x": 270,
+        "y": 640,
+        "wires": []
     },
     {
         "id": "879ee8903841b8f0",
@@ -15089,7 +15558,7 @@
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
-        "func": "const appList = [\"YouTube\",\"Netflix\",\"MLB\",\"Jellyfin\",\"Twitch\",\"Hulu\"]\nvar states = global.get('homeassistant.homeAssistant.states')\nvar lampState = states['light.dining_room_lamp'].state\nvar app = msg.payload\nvar payload = {}\n\nif (appList.includes(app)) {\n    flow.set(\"lampState\", lampState)\n    payload = \"start\"\n} else {\n    payload = \"stop\"\n}\n\nmsg.payload = payload\n\nflow.set('tvAppLivingRoom',app)\n\nif (payload === 'start') {\n    node.status({fill:\"green\",shape:\"dot\",text:app});\n    return[msg,null]\n} else if (payload === 'stop') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Stopped\"});\n    return[null,msg]\n}",
+        "func": "const appList = global.get(\"appListLivingRoom\")\nvar states = global.get('homeassistant.homeAssistant.states')\nvar lampState = states['light.dining_room_lamp'].state\nvar app = msg.payload\nvar payload = {}\n\nif (appList.includes(app)) {\n    flow.set(\"lampState\", lampState)\n    payload = \"start\"\n} else {\n    payload = \"stop\"\n}\n\nmsg.payload = payload\n\nglobal.set('tvAppLivingRoom',app)\n\nif (payload === 'start') {\n    node.status({fill:\"green\",shape:\"dot\",text:app});\n    return[msg,null]\n} else if (payload === 'stop') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Stopped\"});\n    return[null,msg]\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -15334,7 +15803,7 @@
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar currentApp = flow.get('tvAppLivingRoom');\nvar lights = states['light.living_room_lights'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar lamp = flow.get(\"lampState\")\nvar payload = msg.payload\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        if (lamp === 'on') {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,msg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,null]\n        }\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar currentApp = global.get('tvAppLivingRoom');\nvar lights = states['light.living_room_lights'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar lamp = flow.get(\"lampState\")\nvar payload = msg.payload\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        if (lamp === 'on') {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,msg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,null]\n        }\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -15618,6 +16087,48 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "6110b45c374a5b7f",
+        "type": "function",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "Settings",
+        "func": "const appListLivingRoom = [\"YouTube\", \"Netflix\", \"MLB\", \"Jellyfin\", \"Twitch\", \"Hulu\"]\n\nglobal.set(\"appListLivingRoom\", appListLivingRoom);\n\nnode.status({fill:\"green\",shape:\"dot\",text:\"Updated\"});",
+        "outputs": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e5af55b177f37c65",
+        "type": "inject",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "Update",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 480,
+        "wires": [
+            [
+                "6110b45c374a5b7f"
+            ]
+        ]
     },
     {
         "id": "8e399b2a287a0905",
