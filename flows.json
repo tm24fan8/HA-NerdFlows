@@ -1037,56 +1037,9 @@
             "d5d36b9c1bd30b29"
         ],
         "x": 34,
-        "y": 779,
+        "y": 19,
         "w": 1232,
         "h": 442
-    },
-    {
-        "id": "f55a52c40b8b8749",
-        "type": "group",
-        "z": "b0286fae9f2ce547",
-        "name": "Buttons, Alexa Calls",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "cd04bdb407311eb5",
-            "cac7cc3111526a67",
-            "7d8d5376e990d357",
-            "ab4c69753bfc36f5",
-            "b18c7a21fc449d35",
-            "936091f71dc880b3",
-            "59350a1f38e3e04a",
-            "6c78852a9c604f64",
-            "abe997d5df095480",
-            "a18b6c8c026995d6",
-            "db54e97573a07fc4",
-            "77f2aae15fa1250d",
-            "9e36b04d6063c234",
-            "7f82b9d6d835e09b",
-            "158b197a42fed757",
-            "e549712aaaceb285",
-            "be5bdfc3c12b05da",
-            "728ab818393de52d",
-            "960884b0fd23e69b",
-            "61fdabfde220fbcc",
-            "42b706dd4afe3e42",
-            "9a605b80513eba44",
-            "0b860dc2f7db3ba0",
-            "51d86d6064f084d2",
-            "31cb558d6ee383c4",
-            "0b79d297a8596c37",
-            "13d5c047c41f60ba",
-            "40817f8c9eeae5fe",
-            "b8995a85f5d34268",
-            "85bd556a614f0455",
-            "c95d487f9fbe14ce",
-            "318bee4424125dd5"
-        ],
-        "x": 34,
-        "y": 19,
-        "w": 832,
-        "h": 742
     },
     {
         "id": "208284848b13b85b",
@@ -1615,110 +1568,6 @@
         ]
     },
     {
-        "id": "31cb558d6ee383c4",
-        "type": "junction",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "x": 460,
-        "y": 60,
-        "wires": [
-            [
-                "cac7cc3111526a67"
-            ]
-        ]
-    },
-    {
-        "id": "0b79d297a8596c37",
-        "type": "junction",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "x": 480,
-        "y": 120,
-        "wires": [
-            [
-                "ab4c69753bfc36f5"
-            ]
-        ]
-    },
-    {
-        "id": "13d5c047c41f60ba",
-        "type": "junction",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "x": 460,
-        "y": 240,
-        "wires": [
-            [
-                "db54e97573a07fc4"
-            ]
-        ]
-    },
-    {
-        "id": "40817f8c9eeae5fe",
-        "type": "junction",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "x": 480,
-        "y": 300,
-        "wires": [
-            [
-                "77f2aae15fa1250d"
-            ]
-        ]
-    },
-    {
-        "id": "b8995a85f5d34268",
-        "type": "junction",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "x": 460,
-        "y": 420,
-        "wires": [
-            [
-                "be5bdfc3c12b05da"
-            ]
-        ]
-    },
-    {
-        "id": "85bd556a614f0455",
-        "type": "junction",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "x": 480,
-        "y": 480,
-        "wires": [
-            [
-                "728ab818393de52d"
-            ]
-        ]
-    },
-    {
-        "id": "c95d487f9fbe14ce",
-        "type": "junction",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "x": 460,
-        "y": 600,
-        "wires": [
-            [
-                "0b860dc2f7db3ba0"
-            ]
-        ]
-    },
-    {
-        "id": "318bee4424125dd5",
-        "type": "junction",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "x": 480,
-        "y": 660,
-        "wires": [
-            [
-                "51d86d6064f084d2"
-            ]
-        ]
-    },
-    {
         "id": "9e87348d.9c1c48",
         "type": "server",
         "name": "Home Assistant",
@@ -1769,55 +1618,6 @@
         "sessionExpiry": ""
     },
     {
-        "id": "137fe3f66779bb13",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Start YouTube in Living Room",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Start YouTube in Living Room"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:youtube"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
-    },
-    {
-        "id": "eaeb8fcb37fa8585",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Stop YouTube in Living Room",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Stop YouTube in Living Room"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:stop"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
-    },
-    {
-        "id": "c8312629c112d43a",
-        "type": "alexa-home-conf",
-        "username": "tm24fan8"
-    },
-    {
         "id": "be975ce229701797",
         "type": "alexa-remote-account",
         "name": "",
@@ -1833,138 +1633,6 @@
         "userAgent": "",
         "useWsMqtt": "on",
         "autoInit": "on"
-    },
-    {
-        "id": "266a447bcb22dad6",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Start Twitch in Living Room",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Start Twitch in Living Room"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:twitch"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
-    },
-    {
-        "id": "73718265ac9a1389",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Stop Twitch in Living Room",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Stop Twitch in Living Room"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:stop"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
-    },
-    {
-        "id": "5d20015e8a70767a",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Start Plex in Living Room",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Start Plex in Living Room"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:plex"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
-    },
-    {
-        "id": "c1da63449b303e84",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Stop Plex in Living Room",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Stop Plex in Living Room"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:stop"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
-    },
-    {
-        "id": "eb813ad296813ab2",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Start Netflix in Living Room",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Start Netflix in Living Room"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:netflix"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
-    },
-    {
-        "id": "2a115fc593b081ac",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Stop Netflix in Living Room",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Stop Netflix in Living Room"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:stop"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
     },
     {
         "id": "f14ef3df2209e9a7",
@@ -15276,44 +14944,6 @@
         "wires": []
     },
     {
-        "id": "cd04bdb407311eb5",
-        "type": "ha-button",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Start YouTube in Living Room",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "137fe3f66779bb13",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 180,
-        "y": 60,
-        "wires": [
-            [
-                "31cb558d6ee383c4"
-            ]
-        ]
-    },
-    {
         "id": "7611921cadb91b1e",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
@@ -15336,76 +14966,10 @@
         "outputProperties": [],
         "queue": "none",
         "x": 760,
-        "y": 980,
+        "y": 220,
         "wires": [
             [
                 "8b53b9f4d5ba0bf0"
-            ]
-        ]
-    },
-    {
-        "id": "cac7cc3111526a67",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Start Youtube",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "select_source",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.living_room_tv"
-        ],
-        "data": "{\t    \"source\":\"com.google.android.youtube.tv\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 760,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7d8d5376e990d357",
-        "type": "ha-button",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Stop YouTube in Living Room",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "eaeb8fcb37fa8585",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 180,
-        "y": 120,
-        "wires": [
-            [
-                "0b79d297a8596c37"
             ]
         ]
     },
@@ -15432,647 +14996,11 @@
         "outputProperties": [],
         "queue": "none",
         "x": 930,
-        "y": 1060,
+        "y": 300,
         "wires": [
             [
                 "ed2e0f4f214ad76c"
             ]
-        ]
-    },
-    {
-        "id": "ab4c69753bfc36f5",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Stop Youtube",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "select_source",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.living_room_tv"
-        ],
-        "data": "{\t    \"source\":\"!com.google.android.youtube.tv\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 750,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b18c7a21fc449d35",
-        "type": "alexa-home",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "conf": "c8312629c112d43a",
-        "device": "171565",
-        "acknoledge": true,
-        "name": "Living Room Youtube",
-        "topic": "",
-        "x": 160,
-        "y": 180,
-        "wires": [
-            [
-                "936091f71dc880b3"
-            ]
-        ]
-    },
-    {
-        "id": "936091f71dc880b3",
-        "type": "switch",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "true",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "false",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 315,
-        "y": 180,
-        "wires": [
-            [
-                "31cb558d6ee383c4"
-            ],
-            [
-                "0b79d297a8596c37"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "59350a1f38e3e04a",
-        "type": "ha-button",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Start Twitch in Living Room",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "266a447bcb22dad6",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 170,
-        "y": 240,
-        "wires": [
-            [
-                "13d5c047c41f60ba"
-            ]
-        ]
-    },
-    {
-        "id": "6c78852a9c604f64",
-        "type": "ha-button",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Stop Twitch in Living Room",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "73718265ac9a1389",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 170,
-        "y": 300,
-        "wires": [
-            [
-                "40817f8c9eeae5fe"
-            ]
-        ]
-    },
-    {
-        "id": "abe997d5df095480",
-        "type": "alexa-home",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "conf": "c8312629c112d43a",
-        "device": "171566",
-        "acknoledge": true,
-        "name": "Living Room Twitch",
-        "topic": "",
-        "x": 150,
-        "y": 360,
-        "wires": [
-            [
-                "a18b6c8c026995d6"
-            ]
-        ]
-    },
-    {
-        "id": "a18b6c8c026995d6",
-        "type": "switch",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "true",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "false",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 315,
-        "y": 360,
-        "wires": [
-            [
-                "13d5c047c41f60ba"
-            ],
-            [
-                "40817f8c9eeae5fe"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "db54e97573a07fc4",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Start Twitch",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "select_source",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.living_room_tv"
-        ],
-        "data": "{\t    \"source\":\"tv.twitch.android.app\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 750,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "77f2aae15fa1250d",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Stop Twitch",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "select_source",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.living_room_tv"
-        ],
-        "data": "{\t    \"source\":\"!tv.twitch.android.app\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 750,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9e36b04d6063c234",
-        "type": "ha-button",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Start Plex in Living Room",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "5d20015e8a70767a",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 170,
-        "y": 420,
-        "wires": [
-            [
-                "b8995a85f5d34268"
-            ]
-        ]
-    },
-    {
-        "id": "7f82b9d6d835e09b",
-        "type": "ha-button",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Stop Plex in Living Room",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "c1da63449b303e84",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 170,
-        "y": 480,
-        "wires": [
-            [
-                "85bd556a614f0455"
-            ]
-        ]
-    },
-    {
-        "id": "158b197a42fed757",
-        "type": "alexa-home",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "conf": "c8312629c112d43a",
-        "device": "171567",
-        "acknoledge": true,
-        "name": "Living Room Plex",
-        "topic": "",
-        "x": 140,
-        "y": 540,
-        "wires": [
-            [
-                "e549712aaaceb285"
-            ]
-        ]
-    },
-    {
-        "id": "e549712aaaceb285",
-        "type": "switch",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "true",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "false",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 315,
-        "y": 540,
-        "wires": [
-            [
-                "b8995a85f5d34268"
-            ],
-            [
-                "85bd556a614f0455"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "be5bdfc3c12b05da",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Start Plex",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "select_source",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.living_room_tv"
-        ],
-        "data": "{\t    \"source\":\"com.plexapp.android\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 740,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "728ab818393de52d",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Stop Plex",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "select_source",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.living_room_tv"
-        ],
-        "data": "{\t    \"source\":\"!com.plexapp.android\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 740,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "960884b0fd23e69b",
-        "type": "ha-button",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Start Netflix in Living Room",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "eb813ad296813ab2",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 170,
-        "y": 600,
-        "wires": [
-            [
-                "c95d487f9fbe14ce"
-            ]
-        ]
-    },
-    {
-        "id": "61fdabfde220fbcc",
-        "type": "ha-button",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Stop Netflix in Living Room",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "2a115fc593b081ac",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 170,
-        "y": 660,
-        "wires": [
-            [
-                "318bee4424125dd5"
-            ]
-        ]
-    },
-    {
-        "id": "42b706dd4afe3e42",
-        "type": "alexa-home",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "conf": "c8312629c112d43a",
-        "device": "171568",
-        "acknoledge": true,
-        "name": "Living Room Netflix",
-        "topic": "",
-        "x": 150,
-        "y": 720,
-        "wires": [
-            [
-                "9a605b80513eba44"
-            ]
-        ]
-    },
-    {
-        "id": "9a605b80513eba44",
-        "type": "switch",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "true",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "false",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 315,
-        "y": 720,
-        "wires": [
-            [
-                "c95d487f9fbe14ce"
-            ],
-            [
-                "318bee4424125dd5"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "0b860dc2f7db3ba0",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Start Netflix",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "select_source",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.living_room_tv"
-        ],
-        "data": "{\t    \"source\":\"com.netflix.ninja\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 750,
-        "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "51d86d6064f084d2",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "f55a52c40b8b8749",
-        "name": "Stop Netflix",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "select_source",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.living_room_tv"
-        ],
-        "data": "{\t    \"source\":\"!com.netflix.ninja\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 750,
-        "y": 480,
-        "wires": [
-            []
         ]
     },
     {
@@ -16098,7 +15026,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1130,
-        "y": 940,
+        "y": 180,
         "wires": [
             []
         ]
@@ -16148,7 +15076,7 @@
             }
         ],
         "x": 180,
-        "y": 860,
+        "y": 100,
         "wires": [
             [
                 "0beae13503166379"
@@ -16168,7 +15096,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 860,
+        "y": 100,
         "wires": [
             [
                 "6c77ade442a47a30"
@@ -16206,7 +15134,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 630,
-        "y": 820,
+        "y": 60,
         "wires": [
             []
         ]
@@ -16234,7 +15162,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 630,
-        "y": 880,
+        "y": 120,
         "wires": [
             []
         ]
@@ -16284,7 +15212,7 @@
             }
         ],
         "x": 170,
-        "y": 980,
+        "y": 220,
         "wires": [
             [
                 "346379575efad516"
@@ -16339,7 +15267,7 @@
             }
         ],
         "x": 130,
-        "y": 1140,
+        "y": 380,
         "wires": [
             [
                 "8b0b39deb5142557"
@@ -16373,7 +15301,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 950,
-        "y": 960,
+        "y": 200,
         "wires": [
             [
                 "4a2031f363418db1",
@@ -16392,7 +15320,7 @@
         "payloadval": "0",
         "name": "",
         "x": 510,
-        "y": 1180,
+        "y": 420,
         "wires": [
             [
                 "7cb8056b3b41a9e8"
@@ -16413,7 +15341,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 980,
+        "y": 220,
         "wires": [
             [
                 "107f2c88924975fe"
@@ -16445,7 +15373,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 1140,
+        "y": 380,
         "wires": [
             [
                 "346379575efad516"
@@ -16477,7 +15405,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 1180,
+        "y": 420,
         "wires": [
             [
                 "3a29cecbefa6cbe2"
@@ -16515,7 +15443,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1110,
-        "y": 1000,
+        "y": 240,
         "wires": [
             []
         ]
@@ -16543,7 +15471,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1180,
-        "y": 1060,
+        "y": 300,
         "wires": [
             []
         ]
@@ -16572,7 +15500,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 590,
-        "y": 980,
+        "y": 220,
         "wires": [
             [
                 "7611921cadb91b1e"
@@ -16598,7 +15526,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1075,
-        "y": 1060,
+        "y": 300,
         "wires": [
             [
                 "d961ffeaea408909"
@@ -16629,7 +15557,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1150,
-        "y": 1120,
+        "y": 360,
         "wires": [
             []
         ]
@@ -16657,7 +15585,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 920,
-        "y": 1120,
+        "y": 360,
         "wires": [
             [
                 "d5d36b9c1bd30b29"
@@ -16683,7 +15611,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1035,
-        "y": 1120,
+        "y": 360,
         "wires": [
             [
                 "68f00dbd3a4baca0"
