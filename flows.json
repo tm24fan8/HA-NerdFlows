@@ -1031,7 +1031,10 @@
             "d2390789a8b3101a",
             "d961ffeaea408909",
             "107f2c88924975fe",
-            "ed2e0f4f214ad76c"
+            "ed2e0f4f214ad76c",
+            "68f00dbd3a4baca0",
+            "d09061428e9c694d",
+            "d5d36b9c1bd30b29"
         ],
         "x": 34,
         "y": 779,
@@ -1247,9 +1250,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 539,
-        "w": 612,
-        "h": 202
+        "y": 539
     },
     {
         "id": "550e5b2d99316b12",
@@ -4646,7 +4647,7 @@
         "type": "function",
         "z": "a4ee891237e460a2",
         "name": "Routing",
-        "func": "var str = msg.payload\nvar newPayload = str.replaceAll(\" \",\"_\")\n\nmsg.payload = newPayload\n\nif (newPayload === 'Select') {\n    return null\n} else if (newPayload === 'Adaptive') {\n    return[msg,null,null]\n} else if (newPayload === 'Reset') {\n    return[null,msg,null]\n} else {\n    return[null,null,msg]\n}",
+        "func": "var str = msg.payload\nvar newPayload = str.replaceAll(\" \",\"_\")\nvar topic = msg.topic\n\nif (newPayload === 'Select') {\n    return null\n} else if (newPayload === 'Adaptive') {\n    msg.payload = newPayload\n    return[msg,null,null]\n} else if (newPayload === 'Reset') {\n    if (topic === 'tina_desk') {\n        msg.payload = 'Reset'\n    } else {\n        msg.payload = 'Adaptive'\n    }\n    return[null,msg,null]\n} else {\n    msg.payload = newPayload\n    return[null,null,msg]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -15413,7 +15414,7 @@
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
-        "name": "Reset Lights",
+        "name": "Reset Living Room",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -15422,7 +15423,6 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_select.dining_room_lamp_scenes",
             "input_select.living_room_scenes"
         ],
         "data": "{\t    \"option\":\"Adaptive\"\t}",
@@ -15431,7 +15431,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 950,
+        "x": 930,
         "y": 1060,
         "wires": [
             [
@@ -16161,7 +16161,7 @@
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
-        "func": "var app = msg.payload\nvar payload = {}\n\nif (app === \"YouTube\") {\n    payload = \"start\"\n} else if (app === \"Netflix\") {\n    payload = \"start\"\n} else if (app === \"MLB\") {\n    payload = \"start\"\n} else if (app === \"Jellyfin\") {\n    payload = \"start\"\n} else if (app === \"Twitch\") {\n    payload = \"start\"\n} else if (app === \"Hulu\") {\n    payload = \"start\"\n} else {\n    payload = \"stop\"\n}\n\nmsg.payload = payload\n\nglobal.set('tvAppLivingRoom',app)\n\nif (payload === 'start') {\n    node.status({fill:\"green\",shape:\"dot\",text:app});\n    return[msg,null]\n} else if (payload === 'stop') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Stopped\"});\n    return[null,msg]\n}",
+        "func": "const appList = [\"YouTube\",\"Netflix\",\"MLB\",\"Jellyfin\",\"Twitch\",\"Hulu\"]\nvar states = global.get('homeassistant.homeAssistant.states')\nvar lampState = states['light.dining_room_lamp'].state\nvar app = msg.payload\nvar payload = {}\n\nif (appList.includes(app)) {\n    flow.set(\"lampState\", lampState)\n    payload = \"start\"\n} else {\n    payload = \"stop\"\n}\n\nmsg.payload = payload\n\nflow.set('tvAppLivingRoom',app)\n\nif (payload === 'start') {\n    node.status({fill:\"green\",shape:\"dot\",text:app});\n    return[msg,null]\n} else if (payload === 'stop') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Stopped\"});\n    return[null,msg]\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -16281,18 +16281,6 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
             }
         ],
         "x": 170,
@@ -16303,8 +16291,7 @@
             ]
         ],
         "outputLabels": [
-            "On",
-            "Off"
+            "On"
         ]
     },
     {
@@ -16419,8 +16406,8 @@
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar currentApp = global.get('tvAppLivingRoom')\nvar lights = states['light.living_room_lights'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar payload = msg.payload\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
-        "outputs": 2,
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar currentApp = flow.get('tvAppLivingRoom');\nvar lights = states['light.living_room_lights'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar lamp = flow.get(\"lampState\")\nvar payload = msg.payload\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        if (lamp === 'on') {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,msg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,null]\n        }\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
+        "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -16433,11 +16420,15 @@
             ],
             [
                 "3a29cecbefa6cbe2"
+            ],
+            [
+                "d09061428e9c694d"
             ]
         ],
         "outputLabels": [
             "On",
-            "Off"
+            "Off (Living Room)",
+            "Off (Dining Room)"
         ],
         "icon": "node-red-contrib-cpu/cpu.png"
     },
@@ -16447,7 +16438,7 @@
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar lights = states['light.living_room_lights'].state\nvar active = states['input_boolean.living_room_entertainment_mode'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar payload = msg.payload\nvar stopMsg = {\n    \"payload\":\"stop\"\n}\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'paused') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Paused\"});\n        return [null,msg,null]\n    } else if (payload === 'playing') {\n        if (allowed === 'on' && lights === 'on' && active === 'on' && selectedScene != 'Tokyo') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Playing\" });\n            return[msg,null,stopMsg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n            return[null,null,stopMsg]\n        }\n    } else {\n        node.status({fill:\"grey\",shape:\"dot\",text:\"Timer Stopped\"});\n        return[null,null,stopMsg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar lights = states['light.living_room_lights'].state\nvar active = states['input_boolean.living_room_entertainment_mode'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar payload = msg.payload\nvar stopMsg = {\n    \"payload\":\"stop\"\n}\nvar resumeMsg = {\n    \"payload\":\"on\"\n}\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'paused') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Paused\"});\n        return [null,msg,null]\n    } else if (payload === 'playing') {\n        if (allowed === 'on' && lights === 'on' && active === 'on') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Playing\" });\n            return[resumeMsg,null,stopMsg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n            return[null,null,stopMsg]\n        }\n    } else {\n        node.status({fill:\"grey\",shape:\"dot\",text:\"Timer Stopped\"});\n        return[null,null,stopMsg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -16457,7 +16448,7 @@
         "y": 1140,
         "wires": [
             [
-                "107f2c88924975fe"
+                "346379575efad516"
             ],
             [
                 "cc8f6ab710549be2"
@@ -16479,8 +16470,8 @@
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
         "name": "Check",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar active = states['input_boolean.living_room_entertainment_mode'].state\nvar lights = states['light.living_room_lights'].state\n\nif (active === 'on' && lights === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Sent\"});\n    return msg;\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
-        "outputs": 1,
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar active = states['input_boolean.living_room_entertainment_mode'].state\nvar lights = states['light.living_room_lights'].state\nvar lamp = flow.get('lampState')\n\nif (active === 'on' && lights === 'on') {\n    if (lamp === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sent (Both)\"});\n        return[msg,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sent (Living Room)\"});\n        return[msg,null]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -16490,7 +16481,14 @@
         "wires": [
             [
                 "3a29cecbefa6cbe2"
+            ],
+            [
+                "d09061428e9c694d"
             ]
+        ],
+        "outputLabels": [
+            "Living Room",
+            "Dining Room"
         ],
         "icon": "font-awesome/fa-check"
     },
@@ -16588,7 +16586,7 @@
         "g": "ff6d8150e8d5e606",
         "name": "",
         "pauseType": "delay",
-        "timeout": "3",
+        "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -16604,6 +16602,91 @@
         "wires": [
             [
                 "d961ffeaea408909"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "68f00dbd3a4baca0",
+        "type": "api-call-service",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "Reset Dining Room",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.dining_room_lamp_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1150,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d09061428e9c694d",
+        "type": "api-call-service",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "Turn On Lamp",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.dining_room_lamp"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 920,
+        "y": 1120,
+        "wires": [
+            [
+                "d5d36b9c1bd30b29"
+            ]
+        ]
+    },
+    {
+        "id": "d5d36b9c1bd30b29",
+        "type": "delay",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1035,
+        "y": 1120,
+        "wires": [
+            [
+                "68f00dbd3a4baca0"
             ]
         ],
         "l": false
