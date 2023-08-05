@@ -779,7 +779,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -857,7 +859,9 @@
             "ed625c0b4f7c98ff"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2252,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -897,7 +901,9 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179
+        "y": 179,
+        "w": 1292,
+        "h": 382
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1066,7 +1072,9 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1032,
+        "h": 322
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1230,7 +1238,9 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619
+        "y": 619,
+        "w": 1112,
+        "h": 282
     },
     {
         "id": "f519aff597ece351",
@@ -1382,7 +1392,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579
+        "y": 579,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "4886967d0f8c0156",
@@ -1442,7 +1454,9 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 672,
+        "h": 222
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1460,7 +1474,9 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "88f099618e56926d",
@@ -1542,7 +1558,9 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "31767ffd6a647579",
@@ -1599,7 +1617,8 @@
             "99fccb06d0ae097b",
             "f3efe80c6ffa4522",
             "74d645f646c713d2",
-            "cb68f561b5023b31"
+            "cb68f561b5023b31",
+            "682b9b2d4cc279cd"
         ],
         "x": 34,
         "y": 539,
@@ -4061,39 +4080,6 @@
         ]
     },
     {
-        "id": "1c03c55909a9b552",
-        "type": "switch",
-        "z": "a4ee891237e460a2",
-        "name": "",
-        "property": "dest",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "living_room",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "master_bedroom",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1550,
-        "y": 440,
-        "wires": [
-            [
-                "60924f02885cc3c8"
-            ],
-            [
-                "ccb129e61b136746"
-            ]
-        ]
-    },
-    {
         "id": "6ae79d1701e78840",
         "type": "function",
         "z": "a4ee891237e460a2",
@@ -4108,7 +4094,7 @@
         "y": 440,
         "wires": [
             [
-                "1c03c55909a9b552"
+                "60924f02885cc3c8"
             ]
         ]
     },
@@ -4177,103 +4163,7 @@
         "y": 340,
         "wires": [
             [
-                "1c03c55909a9b552"
-            ]
-        ]
-    },
-    {
-        "id": "04f7db2902e58e41",
-        "type": "api-current-state",
-        "z": "a4ee891237e460a2",
-        "name": "Dynamic Scenes",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.{{topic}}_dynamic_scenes",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1010,
-        "y": 340,
-        "wires": [
-            [
-                "defe84d113029e8e"
-            ],
-            [
-                "942a915b6599fb27"
-            ]
-        ]
-    },
-    {
-        "id": "b14287e013bba748",
-        "type": "switch",
-        "z": "a4ee891237e460a2",
-        "name": "Dynamic Rooms",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "living_room",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 580,
-        "y": 440,
-        "wires": [
-            [
-                "04f7db2902e58e41"
-            ],
-            [
-                "a4926fb1dba17563"
-            ]
-        ]
-    },
-    {
-        "id": "bd8c5a7b9e7b24b2",
-        "type": "switch",
-        "z": "a4ee891237e460a2",
-        "name": "Dynamic Rooms",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "living_room",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 580,
-        "y": 280,
-        "wires": [
-            [
-                "72c0b7fda242bb67"
-            ],
-            [
-                "3a4f567b17b2214e"
+                "60924f02885cc3c8"
             ]
         ]
     },
@@ -4312,7 +4202,7 @@
         "z": "a4ee891237e460a2",
         "name": "",
         "x": 570,
-        "y": 620,
+        "y": 580,
         "wires": []
     },
     {
@@ -4321,14 +4211,14 @@
         "z": "a4ee891237e460a2",
         "name": "",
         "x": 570,
-        "y": 80,
+        "y": 100,
         "wires": []
     },
     {
         "id": "60924f02885cc3c8",
         "type": "api-call-service",
         "z": "a4ee891237e460a2",
-        "name": "Notify Living Room TV",
+        "name": "Notify TV",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -4337,39 +4227,14 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\": \"living_room\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\",\t        \"color\": \"red\"\t    }\t}",
+        "data": "{\t    \"who\": msg.dest,\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\",\t        \"color\": \"red\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1760,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ccb129e61b136746",
-        "type": "api-call-service",
-        "z": "a4ee891237e460a2",
-        "name": "Notify Master Bedroom TV",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "tv_notify",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"who\": \"master_bedroom\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"30%\",\t        \"color\": \"red\"\t    }\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1780,
-        "y": 480,
+        "x": 1580,
+        "y": 440,
         "wires": [
             []
         ]
@@ -4379,7 +4244,7 @@
         "type": "function",
         "z": "a4ee891237e460a2",
         "name": "Routing",
-        "func": "var str = msg.payload\nvar newPayload = str.replaceAll(\" \",\"_\")\nvar topic = msg.topic\n\nif (newPayload === 'Select') {\n    return null\n} else if (newPayload === 'Adaptive') {\n    msg.payload = newPayload\n    return[msg,null,null]\n} else if (newPayload === 'Reset') {\n    if (topic === 'tina_desk') {\n        msg.payload = 'Reset'\n    } else {\n        msg.payload = 'Adaptive'\n    }\n    return[null,msg,null]\n} else {\n    msg.payload = newPayload\n    return[null,null,msg]\n}",
+        "func": "var str = msg.payload\nvar newPayload = str.replaceAll(\" \",\"_\")\nvar topic = msg.topic\n\nmsg.payload = newPayload\n\nif (newPayload === 'Select') {\n    return null\n} else if (newPayload === 'Adaptive') {\n    return[msg,null,null]\n} else if (newPayload === 'Reset') {\n    return[null,msg,null]\n} else {\n    return[null,null,msg]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -4390,16 +4255,16 @@
         "wires": [
             [
                 "de5a484b79c5d0e4",
-                "97400c5ff0842570",
-                "bd8c5a7b9e7b24b2"
+                "9af9a2966a477b33",
+                "97400c5ff0842570"
             ],
             [
                 "a89c7e8905a07998"
             ],
             [
-                "b14287e013bba748",
-                "dc0972a3964e6513",
-                "a81fd188d89faa25"
+                "a81fd188d89faa25",
+                "f9f11a5fa1492190",
+                "dc0972a3964e6513"
             ]
         ],
         "outputLabels": [
@@ -4408,6 +4273,58 @@
             "Otherwise"
         ],
         "icon": "node-red/switch.svg"
+    },
+    {
+        "id": "9af9a2966a477b33",
+        "type": "function",
+        "z": "a4ee891237e460a2",
+        "name": "Dynamic Rooms",
+        "func": "var dynamicRooms = global.get(\"dynamicRooms\")\nvar topic = msg.topic\n\nif (dynamicRooms.includes(topic)) {\n    return[msg,null]\n} else {\n    return[null,msg]\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "72c0b7fda242bb67"
+            ],
+            [
+                "3a4f567b17b2214e"
+            ]
+        ],
+        "outputLabels": [
+            "Dynamic",
+            "Else"
+        ]
+    },
+    {
+        "id": "f9f11a5fa1492190",
+        "type": "function",
+        "z": "a4ee891237e460a2",
+        "name": "Dynamic Rooms",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar dynamicRooms = global.get(\"dynamicRooms\")\nvar topic = msg.topic\n\nif (dynamicRooms.includes(topic)) {\n    var inputBoolean = \"input_boolean.\" + topic + \"_dynamic_scenes\"\n    var boolState = states[inputBoolean].state\n    if (boolState === 'on') {\n        return [msg, null]\n    } else {\n        return [null, msg]\n    }\n} else {\n    return[null,msg]\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 440,
+        "wires": [
+            [
+                "defe84d113029e8e"
+            ],
+            [
+                "a4926fb1dba17563"
+            ]
+        ],
+        "outputLabels": [
+            "Dynamic",
+            "Else"
+        ]
     },
     {
         "id": "1bb8f2070d805c99",
@@ -13639,7 +13556,7 @@
         "y": 40,
         "wires": [
             [
-                "b334c603ae26bd9b"
+                "31c254f61982f19d"
             ]
         ]
     },
@@ -13853,15 +13770,6 @@
         "info": "",
         "x": 300,
         "y": 100,
-        "wires": []
-    },
-    {
-        "id": "b334c603ae26bd9b",
-        "type": "subflow:74d3a55b70dc2d6c",
-        "z": "47f17992fab9b4f5",
-        "name": "",
-        "x": 410,
-        "y": 40,
         "wires": []
     },
     {
@@ -14719,6 +14627,15 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "31c254f61982f19d",
+        "type": "subflow:a4ee891237e460a2",
+        "z": "47f17992fab9b4f5",
+        "name": "",
+        "x": 380,
+        "y": 40,
+        "wires": []
     },
     {
         "id": "091390f43bfeddf5",
@@ -16309,7 +16226,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_boolean.basement_entertainment_mode"
+            "input_boolean.basement_studio_entertainment_mode"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -16337,7 +16254,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_boolean.basement_entertainment_mode"
+            "input_boolean.basement_studio_entertainment_mode"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -16370,7 +16287,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "input_boolean.basement_entertainment_mode",
+        "entityidfilter": "input_boolean.basement_studio_entertainment_mode",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
@@ -16475,7 +16392,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_boolean.basement_dynamic_scenes"
+            "input_boolean.basement_studio_dynamic_scenes"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -16517,7 +16434,7 @@
         "z": "b0286fae9f2ce547",
         "g": "1cc8b382530c33d0",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.basement_entertainment_control'].state\nvar currentApp = global.get('tvAppBasement');\nvar lights = states['light.basement_studio_lights'].state\nvar selectedScene = states['input_text.basement_studio_selected_scene'].state\nvar payload = msg.payload\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.basement_studio_entertainment_control'].state\nvar quiet = states['input_boolean.studio_quiet'].state\nvar recliner = states['input_boolean.recliner_mode'].state\nvar currentApp = global.get('tvAppBasement');\nvar lights = states['light.basement_studio_lights'].state\nvar selectedScene = states['input_text.basement_studio_selected_scene'].state\nvar payload = msg.payload\nvar proceed = {}\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nif (allowed === 'on' && lights === 'on' && quiet === 'off' && recliner === 'off') {\n    proceed = 'true'\n} else {\n    proceed = 'false'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (proceed === 'true') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -16545,7 +16462,7 @@
         "z": "b0286fae9f2ce547",
         "g": "1cc8b382530c33d0",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.basement_entertainment_control'].state\nvar lights = states['light.basement_studio_lights'].state\nvar active = states['input_boolean.basement_entertainment_mode'].state\nvar selectedScene = states['input_text.basement_studio_selected_scene'].state\nvar app = global.get(\"tvAppBasement\");\nvar payload = msg.payload\nvar stopMsg = {\n    \"payload\":\"stop\"\n}\nvar resumeMsg = {\n    \"payload\":\"on\"\n}\n\nif (allowed === 'on' && lights === 'on' && app != 'TV') {\n    if (payload === 'paused') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Paused\"});\n        return [null,msg,null]\n    } else if (payload === 'playing') {\n        if (allowed === 'on' && lights === 'on' && active === 'on') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Playing\" });\n            return[resumeMsg,null,stopMsg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n            return[null,null,stopMsg]\n        }\n    } else {\n        node.status({fill:\"grey\",shape:\"dot\",text:\"Timer Stopped\"});\n        return[null,null,stopMsg]\n    }\n} else if (app === 'TV') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked (TV)\"});\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.basement_studio_entertainment_control'].state\nvar lights = states['light.basement_studio_lights'].state\nvar active = states['input_boolean.basement_studio_entertainment_mode'].state\nvar selectedScene = states['input_text.basement_studio_selected_scene'].state\nvar app = global.get(\"tvAppBasement\");\nvar payload = msg.payload\nvar stopMsg = {\n    \"payload\":\"stop\"\n}\nvar resumeMsg = {\n    \"payload\":\"on\"\n}\n\nif (allowed === 'on' && lights === 'on' && app != 'TV') {\n    if (payload === 'paused') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Paused\"});\n        return [null,msg,null]\n    } else if (payload === 'playing') {\n        if (allowed === 'on' && lights === 'on' && active === 'on') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Playing\" });\n            return[resumeMsg,null,stopMsg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n            return[null,null,stopMsg]\n        }\n    } else {\n        node.status({fill:\"grey\",shape:\"dot\",text:\"Timer Stopped\"});\n        return[null,null,stopMsg]\n    }\n} else if (app === 'TV') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked (TV)\"});\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -16577,7 +16494,7 @@
         "z": "b0286fae9f2ce547",
         "g": "1cc8b382530c33d0",
         "name": "Check",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar active = states['input_boolean.basement_entertainment_mode'].state\nvar lights = states['light.basement_studio_lights'].state\n\nif (active === 'on' && lights === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Sent\"});\n    return msg\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar active = states['input_boolean.basement_studio_entertainment_mode'].state\nvar lights = states['light.basement_studio_lights'].state\n\nif (active === 'on' && lights === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Sent\"});\n    return msg\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -16776,6 +16693,17 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "682b9b2d4cc279cd",
+        "type": "comment",
+        "z": "b0286fae9f2ce547",
+        "g": "1cc8b382530c33d0",
+        "name": "FINISH MOVING BASEMENT SCENES TO MAIN HANDLER!!!!!!!!!!!!",
+        "info": "",
+        "x": 700,
+        "y": 1000,
+        "wires": []
     },
     {
         "id": "8e399b2a287a0905",
@@ -28448,6 +28376,48 @@
         "x": 540,
         "y": 1040,
         "wires": []
+    },
+    {
+        "id": "ec5628079748bafe",
+        "type": "function",
+        "z": "3e4ba157b540d183",
+        "name": "Constants",
+        "func": "// Set options here\nconst dynamicRooms = [\"living_room\",\"basement_studio\"]\n\n// Commit those options to global context\nglobal.set(\"dynamicRooms\", dynamicRooms);\n\nnode.status({fill:\"green\",shape:\"dot\",text:\"Saved\"});",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f49fc3da65a68efd",
+        "type": "inject",
+        "z": "3e4ba157b540d183",
+        "name": "Update",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 880,
+        "y": 620,
+        "wires": [
+            [
+                "ec5628079748bafe"
+            ]
+        ]
     },
     {
         "id": "e038489eca14b1dd",
