@@ -779,9 +779,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1552,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -859,9 +857,7 @@
             "ed625c0b4f7c98ff"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2252,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -1041,11 +1037,12 @@
             "d5d36b9c1bd30b29",
             "6110b45c374a5b7f",
             "e5af55b177f37c65",
-            "27b2c22907382e6d"
+            "27b2c22907382e6d",
+            "fb9f248ac42e7432"
         ],
         "x": 34,
         "y": 19,
-        "w": 1232,
+        "w": 1452,
         "h": 502
     },
     {
@@ -1212,9 +1209,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759,
-        "w": 612,
-        "h": 202
+        "y": 759
     },
     {
         "id": "550e5b2d99316b12",
@@ -1580,9 +1575,7 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399,
-        "w": 1532,
-        "h": 282
+        "y": 399
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1612,11 +1605,12 @@
             "99fccb06d0ae097b",
             "f3efe80c6ffa4522",
             "74d645f646c713d2",
-            "cb68f561b5023b31"
+            "cb68f561b5023b31",
+            "8f5472ca8f017dc3"
         ],
         "x": 34,
         "y": 539,
-        "w": 1192,
+        "w": 1372,
         "h": 502
     },
     {
@@ -1633,9 +1627,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 82
+        "y": 39
     },
     {
         "id": "fba69dfc80829db7",
@@ -11442,15 +11434,15 @@
         "name": "Doorbell Rings",
         "server": "9e87348d.9c1c48",
         "version": 4,
-        "exposeToHomeAssistant": false,
+        "exposeToHomeAssistant": true,
         "haConfig": [
             {
                 "property": "name",
-                "value": ""
+                "value": "Node Red Doorbell Alert"
             },
             {
                 "property": "icon",
-                "value": ""
+                "value": "mdi:doorbell-video"
             }
         ],
         "entityidfilter": "binary_sensor.front_doorbell_ding_mqtt",
@@ -15939,7 +15931,9 @@
         "x": 1180,
         "y": 300,
         "wires": [
-            []
+            [
+                "fb9f248ac42e7432"
+            ]
         ]
     },
     {
@@ -16618,7 +16612,9 @@
         "x": 1140,
         "y": 820,
         "wires": [
-            []
+            [
+                "8f5472ca8f017dc3"
+            ]
         ]
     },
     {
@@ -16762,6 +16758,62 @@
             [
                 "346379575efad516"
             ]
+        ]
+    },
+    {
+        "id": "fb9f248ac42e7432",
+        "type": "api-call-service",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "Reset Living Room",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.living_room_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1370,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f5472ca8f017dc3",
+        "type": "api-call-service",
+        "z": "b0286fae9f2ce547",
+        "g": "1cc8b382530c33d0",
+        "name": "Reset Lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.basement_studio_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1310,
+        "y": 820,
+        "wires": [
+            []
         ]
     },
     {
