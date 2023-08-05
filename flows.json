@@ -1620,6 +1620,24 @@
         "h": 502
     },
     {
+        "id": "b9ffa3fa5af46ec3",
+        "type": "group",
+        "z": "ebd5561c4f077718",
+        "name": "Weather Briefing",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "5d7c63526234945e",
+            "7aaddacf84721c78",
+            "6b5d3e550ad76528"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 692,
+        "h": 82
+    },
+    {
         "id": "fba69dfc80829db7",
         "type": "junction",
         "z": "5e238cbbe6d612c9",
@@ -25107,6 +25125,7 @@
         "id": "5d7c63526234945e",
         "type": "api-render-template",
         "z": "ebd5561c4f077718",
+        "g": "b9ffa3fa5af46ec3",
         "name": "",
         "server": "9e87348d.9c1c48",
         "version": 0,
@@ -25115,8 +25134,8 @@
         "resultsLocationType": "msg",
         "templateLocation": "template",
         "templateLocationType": "msg",
-        "x": 280,
-        "y": 180,
+        "x": 320,
+        "y": 80,
         "wires": [
             [
                 "6b5d3e550ad76528"
@@ -25127,6 +25146,7 @@
         "id": "7aaddacf84721c78",
         "type": "inject",
         "z": "ebd5561c4f077718",
+        "g": "b9ffa3fa5af46ec3",
         "name": "",
         "props": [
             {
@@ -25140,8 +25160,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 180,
+        "x": 150,
+        "y": 80,
         "wires": [
             [
                 "5d7c63526234945e"
@@ -25152,6 +25172,7 @@
         "id": "6b5d3e550ad76528",
         "type": "file",
         "z": "ebd5561c4f077718",
+        "g": "b9ffa3fa5af46ec3",
         "name": "",
         "filename": "/config/files/weather_briefing_full.txt",
         "filenameType": "str",
@@ -25159,9 +25180,59 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 520,
-        "y": 180,
+        "x": 560,
+        "y": 80,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7cc6440f2cdd8a6b",
+        "type": "server-state-changed",
+        "z": "ebd5561c4f077718",
+        "name": "Lightning Warning",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": true,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Node Red Lightning Warning"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:lightning-bolt"
+            }
+        ],
+        "entityidfilter": "binary_sensor.lightning_warning",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [],
             []
         ]
     },
