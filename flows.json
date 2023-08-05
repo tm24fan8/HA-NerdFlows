@@ -901,9 +901,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1042,7 +1040,8 @@
             "d09061428e9c694d",
             "d5d36b9c1bd30b29",
             "6110b45c374a5b7f",
-            "e5af55b177f37c65"
+            "e5af55b177f37c65",
+            "27b2c22907382e6d"
         ],
         "x": 34,
         "y": 19,
@@ -1072,9 +1071,7 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 322
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1159,7 +1156,9 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1492,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1213,7 +1212,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1238,9 +1239,7 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619,
-        "w": 1112,
-        "h": 282
+        "y": 619
     },
     {
         "id": "f519aff597ece351",
@@ -1392,9 +1391,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1454,9 +1451,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1474,9 +1469,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "88f099618e56926d",
@@ -1558,9 +1551,7 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "31767ffd6a647579",
@@ -1584,10 +1575,14 @@
             "2ebe03f5023de47c",
             "12e827e7416c9dac",
             "e3ecd23a34c7f82e",
-            "58b11f0c0353d67b"
+            "58b11f0c0353d67b",
+            "45df5f447e52cb0f",
+            "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399
+        "y": 399,
+        "w": 1532,
+        "h": 282
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1617,8 +1612,7 @@
             "99fccb06d0ae097b",
             "f3efe80c6ffa4522",
             "74d645f646c713d2",
-            "cb68f561b5023b31",
-            "682b9b2d4cc279cd"
+            "cb68f561b5023b31"
         ],
         "x": 34,
         "y": 539,
@@ -11721,10 +11715,10 @@
         "y": 620,
         "wires": [
             [
-                "e8510a6c66cd84e6"
+                "45df5f447e52cb0f"
             ],
             [
-                "e8510a6c66cd84e6"
+                "45df5f447e52cb0f"
             ]
         ]
     },
@@ -11750,7 +11744,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 800,
+        "x": 980,
         "y": 620,
         "wires": [
             [
@@ -11776,7 +11770,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 925,
+        "x": 1105,
         "y": 620,
         "wires": [
             [
@@ -11807,7 +11801,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1050,
+        "x": 1230,
         "y": 620,
         "wires": [
             [
@@ -11837,7 +11831,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1250,
+        "x": 1430,
         "y": 620,
         "wires": [
             []
@@ -11852,6 +11846,47 @@
         "info": "",
         "x": 270,
         "y": 640,
+        "wires": []
+    },
+    {
+        "id": "45df5f447e52cb0f",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Media?",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar media = states['input_boolean.living_room_entertainment_mode'].state\n\nif (media === 'on') {\n    msg.payload = 'on'\n    node.status({fill:\"green\",shape:\"dot\",text:\"Media App Running\"})\n    return[msg,null]\n} else {\n    node.status({fill:\"blue\",shape:\"dot\",text:\"Otherwise\"})\n    return[null,msg]\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 620,
+        "wires": [
+            [
+                "e23e7b080ee3773f"
+            ],
+            [
+                "e8510a6c66cd84e6"
+            ]
+        ],
+        "outputLabels": [
+            "media app running",
+            "otherwise"
+        ]
+    },
+    {
+        "id": "e23e7b080ee3773f",
+        "type": "link out",
+        "z": "eff21041cc941fef",
+        "g": "31767ffd6a647579",
+        "name": "Doorbell to Media",
+        "mode": "link",
+        "links": [
+            "27b2c22907382e6d"
+        ],
+        "x": 915,
+        "y": 560,
         "wires": []
     },
     {
@@ -16695,15 +16730,21 @@
         "l": false
     },
     {
-        "id": "682b9b2d4cc279cd",
-        "type": "comment",
+        "id": "27b2c22907382e6d",
+        "type": "link in",
         "z": "b0286fae9f2ce547",
-        "g": "1cc8b382530c33d0",
-        "name": "FINISH MOVING BASEMENT SCENES TO MAIN HANDLER!!!!!!!!!!!!",
-        "info": "",
-        "x": 700,
-        "y": 1000,
-        "wires": []
+        "g": "ff6d8150e8d5e606",
+        "name": "Media Scenes Input",
+        "links": [
+            "e23e7b080ee3773f"
+        ],
+        "x": 265,
+        "y": 280,
+        "wires": [
+            [
+                "346379575efad516"
+            ]
+        ]
     },
     {
         "id": "8e399b2a287a0905",
