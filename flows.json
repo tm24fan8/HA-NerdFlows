@@ -779,7 +779,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -857,7 +859,9 @@
             "ed625c0b4f7c98ff"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2252,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -897,7 +901,9 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179
+        "y": 179,
+        "w": 1292,
+        "h": 382
     },
     {
         "id": "477e752fcd2e2a19",
@@ -917,7 +923,9 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 792,
+        "h": 142
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -937,7 +945,9 @@
             "603140fef1e2edaf"
         ],
         "x": 14,
-        "y": 199
+        "y": 199,
+        "w": 712,
+        "h": 142
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -985,7 +995,9 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -1003,7 +1015,9 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 202
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1038,7 +1052,8 @@
             "6110b45c374a5b7f",
             "e5af55b177f37c65",
             "27b2c22907382e6d",
-            "fb9f248ac42e7432"
+            "fb9f248ac42e7432",
+            "f111c40459e27629"
         ],
         "x": 34,
         "y": 19,
@@ -1119,7 +1134,9 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 359
+        "y": 359,
+        "w": 1012,
+        "h": 222
     },
     {
         "id": "eeafd13be593ae69",
@@ -1153,9 +1170,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1353,7 +1368,9 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39
+        "y": 39,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1386,7 +1403,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579
+        "y": 579,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "4886967d0f8c0156",
@@ -1427,7 +1446,9 @@
             "5ba9cfc0194ef62a"
         ],
         "x": 754,
-        "y": 319
+        "y": 319,
+        "w": 672,
+        "h": 622
     },
     {
         "id": "931cc27100c9317e",
@@ -1446,7 +1467,9 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 672,
+        "h": 222
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1464,7 +1487,9 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "88f099618e56926d",
@@ -1546,7 +1571,9 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "31767ffd6a647579",
@@ -1627,7 +1654,41 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 82
+    },
+    {
+        "id": "4329e464360d0afa",
+        "type": "group",
+        "z": "ebd5561c4f077718",
+        "name": "Lightning",
+        "style": {
+            "label": true,
+            "stroke": "#ff0000"
+        },
+        "nodes": [
+            "7cc6440f2cdd8a6b",
+            "7185d594dc08e2bc",
+            "d7c2eec75c6063ea",
+            "75c4dc9367328035",
+            "abb24271518ddd9b",
+            "6f29823ba252aef8",
+            "b6e069ac0ebfe31a",
+            "210ae9a754fb0bb7",
+            "6c529210810a63a8",
+            "b4b80e91a535923e",
+            "1180e4c40c3ec0fa",
+            "b64b61c5bfd91293",
+            "70f795fb061cbfef",
+            "7809c760322bf72a",
+            "8ffd3e28319fc173",
+            "be9ebf6d2f7e18d0"
+        ],
+        "x": 34,
+        "y": 139,
+        "w": 1232,
+        "h": 362
     },
     {
         "id": "fba69dfc80829db7",
@@ -16817,6 +16878,17 @@
         ]
     },
     {
+        "id": "f111c40459e27629",
+        "type": "comment",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "Figure out why alerts aren't resetting to media scenes properly",
+        "info": "",
+        "x": 1060,
+        "y": 440,
+        "wires": []
+    },
+    {
         "id": "8e399b2a287a0905",
         "type": "ha-time",
         "z": "72f99805df043603",
@@ -25242,6 +25314,7 @@
         "id": "7cc6440f2cdd8a6b",
         "type": "server-state-changed",
         "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
         "name": "Lightning Warning",
         "server": "9e87348d.9c1c48",
         "version": 4,
@@ -25268,7 +25341,7 @@
         "for": "0",
         "forType": "num",
         "forUnits": "minutes",
-        "ignorePrevStateNull": false,
+        "ignorePrevStateNull": true,
         "ignorePrevStateUnknown": true,
         "ignorePrevStateUnavailable": true,
         "ignoreCurrentStateUnknown": true,
@@ -25279,14 +25352,433 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
+            },
+            {
+                "property": "duration",
+                "propertyType": "msg",
+                "value": "10",
+                "valueType": "num"
             }
         ],
         "x": 150,
         "y": 300,
         "wires": [
-            [],
+            [
+                "7185d594dc08e2bc",
+                "70f795fb061cbfef"
+            ],
+            [
+                "1180e4c40c3ec0fa"
+            ]
+        ]
+    },
+    {
+        "id": "7185d594dc08e2bc",
+        "type": "api-current-state",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Allowed?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.audible_weather_alerts_allowed",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "allowed",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "d7c2eec75c6063ea"
+            ],
             []
         ]
+    },
+    {
+        "id": "d7c2eec75c6063ea",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Backup Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"scene_id\":\"lightning_alert_restore\",\t    \"snapshot_entities\": [\"light.tina_lamp_side\",\"light.tina_lamp_top\",\"light.tina_desk_strip\",\"light.dining_room_lamp\",\"switch.adaptive_lighting_living_room\",\"switch.adaptive_lighting_tina_lamp\"]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 520,
+        "y": 240,
+        "wires": [
+            [
+                "75c4dc9367328035"
+            ]
+        ]
+    },
+    {
+        "id": "75c4dc9367328035",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Turn off Adaptive",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.adaptive_lighting_tina_lamp"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 730,
+        "y": 240,
+        "wires": [
+            [
+                "abb24271518ddd9b"
+            ]
+        ]
+    },
+    {
+        "id": "abb24271518ddd9b",
+        "type": "delay",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 865,
+        "y": 240,
+        "wires": [
+            [
+                "6f29823ba252aef8",
+                "b6e069ac0ebfe31a",
+                "210ae9a754fb0bb7",
+                "6c529210810a63a8"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "6f29823ba252aef8",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Red Lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.tina_desk_strip",
+            "light.tina_lamp_side",
+            "light.tina_lamp_top"
+        ],
+        "data": "{\t    \"color_name\":\"red\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 990,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6e069ac0ebfe31a",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Red Alert",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "living_room_lights_alert",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"type\":\"red\",\t    \"duration\": msg.duration\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 980,
+        "y": 240,
+        "wires": [
+            [
+                "b4b80e91a535923e"
+            ]
+        ]
+    },
+    {
+        "id": "210ae9a754fb0bb7",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Lamp Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.dining_room_lamp"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 980,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c529210810a63a8",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Announce",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "status_annc",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\":\"common\",\t    \"type\":\"weather\",\t    \"call_interruption\": 1,\t    \"call_lightning_alert\": 1\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 980,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b4b80e91a535923e",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Restore Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "scene.lightning_alert_restore"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1160,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1180e4c40c3ec0fa",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Clear Notification",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"type\":\"alert\",\t    \"who\":\"all\",\t    \"message\":\"clear_notification\",\t    \"tag\":\"lightning-warning\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "7809c760322bf72a"
+            ]
+        ]
+    },
+    {
+        "id": "b64b61c5bfd91293",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Text Notify",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"type\":\"alert\",\t    \"who\":\"all\",\t    \"title\":\"Lightning Detected!\",\t    \"message\": msg.notification,\t    \"tag\":\"lightning-warning\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 510,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70f795fb061cbfef",
+        "type": "api-render-template",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{% set ltgdist = (states('sensor.pirateweather_temperature') | int) / 1.609 | round %}\nLightning has been detected within 20 miles of the house. Nearest storm is {{ ltgdist }} miles away.\n",
+        "resultsLocation": "notification",
+        "resultsLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
+        "x": 340,
+        "y": 180,
+        "wires": [
+            [
+                "b64b61c5bfd91293"
+            ]
+        ]
+    },
+    {
+        "id": "7809c760322bf72a",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Announce",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "status_annc",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"who\":\"common\",\t    \"type\":\"weather\",\t    \"call_interruption\": 1,\t    \"call_lightning_clear\": 1\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "8ffd3e28319fc173"
+            ]
+        ]
+    },
+    {
+        "id": "8ffd3e28319fc173",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Text Notify",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"type\":\"alert\",\t    \"who\":\"all\",\t    \"title\":\"Lightning Clear!\",\t    \"message\": \"The lightning threat has passed. It is safe to resume normal activities.\",\t    \"tag\":\"lightning-clear\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 730,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be9ebf6d2f7e18d0",
+        "type": "comment",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Add basement, and work on media scene interaction",
+        "info": "",
+        "x": 250,
+        "y": 460,
+        "wires": []
     },
     {
         "id": "1031080bdf3b95bf",
