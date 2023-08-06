@@ -901,9 +901,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -923,9 +921,7 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39,
-        "w": 792,
-        "h": 142
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -945,9 +941,7 @@
             "603140fef1e2edaf"
         ],
         "x": 14,
-        "y": 199,
-        "w": 712,
-        "h": 142
+        "y": 199
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1083,7 +1077,9 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1032,
+        "h": 322
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1134,9 +1130,7 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 359,
-        "w": 1012,
-        "h": 222
+        "y": 359
     },
     {
         "id": "eeafd13be593ae69",
@@ -1204,7 +1198,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "8aee4d340a136bac",
@@ -1224,7 +1220,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1249,7 +1247,9 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619
+        "y": 619,
+        "w": 1112,
+        "h": 282
     },
     {
         "id": "f519aff597ece351",
@@ -1386,7 +1386,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659
+        "y": 659,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "265593f442864b6a",
@@ -1403,9 +1405,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1467,9 +1467,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1487,9 +1485,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "88f099618e56926d",
@@ -1571,9 +1567,7 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "31767ffd6a647579",
@@ -1602,7 +1596,9 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399
+        "y": 399,
+        "w": 1532,
+        "h": 282
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1633,7 +1629,8 @@
             "f3efe80c6ffa4522",
             "74d645f646c713d2",
             "cb68f561b5023b31",
-            "8f5472ca8f017dc3"
+            "8f5472ca8f017dc3",
+            "8146f43fea5aec03"
         ],
         "x": 34,
         "y": 539,
@@ -1669,7 +1666,6 @@
         },
         "nodes": [
             "7cc6440f2cdd8a6b",
-            "7185d594dc08e2bc",
             "d7c2eec75c6063ea",
             "75c4dc9367328035",
             "abb24271518ddd9b",
@@ -1683,12 +1679,19 @@
             "70f795fb061cbfef",
             "7809c760322bf72a",
             "8ffd3e28319fc173",
-            "be9ebf6d2f7e18d0"
+            "be9ebf6d2f7e18d0",
+            "b2c0d6629b2603b7",
+            "c268e2512a503e2a",
+            "1e79cbc1d6e8f507",
+            "dbfb74297b6ecd61",
+            "2c7f54cdc45883a9",
+            "81c14eac4de9dd9d",
+            "a586df67c15b0914"
         ],
         "x": 34,
         "y": 139,
-        "w": 1232,
-        "h": 362
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "fba69dfc80829db7",
@@ -11925,7 +11928,7 @@
         "z": "eff21041cc941fef",
         "g": "31767ffd6a647579",
         "name": "Media?",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar media = states['input_boolean.living_room_entertainment_mode'].state\n\nif (media === 'on') {\n    msg.payload = 'on'\n    node.status({fill:\"green\",shape:\"dot\",text:\"Media App Running\"})\n    return[msg,null]\n} else {\n    node.status({fill:\"blue\",shape:\"dot\",text:\"Otherwise\"})\n    return[null,msg]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar media = states['input_boolean.living_room_entertainment_mode'].state\n\nif (media === 'on') {\n    msg.payload = 'on'\n    msg.alert = 'on'\n    node.status({fill:\"green\",shape:\"dot\",text:\"Media App Running\"})\n    return[msg,null]\n} else {\n    node.status({fill:\"blue\",shape:\"dot\",text:\"Otherwise\"})\n    return[null,msg]\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -11954,7 +11957,8 @@
         "name": "Doorbell to Media",
         "mode": "link",
         "links": [
-            "27b2c22907382e6d"
+            "27b2c22907382e6d",
+            "8146f43fea5aec03"
         ],
         "x": 915,
         "y": 560,
@@ -15728,6 +15732,12 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
+            },
+            {
+                "property": "alert",
+                "propertyType": "msg",
+                "value": "off",
+                "valueType": "str"
             }
         ],
         "x": 170,
@@ -15853,7 +15863,7 @@
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar currentApp = global.get('tvAppLivingRoom');\nvar lights = states['light.living_room_lights'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar lamp = flow.get(\"lampState\")\nvar payload = msg.payload\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        if (lamp === 'on') {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,msg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,null]\n        }\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar active = states['input_boolean.living_room_entertainment_mode'].state\nvar currentApp = global.get('tvAppLivingRoom');\nvar lights = states['light.living_room_lights'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar lamp = flow.get(\"lampState\")\nvar alert = msg.alert\nvar payload = msg.payload\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null,null]\n        } else if (alert === 'on' && active === 'on') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On (Alert Resume)\"});\n            return[msg,null,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        if (lamp === 'on') {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,msg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,null]\n        }\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -16418,6 +16428,12 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
+            },
+            {
+                "property": "alert",
+                "propertyType": "msg",
+                "value": "off",
+                "valueType": "str"
             }
         ],
         "x": 170,
@@ -16542,7 +16558,7 @@
         "z": "b0286fae9f2ce547",
         "g": "1cc8b382530c33d0",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.basement_studio_entertainment_control'].state\nvar quiet = states['input_boolean.studio_quiet'].state\nvar recliner = states['input_boolean.recliner_mode'].state\nvar currentApp = global.get('tvAppBasement');\nvar lights = states['light.basement_studio_lights'].state\nvar selectedScene = states['input_text.basement_studio_selected_scene'].state\nvar payload = msg.payload\nvar proceed = {}\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nif (allowed === 'on' && lights === 'on' && quiet === 'off' && recliner === 'off') {\n    proceed = 'true'\n} else {\n    proceed = 'false'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (proceed === 'true') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.basement_studio_entertainment_control'].state\nvar active = states['input_boolean.basement_studio_entertainment_mode'].state\nvar quiet = states['input_boolean.studio_quiet'].state\nvar recliner = states['input_boolean.recliner_mode'].state\nvar currentApp = global.get('tvAppBasement');\nvar lights = states['light.basement_studio_lights'].state\nvar selectedScene = states['input_text.basement_studio_selected_scene'].state\nvar alert = msg.alert\nvar payload = msg.payload\nvar proceed = {}\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nif (allowed === 'on' && lights === 'on' && quiet === 'off' && recliner === 'off') {\n    proceed = 'true'\n} else {\n    proceed = 'false'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (proceed === 'true') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null]\n        } else if (alert === 'on' && active === 'on') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On (Alert Resume)\"});\n            return[msg,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -16809,9 +16825,10 @@
         "type": "link in",
         "z": "b0286fae9f2ce547",
         "g": "ff6d8150e8d5e606",
-        "name": "Media Scenes Input",
+        "name": "Media Scenes Input - Living Room",
         "links": [
-            "e23e7b080ee3773f"
+            "e23e7b080ee3773f",
+            "a586df67c15b0914"
         ],
         "x": 265,
         "y": 280,
@@ -16887,6 +16904,24 @@
         "x": 1060,
         "y": 440,
         "wires": []
+    },
+    {
+        "id": "8146f43fea5aec03",
+        "type": "link in",
+        "z": "b0286fae9f2ce547",
+        "g": "1cc8b382530c33d0",
+        "name": "Media Scenes Input - Basement",
+        "links": [
+            "e23e7b080ee3773f",
+            "a586df67c15b0914"
+        ],
+        "x": 265,
+        "y": 800,
+        "wires": [
+            [
+                "cb285727507f50da"
+            ]
+        ]
     },
     {
         "id": "8e399b2a287a0905",
@@ -25361,55 +25396,15 @@
             }
         ],
         "x": 150,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
-                "7185d594dc08e2bc",
-                "70f795fb061cbfef"
+                "70f795fb061cbfef",
+                "b2c0d6629b2603b7"
             ],
             [
                 "1180e4c40c3ec0fa"
             ]
-        ]
-    },
-    {
-        "id": "7185d594dc08e2bc",
-        "type": "api-current-state",
-        "z": "ebd5561c4f077718",
-        "g": "4329e464360d0afa",
-        "name": "Allowed?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.audible_weather_alerts_allowed",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "allowed",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 340,
-        "y": 240,
-        "wires": [
-            [
-                "d7c2eec75c6063ea"
-            ],
-            []
         ]
     },
     {
@@ -25426,13 +25421,13 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"scene_id\":\"lightning_alert_restore\",\t    \"snapshot_entities\": [\"light.tina_lamp_side\",\"light.tina_lamp_top\",\"light.tina_desk_strip\",\"light.dining_room_lamp\",\"switch.adaptive_lighting_living_room\",\"switch.adaptive_lighting_tina_lamp\"]\t}",
+        "data": "{\t   \"scene_id\":\"lightning_alert_restore_firstfloor\",\t   \"snapshot_entities\": [\t       \"light.tina_lamp_side\",\t       \"light.tina_lamp_top\",\t       \"light.tina_desk_strip\",\t       \"light.dining_room_lamp\",\t       \"switch.adaptive_lighting_living_room\",\t       \"switch.adaptive_lighting_tina_lamp\"\t   ]\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 520,
+        "x": 540,
         "y": 240,
         "wires": [
             [
@@ -25462,7 +25457,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 730,
+        "x": 750,
         "y": 240,
         "wires": [
             [
@@ -25488,7 +25483,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 865,
+        "x": 1065,
         "y": 240,
         "wires": [
             [
@@ -25524,7 +25519,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 990,
+        "x": 1190,
         "y": 300,
         "wires": [
             []
@@ -25544,17 +25539,17 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"type\":\"red\",\t    \"duration\": msg.duration\t}",
+        "data": "{\t   \"type\":\"red\",\t   \"duration\": msg.duration\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 980,
+        "x": 1180,
         "y": 240,
         "wires": [
             [
-                "b4b80e91a535923e"
+                "81c14eac4de9dd9d"
             ]
         ]
     },
@@ -25580,7 +25575,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 980,
+        "x": 1180,
         "y": 180,
         "wires": [
             []
@@ -25606,7 +25601,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 980,
+        "x": 1180,
         "y": 360,
         "wires": [
             []
@@ -25634,7 +25629,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1160,
+        "x": 1520,
         "y": 240,
         "wires": [
             []
@@ -25661,7 +25656,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 370,
-        "y": 380,
+        "y": 440,
         "wires": [
             [
                 "7809c760322bf72a"
@@ -25735,8 +25730,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 560,
-        "y": 380,
+        "x": 580,
+        "y": 440,
         "wires": [
             [
                 "8ffd3e28319fc173"
@@ -25763,8 +25758,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 730,
-        "y": 380,
+        "x": 750,
+        "y": 440,
         "wires": [
             []
         ]
@@ -25774,10 +25769,190 @@
         "type": "comment",
         "z": "ebd5561c4f077718",
         "g": "4329e464360d0afa",
-        "name": "Add basement, and work on media scene interaction",
+        "name": "Work on media scene interaction",
         "info": "",
-        "x": 250,
-        "y": 460,
+        "x": 190,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b2c0d6629b2603b7",
+        "type": "function",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states[\"binary_sensor.audible_weather_alerts_allowed\"].state\nvar occupied = states[\"binary_sensor.basement_occupied\"].state\nvar quiet = states[\"input_boolean.studio_quiet\"].state\n\nif (allowed === 'on') {\n    if (occupied === 'on' && quiet === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Both\"})\n        return[msg,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Living Room\"})\n        return[msg,null]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    return null\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "d7c2eec75c6063ea"
+            ],
+            [
+                "c268e2512a503e2a"
+            ]
+        ],
+        "outputLabels": [
+            "Living Room",
+            "Basement"
+        ]
+    },
+    {
+        "id": "c268e2512a503e2a",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Backup Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t   \"scene_id\":\"lightning_alert_restore_basement\",\t   \"snapshot_entities\": [\t       \"light.basement_led_strip_1\",\t       \"light.basement_tall_lamp\",\t       \"light.basement_short_lamp\",\t       \"light.basement_stairwell\"\t   ]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 540,
+        "y": 360,
+        "wires": [
+            [
+                "1e79cbc1d6e8f507"
+            ]
+        ]
+    },
+    {
+        "id": "1e79cbc1d6e8f507",
+        "type": "delay",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 665,
+        "y": 360,
+        "wires": [
+            [
+                "dbfb74297b6ecd61"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "dbfb74297b6ecd61",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Red Alert",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "basement_lights_alert",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t   \"type\":\"red\",\t   \"duration\": msg.duration\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 780,
+        "y": 360,
+        "wires": [
+            [
+                "2c7f54cdc45883a9"
+            ]
+        ]
+    },
+    {
+        "id": "2c7f54cdc45883a9",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Restore Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "scene.lightning_alert_restore"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 960,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81c14eac4de9dd9d",
+        "type": "function",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Media?",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar mediaLivingRoom = states['input_boolean.living_room_entertainment_mode'].state\nvar mediaBasement = states['input_boolean.basement_studio_entertainment_mode'].state\n\nif (mediaLivingRoom === 'on' || mediaBasement === 'on') {\n    msg.payload = 'on'\n    msg.alert = 'on'\n    node.status({fill:\"green\",shape:\"dot\",text:\"Media App Running\"})\n    return[msg,null]\n} else {\n    node.status({fill:\"blue\",shape:\"dot\",text:\"Otherwise\"})\n    return[null,msg]\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 240,
+        "wires": [
+            [
+                "a586df67c15b0914"
+            ],
+            [
+                "b4b80e91a535923e"
+            ]
+        ],
+        "outputLabels": [
+            "media app running",
+            "otherwise"
+        ]
+    },
+    {
+        "id": "a586df67c15b0914",
+        "type": "link out",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "27b2c22907382e6d",
+            "8146f43fea5aec03"
+        ],
+        "x": 1455,
+        "y": 180,
         "wires": []
     },
     {
