@@ -779,9 +779,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1552,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -859,9 +857,7 @@
             "ed625c0b4f7c98ff"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2252,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -989,9 +985,7 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -1009,9 +1003,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1040,18 +1032,15 @@
             "d961ffeaea408909",
             "107f2c88924975fe",
             "ed2e0f4f214ad76c",
-            "68f00dbd3a4baca0",
             "d09061428e9c694d",
-            "d5d36b9c1bd30b29",
             "6110b45c374a5b7f",
             "e5af55b177f37c65",
             "27b2c22907382e6d",
-            "fb9f248ac42e7432",
             "f111c40459e27629"
         ],
         "x": 34,
         "y": 19,
-        "w": 1452,
+        "w": 1272,
         "h": 502
     },
     {
@@ -1077,9 +1066,7 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 322
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1198,9 +1185,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1652,
-        "h": 382
+        "y": 39
     },
     {
         "id": "8aee4d340a136bac",
@@ -1220,9 +1205,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759,
-        "w": 612,
-        "h": 202
+        "y": 759
     },
     {
         "id": "550e5b2d99316b12",
@@ -1247,9 +1230,7 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619,
-        "w": 1112,
-        "h": 282
+        "y": 619
     },
     {
         "id": "f519aff597ece351",
@@ -1368,9 +1349,7 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1386,9 +1365,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -1446,9 +1423,7 @@
             "5ba9cfc0194ef62a"
         ],
         "x": 754,
-        "y": 319,
-        "w": 672,
-        "h": 622
+        "y": 319
     },
     {
         "id": "931cc27100c9317e",
@@ -1596,9 +1571,7 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399,
-        "w": 1532,
-        "h": 282
+        "y": 399
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1629,12 +1602,11 @@
             "f3efe80c6ffa4522",
             "74d645f646c713d2",
             "cb68f561b5023b31",
-            "8f5472ca8f017dc3",
             "8146f43fea5aec03"
         ],
         "x": 34,
         "y": 539,
-        "w": 1372,
+        "w": 1192,
         "h": 502
     },
     {
@@ -1651,9 +1623,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 82
+        "y": 39
     },
     {
         "id": "4329e464360d0afa",
@@ -1689,9 +1659,7 @@
             "a586df67c15b0914"
         ],
         "x": 34,
-        "y": 139,
-        "w": 1592,
-        "h": 422
+        "y": 139
     },
     {
         "id": "fba69dfc80829db7",
@@ -16002,9 +15970,7 @@
         "x": 1180,
         "y": 300,
         "wires": [
-            [
-                "fb9f248ac42e7432"
-            ]
+            []
         ]
     },
     {
@@ -16066,34 +16032,6 @@
         "l": false
     },
     {
-        "id": "68f00dbd3a4baca0",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Reset Dining Room",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.dining_room_lamp_scenes"
-        ],
-        "data": "{\t    \"option\":\"Adaptive\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1150,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "d09061428e9c694d",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
@@ -16118,37 +16056,8 @@
         "x": 920,
         "y": 360,
         "wires": [
-            [
-                "d5d36b9c1bd30b29"
-            ]
+            []
         ]
-    },
-    {
-        "id": "d5d36b9c1bd30b29",
-        "type": "delay",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "2",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1035,
-        "y": 360,
-        "wires": [
-            [
-                "68f00dbd3a4baca0"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "6110b45c374a5b7f",
@@ -16689,9 +16598,7 @@
         "x": 1140,
         "y": 820,
         "wires": [
-            [
-                "8f5472ca8f017dc3"
-            ]
+            []
         ]
     },
     {
@@ -16836,62 +16743,6 @@
             [
                 "346379575efad516"
             ]
-        ]
-    },
-    {
-        "id": "fb9f248ac42e7432",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "ff6d8150e8d5e606",
-        "name": "Reset Living Room",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.living_room_scenes"
-        ],
-        "data": "{\t    \"option\":\"Adaptive\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1370,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8f5472ca8f017dc3",
-        "type": "api-call-service",
-        "z": "b0286fae9f2ce547",
-        "g": "1cc8b382530c33d0",
-        "name": "Reset Lights",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.basement_studio_scenes"
-        ],
-        "data": "{\t    \"option\":\"Adaptive\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1310,
-        "y": 820,
-        "wires": [
-            []
         ]
     },
     {
