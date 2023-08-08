@@ -779,7 +779,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -857,7 +859,9 @@
             "ed625c0b4f7c98ff"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2252,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1039,9 +1043,7 @@
             "f111c40459e27629"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1272,
-        "h": 502
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1605,9 +1607,7 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1192,
-        "h": 502
+        "y": 539
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -19180,7 +19180,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Hot Day?",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar temp = global.get('tempStr')\nvar heatWarning = states['binary_sensor.heat_warning'].state\nvar dayThreshold = states['input_number.master_bedroom_daytime_threshold'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar hotDay = states['input_boolean.hot_day'].state\n\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\n\nif (ac === 'on') {\n    if (temp >= dayThreshold || hotDay === 'on' || heatWarning === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Hot Day\"});\n        return[msg,null,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Normal\"});\n        return[null,msg,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No A/C\"});\n    return[null,null,msg]\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar temp = global.get('tempStr')\nvar heatWarning = states['binary_sensor.heat_warning'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar hotDay = states['input_boolean.hot_day'].state\n\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\n\nif (ac === 'on') {\n    if (hotDay === 'on' || heatWarning === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Hot Day\"});\n        return[msg,null,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Normal\"});\n        return[null,msg,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No A/C\"});\n    return[null,null,msg]\n}",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
