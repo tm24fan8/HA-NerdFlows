@@ -1039,7 +1039,9 @@
             "f111c40459e27629"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1272,
+        "h": 502
     },
     {
         "id": "208284848b13b85b",
@@ -1149,7 +1151,9 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1492,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1363,7 +1367,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659
+        "y": 659,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "265593f442864b6a",
@@ -1603,7 +1609,9 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1192,
+        "h": 502
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -21306,11 +21314,13 @@
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "script",
-        "service": "security_arm_home",
+        "domain": "alarm_control_panel",
+        "service": "alarm_arm_home",
         "areaId": [],
         "deviceId": [],
-        "entityId": [],
+        "entityId": [
+            "alarm_control_panel.nerdhome_alarm_panel"
+        ],
         "data": "",
         "dataType": "jsonata",
         "mergeContext": "",
