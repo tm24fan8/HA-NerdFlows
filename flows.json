@@ -909,7 +909,6 @@
         },
         "nodes": [
             "a4c477269b22f766",
-            "9cafa6212280b2d5",
             "5095d45c90d5304f",
             "3ae21589dd88c080",
             "93b7bee28a7e896e",
@@ -917,7 +916,9 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 1192,
+        "h": 82
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -931,13 +932,14 @@
             "f803c6af3a30eb66",
             "3bd7704103dbfc20",
             "a6234b2047ba3116",
-            "788eb0a1551db9b8",
-            "7674185d1e5ee489",
+            "603140fef1e2edaf",
             "427cc2991454bbf0",
-            "603140fef1e2edaf"
+            "7674185d1e5ee489"
         ],
         "x": 14,
-        "y": 199
+        "y": 139,
+        "w": 1072,
+        "h": 82
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1039,9 +1041,7 @@
             "f111c40459e27629"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1272,
-        "h": 502
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1107,7 +1107,6 @@
         },
         "nodes": [
             "98626a8f2b59bde3",
-            "47bc783fd78f5aa8",
             "db6d955c039873be",
             "d2fec32d385dae8c",
             "0145961e8276c53e",
@@ -1117,7 +1116,9 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 359
+        "y": 239,
+        "w": 1152,
+        "h": 242
     },
     {
         "id": "eeafd13be593ae69",
@@ -1151,9 +1152,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1367,9 +1366,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -1609,9 +1606,7 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1192,
-        "h": 502
+        "y": 539
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -1772,28 +1767,6 @@
             {
                 "property": "icon",
                 "value": "mdi:bullhorn"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
-    },
-    {
-        "id": "1c6757ac2fa1a199",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Reset Alexa Message",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Reset Alexa Message"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:backspace-reverse"
             },
             {
                 "property": "device_class",
@@ -2086,28 +2059,6 @@
         ]
     },
     {
-        "id": "7df85e301aad3a3d",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Reset Report",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Reset Report"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:bug"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
-    },
-    {
         "id": "fbc65f8185932b5f",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
@@ -2243,28 +2194,6 @@
             {
                 "property": "icon",
                 "value": "mdi:message-alert"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ]
-    },
-    {
-        "id": "56690d428d1d2022",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "name": "Reset Text Notification",
-        "version": 6,
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Reset Text Notification"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:backspace-reverse"
             },
             {
                 "property": "device_class",
@@ -24555,44 +24484,6 @@
         ]
     },
     {
-        "id": "9cafa6212280b2d5",
-        "type": "ha-button",
-        "z": "ee67610b4a0578d2",
-        "g": "477e752fcd2e2a19",
-        "name": "Reset Button",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "1c6757ac2fa1a199",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "Words go here and stuff",
-                "valueType": "str"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "Living Room",
-                "valueType": "str"
-            },
-            {
-                "property": "voice",
-                "propertyType": "msg",
-                "value": "jarvis_voice",
-                "valueType": "global"
-            }
-        ],
-        "x": 110,
-        "y": 140,
-        "wires": [
-            [
-                "5095d45c90d5304f"
-            ]
-        ]
-    },
-    {
         "id": "5095d45c90d5304f",
         "type": "api-call-service",
         "z": "ee67610b4a0578d2",
@@ -24608,14 +24499,14 @@
         "entityId": [
             "input_text.tts_message"
         ],
-        "data": "{\t    \"value\": msg.payload\t}",
+        "data": "{\t    \"value\": reset_message\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 300,
-        "y": 140,
+        "x": 700,
+        "y": 80,
         "wires": [
             [
                 "3ae21589dd88c080"
@@ -24638,14 +24529,14 @@
         "entityId": [
             "input_select.tts_devices"
         ],
-        "data": "{\t    \"option\": msg.topic\t}",
+        "data": "{\t    \"option\": reset_who\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 510,
-        "y": 140,
+        "x": 910,
+        "y": 80,
         "wires": [
             [
                 "b2bc83c9195efe0f"
@@ -24661,7 +24552,9 @@
         "x": 500,
         "y": 80,
         "wires": [
-            []
+            [
+                "5095d45c90d5304f"
+            ]
         ]
     },
     {
@@ -24680,14 +24573,14 @@
         "entityId": [
             "input_select.announcement_voice"
         ],
-        "data": "{\t    \"option\": msg.voice\t}",
+        "data": "{\t    \"option\": reset_voice\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 710,
-        "y": 140,
+        "x": 1110,
+        "y": 80,
         "wires": [
             []
         ]
@@ -24704,7 +24597,7 @@
         "entityConfig": "675dd216a61c575b",
         "outputProperties": [],
         "x": 110,
-        "y": 240,
+        "y": 180,
         "wires": [
             [
                 "a6234b2047ba3116"
@@ -24723,8 +24616,8 @@
         "syntax": "mustache",
         "template": "{\n    \"content\": \"{{text}}\",\n    \"project_id\": 2285967948,\n    \"section_id\": {{type}}\n}",
         "output": "str",
-        "x": 460,
-        "y": 240,
+        "x": 820,
+        "y": 180,
         "wires": [
             [
                 "603140fef1e2edaf"
@@ -24737,110 +24630,20 @@
         "z": "ee67610b4a0578d2",
         "g": "50e4d951ee7b3e54",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar text = states['input_text.report_system'].state\nvar type = states['input_select.report_type'].state\n\nmsg.text = text\n\nif (type === \"New Idea\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"New Idea\"});\n    msg.type = \"114199257\"\n} else if (type === \"Bug Report\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Bug Report\"});\n    msg.type = \"94865633\"\n}\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar text = states['input_text.report_system'].state\nvar type = states['input_select.report_type'].state\nvar resetText = 'Type your report here'\nvar resetType = 'Bug Report'\n\nmsg.text = text\n\nmsg.reset_text = resetText\nmsg.reset_type = resetType\n\nif (type === \"New Idea\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"New Idea\"});\n    msg.type = \"114199257\"\n} else if (type === \"Bug Report\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Bug Report\"});\n    msg.type = \"94865633\"\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 290,
-        "y": 240,
-        "wires": [
-            [
-                "3bd7704103dbfc20"
-            ]
-        ],
-        "icon": "node-red-contrib-cpu/cpu.png"
-    },
-    {
-        "id": "788eb0a1551db9b8",
-        "type": "ha-button",
-        "z": "ee67610b4a0578d2",
-        "g": "50e4d951ee7b3e54",
-        "name": "Reset Report",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "7df85e301aad3a3d",
-        "outputProperties": [
-            {
-                "property": "text",
-                "propertyType": "msg",
-                "value": "Type your report here",
-                "valueType": "str"
-            },
-            {
-                "property": "type",
-                "propertyType": "msg",
-                "value": "Bug Report",
-                "valueType": "str"
-            }
-        ],
-        "x": 110,
-        "y": 300,
+        "y": 180,
         "wires": [
             [
                 "7674185d1e5ee489"
             ]
-        ]
-    },
-    {
-        "id": "7674185d1e5ee489",
-        "type": "api-call-service",
-        "z": "ee67610b4a0578d2",
-        "g": "50e4d951ee7b3e54",
-        "name": "Reset Text",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_text",
-        "service": "set_value",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_text.report_system"
         ],
-        "data": "{\t    \"value\": msg.text\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 290,
-        "y": 300,
-        "wires": [
-            [
-                "427cc2991454bbf0"
-            ]
-        ]
-    },
-    {
-        "id": "427cc2991454bbf0",
-        "type": "api-call-service",
-        "z": "ee67610b4a0578d2",
-        "g": "50e4d951ee7b3e54",
-        "name": "Reset Type",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.report_type"
-        ],
-        "data": "{\t    \"option\": msg.type\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 470,
-        "y": 300,
-        "wires": [
-            []
-        ]
+        "icon": "node-red-contrib-cpu/cpu.png"
     },
     {
         "id": "98626a8f2b59bde3",
@@ -24873,48 +24676,10 @@
             }
         ],
         "x": 120,
-        "y": 440,
+        "y": 360,
         "wires": [
             [
                 "f44427c5a493c428"
-            ]
-        ]
-    },
-    {
-        "id": "47bc783fd78f5aa8",
-        "type": "ha-button",
-        "z": "ee67610b4a0578d2",
-        "g": "5595964c8367c984",
-        "name": "Reset Text Notification",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "56690d428d1d2022",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 140,
-        "y": 540,
-        "wires": [
-            [
-                "d2fec32d385dae8c"
             ]
         ]
     },
@@ -24939,7 +24704,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 490,
-        "y": 400,
+        "y": 280,
         "wires": [
             []
         ]
@@ -24960,14 +24725,14 @@
         "entityId": [
             "input_text.text_notification_title"
         ],
-        "data": "{\t    \"value\":\"Type your title here\"\t}",
+        "data": "{\t    \"value\": title\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 350,
-        "y": 540,
+        "x": 490,
+        "y": 440,
         "wires": [
             [
                 "0145961e8276c53e"
@@ -24990,14 +24755,14 @@
         "entityId": [
             "input_text.text_notification"
         ],
-        "data": "{\t    \"value\":\"Type your notification here\"\t}",
+        "data": "{\t    \"value\": body\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 530,
-        "y": 540,
+        "x": 670,
+        "y": 440,
         "wires": [
             [
                 "fd623c46a558a01a"
@@ -25021,14 +24786,14 @@
             "input_select.select_phones",
             "input_select.select_tvs"
         ],
-        "data": "{\t    \"option\":\"None\"\t}",
+        "data": "{\t    \"option\": options\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 720,
-        "y": 540,
+        "x": 860,
+        "y": 440,
         "wires": [
             [
                 "6b039ef7895476e2"
@@ -25056,7 +24821,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 480,
-        "y": 480,
+        "y": 360,
         "wires": [
             []
         ]
@@ -25077,14 +24842,14 @@
         "entityId": [
             "input_select.text_notification_priority_level"
         ],
-        "data": "{\t    \"option\":\"Normal\"\t}",
+        "data": "{\t    \"option\": priority\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 920,
-        "y": 540,
+        "x": 1060,
+        "y": 440,
         "wires": [
             []
         ]
@@ -25095,7 +24860,7 @@
         "z": "ee67610b4a0578d2",
         "g": "477e752fcd2e2a19",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar message = states['input_text.tts_message'].state\nvar who = states['input_select.tts_devices'].state\nvar voice = states['input_select.announcement_voice'].state\n\nmsg.payload = message\nmsg.topic = who\nmsg.voice = voice\n\nnode.status({fill:\"green\",shape:\"dot\",text:voice + \" speaking in \" + who});\n\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar message = states['input_text.tts_message'].state\nvar who = states['input_select.tts_devices'].state\nvar voice = states['input_select.announcement_voice'].state\nconst resetMessage = 'Words go here and stuff'\nconst resetWho = 'Living Room'\nconst resetVoice = global.get(\"jarvis_voice\")\n\nmsg.payload = message\nmsg.topic = who\nmsg.voice = voice\n\nmsg.reset_message = resetMessage\nmsg.reset_who = resetWho\nmsg.reset_voice = resetVoice\n\nnode.status({fill:\"green\",shape:\"dot\",text:voice + \" speaking in \" + who});\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -25116,21 +24881,29 @@
         "z": "ee67610b4a0578d2",
         "g": "5595964c8367c984",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar title = states['input_text.text_notification_title'].state\nvar message = states['input_text.text_notification'].state\nvar priority = states['input_select.text_notification_priority_level'].state\nvar phones = states['input_select.select_phones'].state.toLowerCase()\nvar tvs = states['input_select.select_tvs'].state.toLowerCase()\n\nvar phoneMsg = {\n    \"title\": title,\n    \"payload\": message,\n    \"priority\": priority,\n    \"phones\": phones\n}\nvar tvsMsg = {\n    \"title\": title,\n    \"payload\": message,\n    \"priority\": priority,\n    \"tvs\": tvs\n}\n\nif (phones != 'none' && tvs != 'none') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Phones and TVs\"});\n    return[phoneMsg,tvsMsg]\n} else if (phones === 'none' && tvs != 'none') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"TVs Only\"});\n    return[null,tvsMsg]\n} else if (phones != 'none' && tvs === 'none') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Phones Only\"});\n    return[phoneMsg,null]\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No devices selected\"});\n    return null\n}",
-        "outputs": 2,
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar title = states['input_text.text_notification_title'].state\nvar message = states['input_text.text_notification'].state\nvar priority = states['input_select.text_notification_priority_level'].state\nvar phones = states['input_select.select_phones'].state.toLowerCase()\nvar tvs = states['input_select.select_tvs'].state.toLowerCase()\n\nvar phoneMsg = {\n    \"title\": title,\n    \"payload\": message,\n    \"priority\": priority,\n    \"phones\": phones\n}\nvar tvsMsg = {\n    \"title\": title,\n    \"payload\": message,\n    \"priority\": priority,\n    \"tvs\": tvs\n}\n\nvar resetMsg = {\n    \"title\":\"Type your title here\",\n    \"body\":\"Type your notification here\",\n    \"options\":\"None\",\n    \"priority\":\"Normal\"\n}\n\nif (phones != 'none' && tvs != 'none') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Phones and TVs\"});\n    return[phoneMsg,tvsMsg,resetMsg]\n} else if (phones === 'none' && tvs != 'none') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"TVs Only\"});\n    return[null,tvsMsg,resetMsg]\n} else if (phones != 'none' && tvs === 'none') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Phones Only\"});\n    return[phoneMsg,null,resetMsg]\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No devices selected\"});\n    return null\n}",
+        "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 440,
+        "y": 360,
         "wires": [
             [
                 "db6d955c039873be"
             ],
             [
                 "c52cae79eb97bcc0"
+            ],
+            [
+                "d2fec32d385dae8c"
             ]
+        ],
+        "outputLabels": [
+            "Phones",
+            "TVs",
+            "Reset"
         ],
         "icon": "node-red-contrib-cpu/cpu.png"
     },
@@ -25141,10 +24914,70 @@
         "g": "50e4d951ee7b3e54",
         "name": "",
         "token": "81cb9d95d14a3e5a",
-        "x": 630,
-        "y": 240,
+        "x": 990,
+        "y": 180,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "7674185d1e5ee489",
+        "type": "api-call-service",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "Reset Text",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_text",
+        "service": "set_value",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_text.report_system"
+        ],
+        "data": "{\t    \"value\": reset_text\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "427cc2991454bbf0"
+            ]
+        ]
+    },
+    {
+        "id": "427cc2991454bbf0",
+        "type": "api-call-service",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "Reset Type",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.report_type"
+        ],
+        "data": "{\t    \"option\": reset_type\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "3bd7704103dbfc20"
+            ]
         ]
     },
     {
