@@ -916,7 +916,9 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 1192,
+        "h": 82
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -935,7 +937,9 @@
             "7674185d1e5ee489"
         ],
         "x": 14,
-        "y": 139
+        "y": 139,
+        "w": 1072,
+        "h": 82
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1062,9 +1066,7 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 322
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1114,7 +1116,9 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 239
+        "y": 239,
+        "w": 1152,
+        "h": 242
     },
     {
         "id": "eeafd13be593ae69",
@@ -1182,7 +1186,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "8aee4d340a136bac",
@@ -1227,9 +1233,7 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619,
-        "w": 1112,
-        "h": 282
+        "y": 619
     },
     {
         "id": "f519aff597ece351",
@@ -1260,7 +1264,9 @@
             "3463c4f2bf6388fe"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 682
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1284,7 +1290,9 @@
             "0be3c318e9e6df0a"
         ],
         "x": 64,
-        "y": 759
+        "y": 759,
+        "w": 1022,
+        "h": 162
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1364,7 +1372,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659
+        "y": 659,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "265593f442864b6a",
@@ -1482,7 +1492,9 @@
             "99c141f21de4feda"
         ],
         "x": 74,
-        "y": 39
+        "y": 39,
+        "w": 1132,
+        "h": 262
     },
     {
         "id": "a6de35af12739885",
@@ -1504,7 +1516,9 @@
             "724f186878227dad"
         ],
         "x": 74,
-        "y": 339
+        "y": 339,
+        "w": 1132,
+        "h": 202
     },
     {
         "id": "0804d9edeca1c9fa",
@@ -1525,7 +1539,9 @@
             "4523045453de0a33"
         ],
         "x": 74,
-        "y": 579
+        "y": 579,
+        "w": 1092,
+        "h": 202
     },
     {
         "id": "385f03591bc34bcc",
@@ -1620,7 +1636,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1656,7 +1674,9 @@
             "a586df67c15b0914"
         ],
         "x": 34,
-        "y": 139
+        "y": 139,
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "fba69dfc80829db7",
@@ -3515,7 +3535,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\": msg.topic,\t    \"message\": msg.payload,\t    \"voice\": msg.voice,\t    \"type\": msg.type\t}",
+        "data": "{\t    \"who\": topic,\t    \"message\": payload,\t    \"voice\": voice,\t    \"type\": type\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -3579,7 +3599,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"group_name\": msg.topic,\t    \"scene_name\": msg.payload,\t    \"dynamic\": \"true\"\t}",
+        "data": "{\t    \"group_name\": topic,\t    \"scene_name\": payload,\t    \"dynamic\": \"true\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -3625,7 +3645,7 @@
         "entityId": [
             "input_text.{{topic}}_selected_scene"
         ],
-        "data": "{\t    \"value\": msg.payload\t}",
+        "data": "{\t    \"value\": payload\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -3833,7 +3853,7 @@
         "entityId": [
             "switch.adaptive_lighting_{{topic}}"
         ],
-        "data": "{\t    \"adapt_brightness\" : msg.brightness,\t    \"adapt_color\" : msg.color\t}",
+        "data": "{\t    \"adapt_brightness\" : brightness,\t    \"adapt_color\" : color\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -4194,7 +4214,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\": msg.dest,\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\",\t        \"color\": \"red\"\t    }\t}",
+        "data": "{\t    \"who\": dest,\t    \"title\": topic,\t    \"message\": payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\",\t        \"color\": \"red\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -5109,7 +5129,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t   \"who\":\"kallen\",\t   \"message\": msg.payload,\t   \"title\": msg.topic,\t   \"type\": \"normal\",\t   \"tag\": \"kallen-timer-finished\"\t}",
+        "data": "{\t   \"who\":\"kallen\",\t   \"message\": payload,\t   \"title\": topic,\t   \"type\": \"normal\",\t   \"tag\": \"kallen-timer-finished\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -7174,7 +7194,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"type\": \"normal\",\t    \"tag\": \"sunset-lights\"\t}",
+        "data": "{\t    \"who\":\"all\",\t    \"title\": topic,\t    \"message\": payload,\t    \"type\": \"normal\",\t    \"tag\": \"sunset-lights\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -7199,7 +7219,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\"\t    }\t}",
+        "data": "{\t    \"who\":\"all\",\t    \"title\": topic,\t    \"message\": payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\"\t    }\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -11207,7 +11227,7 @@
         "entityId": [
             "timer.downstairs_bathroom_lights_timer"
         ],
-        "data": "{    \t    \"duration\": msg.duration\t}",
+        "data": "{    \t    \"duration\": duration\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -13349,7 +13369,7 @@
         "entityId": [
             "timer.upstairs_bathroom_motion_timer"
         ],
-        "data": "{    \t    \"duration\": msg.duration\t}",
+        "data": "{    \t    \"duration\": duration\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -14410,7 +14430,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"title\":\"Basement On\",\t    \"message\": \"Should I turn on Kallen's computer?\",\t    \"tag\":\"kallen_PC\",\t    \"who\": msg.user,\t    \"type\":\"alert\",\t    \"actions\": [\t        {\t            \"action\": \"KALLEN_PC_YES\",\t            \"title\": \"Yes\",\t            \"icon\": \"mdi:thumb-up\"\t        },\t        {\t            \"action\": \"KALLEN_PC_NO\",\t            \"title\": \"No\",\t            \"icon\": \"mdi:thumb-down\"\t        }\t    ]\t\t}",
+        "data": "{\t    \"title\":\"Basement On\",\t    \"message\": \"Should I turn on Kallen's computer?\",\t    \"tag\":\"kallen_PC\",\t    \"who\": user,\t    \"type\":\"alert\",\t    \"actions\": [\t        {\t            \"action\": \"KALLEN_PC_YES\",\t            \"title\": \"Yes\",\t            \"icon\": \"mdi:thumb-up\"\t        },\t        {\t            \"action\": \"KALLEN_PC_NO\",\t            \"title\": \"No\",\t            \"icon\": \"mdi:thumb-down\"\t        }\t    ]\t\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -15072,7 +15092,7 @@
         "entityId": [
             "timer.front_porch_motion_timer"
         ],
-        "data": "{\t    \"duration\": msg.duration\t}",
+        "data": "{\t    \"duration\": duration\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -16946,7 +16966,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"temperature\": msg.nighttemp\t}",
+        "data": "{\t    \"temperature\": nighttemp\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -17066,7 +17086,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"temperature\": msg.daytemp\t}",
+        "data": "{\t    \"temperature\": daytemp\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -17199,7 +17219,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"preset_mode\": msg.preset\t}",
+        "data": "{\t    \"preset_mode\": preset\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -17704,7 +17724,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"temperature\": msg.bedtemp\t}",
+        "data": "{\t    \"temperature\": bedtemp\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -17896,7 +17916,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"temperature\": msg.set\t}",
+        "data": "{\t    \"temperature\": set\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -18283,7 +18303,7 @@
         "entityId": [
             "light.kallen_bedroom_lights"
         ],
-        "data": "{\t    \"brightness_pct\": msg.brightness,\t    \"transition\": msg.fade_night\t}",
+        "data": "{\t    \"brightness_pct\": brightness,\t    \"transition\": fade_night\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -18343,7 +18363,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"type\": \"normal\",\t    \"tag\": \"master-bedroom-climate\"\t}",
+        "data": "{\t    \"who\":\"all\",\t    \"title\": topic,\t    \"message\": payload,\t    \"type\": \"normal\",\t    \"tag\": \"master-bedroom-climate\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -18913,7 +18933,7 @@
         "entityId": [
             "media_player.kallen_bedroom_speaker"
         ],
-        "data": "{\t    \"volume_level\": msg.volume\t}",
+        "data": "{\t    \"volume_level\": volume\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -19055,7 +19075,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"temperature\": msg.nighttemp\t}",
+        "data": "{\t    \"temperature\": nighttemp\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -19265,7 +19285,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"hvac_mode\": msg.acmode\t}",
+        "data": "{\t    \"hvac_mode\": acmode\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -19293,7 +19313,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"temperature\": msg.nighttemp\t}",
+        "data": "{\t    \"temperature\": nighttemp\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -19429,7 +19449,7 @@
         "entityId": [
             "input_datetime.kallen_awake_at"
         ],
-        "data": "{\t    \"time\": msg.waketime\t}",
+        "data": "{\t    \"time\": waketime\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -19457,7 +19477,7 @@
         "entityId": [
             "input_datetime.kallen_asleep_at"
         ],
-        "data": "{\t    \"time\": msg.sleeptime\t}",
+        "data": "{\t    \"time\": sleeptime\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -19657,7 +19677,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"hvac_mode\": msg.hvac\t}",
+        "data": "{\t    \"hvac_mode\": hvac\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -19687,7 +19707,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"preset_mode\": msg.eco\t}",
+        "data": "{\t    \"preset_mode\": eco\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -19717,7 +19737,7 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"temperature\": msg.set\t}",
+        "data": "{\t    \"temperature\": set\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -19745,7 +19765,7 @@
         "entityId": [
             "timer.shower_mode_cooldown"
         ],
-        "data": "{\t    \"duration\": msg.duration\t}",
+        "data": "{\t    \"duration\": duration\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -21847,7 +21867,7 @@
         "y": 180,
         "wires": [
             [
-                "708843ea29ee6626"
+                "bb77b36dd4d9cc96"
             ],
             []
         ],
@@ -21864,23 +21884,23 @@
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "script",
-        "service": "security_disarm",
+        "domain": "alarm_control_panel",
+        "service": "alarm_disarm",
         "areaId": [],
         "deviceId": [],
-        "entityId": [],
+        "entityId": [
+            "alarm_control_panel.nerdhome_alarm_panel"
+        ],
         "data": "{\t    \"silent\": 1\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 740,
+        "x": 980,
         "y": 180,
         "wires": [
-            [
-                "bb77b36dd4d9cc96"
-            ]
+            []
         ]
     },
     {
@@ -21905,10 +21925,12 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 960,
+        "x": 760,
         "y": 180,
         "wires": [
-            []
+            [
+                "708843ea29ee6626"
+            ]
         ]
     },
     {
@@ -22046,7 +22068,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"text\":\"<voice name='Joanna'>What activity are we timing?</voice>\",\t    \"event_id\":\"actionable_notification_kallen_timer_activity\",\t    \"alexa_device\": msg.who\t}",
+        "data": "{\t    \"text\":\"<voice name='Joanna'>What activity are we timing?</voice>\",\t    \"event_id\":\"actionable_notification_kallen_timer_activity\",\t    \"alexa_device\": who\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -22162,7 +22184,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"text\":\"<voice name='Joanna'>How long would you like the timer set for?</voice>\",\t    \"event_id\":\"actionable_notification_kallen_timer_duration\",\t    \"alexa_device\": msg.who\t}",
+        "data": "{\t    \"text\":\"<voice name='Joanna'>How long would you like the timer set for?</voice>\",\t    \"event_id\":\"actionable_notification_kallen_timer_duration\",\t    \"alexa_device\": who\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -22283,7 +22305,7 @@
         "entityId": [
             "input_select.kallen_activities"
         ],
-        "data": "{\t    \"option\": msg.payload.event.event_response\t}",
+        "data": "{\t    \"option\": payload.event.event_response\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -22312,7 +22334,7 @@
         "entityId": [
             "input_number.kallen_activity_duration"
         ],
-        "data": "{\t    \"value\": msg.duration\t}",
+        "data": "{\t    \"value\": duration\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -22339,7 +22361,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"text\":\"<voice name='Joanna'>Which room would you like the timer to run in?</voice>\",\t    \"event_id\":\"actionable_notification_kallen_timer_location\",\t    \"alexa_device\": msg.who\t}",
+        "data": "{\t    \"text\":\"<voice name='Joanna'>Which room would you like the timer to run in?</voice>\",\t    \"event_id\":\"actionable_notification_kallen_timer_location\",\t    \"alexa_device\": who\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -22412,7 +22434,7 @@
         "entityId": [
             "input_select.kallen_activity_room"
         ],
-        "data": "{\t    \"option\": msg.payload.event.event_response\t}",
+        "data": "{\t    \"option\": payload.event.event_response\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -22801,7 +22823,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\": msg.who\t}",
+        "data": "{\t    \"who\": who\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -22826,7 +22848,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\":\"kallen_bedroom\",\t    \"message\": msg.payload\t}",
+        "data": "{\t    \"who\":\"kallen_bedroom\",\t    \"message\": payload\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -24290,7 +24312,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\": msg.user,\t    \"type\":\"alert\",\t    \"message\":\"clear_notification\",\t    \"tag\":\"kallen_PC\"\t}",
+        "data": "{\t    \"who\": user,\t    \"type\":\"alert\",\t    \"message\":\"clear_notification\",\t    \"tag\":\"kallen_PC\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -24442,7 +24464,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"who\": msg.user,\t    \"type\":\"alert\",\t    \"message\":\"clear_notification\",\t    \"tag\":\"tony-pc-shutdown\"\t}",
+        "data": "{\t    \"who\": user,\t    \"type\":\"alert\",\t    \"message\":\"clear_notification\",\t    \"tag\":\"tony-pc-shutdown\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -25236,7 +25258,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t   \"type\":\"red\",\t   \"duration\": msg.duration\t}",
+        "data": "{\t   \"type\":\"red\",\t   \"duration\": duration\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -25374,7 +25396,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t    \"type\":\"alert\",\t    \"who\":\"all\",\t    \"title\":\"Lightning Detected!\",\t    \"message\": msg.notification,\t    \"tag\":\"lightning-warning\"\t}",
+        "data": "{\t    \"type\":\"alert\",\t    \"who\":\"all\",\t    \"title\":\"Lightning Detected!\",\t    \"message\": notification,\t    \"tag\":\"lightning-warning\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -25568,7 +25590,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t   \"type\":\"red\",\t   \"duration\": msg.duration\t}",
+        "data": "{\t   \"type\":\"red\",\t   \"duration\": duration\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
