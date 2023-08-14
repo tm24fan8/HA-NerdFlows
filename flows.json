@@ -916,9 +916,7 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1192,
-        "h": 82
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -937,9 +935,7 @@
             "7674185d1e5ee489"
         ],
         "x": 14,
-        "y": 139,
-        "w": 1072,
-        "h": 82
+        "y": 139
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1116,9 +1112,7 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 239,
-        "w": 1152,
-        "h": 242
+        "y": 239
     },
     {
         "id": "eeafd13be593ae69",
@@ -1186,9 +1180,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1652,
-        "h": 382
+        "y": 39
     },
     {
         "id": "8aee4d340a136bac",
@@ -1264,9 +1256,7 @@
             "3463c4f2bf6388fe"
         ],
         "x": 54,
-        "y": 39,
-        "w": 852,
-        "h": 682
+        "y": 39
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1290,9 +1280,7 @@
             "0be3c318e9e6df0a"
         ],
         "x": 64,
-        "y": 759,
-        "w": 1022,
-        "h": 162
+        "y": 759
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1636,9 +1624,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 82
+        "y": 39
     },
     {
         "id": "4329e464360d0afa",
@@ -1674,9 +1660,7 @@
             "a586df67c15b0914"
         ],
         "x": 34,
-        "y": 139,
-        "w": 1592,
-        "h": 422
+        "y": 139
     },
     {
         "id": "fba69dfc80829db7",
@@ -20991,83 +20975,13 @@
         "y": 300,
         "wires": [
             [
-                "f30486c8e11db0e4",
-                "582a6e14b94a5a6d",
                 "028351e8c4e2faf5",
-                "f935318d262547d5",
                 "60ce44747cf3e507",
                 "50e351d1ee6108b3",
+                "1187fea902cbb7a9",
                 "33773b3aaa551b79",
-                "1187fea902cbb7a9"
-            ]
-        ]
-    },
-    {
-        "id": "f30486c8e11db0e4",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Sleep Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.basement_echo_dot_do_not_disturb_switch",
-            "switch.living_room_echo_dot_do_not_disturb_switch",
-            "switch.master_bedroom_echo_dot_do_not_disturb_switch"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 310,
-        "y": 300,
-        "wires": [
-            [
-                "2916b53a91f17ca1"
-            ]
-        ]
-    },
-    {
-        "id": "f84c9f54acbdafd0",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Lights Out",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_off",
-        "areaId": [
-            "basement_studio",
-            "dining_room",
-            "downstairs_bathroom",
-            "furnace_room",
-            "kallen_bedroom",
-            "living_room",
-            "master_bedroom",
-            "mud_room",
-            "emma_bedroom",
-            "upstairs_hallway"
-        ],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 690,
-        "y": 340,
-        "wires": [
-            [
-                "272706b066068cf8"
+                "f30486c8e11db0e4",
+                "9bd4665845af0545"
             ]
         ]
     },
@@ -21091,7 +21005,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 640,
-        "y": 500,
+        "y": 460,
         "wires": [
             []
         ]
@@ -21109,33 +21023,6 @@
             [
                 "b83b6e027c21a133"
             ]
-        ]
-    },
-    {
-        "id": "582a6e14b94a5a6d",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Basement Fan Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "fan",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "fan.basement_fan"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 330,
-        "y": 440,
-        "wires": [
-            []
         ]
     },
     {
@@ -21243,7 +21130,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1440,
+        "x": 540,
         "y": 300,
         "wires": [
             [
@@ -21273,7 +21160,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1630,
+        "x": 730,
         "y": 300,
         "wires": [
             []
@@ -21378,111 +21265,6 @@
         "wires": []
     },
     {
-        "id": "fcd7dc43a7618a0a",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Bathroom Nightlight",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.upstairs_bathroom_scenes"
-        ],
-        "data": "{\t    \"option\":\"Single Nightlight\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 610,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f935318d262547d5",
-        "type": "api-current-state",
-        "z": "5c4ac37140a54ac9",
-        "name": "Kallen Overnight?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.kallen_overnight",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 330,
-        "y": 620,
-        "wires": [
-            [
-                "26454728352212e8"
-            ],
-            [
-                "fcd7dc43a7618a0a"
-            ]
-        ],
-        "outputLabels": [
-            "On",
-            "Off"
-        ]
-    },
-    {
-        "id": "26454728352212e8",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Bathroom Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "light.upstairs_bathroom_lights"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 590,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "60ce44747cf3e507",
         "type": "link out",
         "z": "5c4ac37140a54ac9",
@@ -21577,148 +21359,6 @@
         "x": 530,
         "y": 860,
         "wires": []
-    },
-    {
-        "id": "2916b53a91f17ca1",
-        "type": "api-current-state",
-        "z": "5c4ac37140a54ac9",
-        "name": "Guest Mode?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.guest_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "guest",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 500,
-        "y": 300,
-        "wires": [
-            [
-                "8a473793e8acc9db"
-            ],
-            [
-                "f84c9f54acbdafd0"
-            ]
-        ]
-    },
-    {
-        "id": "8a473793e8acc9db",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Lights Out",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_off",
-        "areaId": [
-            "basement_studio",
-            "dining_room",
-            "downstairs_bathroom",
-            "emma_bedroom",
-            "furnace_room",
-            "kallen_bedroom",
-            "living_room",
-            "master_bedroom"
-        ],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 689,
-        "y": 277,
-        "wires": [
-            [
-                "2dba21a1c020e079"
-            ]
-        ]
-    },
-    {
-        "id": "2dba21a1c020e079",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Nightlights",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.mud_room_scenes",
-            "input_select.upstairs_hallway_scenes"
-        ],
-        "data": "{\t    \"option\":\"Nightlight\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 870,
-        "y": 280,
-        "wires": [
-            [
-                "272706b066068cf8"
-            ]
-        ]
-    },
-    {
-        "id": "9cbe2333acb0e1f5",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Desk Lights Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.tina_desk_lights"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1240,
-        "y": 300,
-        "wires": [
-            [
-                "09c7a61f7a4c4d05"
-            ]
-        ]
     },
     {
         "id": "c18d27a9438bfa08",
@@ -21964,7 +21604,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 360,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "d9e39b8ebb86c941"
@@ -21974,35 +21614,6 @@
         "outputLabels": [
             "Off",
             "On"
-        ]
-    },
-    {
-        "id": "33773b3aaa551b79",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Goodnight Switch",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.goodnight",
-            "input_boolean.master_bedroom_sleeping",
-            "input_boolean.night_mode"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 330,
-        "y": 560,
-        "wires": [
-            []
         ]
     },
     {
@@ -22618,38 +22229,98 @@
         "outputProperties": [],
         "queue": "none",
         "x": 330,
-        "y": 680,
+        "y": 580,
         "wires": [
             []
         ]
     },
     {
-        "id": "272706b066068cf8",
+        "id": "33773b3aaa551b79",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
-        "name": "Stairwell",
+        "name": "Goodnight Switch",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "light",
+        "domain": "input_boolean",
         "service": "turn_on",
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "light.stairwell_led_strip"
+            "input_boolean.goodnight",
+            "input_boolean.master_bedroom_sleeping",
+            "input_boolean.night_mode"
         ],
-        "data": "{\t    \"color_temp_kelvin\": 2000,\t    \"brightness\": 50\t}",
+        "data": "",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1060,
+        "x": 330,
         "y": 300,
         "wires": [
             [
-                "9cbe2333acb0e1f5"
+                "09c7a61f7a4c4d05"
             ]
+        ]
+    },
+    {
+        "id": "f30486c8e11db0e4",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Do Not Disturb",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.basement_echo_dot_do_not_disturb_switch",
+            "switch.living_room_echo_dot_do_not_disturb_switch",
+            "switch.master_bedroom_echo_dot_do_not_disturb_switch"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 320,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9bd4665845af0545",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Goodnight Scripts",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "script.goodnight_in_basement",
+            "script.goodnight_on_first_floor",
+            "script.goodnight_on_second_floor"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 330,
+        "y": 640,
+        "wires": [
+            []
         ]
     },
     {
