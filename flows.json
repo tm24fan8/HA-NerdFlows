@@ -22308,7 +22308,9 @@
         "x": 320,
         "y": 520,
         "wires": [
-            []
+            [
+                "20b3699a56b0e901"
+            ]
         ]
     },
     {
@@ -22365,6 +22367,33 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "20b3699a56b0e901",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Turn off Studio Quiet",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.studio_quiet"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 540,
+        "y": 520,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "6a37c598ccfec0c7",
