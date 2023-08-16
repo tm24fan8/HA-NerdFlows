@@ -779,7 +779,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -857,7 +859,9 @@
             "ed625c0b4f7c98ff"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2252,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1360,9 +1364,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -18932,7 +18934,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "media_player.kallen_bedroom_speaker"
+            "media_player.kallen_bedroom_google_speaker"
         ],
         "data": "{\t    \"volume_level\": volume\t}",
         "dataType": "jsonata",
