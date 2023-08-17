@@ -916,7 +916,9 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 1192,
+        "h": 82
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -932,10 +934,14 @@
             "a6234b2047ba3116",
             "603140fef1e2edaf",
             "427cc2991454bbf0",
-            "7674185d1e5ee489"
+            "7674185d1e5ee489",
+            "9e43408e18883dfe",
+            "0107164ee7ff63d6"
         ],
         "x": 14,
-        "y": 139
+        "y": 139,
+        "w": 1072,
+        "h": 142
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1112,7 +1118,9 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 239
+        "y": 299,
+        "w": 1152,
+        "h": 242
     },
     {
         "id": "eeafd13be593ae69",
@@ -24397,7 +24405,7 @@
         "z": "ee67610b4a0578d2",
         "g": "50e4d951ee7b3e54",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar text = states['input_text.report_system'].state\nvar type = states['input_select.report_type'].state\nvar resetText = 'Type your report here'\nvar resetType = 'Bug Report'\n\nmsg.text = text\n\nmsg.reset_text = resetText\nmsg.reset_type = resetType\n\nif (type === \"New Idea\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"New Idea\"});\n    msg.type = \"114199257\"\n} else if (type === \"Bug Report\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Bug Report\"});\n    msg.type = \"94865633\"\n}\nreturn msg;",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar text = states['input_text.report_system'].state\nvar type = states['input_select.report_type'].state\nvar resetText = 'Type your report here'\nvar resetType = 'Bug Report'\n\nmsg.text = text\nmsg.typename = type\n\nmsg.reset_text = resetText\nmsg.reset_type = resetType\n\nif (type === \"New Idea\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"New Idea\"});\n    msg.type = \"114199257\"\n} else if (type === \"Bug Report\") {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Bug Report\"});\n    msg.type = \"94865633\"\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -24407,6 +24415,7 @@
         "y": 180,
         "wires": [
             [
+                "9e43408e18883dfe",
                 "7674185d1e5ee489"
             ]
         ],
@@ -24443,7 +24452,7 @@
             }
         ],
         "x": 120,
-        "y": 360,
+        "y": 420,
         "wires": [
             [
                 "f44427c5a493c428"
@@ -24471,7 +24480,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 490,
-        "y": 280,
+        "y": 340,
         "wires": [
             []
         ]
@@ -24499,7 +24508,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 490,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "0145961e8276c53e"
@@ -24529,7 +24538,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 670,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "fd623c46a558a01a"
@@ -24560,7 +24569,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 860,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "6b039ef7895476e2"
@@ -24588,7 +24597,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 480,
-        "y": 360,
+        "y": 420,
         "wires": [
             []
         ]
@@ -24616,7 +24625,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1060,
-        "y": 440,
+        "y": 500,
         "wires": [
             []
         ]
@@ -24655,7 +24664,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 360,
+        "y": 420,
         "wires": [
             [
                 "db6d955c039873be"
@@ -24744,6 +24753,41 @@
         "wires": [
             [
                 "3bd7704103dbfc20"
+            ]
+        ]
+    },
+    {
+        "id": "0107164ee7ff63d6",
+        "type": "github-rest-api",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "mediaType": "",
+        "endpoint": "POST /repos/tm24fan8/home-assistant-configs/issues",
+        "client": "060e39a6519a8c4a",
+        "name": "Post Issue",
+        "x": 650,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e43408e18883dfe",
+        "type": "function",
+        "z": "ee67610b4a0578d2",
+        "g": "50e4d951ee7b3e54",
+        "name": "Prep API data",
+        "func": "var title = msg.text\nvar type = msg.typename\n\nif (type === 'Bug Report') {\n    var labels = [\"bug\",\"needs-response\"]\n} else if (type === 'New Idea') {\n    var labels = [\"enhancement\",\"needs-response\"]\n}\n\nmsg.payload = {\n    \"title\": title,\n    \"assignees\":[\"tm24fan8\"],\n    \"labels\":labels\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 240,
+        "wires": [
+            [
+                "0107164ee7ff63d6"
             ]
         ]
     },
@@ -29779,17 +29823,141 @@
         ]
     },
     {
-        "id": "0107164ee7ff63d6",
+        "id": "f1a8fb8d.6a3778",
+        "type": "switch",
+        "z": "d49b385d8b582b20",
+        "name": "Which type?",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "issues",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 1020,
+        "y": 740,
+        "wires": [
+            [
+                "87a4a50a.221488"
+            ]
+        ]
+    },
+    {
+        "id": "87a4a50a.221488",
+        "type": "switch",
+        "z": "d49b385d8b582b20",
+        "name": "Which action?",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "opened",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 1210,
+        "y": 740,
+        "wires": [
+            [
+                "b2affab1.141348"
+            ]
+        ]
+    },
+    {
+        "id": "6620878f.e1b268",
         "type": "github-rest-api",
         "z": "d49b385d8b582b20",
         "mediaType": "",
-        "endpoint": "",
+        "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/labels",
         "client": "060e39a6519a8c4a",
-        "name": "",
-        "x": 800,
-        "y": 460,
+        "name": "Add label",
+        "x": 1430,
+        "y": 760,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "b2affab1.141348",
+        "type": "function",
+        "z": "d49b385d8b582b20",
+        "name": "Prep API data",
+        "func": "msg.payload = {\n    \"owner\": msg.payload.repository.owner.login,\n    \"repo\": msg.payload.repository.name,\n    \"issue_number\": msg.payload.issue.number,\n    \"labels\": [\"needs-response\"]\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 720,
+        "wires": [
+            [
+                "6620878f.e1b268"
+            ]
+        ]
+    },
+    {
+        "id": "4c17fd91.505a14",
+        "type": "comment",
+        "z": "d49b385d8b582b20",
+        "name": "Add needs-response label to new issues",
+        "info": "",
+        "x": 910,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "0bd8c12856b7eed3",
+        "type": "inject",
+        "z": "d49b385d8b582b20",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "title",
+                "v": "test issue 2",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 660,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "126d1a03d959dc47",
+        "type": "debug",
+        "z": "d49b385d8b582b20",
+        "name": "github",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 420,
+        "wires": []
     }
 ]
