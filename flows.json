@@ -1616,7 +1616,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1649,10 +1651,15 @@
             "dbfb74297b6ecd61",
             "2c7f54cdc45883a9",
             "81c14eac4de9dd9d",
-            "a586df67c15b0914"
+            "a586df67c15b0914",
+            "4738fd26d0e16bd4",
+            "84f3e5a7cf5cdfc7",
+            "845dc1be345b6518"
         ],
         "x": 34,
-        "y": 139
+        "y": 139,
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "fba69dfc80829db7",
@@ -25237,7 +25244,7 @@
         "z": "ebd5561c4f077718",
         "g": "4329e464360d0afa",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states[\"binary_sensor.audible_weather_alerts_allowed\"].state\nvar occupied = states[\"binary_sensor.basement_occupied\"].state\nvar quiet = states[\"input_boolean.studio_quiet\"].state\n\nif (allowed === 'on') {\n    if (occupied === 'on' && quiet === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Both\"})\n        return[msg,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Living Room\"})\n        return[msg,null]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states[\"binary_sensor.audible_weather_alerts_allowed\"].state\nvar occupied = states[\"binary_sensor.basement_occupied\"].state\nvar quiet = states[\"input_boolean.studio_quiet\"].state\nvar deskState = states[\"light.tina_desk_lights\"].state\nvar livingRoomState = states[\"light.living_room_lights\"].state\nvar diningRoomState = states[\"light.dining_room_lamp\"].state\nvar basementState = states[\"light.basement_studio_lights\"].state\n\nflow.set(\"deskState\", deskState)\nflow.set(\"livingRoomState\", livingRoomState)\nflow.set(\"diningRoomState\", diningRoomState)\nflow.set(\"basementState\", basementState)\n\nif (allowed === 'on') {\n    if (occupied === 'on' && quiet === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Both\"})\n        return[msg,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Living Room\"})\n        return[msg,null]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -25406,6 +25413,39 @@
         ],
         "x": 1455,
         "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4738fd26d0e16bd4",
+        "type": "comment",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Living Room",
+        "info": "",
+        "x": 370,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "84f3e5a7cf5cdfc7",
+        "type": "comment",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Basement",
+        "info": "",
+        "x": 380,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "845dc1be345b6518",
+        "type": "comment",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Added flow contexts, now we have to do something with them",
+        "info": "",
+        "x": 660,
+        "y": 300,
         "wires": []
     },
     {
