@@ -779,9 +779,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1552,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -859,9 +857,7 @@
             "ed625c0b4f7c98ff"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2252,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -8162,13 +8158,11 @@
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "light",
-        "service": "turn_on",
+        "domain": "script",
+        "service": "stairwell_led_strip",
         "areaId": [],
         "deviceId": [],
-        "entityId": [
-            "light.stairwell_led_strip"
-        ],
+        "entityId": [],
         "data": "{\t    \"color_temp_kelvin\": 2000,\t    \"brightness\": 255\t}",
         "dataType": "jsonata",
         "mergeContext": "",
@@ -8244,13 +8238,11 @@
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "light",
-        "service": "turn_on",
+        "domain": "script",
+        "service": "stairwell_led_strip",
         "areaId": [],
         "deviceId": [],
-        "entityId": [
-            "light.stairwell_led_strip"
-        ],
+        "entityId": [],
         "data": "{\t    \"color_temp_kelvin\": 2000,\t    \"brightness\": 150\t}",
         "dataType": "jsonata",
         "mergeContext": "",
