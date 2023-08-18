@@ -733,7 +733,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -779,7 +781,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -857,7 +861,9 @@
             "ed625c0b4f7c98ff"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 2252,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -1043,7 +1049,9 @@
             "f111c40459e27629"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1272,
+        "h": 502
     },
     {
         "id": "208284848b13b85b",
@@ -1154,7 +1162,9 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1492,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1208,7 +1218,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1574,7 +1586,9 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399
+        "y": 399,
+        "w": 1532,
+        "h": 282
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1608,7 +1622,9 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1192,
+        "h": 502
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -1624,7 +1640,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1660,10 +1678,16 @@
             "a586df67c15b0914",
             "4738fd26d0e16bd4",
             "84f3e5a7cf5cdfc7",
-            "845dc1be345b6518"
+            "9b7ac07676f01dfd",
+            "50a2a473686b0445",
+            "33fcb96a4c2c2541",
+            "a4d27381bd614fd1",
+            "8a84615173fd7e97"
         ],
         "x": 34,
-        "y": 139
+        "y": 139,
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "fba69dfc80829db7",
@@ -24932,7 +24956,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t   \"scene_id\":\"lightning_alert_restore_firstfloor\",\t   \"snapshot_entities\": [\t       \"light.tina_lamp_side\",\t       \"light.tina_lamp_top\",\t       \"light.tina_desk_strip\",\t       \"light.dining_room_lamp\",\t       \"switch.adaptive_lighting_living_room\",\t       \"switch.adaptive_lighting_tina_lamp\"\t   ]\t}",
+        "data": "{\t   \"scene_id\":\"lightning_alert_restore_firstfloor\",\t   \"snapshot_entities\": backup\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -24994,7 +25018,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1065,
+        "x": 945,
         "y": 240,
         "wires": [
             [
@@ -25030,7 +25054,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1190,
+        "x": 1070,
         "y": 300,
         "wires": [
             []
@@ -25056,11 +25080,11 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1180,
+        "x": 1060,
         "y": 240,
         "wires": [
             [
-                "b4b80e91a535923e"
+                "9b7ac07676f01dfd"
             ]
         ]
     },
@@ -25086,7 +25110,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1180,
+        "x": 1060,
         "y": 180,
         "wires": [
             []
@@ -25112,7 +25136,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1180,
+        "x": 1060,
         "y": 360,
         "wires": [
             []
@@ -25132,7 +25156,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "scene.lightning_alert_restore"
+            "scene.lightning_alert_restore_firstfloor"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -25140,7 +25164,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1520,
+        "x": 1420,
         "y": 240,
         "wires": [
             []
@@ -25292,7 +25316,7 @@
         "z": "ebd5561c4f077718",
         "g": "4329e464360d0afa",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states[\"binary_sensor.audible_weather_alerts_allowed\"].state\nvar occupied = states[\"binary_sensor.basement_occupied\"].state\nvar quiet = states[\"input_boolean.studio_quiet\"].state\nvar deskState = states[\"light.tina_desk_lights\"].state\nvar livingRoomState = states[\"light.living_room_lights\"].state\nvar diningRoomState = states[\"light.dining_room_lamp\"].state\nvar basementState = states[\"light.basement_studio_lights\"].state\n\nflow.set(\"deskState\", deskState)\nflow.set(\"livingRoomState\", livingRoomState)\nflow.set(\"diningRoomState\", diningRoomState)\nflow.set(\"basementState\", basementState)\n\nif (allowed === 'on') {\n    if (occupied === 'on' && quiet === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Both\"})\n        return[msg,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Living Room\"})\n        return[msg,null]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    return null\n}",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states[\"binary_sensor.audible_weather_alerts_allowed\"].state\nvar occupied = states[\"binary_sensor.basement_occupied\"].state\nvar quiet = states[\"input_boolean.studio_quiet\"].state\nvar deskState = states[\"light.tina_desk_lights\"].state\nvar livingRoomState = states[\"light.living_room_lights\"].state\nvar diningRoomState = states[\"light.dining_room_lamp\"].state\nvar basementState = states[\"light.basement_studio_lights\"].state\nvar duration = duration\nvar payload = payload\n\nvar firstFloorLights = []\nvar basementLights = []\n\nif (deskState === 'on') {\n    firstFloorLights.push('light.tina_desk_strip','light.tina_lamp_top','light.tina_lamp_side')\n}\n\nif (livingRoomState === 'on') {\n    firstFloorLights.push('light.living_room_color_1','light.living_room_color_2','light.living_room_color_3','light.living_room_led_strip')\n}\n\nif (diningRoomState === 'on') {\n    firstFloorLights.push('light.dining_room_lamp')\n}\n\nif (basementState === 'on') {\n    basementLights.push('light.basement_tall_lamp','light.basement_short_lamp','light.basement_stairwell','light.basement_led_strip_1')\n}\n\nflow.set(\"deskState\", deskState)\nflow.set(\"livingRoomState\", livingRoomState)\nflow.set(\"diningRoomState\", diningRoomState)\nflow.set(\"basementState\", basementState)\n\nvar firstFloorMsg = {\n    \"payload\": payload,\n    \"duration\": duration,\n    \"backup\": firstFloorLights\n}\n\nvar basementMsg = {\n    \"payload\": payload,\n    \"duration\": duration,\n    \"backup\": basementLights\n}\n\nif (allowed === 'on') {\n    if (occupied === 'on' && quiet === 'off') {\n        flow.set(\"basementTrigger\",\"true\")\n        node.status({fill:\"green\",shape:\"dot\",text:\"Both\"})\n        return[firstFloorMsg,basementMsg]\n    } else {\n        flow.set(\"basementTrigger\",\"false\")\n        node.status({fill:\"green\",shape:\"dot\",text:\"Living Room\"})\n        return[firstFloorMsg,null]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    return null\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -25327,7 +25351,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [],
-        "data": "{\t   \"scene_id\":\"lightning_alert_restore_basement\",\t   \"snapshot_entities\": [\t       \"light.basement_led_strip_1\",\t       \"light.basement_tall_lamp\",\t       \"light.basement_short_lamp\",\t       \"light.basement_stairwell\"\t   ]\t}",
+        "data": "{\t   \"scene_id\":\"lightning_alert_restore_basement\",\t   \"snapshot_entities\": backup\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -25391,9 +25415,7 @@
         "x": 780,
         "y": 360,
         "wires": [
-            [
-                "2c7f54cdc45883a9"
-            ]
+            []
         ]
     },
     {
@@ -25410,7 +25432,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "scene.lightning_alert_restore"
+            "scene.lightning_alert_restore_basement"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -25418,8 +25440,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 960,
-        "y": 360,
+        "x": 1420,
+        "y": 300,
         "wires": [
             []
         ]
@@ -25437,8 +25459,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1320,
-        "y": 480,
+        "x": 860,
+        "y": 520,
         "wires": [
             [],
             []
@@ -25459,8 +25481,8 @@
             "27b2c22907382e6d",
             "8146f43fea5aec03"
         ],
-        "x": 1455,
-        "y": 180,
+        "x": 975,
+        "y": 520,
         "wires": []
     },
     {
@@ -25486,15 +25508,146 @@
         "wires": []
     },
     {
-        "id": "845dc1be345b6518",
-        "type": "comment",
+        "id": "9b7ac07676f01dfd",
+        "type": "function",
         "z": "ebd5561c4f077718",
         "g": "4329e464360d0afa",
-        "name": "Added flow contexts, now we have to do something with them",
-        "info": "",
-        "x": 660,
-        "y": 300,
-        "wires": []
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar deskState = flow.get(\"deskState\")\nvar livingRoomState = flow.get(\"livingRoomState\")\nvar diningRoomState = flow.get(\"diningRoomState\")\nvar basementState = flow.get(\"basementState\")\nvar basementTrigger = flow.get(\"basementTrigger\")\nvar lightsOff = []\n\nif (deskState === 'off') {\n    lightsOff.push('light.tina_desk_lights')\n}\n\nif (diningRoomState === 'off') {\n    lightsOff.push('light.dining_room_lamp')\n}\n\nif (livingRoomState === 'off') {\n    lightsOff.push('light.living_room_lights')\n}\n\nif (basementTrigger === 'true' && basementState === 'off') {\n    lightsOff.push('light.basement_studio_lights')\n}\n\nvar size = lightsOff.length\n\nmsg.lightsoff = lightsOff\n\nif (size > 0) {\n    if (basementTrigger === 'true') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Restored Both\"})\n        return[msg,msg,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Restored First Floor\"})\n        return [msg,null,msg]\n    }\n} else {\n    if (basementTrigger === 'true') {\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Restored Both\" })\n        return [msg,msg,null]\n    } else {\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Restored First Floor\" })\n        return [msg,null,null]\n    }\n}",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 240,
+        "wires": [
+            [
+                "b4b80e91a535923e",
+                "a4d27381bd614fd1"
+            ],
+            [
+                "2c7f54cdc45883a9"
+            ],
+            [
+                "50a2a473686b0445"
+            ]
+        ],
+        "outputLabels": [
+            "Living Room",
+            "Basement",
+            "Lights Off"
+        ]
+    },
+    {
+        "id": "50a2a473686b0445",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Lights Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "{{lightsoff}}"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1400,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33fcb96a4c2c2541",
+        "type": "delay",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1415,
+        "y": 180,
+        "wires": [
+            [
+                "8a84615173fd7e97"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "a4d27381bd614fd1",
+        "type": "switch",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Desk?",
+        "property": "deskState",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1355,
+        "y": 180,
+        "wires": [
+            [
+                "33fcb96a4c2c2541"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8a84615173fd7e97",
+        "type": "api-call-service",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Reset Desk",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.tina_desk_scenes"
+        ],
+        "data": "{\t    \"option\":\"Reset\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1530,
+        "y": 180,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "1031080bdf3b95bf",
