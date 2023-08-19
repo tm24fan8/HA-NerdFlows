@@ -733,7 +733,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -897,9 +899,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1204,7 +1204,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1381,9 +1383,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1443,9 +1443,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1463,9 +1461,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "88f099618e56926d",
@@ -1547,9 +1543,7 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "31767ffd6a647579",
@@ -1578,7 +1572,9 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399
+        "y": 399,
+        "w": 1532,
+        "h": 282
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1628,7 +1624,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1659,19 +1657,20 @@
             "c268e2512a503e2a",
             "1e79cbc1d6e8f507",
             "dbfb74297b6ecd61",
-            "2c7f54cdc45883a9",
             "81c14eac4de9dd9d",
             "a586df67c15b0914",
             "4738fd26d0e16bd4",
             "84f3e5a7cf5cdfc7",
-            "9b7ac07676f01dfd",
             "50a2a473686b0445",
             "33fcb96a4c2c2541",
             "a4d27381bd614fd1",
-            "8a84615173fd7e97"
+            "8a84615173fd7e97",
+            "f260e2410571356a"
         ],
         "x": 34,
-        "y": 139
+        "y": 139,
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "fba69dfc80829db7",
@@ -25068,7 +25067,7 @@
         "y": 240,
         "wires": [
             [
-                "9b7ac07676f01dfd"
+                "f260e2410571356a"
             ]
         ]
     },
@@ -25140,7 +25139,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "scene.lightning_alert_restore_firstfloor"
+            "{{scenes}}"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -25403,34 +25402,6 @@
         ]
     },
     {
-        "id": "2c7f54cdc45883a9",
-        "type": "api-call-service",
-        "z": "ebd5561c4f077718",
-        "g": "4329e464360d0afa",
-        "name": "Restore Scene",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "scene",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "scene.lightning_alert_restore_basement"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1420,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "81c14eac4de9dd9d",
         "type": "function",
         "z": "ebd5561c4f077718",
@@ -25492,38 +25463,6 @@
         "wires": []
     },
     {
-        "id": "9b7ac07676f01dfd",
-        "type": "function",
-        "z": "ebd5561c4f077718",
-        "g": "4329e464360d0afa",
-        "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar deskState = flow.get(\"deskState\")\nvar livingRoomState = flow.get(\"livingRoomState\")\nvar diningRoomState = flow.get(\"diningRoomState\")\nvar basementState = flow.get(\"basementState\")\nvar basementTrigger = flow.get(\"basementTrigger\")\nvar lightsOff = []\n\nif (deskState === 'off') {\n    lightsOff.push('light.tina_desk_lights')\n}\n\nif (diningRoomState === 'off') {\n    lightsOff.push('light.dining_room_lamp')\n}\n\nif (livingRoomState === 'off') {\n    lightsOff.push('light.living_room_lights')\n}\n\nif (basementTrigger === 'true' && basementState === 'off') {\n    lightsOff.push('light.basement_studio_lights')\n}\n\nvar size = lightsOff.length\n\nmsg.lightsoff = lightsOff\n\nif (size > 0) {\n    if (basementTrigger === 'true') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Restored Both\"})\n        return[msg,msg,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Restored First Floor\"})\n        return [msg,null,msg]\n    }\n} else {\n    if (basementTrigger === 'true') {\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Restored Both\" })\n        return [msg,msg,null]\n    } else {\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Restored First Floor\" })\n        return [msg,null,null]\n    }\n}",
-        "outputs": 3,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1230,
-        "y": 240,
-        "wires": [
-            [
-                "b4b80e91a535923e",
-                "a4d27381bd614fd1"
-            ],
-            [
-                "2c7f54cdc45883a9"
-            ],
-            [
-                "50a2a473686b0445"
-            ]
-        ],
-        "outputLabels": [
-            "Living Room",
-            "Basement",
-            "Lights Off"
-        ]
-    },
-    {
         "id": "50a2a473686b0445",
         "type": "api-call-service",
         "z": "ebd5561c4f077718",
@@ -25546,7 +25485,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1400,
-        "y": 360,
+        "y": 300,
         "wires": [
             []
         ]
@@ -25631,6 +25570,34 @@
         "y": 180,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "f260e2410571356a",
+        "type": "function",
+        "z": "ebd5561c4f077718",
+        "g": "4329e464360d0afa",
+        "name": "Processing",
+        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar deskState = flow.get(\"deskState\")\nvar livingRoomState = flow.get(\"livingRoomState\")\nvar diningRoomState = flow.get(\"diningRoomState\")\nvar basementState = flow.get(\"basementState\")\nvar basementTrigger = flow.get(\"basementTrigger\")\nvar lightsOff = []\nvar scenesReset = []\n\nscenesReset.push('scene.lightning_alert_restore_firstfloor')\n\nif (deskState === 'off') {\n    lightsOff.push('light.tina_desk_lights')\n}\n\nif (diningRoomState === 'off') {\n    lightsOff.push('light.dining_room_lamp')\n}\n\nif (livingRoomState === 'off') {\n    lightsOff.push('light.living_room_lights')\n}\n\nif (basementTrigger === 'true') {\n    if (basementState === 'off') {\n        lightsOff.push('light.basement_studio_lights')\n    } else {\n        scenesReset.push('scene.lightning_alert_restore_basement')\n    }\n}\n\nvar size = lightsOff.length\n\nvar resetMsg = {\n    \"scenes\": scenesReset\n}\n\nvar lightsMsg = {\n    \"lightsoff\": lightsOff\n}\n\nif (size > 0) {\n    node.send([null,lightsMsg])\n}\n\nnode.send([resetMsg,null])",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 240,
+        "wires": [
+            [
+                "b4b80e91a535923e",
+                "a4d27381bd614fd1"
+            ],
+            [
+                "50a2a473686b0445"
+            ]
+        ],
+        "outputLabels": [
+            "Scene Reset",
+            "Lights Off"
         ]
     },
     {
