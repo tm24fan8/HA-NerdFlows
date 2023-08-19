@@ -498,39 +498,6 @@
         }
     },
     {
-        "id": "74d3a55b70dc2d6c",
-        "type": "subflow",
-        "name": "Basement Scenes Handler",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 60,
-                "y": 300,
-                "wires": [
-                    {
-                        "id": "622b8178adf9d4a8"
-                    }
-                ]
-            }
-        ],
-        "out": [],
-        "env": [],
-        "meta": {},
-        "color": "#DDAA99",
-        "icon": "node-red-contrib-huemagic/hue-scene.svg",
-        "status": {
-            "x": 1340,
-            "y": 440,
-            "wires": [
-                {
-                    "id": "5c8b0b6fa5c68af6",
-                    "port": 0
-                }
-            ]
-        }
-    },
-    {
         "id": "05a2d9f89e72481f",
         "type": "subflow",
         "name": "Alexa Location (Room)",
@@ -733,9 +700,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -781,9 +746,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719,
-        "w": 1552,
-        "h": 642
+        "y": 719
     },
     {
         "id": "e065b1ed4938b477",
@@ -861,9 +824,7 @@
             "ed625c0b4f7c98ff"
         ],
         "x": 14,
-        "y": 19,
-        "w": 2252,
-        "h": 682
+        "y": 19
     },
     {
         "id": "5c50443a84910fb7",
@@ -903,9 +864,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -924,9 +883,7 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1192,
-        "h": 82
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -947,9 +904,7 @@
             "0107164ee7ff63d6"
         ],
         "x": 14,
-        "y": 139,
-        "w": 1072,
-        "h": 142
+        "y": 139
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -997,9 +952,7 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -1017,9 +970,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1082,9 +1033,7 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 322
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1134,9 +1083,7 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 299,
-        "w": 1152,
-        "h": 242
+        "y": 299
     },
     {
         "id": "eeafd13be593ae69",
@@ -1170,9 +1117,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1226,9 +1171,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759,
-        "w": 612,
-        "h": 202
+        "y": 759
     },
     {
         "id": "550e5b2d99316b12",
@@ -1253,9 +1196,7 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619,
-        "w": 1112,
-        "h": 282
+        "y": 619
     },
     {
         "id": "f519aff597ece351",
@@ -1374,9 +1315,7 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1392,9 +1331,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -1411,9 +1348,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1454,9 +1389,7 @@
             "5ba9cfc0194ef62a"
         ],
         "x": 754,
-        "y": 319,
-        "w": 672,
-        "h": 622
+        "y": 319
     },
     {
         "id": "931cc27100c9317e",
@@ -1475,9 +1408,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1495,9 +1426,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "88f099618e56926d",
@@ -1579,9 +1508,7 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "31767ffd6a647579",
@@ -1610,9 +1537,7 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399,
-        "w": 1532,
-        "h": 282
+        "y": 399
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1664,9 +1589,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 82
+        "y": 39
     },
     {
         "id": "4329e464360d0afa",
@@ -1708,9 +1631,7 @@
             "f260e2410571356a"
         ],
         "x": 34,
-        "y": 139,
-        "w": 1592,
-        "h": 422
+        "y": 139
     },
     {
         "id": "fba69dfc80829db7",
@@ -4353,499 +4274,6 @@
         "outputLabels": [
             "Dynamic",
             "Else"
-        ]
-    },
-    {
-        "id": "1bb8f2070d805c99",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Set Scene",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "scene",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "scene.{{topic}}_{{payload}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1010,
-        "y": 380,
-        "wires": [
-            [
-                "5c8b0b6fa5c68af6"
-            ]
-        ]
-    },
-    {
-        "id": "edcb381597f48298",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Apply Adaptive Lighting",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "adaptive_lighting",
-        "service": "apply",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_{{topic}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1190,
-        "y": 200,
-        "wires": [
-            [
-                "cdfe1cc1b7a2e80e"
-            ]
-        ]
-    },
-    {
-        "id": "e6a15d04a48511a7",
-        "type": "switch",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Nightlight?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "Nightlight",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 590,
-        "y": 380,
-        "wires": [
-            [
-                "2181bd265057807f"
-            ],
-            [
-                "43dc3207a4e8d477"
-            ]
-        ]
-    },
-    {
-        "id": "2181bd265057807f",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Nightlight On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_sleep_mode_{{topic}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 770,
-        "y": 360,
-        "wires": [
-            [
-                "1bb8f2070d805c99"
-            ]
-        ]
-    },
-    {
-        "id": "43dc3207a4e8d477",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Nightlight Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_sleep_mode_{{topic}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 770,
-        "y": 420,
-        "wires": [
-            [
-                "1bb8f2070d805c99"
-            ]
-        ]
-    },
-    {
-        "id": "39f295bc8480147a",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Turn Lights On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "light.{{topic}}_lights"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 780,
-        "y": 200,
-        "wires": [
-            [
-                "bd31f35628ebb5d0"
-            ]
-        ]
-    },
-    {
-        "id": "bd31f35628ebb5d0",
-        "type": "delay",
-        "z": "74d3a55b70dc2d6c",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "500",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 970,
-        "y": 200,
-        "wires": [
-            [
-                "edcb381597f48298"
-            ]
-        ]
-    },
-    {
-        "id": "5c8b0b6fa5c68af6",
-        "type": "function",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Format",
-        "func": "const str = msg.payload\nvar scene = str.replaceAll(\"_\",\" \")\n\nmsg.dest = msg.topic\n\nmsg.topic = \"Lights Changed\"\nmsg.payload = ('Lights changed to a new scene: ' + scene)\n\nif (msg.payload === 'Lights changed to a new scene: Reset') {\n    return null;\n} else {\n    return msg;\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1180,
-        "y": 380,
-        "wires": [
-            [
-                "15484a2c724cc88d"
-            ]
-        ]
-    },
-    {
-        "id": "16d9d3387751c4d4",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Adapt Brightness Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_adapt_brightness_{{topic}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 620,
-        "y": 480,
-        "wires": [
-            [
-                "422b394996ac094e"
-            ]
-        ]
-    },
-    {
-        "id": "49ec3fb036ff367f",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Adapt Brightness On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_adapt_brightness_{{topic}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 620,
-        "y": 100,
-        "wires": [
-            [
-                "811cc7c782907fce"
-            ]
-        ]
-    },
-    {
-        "id": "422b394996ac094e",
-        "type": "switch",
-        "z": "74d3a55b70dc2d6c",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Purple",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Pink",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 830,
-        "y": 480,
-        "wires": [
-            [
-                "7a7ad5e937adcea4"
-            ],
-            [
-                "7a7ad5e937adcea4"
-            ]
-        ]
-    },
-    {
-        "id": "811cc7c782907fce",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Adaptive Lighting On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_{{topic}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 860,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7a7ad5e937adcea4",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Adaptive Lighting Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_{{topic}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1040,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cdfe1cc1b7a2e80e",
-        "type": "link out",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Adaptive Lighting Flow",
-        "mode": "link",
-        "links": [
-            "318c3055f2d96a7c"
-        ],
-        "x": 1365,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "318c3055f2d96a7c",
-        "type": "link in",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Scene Formatting",
-        "links": [
-            "cdfe1cc1b7a2e80e"
-        ],
-        "x": 1045,
-        "y": 320,
-        "wires": [
-            [
-                "5c8b0b6fa5c68af6"
-            ]
-        ]
-    },
-    {
-        "id": "6a5da3eff6ace96d",
-        "type": "subflow:582b8363c9f33bf8",
-        "z": "74d3a55b70dc2d6c",
-        "name": "",
-        "x": 590,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "464d7284c477d2f3",
-        "type": "subflow:582b8363c9f33bf8",
-        "z": "74d3a55b70dc2d6c",
-        "name": "",
-        "x": 590,
-        "y": 20,
-        "wires": []
-    },
-    {
-        "id": "15484a2c724cc88d",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Notify Basement TV",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "tv_notify",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"who\": \"basement\",\t    \"title\": msg.topic,\t    \"message\": msg.payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"30%\",\t        \"color\": \"red\"\t    }\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1420,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "622b8178adf9d4a8",
-        "type": "function",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Routing",
-        "func": "var str = msg.payload\nvar newPayload = str.replaceAll(\" \",\"_\")\n\nmsg.payload = newPayload\n\nif (newPayload === 'Select') {\n    return null\n} else if (newPayload === 'Adaptive') {\n    return[msg,null]\n} else {\n    return[null,msg]\n}",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 300,
-        "wires": [
-            [
-                "464d7284c477d2f3",
-                "49ec3fb036ff367f",
-                "6d40624de5c75c9d"
-            ],
-            [
-                "e6a15d04a48511a7",
-                "16d9d3387751c4d4",
-                "6a5da3eff6ace96d"
-            ]
-        ],
-        "icon": "node-red/switch.svg"
-    },
-    {
-        "id": "6d40624de5c75c9d",
-        "type": "api-call-service",
-        "z": "74d3a55b70dc2d6c",
-        "name": "Nightlight Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_sleep_mode_{{topic}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 590,
-        "y": 200,
-        "wires": [
-            [
-                "39f295bc8480147a"
-            ]
         ]
     },
     {
