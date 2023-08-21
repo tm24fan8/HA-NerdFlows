@@ -700,9 +700,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -748,7 +746,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719
+        "y": 719,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -763,16 +763,8 @@
             "314752dbc6fd170d",
             "d7261338e6b907f1",
             "fd0a309681a536de",
-            "40dc1e930b887eb7",
             "bf1b0d6542ef6b38",
-            "24c3166123d5dad0",
-            "40f52ef656550cf6",
-            "b14bcbf98b7e9f91",
-            "e473da127624f191",
-            "ed6649edf0128951",
             "20f407c978d14863",
-            "36c671c1520680e7",
-            "efe1917ebdcef673",
             "444acaf315688ac9",
             "dc440dfc78c41b8a",
             "1aa901d26ce8ac46",
@@ -786,7 +778,6 @@
             "66e85878d60c7d65",
             "bcba065aa5ecb2be",
             "10d9b30654ef759c",
-            "0a783dc1cb68b4bf",
             "6c06c2eec1583c66",
             "0c680585239e7f60",
             "e2581a5f3f4888df",
@@ -794,28 +785,14 @@
             "096369136e9e607f",
             "783cfb381b70afc5",
             "5008caa0192238f7",
-            "09a31110ed0a8630",
             "0f6d425791646818",
-            "bc9d4a0d7a7c5c79",
             "67509a5554fc091f",
             "1eb13d819ba7e226",
             "a10629857d60f774",
-            "e2ad91fc748ca519",
             "a3ef2faca9922113",
             "a8ef744455bb4c0a",
             "6ed7feb3956038ed",
-            "4a1db30e164dadc8",
             "9c01880c6319d29b",
-            "1967e5238d3aa5a1",
-            "f8cc9d6657bff329",
-            "94eec3b9d4b18a3d",
-            "a06fa6d20358b887",
-            "69c655d75dda13be",
-            "0d15cbcd3afaac79",
-            "2803126a83be1823",
-            "723cd46ceb02f152",
-            "90637fbeaa21f3ca",
-            "3c6cb0ed0847f8ee",
             "94c022d2eb71e7d5",
             "ce5d8005cbf08144",
             "7646c6833d5a1df2",
@@ -823,10 +800,14 @@
             "17b6f73d75f480fd",
             "7852593ec89f150a",
             "8286284fc9598efa",
-            "ed625c0b4f7c98ff"
+            "53c58cce51d4596a",
+            "ce204e8dd5784824",
+            "26f2f56e5abe7f25"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 1352,
+        "h": 682
     },
     {
         "id": "5c50443a84910fb7",
@@ -866,9 +847,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -956,9 +935,7 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -976,9 +953,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1014,9 +989,7 @@
             "f111c40459e27629"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1272,
-        "h": 502
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1181,9 +1154,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759,
-        "w": 612,
-        "h": 202
+        "y": 759
     },
     {
         "id": "550e5b2d99316b12",
@@ -1329,9 +1300,7 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1347,7 +1316,9 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659
+        "y": 659,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "265593f442864b6a",
@@ -1364,9 +1335,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1407,9 +1376,7 @@
             "5ba9cfc0194ef62a"
         ],
         "x": 754,
-        "y": 319,
-        "w": 672,
-        "h": 622
+        "y": 319
     },
     {
         "id": "931cc27100c9317e",
@@ -1428,9 +1395,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1448,9 +1413,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "88f099618e56926d",
@@ -1532,9 +1495,7 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "31767ffd6a647579",
@@ -1563,9 +1524,7 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399,
-        "w": 1532,
-        "h": 282
+        "y": 399
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1599,9 +1558,7 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1192,
-        "h": 502
+        "y": 539
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -16165,10 +16122,16 @@
                 "valueType": "entityState"
             },
             {
-                "property": "data",
+                "property": "time",
                 "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
+                "value": "night",
+                "valueType": "str"
+            },
+            {
+                "property": "type",
+                "propertyType": "msg",
+                "value": "auto",
+                "valueType": "str"
             },
             {
                 "property": "topic",
@@ -16189,7 +16152,7 @@
         "y": 220,
         "wires": [
             [
-                "ed6649edf0128951"
+                "a10629857d60f774"
             ]
         ]
     },
@@ -16227,10 +16190,16 @@
                 "valueType": "entityState"
             },
             {
-                "property": "data",
+                "property": "time",
                 "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
+                "value": "night",
+                "valueType": "str"
+            },
+            {
+                "property": "type",
+                "propertyType": "msg",
+                "value": "auto",
+                "valueType": "str"
             },
             {
                 "property": "topic",
@@ -16251,7 +16220,7 @@
         "y": 280,
         "wires": [
             [
-                "ed6649edf0128951"
+                "a10629857d60f774"
             ]
         ]
     },
@@ -16289,10 +16258,16 @@
                 "valueType": "entityState"
             },
             {
-                "property": "data",
+                "property": "time",
                 "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
+                "value": "day",
+                "valueType": "str"
+            },
+            {
+                "property": "type",
+                "propertyType": "msg",
+                "value": "auto",
+                "valueType": "str"
             },
             {
                 "property": "topic",
@@ -16313,7 +16288,7 @@
         "y": 340,
         "wires": [
             [
-                "ed6649edf0128951"
+                "a10629857d60f774"
             ]
         ]
     },
@@ -16333,14 +16308,14 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"hvac_mode\":\"cool\"\t}",
+        "data": "{\t    \"hvac_mode\": hvac\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1050,
-        "y": 180,
+        "x": 750,
+        "y": 260,
         "wires": [
             [
                 "20f407c978d14863"
@@ -16363,47 +16338,17 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"temperature\": nighttemp\t}",
+        "data": "{\t    \"temperature\": temp\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1380,
-        "y": 140,
+        "x": 1080,
+        "y": 220,
         "wires": [
             [
                 "0f6d425791646818"
-            ]
-        ]
-    },
-    {
-        "id": "40dc1e930b887eb7",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set to Fan",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_hvac_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"hvac_mode\":\"fan_only\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1050,
-        "y": 260,
-        "wires": [
-            [
-                "36c671c1520680e7"
             ]
         ]
     },
@@ -16412,12 +16357,12 @@
         "type": "api-call-service",
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
-        "name": "Turn Fan On",
+        "name": "Set Fan",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
         "domain": "switch",
-        "service": "turn_on",
+        "service": "turn_{{fan}}",
         "areaId": [],
         "deviceId": [],
         "entityId": [
@@ -16429,174 +16374,9 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 830,
+        "x": 740,
         "y": 320,
         "wires": [
-            [
-                "a8ef744455bb4c0a"
-            ]
-        ]
-    },
-    {
-        "id": "24c3166123d5dad0",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set to Cool",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_hvac_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"hvac_mode\":\"cool\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1650,
-        "y": 520,
-        "wires": [
-            [
-                "efe1917ebdcef673"
-            ]
-        ]
-    },
-    {
-        "id": "40f52ef656550cf6",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set Temp",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_temperature",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"temperature\": daytemp\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1980,
-        "y": 480,
-        "wires": [
-            [
-                "bc9d4a0d7a7c5c79"
-            ]
-        ]
-    },
-    {
-        "id": "b14bcbf98b7e9f91",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Turn off AC",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_hvac_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"hvac_mode\":\"off\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1970,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e473da127624f191",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Turn off Fan",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.master_bedroom_echo_dot_do_not_disturb_switch",
-            "switch.master_bedroom_fan"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1410,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ed6649edf0128951",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Enabled?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.master_bedroom_nighttime_protocol",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 380,
-        "y": 320,
-        "wires": [
-            [
-                "a10629857d60f774"
-            ],
             []
         ]
     },
@@ -16616,77 +16396,17 @@
         "entityId": [
             "climate.master_bedroom_aircon"
         ],
-        "data": "{\t    \"preset_mode\": preset\t}",
+        "data": "{\t    \"preset_mode\": eco\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1220,
-        "y": 160,
-        "wires": [
-            [
-                "444acaf315688ac9"
-            ]
-        ]
-    },
-    {
-        "id": "36c671c1520680e7",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Eco Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_preset_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"preset_mode\":\"none\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1220,
+        "x": 920,
         "y": 240,
         "wires": [
             [
-                "09a31110ed0a8630"
-            ]
-        ]
-    },
-    {
-        "id": "efe1917ebdcef673",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Eco On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_preset_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"preset_mode\":\"eco\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1820,
-        "y": 500,
-        "wires": [
-            [
-                "40f52ef656550cf6"
+                "444acaf315688ac9"
             ]
         ]
     },
@@ -17047,16 +16767,22 @@
                 "valueType": "entityState"
             },
             {
+                "property": "type",
+                "propertyType": "msg",
+                "value": "manual",
+                "valueType": "str"
+            },
+            {
+                "property": "time",
+                "propertyType": "msg",
+                "value": "night",
+                "valueType": "str"
+            },
+            {
                 "property": "topic",
                 "propertyType": "msg",
                 "value": "manual-night",
                 "valueType": "str"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
             }
         ],
         "x": 200,
@@ -17085,16 +16811,22 @@
                 "valueType": "entityState"
             },
             {
+                "property": "time",
+                "propertyType": "msg",
+                "value": "day",
+                "valueType": "str"
+            },
+            {
+                "property": "type",
+                "propertyType": "msg",
+                "value": "manual",
+                "valueType": "str"
+            },
+            {
                 "property": "topic",
                 "propertyType": "msg",
                 "value": "manual-day",
                 "valueType": "str"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
             }
         ],
         "x": 210,
@@ -17330,12 +17062,12 @@
         "type": "api-call-service",
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
-        "name": "Turn on boolean",
+        "name": "Set Boolean",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
         "domain": "input_boolean",
-        "service": "turn_on",
+        "service": "turn_{{bool}}",
         "areaId": [],
         "deviceId": [],
         "entityId": [
@@ -17347,36 +17079,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1060,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0a783dc1cb68b4bf",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Turn off boolean",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.master_bedroom_cooling_on"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1040,
-        "y": 480,
+        "x": 750,
+        "y": 380,
         "wires": [
             []
         ]
@@ -17527,36 +17231,6 @@
         ]
     },
     {
-        "id": "09a31110ed0a8630",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set Fan to Auto",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_fan_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"fan_mode\":\"Auto\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1400,
-        "y": 220,
-        "wires": [
-            [
-                "a8ef744455bb4c0a"
-            ]
-        ]
-    },
-    {
         "id": "0f6d425791646818",
         "type": "api-call-service",
         "z": "72f99805df043603",
@@ -17578,38 +17252,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1560,
-        "y": 120,
-        "wires": [
-            [
-                "a8ef744455bb4c0a"
-            ]
-        ]
-    },
-    {
-        "id": "bc9d4a0d7a7c5c79",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set Fan to Auto",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_fan_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"fan_mode\":\"Auto\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2160,
-        "y": 460,
+        "x": 1260,
+        "y": 200,
         "wires": [
             []
         ]
@@ -17766,8 +17410,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2020,
-        "y": 320,
+        "x": 940,
+        "y": 440,
         "wires": [
             []
         ]
@@ -18052,66 +17696,35 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar topic = msg.topic\nvar vacation = states['input_boolean.vacation_mode'].state\nvar highTemp = states['sensor.today_corrected_high_temp'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar showerMode = states['input_boolean.shower_mode'].state\nvar nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\nvar schedModeFan = states['input_select.scheduled_climate_mode_master_bedroom_fan'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nmsg.acInstalled = ac\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\nmsg.bedtemp = bedTemp\nmsg.showermode = showerMode\nmsg.nightvolume = nightVolume\n\nif (sleeping === 'on') {\n    if (topic === 'mrbedroom-cooling' || topic === 'mrbedroom-fan') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked (sleep mode)\"});\n        return null\n    }\n} else if (vacation === 'off') {\n    if (topic === 'mrbedroom-cooling') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Cooling Schedule\"});\n        return[msg,null,null]\n    } else if (topic === 'manual-night') {\n        if (schedModeFan === 'Fan') {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (Fan)\"});\n            return[msg,msg,null]\n        } else {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (No Fan)\"});\n            return[msg,null,null]\n        }\n    } else if (topic === 'mrbedroom-fan' && schedModeFan == 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"});\n        return[null,msg,null]\n    } else if (topic === 'mrbedroom-wakeup') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup Schedule\"});\n        return[null,null,msg]\n    } else if (topic === 'manual-day'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Day\"});\n        return[null,null,msg]\n    }\n} else {\n    return[null,null,null]\n}",
-        "outputs": 3,
+        "func": "// pull in the necessary information\n\nconst states = global.get('homeassistant.homeAssistant.states')\nconst allowed = states['input_boolean.master_bedroom_nighttime_protocol'].state\nconst ac = global.get('mb_aircon_installed')\nconst temp = global.get(\"tempStr\")\nconst time = msg.time\nconst type = msg.type\nconst topic = msg.topic\nconst vacation = states['input_boolean.vacation_mode'].state\nconst highTemp = states['sensor.today_corrected_high_temp'].state\nconst dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nconst nightTemp = states['input_number.master_bedroom_night_temp'].state\nconst bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nconst showerMode = states['input_boolean.shower_mode'].state\nconst nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\nconst fanMode = states['input_select.scheduled_climate_mode_master_bedroom_fan'].state\nconst acMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nconst sleeping = states['input_boolean.master_bedroom_sleeping'].state\nconst hotDay = states['input_boolean.hot_day'].state\nconst heatWarning = states[\"binary_sensor.heat_warning\"].state\nconst showerCooldown = states[\"timer.shower_mode_cooldown\"].state\nconst earlyNight = states[\"binary_sensor.early_night_mode\"].state\n\n// define variables\n\nlet setTemp = []\nlet setEco = []\nlet setHvac = []\nlet setFan = []\nlet setBool = []\n\n// decision logic\n\nif (time === 'day') {\n    if (type === 'auto') {\n        setBool = 'off'\n    }\n    if (earlyNight === 'off') {\n        setFan = \"off\"\n        if (ac === 'on') {\n            if (hotDay === 'on' || heatWarning === 'on') {\n                setTemp = dayTemp\n                setEco = \"eco\"\n                setHvac = \"cool\"\n            } else {\n                setTemp = nightTemp\n                setEco = \"eco\"\n                setHvac = \"off\"\n            }\n        }\n    } else if (earlyNight === 'on') {\n        setTemp = nightTemp    \n        if (fanMode === 'Fan') {\n            setFan = 'on'\n        } else {\n            setFan = 'off'\n        }\n        if (acMode === 'AC') {\n            setHvac = 'cool'\n        } else if (acMode === 'fan') {\n            setHvac = 'fan_only'\n        } else {\n            setHvac = 'off'\n        }\n        if (hotDay === 'on'){\n            setEco = 'off'\n        } else {\n            setEco = 'on'\n        }\n    }\n} else if (time === 'night') {\n    if (type === 'auto') {\n        setBool = 'on'\n    }\n    if (ac === 'on') {\n        setTemp = nightTemp\n        if (acMode === 'AC') {\n            setEco = 'eco'\n            setHvac = 'cool'\n            if (hotDay === 'on' || sleeping === 'on') {\n                setEco = 'none'\n            }\n        } else if (acMode === 'Fan') {\n            setHvac = 'fan_only'\n        } else {\n            setHvac = 'off'\n        }\n    }\n    if (fanMode === 'Fan') {\n        setFan = 'on'\n    } else {\n        setFan = 'off'\n    }\n}\n\nlet acSettings = {\n    \"temp\": setTemp,\n    \"eco\": setEco,\n    \"hvac\": setHvac\n}\n\nlet fanSettings = {\n    \"fan\": setFan\n}\n\nlet boolSettings = {\n    \"bool\": setBool\n}\n\nlet notify = {\n    \"topic\": topic,\n    \"nighttemp\": nightTemp,\n    \"acmode\": acMode,\n    \"fanmode\": fanMode\n}\n\nif (type === 'auto') {\n    node.send([null,null,boolSettings])\n}\n\nif ((type === 'auto' && allowed === 'on') || type === 'manual') {\n    if (sleeping === 'on' && type === 'auto') {\n        node.status({fill:\"red\",shape:\"ring\",text: \"Blocked (sleep mode)\"})\n    } else if (vacation === 'off') {\n        if (topic === 'mrbedroom-cooling' && ac === 'on') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Cooling Schedule\"})\n            node.send([acSettings,null,null]);\n        } else if (topic === 'manual-night') {\n            if (fanMode === 'Fan') {\n                node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (Fan)\"})\n                node.send([null,fanSettings,null])\n            } else {\n                node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Night (No Fan)\"})\n                node.send([null,fanSettings,null])\n            }\n        } else if (topic === 'mrbedroom-fan' && fanMode == 'Fan') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"})\n            node.send([null,fanSettings,null])\n        } else if (topic === 'mrbedroom-wakeup') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup Schedule\"})\n            node.send([acSettings,fanSettings,null])\n        } else if (topic === 'manual-day') {\n            node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Day\"})\n            node.send([acSettings,fanSettings,null])\n        }\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Automation Disabled\"})\n}\n",
+        "outputs": 4,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
+        "x": 550,
         "y": 320,
-        "wires": [
-            [
-                "e2ad91fc748ca519",
-                "90637fbeaa21f3ca"
-            ],
-            [
-                "bf1b0d6542ef6b38"
-            ],
-            [
-                "3c6cb0ed0847f8ee",
-                "ed625c0b4f7c98ff"
-            ]
-        ],
-        "outputLabels": [
-            "Cooling",
-            "Fan",
-            "Wakeup"
-        ],
-        "icon": "node-red-contrib-cpu/cpu.png"
-    },
-    {
-        "id": "e2ad91fc748ca519",
-        "type": "function",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Cooling Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar showerMode = msg.showermode\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar hotDay = states['input_boolean.hot_day'].state\nvar timer = states['timer.shower_mode_cooldown'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nmsg.schedmode = schedMode\n\nif (ac === 'on' && showerMode === 'off' && timer === 'idle') {\n    if (schedMode === 'AC') {\n        if (hotDay === 'on' || sleeping === 'on') {\n            msg.preset = 'none'\n        } else {\n            msg.preset = 'eco'\n        }\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC\"});\n        return[msg,null,null]\n    } else if (schedMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,msg,null]\n    } else if (schedMode === 'N/A') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n        return[null,null,msg]\n    }\n} else {\n    if (ac === 'off') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    } else if (showerMode === 'on') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Shower Mode On\"});\n    } else if (timer != 'idle') {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Shower Mode Cooldown\"});\n    }\n    return null\n}",
-        "outputs": 3,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 840,
-        "y": 200,
         "wires": [
             [
                 "fd0a309681a536de"
             ],
             [
-                "5008caa0192238f7",
-                "40dc1e930b887eb7"
+                "bf1b0d6542ef6b38"
             ],
             [
-                "5008caa0192238f7"
+                "10d9b30654ef759c"
+            ],
+            [
+                "a8ef744455bb4c0a"
             ]
         ],
         "outputLabels": [
-            "AC",
+            "A/C",
             "Fan",
-            "N/A"
+            "Boolean",
+            "Notify"
         ],
-        "icon": "font-awesome/fa-snowflake-o"
+        "icon": "node-red-contrib-cpu/cpu.png"
     },
     {
         "id": "a3ef2faca9922113",
@@ -18147,14 +17760,14 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Notifications",
-        "func": "var topic = msg.topic\nvar nightTemp = msg.nighttemp\n\nvar coolMsg = {\n    \"payload\": 'Master bedroom AC temp has been set to ' + nightTemp + '°F as scheduled',\n    \"topic\": 'AC Mode: Cooling'\n}\nvar fanOnlyMsg = {\n    \"payload\": 'Too cold outside, AC running fan only.',\n    \"topic\": \"AC Mode: Fan Only\"\n}\nvar fanSchedMsg = {\n    \"payload\": 'Master bedroom fan has been activated as scheduled.',\n    \"topic\": 'Fan Schedule Activated'\n}\n\nif (topic === 'mrbedroom-cooling') {\n    var schedMode = msg.schedmode\n    if (schedMode === 'AC') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC Cooling\"});\n        return coolMsg;\n    } else if (schedMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC Fan Only\"});\n        return fanOnlyMsg;\n    }\n} else if (topic === 'mrbedroom-fan') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"});\n    return fanSchedMsg;\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Manual Trigger Blocked\"});\n    return null\n}",
+        "func": "const topic = msg.topic\nconst nightTemp = msg.nighttemp\nconst acMode = msg.acmode\nconst fanMode = msg.fanmode\n\nlet coolMsg = {\n    \"payload\": 'Master bedroom AC temp has been set to ' + nightTemp + '°F as scheduled',\n    \"topic\": 'AC Mode: Cooling'\n}\nlet fanOnlyMsg = {\n    \"payload\": 'Too cold outside, AC running fan only.',\n    \"topic\": \"AC Mode: Fan Only\"\n}\nlet fanSchedMsg = {\n    \"payload\": 'Master bedroom fan has been activated as scheduled.',\n    \"topic\": 'Fan Schedule Activated'\n}\n\nif (topic === 'mrbedroom-cooling') {\n    if (acMode === 'AC') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC Cooling\"})\n        return coolMsg\n    } else if (acMode === 'Fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"AC Fan Only\"})\n        return fanOnlyMsg\n    }\n} else if (topic === 'mrbedroom-fan' && fanMode === 'Fan') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Fan Schedule\"})\n    return fanSchedMsg\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Notification not sent\"})\n    return null\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1830,
-        "y": 320,
+        "x": 750,
+        "y": 440,
         "wires": [
             [
                 "1eb13d819ba7e226"
@@ -18188,36 +17801,6 @@
         "wires": [
             [
                 "67509a5554fc091f"
-            ]
-        ]
-    },
-    {
-        "id": "4a1db30e164dadc8",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Eco On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_preset_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"preset_mode\":\"eco\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1800,
-        "y": 580,
-        "wires": [
-            [
-                "b14bcbf98b7e9f91"
             ]
         ]
     },
@@ -18457,36 +18040,6 @@
         ]
     },
     {
-        "id": "1967e5238d3aa5a1",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set Temp",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_temperature",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"temperature\": nighttemp\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1640,
-        "y": 600,
-        "wires": [
-            [
-                "4a1db30e164dadc8"
-            ]
-        ]
-    },
-    {
         "id": "b371dfa2ee57b577",
         "type": "api-current-state",
         "z": "72f99805df043603",
@@ -18528,283 +18081,6 @@
         "outputLabels": [
             "On",
             "Off"
-        ],
-        "l": false
-    },
-    {
-        "id": "f8cc9d6657bff329",
-        "type": "function",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Hot Day?",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar temp = global.get('tempStr')\nvar heatWarning = states['binary_sensor.heat_warning'].state\nvar dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar hotDay = states['input_boolean.hot_day'].state\n\nmsg.daytemp = dayTemp\nmsg.nighttemp = nightTemp\n\nif (ac === 'on') {\n    if (hotDay === 'on' || heatWarning === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Hot Day\"});\n        return[msg,null,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Normal\"});\n        return[null,msg,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No A/C\"});\n    return[null,null,msg]\n}",
-        "outputs": 3,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1240,
-        "y": 500,
-        "wires": [
-            [
-                "24c3166123d5dad0"
-            ],
-            [
-                "1967e5238d3aa5a1"
-            ],
-            [
-                "e473da127624f191"
-            ]
-        ],
-        "outputLabels": [
-            "Hot Day",
-            "Normal",
-            "No A/C"
-        ],
-        "icon": "font-awesome/fa-thermometer"
-    },
-    {
-        "id": "94eec3b9d4b18a3d",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Early Night Mode?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.early_night_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "earlynight",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1050,
-        "y": 420,
-        "wires": [
-            [
-                "a06fa6d20358b887"
-            ],
-            [
-                "f8cc9d6657bff329"
-            ]
-        ],
-        "outputLabels": [
-            "On",
-            "Off"
-        ]
-    },
-    {
-        "id": "a06fa6d20358b887",
-        "type": "function",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar fanMode = states['input_select.scheduled_climate_mode_master_bedroom_fan'].state\nvar acMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\n\nmsg.nighttemp = nightTemp\n\nif (fanMode === 'Fan') {\n    var fan = 'on'\n} else {\n    var fan = 'off'\n}\nif (acMode === 'AC') {\n    var hvac = 'cool'\n} else if (acMode === 'Fan') {\n    var hvac = 'fan_only'\n} else {\n    var hvac = 'off'\n}\n\nif (ac === 'on') {\n    msg.fan = fan\n    msg.acmode = hvac\n    node.status({fill:\"green\",shape:\"dot\",text:\"Sent\"});\n    return[msg,null]\n} else if (ac === 'off') {\n    msg.fan = fan\n    node.status({fill:\"green\",shape:\"dot\",text:\"Sent\"});\n    return[null,msg]\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"We fucked up\"});\n    return null\n}",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1250,
-        "y": 400,
-        "wires": [
-            [
-                "69c655d75dda13be",
-                "2803126a83be1823"
-            ],
-            [
-                "69c655d75dda13be"
-            ]
-        ],
-        "outputLabels": [
-            "AC Installed",
-            "AC Not Installed"
-        ],
-        "icon": "node-red-contrib-cpu/cpu.png"
-    },
-    {
-        "id": "69c655d75dda13be",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Fan",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "fan",
-        "service": "turn_{{fan}}",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "fan.master_bedroom_fan"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1430,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0d15cbcd3afaac79",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_hvac_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"hvac_mode\": acmode\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1760,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2803126a83be1823",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set Temp",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_temperature",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"temperature\": nighttemp\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1440,
-        "y": 380,
-        "wires": [
-            [
-                "723cd46ceb02f152"
-            ]
-        ]
-    },
-    {
-        "id": "723cd46ceb02f152",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Eco On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_preset_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"preset_mode\":\"eco\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1600,
-        "y": 380,
-        "wires": [
-            [
-                "0d15cbcd3afaac79"
-            ]
-        ]
-    },
-    {
-        "id": "90637fbeaa21f3ca",
-        "type": "switch",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "manual-night",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 775,
-        "y": 120,
-        "wires": [
-            [
-                "10d9b30654ef759c"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "3c6cb0ed0847f8ee",
-        "type": "switch",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "manual-day",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 775,
-        "y": 420,
-        "wires": [
-            [
-                "0a783dc1cb68b4bf"
-            ]
         ],
         "l": false
     },
@@ -19175,45 +18451,65 @@
         ]
     },
     {
-        "id": "ed625c0b4f7c98ff",
-        "type": "api-current-state",
+        "id": "53c58cce51d4596a",
+        "type": "catch",
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
-        "name": "Timer",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "idle",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "timer.shower_mode_cooldown",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "timer",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 905,
-        "y": 420,
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 980,
+        "y": 340,
         "wires": [
             [
-                "94eec3b9d4b18a3d"
-            ],
+                "ce204e8dd5784824",
+                "26f2f56e5abe7f25"
+            ]
+        ]
+    },
+    {
+        "id": "ce204e8dd5784824",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Text Notify",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"type\":\"alert\",\t    \"who\":\"tony\",\t    \"title\":\"Climate Test Failed\",\t    \"message\": error.message\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1150,
+        "y": 340,
+        "wires": [
             []
-        ],
-        "l": false
+        ]
+    },
+    {
+        "id": "26f2f56e5abe7f25",
+        "type": "file",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Write to file",
+        "filename": "/config/files/climate.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1150,
+        "y": 400,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "9256f78107619596",
