@@ -784,7 +784,6 @@
             "1dfb0bcc98f1457b",
             "096369136e9e607f",
             "783cfb381b70afc5",
-            "5008caa0192238f7",
             "0f6d425791646818",
             "67509a5554fc091f",
             "1eb13d819ba7e226",
@@ -1014,9 +1013,7 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 322
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1179,9 +1176,7 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619,
-        "w": 1112,
-        "h": 282
+        "y": 619
     },
     {
         "id": "f519aff597ece351",
@@ -1316,9 +1311,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -1574,9 +1567,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 82
+        "y": 39
     },
     {
         "id": "4329e464360d0afa",
@@ -1618,9 +1609,7 @@
             "f260e2410571356a"
         ],
         "x": 34,
-        "y": 139,
-        "w": 1592,
-        "h": 422
+        "y": 139
     },
     {
         "id": "fba69dfc80829db7",
@@ -17200,34 +17189,6 @@
             [
                 "1dfb0bcc98f1457b"
             ]
-        ]
-    },
-    {
-        "id": "5008caa0192238f7",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Set to Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "climate",
-        "service": "set_hvac_mode",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "climate.master_bedroom_aircon"
-        ],
-        "data": "{\t    \"hvac_mode\":\"off\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1220,
-        "y": 80,
-        "wires": [
-            []
         ]
     },
     {
