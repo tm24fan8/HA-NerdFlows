@@ -781,7 +781,6 @@
             "783cfb381b70afc5",
             "1eb13d819ba7e226",
             "a10629857d60f774",
-            "a3ef2faca9922113",
             "a8ef744455bb4c0a",
             "9c01880c6319d29b",
             "94c022d2eb71e7d5",
@@ -797,9 +796,9 @@
             "cbe37fd5b5fc4381"
         ],
         "x": 14,
-        "y": 19,
+        "y": 39,
         "w": 1252,
-        "h": 682
+        "h": 662
     },
     {
         "id": "5c50443a84910fb7",
@@ -17485,30 +17484,6 @@
             "Notify"
         ],
         "icon": "node-red-contrib-cpu/cpu.png"
-    },
-    {
-        "id": "a3ef2faca9922113",
-        "type": "function",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Bedtime Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = global.get('mb_aircon_installed')\nvar schedMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar topic = msg.topic\n\nmsg.bedtemp = bedTemp\n\nif (ac === 'on') {\n    if (topic === 'mrbedroom-bedtime'){\n        if (schedMode === 'AC') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"A/C set to \" + bedTemp + \" degrees\"});\n            return[msg,null]\n        } else {\n            node.status({fill:\"grey\",shape:\"ring\",text:\"No A/C\"});\n            return null\n        }\n    } else if (topic === 'manual-bedtime'){\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Manual Trigger\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"A/C Not Installed\"});\n    return null\n}",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 500,
-        "y": 60,
-        "wires": [
-            [],
-            []
-        ],
-        "outputLabels": [
-            "Auto",
-            "Manual"
-        ],
-        "icon": "font-awesome/fa-bed"
     },
     {
         "id": "a8ef744455bb4c0a",
