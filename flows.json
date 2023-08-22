@@ -754,7 +754,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 759
+        "y": 759,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -803,7 +805,9 @@
             "563907e1231aa3e0"
         ],
         "x": 14,
-        "y": 11.5
+        "y": 11.5,
+        "w": 1252,
+        "h": 729.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -843,7 +847,9 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179
+        "y": 179,
+        "w": 1292,
+        "h": 382
     },
     {
         "id": "477e752fcd2e2a19",
@@ -931,7 +937,9 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -949,7 +957,9 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 202
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1292,7 +1302,9 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39
+        "y": 39,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "b708cb6d93f40dee",
@@ -1325,7 +1337,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579
+        "y": 579,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "4886967d0f8c0156",
@@ -1366,7 +1380,9 @@
             "5ba9cfc0194ef62a"
         ],
         "x": 754,
-        "y": 319
+        "y": 319,
+        "w": 672,
+        "h": 622
     },
     {
         "id": "931cc27100c9317e",
@@ -1385,7 +1401,9 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 672,
+        "h": 222
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1403,7 +1421,9 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "88f099618e56926d",
@@ -1485,7 +1505,9 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "31767ffd6a647579",
@@ -1564,7 +1586,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1606,7 +1630,9 @@
             "f260e2410571356a"
         ],
         "x": 34,
-        "y": 139
+        "y": 139,
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "fba69dfc80829db7",
@@ -24328,12 +24354,6 @@
         "outputOnStateChange": true,
         "outputProperties": [
             {
-                "property": "outputType",
-                "propertyType": "msg",
-                "value": "state change",
-                "valueType": "str"
-            },
-            {
                 "property": "watching",
                 "propertyType": "msg",
                 "value": "",
@@ -24343,7 +24363,9 @@
         "x": 260,
         "y": 220,
         "wires": [
-            [],
+            [
+                "21537c3f38c381bc"
+            ],
             []
         ]
     },
@@ -24417,6 +24439,7 @@
         "id": "b92ebb91debbb2a2",
         "type": "inject",
         "z": "fc6801ef8637d652",
+        "d": true,
         "name": "",
         "props": [
             {
@@ -24442,6 +24465,7 @@
         "id": "5f6f9d804eb17269",
         "type": "function",
         "z": "fc6801ef8637d652",
+        "d": true,
         "name": "Init",
         "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst michigan_wolverines = states['sensor.michigan_wolverines']\nconst ohio_state_buckeyes = states['sensor.ohio_state_buckeyes']\nconst toledo_rockets = states['sensor.toledo_rockets']\nconst minnesota_vikings = states['sensor.minnesota_vikings']\nconst san_francisco_49ers = states['sensor.san_francisco_49ers']\nconst cleveland_guardians = states['sensor.cleveland_guardians']\nconst minnesota_twins = states['sensor.minnesota_twins']\nconst los_angeles_dodgers = states['sensor.los_angeles_dodgers']\n\nconst michigan_wolverines_inhibit = states['binary_sensor.michigan_wolverines_inhibit'].state\nconst ohio_state_buckeyes_inhibit = states['binary_sensor.ohio_state_buckeyes_inhibit'].state\nconst toledo_rockets_inhibit = states['binary_sensor.toledo_rockets_inhibit'].state\nconst minnesota_vikings_inhibit = states['binary_sensor.minnesota_vikings_inhibit'].state\nconst san_francisco_49ers_inhibit = states['binary_sensor.san_francisco_49ers_inhibit'].state\nconst cleveland_guardians_inhibit = states['binary_sensor.cleveland_guardians_inhibit'].state\nconst minnesota_twins_inhibit = states['binary_sensor.minnesota_twins_inhibit'].state\nconst los_angeles_dodgers_inhibit = states['binary_sensor.los_angeles_dodgers_inhibit'].state\n\nflow.set(\"michigan_wolverines\", michigan_wolverines)\nflow.set(\"ohio_state_buckeyes\", ohio_state_buckeyes)\nflow.set(\"toledo_rockets\", toledo_rockets)\nflow.set(\"minnesota_vikings\", minnesota_vikings)\nflow.set(\"san_francisco_49ers\", san_francisco_49ers)\nflow.set(\"cleveland_guardians\", cleveland_guardians)\nflow.set(\"minnesota_twins\", minnesota_twins)\nflow.set(\"los_angeles_dodgers\", los_angeles_dodgers)\n\nflow.set(\"michigan_wolverines_inhibit\", michigan_wolverines_inhibit)\nflow.set(\"ohio_state_buckeyes_inhibit\", ohio_state_buckeyes_inhibit)\nflow.set(\"toledo_rockets_inhibit\", toledo_rockets_inhibit)\nflow.set(\"minnesota_vikings_inhibit\", minnesota_vikings_inhibit)\nflow.set(\"san_francisco_49ers_inhibit\", san_francisco_49ers_inhibit)\nflow.set(\"cleveland_guardians_inhibit\", cleveland_guardians_inhibit)\nflow.set(\"minnesota_twins_inhibit\", minnesota_twins_inhibit)\nflow.set(\"los_angeles_dodgers_inhibit\", los_angeles_dodgers_inhibit)",
         "outputs": 0,
@@ -24454,65 +24478,20 @@
         "wires": []
     },
     {
-        "id": "9fc99add99a3f446",
-        "type": "inject",
-        "z": "fc6801ef8637d652",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 420,
-        "y": 540,
-        "wires": [
-            [
-                "99c8d72f9eb4be38"
-            ]
-        ]
-    },
-    {
-        "id": "ad4b477f8c3a8975",
-        "type": "debug",
-        "z": "fc6801ef8637d652",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "99c8d72f9eb4be38",
         "type": "function",
         "z": "fc6801ef8637d652",
-        "name": "Test",
+        "name": "Init",
         "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst team = msg.activeEvent\nconst lower = team.toLowerCase()\nconst convert = lower.replaceAll(\" \", \"_\")\nconst sensor = \"sensor.\" + convert\nconst getInhibitSensor = \"binary_sensor.\" + convert + \"_inhibit\"\nconst inhibit = states[getInhibitSensor].state\nconst teamSensor = states[sensor]\n\nflow.set(\"team\", convert)\nflow.set(\"inhibit\", inhibit)\nflow.set(\"teamSensor\", teamSensor)\n\nnode.status({fill:\"green\",shape:\"dot\",text:\"Team: \" + team})",
-        "outputs": 1,
+        "outputs": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 570,
-        "y": 540,
-        "wires": [
-            [
-                "ad4b477f8c3a8975"
-            ]
-        ]
+        "x": 690,
+        "y": 220,
+        "wires": [],
+        "icon": "font-awesome/fa-hourglass-start"
     },
     {
         "id": "c35b3d83bae3bdb4",
@@ -24520,8 +24499,8 @@
         "z": "fc6801ef8637d652",
         "name": "Figure out a way to make this menu only show applicable events",
         "info": "",
-        "x": 650,
-        "y": 280,
+        "x": 870,
+        "y": 300,
         "wires": []
     },
     {
@@ -24530,7 +24509,7 @@
         "z": "fc6801ef8637d652",
         "name": "Reliably catch score changes",
         "info": "",
-        "x": 480,
+        "x": 760,
         "y": 360,
         "wires": []
     },
@@ -24541,8 +24520,43 @@
         "name": "Allow this to init the flow based on selected team",
         "info": "",
         "x": 580,
-        "y": 220,
+        "y": 180,
         "wires": []
+    },
+    {
+        "id": "21537c3f38c381bc",
+        "type": "ha-select",
+        "z": "fc6801ef8637d652",
+        "name": "Active Sporting Event",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 1,
+        "entityConfig": "95180a63dc83b944",
+        "mode": "get",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "activeEvent",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousActiveEvent",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "99c8d72f9eb4be38"
+            ]
+        ]
     },
     {
         "id": "1031080bdf3b95bf",
@@ -28969,11 +28983,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "title",
-                "v": "test issue 2",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -28986,7 +28995,9 @@
         "x": 660,
         "y": 420,
         "wires": [
-            []
+            [
+                "6740de568b289636"
+            ]
         ]
     },
     {
@@ -29005,5 +29016,30 @@
         "x": 1410,
         "y": 420,
         "wires": []
+    },
+    {
+        "id": "6740de568b289636",
+        "type": "change",
+        "z": "d49b385d8b582b20",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "studio_quiet",
+                "pt": "global",
+                "to": "studio_quiet",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 420,
+        "wires": [
+            []
+        ]
     }
 ]
