@@ -128,6 +128,14 @@
         "env": []
     },
     {
+        "id": "fc6801ef8637d652",
+        "type": "tab",
+        "label": "Sports",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "789ba711dc04fad2",
         "type": "tab",
         "label": "Twitch",
@@ -746,9 +754,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 759,
-        "w": 1552,
-        "h": 642
+        "y": 759
     },
     {
         "id": "e065b1ed4938b477",
@@ -797,9 +803,7 @@
             "563907e1231aa3e0"
         ],
         "x": 14,
-        "y": 11.5,
-        "w": 1252,
-        "h": 729.5
+        "y": 11.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -3376,6 +3380,196 @@
         "instId": "40829548",
         "ua": "tm24fan8",
         "name": ""
+    },
+    {
+        "id": "1f10335891b41077",
+        "type": "ha-device-config",
+        "name": "Nerdhome Sports",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "95180a63dc83b944",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "1f10335891b41077",
+        "name": "Active Sporting Event",
+        "version": "6",
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Active Sporting Event"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:baseball-bat"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "Michigan Wolverines",
+                    "Ohio State Buckeyes",
+                    "Toledo Rockets",
+                    "Minnesota Vikings",
+                    "San Francisco 49ers",
+                    "Cleveland Guardians",
+                    "Minnesota Twins",
+                    "Los Angeles Dodgers"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "dc557449c40eba5e",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "1f10335891b41077",
+        "name": "Watching Sports",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Watching Sports"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:baseball-bat"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "c7a23a2b967375ec",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "1f10335891b41077",
+        "name": "Team Score",
+        "version": "6",
+        "entityType": "number",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Team Score"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:counter"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "points"
+            },
+            {
+                "property": "min_value",
+                "value": 0
+            },
+            {
+                "property": "max_value",
+                "value": 150
+            },
+            {
+                "property": "step_value",
+                "value": 1
+            },
+            {
+                "property": "mode",
+                "value": "box"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "f64cc18b786d7352",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "1f10335891b41077",
+        "name": "Opponent Score",
+        "version": "6",
+        "entityType": "number",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Opponent Score"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:counter"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "points"
+            },
+            {
+                "property": "min_value",
+                "value": 0
+            },
+            {
+                "property": "max_value",
+                "value": 150
+            },
+            {
+                "property": "step_value",
+                "value": 1
+            },
+            {
+                "property": "mode",
+                "value": "box"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
     },
     {
         "id": "afead614fabc01bb",
@@ -11204,6 +11398,23 @@
         ],
         "x": 915,
         "y": 560,
+        "wires": []
+    },
+    {
+        "id": "48976bf8e9a62b0a",
+        "type": "debug",
+        "z": "eff21041cc941fef",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 40,
         "wires": []
     },
     {
@@ -24067,6 +24278,271 @@
             "Scene Reset",
             "Lights Off"
         ]
+    },
+    {
+        "id": "1f7af146c06b8b85",
+        "type": "ha-select",
+        "z": "fc6801ef8637d652",
+        "name": "Active Sporting Event",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "95180a63dc83b944",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "activeEvent",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousActiveEvent",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 280,
+        "y": 280,
+        "wires": [
+            [
+                "99c8d72f9eb4be38"
+            ]
+        ]
+    },
+    {
+        "id": "8e7bb3461773c5b9",
+        "type": "ha-switch",
+        "z": "fc6801ef8637d652",
+        "name": "Watching Sports",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 2,
+        "entityConfig": "dc557449c40eba5e",
+        "enableInput": false,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            {
+                "property": "outputType",
+                "propertyType": "msg",
+                "value": "state change",
+                "valueType": "str"
+            },
+            {
+                "property": "watching",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 260,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c0e5b488ed073f56",
+        "type": "ha-number",
+        "z": "fc6801ef8637d652",
+        "name": "Team Score",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "c7a23a2b967375ec",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "teamScore",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "teamPreviousScore",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 250,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77affe81dadd8a64",
+        "type": "ha-number",
+        "z": "fc6801ef8637d652",
+        "name": "Opponent Score",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "f64cc18b786d7352",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "oppScore",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "oppPreviousScore",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 260,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b92ebb91debbb2a2",
+        "type": "inject",
+        "z": "fc6801ef8637d652",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 100,
+        "wires": [
+            [
+                "5f6f9d804eb17269"
+            ]
+        ]
+    },
+    {
+        "id": "5f6f9d804eb17269",
+        "type": "function",
+        "z": "fc6801ef8637d652",
+        "name": "Init",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst michigan_wolverines = states['sensor.michigan_wolverines']\nconst ohio_state_buckeyes = states['sensor.ohio_state_buckeyes']\nconst toledo_rockets = states['sensor.toledo_rockets']\nconst minnesota_vikings = states['sensor.minnesota_vikings']\nconst san_francisco_49ers = states['sensor.san_francisco_49ers']\nconst cleveland_guardians = states['sensor.cleveland_guardians']\nconst minnesota_twins = states['sensor.minnesota_twins']\nconst los_angeles_dodgers = states['sensor.los_angeles_dodgers']\n\nconst michigan_wolverines_inhibit = states['binary_sensor.michigan_wolverines_inhibit'].state\nconst ohio_state_buckeyes_inhibit = states['binary_sensor.ohio_state_buckeyes_inhibit'].state\nconst toledo_rockets_inhibit = states['binary_sensor.toledo_rockets_inhibit'].state\nconst minnesota_vikings_inhibit = states['binary_sensor.minnesota_vikings_inhibit'].state\nconst san_francisco_49ers_inhibit = states['binary_sensor.san_francisco_49ers_inhibit'].state\nconst cleveland_guardians_inhibit = states['binary_sensor.cleveland_guardians_inhibit'].state\nconst minnesota_twins_inhibit = states['binary_sensor.minnesota_twins_inhibit'].state\nconst los_angeles_dodgers_inhibit = states['binary_sensor.los_angeles_dodgers_inhibit'].state\n\nflow.set(\"michigan_wolverines\", michigan_wolverines)\nflow.set(\"ohio_state_buckeyes\", ohio_state_buckeyes)\nflow.set(\"toledo_rockets\", toledo_rockets)\nflow.set(\"minnesota_vikings\", minnesota_vikings)\nflow.set(\"san_francisco_49ers\", san_francisco_49ers)\nflow.set(\"cleveland_guardians\", cleveland_guardians)\nflow.set(\"minnesota_twins\", minnesota_twins)\nflow.set(\"los_angeles_dodgers\", los_angeles_dodgers)\n\nflow.set(\"michigan_wolverines_inhibit\", michigan_wolverines_inhibit)\nflow.set(\"ohio_state_buckeyes_inhibit\", ohio_state_buckeyes_inhibit)\nflow.set(\"toledo_rockets_inhibit\", toledo_rockets_inhibit)\nflow.set(\"minnesota_vikings_inhibit\", minnesota_vikings_inhibit)\nflow.set(\"san_francisco_49ers_inhibit\", san_francisco_49ers_inhibit)\nflow.set(\"cleveland_guardians_inhibit\", cleveland_guardians_inhibit)\nflow.set(\"minnesota_twins_inhibit\", minnesota_twins_inhibit)\nflow.set(\"los_angeles_dodgers_inhibit\", los_angeles_dodgers_inhibit)",
+        "outputs": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9fc99add99a3f446",
+        "type": "inject",
+        "z": "fc6801ef8637d652",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 420,
+        "y": 540,
+        "wires": [
+            [
+                "99c8d72f9eb4be38"
+            ]
+        ]
+    },
+    {
+        "id": "ad4b477f8c3a8975",
+        "type": "debug",
+        "z": "fc6801ef8637d652",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "99c8d72f9eb4be38",
+        "type": "function",
+        "z": "fc6801ef8637d652",
+        "name": "Test",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst team = msg.activeEvent\nconst lower = team.toLowerCase()\nconst convert = lower.replaceAll(\" \", \"_\")\nconst sensor = \"sensor.\" + convert\nconst getInhibitSensor = \"binary_sensor.\" + convert + \"_inhibit\"\nconst inhibit = states[getInhibitSensor].state\nconst teamSensor = states[sensor]\n\nflow.set(\"team\", convert)\nflow.set(\"inhibit\", inhibit)\nflow.set(\"teamSensor\", teamSensor)\n\nnode.status({fill:\"green\",shape:\"dot\",text:\"Team: \" + team})",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 540,
+        "wires": [
+            [
+                "ad4b477f8c3a8975"
+            ]
+        ]
+    },
+    {
+        "id": "c35b3d83bae3bdb4",
+        "type": "comment",
+        "z": "fc6801ef8637d652",
+        "name": "Figure out a way to make this menu only show applicable events",
+        "info": "",
+        "x": 650,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "eee6c6f985bbcc1e",
+        "type": "comment",
+        "z": "fc6801ef8637d652",
+        "name": "Reliably catch score changes",
+        "info": "",
+        "x": 480,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9a84cbc92735cb88",
+        "type": "comment",
+        "z": "fc6801ef8637d652",
+        "name": "Allow this to init the flow based on selected team",
+        "info": "",
+        "x": 580,
+        "y": 220,
+        "wires": []
     },
     {
         "id": "1031080bdf3b95bf",
