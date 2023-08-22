@@ -746,7 +746,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 719,
+        "y": 759,
         "w": 1552,
         "h": 642
     },
@@ -763,7 +763,6 @@
             "314752dbc6fd170d",
             "d7261338e6b907f1",
             "bf1b0d6542ef6b38",
-            "dc440dfc78c41b8a",
             "1aa901d26ce8ac46",
             "21001f5409130f44",
             "bc592ba259667f9d",
@@ -774,7 +773,6 @@
             "bcba065aa5ecb2be",
             "10d9b30654ef759c",
             "6c06c2eec1583c66",
-            "0c680585239e7f60",
             "e2581a5f3f4888df",
             "1dfb0bcc98f1457b",
             "096369136e9e607f",
@@ -793,12 +791,15 @@
             "53c58cce51d4596a",
             "ce204e8dd5784824",
             "26f2f56e5abe7f25",
-            "cbe37fd5b5fc4381"
+            "cbe37fd5b5fc4381",
+            "5def5d2440e767b3",
+            "d153c7a7f050ce84",
+            "563907e1231aa3e0"
         ],
         "x": 14,
-        "y": 39,
+        "y": 11.5,
         "w": 1252,
-        "h": 662
+        "h": 729.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -980,9 +981,7 @@
             "f111c40459e27629"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1272,
-        "h": 502
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1305,9 +1304,7 @@
             "e59180a1a6ae0a90"
         ],
         "x": 1094,
-        "y": 659,
-        "w": 632,
-        "h": 82
+        "y": 659
     },
     {
         "id": "265593f442864b6a",
@@ -1547,9 +1544,7 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1192,
-        "h": 502
+        "y": 539
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -16136,7 +16131,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 170,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
                 "a10629857d60f774"
@@ -16204,7 +16199,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 180,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
                 "a10629857d60f774"
@@ -16272,7 +16267,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 170,
-        "y": 340,
+        "y": 300,
         "wires": [
             [
                 "a10629857d60f774"
@@ -16302,7 +16297,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 740,
-        "y": 320,
+        "y": 280,
         "wires": [
             []
         ]
@@ -16368,7 +16363,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 820,
+        "y": 860,
         "wires": [
             [
                 "d6b56cb65c2ff140"
@@ -16436,7 +16431,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 880,
+        "y": 920,
         "wires": [
             [
                 "d6b56cb65c2ff140"
@@ -16462,7 +16457,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 695,
-        "y": 1080,
+        "y": 1120,
         "wires": [
             [
                 "6418c17768ed363d"
@@ -16493,7 +16488,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 820,
-        "y": 1080,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -16522,7 +16517,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 800,
-        "y": 1320,
+        "y": 1360,
         "wires": [
             [
                 "3937c38bc1bd0ee0"
@@ -16552,7 +16547,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 640,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             [
                 "43ea4107912bf0f2"
@@ -16582,7 +16577,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 670,
-        "y": 960,
+        "y": 1000,
         "wires": [
             [
                 "a6f4af0aaabcc2c1"
@@ -16612,7 +16607,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 830,
-        "y": 960,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -16624,26 +16619,9 @@
         "g": "39a7ac02f2727f1d",
         "name": "",
         "x": 1020,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "dc440dfc78c41b8a",
-        "type": "link in",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Good Morning - Climate",
-        "links": [
-            "5c9c73b7adb72896"
-        ],
-        "x": 415,
-        "y": 280,
-        "wires": [
-            [
-                "a10629857d60f774"
-            ]
         ]
     },
     {
@@ -16683,7 +16661,7 @@
             }
         ],
         "x": 200,
-        "y": 400,
+        "y": 360,
         "wires": [
             [
                 "a10629857d60f774"
@@ -16727,7 +16705,7 @@
             }
         ],
         "x": 210,
-        "y": 460,
+        "y": 420,
         "wires": [
             [
                 "a10629857d60f774"
@@ -16771,7 +16749,7 @@
             }
         ],
         "x": 190,
-        "y": 160,
+        "y": 120,
         "wires": [
             [
                 "a10629857d60f774"
@@ -16783,12 +16761,13 @@
         "type": "link in",
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
-        "name": "Goodnight - Climate",
+        "name": "Master Bedroom Climate - Input",
         "links": [
-            "028351e8c4e2faf5"
+            "028351e8c4e2faf5",
+            "5c9c73b7adb72896"
         ],
         "x": 265,
-        "y": 100,
+        "y": 480,
         "wires": [
             [
                 "a10629857d60f774"
@@ -16805,7 +16784,7 @@
             "31b8c8291d19ffc6"
         ],
         "x": 125,
-        "y": 540,
+        "y": 580,
         "wires": [
             [
                 "ce5d8005cbf08144"
@@ -16835,7 +16814,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 540,
-        "y": 500,
+        "y": 540,
         "wires": [
             [
                 "66e85878d60c7d65"
@@ -16865,7 +16844,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 700,
-        "y": 500,
+        "y": 540,
         "wires": [
             [
                 "bcba065aa5ecb2be"
@@ -16895,7 +16874,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 860,
-        "y": 500,
+        "y": 540,
         "wires": [
             []
         ]
@@ -16923,7 +16902,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 750,
-        "y": 380,
+        "y": 340,
         "wires": [
             []
         ]
@@ -16936,18 +16915,7 @@
         "name": "Shower Mode",
         "info": "",
         "x": 290,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "0c680585239e7f60",
-        "type": "comment",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Goodnight",
-        "info": "",
-        "x": 100,
-        "y": 80,
+        "y": 700,
         "wires": []
     },
     {
@@ -16958,7 +16926,7 @@
         "name": "Main Flow",
         "info": "",
         "x": 540,
-        "y": 260,
+        "y": 220,
         "wires": []
     },
     {
@@ -16984,7 +16952,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1010,
-        "y": 620,
+        "y": 660,
         "wires": [
             [
                 "096369136e9e607f"
@@ -17014,7 +16982,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1180,
-        "y": 620,
+        "y": 660,
         "wires": [
             []
         ]
@@ -17038,7 +17006,7 @@
             }
         ],
         "x": 830,
-        "y": 620,
+        "y": 660,
         "wires": [
             [
                 "1dfb0bcc98f1457b"
@@ -17077,7 +17045,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 700,
-        "y": 880,
+        "y": 920,
         "wires": [
             [
                 "62211bf089bc5b04"
@@ -17110,7 +17078,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1240,
-        "y": 880,
+        "y": 920,
         "wires": [
             [
                 "7b390a3b24fc3197"
@@ -17142,7 +17110,7 @@
             }
         ],
         "x": 120,
-        "y": 760,
+        "y": 800,
         "wires": [
             [
                 "d6b56cb65c2ff140"
@@ -17170,7 +17138,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 940,
-        "y": 440,
+        "y": 400,
         "wires": [
             []
         ]
@@ -17198,7 +17166,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 700,
-        "y": 760,
+        "y": 800,
         "wires": [
             []
         ]
@@ -17254,7 +17222,7 @@
             }
         ],
         "x": 110,
-        "y": 940,
+        "y": 980,
         "wires": [
             [
                 "61405a43f61f3d60"
@@ -17275,7 +17243,7 @@
         "templateLocation": "",
         "templateLocationType": "none",
         "x": 810,
-        "y": 1140,
+        "y": 1180,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -17296,7 +17264,7 @@
         "templateLocation": "",
         "templateLocationType": "none",
         "x": 810,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -17317,7 +17285,7 @@
         "templateLocation": "",
         "templateLocationType": "none",
         "x": 810,
-        "y": 1260,
+        "y": 1300,
         "wires": [
             [
                 "b4dbbf788c5a30d2"
@@ -17373,7 +17341,7 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "b371dfa2ee57b577"
@@ -17412,7 +17380,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 695,
-        "y": 1020,
+        "y": 1060,
         "wires": [
             [
                 "1c98de289e42377f"
@@ -17444,7 +17412,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 830,
-        "y": 1020,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -17455,14 +17423,14 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Processing",
-        "func": "// pull in the necessary information\n\nconst states = global.get('homeassistant.homeAssistant.states')\nconst allowed = states['input_boolean.master_bedroom_nighttime_protocol'].state\nconst ac = global.get('mb_aircon_installed')\nconst temp = global.get(\"tempStr\")\nconst time = msg.time\nconst type = msg.type\nconst topic = msg.topic\nconst vacation = states['input_boolean.vacation_mode'].state\nconst highTemp = states['sensor.today_corrected_high_temp'].state\nconst dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nconst nightTemp = states['input_number.master_bedroom_night_temp'].state\nconst bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nconst showerMode = states['input_boolean.shower_mode'].state\nconst nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\nconst fanMode = states['input_select.scheduled_climate_mode_master_bedroom_fan'].state\nconst acMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nconst sleeping = states['input_boolean.master_bedroom_sleeping'].state\nconst hotDay = states['input_boolean.hot_day'].state\nconst heatWarning = states[\"binary_sensor.heat_warning\"].state\nconst showerCooldown = states[\"timer.shower_mode_cooldown\"].state\nconst earlyNight = states[\"binary_sensor.early_night_mode\"].state\n\n// define variables\n\nlet setTemp = []\nlet setEco = []\nlet setHvac = []\nlet setFan = []\nlet setBool = []\n\n// decision logic\n\nif (time === 'day') {\n    if (type === 'auto') {\n        setBool = 'off'\n    }\n    if (earlyNight === 'off') {\n        setFan = \"off\"\n        if (ac === 'on') {\n            if (hotDay === 'on' || heatWarning === 'on') {\n                setTemp = dayTemp\n                setEco = \"eco\"\n                setHvac = \"cool\"\n            } else {\n                setTemp = nightTemp\n                setEco = \"eco\"\n                setHvac = \"off\"\n            }\n        }\n    } else if (earlyNight === 'on') {\n        setTemp = nightTemp\n        if (fanMode === 'Fan') {\n            setFan = 'on'\n        } else {\n            setFan = 'off'\n        }\n        if (acMode === 'AC') {\n            setHvac = 'cool'\n        } else if (acMode === 'fan') {\n            setHvac = 'fan_only'\n        } else {\n            setHvac = 'off'\n        }\n        if (hotDay === 'on') {\n            setEco = 'off'\n        } else {\n            setEco = 'on'\n        }\n    }\n} else if (time === 'night') {\n    if (type === 'auto') {\n        setBool = 'on'\n    }\n    if (ac === 'on') {\n        setTemp = nightTemp\n        if (acMode === 'AC') {\n            setEco = 'eco'\n            setHvac = 'cool'\n            if (hotDay === 'on' || sleeping === 'on') {\n                setEco = 'none'\n            }\n        } else if (acMode === 'Fan') {\n            setHvac = 'fan_only'\n        } else {\n            setHvac = 'off'\n        }\n    }\n    if (fanMode === 'Fan') {\n        setFan = 'on'\n    } else {\n        setFan = 'off'\n    }\n} else if (time === 'bedtime') {\n    if (ac === 'on') {\n        setTemp = bedTemp\n        setEco = 'none'\n        if (acMode === 'AC') {\n            setHvac = 'cool'\n        } else if (acMode === 'Fan') {\n            setHvac = \"fan_only\"\n        }\n    }\n    if (fanMode === 'Fan') {\n        setFan = 'on'\n    } else {\n        setFan = 'off'\n    }\n}\n\nlet sendFan = {\n    \"fan\": setFan\n}\n\nlet sendBool = {\n    \"bool\": setBool\n}\n\nlet notify = {\n    \"topic\": topic,\n    \"nighttemp\": nightTemp,\n    \"acmode\": acMode,\n    \"fanmode\": fanMode\n}\n\nlet sendHvac = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_hvac_mode\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"hvac_mode\": setHvac\n        }\n    }\n}\n\nlet sendTemp = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_temperature\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"temperature\": setTemp\n        }\n    }\n}\n\nlet sendEco = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_preset_mode\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"preset_mode\": setEco\n        }\n    }\n}\n\nlet sendAcFan = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_fan_mode\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"fan_mode\": \"Auto\"\n        }\n    }\n}\n\nif (type === 'auto' && time != 'bedtime') {\n    node.send([null, null, sendBool])\n}\n\nif ((type === 'auto' && allowed === 'on') || type === 'manual') {\n    if (sleeping === 'on' && type === 'auto' && time != 'bedtime') {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Blocked (sleep mode)\" })\n    } else if (vacation === 'off') {\n        if (topic === 'mrbedroom-cooling' && ac === 'on') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Cooling Schedule\" })\n            node.send([[sendHvac, sendTemp, sendEco, sendAcFan], null, null]);\n        } else if (time === 'bedtime') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Bedtime\"})\n            node.send([[sendHvac,sendTemp,sendEco,sendAcFan],sendFan,null]);\n        } else if (topic === 'manual-night') {\n            if (fanMode === 'Fan') {\n                node.status({ fill: \"blue\", shape: \"dot\", text: \"Manual Night (Fan)\" })\n                node.send([null, sendFan, null])\n            } else {\n                node.status({ fill: \"blue\", shape: \"dot\", text: \"Manual Night (No Fan)\" })\n                node.send([null, sendFan, null])\n            }\n        } else if (topic === 'mrbedroom-fan' && fanMode == 'Fan') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Fan Schedule\" })\n            node.send([null, sendFan, null])\n        } else if (topic === 'mrbedroom-wakeup') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Wakeup Schedule\" })\n            node.send([[sendHvac, sendTemp, sendEco, sendAcFan], sendFan, null])\n        } else if (topic === 'manual-day') {\n            node.status({ fill: \"blue\", shape: \"dot\", text: \"Manual Day\" })\n            node.send([[sendHvac, sendTemp, sendEco, sendAcFan], sendFan, null])\n        }\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Automation Disabled\" })\n}\n",
+        "func": "// pull in the necessary information\n\nconst states = global.get('homeassistant.homeAssistant.states')\nconst allowed = states['input_boolean.master_bedroom_climate_protocol'].state\nconst ac = global.get('mb_aircon_installed')\nconst temp = global.get(\"tempStr\")\nconst time = msg.time\nconst type = msg.type\nconst topic = msg.topic\nconst vacation = states['input_boolean.vacation_mode'].state\nconst highTemp = states['sensor.today_corrected_high_temp'].state\nconst dayTemp = states['input_number.master_bedroom_daytime_temp'].state\nconst nightTemp = states['input_number.master_bedroom_night_temp'].state\nconst bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nconst showerMode = states['input_boolean.shower_mode'].state\nconst nightVolume = states['input_number.master_bedroom_echo_dot_night_volume'].state\nconst fanMode = states['input_select.scheduled_climate_mode_master_bedroom_fan'].state\nconst acMode = states['input_select.scheduled_climate_mode_master_bedroom_aircon'].state\nconst sleeping = states['input_boolean.master_bedroom_sleeping'].state\nconst hotDay = states['input_boolean.hot_day'].state\nconst heatWarning = states[\"binary_sensor.heat_warning\"].state\nconst showerCooldown = states[\"timer.shower_mode_cooldown\"].state\nconst earlyNight = states[\"binary_sensor.early_night_mode\"].state\nconst danger = states['binary_sensor.heat_warning'].attributes.danger\n\n// define variables\n\nlet setTemp = []\nlet setEco = []\nlet setHvac = []\nlet setFan = []\nlet setBool = []\n\n// decision logic\n\nif (time === 'day') {\n    flow.set(\"lastMode\", time)\n    if (type === 'auto') {\n        setBool = 'off'\n    }\n    if (earlyNight === 'off') {\n        setFan = \"off\"\n        if (ac === 'on') {\n            if (danger === 'Extreme') {\n                setTemp = nightTemp\n                setEco = \"eco\"\n                setHvac = \"cool\"\n            } else if (hotDay === 'on' || heatWarning === 'on') {\n                setTemp = dayTemp\n                setEco = \"eco\"\n                setHvac = \"cool\"\n            } else {\n                setTemp = nightTemp\n                setEco = \"eco\"\n                setHvac = \"off\"\n            }\n        }\n    } else if (earlyNight === 'on') {\n        if (danger === 'Extreme') {\n            setTemp === bedTemp\n        } else {\n            setTemp = nightTemp\n        }\n        if (fanMode === 'Fan') {\n            setFan = 'on'\n        } else {\n            setFan = 'off'\n        }\n        if (acMode === 'AC') {\n            setHvac = 'cool'\n        } else if (acMode === 'fan') {\n            setHvac = 'fan_only'\n        } else {\n            setHvac = 'off'\n        }\n        if (hotDay === 'on') {\n            setEco = 'off'\n        } else {\n            setEco = 'on'\n        }\n    }\n} else if (time === 'night') {\n    flow.set(\"lastMode\", time)\n    if (type === 'auto') {\n        setBool = 'on'\n    }\n    if (ac === 'on') {\n        if (danger === 'Extreme') {\n            setTemp === bedTemp\n        } else {\n            setTemp = nightTemp\n        }\n        if (acMode === 'AC') {\n            setHvac = 'cool'\n            if (hotDay === 'on' || sleeping === 'on') {\n                setEco = 'none'\n            } else {\n                setEco = 'eco'\n            }\n        } else if (acMode === 'Fan') {\n            setHvac = 'fan_only'\n        } else {\n            setHvac = 'off'\n        }\n    }\n    if (fanMode === 'Fan') {\n        setFan = 'on'\n    } else {\n        setFan = 'off'\n    }\n} else if (time === 'bedtime') {\n    flow.set(\"lastMode\", time)\n    if (ac === 'on') {\n        setTemp = bedTemp\n        setEco = 'none'\n        if (acMode === 'AC') {\n            setHvac = 'cool'\n        } else if (acMode === 'Fan') {\n            setHvac = \"fan_only\"\n        }\n    }\n    if (fanMode === 'Fan') {\n        setFan = 'on'\n    } else {\n        setFan = 'off'\n    }\n}\n\nlet sendFan = {\n    \"fan\": setFan\n}\n\nlet sendBool = {\n    \"bool\": setBool\n}\n\nlet notify = {\n    \"topic\": topic,\n    \"nighttemp\": nightTemp,\n    \"acmode\": acMode,\n    \"fanmode\": fanMode\n}\n\nlet sendHvac = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_hvac_mode\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"hvac_mode\": setHvac\n        }\n    }\n}\n\nlet sendTemp = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_temperature\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"temperature\": setTemp\n        }\n    }\n}\n\nlet sendEco = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_preset_mode\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"preset_mode\": setEco\n        }\n    }\n}\n\nlet sendAcFan = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_fan_mode\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"fan_mode\": \"Auto\"\n        }\n    }\n}\n\nif (type === 'auto' && time != 'bedtime') {\n    node.send([null, null, sendBool, null])\n}\n\nif ((type === 'auto' && allowed === 'on' && danger === 'off') || type === 'manual') {\n    if (sleeping === 'on' && type === 'auto' && time != 'bedtime') {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Blocked (sleep mode)\" })\n    } else if (vacation === 'off') {\n        if (topic === 'mrbedroom-cooling' && ac === 'on') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Cooling Schedule\" })\n            node.send([[sendHvac, sendTemp, sendEco, sendAcFan], null, null]);\n        } else if (time === 'bedtime') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"Bedtime\"})\n            node.send([[sendHvac,sendTemp,sendEco,sendAcFan],sendFan,null,null]);\n        } else if (topic === 'manual-night') {\n            if (fanMode === 'Fan') {\n                node.status({ fill: \"blue\", shape: \"dot\", text: \"Manual Night (Fan)\" })\n                node.send([null, sendFan, null, null])\n            } else {\n                node.status({ fill: \"blue\", shape: \"dot\", text: \"Manual Night (No Fan)\" })\n                node.send([null, sendFan, null, null])\n            }\n        } else if (topic === 'mrbedroom-fan' && fanMode == 'Fan') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Fan Schedule\" })\n            node.send([null, sendFan, null, null])\n        } else if (topic === 'mrbedroom-wakeup') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Wakeup Schedule\" })\n            node.send([[sendHvac, sendTemp, sendEco, sendAcFan], sendFan, null, null])\n        } else if (topic === 'manual-day') {\n            node.status({ fill: \"blue\", shape: \"dot\", text: \"Manual Day\" })\n            node.send([[sendHvac, sendTemp, sendEco, sendAcFan], sendFan, null, null])\n        }\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Automation Disabled\" })\n}\n",
         "outputs": 4,
         "noerr": 0,
-        "initialize": "",
+        "initialize": "const states = global.get('homeassistant.homeAssistant.states')\nconst cooling = states['input_boolean.master_bedroom_cooling_on'].state\nconst sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nlet lastMode = []\n\nif (sleeping === 'on') {\n    lastMode = 'bedtime'\n} else if (cooling === 'on') {\n    lastMode = 'night'\n} else {\n    lastMode = 'day'\n}\n\nflow.set(\"lastMode\", lastMode)",
         "finalize": "",
         "libs": [],
         "x": 550,
-        "y": 320,
+        "y": 280,
         "wires": [
             [
                 "cbe37fd5b5fc4381"
@@ -17498,7 +17466,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 440,
+        "y": 400,
         "wires": [
             [
                 "1eb13d819ba7e226"
@@ -17518,7 +17486,7 @@
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 500,
+        "y": 540,
         "wires": [
             [
                 "f541ad53e32f703b"
@@ -17539,7 +17507,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 940,
+        "y": 980,
         "wires": [
             [
                 "d6b56cb65c2ff140"
@@ -17576,7 +17544,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             [
                 "2f3666d288d77ad1",
@@ -17621,7 +17589,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 210,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             [
                 "af209a80e9174433"
@@ -17651,7 +17619,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1010,
-        "y": 880,
+        "y": 920,
         "wires": [
             [
                 "d0dacbae4513b1ad"
@@ -17677,7 +17645,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1135,
-        "y": 880,
+        "y": 920,
         "wires": [
             [
                 "acb52adc50d34045"
@@ -17704,7 +17672,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1345,
-        "y": 880,
+        "y": 920,
         "wires": [
             [
                 "a417e93366843249"
@@ -17735,7 +17703,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1470,
-        "y": 880,
+        "y": 920,
         "wires": [
             []
         ]
@@ -17772,7 +17740,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 255,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "61405a43f61f3d60"
@@ -17799,7 +17767,7 @@
         "templateLocation": "",
         "templateLocationType": "none",
         "x": 635,
-        "y": 820,
+        "y": 860,
         "wires": [
             [
                 "a8070806c0f88856"
@@ -17830,7 +17798,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 770,
-        "y": 820,
+        "y": 860,
         "wires": [
             []
         ]
@@ -17858,7 +17826,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 980,
-        "y": 1320,
+        "y": 1360,
         "wires": [
             []
         ]
@@ -17877,7 +17845,7 @@
         "templateLocation": "",
         "templateLocationType": "none",
         "x": 95,
-        "y": 1200,
+        "y": 1240,
         "wires": [
             [
                 "274d63b8df8f2dd0"
@@ -17917,7 +17885,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 860,
-        "y": 900,
+        "y": 940,
         "wires": [
             [
                 "62211bf089bc5b04"
@@ -17962,7 +17930,7 @@
             }
         ],
         "x": 120,
-        "y": 600,
+        "y": 640,
         "wires": [
             [
                 "ce5d8005cbf08144"
@@ -17993,7 +17961,7 @@
         "repair": false,
         "outputs": 2,
         "x": 255,
-        "y": 540,
+        "y": 580,
         "wires": [
             [
                 "9c01880c6319d29b"
@@ -18021,7 +17989,7 @@
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 580,
+        "y": 620,
         "wires": [
             [
                 "01c0448b4889d754"
@@ -18058,7 +18026,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 530,
-        "y": 560,
+        "y": 600,
         "wires": [
             [
                 "17b6f73d75f480fd"
@@ -18088,7 +18056,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 690,
-        "y": 560,
+        "y": 600,
         "wires": [
             [
                 "7852593ec89f150a"
@@ -18118,7 +18086,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 860,
-        "y": 560,
+        "y": 600,
         "wires": [
             []
         ]
@@ -18146,7 +18114,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 550,
-        "y": 620,
+        "y": 660,
         "wires": [
             []
         ]
@@ -18160,7 +18128,7 @@
         "scope": null,
         "uncaught": false,
         "x": 980,
-        "y": 340,
+        "y": 300,
         "wires": [
             [
                 "ce204e8dd5784824",
@@ -18189,7 +18157,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 1150,
-        "y": 340,
+        "y": 300,
         "wires": [
             []
         ]
@@ -18207,7 +18175,7 @@
         "overwriteFile": "false",
         "encoding": "none",
         "x": 1150,
-        "y": 400,
+        "y": 360,
         "wires": [
             []
         ]
@@ -18233,10 +18201,111 @@
         "outputProperties": [],
         "queue": "none",
         "x": 750,
-        "y": 260,
+        "y": 220,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "5def5d2440e767b3",
+        "type": "server-state-changed",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Meltdown Protocol",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.meltdown_protocol",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "danger",
+                "propertyType": "flow",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 190,
+        "y": 60,
+        "wires": [
+            [
+                "d153c7a7f050ce84"
+            ]
+        ]
+    },
+    {
+        "id": "d153c7a7f050ce84",
+        "type": "function",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Meltdown Center",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst toggle = msg.payload\nconst ac = global.get('mb_aircon_installed')\nconst lastMode = flow.get(\"lastMode\")\nconst bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\n\nlet setTemp = bedTemp\nlet setEco = 'none'\nlet setHvac = 'cool'\nlet setAcFan = 'High'\nlet setFan = 'on'\nlet setTime = []\nlet setType = []\nlet setTopic = []\n\nif (lastMode === 'day') {\n    setTime = 'day'\n    setType = 'manual'\n    setTopic = 'manual-day'\n} else if (lastMode === 'night') {\n    setTime = 'night'\n    setType = 'manual'\n    setTopic = 'manual-night'\n} else if (lastMode === 'bedtime') {\n    setTime = 'bedtime'\n    setType = 'manual'\n    setTopic = 'manual-bedtime'\n}\n\nlet sendFan = {\n    \"fan\": setFan\n}\n\nlet sendHvac = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_hvac_mode\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"hvac_mode\": setHvac\n        }\n    }\n}\n\nlet sendTemp = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_temperature\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"temperature\": setTemp\n        }\n    }\n}\n\nlet sendEco = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_preset_mode\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"preset_mode\": setEco\n        }\n    }\n}\n\nlet sendAcFan = {\n    \"payload\": {\n        \"domain\": \"climate\",\n        \"service\": \"set_fan_mode\",\n        \"target\": {\n            \"entity_id\": [\"climate.master_bedroom_aircon\"]\n        },\n        \"data\": {\n            \"fan_mode\": setAcFan\n        }\n    }\n}\n\nlet reset = {\n    \"type\": setType,\n    \"time\": setTime,\n    \"topic\": setTopic\n}\n\nif (toggle === 'on') {\n    node.status({fill:\"red\",shape:\"dot\",text:\"DANGER MODE ACTIVE\"})\n    node.send([null,sendFan,null])\n    if (ac === 'on') {\n        node.send([[sendHvac,sendTemp,sendEco,sendTemp],null,null])\n    }\n} else {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Danger Mode Off\"})\n    node.send([null,null,reset])\n}",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 60,
+        "wires": [
+            [
+                "cbe37fd5b5fc4381"
+            ],
+            [
+                "bf1b0d6542ef6b38"
+            ],
+            [
+                "a10629857d60f774"
+            ]
+        ],
+        "outputLabels": [
+            "On (AC)",
+            "On (Fan)",
+            "Off"
+        ],
+        "icon": "node-red-contrib-huemagic/hue-temperature.svg"
+    },
+    {
+        "id": "563907e1231aa3e0",
+        "type": "comment",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Figure out way to update lastMode across restarts",
+        "info": "",
+        "x": 740,
+        "y": 60,
+        "wires": []
     },
     {
         "id": "9256f78107619596",
@@ -19693,7 +19762,7 @@
         "name": "Good Morning Output",
         "mode": "link",
         "links": [
-            "dc440dfc78c41b8a"
+            "bc592ba259667f9d"
         ],
         "x": 675,
         "y": 60,
