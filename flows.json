@@ -754,7 +754,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 759
+        "y": 759,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -803,7 +805,9 @@
             "563907e1231aa3e0"
         ],
         "x": 14,
-        "y": 11.5
+        "y": 11.5,
+        "w": 1252,
+        "h": 729.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -843,7 +847,9 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179
+        "y": 179,
+        "w": 1292,
+        "h": 382
     },
     {
         "id": "477e752fcd2e2a19",
@@ -862,9 +868,7 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1192,
-        "h": 82
+        "y": 39
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -885,9 +889,7 @@
             "0107164ee7ff63d6"
         ],
         "x": 14,
-        "y": 139,
-        "w": 1072,
-        "h": 142
+        "y": 139
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -989,7 +991,9 @@
             "f111c40459e27629"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1272,
+        "h": 502
     },
     {
         "id": "208284848b13b85b",
@@ -1064,9 +1068,7 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 299,
-        "w": 1152,
-        "h": 242
+        "y": 299
     },
     {
         "id": "eeafd13be593ae69",
@@ -1331,7 +1333,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579
+        "y": 579,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "4886967d0f8c0156",
@@ -1391,7 +1395,9 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 672,
+        "h": 222
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1409,7 +1415,9 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "88f099618e56926d",
@@ -1491,7 +1499,9 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "31767ffd6a647579",
@@ -1554,7 +1564,9 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1192,
+        "h": 502
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -1570,7 +1582,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1612,7 +1626,36 @@
             "f260e2410571356a"
         ],
         "x": 34,
-        "y": 139
+        "y": 139,
+        "w": 1592,
+        "h": 422
+    },
+    {
+        "id": "395da9d5d5f7e232",
+        "type": "group",
+        "z": "d49b385d8b582b20",
+        "name": "Context Examples",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c80bec9a15b703f6",
+            "8687551e01cd2045",
+            "103b03c39c8d9cae",
+            "c043cba9f34ba574",
+            "e674c706437cc0f3",
+            "11f8fb75d4c4e6c0",
+            "1346e34e8c83b2dc",
+            "62d522a844321ef9",
+            "6d109daff443dade",
+            "4e1848c867860d5f",
+            "3102e176923a8fad"
+        ],
+        "x": 674,
+        "y": 499,
+        "w": 732,
+        "h": 282,
+        "info": "https://stackoverflow.com/a/74399359"
     },
     {
         "id": "fba69dfc80829db7",
@@ -24417,56 +24460,14 @@
         ]
     },
     {
-        "id": "b92ebb91debbb2a2",
-        "type": "inject",
-        "z": "fc6801ef8637d652",
-        "d": true,
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 180,
-        "y": 100,
-        "wires": [
-            [
-                "5f6f9d804eb17269"
-            ]
-        ]
-    },
-    {
-        "id": "5f6f9d804eb17269",
-        "type": "function",
-        "z": "fc6801ef8637d652",
-        "d": true,
-        "name": "Init",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst michigan_wolverines = states['sensor.michigan_wolverines']\nconst ohio_state_buckeyes = states['sensor.ohio_state_buckeyes']\nconst toledo_rockets = states['sensor.toledo_rockets']\nconst minnesota_vikings = states['sensor.minnesota_vikings']\nconst san_francisco_49ers = states['sensor.san_francisco_49ers']\nconst cleveland_guardians = states['sensor.cleveland_guardians']\nconst minnesota_twins = states['sensor.minnesota_twins']\nconst los_angeles_dodgers = states['sensor.los_angeles_dodgers']\n\nconst michigan_wolverines_inhibit = states['binary_sensor.michigan_wolverines_inhibit'].state\nconst ohio_state_buckeyes_inhibit = states['binary_sensor.ohio_state_buckeyes_inhibit'].state\nconst toledo_rockets_inhibit = states['binary_sensor.toledo_rockets_inhibit'].state\nconst minnesota_vikings_inhibit = states['binary_sensor.minnesota_vikings_inhibit'].state\nconst san_francisco_49ers_inhibit = states['binary_sensor.san_francisco_49ers_inhibit'].state\nconst cleveland_guardians_inhibit = states['binary_sensor.cleveland_guardians_inhibit'].state\nconst minnesota_twins_inhibit = states['binary_sensor.minnesota_twins_inhibit'].state\nconst los_angeles_dodgers_inhibit = states['binary_sensor.los_angeles_dodgers_inhibit'].state\n\nflow.set(\"michigan_wolverines\", michigan_wolverines)\nflow.set(\"ohio_state_buckeyes\", ohio_state_buckeyes)\nflow.set(\"toledo_rockets\", toledo_rockets)\nflow.set(\"minnesota_vikings\", minnesota_vikings)\nflow.set(\"san_francisco_49ers\", san_francisco_49ers)\nflow.set(\"cleveland_guardians\", cleveland_guardians)\nflow.set(\"minnesota_twins\", minnesota_twins)\nflow.set(\"los_angeles_dodgers\", los_angeles_dodgers)\n\nflow.set(\"michigan_wolverines_inhibit\", michigan_wolverines_inhibit)\nflow.set(\"ohio_state_buckeyes_inhibit\", ohio_state_buckeyes_inhibit)\nflow.set(\"toledo_rockets_inhibit\", toledo_rockets_inhibit)\nflow.set(\"minnesota_vikings_inhibit\", minnesota_vikings_inhibit)\nflow.set(\"san_francisco_49ers_inhibit\", san_francisco_49ers_inhibit)\nflow.set(\"cleveland_guardians_inhibit\", cleveland_guardians_inhibit)\nflow.set(\"minnesota_twins_inhibit\", minnesota_twins_inhibit)\nflow.set(\"los_angeles_dodgers_inhibit\", los_angeles_dodgers_inhibit)",
-        "outputs": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 100,
-        "wires": []
-    },
-    {
         "id": "99c8d72f9eb4be38",
         "type": "function",
         "z": "fc6801ef8637d652",
         "name": "Init",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst team = msg.activeEvent\nconst lower = team.toLowerCase()\nconst convert = lower.replaceAll(\" \", \"_\")\nconst sensor = \"sensor.\" + convert\nconst getInhibitSensor = \"binary_sensor.\" + convert + \"_inhibit\"\nconst inhibit = states[getInhibitSensor].state\nconst teamSensor = states[sensor]\n\nflow.set(\"team\", convert)\nflow.set(\"inhibit\", inhibit)\nflow.set(\"teamSensor\", teamSensor)\n\nnode.status({fill:\"green\",shape:\"dot\",text:\"Team: \" + team})",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst team = msg.activeEvent\n\nif (team === 'No events today') {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"No events today\" })\n    node.done\n} else {\n    const lower = team.toLowerCase()\n    const convert = lower.replaceAll(\" \", \"_\")\n    const sensor = \"sensor.\" + convert\n    const getInhibitSensor = \"binary_sensor.\" + convert + \"_inhibit\"\n    const inhibit = states[getInhibitSensor].state\n    const teamSensor = states[sensor]\n\n    flow.set(\"team\", convert)\n    flow.set(\"inhibit\", inhibit)\n    flow.set(\"teamSensor\", teamSensor)\n    \n    node.status({fill:\"green\",shape:\"dot\",text:\"Team: \" + team})\n    node.log(\"Active sports team changed to \" + team)\n}",
         "outputs": 0,
         "noerr": 0,
-        "initialize": "",
+        "initialize": "const teams = [\"michigan_wolverines\",\n    \"ohio_state_buckeyes\",\n    \"toledo_rockets\",\n    \"minnesota_vikings\",\n    \"san_francisco_49ers\",\n    \"cleveland_guardians\",\n    \"minnesota_twins\",\n    \"los_angeles_dodgers\"]\n\nconst michigan_wolverines = ['sensor.michigan_wolverines', 'binary_sensor.michigan_wolverines_inhibit']\nconst ohio_state_buckeyes = ['sensor.ohio_state_buckeyes', 'binary_sensor.ohio_state_buckeyes_inhibit']\nconst toledo_rockets = ['sensor.toledo_rockets', 'binary_sensor.toledo_rockets_inhibit']\nconst minnesota_vikings = ['sensor.minnesota_vikings', 'binary_sensor.minnesota_vikings_inhibit']\nconst san_francisco_49ers = ['sensor.san_francisco_49ers', 'binary_sensor.san_francisco_49ers_inhibit']\nconst cleveland_guardians = ['sensor.cleveland_guardians', 'binary_sensor.cleveland_guardians_inhibit']\nconst minnesota_twins = ['sensor.minnesota_twins', 'binary_sensor.minnesota_twins_inhibit']\nconst los_angeles_dodgers = ['sensor.los_angeles_dodgers', 'binary_sensor.los_angeles_dodgers_inhibit']\n\nflow.set(\"teams\", teams)\nflow.set(\"michigan_wolverines\", michigan_wolverines)\nflow.set(\"ohio_state_buckeyes\", ohio_state_buckeyes)\nflow.set(\"toledo_rockets\", toledo_rockets)\nflow.set(\"minnesota_vikings\", minnesota_vikings)\nflow.set(\"san_francisco_49ers\", san_francisco_49ers)\nflow.set(\"cleveland_guardians\", cleveland_guardians)\nflow.set(\"minnesota_twins\", minnesota_twins)\nflow.set(\"los_angeles_dodgers\", los_angeles_dodgers)",
         "finalize": "",
         "libs": [],
         "x": 690,
@@ -24475,23 +24476,13 @@
         "icon": "font-awesome/fa-hourglass-start"
     },
     {
-        "id": "c35b3d83bae3bdb4",
-        "type": "comment",
-        "z": "fc6801ef8637d652",
-        "name": "Figure out a way to make this menu only show applicable events",
-        "info": "",
-        "x": 870,
-        "y": 300,
-        "wires": []
-    },
-    {
         "id": "eee6c6f985bbcc1e",
         "type": "comment",
         "z": "fc6801ef8637d652",
         "name": "Reliably catch score changes",
         "info": "",
-        "x": 760,
-        "y": 360,
+        "x": 300,
+        "y": 460,
         "wires": []
     },
     {
@@ -24536,6 +24527,65 @@
         "wires": [
             [
                 "99c8d72f9eb4be38"
+            ]
+        ]
+    },
+    {
+        "id": "aedcd3658f94590d",
+        "type": "inject",
+        "z": "fc6801ef8637d652",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "60",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 60,
+        "wires": [
+            [
+                "518b1bb6954c11d2"
+            ]
+        ]
+    },
+    {
+        "id": "44f65019901cd6c8",
+        "type": "ha-update-config",
+        "z": "fc6801ef8637d652",
+        "name": "Update Dropdown",
+        "server": "9e87348d.9c1c48",
+        "entityConfig": "95180a63dc83b944",
+        "version": 0,
+        "outputProperties": [],
+        "x": 650,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "518b1bb6954c11d2",
+        "type": "function",
+        "z": "fc6801ef8637d652",
+        "name": "Events Today",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst teams = flow.get(\"teams\")\nlet teamsToday = []\nlet options = []\n\nfor (let index = 0; index < teams.length; index++) {\n    const element = teams[index];\n    let sensor = \"sensor.\" + element\n    let binary_today = \"binary_sensor.\" + element + \"_event_today\"\n    let binary_inhibit = \"binary_sensor.\" + element + \"_inhibit\"\n    let today = states[binary_today].state\n    let inhibit = states[binary_inhibit].state\n    let teamName = states[sensor].attributes.friendly_name\n    if (today === 'on' && inhibit === 'off') {\n        teamsToday.push(teamName)\n    }\n}\n\nflow.set(\"teamsToday\", teamsToday)\n\nif (teamsToday.length > 0) {\n    options = teamsToday\n    node.status({fill:\"green\",shape:\"dot\",text:\"Events today: \" + teamsToday.length})\n} else {\n    options = ['No events today']\n    node.status({fill:\"red\",shape:\"ring\",text:\"No events today\"});\n}\n\nmsg.payload = {\n    \"options\": options\n}\n\nnode.send(msg)\nnode.done",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 60,
+        "wires": [
+            [
+                "44f65019901cd6c8"
             ]
         ]
     },
@@ -28864,99 +28914,6 @@
         ]
     },
     {
-        "id": "f1a8fb8d.6a3778",
-        "type": "switch",
-        "z": "d49b385d8b582b20",
-        "name": "Which type?",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "issues",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 1020,
-        "y": 740,
-        "wires": [
-            [
-                "87a4a50a.221488"
-            ]
-        ]
-    },
-    {
-        "id": "87a4a50a.221488",
-        "type": "switch",
-        "z": "d49b385d8b582b20",
-        "name": "Which action?",
-        "property": "payload.action",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "opened",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 1210,
-        "y": 740,
-        "wires": [
-            [
-                "b2affab1.141348"
-            ]
-        ]
-    },
-    {
-        "id": "6620878f.e1b268",
-        "type": "github-rest-api",
-        "z": "d49b385d8b582b20",
-        "mediaType": "",
-        "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/labels",
-        "client": "060e39a6519a8c4a",
-        "name": "Add label",
-        "x": 1430,
-        "y": 760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b2affab1.141348",
-        "type": "function",
-        "z": "d49b385d8b582b20",
-        "name": "Prep API data",
-        "func": "msg.payload = {\n    \"owner\": msg.payload.repository.owner.login,\n    \"repo\": msg.payload.repository.name,\n    \"issue_number\": msg.payload.issue.number,\n    \"labels\": [\"needs-response\"]\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1410,
-        "y": 720,
-        "wires": [
-            [
-                "6620878f.e1b268"
-            ]
-        ]
-    },
-    {
-        "id": "4c17fd91.505a14",
-        "type": "comment",
-        "z": "d49b385d8b582b20",
-        "name": "Add needs-response label to new issues",
-        "info": "",
-        "x": 910,
-        "y": 680,
-        "wires": []
-    },
-    {
         "id": "0bd8c12856b7eed3",
         "type": "inject",
         "z": "d49b385d8b582b20",
@@ -29022,5 +28979,239 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "c80bec9a15b703f6",
+        "type": "inject",
+        "z": "d49b385d8b582b20",
+        "g": "395da9d5d5f7e232",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 780,
+        "y": 580,
+        "wires": [
+            [
+                "8687551e01cd2045"
+            ]
+        ]
+    },
+    {
+        "id": "8687551e01cd2045",
+        "type": "function",
+        "z": "d49b385d8b582b20",
+        "g": "395da9d5d5f7e232",
+        "name": "msg_1",
+        "func": "global.set(\"msg_1\",\"test\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "103b03c39c8d9cae",
+        "type": "debug",
+        "z": "d49b385d8b582b20",
+        "g": "395da9d5d5f7e232",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "c043cba9f34ba574",
+        "type": "inject",
+        "z": "d49b385d8b582b20",
+        "g": "395da9d5d5f7e232",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 780,
+        "y": 620,
+        "wires": [
+            [
+                "e674c706437cc0f3"
+            ]
+        ]
+    },
+    {
+        "id": "e674c706437cc0f3",
+        "type": "function",
+        "z": "d49b385d8b582b20",
+        "g": "395da9d5d5f7e232",
+        "name": "msg_2 ",
+        "func": "global.set(\"msg_2\",\"hello\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "11f8fb75d4c4e6c0",
+        "type": "inject",
+        "z": "d49b385d8b582b20",
+        "d": true,
+        "g": "395da9d5d5f7e232",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 790,
+        "y": 740,
+        "wires": [
+            [
+                "1346e34e8c83b2dc"
+            ]
+        ]
+    },
+    {
+        "id": "1346e34e8c83b2dc",
+        "type": "function",
+        "z": "d49b385d8b582b20",
+        "g": "395da9d5d5f7e232",
+        "name": "check if 2 msg set",
+        "func": "var msg1 = global.get(\"msg_1\");\nvar msg2 = global.get(\"msg_2\");\n\nif(msg1 && msg2){\n    msg.payload=\"both message arrived!\";\n}\nelse{\n    msg.payload=\"Nope. Not yet.\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 740,
+        "wires": [
+            [
+                "103b03c39c8d9cae"
+            ]
+        ]
+    },
+    {
+        "id": "62d522a844321ef9",
+        "type": "inject",
+        "z": "d49b385d8b582b20",
+        "g": "395da9d5d5f7e232",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1180,
+        "y": 580,
+        "wires": [
+            [
+                "6d109daff443dade"
+            ]
+        ]
+    },
+    {
+        "id": "6d109daff443dade",
+        "type": "function",
+        "z": "d49b385d8b582b20",
+        "g": "395da9d5d5f7e232",
+        "name": "reset",
+        "func": "global.set(\"msg_1\",null);\nglobal.set(\"msg_2\",null);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e1848c867860d5f",
+        "type": "comment",
+        "z": "d49b385d8b582b20",
+        "g": "395da9d5d5f7e232",
+        "name": "Here gonna auto-run",
+        "info": "",
+        "x": 810,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "3102e176923a8fad",
+        "type": "comment",
+        "z": "d49b385d8b582b20",
+        "g": "395da9d5d5f7e232",
+        "name": "Check what if both inject clicked",
+        "info": "",
+        "x": 850,
+        "y": 540,
+        "wires": []
     }
 ]
