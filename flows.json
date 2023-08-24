@@ -1633,8 +1633,8 @@
             "4e1848c867860d5f",
             "3102e176923a8fad"
         ],
-        "x": 674,
-        "y": 479,
+        "x": 34,
+        "y": 619,
         "w": 732,
         "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
@@ -1667,8 +1667,8 @@
             "71f5f2a1557b28ea",
             "b233bf44f92d413d"
         ],
-        "x": 54,
-        "y": 779,
+        "x": 34,
+        "y": 19,
         "w": 752,
         "h": 582
     },
@@ -1905,16 +1905,6 @@
                 "value": ""
             }
         ]
-    },
-    {
-        "id": "359a4a5e8f156ab5",
-        "type": "hue-bridge",
-        "name": "House",
-        "bridge": "192.168.1.20",
-        "key": "JKYIb8bI-owElOdf1eaZYfG022BC8JktFiijKy1G",
-        "worker": "10",
-        "autoupdates": true,
-        "disableupdates": false
     },
     {
         "id": "998d8d67ec377dd3",
@@ -28435,68 +28425,6 @@
         ]
     },
     {
-        "id": "9c86355f531c84a2",
-        "type": "hue-bridge-node",
-        "z": "d49b385d8b582b20",
-        "d": true,
-        "name": "",
-        "bridge": "359a4a5e8f156ab5",
-        "autoupdates": true,
-        "skipglobalevents": false,
-        "initevents": false,
-        "x": 310,
-        "y": 140,
-        "wires": [
-            [
-                "9b70596b25181506"
-            ]
-        ]
-    },
-    {
-        "id": "9b70596b25181506",
-        "type": "debug",
-        "z": "d49b385d8b582b20",
-        "d": true,
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 490,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "7b20f670ec9cb8c5",
-        "type": "inject",
-        "z": "d49b385d8b582b20",
-        "d": true,
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "fetch",
-        "payloadType": "str",
-        "x": 110,
-        "y": 140,
-        "wires": [
-            [
-                "9c86355f531c84a2"
-            ]
-        ]
-    },
-    {
         "id": "bf2ad73a.23bdb8",
         "type": "change",
         "z": "d49b385d8b582b20",
@@ -28515,8 +28443,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 250,
-        "y": 240,
+        "x": 1070,
+        "y": 140,
         "wires": [
             []
         ]
@@ -28545,8 +28473,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 240,
+        "x": 910,
+        "y": 140,
         "wires": [
             [
                 "bf2ad73a.23bdb8"
@@ -28569,7 +28497,7 @@
         "authType": "bearer",
         "senderr": false,
         "headers": [],
-        "x": 990,
+        "x": 1090,
         "y": 80,
         "wires": [
             [
@@ -28598,7 +28526,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 800,
+        "x": 900,
         "y": 80,
         "wires": [
             [
@@ -28619,7 +28547,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
+        "x": 1270,
         "y": 80,
         "wires": []
     },
@@ -28628,8 +28556,8 @@
         "type": "subflow:3aa2aec226246753",
         "z": "d49b385d8b582b20",
         "name": "",
-        "x": 290,
-        "y": 400,
+        "x": 1070,
+        "y": 200,
         "wires": []
     },
     {
@@ -28649,86 +28577,13 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
-        "y": 400,
+        "x": 900,
+        "y": 200,
         "wires": [
             [
                 "2a6fe7c07c6b34e1"
             ]
         ]
-    },
-    {
-        "id": "e1e9f6fcdc3bb5b0",
-        "type": "server-events",
-        "z": "d49b385d8b582b20",
-        "d": true,
-        "name": "",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "eventType": "alexa_actionable_notification",
-        "exposeToHomeAssistant": false,
-        "eventData": "",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "waitForRunning": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "$outputData(\"eventData\").event_type",
-                "valueType": "jsonata"
-            }
-        ],
-        "event_type": "",
-        "x": 680,
-        "y": 320,
-        "wires": [
-            [
-                "4b2ffb86973bb4be"
-            ]
-        ]
-    },
-    {
-        "id": "4b2ffb86973bb4be",
-        "type": "debug",
-        "z": "d49b385d8b582b20",
-        "d": true,
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "87a6983fc1885649",
-        "type": "comment",
-        "z": "d49b385d8b582b20",
-        "name": "Alexa Actionable Notifications Tester",
-        "info": "",
-        "x": 800,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "77ba0ad52b2a9e2e",
@@ -28766,8 +28621,8 @@
             }
         ],
         "event_type": "",
-        "x": 160,
-        "y": 720,
+        "x": 920,
+        "y": 260,
         "wires": [
             [
                 "59892c31142ac295"
@@ -28785,75 +28640,8 @@
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 390,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0bd8c12856b7eed3",
-        "type": "inject",
-        "z": "d49b385d8b582b20",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 660,
-        "y": 420,
-        "wires": [
-            [
-                "6740de568b289636"
-            ]
-        ]
-    },
-    {
-        "id": "126d1a03d959dc47",
-        "type": "debug",
-        "z": "d49b385d8b582b20",
-        "name": "github",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1410,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "6740de568b289636",
-        "type": "change",
-        "z": "d49b385d8b582b20",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "studio_quiet",
-                "pt": "global",
-                "to": "studio_quiet",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 860,
-        "y": 420,
+        "x": 1150,
+        "y": 260,
         "wires": [
             []
         ]
@@ -28880,8 +28668,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 780,
-        "y": 560,
+        "x": 140,
+        "y": 700,
         "wires": [
             [
                 "8687551e01cd2045"
@@ -28900,8 +28688,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 920,
-        "y": 560,
+        "x": 280,
+        "y": 700,
         "wires": [
             []
         ]
@@ -28919,8 +28707,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
-        "y": 720,
+        "x": 500,
+        "y": 860,
         "wires": []
     },
     {
@@ -28945,8 +28733,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 780,
-        "y": 600,
+        "x": 140,
+        "y": 740,
         "wires": [
             [
                 "e674c706437cc0f3"
@@ -28965,8 +28753,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 920,
-        "y": 600,
+        "x": 280,
+        "y": 740,
         "wires": [
             []
         ]
@@ -28994,8 +28782,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 790,
-        "y": 720,
+        "x": 150,
+        "y": 860,
         "wires": [
             [
                 "1346e34e8c83b2dc"
@@ -29014,8 +28802,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 720,
+        "x": 330,
+        "y": 860,
         "wires": [
             [
                 "103b03c39c8d9cae"
@@ -29044,8 +28832,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1180,
-        "y": 560,
+        "x": 540,
+        "y": 700,
         "wires": [
             [
                 "6d109daff443dade"
@@ -29064,8 +28852,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1330,
-        "y": 560,
+        "x": 690,
+        "y": 700,
         "wires": [
             []
         ]
@@ -29077,8 +28865,8 @@
         "g": "395da9d5d5f7e232",
         "name": "Here gonna auto-run",
         "info": "",
-        "x": 810,
-        "y": 680,
+        "x": 170,
+        "y": 820,
         "wires": []
     },
     {
@@ -29088,8 +28876,8 @@
         "g": "395da9d5d5f7e232",
         "name": "Check what if both inject clicked",
         "info": "",
-        "x": 850,
-        "y": 520,
+        "x": 210,
+        "y": 660,
         "wires": []
     },
     {
@@ -29104,8 +28892,8 @@
         "initialize": "const states = global.get('homeassistant.homeAssistant.states')\nconst cooling = states['input_boolean.master_bedroom_cooling_on'].state\nconst sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nlet lastMode = []\n\nif (sleeping === 'on') {\n    lastMode = 'bedtime'\n} else if (cooling === 'on') {\n    lastMode = 'night'\n} else {\n    lastMode = 'day'\n}\n\nflow.set(\"lastMode\", lastMode)",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 1140,
+        "x": 510,
+        "y": 380,
         "wires": [
             [
                 "d275a12c1817925e"
@@ -29160,8 +28948,8 @@
         "topic": "manual-bedtime",
         "payload": "",
         "payloadType": "date",
-        "x": 270,
-        "y": 1000,
+        "x": 250,
+        "y": 240,
         "wires": [
             [
                 "f5879622a44b7213"
@@ -29200,8 +28988,8 @@
         "topic": "mrbedroom-cooling",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
-        "y": 1060,
+        "x": 230,
+        "y": 300,
         "wires": [
             [
                 "f5879622a44b7213"
@@ -29240,8 +29028,8 @@
         "topic": "mrbedroom-fan",
         "payload": "",
         "payloadType": "date",
-        "x": 260,
-        "y": 1120,
+        "x": 240,
+        "y": 360,
         "wires": [
             [
                 "f5879622a44b7213"
@@ -29280,8 +29068,8 @@
         "topic": "mrbedroom-wakeup",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
-        "y": 1180,
+        "x": 230,
+        "y": 420,
         "wires": [
             [
                 "f5879622a44b7213"
@@ -29320,8 +29108,8 @@
         "topic": "manual-night",
         "payload": "",
         "payloadType": "date",
-        "x": 280,
-        "y": 1240,
+        "x": 260,
+        "y": 480,
         "wires": [
             [
                 "f5879622a44b7213"
@@ -29360,8 +29148,8 @@
         "topic": "manual-day",
         "payload": "",
         "payloadType": "date",
-        "x": 290,
-        "y": 1300,
+        "x": 270,
+        "y": 540,
         "wires": [
             [
                 "f5879622a44b7213"
@@ -29382,8 +29170,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
-        "y": 1080,
+        "x": 670,
+        "y": 320,
         "wires": []
     },
     {
@@ -29400,8 +29188,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
-        "y": 1140,
+        "x": 670,
+        "y": 380,
         "wires": []
     },
     {
@@ -29418,8 +29206,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 1200,
+        "x": 680,
+        "y": 440,
         "wires": []
     },
     {
@@ -29436,8 +29224,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
-        "y": 1320,
+        "x": 670,
+        "y": 560,
         "wires": []
     },
     {
@@ -29452,8 +29240,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
-        "y": 880,
+        "x": 330,
+        "y": 120,
         "wires": [
             [
                 "d275a12c1817925e",
@@ -29493,8 +29281,8 @@
         "topic": "",
         "payload": "on",
         "payloadType": "str",
-        "x": 150,
-        "y": 860,
+        "x": 130,
+        "y": 100,
         "wires": [
             [
                 "8846ee22051b92cc"
@@ -29519,8 +29307,8 @@
         "topic": "",
         "payload": "off",
         "payloadType": "str",
-        "x": 150,
-        "y": 920,
+        "x": 130,
+        "y": 160,
         "wires": [
             [
                 "8846ee22051b92cc"
@@ -29539,8 +29327,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 1260,
+        "x": 690,
+        "y": 500,
         "wires": [
             [
                 "c59db4f3f0112244"
@@ -29561,8 +29349,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 650,
-        "y": 820,
+        "x": 630,
+        "y": 60,
         "wires": []
     },
     {
@@ -29579,8 +29367,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 880,
+        "x": 640,
+        "y": 120,
         "wires": []
     },
     {
@@ -29597,143 +29385,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 650,
-        "y": 940,
+        "x": 630,
+        "y": 180,
         "wires": []
-    },
-    {
-        "id": "7ddf9ea.ce1666",
-        "type": "trigger",
-        "z": "d49b385d8b582b20",
-        "name": "",
-        "op1": "1",
-        "op2": "0",
-        "op1type": "num",
-        "op2type": "num",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "stop",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 2,
-        "x": 260,
-        "y": 540,
-        "wires": [
-            [
-                "9cd45d14.c50fc",
-                "d0e34d98.f2042"
-            ],
-            [
-                "9cd45d14.c50fc",
-                "4666b91c.95c868"
-            ]
-        ]
-    },
-    {
-        "id": "4f9f0445.d36d2c",
-        "type": "inject",
-        "z": "d49b385d8b582b20",
-        "name": "motion",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 540,
-        "wires": [
-            [
-                "7ddf9ea.ce1666"
-            ]
-        ]
-    },
-    {
-        "id": "d0e34d98.f2042",
-        "type": "debug",
-        "z": "d49b385d8b582b20",
-        "name": "Switch on",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "4666b91c.95c868",
-        "type": "debug",
-        "z": "d49b385d8b582b20",
-        "name": "Switch off",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "9cd45d14.c50fc",
-        "type": "debug",
-        "z": "d49b385d8b582b20",
-        "name": "The Lamp",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 560,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "4c6b1c69069e01e9",
-        "type": "inject",
-        "z": "d49b385d8b582b20",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "stop",
-        "payloadType": "str",
-        "x": 110,
-        "y": 600,
-        "wires": [
-            [
-                "7ddf9ea.ce1666"
-            ]
-        ]
     }
 ]
