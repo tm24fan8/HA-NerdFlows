@@ -762,7 +762,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 839
+        "y": 839,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -809,10 +811,13 @@
             "563907e1231aa3e0",
             "b1c0cca848416d74",
             "73c2d06e9114a0f6",
-            "e914726b0364c6be"
+            "e914726b0364c6be",
+            "886ea91bca085e0d"
         ],
         "x": 14,
-        "y": 11.5
+        "y": 11.5,
+        "w": 1252,
+        "h": 809.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -18739,6 +18744,17 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "886ea91bca085e0d",
+        "type": "comment",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Create centralized method to set a variable for climate times",
+        "info": "This would most likely come in the form of an inject node into a function node.\n\nThe function node would process some logic similar to what is already in place in a few nodes.\n\nGive me darkness, early night mode, goodnight, etc etc etc.\n\nThis would then set a flow context to \"day\", \"night\", \"bedtime\", and possibly others but those are the main three.\n\nThis code could then be removed from the other nodes, and just retrieved from the flow context as needed.\n\nThis would VASTLY simplify restoring modes from manual takeovers from shower mode, meltdown protocol, etc etc etc",
+        "x": 700,
+        "y": 560,
+        "wires": []
     },
     {
         "id": "9256f78107619596",
