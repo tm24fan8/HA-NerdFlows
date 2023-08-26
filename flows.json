@@ -25076,7 +25076,7 @@
         "type": "function",
         "z": "fc6801ef8637d652",
         "name": "Scores",
-        "func": "// Get sensor\nconst states = global.get('homeassistant.homeAssistant.states')\nconst active = states['switch.watching_sports'].state\nconst team = flow.get(\"team\")\nconst teamSensor = states[\"sensor.\" + team]\n\n// Get scores\nconst teamScore = teamSensor.attributes.team_score\nconst oppScore = teamSensor.attributes.opponent_score\n\nmsg = {\n    \"teamscore\": teamScore,\n    \"oppscore\": oppScore\n}\n\nif (active === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Score: \" + teamScore + \"-\" + oppScore})\n    node.send(msg)\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Inactive\"})\n}",
+        "func": "// Get sensor\nconst states = global.get('homeassistant.homeAssistant.states')\nconst active = states['switch.watching_sports'].state\n\nif (active === 'on') {\n    // Get scores\n    const team = flow.get(\"team\")\n    const teamSensor = states[\"sensor.\" + team]\n    const teamScore = teamSensor.attributes.team_score\n    const oppScore = teamSensor.attributes.opponent_score\n    msg = {\n        \"teamscore\": teamScore,\n        \"oppscore\": oppScore\n    }\n    node.status({fill:\"green\",shape:\"dot\",text:\"Score: \" + teamScore + \"-\" + oppScore})\n    node.send(msg)\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Inactive\"})\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
