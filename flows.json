@@ -762,9 +762,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 839,
-        "w": 1552,
-        "h": 642
+        "y": 839
     },
     {
         "id": "e065b1ed4938b477",
@@ -815,9 +813,7 @@
             "886ea91bca085e0d"
         ],
         "x": 14,
-        "y": 11.5,
-        "w": 1252,
-        "h": 809.5
+        "y": 11.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -857,9 +853,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -878,9 +872,7 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1192,
-        "h": 82
+        "y": 39
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1057,9 +1049,7 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 139,
-        "w": 1152,
-        "h": 242
+        "y": 139
     },
     {
         "id": "eeafd13be593ae69",
@@ -1324,9 +1314,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1386,9 +1374,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1406,9 +1392,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "88f099618e56926d",
@@ -1490,9 +1474,7 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "31767ffd6a647579",
@@ -1638,8 +1620,6 @@
         ],
         "x": 34,
         "y": 719,
-        "w": 732,
-        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1673,9 +1653,7 @@
             "7aa9383895c46e30"
         ],
         "x": 34,
-        "y": 19,
-        "w": 752,
-        "h": 682
+        "y": 19
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -1696,9 +1674,7 @@
             "0107164ee7ff63d6"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1072,
-        "h": 142
+        "y": 19
     },
     {
         "id": "fba69dfc80829db7",
@@ -24799,11 +24775,12 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 280,
-        "y": 280,
+        "x": 260,
+        "y": 320,
         "wires": [
             [
-                "99c8d72f9eb4be38"
+                "99c8d72f9eb4be38",
+                "e2e55a6db871e124"
             ]
         ]
     },
@@ -24827,13 +24804,16 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 260,
-        "y": 220,
+        "x": 280,
+        "y": 260,
         "wires": [
             [
-                "21537c3f38c381bc"
+                "21537c3f38c381bc",
+                "e2e55a6db871e124"
             ],
-            []
+            [
+                "e2e55a6db871e124"
+            ]
         ]
     },
     {
@@ -24863,8 +24843,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 250,
-        "y": 340,
+        "x": 290,
+        "y": 380,
         "wires": [
             []
         ]
@@ -24896,8 +24876,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 260,
-        "y": 400,
+        "x": 280,
+        "y": 440,
         "wires": [
             []
         ]
@@ -24913,8 +24893,8 @@
         "initialize": "const teams = [\"michigan_wolverines\",\n    \"ohio_state_buckeyes\",\n    \"toledo_rockets\",\n    \"minnesota_vikings\",\n    \"san_francisco_49ers\",\n    \"cleveland_guardians\",\n    \"minnesota_twins\",\n    \"los_angeles_dodgers\"]\n\nconst michigan_wolverines = ['sensor.michigan_wolverines', 'binary_sensor.michigan_wolverines_inhibit']\nconst ohio_state_buckeyes = ['sensor.ohio_state_buckeyes', 'binary_sensor.ohio_state_buckeyes_inhibit']\nconst toledo_rockets = ['sensor.toledo_rockets', 'binary_sensor.toledo_rockets_inhibit']\nconst minnesota_vikings = ['sensor.minnesota_vikings', 'binary_sensor.minnesota_vikings_inhibit']\nconst san_francisco_49ers = ['sensor.san_francisco_49ers', 'binary_sensor.san_francisco_49ers_inhibit']\nconst cleveland_guardians = ['sensor.cleveland_guardians', 'binary_sensor.cleveland_guardians_inhibit']\nconst minnesota_twins = ['sensor.minnesota_twins', 'binary_sensor.minnesota_twins_inhibit']\nconst los_angeles_dodgers = ['sensor.los_angeles_dodgers', 'binary_sensor.los_angeles_dodgers_inhibit']\n\nflow.set(\"teams\", teams)\nflow.set(\"michigan_wolverines\", michigan_wolverines)\nflow.set(\"ohio_state_buckeyes\", ohio_state_buckeyes)\nflow.set(\"toledo_rockets\", toledo_rockets)\nflow.set(\"minnesota_vikings\", minnesota_vikings)\nflow.set(\"san_francisco_49ers\", san_francisco_49ers)\nflow.set(\"cleveland_guardians\", cleveland_guardians)\nflow.set(\"minnesota_twins\", minnesota_twins)\nflow.set(\"los_angeles_dodgers\", los_angeles_dodgers)",
         "finalize": "",
         "libs": [],
-        "x": 690,
-        "y": 220,
+        "x": 710,
+        "y": 260,
         "wires": [],
         "icon": "font-awesome/fa-hourglass-start"
     },
@@ -24924,18 +24904,8 @@
         "z": "fc6801ef8637d652",
         "name": "Reliably catch score changes",
         "info": "",
-        "x": 300,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "9a84cbc92735cb88",
-        "type": "comment",
-        "z": "fc6801ef8637d652",
-        "name": "Allow this to init the flow based on selected team",
-        "info": "",
-        "x": 580,
-        "y": 180,
+        "x": 240,
+        "y": 500,
         "wires": []
     },
     {
@@ -24965,8 +24935,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 500,
-        "y": 220,
+        "x": 520,
+        "y": 260,
         "wires": [
             [
                 "99c8d72f9eb4be38"
@@ -24986,17 +24956,18 @@
         "repeat": "300",
         "crontab": "",
         "once": true,
-        "onceDelay": "60",
+        "onceDelay": "30",
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
+        "x": 195,
         "y": 60,
         "wires": [
             [
                 "518b1bb6954c11d2"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "44f65019901cd6c8",
@@ -25007,7 +24978,7 @@
         "entityConfig": "95180a63dc83b944",
         "version": 0,
         "outputProperties": [],
-        "x": 650,
+        "x": 530,
         "y": 60,
         "wires": [
             []
@@ -25024,12 +24995,209 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
+        "x": 320,
         "y": 60,
         "wires": [
             [
                 "44f65019901cd6c8"
             ]
+        ]
+    },
+    {
+        "id": "0105c3f26dc03946",
+        "type": "inject",
+        "z": "fc6801ef8637d652",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "30",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 115,
+        "y": 200,
+        "wires": [
+            [
+                "cfe0ade2b0e3be21"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "cfe0ade2b0e3be21",
+        "type": "api-current-state",
+        "z": "fc6801ef8637d652",
+        "name": "Watching Sports?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.watching_sports",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "watching",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 270,
+        "y": 200,
+        "wires": [
+            [
+                "21537c3f38c381bc",
+                "e2e55a6db871e124"
+            ],
+            [
+                "e2e55a6db871e124"
+            ]
+        ]
+    },
+    {
+        "id": "ab1e0278165f7fd1",
+        "type": "function",
+        "z": "fc6801ef8637d652",
+        "name": "Scores",
+        "func": "// Get sensor\nconst states = global.get('homeassistant.homeAssistant.states')\nconst active = states['switch.watching_sports'].state\nconst team = flow.get(\"team\")\nconst teamSensor = states[\"sensor.\" + team]\n\n// Get scores\nconst teamScore = teamSensor.attributes.team_score\nconst oppScore = teamSensor.attributes.opponent_score\n\nmsg = {\n    \"teamscore\": teamScore,\n    \"oppscore\": oppScore\n}\n\nif (active === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Score: \" + teamScore + \"-\" + oppScore})\n    node.send(msg)\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Inactive\"})\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 140,
+        "wires": [
+            [
+                "5017d392b30ac710",
+                "3d982dc8b2247951"
+            ]
+        ]
+    },
+    {
+        "id": "364a58744d93b5bb",
+        "type": "inject",
+        "z": "fc6801ef8637d652",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "35",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 140,
+        "wires": [
+            [
+                "ab1e0278165f7fd1"
+            ]
+        ]
+    },
+    {
+        "id": "e2e55a6db871e124",
+        "type": "api-call-service",
+        "z": "fc6801ef8637d652",
+        "name": "Reset Scores",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "number",
+        "service": "set_value",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "number.opponent_score",
+            "number.team_score"
+        ],
+        "data": "{\t    \"value\": 0\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "ab1e0278165f7fd1"
+            ]
+        ]
+    },
+    {
+        "id": "5017d392b30ac710",
+        "type": "api-call-service",
+        "z": "fc6801ef8637d652",
+        "name": "Team Score",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "number",
+        "service": "set_value",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "number.team_score"
+        ],
+        "data": "{\t    \"value\": teamscore\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 930,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d982dc8b2247951",
+        "type": "api-call-service",
+        "z": "fc6801ef8637d652",
+        "name": "Opponent Score",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "number",
+        "service": "set_value",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "number.opponent_score"
+        ],
+        "data": "{\t    \"value\": oppscore\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 940,
+        "y": 180,
+        "wires": [
+            []
         ]
     },
     {
