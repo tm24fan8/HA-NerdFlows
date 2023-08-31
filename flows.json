@@ -667,6 +667,32 @@
         }
     },
     {
+        "id": "17510314e84badd9",
+        "type": "subflow",
+        "name": "Team Color Converter",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "664a1a92c5c5546e"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "inputLabels": [
+            "Hex"
+        ],
+        "icon": "node-red-contrib-color-convert/color-convert.png"
+    },
+    {
         "id": "eccca853a916b662",
         "type": "group",
         "z": "5e238cbbe6d612c9",
@@ -762,9 +788,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 839,
-        "w": 1552,
-        "h": 642
+        "y": 839
     },
     {
         "id": "e065b1ed4938b477",
@@ -819,9 +843,7 @@
             "f950918e12591224"
         ],
         "x": 14,
-        "y": 11.5,
-        "w": 1252,
-        "h": 809.5
+        "y": 11.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -3767,6 +3789,43 @@
         "debugEnabled": false
     },
     {
+        "id": "39198b07403764b1",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "1f10335891b41077",
+        "name": "Sports Room",
+        "version": "6",
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Sports Room"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:baseball-bat"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "Living Room",
+                    "Basement Studio",
+                    "Both"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "afead614fabc01bb",
         "type": "function",
         "z": "a42343e035e3313c",
@@ -4741,6 +4800,84 @@
             [],
             []
         ]
+    },
+    {
+        "id": "d509e18fa07ab430",
+        "type": "color-convert",
+        "z": "17510314e84badd9",
+        "input": "hex",
+        "output": "rgb",
+        "outputType": "array",
+        "scaleInput": false,
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "e0b30104939cf28d"
+            ]
+        ]
+    },
+    {
+        "id": "664a1a92c5c5546e",
+        "type": "split",
+        "z": "17510314e84badd9",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "d509e18fa07ab430"
+            ]
+        ]
+    },
+    {
+        "id": "e0b30104939cf28d",
+        "type": "join",
+        "z": "17510314e84badd9",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 510,
+        "y": 80,
+        "wires": [
+            [
+                "52dd35473d9e536f"
+            ]
+        ]
+    },
+    {
+        "id": "52dd35473d9e536f",
+        "type": "function",
+        "z": "17510314e84badd9",
+        "name": "Set Contexts",
+        "func": "const topic = msg.topic\nconst payload = msg.payload\n\nif (topic === 'teamColors') {\n    flow.set(\"$parent.teamColors\", payload, \"diskCon\")\n} else if (topic === 'oppColors') {\n    flow.set(\"$parent.oppColors\", payload, \"diskCon\")\n}",
+        "outputs": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 80,
+        "wires": []
     },
     {
         "id": "b2d071ca42e4a3c6",
@@ -24988,23 +25125,22 @@
         "valueType": "msg",
         "outputProperties": [
             {
-                "property": "activeEvent",
-                "propertyType": "msg",
+                "property": "#:(diskCon)::activeEvent",
+                "propertyType": "flow",
                 "value": "",
                 "valueType": "value"
             },
             {
-                "property": "previousActiveEvent",
+                "property": "payload",
                 "propertyType": "msg",
                 "value": "",
-                "valueType": "previousValue"
+                "valueType": "date"
             }
         ],
         "x": 260,
-        "y": 320,
+        "y": 380,
         "wires": [
             [
-                "99c8d72f9eb4be38",
                 "e2e55a6db871e124"
             ]
         ]
@@ -25030,10 +25166,9 @@
             }
         ],
         "x": 280,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
-                "21537c3f38c381bc",
                 "e2e55a6db871e124"
             ],
             [
@@ -25069,9 +25204,11 @@
             }
         ],
         "x": 290,
-        "y": 380,
+        "y": 500,
         "wires": [
-            []
+            [
+                "04829df5b7dfb2c2"
+            ]
         ]
     },
     {
@@ -25102,9 +25239,11 @@
             }
         ],
         "x": 280,
-        "y": 440,
+        "y": 560,
         "wires": [
-            []
+            [
+                "103231f89b894205"
+            ]
         ]
     },
     {
@@ -25112,15 +25251,19 @@
         "type": "function",
         "z": "fc6801ef8637d652",
         "name": "Init",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst team = msg.activeEvent\n\nif (team === 'No events today') {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"No events today\" })\n    node.done\n} else {\n    const lower = team.toLowerCase()\n    const convert = lower.replaceAll(\" \", \"_\")\n    const sensor = \"sensor.\" + convert\n    const getInhibitSensor = \"binary_sensor.\" + convert + \"_inhibit\"\n    const inhibit = states[getInhibitSensor].state\n    const teamSensor = states[sensor]\n\n    flow.set(\"team\", convert, \"diskCon\")\n    flow.set(\"inhibit\", inhibit, \"diskCon\")\n    flow.set(\"teamSensor\", teamSensor, \"diskCon\")\n    \n    node.status({fill:\"green\",shape:\"dot\",text:\"Team: \" + team})\n    node.log(\"Active sports team changed to \" + team)\n}",
-        "outputs": 0,
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst team = flow.get(\"activeEvent\", \"diskCon\")\nconst room = flow.get(\"activeRoom\", \"diskCon\")\n\nif (team === 'No events today') {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"No events today\" })\n    node.done\n} else {\n    const lowerTeam = team.toLowerCase()\n    const convertTeam = lowerTeam.replaceAll(\" \", \"_\")\n    const sensor = \"sensor.\" + convertTeam\n    const getInhibitSensor = \"binary_sensor.\" + convertTeam + \"_inhibit\"\n    const inhibit = states[getInhibitSensor].state\n    const teamSensor = states[sensor]\n    const lowerRoom = room.toLowerCase()\n    const convertRoom = lowerRoom.replaceAll(\" \",\"_\")\n    const teamColors = teamSensor.attributes.team_colors\n    const oppColors = teamSensor.attributes.opponent_colors\n\n    flow.set(\"team\", convertTeam, \"diskCon\")\n    flow.set(\"inhibit\", inhibit, \"diskCon\")\n    flow.set(\"teamSensor\", teamSensor, \"diskCon\")\n    flow.set(\"room\", convertRoom, \"diskCon\")\n    flow.set(\"teamColors\", teamColors, \"diskCon\")\n    flow.set(\"oppColors\", oppColors, \"diskCon\")\n\n    let sendTeam = {\n        \"payload\": teamColors,\n        \"topic\": \"teamColors\"\n    }\n\n    let sendOpp = {\n        \"payload\": oppColors,\n        \"topic\": \"oppColors\"\n    }\n\n    node.send([[sendTeam,sendOpp]])\n    \n    node.status({fill:\"green\",shape:\"dot\",text:\"Team: \" + team})\n    node.log(\"Active sports team changed to \" + team)\n}",
+        "outputs": 1,
         "noerr": 0,
         "initialize": "const teams = [\"michigan_wolverines\",\n    \"ohio_state_buckeyes\",\n    \"toledo_rockets\",\n    \"minnesota_vikings\",\n    \"san_francisco_49ers\",\n    \"cleveland_guardians\",\n    \"minnesota_twins\",\n    \"los_angeles_dodgers\"]\n\nconst michigan_wolverines = ['sensor.michigan_wolverines', 'binary_sensor.michigan_wolverines_inhibit']\nconst ohio_state_buckeyes = ['sensor.ohio_state_buckeyes', 'binary_sensor.ohio_state_buckeyes_inhibit']\nconst toledo_rockets = ['sensor.toledo_rockets', 'binary_sensor.toledo_rockets_inhibit']\nconst minnesota_vikings = ['sensor.minnesota_vikings', 'binary_sensor.minnesota_vikings_inhibit']\nconst san_francisco_49ers = ['sensor.san_francisco_49ers', 'binary_sensor.san_francisco_49ers_inhibit']\nconst cleveland_guardians = ['sensor.cleveland_guardians', 'binary_sensor.cleveland_guardians_inhibit']\nconst minnesota_twins = ['sensor.minnesota_twins', 'binary_sensor.minnesota_twins_inhibit']\nconst los_angeles_dodgers = ['sensor.los_angeles_dodgers', 'binary_sensor.los_angeles_dodgers_inhibit']\n\nflow.set(\"teams\", teams, \"diskCon\")\nflow.set(\"michigan_wolverines\", michigan_wolverines, \"diskCon\")\nflow.set(\"ohio_state_buckeyes\", ohio_state_buckeyes, \"diskCon\")\nflow.set(\"toledo_rockets\", toledo_rockets, \"diskCon\")\nflow.set(\"minnesota_vikings\", minnesota_vikings, \"diskCon\")\nflow.set(\"san_francisco_49ers\", san_francisco_49ers, \"diskCon\")\nflow.set(\"cleveland_guardians\", cleveland_guardians, \"diskCon\")\nflow.set(\"minnesota_twins\", minnesota_twins, \"diskCon\")\nflow.set(\"los_angeles_dodgers\", los_angeles_dodgers, \"diskCon\")",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 260,
-        "wires": [],
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "e0eb2dc4c1035407"
+            ]
+        ],
         "icon": "font-awesome/fa-hourglass-start"
     },
     {
@@ -25130,43 +25273,8 @@
         "name": "Reliably catch score changes",
         "info": "",
         "x": 240,
-        "y": 500,
+        "y": 680,
         "wires": []
-    },
-    {
-        "id": "21537c3f38c381bc",
-        "type": "ha-select",
-        "z": "fc6801ef8637d652",
-        "name": "Active Sporting Event",
-        "version": 1,
-        "debugenabled": false,
-        "inputs": 1,
-        "outputs": 1,
-        "entityConfig": "95180a63dc83b944",
-        "mode": "get",
-        "value": "payload",
-        "valueType": "msg",
-        "outputProperties": [
-            {
-                "property": "activeEvent",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "value"
-            },
-            {
-                "property": "previousActiveEvent",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "previousValue"
-            }
-        ],
-        "x": 520,
-        "y": 260,
-        "wires": [
-            [
-                "99c8d72f9eb4be38"
-            ]
-        ]
     },
     {
         "id": "aedcd3658f94590d",
@@ -25185,7 +25293,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 195,
+        "x": 175,
         "y": 60,
         "wires": [
             [
@@ -25203,7 +25311,7 @@
         "entityConfig": "95180a63dc83b944",
         "version": 0,
         "outputProperties": [],
-        "x": 530,
+        "x": 510,
         "y": 60,
         "wires": [
             []
@@ -25220,7 +25328,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
+        "x": 300,
         "y": 60,
         "wires": [
             [
@@ -25246,10 +25354,11 @@
         "payload": "",
         "payloadType": "date",
         "x": 115,
-        "y": 200,
+        "y": 260,
         "wires": [
             [
-                "cfe0ade2b0e3be21"
+                "cfe0ade2b0e3be21",
+                "1a397d63067f9bac"
             ]
         ],
         "l": false
@@ -25285,10 +25394,9 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 270,
-        "y": 200,
+        "y": 260,
         "wires": [
             [
-                "21537c3f38c381bc",
                 "e2e55a6db871e124"
             ],
             [
@@ -25301,14 +25409,14 @@
         "type": "function",
         "z": "fc6801ef8637d652",
         "name": "Scores",
-        "func": "// Get sensor\nconst states = global.get('homeassistant.homeAssistant.states')\nconst active = states['switch.watching_sports'].state\n\nif (active === 'on') {\n    // Get scores\n    const team = flow.get(\"team\")\n    const teamSensor = states[\"sensor.\" + team]\n    const teamScore = teamSensor.attributes.team_score\n    const oppScore = teamSensor.attributes.opponent_score\n    msg = {\n        \"teamscore\": teamScore,\n        \"oppscore\": oppScore\n    }\n    node.status({fill:\"green\",shape:\"dot\",text:\"Score: \" + teamScore + \"-\" + oppScore})\n    node.send(msg)\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Inactive\"})\n}",
+        "func": "// Get sensor\nconst states = global.get('homeassistant.homeAssistant.states')\nconst active = states['switch.watching_sports'].state\n\nif (active === 'on') {\n    // Get scores\n    const team = flow.get(\"team\", \"diskCon\")\n    const teamSensor = states[\"sensor.\" + team]\n    const status = teamSensor.state\n    if (status === 'IN') {\n        const teamScore = teamSensor.attributes.team_score\n        const oppScore = teamSensor.attributes.opponent_score\n        msg = {\n            \"teamscore\": teamScore,\n            \"oppscore\": oppScore\n        }\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Score: \" + teamScore + \"-\" + oppScore })\n        node.send(msg)\n    } else {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Not in game\" })\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"Inactive\" })\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 140,
+        "y": 200,
         "wires": [
             [
                 "5017d392b30ac710",
@@ -25326,7 +25434,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "10",
+        "repeat": "5",
         "crontab": "",
         "once": true,
         "onceDelay": "35",
@@ -25334,7 +25442,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 290,
-        "y": 140,
+        "y": 200,
         "wires": [
             [
                 "ab1e0278165f7fd1"
@@ -25364,10 +25472,10 @@
         "outputProperties": [],
         "queue": "none",
         "x": 500,
-        "y": 160,
+        "y": 220,
         "wires": [
             [
-                "ab1e0278165f7fd1"
+                "ea6939832ebe09cf"
             ]
         ]
     },
@@ -25393,7 +25501,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 930,
-        "y": 80,
+        "y": 140,
         "wires": [
             []
         ]
@@ -25420,10 +25528,271 @@
         "outputProperties": [],
         "queue": "none",
         "x": 940,
-        "y": 180,
+        "y": 240,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "04829df5b7dfb2c2",
+        "type": "debug",
+        "z": "fc6801ef8637d652",
+        "name": "team score",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "103231f89b894205",
+        "type": "debug",
+        "z": "fc6801ef8637d652",
+        "name": "opp score",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ea6939832ebe09cf",
+        "type": "delay",
+        "z": "fc6801ef8637d652",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 615,
+        "y": 220,
+        "wires": [
+            [
+                "ab1e0278165f7fd1"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "4c7a405055e38678",
+        "type": "ha-select",
+        "z": "fc6801ef8637d652",
+        "name": "Active Room",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "39198b07403764b1",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "#:(diskCon)::activeRoom",
+                "propertyType": "flow",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "date"
+            }
+        ],
+        "x": 290,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0eb2dc4c1035407",
+        "type": "subflow:17510314e84badd9",
+        "z": "fc6801ef8637d652",
+        "name": "",
+        "x": 1040,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "4d93e5b1e81ce569",
+        "type": "inject",
+        "z": "fc6801ef8637d652",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"options\":[\"Cleveland Guardians\",\"Los Angeles Dodgers\"]}",
+        "payloadType": "json",
+        "x": 330,
+        "y": 20,
+        "wires": [
+            [
+                "44f65019901cd6c8"
+            ]
+        ]
+    },
+    {
+        "id": "1a397d63067f9bac",
+        "type": "ha-select",
+        "z": "fc6801ef8637d652",
+        "name": "Active Room",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 1,
+        "entityConfig": "39198b07403764b1",
+        "mode": "get",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "#:(diskCon)::activeRoom",
+                "propertyType": "flow",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "date"
+            }
+        ],
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "4e193132ac06af56"
+            ]
+        ]
+    },
+    {
+        "id": "4e193132ac06af56",
+        "type": "ha-select",
+        "z": "fc6801ef8637d652",
+        "name": "Active Sporting Event",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 1,
+        "entityConfig": "95180a63dc83b944",
+        "mode": "get",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "#:(diskCon)::activeEvent",
+                "propertyType": "flow",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "date"
+            }
+        ],
+        "x": 520,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea686c71f041c78b",
+        "type": "complete",
+        "z": "fc6801ef8637d652",
+        "name": "Watching?",
+        "scope": [
+            "8e7bb3461773c5b9",
+            "cfe0ade2b0e3be21"
+        ],
+        "uncaught": false,
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "1a397d63067f9bac"
+            ]
+        ]
+    },
+    {
+        "id": "e563dd31b4750c0e",
+        "type": "complete",
+        "z": "fc6801ef8637d652",
+        "name": "Event/Room Change",
+        "scope": [
+            "1f7af146c06b8b85",
+            "4c7a405055e38678",
+            "1a397d63067f9bac",
+            "4e193132ac06af56"
+        ],
+        "uncaught": false,
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "99c8d72f9eb4be38",
+                "2c2bb571085c5a90"
+            ]
+        ]
+    },
+    {
+        "id": "2c2bb571085c5a90",
+        "type": "debug",
+        "z": "fc6801ef8637d652",
+        "name": "catch",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "077ae8dc789e9089",
+        "type": "comment",
+        "z": "fc6801ef8637d652",
+        "name": "Figuring out how to smoothly handle event and room changes",
+        "info": "Need to be able to update context with necessary info\n\n- Team\n- Opponent\n- Colors\n- Room\n\netc",
+        "x": 900,
+        "y": 540,
+        "wires": []
     },
     {
         "id": "1031080bdf3b95bf",
