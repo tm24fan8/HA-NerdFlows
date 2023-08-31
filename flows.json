@@ -1148,9 +1148,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759,
-        "w": 612,
-        "h": 202
+        "y": 759
     },
     {
         "id": "550e5b2d99316b12",
@@ -1516,9 +1514,7 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399,
-        "w": 1532,
-        "h": 282
+        "y": 399
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1635,8 +1631,6 @@
         ],
         "x": 34,
         "y": 719,
-        "w": 732,
-        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1675,9 +1669,7 @@
             "79f3ceee718cd7cb"
         ],
         "x": 34,
-        "y": 19,
-        "w": 752,
-        "h": 682
+        "y": 19
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -18773,7 +18765,7 @@
         "z": "72f99805df043603",
         "g": "e065b1ed4938b477",
         "name": "Set Mode",
-        "func": "const states = global.get(\"homeassistant.homeAssistant.states\")\nconst sleeping = states[\"input_boolean.master_bedroom_sleeping\"].state\nconst earlyNight = states[\"binary_sensor.early_night_mode\"].state\nconst giveMeDarkness = states[\"input_boolean.give_me_darkness\"].state\nconst nightMode = states[\"input_boolean.night_mode\"].state\nconst goodnight = states[\"input_boolean.goodnight\"].state\nconst coolingActive = states['input_boolean.master_bedroom_cooling_on'].state\n\nlet lastMode = []\n\nif (sleeping === 'on' || nightMode === 'on' || goodnight === 'on') {\n    lastMode = 'bedtime'\n} else if (earlyNight === 'on' || giveMeDarkness === 'on' || coolingActive) {\n    lastMode = 'night'\n} else {\n    lastMode = 'day'\n}\n\nflow.set(\"lastMode\", lastMode, \"diskCon\")\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Last Mode Set: \" + lastMode})",
+        "func": "const states = global.get(\"homeassistant.homeAssistant.states\")\nconst sleeping = states[\"input_boolean.master_bedroom_sleeping\"].state\nconst earlyNight = states[\"binary_sensor.early_night_mode\"].state\nconst giveMeDarkness = states[\"input_boolean.give_me_darkness\"].state\nconst nightMode = states[\"input_boolean.night_mode\"].state\nconst goodnight = states[\"input_boolean.goodnight\"].state\nconst coolingActive = states['input_boolean.master_bedroom_cooling_on'].state\n\nlet lastMode = []\n\nif (sleeping === 'on' || nightMode === 'on' || goodnight === 'on') {\n    lastMode = 'bedtime'\n} else if (earlyNight === 'on' || giveMeDarkness === 'on' || coolingActive === 'on') {\n    lastMode = 'night'\n} else {\n    lastMode = 'day'\n}\n\nflow.set(\"lastMode\", lastMode, \"diskCon\")\nnode.status({ fill: \"green\", shape: \"dot\", text: \"Last Mode Set: \" + lastMode})",
         "outputs": 0,
         "noerr": 0,
         "initialize": "",
