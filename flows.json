@@ -802,9 +802,6 @@
             "17b6f73d75f480fd",
             "7852593ec89f150a",
             "8286284fc9598efa",
-            "53c58cce51d4596a",
-            "ce204e8dd5784824",
-            "26f2f56e5abe7f25",
             "cbe37fd5b5fc4381",
             "5def5d2440e767b3",
             "d153c7a7f050ce84",
@@ -18468,67 +18465,6 @@
         "queue": "none",
         "x": 550,
         "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "53c58cce51d4596a",
-        "type": "catch",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "",
-        "scope": null,
-        "uncaught": false,
-        "x": 980,
-        "y": 300,
-        "wires": [
-            [
-                "ce204e8dd5784824",
-                "26f2f56e5abe7f25"
-            ]
-        ]
-    },
-    {
-        "id": "ce204e8dd5784824",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Text Notify",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_notify",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"type\":\"alert\",\t    \"who\":\"tony\",\t    \"title\":\"Climate Test Failed\",\t    \"message\": error.message\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1150,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "26f2f56e5abe7f25",
-        "type": "file",
-        "z": "72f99805df043603",
-        "g": "e065b1ed4938b477",
-        "name": "Write to file",
-        "filename": "/config/files/climate.txt",
-        "filenameType": "str",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 1150,
-        "y": 360,
         "wires": [
             []
         ]
