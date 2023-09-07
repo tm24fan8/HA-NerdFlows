@@ -780,7 +780,6 @@
             "d0dacbae4513b1ad",
             "7b390a3b24fc3197",
             "a417e93366843249",
-            "b371dfa2ee57b577",
             "17e5f9acd57c2819",
             "a8070806c0f88856",
             "7b0648758704fad4",
@@ -788,7 +787,9 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 839
+        "y": 839,
+        "w": 1552,
+        "h": 642
     },
     {
         "id": "e065b1ed4938b477",
@@ -843,7 +844,9 @@
             "f950918e12591224"
         ],
         "x": 14,
-        "y": 11.5
+        "y": 11.5,
+        "w": 1252,
+        "h": 809.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -1583,9 +1586,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 82
+        "y": 39
     },
     {
         "id": "4329e464360d0afa",
@@ -1628,9 +1629,7 @@
             "b497fe229c8f2eea"
         ],
         "x": 34,
-        "y": 139,
-        "w": 1592,
-        "h": 422
+        "y": 139
     },
     {
         "id": "395da9d5d5f7e232",
@@ -17836,7 +17835,7 @@
         "y": 1120,
         "wires": [
             [
-                "b371dfa2ee57b577"
+                "61405a43f61f3d60"
             ]
         ]
     },
@@ -17992,7 +17991,7 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar overnight = states['input_boolean.kallen_overnight'].state\nvar kallenLoc = states['person.kallen_stork'].state\nvar nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nvar brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nvar fadeDay = states['input_number.wakeup_lights_fade_day'].state\nvar fadeNight = states['input_number.wakeup_lights_fade_night'].state\nvar hotDay = states['input_boolean.hot_day'].state\nvar heatWarning = states['binary_sensor.heat_warning'].state\nvar topic = msg.topic\nvar toggle = msg.toggle\n\nif (hotDay === 'on' || heatWarning === 'on') {\n    msg.fan = 'on'\n} else {\n    msg.fan = 'off'\n}\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,null,null,msg]\n    } else if (toggle === 'off') {\n        msg.brightness = brightness\n        msg.fade_day = fadeDay * 60\n        msg.fade_night = fadeNight * 60\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg,null]\n    }\n} else {\n    if (topic === 'boolean') {\n        msg.toggle = 'off'\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return [msg,null,null,null]\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return null\n    }\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst vacationMode = states['input_boolean.vacation_mode'].state\nconst overnight = states['input_boolean.kallen_overnight'].state\nconst kallenLoc = states['person.kallen_stork'].state\nconst nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nconst brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nconst fadeDay = states['input_number.wakeup_lights_fade_day'].state\nconst fadeNight = states['input_number.wakeup_lights_fade_night'].state\nconst hotDay = states['input_boolean.hot_day'].state\nconst heatWarning = states['binary_sensor.heat_warning'].state\nconst fanSeparate = states['binary_sensor.kallen_fan_separate_schedule'].state\nconst topic = msg.topic\nconst toggle = msg.toggle\n\nlet fan = []\n\nif (hotDay === 'on' || heatWarning === 'on') {\n    fan = 'on'\n} else {\n    fan = 'off'\n}\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan' && fanSeparate === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,null,null,msg]\n    } else if (toggle === 'off') {\n        msg.brightness = brightness\n        msg.fade_day = fadeDay * 60\n        msg.fade_night = fadeNight * 60\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg,null]\n    }\n} else {\n    if (topic === 'boolean') {\n        msg.toggle = 'off'\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return [msg,null,null,null]\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return null\n    }\n}",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -18199,51 +18198,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "b371dfa2ee57b577",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Needed?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.kallen_fan_separate_schedule",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "needed",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 255,
-        "y": 1120,
-        "wires": [
-            [
-                "61405a43f61f3d60"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "On",
-            "Off"
-        ],
-        "l": false
     },
     {
         "id": "17e5f9acd57c2819",
