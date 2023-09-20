@@ -787,9 +787,7 @@
             "f1dbb3a206dba921"
         ],
         "x": 14,
-        "y": 839,
-        "w": 1552,
-        "h": 642
+        "y": 839
     },
     {
         "id": "e065b1ed4938b477",
@@ -844,9 +842,7 @@
             "f950918e12591224"
         ],
         "x": 14,
-        "y": 11.5,
-        "w": 1252,
-        "h": 809.5
+        "y": 11.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -1226,7 +1222,9 @@
             "3463c4f2bf6388fe"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 682
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1250,7 +1248,9 @@
             "0be3c318e9e6df0a"
         ],
         "x": 64,
-        "y": 759
+        "y": 759,
+        "w": 1022,
+        "h": 162
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1654,6 +1654,8 @@
         ],
         "x": 34,
         "y": 719,
+        "w": 732,
+        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1692,7 +1694,9 @@
             "79f3ceee718cd7cb"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 752,
+        "h": 682
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -30729,5 +30733,65 @@
         "x": 695,
         "y": 640,
         "wires": []
+    },
+    {
+        "id": "ecbe040f269f316f",
+        "type": "server-events",
+        "z": "d49b385d8b582b20",
+        "name": "Adaptive Lighting Manual Control",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "eventType": "adaptive_lighting.manual_control",
+        "exposeToHomeAssistant": true,
+        "eventData": "",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Adaptive Lighting Diagnostics"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:skull-crossbones"
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "x": 950,
+        "y": 320,
+        "wires": [
+            [
+                "16d93fd5efd5fec3"
+            ]
+        ]
+    },
+    {
+        "id": "16d93fd5efd5fec3",
+        "type": "file",
+        "z": "d49b385d8b582b20",
+        "name": "Write to adaptive_lighting.txt",
+        "filename": "/config/files/adaptive_lighting.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1240,
+        "y": 320,
+        "wires": [
+            []
+        ]
     }
 ]
