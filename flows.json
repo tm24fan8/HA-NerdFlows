@@ -776,9 +776,7 @@
             "292cda64df0c1c10"
         ],
         "x": 14,
-        "y": 839,
-        "w": 1552,
-        "h": 402
+        "y": 839
     },
     {
         "id": "e065b1ed4938b477",
@@ -833,9 +831,7 @@
             "f950918e12591224"
         ],
         "x": 14,
-        "y": 11.5,
-        "w": 1252,
-        "h": 809.5
+        "y": 11.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -1575,9 +1571,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 82
+        "y": 39
     },
     {
         "id": "4329e464360d0afa",
@@ -1620,9 +1614,7 @@
             "b497fe229c8f2eea"
         ],
         "x": 34,
-        "y": 139,
-        "w": 1592,
-        "h": 422
+        "y": 139
     },
     {
         "id": "395da9d5d5f7e232",
@@ -6850,9 +6842,7 @@
         "x": 750,
         "y": 320,
         "wires": [
-            [
-                "e8410752f5521714"
-            ]
+            []
         ]
     },
     {
@@ -7954,33 +7944,6 @@
         "queue": "none",
         "x": 2070,
         "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e8410752f5521714",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Disable automation",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "automation",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "automation.living_room_night_lighting"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 950,
-        "y": 320,
         "wires": [
             []
         ]
