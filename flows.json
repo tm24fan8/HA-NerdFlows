@@ -755,27 +755,13 @@
         "nodes": [
             "d5784e5baa80a105",
             "9e1418c3e9595312",
-            "99e74844b8fd9d1a",
-            "6418c17768ed363d",
-            "2f3666d288d77ad1",
-            "265b54394cc42f53",
-            "d132875202e85038",
-            "a6f4af0aaabcc2c1",
             "57651381835f659c",
             "acb52adc50d34045",
-            "e0751f3bf2a2e610",
             "b4dbbf788c5a30d2",
             "d6b56cb65c2ff140",
             "e32aaeb51d3f2e95",
-            "90329b0683f81550",
-            "43ea4107912bf0f2",
-            "11993e61de14f592",
             "308fce46bd959bce",
-            "4341325f7ca23f24",
-            "1c98de289e42377f",
             "61405a43f61f3d60",
-            "af209a80e9174433",
-            "274d63b8df8f2dd0",
             "62211bf089bc5b04",
             "d0dacbae4513b1ad",
             "7b390a3b24fc3197",
@@ -784,10 +770,15 @@
             "a8070806c0f88856",
             "7b0648758704fad4",
             "3937c38bc1bd0ee0",
-            "f1dbb3a206dba921"
+            "f1dbb3a206dba921",
+            "476f73cf6b540f96",
+            "46a1e386f7468d21",
+            "292cda64df0c1c10"
         ],
         "x": 14,
-        "y": 839
+        "y": 839,
+        "w": 1552,
+        "h": 402
     },
     {
         "id": "e065b1ed4938b477",
@@ -842,7 +833,9 @@
             "f950918e12591224"
         ],
         "x": 14,
-        "y": 11.5
+        "y": 11.5,
+        "w": 1252,
+        "h": 809.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -1222,9 +1215,7 @@
             "3463c4f2bf6388fe"
         ],
         "x": 54,
-        "y": 39,
-        "w": 852,
-        "h": 682
+        "y": 39
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1248,9 +1239,7 @@
             "0be3c318e9e6df0a"
         ],
         "x": 64,
-        "y": 759,
-        "w": 1022,
-        "h": 162
+        "y": 759
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1586,7 +1575,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1629,7 +1620,9 @@
             "b497fe229c8f2eea"
         ],
         "x": 34,
-        "y": 139
+        "y": 139,
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "395da9d5d5f7e232",
@@ -1654,8 +1647,6 @@
         ],
         "x": 34,
         "y": 719,
-        "w": 732,
-        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1694,9 +1685,7 @@
             "79f3ceee718cd7cb"
         ],
         "x": 34,
-        "y": 19,
-        "w": 752,
-        "h": 682
+        "y": 19
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -2716,35 +2705,6 @@
         "manufacturer": "Node-RED",
         "model": "",
         "swVersion": ""
-    },
-    {
-        "id": "7cf78f522e860d42",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "",
-        "name": "Kallen Bedtime",
-        "version": "6",
-        "entityType": "button",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Kallen Bedtime"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:bed"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            }
-        ],
-        "resend": false,
-        "debugEnabled": false
     },
     {
         "id": "1dcff2ae01d3156f",
@@ -16858,12 +16818,6 @@
                 "valueType": "entityState"
             },
             {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
                 "property": "topic",
                 "propertyType": "msg",
                 "value": "kallen-night",
@@ -16885,10 +16839,10 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 940,
+        "y": 880,
         "wires": [
             [
-                "d6b56cb65c2ff140"
+                "476f73cf6b540f96"
             ]
         ]
     },
@@ -16926,12 +16880,6 @@
                 "valueType": "entityState"
             },
             {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
                 "property": "topic",
                 "propertyType": "msg",
                 "value": "kallen-morning",
@@ -16953,185 +16901,11 @@
         "saturday": true,
         "debugenabled": false,
         "x": 120,
-        "y": 1000,
+        "y": 940,
         "wires": [
             [
-                "d6b56cb65c2ff140"
+                "476f73cf6b540f96"
             ]
-        ]
-    },
-    {
-        "id": "99e74844b8fd9d1a",
-        "type": "delay",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "10",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 695,
-        "y": 1200,
-        "wires": [
-            [
-                "6418c17768ed363d"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "6418c17768ed363d",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "White Noise On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.white_noise_kallen_bedroom"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 820,
-        "y": 1200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2f3666d288d77ad1",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Lights On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_on",
-        "areaId": [
-            "kallen_bedroom",
-            "upstairs_hallway"
-        ],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 800,
-        "y": 1440,
-        "wires": [
-            [
-                "3937c38bc1bd0ee0"
-            ]
-        ]
-    },
-    {
-        "id": "265b54394cc42f53",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Fan On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "fan",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "fan.kallen_bedroom_fan"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 640,
-        "y": 1320,
-        "wires": [
-            [
-                "43ea4107912bf0f2"
-            ]
-        ]
-    },
-    {
-        "id": "d132875202e85038",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Fan",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "fan",
-        "service": "turn_{{fan}}",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "fan.kallen_bedroom_fan"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 670,
-        "y": 1080,
-        "wires": [
-            [
-                "a6f4af0aaabcc2c1"
-            ]
-        ]
-    },
-    {
-        "id": "a6f4af0aaabcc2c1",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Booleans Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.white_noise_kallen_bedroom"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 830,
-        "y": 1080,
-        "wires": [
-            []
         ]
     },
     {
@@ -17140,8 +16914,8 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "",
-        "x": 1020,
-        "y": 1320,
+        "x": 780,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -17565,7 +17339,7 @@
         "entityId": [
             "light.kallen_bedroom_lights"
         ],
-        "data": "{\t    \"brightness_pct\": brightness,\t    \"transition\": fade_night\t}",
+        "data": "{\t    \"brightness_pct\": brightness,\t    \"transition\": fade\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -17576,38 +17350,6 @@
         "wires": [
             [
                 "7b390a3b24fc3197"
-            ]
-        ]
-    },
-    {
-        "id": "e0751f3bf2a2e610",
-        "type": "ha-button",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Manual Bedtime",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "7cf78f522e860d42",
-        "outputProperties": [
-            {
-                "property": "toggle",
-                "propertyType": "msg",
-                "value": "on",
-                "valueType": "str"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "kallen-night",
-                "valueType": "str"
-            }
-        ],
-        "x": 120,
-        "y": 880,
-        "wires": [
-            [
-                "d6b56cb65c2ff140"
             ]
         ]
     },
@@ -17724,69 +17466,6 @@
         ]
     },
     {
-        "id": "90329b0683f81550",
-        "type": "api-render-template",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Random Line",
-        "server": "9e87348d.9c1c48",
-        "version": 0,
-        "template": "{{ [\n    \"No fan in Collin's room tonight. Too cold outside. Brr. Enjoy your white noise.\",\n    \"It is a little too cold for a fan tonight. I will play white noise for Collin\",\n    \"Collin will not need any help staying cool tonight. I will play white noise instead.\",\n    \"My sources are telling me that it is not fan weather tonight. White noise it is.\"\n] | random }} Goodnight!",
-        "resultsLocation": "payload",
-        "resultsLocationType": "msg",
-        "templateLocation": "",
-        "templateLocationType": "none",
-        "x": 810,
-        "y": 1260,
-        "wires": [
-            [
-                "b4dbbf788c5a30d2"
-            ]
-        ]
-    },
-    {
-        "id": "43ea4107912bf0f2",
-        "type": "api-render-template",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Random Line",
-        "server": "9e87348d.9c1c48",
-        "version": 0,
-        "template": "{{ [\n    \"Collin's fan is now on. Stay cool!\",\n    \"It is rather warm outside, so I am turning on Collin's fan.\",\n    \"To prevent an ocean of sweat from drowning us all, I have enabled Collin's fan.\",\n    \"My sensors indicate that for optimal comfort, a cooling device is needed for Collin tonight.\",\n    \"I am a fan of Collin. So I have turned on a fan for Collin.\"\n] | random }} Goodnight!",
-        "resultsLocation": "payload",
-        "resultsLocationType": "msg",
-        "templateLocation": "",
-        "templateLocationType": "none",
-        "x": 810,
-        "y": 1320,
-        "wires": [
-            [
-                "b4dbbf788c5a30d2"
-            ]
-        ]
-    },
-    {
-        "id": "11993e61de14f592",
-        "type": "api-render-template",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Random Line",
-        "server": "9e87348d.9c1c48",
-        "version": 0,
-        "template": "{{ [\n    \"Lights are now on in Collin's bedroom.\",\n    \"Collin, your bedroom lights are now on.\"\n] | random }} Goodnight!",
-        "resultsLocation": "payload",
-        "resultsLocationType": "msg",
-        "templateLocation": "",
-        "templateLocationType": "none",
-        "x": 810,
-        "y": 1380,
-        "wires": [
-            [
-                "b4dbbf788c5a30d2"
-            ]
-        ]
-    },
-    {
         "id": "308fce46bd959bce",
         "type": "ha-time",
         "z": "72f99805df043603",
@@ -17840,75 +17519,6 @@
             [
                 "61405a43f61f3d60"
             ]
-        ]
-    },
-    {
-        "id": "4341325f7ca23f24",
-        "type": "api-current-state",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Scheduled Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "Fan",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.scheduled_climate_mode_kallen_fan",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "sched_mode",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 695,
-        "y": 1140,
-        "wires": [
-            [
-                "1c98de289e42377f"
-            ],
-            []
-        ],
-        "l": false
-    },
-    {
-        "id": "1c98de289e42377f",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Fan On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "fan",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "fan.kallen_bedroom_fan"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 830,
-        "y": 1140,
-        "wires": [
-            []
         ]
     },
     {
@@ -17994,8 +17604,8 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "Processing",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst vacationMode = states['input_boolean.vacation_mode'].state\nconst overnight = states['input_boolean.kallen_overnight'].state\nconst kallenLoc = states['person.kallen_stork'].state\nconst nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nconst brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nconst fadeDay = states['input_number.wakeup_lights_fade_day'].state\nconst fadeNight = states['input_number.wakeup_lights_fade_night'].state\nconst hotDay = states['input_boolean.hot_day'].state\nconst heatWarning = states['binary_sensor.heat_warning'].state\nconst fanSeparate = states['binary_sensor.kallen_fan_separate_schedule'].state\nconst topic = msg.topic\nconst toggle = msg.toggle\n\nlet fan = []\n\nif (hotDay === 'on' || heatWarning === 'on') {\n    fan = 'on'\n} else {\n    fan = 'off'\n}\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan' && fanSeparate === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n        return[null,null,null,msg]\n    } else if (toggle === 'off') {\n        msg.brightness = brightness\n        msg.fade_day = fadeDay * 60\n        msg.fade_night = fadeNight * 60\n        msg.fan = fan\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"});\n        return[null,msg,null,null]\n    } else if (toggle === 'on') {\n        msg.volume = nightVolume\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"});\n        return[null,null,msg,null]\n    }\n} else {\n    if (topic === 'boolean') {\n        msg.toggle = 'off'\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return [msg,null,null,null]\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n        return null\n    }\n}",
-        "outputs": 4,
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst vacationMode = states['input_boolean.vacation_mode'].state\nconst overnight = states['input_boolean.kallen_overnight'].state\nconst kallenLoc = states['person.kallen_stork'].state\nconst dayVolume = states['input_number.kallen_bedroom_google_speaker_day_volume'].state\nconst nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nconst brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nconst fadeNight = states['input_number.wakeup_lights_fade_night'].state\nconst hotDay = states['input_boolean.hot_day'].state\nconst heatWarning = states['binary_sensor.heat_warning'].state\nconst fanSeparate = states['binary_sensor.kallen_fan_separate_schedule'].state\nconst schedMode = states['input_select.scheduled_climate_mode_kallen_fan'].state\nconst topic = msg.topic\nconst toggle = msg.toggle\nnode.log(\"Kallen Bedroom: Constants Set\")\n\nlet setFan = []\nlet setWhiteNoise = []\nlet setVolume = []\nlet setLights = []\nnode.log(\"Kallen Bedroom: Variables Defined\")\n\nif (toggle === 'off' && (hotDay === 'on' || heatWarning === 'on')) {\n    setFan = 'turn_on'\n} else if ((toggle === 'on' || topic === 'kallen-fan') && schedMode === 'Fan') {\n    setFan = 'turn_on'\n} else {\n    setFan = 'turn_off'\n}\n\nif (schedMode === 'White Noise' && toggle === 'on') {\n    setWhiteNoise = 'turn_on'\n} else {\n    setWhiteNoise = 'turn_off'\n}\n\nif (toggle === 'on') {\n    setVolume = nightVolume\n    setLights = 'turn_on'\n} else {\n    setVolume = dayVolume\n}\n\nnode.log(\"Kallen Bedroom: Decision Logic Complete\")\n\nlet sendFan = {\n    \"payload\": {\n        \"domain\": \"fan\",\n        \"service\": setFan,\n        \"target\": {\n            \"entity_id\": [\"fan.kallen_bedroom_fan\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet sendWhiteNoise = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": setWhiteNoise,\n        \"target\": {\n            \"entity_id\": [\"input_boolean.white_noise_kallen_bedroom\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet sendVolume = {\n    \"payload\": {\n        \"domain\": \"media_player\",\n        \"service\": \"set_volume\",\n        \"target\": {\n            \"entity_id\": [\"media_player.kallen_bedroom_google_speaker\"]\n        },\n        \"data\": {\n            \"volume\": setVolume\n        }\n    }\n}\n\nlet sendLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": setLights,\n        \"target\": {\n            \"entity_id\": [\"light.kallen_bedroom_lights\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet wakeMsg = {\n    \"brightness\": brightness,\n    \"fade\": fadeNight\n}\n\nlet sleepMsg = {\n    \"payload\": \"sleep\",\n    \"topic\": \"common\",\n    \"voice\": \"Joanna\"\n}\n\nnode.log(\"Kallen Bedroom: Message Payloads Defined\")\n\nnode.log(\"----- Kallen Bedroom: Set Parameters -----\")\nnode.log(\"setFan: \" + setFan)\nnode.log(\"setWhiteNoise: \" + setWhiteNoise)\nnode.log(\"setVolume: \" + setVolume)\nnode.log(\"setLights: \" + setLights)\nnode.log(\"----- Kallen Bedroom: End Parameters -----\")\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan' && fanSeparate === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"})\n        node.log(\"Kallen Bedroom: Early Fan\")\n        node.send([null,[sendFan,sendWhiteNoise],null])\n    } else if (toggle === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"})\n        node.log(\"Kallen Bedroom: Wake\")\n        node.send([wakeMsg,[sendFan,sendWhiteNoise,sendVolume],null])\n    } else if (toggle === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"})\n        node.log(\"Kallen Bedroom: Sleep\")\n        node.send([null,[sendFan,sendWhiteNoise,sendVolume,sendLights],sleepMsg])\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    node.log(\"Kallen Bedroom: Flow Blocked\")\n}\n\nnode.log(\"Kallen Bedroom: Processing Complete\")",
+        "outputs": 3,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
@@ -18005,90 +17615,21 @@
         "y": 1060,
         "wires": [
             [
-                "d6b56cb65c2ff140"
+                "17e5f9acd57c2819",
+                "57651381835f659c"
             ],
             [
-                "57651381835f659c",
-                "d132875202e85038",
-                "17e5f9acd57c2819"
+                "46a1e386f7468d21"
             ],
             [
-                "7b0648758704fad4"
-            ],
-            [
-                "4341325f7ca23f24"
+                "7b0648758704fad4",
+                "292cda64df0c1c10"
             ]
         ],
         "outputLabels": [
-            "blocked",
             "wake",
-            "sleep",
-            "fan"
-        ]
-    },
-    {
-        "id": "af209a80e9174433",
-        "type": "function",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Scheduled Mode",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar schedMode = states['input_select.scheduled_climate_mode_kallen_fan'].state\n\nmsg.topic = 'common'\nmsg.voice = 'Joanna'\n\nif (schedMode === 'White Noise') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"White Noise\"});\n    return[msg,null,null]\n} else if (schedMode === 'Fan') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"});\n    return[null,msg,null]\n} else {\n    node.status({fill:\"blue\",shape:\"dot\",text:\"N/A\"});\n    return[null,null,msg]\n}\n",
-        "outputs": 3,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 410,
-        "y": 1320,
-        "wires": [
-            [
-                "2f3666d288d77ad1",
-                "99e74844b8fd9d1a",
-                "90329b0683f81550"
-            ],
-            [
-                "2f3666d288d77ad1",
-                "265b54394cc42f53"
-            ],
-            [
-                "2f3666d288d77ad1",
-                "11993e61de14f592"
-            ]
-        ],
-        "outputLabels": [
-            "White Noise",
-            "Fan",
-            "N/A"
-        ]
-    },
-    {
-        "id": "274d63b8df8f2dd0",
-        "type": "api-call-service",
-        "z": "72f99805df043603",
-        "g": "39a7ac02f2727f1d",
-        "name": "Set Volume",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "media_player",
-        "service": "volume_set",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "media_player.kallen_bedroom_google_speaker"
-        ],
-        "data": "{\t    \"volume_level\": volume\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 210,
-        "y": 1320,
-        "wires": [
-            [
-                "af209a80e9174433"
-            ]
+            "services",
+            "sleep"
         ]
     },
     {
@@ -18275,8 +17816,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 980,
-        "y": 1440,
+        "x": 780,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -18286,7 +17827,7 @@
         "type": "api-render-template",
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
-        "name": "",
+        "name": "Sleep Time",
         "server": "9e87348d.9c1c48",
         "version": 0,
         "template": "{{ as_timestamp(now()) | timestamp_custom('%H:%M') }}",
@@ -18294,11 +17835,11 @@
         "resultsLocationType": "msg",
         "templateLocation": "",
         "templateLocationType": "none",
-        "x": 95,
-        "y": 1320,
+        "x": 635,
+        "y": 1140,
         "wires": [
             [
-                "274d63b8df8f2dd0"
+                "3937c38bc1bd0ee0"
             ]
         ],
         "l": false
@@ -19056,6 +18597,75 @@
         "x": 760,
         "y": 80,
         "wires": []
+    },
+    {
+        "id": "476f73cf6b540f96",
+        "type": "function",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Allowed?",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst vacationMode = states['input_boolean.vacation_mode'].state\nconst overnight = states['input_boolean.kallen_overnight'].state\nconst kallenLoc = states['person.kallen_stork'].state\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Proceed\"})\n    node.log(\"Kallen climate flow allowed to proceed\")\n    node.send(msg)\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 880,
+        "wires": [
+            [
+                "d6b56cb65c2ff140"
+            ]
+        ]
+    },
+    {
+        "id": "46a1e386f7468d21",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Service Calls",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "",
+        "service": "",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 690,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "292cda64df0c1c10",
+        "type": "api-render-template",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Speech",
+        "server": "9e87348d.9c1c48",
+        "version": 0,
+        "template": "{% from 'speech.jinja' import kallenSleepMsg %}\n{{ kallenSleepMsg() }}",
+        "resultsLocation": "payload",
+        "resultsLocationType": "msg",
+        "templateLocation": "",
+        "templateLocationType": "none",
+        "x": 635,
+        "y": 1200,
+        "wires": [
+            [
+                "b4dbbf788c5a30d2"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "9256f78107619596",
