@@ -6333,555 +6333,7 @@
                 "15a73af2f8ea690c"
             ],
             [
-                "6ee65c58bd763ecf"
-            ]
-        ]
-    },
-    {
-        "id": "0371f41c342134a0",
-        "type": "switch",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Day or night",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 510,
-        "y": 180,
-        "wires": [
-            [
-                "d606a51a9cd648da"
-            ],
-            [
-                "d394df04f71de37a",
-                "4781b749d186cd7f",
-                "7ef7610b2f402829",
-                "47862a29a4c2efd1",
-                "d652a9f518f9b876"
-            ]
-        ]
-    },
-    {
-        "id": "e9aba9f5312297b7",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Set Scenes",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "evening_on_first_floor",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"sunset_lights\": 1\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2070,
-        "y": 180,
-        "wires": [
-            [
-                "db751091895c18b8",
-                "4449d5ec66482683",
-                "65a3169bc9301a4d",
-                "d0cac72a2cc0d7a7"
-            ]
-        ]
-    },
-    {
-        "id": "1e365f7e5ba78955",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Turn off night lighting",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_off",
-        "areaId": [
-            "front_porch",
-            "upstairs_hallway"
-        ],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1160,
-        "y": 200,
-        "wires": [
-            [
-                "8556daf4bc9df581"
-            ]
-        ]
-    },
-    {
-        "id": "8556daf4bc9df581",
-        "type": "delay",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1400,
-        "y": 240,
-        "wires": [
-            [
-                "40a4142a0f72b94a",
-                "5ee1e29d42eb0b88",
-                "7b9e480fbcf14b44"
-            ]
-        ]
-    },
-    {
-        "id": "40a4142a0f72b94a",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Sleep mode off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_sleep_mode_basement_studio",
-            "switch.adaptive_lighting_sleep_mode_dining_room_lamp",
-            "switch.adaptive_lighting_sleep_mode_downstairs_bathroom",
-            "switch.adaptive_lighting_sleep_mode_emma_bedroom",
-            "switch.adaptive_lighting_sleep_mode_kallen_bedroom",
-            "switch.adaptive_lighting_sleep_mode_living_room",
-            "switch.adaptive_lighting_sleep_mode_master_bedroom",
-            "switch.adaptive_lighting_sleep_mode_mud_room",
-            "switch.adaptive_lighting_sleep_mode_tina_lamp",
-            "switch.adaptive_lighting_sleep_mode_upstairs_bathroom",
-            "switch.adaptive_lighting_sleep_mode_upstairs_hallway"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1640,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "990ab49071133125",
-        "type": "change",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Clear Weather Message",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Lights on after delay due to clear weather",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Sunset Lights ON",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1905,
-        "y": 60,
-        "wires": [
-            [
-                "e9aba9f5312297b7",
-                "df102c847233f0b5",
-                "c5d3148ae7226051"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "60d401148ecff1ef",
-        "type": "change",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Cloudy Weather Message",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Lights on early due to cloudy weather",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Sunset Lights ON",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1905,
-        "y": 180,
-        "wires": [
-            [
-                "e9aba9f5312297b7",
-                "df102c847233f0b5",
-                "c5d3148ae7226051"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "d394df04f71de37a",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Interior Toggle",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.sunset_lights_on",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 740,
-        "y": 240,
-        "wires": [
-            [
-                "24685bfd0b3069f3"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "4fcc6c68cec50467",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Is Family Home?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.parents_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1750,
-        "y": 80,
-        "wires": [
-            [
-                "990ab49071133125"
-            ],
-            [
-                "411c0ddd868c6e9d"
-            ]
-        ]
-    },
-    {
-        "id": "8a5b225968323ce6",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Is Family Home?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.parents_home",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1750,
-        "y": 180,
-        "wires": [
-            [
-                "60d401148ecff1ef"
-            ],
-            [
-                "411c0ddd868c6e9d"
-            ]
-        ]
-    },
-    {
-        "id": "411c0ddd868c6e9d",
-        "type": "change",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Skipped Message",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Lights not on due to nobody home, or toggle shutoff",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Sunset Lights SKIPPED",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2075,
-        "y": 120,
-        "wires": [
-            [
-                "db751091895c18b8",
-                "4449d5ec66482683",
-                "65a3169bc9301a4d"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "5ee1e29d42eb0b88",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Adaptive Lighting On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_basement_studio",
-            "switch.adaptive_lighting_dining_room_lamp",
-            "switch.adaptive_lighting_downstairs_bathroom",
-            "switch.adaptive_lighting_emma_bedroom",
-            "switch.adaptive_lighting_kallen_bedroom",
-            "switch.adaptive_lighting_living_room",
-            "switch.adaptive_lighting_master_bedroom",
-            "switch.adaptive_lighting_mud_room",
-            "switch.adaptive_lighting_tina_lamp",
-            "switch.adaptive_lighting_upstairs_bathroom",
-            "switch.adaptive_lighting_upstairs_hallway"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1660,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "907ad93232629cb5",
-        "type": "link out",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Night Interior Toggle Off",
-        "mode": "link",
-        "links": [
-            "b37f91bf63e79996"
-        ],
-        "x": 1245,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "b37f91bf63e79996",
-        "type": "link in",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Skip Formatting",
-        "links": [
-            "77c69154733e7366",
-            "907ad93232629cb5"
-        ],
-        "x": 1905,
-        "y": 120,
-        "wires": [
-            [
-                "411c0ddd868c6e9d"
-            ]
-        ]
-    },
-    {
-        "id": "4781b749d186cd7f",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Turn off booleans",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_boolean",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.give_me_darkness",
-            "input_boolean.goodnight",
-            "input_boolean.kallen_computer_updates",
-            "input_boolean.night_mode"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 750,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7b9e480fbcf14b44",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Reset Scene Text",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_text",
-        "service": "set_value",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_text.basement_studio_selected_scene",
-            "input_text.dining_room_lamp_selected_scene",
-            "input_text.downstairs_bathroom_selected_scene",
-            "input_text.emma_bedroom_selected_scene",
-            "input_text.front_porch_selected_scene",
-            "input_text.kallen_bedroom_selected_scene",
-            "input_text.living_room_selected_scene",
-            "input_text.master_bedroom_selected_scene",
-            "input_text.mud_room_selected_scene",
-            "input_text.tina_lamp_selected_scene",
-            "input_text.upstairs_bathroom_selected_scene",
-            "input_text.upstairs_hallway_selected_scene"
-        ],
-        "data": "{\t    \"value\":\"Adaptive\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1650,
-        "y": 420,
-        "wires": [
-            [
-                "fc85ca4a4c57b5bf"
+                "dd3f147b2583a136"
             ]
         ]
     },
@@ -6900,136 +6352,20 @@
                 "propertyType": "msg",
                 "value": "0",
                 "valueType": "num"
-            }
-        ],
-        "x": 1420,
-        "y": 180,
-        "wires": [
-            [
-                "8a5b225968323ce6"
-            ]
-        ]
-    },
-    {
-        "id": "dcf7a21a3844fbb0",
-        "type": "inject",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Manual Off",
-        "props": [
+            },
             {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 520,
-        "y": 240,
-        "wires": [
-            [
-                "4781b749d186cd7f",
-                "47862a29a4c2efd1",
-                "24685bfd0b3069f3",
-                "7ef7610b2f402829",
-                "d652a9f518f9b876"
-            ]
-        ]
-    },
-    {
-        "id": "6ee65c58bd763ecf",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Vacation Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.vacation_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "vacation",
+                "property": "topic",
                 "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
+                "value": "manual-trigger",
+                "valueType": "str"
             }
         ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 320,
-        "y": 180,
+        "x": 120,
+        "y": 300,
         "wires": [
             [
-                "0371f41c342134a0"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
-        ]
-    },
-    {
-        "id": "db751091895c18b8",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "iOS Notifications",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "text_notify",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": topic,\t    \"message\": payload,\t    \"type\": \"normal\",\t    \"tag\": \"sunset-lights\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2320,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4449d5ec66482683",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "TV Notifications",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "tv_notify",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"who\":\"all\",\t    \"title\": topic,\t    \"message\": payload,\t    \"data\": {\t        \"fontsize\": \"large\",\t        \"duration\": 3,\t        \"transparency\": \"25%\"\t    }\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2320,
-        "y": 180,
-        "wires": [
-            []
+                "5ec63f0857df4164"
+            ]
         ]
     },
     {
@@ -7154,103 +6490,6 @@
         ]
     },
     {
-        "id": "7ef7610b2f402829",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Motion On?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.upstairs_bathroom_occupied",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 730,
-        "y": 380,
-        "wires": [
-            [
-                "80a2c88e730484cc"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
-        ]
-    },
-    {
-        "id": "80a2c88e730484cc",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Upstairs Bathroom Lights Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_off",
-        "areaId": [
-            "upstairs_bathroom"
-        ],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 980,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1de987d9202de646",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Start Timer",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "timer",
-        "service": "start",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "timer.sunset_lighting_timer"
-        ],
-        "data": "{\t    \"duration\":\"00:30:00\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1350,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "6995391c94793f08",
         "type": "server-events",
         "z": "e44b1e7a8ef7ae1d",
@@ -7275,393 +6514,21 @@
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "",
-                "valueType": "date"
-            }
-        ],
-        "x": 1520,
-        "y": 100,
-        "wires": [
-            [
-                "4fcc6c68cec50467"
-            ]
-        ]
-    },
-    {
-        "id": "1661877c3165ccd8",
-        "type": "inject",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
+                "value": "0",
+                "valueType": "num"
             },
             {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1120,
-        "y": 40,
-        "wires": [
-            [
-                "1de987d9202de646"
-            ]
-        ]
-    },
-    {
-        "id": "65a3169bc9301a4d",
-        "type": "function",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Holiday Code",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar holidayMode = states['input_boolean.holiday_mode'].state\nvar currentHoliday = states['input_select.holiday_animation'].state\nvar holiday = currentHoliday.toLowerCase()\n\nif (holidayMode === 'on') {\n    msg.holiday = holiday\n    node.status({fill:\"green\",shape:\"dot\",text:\"Holiday On\"});\n    return msg;\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Holiday Off\"});\n    return null;\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2320,
-        "y": 240,
-        "wires": [
-            [
-                "3f695f3f93209060",
-                "16d9572e576c9488"
-            ]
-        ],
-        "icon": "font-awesome/fa-tree"
-    },
-    {
-        "id": "63e29e0cab0d4579",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Holiday Scene",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.animated_scene_{{holiday}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2700,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3f695f3f93209060",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Adaptive Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.adaptive_lighting_front_porch"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2510,
-        "y": 240,
-        "wires": [
-            [
-                "63e29e0cab0d4579"
-            ]
-        ]
-    },
-    {
-        "id": "47862a29a4c2efd1",
-        "type": "function",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Holiday Code",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar holidayMode = states['input_boolean.holiday_mode'].state\nvar holidayHold = states['input_boolean.holiday_mode_hold'].state\nvar currentHoliday = states['input_select.holiday_animation'].state\nvar holiday = currentHoliday.toLowerCase()\n\nif (holidayMode === 'on') {\n    if (holidayHold === 'off') {\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Holiday On\" });\n        msg.holiday = holiday\n        return msg;\n    } else {\n        node.status({fill:\"yellow\",shape:\"dot\",text:\"Holiday Hold On\"});\n        msg.holiday = holiday\n        return msg;\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Holiday Off\"});\n    return null;\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 740,
-        "y": 440,
-        "wires": [
-            [
-                "5c7200b067eb96eb",
-                "6987f02f09134764"
-            ]
-        ],
-        "icon": "font-awesome/fa-tree"
-    },
-    {
-        "id": "5c7200b067eb96eb",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Holiday Animation Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.animated_scene_{{holiday}}"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 960,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "16d9572e576c9488",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Xmas Lights On",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "light.front_window_christmas_lights",
-            "light.living_room_christmas_tree"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2520,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6987f02f09134764",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "d": true,
-        "name": "Xmas Lights Off",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "light.front_window_christmas_lights",
-            "light.living_room_christmas_tree"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 940,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fc85ca4a4c57b5bf",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Reset Scene Text",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_text",
-        "service": "set_value",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_text.tina_desk_selected_scene"
-        ],
-        "data": "{\t    \"value\":\"Day Mode\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1910,
-        "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d0cac72a2cc0d7a7",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Desk Lights On?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "light.tina_desk_lights",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
+                "property": "topic",
                 "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
+                "value": "timer-finished",
+                "valueType": "str"
             }
         ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 2330,
-        "y": 60,
-        "wires": [
-            [
-                "7c3feabba66ced30"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "7c3feabba66ced30",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Reset Desk Scene",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.tina_desk_scenes"
-        ],
-        "data": "{\t    \"option\":\"Reset\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2550,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "24685bfd0b3069f3",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Holiday Hold",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.holiday_mode_hold",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 930,
+        "x": 120,
         "y": 240,
         "wires": [
             [
-                "1e365f7e5ba78955"
-            ],
-            [
-                "ad34a6e7cb0169ad"
-            ]
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
-        ]
-    },
-    {
-        "id": "ad34a6e7cb0169ad",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Turn off night lighting",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_off",
-        "areaId": [
-            "upstairs_hallway"
-        ],
-        "deviceId": [],
-        "entityId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1160,
-        "y": 260,
-        "wires": [
-            [
-                "8556daf4bc9df581"
+                "5ec63f0857df4164"
             ]
         ]
     },
@@ -7688,7 +6555,7 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 510,
+        "x": 390,
         "y": 40,
         "wires": [
             [
@@ -7703,6 +6570,7 @@
         "name": "Invert",
         "func": "var daynight = msg.payload\n\nif (daynight === 1) {\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"Day\"});\n    msg.payload = 0\n} else if (daynight === 0) {\n    node.status({fill:\"blue\",shape:\"dot\",text:\"Night\"});\n    msg.payload = 1\n}\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -7730,7 +6598,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 800,
+        "x": 660,
         "y": 40,
         "wires": []
     },
@@ -7741,11 +6609,12 @@
         "name": "Invert",
         "func": "var daynight = msg.payload\n\nif (daynight === 0) {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n    msg.payload = \"off\"\n} else if (daynight === 1) {\n    node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n    msg.payload = \"on\"\n}\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 655,
+        "x": 525,
         "y": 40,
         "wires": [
             [
@@ -7768,8 +6637,8 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 420,
-        "y": 420,
+        "x": 400,
+        "y": 780,
         "wires": []
     },
     {
@@ -7786,8 +6655,8 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 420,
-        "y": 360,
+        "x": 400,
+        "y": 720,
         "wires": []
     },
     {
@@ -7833,8 +6702,8 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 150,
-        "y": 420,
+        "x": 130,
+        "y": 780,
         "wires": [
             [
                 "369e5f1ea8730d39"
@@ -7884,8 +6753,8 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 170,
-        "y": 360,
+        "x": 150,
+        "y": 720,
         "wires": [
             [
                 "9d4ffc704e9ff81e"
@@ -7893,173 +6762,13 @@
         ]
     },
     {
-        "id": "d606a51a9cd648da",
-        "type": "function",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Processing",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar sunsetLights = states['input_boolean.sunset_lights_on'].state\nvar weather = states['weather.iron_nerd_weather_station'].state\n\nif (sunsetLights === 'on') {\n    if (weather === 'sunny' || weather === 'clear-night') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Nice Weather\"});\n        return[msg,null,null]\n    } else {\n        node.status({fill:\"grey\",shape:\"dot\",text:\"Shitty Weather\"});\n        return[null,msg,null]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Disabled\"});\n    return[null,null,msg]\n}\n\nreturn msg;",
-        "outputs": 3,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1130,
-        "y": 120,
-        "wires": [
-            [
-                "1de987d9202de646"
-            ],
-            [
-                "8a5b225968323ce6"
-            ],
-            [
-                "907ad93232629cb5"
-            ]
-        ],
-        "outputLabels": [
-            "Sunny",
-            "Not Sunny",
-            "Disabled"
-        ],
-        "icon": "font-awesome/fa-cloud"
-    },
-    {
-        "id": "df102c847233f0b5",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Set Scenes",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "evening_on_second_floor",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"sunset_lights\": 1\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2070,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d652a9f518f9b876",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Stairwell Reset",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "stairwell_led_strip",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"color_temp_kelvin\": 2000,\t    \"brightness\": 255\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 740,
-        "y": 500,
-        "wires": [
-            [
-                "e2c9d18f69e5a3d3"
-            ]
-        ]
-    },
-    {
-        "id": "1f3d3f08e760d0c1",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Turn off stairwell",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "light",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "light.stairwell_led_strip"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1000,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e2c9d18f69e5a3d3",
-        "type": "delay",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 875,
-        "y": 560,
-        "wires": [
-            [
-                "1f3d3f08e760d0c1"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "c5d3148ae7226051",
-        "type": "api-call-service",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Stairwell",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "script",
-        "service": "stairwell_led_strip",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [],
-        "data": "{\t    \"color_temp_kelvin\": 2000,\t    \"brightness\": 150\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 2060,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "a605e8b865992be7",
         "type": "function",
         "z": "e44b1e7a8ef7ae1d",
         "name": "Processing",
-        "func": "var tomorrow = msg.tomorrow\nvar today = msg.today\nvar number = {}\nvar work_tomorrow = {}\n\nif (tomorrow > 0) {\n    work_tomorrow = \"true\"\n    if (today == 0) {\n        number = 0\n    } else {\n        number = 1\n    }\n} else {\n    work_tomorrow = \"false\"\n    number = 0\n}\n\nmsg.work_tomorrow = work_tomorrow\n\nif (number == 0) {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Number 0\"})\n    return[msg,null]\n} else {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Number 1\"})\n    return[null,msg]\n}",
+        "func": "let tomorrow = msg.tomorrow\nlet today = msg.today\nlet number = {}\nlet work_tomorrow = {}\n\nif (tomorrow > 0) {\n    work_tomorrow = \"true\"\n    if (today == 0) {\n        number = 0\n    } else {\n        number = 1\n    }\n} else {\n    work_tomorrow = \"false\"\n    number = 0\n}\n\nmsg.work_tomorrow = work_tomorrow\n\nif (number == 0) {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Number 0\"})\n    return[msg,null]\n} else {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Number 1\"})\n    return[null,msg]\n}",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -8147,6 +6856,139 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "c59fac053d848a65",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Service Calls",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "",
+        "service": "",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 590,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41df7a1ac03de337",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Script Calls",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "",
+        "service": "",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 590,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7cc1659362b85ba0",
+        "type": "api-call-service",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Notify Calls",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "",
+        "service": "",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 590,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd3f147b2583a136",
+        "type": "delay",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 245,
+        "y": 180,
+        "wires": [
+            [
+                "5ec63f0857df4164"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "5ec63f0857df4164",
+        "type": "function",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Processing",
+        "func": "//! FLOW VARIABLES DEFINED IN START TAB\n\n// Set Constants\n\nconst states = global.get('homeassistant.homeAssistant.states')\nconst holidayMode = states['input_boolean.holiday_mode'].state\nconst holidayHold = states['input_boolean.holiday_mode_hold'].state\nconst currentHoliday = states['input_select.holiday_animation'].state\nconst holiday = currentHoliday.toLowerCase()\nconst sunsetLights = states['input_boolean.sunset_lights_on'].state\nconst weather = states['weather.iron_nerd_weather_station'].state\nconst vacation = states['input_boolean.vacation_mode'].state\nconst upBathOcc = states['binary_sensor.upstairs_bathroom_occupied'].state\nconst deskLights = states['light.tina_desk_lights'].state\nconst adaptiveSleep = flow.get(\"adaptiveSleep\", \"diskCon\")\nconst selScenesMain = flow.get(\"selScenesMain\", \"diskCon\")\nconst selScenesTinaDesk = flow.get(\"selScenesTinaDesk\", \"diskCon\")\nconst booleanOff = flow.get(\"booleanOff\", \"diskCon\")\nconst payload = msg.payload\nnode.log(\"Time-based Automations: Constants Set\")\n\n// Set a few important variables\n\nlet time = {}\nlet topic = {}\nlet delay = {}\n\nif (payload == 0) {\n    time = \"night\"\n} else if (payload == 1) {\n    time = \"day\"\n}\n\nif (msg.topic === 'timer-finished' || msg.topic === 'manual-trigger') {\n    topic = msg.topic\n}\n\nif (topic === 'timer-finished' || topic === 'manual-trigger') {\n    delay = 'off'\n} else if (weather === 'sunny' || weather === 'clear-night') {\n    delay = 'on'\n} else {\n    delay = 'off'\n}\nnode.log(\"Time-based Automations: Main variables defined\")\n\n// ---------- Configuration ----------\n// Decide which nighttime lighting to turn off at sunrise\nlet lightsOff = [\"light.hallway_overhead\"]\n\nif (holidayHold === 'off') {\n    lightsOff.push(\"light.front_porch_light\")\n}\n\nif (upBathOcc === 'off') {\n    lightsOff.push(\"light.upstairs_bathroom_lights\")\n}\n\n// Stairwell light strip settings\nlet stairKelvin = 2000\nlet stairBrt = {}\nlet stairEntity = [\"light.stairwell_led_strip\"]\nif (time === 'day') {\n    stairBrt = 255\n} else if (time === 'night') {\n    stairBrt = 150\n}\n\n// Sunset lights timer settings\nlet timerEntity = [\"timer.sunset_lighting_timer\"]\nlet timerDuration = \"00:30:00\"\n\n// Adaptive lighting switches to set\nlet switchAdaptive = []\nlet setAdaptive = {}\n\nif (time === 'day') {\n    if (holidayHold === 'on'){\n        switchAdaptive = flow.get(\"adaptiveDayHoliday\", \"diskCon\")\n    } else {\n        switchAdaptive = flow.get(\"adaptiveDay\", \"diskCon\")\n    }\n    setAdaptive = 'on'\n} else if (time === 'night') {\n    switchAdaptive = flow.get(\"adaptiveNight\", \"diskCon\")\n    if (holidayMode === 'on') {\n        setAdaptive = 'off'\n    } else {\n        setAdaptive = 'on'\n    }\n}\n\n// Notification settings\nlet notifyTitle = {}\nlet notifyMsg = {}\nlet sunsetStatus = {}\nif (sunsetLights === 'off') {\n    notifyTitle = \"Sunset Lights SKIPPED\"\n    notifyMsg = \"Lights not on due to nobody home, or toggle shutoff\"\n    sunsetStatus = \"Skipped\"\n} else {\n    notifyTitle = \"Sunset Lights On\"\n    if (delay === 'on') {\n        notifyMsg = \"Lights on after delay due to clear weather\"\n        sunsetStatus = \"Delayed\"\n    } else if (delay === 'off') {\n        notifyMsg = \"Lights on early due to cloudy weather\"\n        sunsetStatus = \"Early\"\n    }\n}\n\n// Holiday Settings\nlet setHoliday = {}\nlet switchHoliday = [\"switch.animated_scene_\" + holiday]\nif (holidayMode === 'on') {\n    if (time === 'day') {\n        setHoliday = 'off'\n    } else if (time === 'night') {\n        setHoliday = 'on'\n    }\n}\n\nnode.log(\"Time-based Automations: Decision Logic Complete\")\n\n// ---------- Service Calls ----------\nlet sendLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": lightsOff\n        },\n        \"data\": {}\n    }\n}\n\nlet sendStairwellScript = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"stairwell_led_strip\",\n        \"data\": {\n            \"color_temp_kelvin\": stairKelvin,\n            \"brightness\": stairBrt\n        }\n    }\n}\n\nlet sendStairwellOff = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": stairEntity\n        },\n        \"data\": {}\n    }\n}\n\nlet sendSleepOff = {\n    \"payload\": {\n        \"domain\": \"switch\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": adaptiveSleep\n        },\n        \"data\": {}\n    }\n}\n\nlet sendBooleanOff = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": booleanOff\n        },\n        \"data\": {}\n    }\n}\n\nlet sendAdaptive = {\n    \"payload\": {\n        \"domain\": \"switch\",\n        \"service\": \"turn_\" + setAdaptive,\n        \"target\": {\n            \"entity_id\": switchAdaptive\n        },\n        \"data\": {}\n    }\n}\n\nlet sendSceneResetMain = {\n    \"payload\": {\n        \"domain\": \"input_text\",\n        \"service\": \"set_value\",\n        \"target\": {\n            \"entity_id\": selScenesMain\n        },\n        \"data\": {\n            \"option\": \"Adaptive\"\n        }\n    }\n}\n\nlet sendSceneResetDesk = {\n    \"payload\": {\n        \"domain\": \"input_text\",\n        \"service\": \"set_value\",\n        \"target\": {\n            \"entity_id\": selScenesTinaDesk\n        },\n        \"data\": {\n            \"option\": \"Day Mode\"\n        }\n    }\n}\n\nlet sendHoliday = {\n    \"payload\": {\n        \"domain\": \"switch\",\n        \"service\": \"turn_\" + setHoliday,\n        \"target\": {\n            \"entity_id\": switchHoliday\n        },\n        \"data\": {}\n    }\n}\n\nlet sendTimer = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"start\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {\n            \"duration\": timerDuration\n        }\n    }\n}\n\nlet sendNotifyPhone = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"text_notify\",\n        \"data\": {\n            \"who\": \"all\",\n            \"title\": notifyTitle,\n            \"message\": notifyMsg,\n            \"type\": \"normal\",\n            \"tag\": \"sunset-lights\"\n        }\n    }\n}\n\nlet sendNotifyTV = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"tv_notify\",\n        \"data\": {\n            \"who\": \"all\",\n            \"title\": notifyTitle,\n            \"message\": notifyMsg,\n            \"data\": {\n                \"fontsize\": \"large\",\n                \"duration\": 3,\n                \"transparency\": \"25%\"\n            }\n        }\n    }\n}\n\nlet sendFirstFloorScene = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"evening_on_first_floor\",\n        \"data\": {\n            \"sunset_lights\": 1\n        }\n    }\n}\n\nlet sendSecondFloorScene = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"evening_on_second_floor\",\n        \"data\": {\n            \"sunset_lights\": 1\n        }\n    }\n}\n\nlet sendDeskScene = {\n    \"payload\": {\n        \"domain\": \"input_select\",\n        \"service\": \"select_option\",\n        \"target\": {\n            \"entity_id\": [\"input_select.tina_desk_scenes\"]\n        },\n        \"data\": {\n            \"option\": \"Reset\"\n        }\n    }\n}\n\nnode.log(\"Time-based Automations: Message Payloads Defined\")\n\nnode.log(\"----- Time-based Automations: Set Parameters\")\nnode.log(\"time: \" + time)\nnode.log(\"delay: \" + delay)\nnode.log(\"topic: \" + topic)\nnode.log(\"lightsOff: \" + lightsOff)\nnode.log(\"stairKelvin: \" + stairKelvin)\nnode.log(\"stairBrt: \" + stairBrt)\nnode.log(\"weather: \" + weather)\nnode.log(\"holidayMode: \" + holidayMode)\nif (holidayMode === 'on') {\n    node.log(\"switchHoliday: \" + switchHoliday)\n    node.log(\"holiday: \" + holiday)\n    node.log(\"holidayHold: \" + holidayHold)\n    node.log(\"switchHoliday: \" + switchHoliday)\n}\nnode.log(\"----- Time-based Automations: End Parameters -----\")\n\nif (vacation === 'off') {\n    if (time === \"day\") {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sunrise Flow\"})\n        node.send([null,[sendLights,sendBooleanOff],sendStairwellScript])\n        setTimeout(() => {\n            node.send([null,[sendStairwellOff,sendSleepOff,sendAdaptive,sendSceneResetMain,sendSceneResetDesk],null])\n            if (holidayMode === 'on' && holidayHold === 'off') {\n                node.send([null,[sendHoliday],null])\n            }\n        }, 5000)\n    } else if (time === \"night\") {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sunset Flow\"})\n        node.send([null,sendAdaptive,null])\n        if (holidayMode === 'on') {\n            setTimeout(() => {\n                node.send([null,sendHoliday,null])\n            }, 1000)\n        }\n        if (delay === 'on') {\n            node.send([null,sendTimer,null])\n        } else {\n            node.send([null,null,[sendFirstFloorScene,sendSecondFloorScene]])\n            if (deskLights === 'on') {\n                node.send([null,sendDeskScene,null])\n            }\n            if (topic != 'manual-trigger') {\n                node.send([[sendNotifyPhone,sendNotifyTV],null,null])\n            }\n        }\n    }\n}\nnode.log(\"Time-based Automations: Processing Complete\")",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "//! ---------- DAY MODE ----------\n// Lists of adaptive lighting switches for different scenarios\nconst adaptiveDay = [\n    \"switch.adaptive_lighting_basement_studio\",\n    \"switch.adaptive_lighting_dining_room_lamp\",\n    \"switch.adaptive_lighting_downstairs_bathroom\",\n    \"switch.adaptive_lighting_emma_bedroom\",\n    \"switch.adaptive_lighting_kallen_bedroom\",\n    \"switch.adaptive_lighting_living_room\",\n    \"switch.adaptive_lighting_master_bedroom\",\n    \"switch.adaptive_lighting_mud_room\",\n    \"switch.adaptive_lighting_tina_lamp\",\n    \"switch.adaptive_lighting_upstairs_bathroom\",\n    \"switch.adaptive_lighting_upstairs_hallway\",\n    \"switch.adaptive_lighting_front_porch\"\n]\n\nconst adaptiveDayHoliday = [\n    \"switch.adaptive_lighting_basement_studio\",\n    \"switch.adaptive_lighting_dining_room_lamp\",\n    \"switch.adaptive_lighting_downstairs_bathroom\",\n    \"switch.adaptive_lighting_emma_bedroom\",\n    \"switch.adaptive_lighting_kallen_bedroom\",\n    \"switch.adaptive_lighting_living_room\",\n    \"switch.adaptive_lighting_master_bedroom\",\n    \"switch.adaptive_lighting_mud_room\",\n    \"switch.adaptive_lighting_tina_lamp\",\n    \"switch.adaptive_lighting_upstairs_bathroom\",\n    \"switch.adaptive_lighting_upstairs_hallway\",\n]\n\n// List of adaptive lighting sleep mode switches to turn off\nconst adaptiveSleep = [\n    \"switch.adaptive_lighting_sleep_mode_basement_studio\",\n    \"switch.adaptive_lighting_sleep_mode_dining_room_lamp\",\n    \"switch.adaptive_lighting_sleep_mode_downstairs_bathroom\",\n    \"switch.adaptive_lighting_sleep_mode_emma_bedroom\",\n    \"switch.adaptive_lighting_sleep_mode_kallen_bedroom\",\n    \"switch.adaptive_lighting_sleep_mode_living_room\",\n    \"switch.adaptive_lighting_sleep_mode_master_bedroom\",\n    \"switch.adaptive_lighting_sleep_mode_mud_room\",\n    \"switch.adaptive_lighting_sleep_mode_tina_lamp\",\n    \"switch.adaptive_lighting_sleep_mode_upstairs_bathroom\",\n    \"switch.adaptive_lighting_sleep_mode_upstairs_hallway\"\n]\n\n// List of selected scene input texts to reset to Adaptive\nconst selScenesMain = [\n    \"input_text.basement_studio_selected_scene\",\n    \"input_text.dining_room_lamp_selected_scene\",\n    \"input_text.downstairs_bathroom_selected_scene\",\n    \"input_text.emma_bedroom_selected_scene\",\n    \"input_text.front_porch_selected_scene\",\n    \"input_text.kallen_bedroom_selected_scene\",\n    \"input_text.living_room_selected_scene\",\n    \"input_text.master_bedroom_selected_scene\",\n    \"input_text.mud_room_selected_scene\",\n    \"input_text.tina_lamp_selected_scene\",\n    \"input_text.upstairs_bathroom_selected_scene\",\n    \"input_text.upstairs_hallway_selected_scene\"\n]\n\n// Tina's desk reset\nconst selScenesTinaDesk = [\"input_text.tina_desk_selected_scene\"]\n\n// List of booleans to turn off\nconst booleanOff = [\n    \"input_boolean.give_me_darkness\",\n    \"input_boolean.goodnight\",\n    \"input_boolean.kallen_computer_updates\",\n    \"input_boolean.night_mode\"\n]\n\n//! ---------- NIGHT MODE ----------\n// Booleans to turn on at night\nconst adaptiveNight = [\n    \"switch.adaptive_lighting_front_porch\"\n]\n\n\nflow.set(\"adaptiveDay\", adaptiveDay, \"diskCon\")\nflow.set(\"adaptiveDayHoliday\", adaptiveDayHoliday, \"diskCon\")\nflow.set(\"adaptiveNight\", adaptiveNight, \"diskCon\")\nflow.set(\"adaptiveSleep\", adaptiveSleep, \"diskCon\")\nflow.set(\"selScenesMain\", selScenesMain, \"diskCon\")\nflow.set(\"selScenesTinaDesk\", selScenesTinaDesk, \"diskCon\")\nflow.set(\"booleanOff\", booleanOff, \"diskCon\")",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 180,
+        "wires": [
+            [
+                "7cc1659362b85ba0"
+            ],
+            [
+                "c59fac053d848a65"
+            ],
+            [
+                "41df7a1ac03de337"
+            ]
+        ],
+        "outputLabels": [
+            "Notify",
+            "Services",
+            "Scripts"
+        ],
+        "icon": "node-red-node-suncalc/sun.png"
     },
     {
         "id": "134433d6e21dab5b",
