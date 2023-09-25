@@ -838,7 +838,9 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339
+        "y": 339,
+        "w": 1872,
+        "h": 622
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -872,7 +874,9 @@
             "292cda64df0c1c10"
         ],
         "x": 14,
-        "y": 839
+        "y": 839,
+        "w": 1552,
+        "h": 402
     },
     {
         "id": "e065b1ed4938b477",
@@ -927,7 +931,9 @@
             "f950918e12591224"
         ],
         "x": 14,
-        "y": 11.5
+        "y": 11.5,
+        "w": 1252,
+        "h": 809.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -967,7 +973,9 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179
+        "y": 179,
+        "w": 1292,
+        "h": 382
     },
     {
         "id": "477e752fcd2e2a19",
@@ -986,7 +994,9 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 1192,
+        "h": 82
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1034,7 +1044,9 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 682
     },
     {
         "id": "46275dd0f9461013",
@@ -1052,7 +1064,9 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739
+        "y": 739,
+        "w": 472,
+        "h": 202
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1088,7 +1102,9 @@
             "f111c40459e27629"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1272,
+        "h": 502
     },
     {
         "id": "208284848b13b85b",
@@ -1113,7 +1129,9 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1032,
+        "h": 322
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1163,7 +1181,9 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 139
+        "y": 139,
+        "w": 1152,
+        "h": 242
     },
     {
         "id": "eeafd13be593ae69",
@@ -1197,7 +1217,9 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1492,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1231,7 +1253,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "8aee4d340a136bac",
@@ -1251,7 +1275,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1276,7 +1302,9 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619
+        "y": 619,
+        "w": 1112,
+        "h": 282
     },
     {
         "id": "f519aff597ece351",
@@ -1307,7 +1335,9 @@
             "3463c4f2bf6388fe"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 682
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1331,7 +1361,9 @@
             "0be3c318e9e6df0a"
         ],
         "x": 64,
-        "y": 759
+        "y": 759,
+        "w": 1022,
+        "h": 162
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1395,23 +1427,9 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39
-    },
-    {
-        "id": "b708cb6d93f40dee",
-        "type": "group",
-        "z": "5c4ac37140a54ac9",
-        "name": "Old Good Morning Flow",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "c01d647c6091a47b",
-            "b83b6e027c21a133",
-            "e59180a1a6ae0a90"
-        ],
-        "x": 1094,
-        "y": 659
+        "y": 39,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "265593f442864b6a",
@@ -1428,7 +1446,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579
+        "y": 579,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "4886967d0f8c0156",
@@ -1469,7 +1489,9 @@
             "5ba9cfc0194ef62a"
         ],
         "x": 754,
-        "y": 319
+        "y": 319,
+        "w": 672,
+        "h": 622
     },
     {
         "id": "931cc27100c9317e",
@@ -1488,7 +1510,9 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 672,
+        "h": 222
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1506,7 +1530,9 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "88f099618e56926d",
@@ -1529,7 +1555,9 @@
             "99c141f21de4feda"
         ],
         "x": 74,
-        "y": 39
+        "y": 39,
+        "w": 1132,
+        "h": 262
     },
     {
         "id": "a6de35af12739885",
@@ -1551,7 +1579,9 @@
             "724f186878227dad"
         ],
         "x": 74,
-        "y": 339
+        "y": 339,
+        "w": 1132,
+        "h": 202
     },
     {
         "id": "0804d9edeca1c9fa",
@@ -1572,7 +1602,9 @@
             "4523045453de0a33"
         ],
         "x": 74,
-        "y": 579
+        "y": 579,
+        "w": 1092,
+        "h": 202
     },
     {
         "id": "385f03591bc34bcc",
@@ -1588,7 +1620,9 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "31767ffd6a647579",
@@ -1617,7 +1651,9 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399
+        "y": 399,
+        "w": 1532,
+        "h": 282
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1651,7 +1687,9 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1192,
+        "h": 502
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -1667,7 +1705,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1710,7 +1750,9 @@
             "b497fe229c8f2eea"
         ],
         "x": 34,
-        "y": 139
+        "y": 139,
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "395da9d5d5f7e232",
@@ -1735,6 +1777,8 @@
         ],
         "x": 34,
         "y": 719,
+        "w": 732,
+        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1773,7 +1817,9 @@
             "79f3ceee718cd7cb"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 752,
+        "h": 682
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -1794,7 +1840,9 @@
             "0107164ee7ff63d6"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1072,
+        "h": 142
     },
     {
         "id": "fba69dfc80829db7",
@@ -19097,125 +19145,6 @@
         ]
     },
     {
-        "id": "c01d647c6091a47b",
-        "type": "file in",
-        "z": "5c4ac37140a54ac9",
-        "d": true,
-        "g": "b708cb6d93f40dee",
-        "name": "Read File",
-        "filename": "/config/files/weather_briefing_full.txt",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 1180,
-        "y": 700,
-        "wires": [
-            [
-                "e59180a1a6ae0a90"
-            ]
-        ]
-    },
-    {
-        "id": "b83b6e027c21a133",
-        "type": "alexa-remote-routine",
-        "z": "5c4ac37140a54ac9",
-        "d": true,
-        "g": "b708cb6d93f40dee",
-        "name": "",
-        "account": "be975ce229701797",
-        "routineNode": {
-            "type": "node",
-            "payload": {
-                "type": "serial",
-                "children": [
-                    {
-                        "type": "wait",
-                        "payload": {
-                            "time": {
-                                "type": "num",
-                                "value": "1"
-                            }
-                        }
-                    },
-                    {
-                        "type": "prompt",
-                        "payload": {
-                            "type": {
-                                "type": "str",
-                                "value": "goodMorning"
-                            },
-                            "devices": {
-                                "type": "msg",
-                                "value": "where"
-                            }
-                        }
-                    },
-                    {
-                        "type": "speak",
-                        "payload": {
-                            "type": "regular",
-                            "text": {
-                                "type": "msg",
-                                "value": "payload"
-                            },
-                            "devices": {
-                                "type": "msg",
-                                "value": "where"
-                            }
-                        }
-                    },
-                    {
-                        "type": "prompt",
-                        "payload": {
-                            "type": {
-                                "type": "str",
-                                "value": "traffic"
-                            },
-                            "devices": {
-                                "type": "msg",
-                                "value": "where"
-                            }
-                        }
-                    },
-                    {
-                        "type": "prompt",
-                        "payload": {
-                            "type": {
-                                "type": "str",
-                                "value": "calendarToday"
-                            },
-                            "devices": {
-                                "type": "msg",
-                                "value": "where"
-                            }
-                        }
-                    },
-                    {
-                        "type": "prompt",
-                        "payload": {
-                            "type": {
-                                "type": "str",
-                                "value": "calendarTomorrow"
-                            },
-                            "devices": {
-                                "type": "msg",
-                                "value": "where"
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        "x": 1620,
-        "y": 700,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "2854170262757e84",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
@@ -19314,7 +19243,6 @@
                 "028351e8c4e2faf5",
                 "60ce44747cf3e507",
                 "50e351d1ee6108b3",
-                "1187fea902cbb7a9",
                 "33773b3aaa551b79",
                 "f30486c8e11db0e4",
                 "9bd4665845af0545"
@@ -19344,21 +19272,6 @@
         "y": 460,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "e59180a1a6ae0a90",
-        "type": "subflow:a42343e035e3313c",
-        "z": "5c4ac37140a54ac9",
-        "d": true,
-        "g": "b708cb6d93f40dee",
-        "name": "",
-        "x": 1390,
-        "y": 700,
-        "wires": [
-            [
-                "b83b6e027c21a133"
-            ]
         ]
     },
     {
@@ -20544,33 +20457,6 @@
         ]
     },
     {
-        "id": "1187fea902cbb7a9",
-        "type": "api-call-service",
-        "z": "5c4ac37140a54ac9",
-        "name": "Enable Automation",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "automation",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "automation.living_room_night_lighting"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 330,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "33773b3aaa551b79",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
@@ -20656,7 +20542,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 330,
-        "y": 640,
+        "y": 580,
         "wires": [
             []
         ]
