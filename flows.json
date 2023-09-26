@@ -874,9 +874,7 @@
             "7c483301056c67a9"
         ],
         "x": 14,
-        "y": 839,
-        "w": 1552,
-        "h": 402
+        "y": 839
     },
     {
         "id": "e065b1ed4938b477",
@@ -931,9 +929,7 @@
             "f950918e12591224"
         ],
         "x": 14,
-        "y": 11.5,
-        "w": 1252,
-        "h": 809.5
+        "y": 11.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -1094,7 +1090,9 @@
             "f111c40459e27629"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1272,
+        "h": 502
     },
     {
         "id": "208284848b13b85b",
@@ -1183,7 +1181,6 @@
             "091390f43bfeddf5",
             "7a7229eb69c9b1a3",
             "f34816b23181f21e",
-            "de4f1b15ce906809",
             "bd75b077a1c76fce",
             "b69eeb738bbd4bdb",
             "cfdcc7c9c168dc17",
@@ -1203,7 +1200,9 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1492,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1641,7 +1640,9 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1192,
+        "h": 502
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -3994,6 +3995,48 @@
             {
                 "property": "icon",
                 "value": "mdi:tumble-dryer-off"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "6ae4463a9ad1f043",
+        "type": "ha-device-config",
+        "name": "Holiday Mode",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "d945515487bfbb09",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "6ae4463a9ad1f043",
+        "name": "Animated Scene Halloween",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Animated Scene Halloween"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:halloween"
             },
             {
                 "property": "entity_category",
@@ -13740,36 +13783,6 @@
         ]
     },
     {
-        "id": "de4f1b15ce906809",
-        "type": "api-call-service",
-        "z": "b5717a86ce55bc29",
-        "g": "eeafd13be593ae69",
-        "name": "Set Adaptive",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.front_porch_scenes"
-        ],
-        "data": "{\t    \"option\":\"Adaptive\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1130,
-        "y": 60,
-        "wires": [
-            [
-                "bd75b077a1c76fce"
-            ]
-        ]
-    },
-    {
         "id": "bd75b077a1c76fce",
         "type": "api-call-service",
         "z": "b5717a86ce55bc29",
@@ -13792,7 +13805,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1340,
+        "x": 1160,
         "y": 60,
         "wires": [
             []
@@ -14213,8 +14226,9 @@
         "z": "b5717a86ce55bc29",
         "g": "eeafd13be593ae69",
         "name": "Check Parameters",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar earlyNightMode = states['binary_sensor.early_night_mode'].state\nvar frontPorchToggle = states['input_boolean.front_porch_light_on'].state\nvar holidaymode = states['input_boolean.holiday_mode'].state\nvar currentholiday = states['input_select.holiday_animation'].state\nvar holiday = currentholiday.toLowerCase()\n\nif (earlyNightMode === 'on' && frontPorchToggle === 'on') {\n    if (holidaymode === 'on') {\n        msg.holiday = holiday\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Holiday On\"});\n        return[msg,null]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Holiday Off\"});\n        return[null,msg]\n    }\n} else {\n    if (frontPorchToggle === 'off') {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Disabled\" });\n    } else if (earlyNightMode === 'off') {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Daytime\" });\n    }\n    return null\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst frontPorchToggle = states['input_boolean.front_porch_light_on'].state\nconst holidaymode = states['input_boolean.holiday_mode'].state\nconst currentholiday = states['input_select.holiday_animation'].state\nconst holiday = currentholiday.toLowerCase()\n\nlet holidayMsg = {\n    \"holiday\": holiday\n}\n\nif (earlyNightMode === 'on' && frontPorchToggle === 'on') {\n    if (holidaymode === 'on') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Holiday On\"})\n        node.send([holidayMsg,msg])\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Holiday Off\"})\n        node.send([null,msg])\n    }\n} else {\n    if (frontPorchToggle === 'off') {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Disabled\" })\n    } else if (earlyNightMode === 'off') {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Daytime\" })\n    }\n}",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -14223,8 +14237,7 @@
         "y": 120,
         "wires": [
             [
-                "ec5937bc60874009",
-                "091390f43bfeddf5"
+                "ec5937bc60874009"
             ],
             [
                 "091390f43bfeddf5"
@@ -14242,8 +14255,9 @@
         "z": "b5717a86ce55bc29",
         "g": "eeafd13be593ae69",
         "name": "If Motion",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar deliveryMode = states['input_boolean.delivery_mode'].state\nvar detect = msg.detect\n\nif (detect === 'motion') {\n    if (deliveryMode === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Motion/Delivery\"});\n        return[msg,null]\n    } else {\n        node.status({});\n        return null\n    }\n} else {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Not Motion\"});\n    return[null,msg]\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst deliveryMode = states['input_boolean.delivery_mode'].state\nconst detect = msg.detect\n\nnode.send([null,msg])\n\nif (detect === 'motion' && deliveryMode === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Motion/Delivery\"})\n    node.send([msg,null])\n} else {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Not Motion\"})\n}",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -14252,7 +14266,7 @@
         "y": 120,
         "wires": [
             [
-                "de4f1b15ce906809"
+                "bd75b077a1c76fce"
             ],
             [
                 "d2751bc2cfc5af8f"
@@ -14270,8 +14284,9 @@
         "z": "b5717a86ce55bc29",
         "g": "eeafd13be593ae69",
         "name": "Delay",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar delay = states['input_number.front_porch_motion_off_delay'].state\nvar duration = delay * 60\nvar lights = states['light.front_porch_light'].state\n\nmsg.duration = duration\n\nif (lights === 'on') {\n    node.status({ fill: \"green\", shape: \"dot\", text: parseInt(delay) + \" minutes\" });\n    return msg;\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Light Off\"});\n    return null\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst delay = states['input_number.front_porch_motion_off_delay'].state\nconst duration = delay * 60\nconst lights = states['light.front_porch_light'].state\n\nmsg.duration = duration\n\nif (lights === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text: parseInt(delay) + \" minutes\"})\n    node.send(msg)\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Light Off\"})\n}",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -14291,8 +14306,9 @@
         "z": "b5717a86ce55bc29",
         "g": "eeafd13be593ae69",
         "name": "Shut Off",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar frontPorchToggle = states['input_boolean.front_porch_light_on'].state\nvar deliveryMode = states['input_boolean.delivery_mode'].state\nvar holidaymode = states['input_boolean.holiday_mode'].state\nvar currentholiday = states['input_select.holiday_animation'].state\nvar holiday = currentholiday.toLowerCase()\n\nif (frontPorchToggle === 'on' && deliveryMode === 'off') {\n    if (holidaymode === 'on') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Holiday On\"});\n        return[msg,null]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Holiday Off\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Disabled\"});\n    return null\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst frontPorchToggle = states['input_boolean.front_porch_light_on'].state\nconst deliveryMode = states['input_boolean.delivery_mode'].state\nconst holidaymode = states['input_boolean.holiday_mode'].state\nconst currentholiday = states['input_select.holiday_animation'].state\nconst holiday = currentholiday.toLowerCase()\n\nif (frontPorchToggle === 'on' && deliveryMode === 'off') {\n    if (holidaymode === 'on') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Holiday On\"})\n        node.send([msg,null])\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Holiday Off\"})\n        node.send([null,msg])\n    }\n} else if (frontPorchToggle === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked (Automation Off\"})\n} else if (deliveryMode === 'on') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked (Delivery Mode)\"})\n}",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -14377,6 +14393,174 @@
         "name": "",
         "x": 400,
         "y": 360,
+        "wires": []
+    },
+    {
+        "id": "54c6775f123e230c",
+        "type": "ha-switch",
+        "z": "b5717a86ce55bc29",
+        "name": "Halloween Switch",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 2,
+        "entityConfig": "d945515487bfbb09",
+        "enableInput": false,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            {
+                "property": "outputType",
+                "propertyType": "msg",
+                "value": "state change",
+                "valueType": "str"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "holiday",
+                "propertyType": "msg",
+                "value": "halloween",
+                "valueType": "str"
+            }
+        ],
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "f8e39e360fbc37d3"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f8e39e360fbc37d3",
+        "type": "api-call-service",
+        "z": "b5717a86ce55bc29",
+        "name": "Halloween Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.front_porch_light"
+        ],
+        "data": "{\t    \"effect\":\"fire\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 390,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec399b3f614c8b17",
+        "type": "api-current-state",
+        "z": "b5717a86ce55bc29",
+        "name": "Early Night Mode?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.early_night_mode",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "ade9d177f29d4d95"
+            ],
+            [
+                "e0820afc97e33329"
+            ]
+        ]
+    },
+    {
+        "id": "ade9d177f29d4d95",
+        "type": "api-call-service",
+        "z": "b5717a86ce55bc29",
+        "name": "Set Adaptive",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.front_porch_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 610,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0820afc97e33329",
+        "type": "api-call-service",
+        "z": "b5717a86ce55bc29",
+        "name": "Turn off light",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.front_porch_light"
+        ],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 610,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "513f37de8d51bb2f",
+        "type": "comment",
+        "z": "b5717a86ce55bc29",
+        "name": "Not sure yet if this is how I want to go about this",
+        "info": "",
+        "x": 480,
+        "y": 560,
         "wires": []
     },
     {
