@@ -869,7 +869,9 @@
             "f1dbb3a206dba921",
             "476f73cf6b540f96",
             "46a1e386f7468d21",
-            "292cda64df0c1c10"
+            "292cda64df0c1c10",
+            "a2c9a6a52d4d2591",
+            "7c483301056c67a9"
         ],
         "x": 14,
         "y": 839,
@@ -16476,7 +16478,8 @@
         "y": 1000,
         "wires": [
             [
-                "62211bf089bc5b04"
+                "62211bf089bc5b04",
+                "7c483301056c67a9"
             ],
             [
                 "f1dbb3a206dba921"
@@ -17827,6 +17830,65 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "a2c9a6a52d4d2591",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Downstairs Lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.living_room_lights",
+            "light.mud_room_overhead"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1210,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c483301056c67a9",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Cancel Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "cancel",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.living_room_motion_timer"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1010,
+        "y": 940,
+        "wires": [
+            [
+                "a2c9a6a52d4d2591"
+            ]
+        ]
     },
     {
         "id": "48b8af9419ed18d6",
