@@ -17908,11 +17908,11 @@
         "type": "function",
         "z": "b7d34d3e9d0c9486",
         "name": "Processing",
-        "func": "// Set Constants\nconst states = global.get('homeassistant.homeAssistant.states')\nconst textAllowed = states['input_boolean.laundry_notifications_text'].state\nconst washerCycle = 'input_number.washer_cycle_length'\nconst washerFinished = 'input_boolean.washer_finished'\nconst washerTimer = 'timer.washer_timer'\nconst washerDateTime = 'input_datetime.washer_finished'\nconst dryerCycle = 'input_number.dryer_cycle_length'\nconst dryerFinished = 'input_boolean.dryer_finished'\nconst dryerTimer = 'timer.dryer_timer'\nconst dryerDateTime = 'input_datetime.dryer_finished'\nconst topic = msg.topic\nconst payload = msg.payload\n\n// Init variables\nlet timerEntity = []\nlet boolFinished = []\nlet servFinished = {}\nlet dateTimeEntity = []\nlet servTimer = {}\nlet setCycle = []\nlet dateTime = []\nlet deviceName = {}\nlet notifyMsg = {}\n\n// Set entity IDs and states\nif (topic === 'washer') {\n    setCycle = washerCycle\n    boolFinished = washerFinished\n    dateTimeEntity = washerDateTime\n    timerEntity = washerTimer\n    deviceName = 'washer'\n} else if (topic === 'dryer') {\n    setCycle = dryerCycle\n    boolFinished = dryerFinished\n    dateTimeEntity = dryerDateTime\n    timerEntity = dryerTimer\n    deviceName = 'dryer'\n}\n\n// Get states from the entities\n// @ts-ignore\nlet cycle = states[setCycle].state\n// @ts-ignore\nlet timerState = states[timerEntity].state\n// @ts-ignore\nlet finishedState = states[boolFinished].state\n\n// Convert minutes into seconds for the timer\nlet timerDuration = cycle * 60\nlet notifyDuration = Math.round(cycle)\n\n// Decide services\nif (payload === 'start') {\n    servFinished = 'turn_off'\n    notifyMsg = 'The ' + deviceName + ' has been started for a ' + notifyDuration + ' minute cycle'\n} else if (payload === 'finish') {\n    dateTime = msg.datetime\n    servFinished = 'turn_on'\n    notifyMsg = 'The ' + deviceName + ' has finished its cycle'\n} else if (payload === 'cancel') {\n    notifyMsg = 'The ' + deviceName + ' cycle has been cancelled'\n}\n\n// Prepare message payloads\nlet sendTimerStart = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"start\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {\n            \"duration\": timerDuration\n        }\n    }\n}\n\nlet sendTimerCancel = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"cancel\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {}\n    }\n}\n\nlet sendBoolFinished = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": servFinished,\n        \"target\": {\n            \"entity_id\": boolFinished\n        },\n        \"data\": {}\n    }\n}\n\nlet sendDateTimeFinished = {\n    \"payload\": {\n        \"domain\": \"input_datetime\",\n        \"service\": \"set_datetime\",\n        \"target\": {\n            \"entity_id\": dateTimeEntity\n        },\n        \"data\": {\n            \"datetime\": dateTime\n        }\n    }\n}\n\nlet sendTextNotify = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"text_notify\",\n        \"data\": {\n            \"type\": \"normal\",\n            \"who\": \"all\",\n            \"title\": \"Laundry Tracking\",\n            \"message\": notifyMsg\n        }\n    }\n}\n\nif (payload === 'start') {\n    node.send([sendBoolFinished,sendTimerStart,null])\n    node.status({fill:\"green\",shape:\"dot\",text:\"Starting \" + deviceName + \" timer for \" + notifyDuration + \" minutes\"})\n    node.log(\"Starting \" + deviceName + \" timer for \" + notifyDuration + \" minutes\")\n} else if (payload === 'finish') {\n    node.send([[sendBoolFinished,sendDateTimeFinished],null,null])\n    node.status({fill:\"green\",shape:\"dot\",text:\"The \" + deviceName + \" has finished\"})\n    node.log(\"The \" + deviceName + \" has finished\")\n} else if (payload === 'cancel') {\n    node.send([null,sendTimerCancel,null])\n    node.status({fill:\"red\",shape:\"ring\",text:\"The \" + deviceName + \" has been cancelled\"})\n    node.log(\"The \" + deviceName + \" has been cancelled\")\n}\n\nif (textAllowed === 'on') {\n    node.send([null,null,sendTextNotify])\n}",
+        "func": "// Set Constants\nconst states = global.get('homeassistant.homeAssistant.states')\nconst textAllowed = states['input_boolean.laundry_notifications_text'].state\nconst washerCycle = flow.get(\"washerCycle\", \"diskCon\")\nconst washerFinished = flow.get(\"washerFinished\", \"diskCon\")\nconst washerTimer = flow.get(\"washerTimer\", \"diskCon\")\nconst washerDateTime = flow.get(\"washerDateTime\", \"diskCon\")\nconst dryerCycle = flow.get(\"dryerCycle\", \"diskCon\")\nconst dryerFinished = flow.get(\"dryerFinished\", \"diskCon\")\nconst dryerTimer = flow.get(\"dryerTimer\", \"diskCon\")\nconst dryerDateTime = flow.get(\"dryerDateTime\", \"diskCon\")\nconst topic = msg.topic\nconst payload = msg.payload\n\n// Init variables\nlet timerEntity = []\nlet boolFinished = []\nlet servFinished = {}\nlet dateTimeEntity = []\nlet servTimer = {}\nlet setCycle = []\nlet dateTime = []\nlet deviceName = {}\nlet notifyMsg = {}\n\n// Set entity IDs and states\nif (topic === 'washer') {\n    setCycle = washerCycle\n    boolFinished = washerFinished\n    dateTimeEntity = washerDateTime\n    timerEntity = washerTimer\n    deviceName = 'washer'\n} else if (topic === 'dryer') {\n    setCycle = dryerCycle\n    boolFinished = dryerFinished\n    dateTimeEntity = dryerDateTime\n    timerEntity = dryerTimer\n    deviceName = 'dryer'\n}\n\n// Get states from the entities\n// @ts-ignore\nlet cycle = states[setCycle].state\n// @ts-ignore\nlet timerState = states[timerEntity].state\n// @ts-ignore\nlet finishedState = states[boolFinished].state\n\n// Convert minutes into seconds for the timer\nlet timerDuration = cycle * 60\nlet notifyDuration = Math.round(cycle)\n\n// Decide services\nif (payload === 'start') {\n    servFinished = 'turn_off'\n    notifyMsg = 'The ' + deviceName + ' has been started for a ' + notifyDuration + ' minute cycle'\n} else if (payload === 'finish') {\n    dateTime = msg.datetime\n    servFinished = 'turn_on'\n    notifyMsg = 'The ' + deviceName + ' has finished its cycle'\n} else if (payload === 'cancel') {\n    notifyMsg = 'The ' + deviceName + ' cycle has been cancelled'\n}\n\n// Prepare message payloads\nlet sendTimerStart = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"start\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {\n            \"duration\": timerDuration\n        }\n    }\n}\n\nlet sendTimerCancel = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"cancel\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {}\n    }\n}\n\nlet sendBoolFinished = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": servFinished,\n        \"target\": {\n            \"entity_id\": boolFinished\n        },\n        \"data\": {}\n    }\n}\n\nlet sendDateTimeFinished = {\n    \"payload\": {\n        \"domain\": \"input_datetime\",\n        \"service\": \"set_datetime\",\n        \"target\": {\n            \"entity_id\": dateTimeEntity\n        },\n        \"data\": {\n            \"datetime\": dateTime\n        }\n    }\n}\n\nlet sendTextNotify = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"text_notify\",\n        \"data\": {\n            \"type\": \"normal\",\n            \"who\": \"all\",\n            \"title\": \"Laundry Tracking\",\n            \"message\": notifyMsg\n        }\n    }\n}\n\nif (payload === 'start') {\n    node.send([sendBoolFinished,sendTimerStart,null])\n    node.status({fill:\"green\",shape:\"dot\",text:\"Starting \" + deviceName + \" timer for \" + notifyDuration + \" minutes\"})\n    node.log(\"Starting \" + deviceName + \" timer for \" + notifyDuration + \" minutes\")\n} else if (payload === 'finish') {\n    node.send([[sendBoolFinished,sendDateTimeFinished],null,null])\n    node.status({fill:\"green\",shape:\"dot\",text:\"The \" + deviceName + \" has finished\"})\n    node.log(\"The \" + deviceName + \" has finished\")\n} else if (payload === 'cancel') {\n    node.send([null,sendTimerCancel,null])\n    node.status({fill:\"red\",shape:\"ring\",text:\"The \" + deviceName + \" has been cancelled\"})\n    node.log(\"The \" + deviceName + \" has been cancelled\")\n}\n\nif (textAllowed === 'on') {\n    node.send([null,null,sendTextNotify])\n}",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "",
+        "initialize": "const washerCycle = 'input_number.washer_cycle_length'\nconst washerFinished = 'input_boolean.washer_finished'\nconst washerTimer = 'timer.washer_timer'\nconst washerDateTime = 'input_datetime.washer_finished'\nconst dryerCycle = 'input_number.dryer_cycle_length'\nconst dryerFinished = 'input_boolean.dryer_finished'\nconst dryerTimer = 'timer.dryer_timer'\nconst dryerDateTime = 'input_datetime.dryer_finished'\n\nflow.set(\"washerCycle\", washerCycle, \"diskCon\")\nflow.set(\"washerFinished\", washerFinished, \"diskCon\")\nflow.set(\"washerTimer\", washerTimer, \"diskCon\")\nflow.set(\"washerDateTime\", washerDateTime, \"diskCon\")\nflow.set(\"dryerCycle\", dryerCycle, \"diskCon\")\nflow.set(\"dryerFinished\", dryerFinished, \"diskCon\")\nflow.set(\"dryerTimer\", dryerTimer, \"diskCon\")\nflow.set(\"dryerDateTime\", dryerDateTime, \"diskCon\")",
         "finalize": "",
         "libs": [],
         "x": 470,
@@ -18265,6 +18265,145 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "660deb40ab25fd53",
+        "type": "server-state-changed",
+        "z": "b7d34d3e9d0c9486",
+        "d": true,
+        "name": "Cycle Length Change",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": [
+            "input_number.washer_cycle_length",
+            "input_number.dryer_cycle_length"
+        ],
+        "entityidfiltertype": "list",
+        "outputinitially": false,
+        "state_type": "num",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": true,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            }
+        ],
+        "x": 220,
+        "y": 520,
+        "wires": [
+            [
+                "d5975ad76923cefc"
+            ]
+        ]
+    },
+    {
+        "id": "498891c8c6c4654c",
+        "type": "debug",
+        "z": "b7d34d3e9d0c9486",
+        "d": true,
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d5975ad76923cefc",
+        "type": "function",
+        "z": "b7d34d3e9d0c9486",
+        "d": true,
+        "name": "Timer Math",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst oldState = msg.data.old_state.state\nconst newState = msg.data.new_state.state\nconst entity_id = msg.data.entity_id\nconst washerCycle = flow.get(\"washerCycle\", \"diskCon\")\nconst dryerCycle = flow.get(\"dryerCycle\", \"diskCon\")\n\nconst subtract = newState - oldState\nconst multiply = subtract * 60\nconst diff = parseInt(multiply)\n\nlet machine = {}\nlet timer = {}\n\nif (entity_id === washerCycle) {\n    machine = 'washer'\n} else if (entity_id === dryerCycle) {\n    machine = 'dryer'\n}\n\nif (machine === 'washer') {\n    timer = flow.get(\"washerTimer\", \"diskCon\")\n} else if (machine === 'dryer') {\n    timer = flow.get(\"dryerTimer\", \"diskCon\")\n}\n\n// @ts-ignore\nlet running = states[timer].state\n\nlet changeMsg = {\n    \"timer\": timer,\n    \"diff\": diff\n}\n\nif (running === 'active') {\n    node.send(changeMsg)\n    node.status({fill:\"green\",shape:\"dot\",text:\"Timer Changed\"})\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 520,
+        "wires": [
+            [
+                "498891c8c6c4654c",
+                "9c7f26df3d21c2aa"
+            ]
+        ]
+    },
+    {
+        "id": "9c7f26df3d21c2aa",
+        "type": "api-call-service",
+        "z": "b7d34d3e9d0c9486",
+        "d": true,
+        "name": "Timer Change",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "change",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "{{timer}}"
+        ],
+        "data": "{\t    \"duration\": diff\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 620,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6cbd0b68f71c825d",
+        "type": "comment",
+        "z": "b7d34d3e9d0c9486",
+        "name": "The above doesn't quite do what I want it to do yet, but I have other ideas",
+        "info": "",
+        "x": 360,
+        "y": 700,
+        "wires": []
     },
     {
         "id": "9256f78107619596",
