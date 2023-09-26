@@ -838,9 +838,7 @@
             "37f1c11c59a6ce16"
         ],
         "x": 94,
-        "y": 339,
-        "w": 1872,
-        "h": 622
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -973,9 +971,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -994,9 +990,7 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39,
-        "w": 1192,
-        "h": 82
+        "y": 39
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1044,9 +1038,7 @@
             "febc179b34c8cf71"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
+        "y": 39
     },
     {
         "id": "46275dd0f9461013",
@@ -1064,9 +1056,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
-        "w": 472,
-        "h": 202
+        "y": 739
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1102,9 +1092,7 @@
             "f111c40459e27629"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1272,
-        "h": 502
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1129,9 +1117,7 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 322
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1181,9 +1167,7 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 139,
-        "w": 1152,
-        "h": 242
+        "y": 139
     },
     {
         "id": "eeafd13be593ae69",
@@ -1217,9 +1201,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1253,9 +1235,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1652,
-        "h": 382
+        "y": 39
     },
     {
         "id": "8aee4d340a136bac",
@@ -1275,9 +1255,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759,
-        "w": 612,
-        "h": 202
+        "y": 759
     },
     {
         "id": "550e5b2d99316b12",
@@ -1302,9 +1280,7 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619,
-        "w": 1112,
-        "h": 282
+        "y": 619
     },
     {
         "id": "f519aff597ece351",
@@ -1335,9 +1311,7 @@
             "3463c4f2bf6388fe"
         ],
         "x": 54,
-        "y": 39,
-        "w": 852,
-        "h": 682
+        "y": 39
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1361,9 +1335,7 @@
             "0be3c318e9e6df0a"
         ],
         "x": 64,
-        "y": 759,
-        "w": 1022,
-        "h": 162
+        "y": 759
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1427,9 +1399,7 @@
             "51d05298561cfddb"
         ],
         "x": 754,
-        "y": 39,
-        "w": 672,
-        "h": 262
+        "y": 39
     },
     {
         "id": "265593f442864b6a",
@@ -1446,9 +1416,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1489,9 +1457,7 @@
             "5ba9cfc0194ef62a"
         ],
         "x": 754,
-        "y": 319,
-        "w": 672,
-        "h": 622
+        "y": 319
     },
     {
         "id": "931cc27100c9317e",
@@ -1510,9 +1476,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1530,9 +1494,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "88f099618e56926d",
@@ -1555,9 +1517,7 @@
             "99c141f21de4feda"
         ],
         "x": 74,
-        "y": 39,
-        "w": 1132,
-        "h": 262
+        "y": 39
     },
     {
         "id": "a6de35af12739885",
@@ -1579,9 +1539,7 @@
             "724f186878227dad"
         ],
         "x": 74,
-        "y": 339,
-        "w": 1132,
-        "h": 202
+        "y": 339
     },
     {
         "id": "0804d9edeca1c9fa",
@@ -1602,9 +1560,7 @@
             "4523045453de0a33"
         ],
         "x": 74,
-        "y": 579,
-        "w": 1092,
-        "h": 202
+        "y": 579
     },
     {
         "id": "385f03591bc34bcc",
@@ -1620,9 +1576,7 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "31767ffd6a647579",
@@ -1651,9 +1605,7 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399,
-        "w": 1532,
-        "h": 282
+        "y": 399
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1687,9 +1639,7 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1192,
-        "h": 502
+        "y": 539
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -1705,9 +1655,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 82
+        "y": 39
     },
     {
         "id": "4329e464360d0afa",
@@ -1750,9 +1698,7 @@
             "b497fe229c8f2eea"
         ],
         "x": 34,
-        "y": 139,
-        "w": 1592,
-        "h": 422
+        "y": 139
     },
     {
         "id": "395da9d5d5f7e232",
@@ -1836,9 +1782,7 @@
             "0107164ee7ff63d6"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1072,
-        "h": 142
+        "y": 19
     },
     {
         "id": "fba69dfc80829db7",
@@ -16821,7 +16765,7 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "Processing",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst vacationMode = states['input_boolean.vacation_mode'].state\nconst overnight = states['input_boolean.kallen_overnight'].state\nconst kallenLoc = states['person.kallen_stork'].state\nconst dayVolume = states['input_number.kallen_bedroom_google_speaker_day_volume'].state\nconst nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nconst brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nconst fadeNight = states['input_number.wakeup_lights_fade_night'].state\nconst hotDay = states['input_boolean.hot_day'].state\nconst heatWarning = states['binary_sensor.heat_warning'].state\nconst fanSeparate = states['binary_sensor.kallen_fan_separate_schedule'].state\nconst schedMode = states['input_select.scheduled_climate_mode_kallen_fan'].state\nconst topic = msg.topic\nconst toggle = msg.toggle\nnode.log(\"Kallen Bedroom: Constants Set\")\n\nlet setFan = []\nlet setWhiteNoise = []\nlet setVolume = []\nlet setLights = []\nnode.log(\"Kallen Bedroom: Variables Defined\")\n\nif (toggle === 'off' && (hotDay === 'on' || heatWarning === 'on')) {\n    setFan = 'turn_on'\n} else if ((toggle === 'on' || topic === 'kallen-fan') && schedMode === 'Fan') {\n    setFan = 'turn_on'\n} else {\n    setFan = 'turn_off'\n}\n\nif (schedMode === 'White Noise' && toggle === 'on') {\n    setWhiteNoise = 'turn_on'\n} else {\n    setWhiteNoise = 'turn_off'\n}\n\nif (toggle === 'on') {\n    setVolume = nightVolume\n    setLights = 'turn_on'\n} else {\n    setVolume = dayVolume\n}\n\nnode.log(\"Kallen Bedroom: Decision Logic Complete\")\n\nlet sendFan = {\n    \"payload\": {\n        \"domain\": \"fan\",\n        \"service\": setFan,\n        \"target\": {\n            \"entity_id\": [\"fan.kallen_bedroom_fan\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet sendWhiteNoise = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": setWhiteNoise,\n        \"target\": {\n            \"entity_id\": [\"input_boolean.white_noise_kallen_bedroom\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet sendVolume = {\n    \"payload\": {\n        \"domain\": \"media_player\",\n        \"service\": \"set_volume\",\n        \"target\": {\n            \"entity_id\": [\"media_player.kallen_bedroom_google_speaker\"]\n        },\n        \"data\": {\n            \"volume\": setVolume\n        }\n    }\n}\n\nlet sendLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": setLights,\n        \"target\": {\n            \"entity_id\": [\"light.kallen_bedroom_lights\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet wakeMsg = {\n    \"brightness\": brightness,\n    \"fade\": fadeNight\n}\n\nlet sleepMsg = {\n    \"payload\": \"sleep\",\n    \"topic\": \"common\",\n    \"voice\": \"Joanna\"\n}\n\nnode.log(\"Kallen Bedroom: Message Payloads Defined\")\n\nnode.log(\"----- Kallen Bedroom: Set Parameters -----\")\nnode.log(\"setFan: \" + setFan)\nnode.log(\"setWhiteNoise: \" + setWhiteNoise)\nnode.log(\"setVolume: \" + setVolume)\nnode.log(\"setLights: \" + setLights)\nnode.log(\"----- Kallen Bedroom: End Parameters -----\")\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan' && fanSeparate === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"})\n        node.log(\"Kallen Bedroom: Early Fan\")\n        node.send([null,[sendFan,sendWhiteNoise],null])\n    } else if (toggle === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"})\n        node.log(\"Kallen Bedroom: Wake\")\n        node.send([wakeMsg,[sendFan,sendWhiteNoise,sendVolume],null])\n    } else if (toggle === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"})\n        node.log(\"Kallen Bedroom: Sleep\")\n        node.send([null,[sendFan,sendWhiteNoise,sendVolume,sendLights],sleepMsg])\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    node.log(\"Kallen Bedroom: Flow Blocked\")\n}\n\nnode.log(\"Kallen Bedroom: Processing Complete\")",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst vacationMode = states['input_boolean.vacation_mode'].state\nconst overnight = states['input_boolean.kallen_overnight'].state\nconst kallenLoc = states['person.kallen_stork'].state\nconst dayVolume = states['input_number.kallen_bedroom_google_speaker_day_volume'].state\nconst nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nconst brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nconst fadeNight = states['input_number.wakeup_lights_fade_night'].state\nconst hotDay = states['input_boolean.hot_day'].state\nconst heatWarning = states['binary_sensor.heat_warning'].state\nconst fanSeparate = states['binary_sensor.kallen_fan_separate_schedule'].state\nconst schedMode = states['input_select.scheduled_climate_mode_kallen_fan'].state\nconst topic = msg.topic\nconst toggle = msg.toggle\nnode.log(\"Kallen Bedroom: Constants Set\")\n\nlet setFan = []\nlet setWhiteNoise = []\nlet setVolume = []\nlet setLights = []\nnode.log(\"Kallen Bedroom: Variables Defined\")\n\nif (toggle === 'off' && (hotDay === 'on' || heatWarning === 'on')) {\n    setFan = 'turn_on'\n} else if ((toggle === 'on' || topic === 'kallen-fan') && schedMode === 'Fan') {\n    setFan = 'turn_on'\n} else {\n    setFan = 'turn_off'\n}\n\nif (schedMode === 'White Noise' && toggle === 'on') {\n    setWhiteNoise = 'turn_on'\n} else {\n    setWhiteNoise = 'turn_off'\n}\n\nif (toggle === 'on') {\n    setVolume = parseFloat(nightVolume)\n    setLights = 'turn_on'\n} else {\n    setVolume = parseFloat(dayVolume)\n}\n\nlet fadeMult = fadeNight * 60\nlet fadeFinal = Math.round(fadeMult)\n\nlet brtFinal = Math.round(brightness)\n\nnode.log(\"Kallen Bedroom: Decision Logic Complete\")\n\nlet sendFan = {\n    \"payload\": {\n        \"domain\": \"fan\",\n        \"service\": setFan,\n        \"target\": {\n            \"entity_id\": [\"fan.kallen_bedroom_fan\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet sendWhiteNoise = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": setWhiteNoise,\n        \"target\": {\n            \"entity_id\": [\"input_boolean.white_noise_kallen_bedroom\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet sendVolume = {\n    \"payload\": {\n        \"domain\": \"media_player\",\n        \"service\": \"set_volume\",\n        \"target\": {\n            \"entity_id\": [\"media_player.kallen_bedroom_google_speaker\"]\n        },\n        \"data\": {\n            \"volume\": setVolume\n        }\n    }\n}\n\nlet sendLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": setLights,\n        \"target\": {\n            \"entity_id\": [\"light.kallen_bedroom_lights\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet wakeMsg = {\n    \"brightness\": brtFinal,\n    \"fade\": fadeFinal\n}\n\nlet sleepMsg = {\n    \"payload\": \"sleep\"\n}\n\nnode.log(\"Kallen Bedroom: Message Payloads Defined\")\n\nnode.log(\"----- Kallen Bedroom: Set Parameters -----\")\nnode.log(\"setFan: \" + setFan)\nnode.log(\"setWhiteNoise: \" + setWhiteNoise)\nnode.log(\"setVolume: \" + setVolume)\nnode.log(\"setLights: \" + setLights)\nnode.log(\"----- Kallen Bedroom: End Parameters -----\")\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan' && fanSeparate === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"})\n        node.log(\"Kallen Bedroom: Early Fan\")\n        node.send([null,[sendFan,sendWhiteNoise],null])\n    } else if (toggle === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"})\n        node.log(\"Kallen Bedroom: Wake\")\n        node.send([wakeMsg,[sendFan,sendWhiteNoise,sendVolume],null])\n    } else if (toggle === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"})\n        node.log(\"Kallen Bedroom: Sleep\")\n        node.send([null,[sendFan,sendWhiteNoise,sendVolume,sendLights],sleepMsg])\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    node.log(\"Kallen Bedroom: Flow Blocked\")\n}\n\nnode.log(\"Kallen Bedroom: Processing Complete\")",
         "outputs": 3,
         "timeout": "",
         "noerr": 0,
