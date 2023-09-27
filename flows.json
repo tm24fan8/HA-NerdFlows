@@ -969,7 +969,9 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179
+        "y": 179,
+        "w": 1292,
+        "h": 382
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1413,7 +1415,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579
+        "y": 579,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "4886967d0f8c0156",
@@ -1473,7 +1477,9 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 672,
+        "h": 222
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1491,7 +1497,9 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "88f099618e56926d",
@@ -1573,7 +1581,9 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "31767ffd6a647579",
@@ -1720,6 +1730,8 @@
         ],
         "x": 34,
         "y": 719,
+        "w": 732,
+        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1758,7 +1770,9 @@
             "79f3ceee718cd7cb"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 752,
+        "h": 682
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -1866,10 +1880,12 @@
         "cookieFile": "/config/node-red/alexa_auth",
         "refreshInterval": "3",
         "alexaServiceHost": "pitangui.amazon.com",
+        "pushDispatchHost": "",
         "amazonPage": "amazon.com",
         "acceptLanguage": "en-US",
         "onKeywordInLanguage": "on",
         "userAgent": "",
+        "usePushConnection": "on",
         "autoInit": "on"
     },
     {
