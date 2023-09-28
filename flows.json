@@ -56,6 +56,14 @@
         "env": []
     },
     {
+        "id": "ce9c810396e540b6",
+        "type": "tab",
+        "label": "Lighting Effects",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "b0286fae9f2ce547",
         "type": "tab",
         "label": "Media Scenes",
@@ -13781,6 +13789,89 @@
         "x": 480,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "86feef66681d907f",
+        "type": "server-events",
+        "z": "ce9c810396e540b6",
+        "name": "LightFX Listener",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "eventType": "lightfx",
+        "exposeToHomeAssistant": true,
+        "eventData": "",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "LightFX Listener"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:alarm-light"
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "event_type": "",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "70925e3cac1396e1"
+            ]
+        ]
+    },
+    {
+        "id": "9932b8210843f84e",
+        "type": "debug",
+        "z": "ce9c810396e540b6",
+        "name": "Custom Event",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "70925e3cac1396e1",
+        "type": "function",
+        "z": "ce9c810396e540b6",
+        "name": "Processing",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst occupied = states[\"binary_sensor.basement_occupied\"].state\nconst quiet = states[\"input_boolean.studio_quiet\"].state\nconst deskState = states[\"light.tina_desk_lights\"].state\nconst livingRoomState = states[\"light.living_room_lights\"].state\nconst diningRoomState = states[\"light.dining_room_lamp\"].state\nconst basementState = states[\"light.basement_studio_lights\"].state\n\nlet firstFloorLights = []\nlet basementLights = []\n\nif (deskState === 'on') {\n    firstFloorLights.push('light.tina_desk_strip','light.tina_lamp_top','light.tina_lamp_side')\n}\n\nif (livingRoomState === 'on') {\n    firstFloorLights.push('light.living_room_color_1','light.living_room_color_2','light.living_room_color_3','light.living_room_led_strip')\n}\n\nif (diningRoomState === 'on') {\n    firstFloorLights.push('light.dining_room_lamp')\n}\n\nif (basementState === 'on') {\n    basementLights.push('light.basement_tall_lamp','light.basement_short_lamp','light.basement_stairwell','light.basement_led_strip_1')\n}\n\nflow.set(\"deskState\", deskState)\nflow.set(\"livingRoomState\", livingRoomState)\nflow.set(\"diningRoomState\", diningRoomState)\nflow.set(\"basementState\", basementState)",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "9932b8210843f84e"
+            ],
+            []
+        ],
+        "icon": "font-awesome/fa-bolt"
     },
     {
         "id": "7611921cadb91b1e",
