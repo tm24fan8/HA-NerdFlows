@@ -969,9 +969,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1254,7 +1252,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1415,9 +1415,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1477,9 +1475,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1497,9 +1493,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "88f099618e56926d",
@@ -1581,9 +1575,7 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "31767ffd6a647579",
@@ -1612,7 +1604,9 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399
+        "y": 399,
+        "w": 1532,
+        "h": 282
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1730,8 +1724,6 @@
         ],
         "x": 34,
         "y": 719,
-        "w": 732,
-        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1770,9 +1762,7 @@
             "79f3ceee718cd7cb"
         ],
         "x": 34,
-        "y": 19,
-        "w": 752,
-        "h": 682
+        "y": 19
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -18104,7 +18094,7 @@
         "type": "function",
         "z": "b7d34d3e9d0c9486",
         "name": "Processing",
-        "func": "// Set Constants\nconst states = global.get('homeassistant.homeAssistant.states')\nconst textAllowed = states['input_boolean.laundry_notifications_text'].state\nconst ttsAllowed = states['input_boolean.laundry_notifications_tts'].state\nconst washerCycle = flow.get(\"washerCycle\", \"diskCon\")\nconst washerFinished = flow.get(\"washerFinished\", \"diskCon\")\nconst washerTimer = flow.get(\"washerTimer\", \"diskCon\")\nconst washerDateTime = flow.get(\"washerDateTime\", \"diskCon\")\nconst dryerCycle = flow.get(\"dryerCycle\", \"diskCon\")\nconst dryerFinished = flow.get(\"dryerFinished\", \"diskCon\")\nconst dryerTimer = flow.get(\"dryerTimer\", \"diskCon\")\nconst dryerDateTime = flow.get(\"dryerDateTime\", \"diskCon\")\nconst topic = msg.topic\nconst payload = msg.payload\n\n// Init variables\nlet timerEntity = []\nlet boolFinished = []\nlet servFinished = {}\nlet dateTimeEntity = []\nlet servTimer = {}\nlet setCycle = []\nlet dateTime = []\nlet deviceName = {}\nlet notifyMsg = {}\nlet ttsMsg = {}\n\n// Set entity IDs and states\nif (topic === 'washer') {\n    setCycle = washerCycle\n    boolFinished = washerFinished\n    dateTimeEntity = washerDateTime\n    timerEntity = washerTimer\n    deviceName = 'washer'\n} else if (topic === 'dryer') {\n    setCycle = dryerCycle\n    boolFinished = dryerFinished\n    dateTimeEntity = dryerDateTime\n    timerEntity = dryerTimer\n    deviceName = 'dryer'\n}\n\n// Get states from the entities\n// @ts-ignore\nlet cycle = states[setCycle].state\n// @ts-ignore\nlet timerState = states[timerEntity].state\n// @ts-ignore\nlet finishedState = states[boolFinished].state\n\n// Convert minutes into seconds for the timer\nlet timerDuration = cycle * 60\nlet notifyDuration = Math.round(cycle)\n\n// Decide services\nif (payload === 'start') {\n    servFinished = 'turn_off'\n    notifyMsg = 'The ' + deviceName + ' has been started for a ' + notifyDuration + ' minute cycle'\n} else if (payload === 'finish') {\n    dateTime = msg.datetime\n    servFinished = 'turn_on'\n    notifyMsg = 'The ' + deviceName + ' has finished its cycle'\n    ttsMsg = 'The ' + deviceName + ' has finished its cycle. I repeat, the ' + deviceName + ' has finished its cycle.'\n} else if (payload === 'cancel') {\n    notifyMsg = 'The ' + deviceName + ' cycle has been cancelled'\n}\n\n// Prepare message payloads\nlet sendTimerStart = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"start\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {\n            \"duration\": timerDuration\n        }\n    }\n}\n\nlet sendTimerCancel = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"cancel\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {}\n    }\n}\n\nlet sendBoolFinished = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": servFinished,\n        \"target\": {\n            \"entity_id\": boolFinished\n        },\n        \"data\": {}\n    }\n}\n\nlet sendDateTimeFinished = {\n    \"payload\": {\n        \"domain\": \"input_datetime\",\n        \"service\": \"set_datetime\",\n        \"target\": {\n            \"entity_id\": dateTimeEntity\n        },\n        \"data\": {\n            \"datetime\": dateTime\n        }\n    }\n}\n\nlet sendTextNotify = {\n    \"payload\": {\n        \"data\": {\n            \"type\": \"normal\",\n            \"who\": \"all\",\n            \"title\": \"Laundry Tracking\",\n            \"message\": notifyMsg\n        }\n    }\n}\n\nlet sendTTSNotify = {\n    \"payload\": ttsMsg,\n    \"type\": \"alert\",\n    \"topic\": \"everywhere\"\n}\n\nif (payload === 'start') {\n    node.send([sendBoolFinished,sendTimerStart,null,null])\n    node.status({fill:\"green\",shape:\"dot\",text:\"Starting \" + deviceName + \" timer for \" + notifyDuration + \" minutes\"})\n    node.log(\"Starting \" + deviceName + \" timer for \" + notifyDuration + \" minutes\")\n} else if (payload === 'finish') {\n    node.send([[sendBoolFinished,sendDateTimeFinished],null,null])\n    if (ttsAllowed === 'on') {\n        node.send([null,null,null,sendTTSNotify])\n    }\n    node.status({fill:\"green\",shape:\"dot\",text:\"The \" + deviceName + \" has finished\"})\n    node.log(\"The \" + deviceName + \" has finished\")\n} else if (payload === 'cancel') {\n    node.send([null,sendTimerCancel,null,null])\n    node.status({fill:\"red\",shape:\"ring\",text:\"The \" + deviceName + \" has been cancelled\"})\n    node.log(\"The \" + deviceName + \" has been cancelled\")\n}\n\nif (textAllowed === 'on') {\n    node.send([null,null,sendTextNotify,null])\n}",
+        "func": "// Set Constants\nconst states = global.get('homeassistant.homeAssistant.states')\nconst textAllowed = states['input_boolean.laundry_notifications_text'].state\nconst ttsAllowed = states['input_boolean.laundry_notifications_tts'].state\nconst washerCycle = flow.get(\"washerCycle\", \"diskCon\")\nconst washerFinished = flow.get(\"washerFinished\", \"diskCon\")\nconst washerTimer = flow.get(\"washerTimer\", \"diskCon\")\nconst washerDateTime = flow.get(\"washerDateTime\", \"diskCon\")\nconst dryerCycle = flow.get(\"dryerCycle\", \"diskCon\")\nconst dryerFinished = flow.get(\"dryerFinished\", \"diskCon\")\nconst dryerTimer = flow.get(\"dryerTimer\", \"diskCon\")\nconst dryerDateTime = flow.get(\"dryerDateTime\", \"diskCon\")\nconst topic = msg.topic\nconst payload = msg.payload\n\n// Init variables\nlet timerEntity = []\nlet boolFinished = []\nlet servFinished = {}\nlet dateTimeEntity = []\nlet servTimer = {}\nlet setCycle = []\nlet dateTime = []\nlet deviceName = {}\nlet notifyMsg = {}\nlet ttsMsg = {}\n\n// Set entity IDs and states\nif (topic === 'washer') {\n    setCycle = washerCycle\n    boolFinished = washerFinished\n    dateTimeEntity = washerDateTime\n    timerEntity = washerTimer\n    deviceName = 'washer'\n} else if (topic === 'dryer') {\n    setCycle = dryerCycle\n    boolFinished = dryerFinished\n    dateTimeEntity = dryerDateTime\n    timerEntity = dryerTimer\n    deviceName = 'dryer'\n}\n\n// Get states from the entities\n// @ts-ignore\nlet cycle = states[setCycle].state\n// @ts-ignore\nlet timerState = states[timerEntity].state\n// @ts-ignore\nlet finishedState = states[boolFinished].state\n\n// Convert minutes into seconds for the timer\nlet timerDuration = cycle * 60\nlet notifyDuration = Math.round(cycle)\n\n// Decide services\nif (payload === 'start') {\n    servFinished = 'turn_off'\n    notifyMsg = 'The ' + deviceName + ' has been started for a ' + notifyDuration + ' minute cycle'\n} else if (payload === 'finish') {\n    dateTime = msg.datetime\n    servFinished = 'turn_on'\n    notifyMsg = 'The ' + deviceName + ' has finished its cycle'\n    ttsMsg = 'The ' + deviceName + ' has finished its cycle. I repeat, the ' + deviceName + ' has finished its cycle.'\n} else if (payload === 'cancel') {\n    notifyMsg = 'The ' + deviceName + ' cycle has been cancelled'\n}\n\n// Prepare message payloads\nlet sendTimerStart = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"start\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {\n            \"duration\": timerDuration\n        }\n    }\n}\n\nlet sendTimerCancel = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"cancel\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {}\n    }\n}\n\nlet sendBoolFinished = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": servFinished,\n        \"target\": {\n            \"entity_id\": boolFinished\n        },\n        \"data\": {}\n    }\n}\n\nlet sendDateTimeFinished = {\n    \"payload\": {\n        \"domain\": \"input_datetime\",\n        \"service\": \"set_datetime\",\n        \"target\": {\n            \"entity_id\": dateTimeEntity\n        },\n        \"data\": {\n            \"datetime\": dateTime\n        }\n    }\n}\n\nlet sendTextNotify = {\n    \"payload\": {\n        \"data\": {\n            \"type\": \"normal\",\n            \"who\": \"all\",\n            \"title\": \"Laundry Tracking\",\n            \"message\": notifyMsg\n        }\n    }\n}\n\nlet sendTTSNotify = {\n    \"payload\": ttsMsg,\n    \"type\": \"alert\",\n    \"topic\": \"everywhere\"\n}\n\nlet sendLightsAlertLR = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"living_room_lights_alert\",\n        \"data\": {\n            \"duration\": 10,\n            \"type\": \"blue\"\n        }\n    }\n}\n\nlet sendLightsAlertBM = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"basement_lights_alert\",\n        \"data\": {\n            \"duration\": 10,\n            \"type\": \"blue\"\n        }\n    }\n}\n\nif (payload === 'start') {\n    node.send([sendBoolFinished,sendTimerStart,null,null])\n    node.status({fill:\"green\",shape:\"dot\",text:\"Starting \" + deviceName + \" timer for \" + notifyDuration + \" minutes\"})\n    node.log(\"Starting \" + deviceName + \" timer for \" + notifyDuration + \" minutes\")\n} else if (payload === 'finish') {\n    node.send([[sendBoolFinished,sendDateTimeFinished,sendLightsAlertLR,sendLightsAlertBM],null,null])\n    if (ttsAllowed === 'on') {\n        node.send([null,null,null,sendTTSNotify])\n    }\n    node.status({fill:\"green\",shape:\"dot\",text:\"The \" + deviceName + \" has finished\"})\n    node.log(\"The \" + deviceName + \" has finished\")\n} else if (payload === 'cancel') {\n    node.send([null,sendTimerCancel,null,null])\n    node.status({fill:\"red\",shape:\"ring\",text:\"The \" + deviceName + \" has been cancelled\"})\n    node.log(\"The \" + deviceName + \" has been cancelled\")\n}\n\nif (textAllowed === 'on') {\n    node.send([null,null,sendTextNotify,null])\n}",
         "outputs": 4,
         "timeout": 0,
         "noerr": 0,
@@ -18568,6 +18558,31 @@
         "name": "",
         "x": 700,
         "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "51aca04a0b99e722",
+        "type": "api-call-service",
+        "z": "b7d34d3e9d0c9486",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "basement_lights_alert",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 780,
+        "y": 420,
         "wires": [
             []
         ]
