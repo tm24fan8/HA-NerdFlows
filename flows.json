@@ -969,7 +969,9 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179
+        "y": 179,
+        "w": 1292,
+        "h": 382
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1252,9 +1254,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759,
-        "w": 612,
-        "h": 202
+        "y": 759
     },
     {
         "id": "550e5b2d99316b12",
@@ -1415,7 +1415,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579
+        "y": 579,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "4886967d0f8c0156",
@@ -1475,7 +1477,9 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 672,
+        "h": 222
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1493,7 +1497,9 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "88f099618e56926d",
@@ -1575,7 +1581,9 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "31767ffd6a647579",
@@ -1604,9 +1612,7 @@
             "e23e7b080ee3773f"
         ],
         "x": 14,
-        "y": 399,
-        "w": 1532,
-        "h": 282
+        "y": 399
     },
     {
         "id": "1cc8b382530c33d0",
@@ -1656,7 +1662,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1699,7 +1707,9 @@
             "b497fe229c8f2eea"
         ],
         "x": 34,
-        "y": 139
+        "y": 139,
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "395da9d5d5f7e232",
@@ -24056,7 +24066,7 @@
         "name": "",
         "server": "9e87348d.9c1c48",
         "version": 0,
-        "template": "{% set ltgdist = (states('sensor.pirateweather_temperature') | int) / 1.609 | round %}\nLightning has been detected within 20 miles of the house. Nearest storm is {{ ltgdist }} miles away.\n",
+        "template": "{% set ltgdist = (states('sensor.blitzortung_lightning_distance') | int) / 1.609 | round %}\nLightning has been detected within 20 miles of the house. Nearest storm is {{ ltgdist }} miles away.\n",
         "resultsLocation": "notification",
         "resultsLocationType": "msg",
         "templateLocation": "",
@@ -28343,7 +28353,7 @@
         "name": "",
         "server": "9e87348d.9c1c48",
         "version": 0,
-        "template": "{% set temps = [\n    states.sensor.pirateweather_temperature,\n    states.sensor.kdfi_temperature,\n    states.sensor.openweathermap_temperature,\n    states.sensor.myradar_temperature\n] %}\n{% set sensor = temps | selectattr('state','ne','unavailable') | selectattr('state','ne','unknown') | map(attribute='entity_id') | list | first %}\n{{ states(sensor) | float }}\n",
+        "template": "{% set temps = [\n    states.sensor.kdfi_temperature,\n    states.sensor.pirateweather_temperature,\n    states.sensor.openweathermap_temperature,\n    states.sensor.myradar_temperature\n] %}\n{% set sensor = temps | selectattr('state','ne','unavailable') | selectattr('state','ne','unknown') | map(attribute='entity_id') | list | first %}\n{{ states(sensor) | float }}\n",
         "resultsLocation": "temperature",
         "resultsLocationType": "msg",
         "templateLocation": "",
