@@ -969,9 +969,7 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179,
-        "w": 1292,
-        "h": 382
+        "y": 179
     },
     {
         "id": "477e752fcd2e2a19",
@@ -1365,14 +1363,16 @@
             "95d5ac486b4f9ee0",
             "49767cbfa622a734",
             "04113ab4977bf725",
-            "9f6498380a05390b",
-            "452660fbaf11396c",
             "93a52960301bb3a3",
             "0e39331337b021bb",
             "82172c8ab1a9c8e2",
             "afeb1d238a623c3d",
             "49dbe17ff03ed572",
-            "9612270d4cdfbf07"
+            "9612270d4cdfbf07",
+            "1a0adfa82fff507a",
+            "27ae9c023ee2d1f6",
+            "88d088ea70f0030a",
+            "86c7f29776a59797"
         ],
         "x": 34,
         "y": 39,
@@ -1415,9 +1415,7 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579,
-        "w": 732,
-        "h": 162
+        "y": 579
     },
     {
         "id": "4886967d0f8c0156",
@@ -1477,9 +1475,7 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759,
-        "w": 672,
-        "h": 222
+        "y": 759
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1497,9 +1493,7 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19,
-        "w": 912,
-        "h": 142
+        "y": 19
     },
     {
         "id": "88f099618e56926d",
@@ -1581,9 +1575,7 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999,
-        "w": 632,
-        "h": 82
+        "y": 999
     },
     {
         "id": "31767ffd6a647579",
@@ -1662,9 +1654,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 82
+        "y": 39
     },
     {
         "id": "4329e464360d0afa",
@@ -1707,9 +1697,7 @@
             "b497fe229c8f2eea"
         ],
         "x": 34,
-        "y": 139,
-        "w": 1592,
-        "h": 422
+        "y": 139
     },
     {
         "id": "395da9d5d5f7e232",
@@ -5306,21 +5294,15 @@
             {
                 "property": "topic",
                 "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
+                "value": "button",
+                "valueType": "str"
             }
         ],
         "x": 130,
         "y": 300,
         "wires": [
             [
-                "452660fbaf11396c"
+                "1a0adfa82fff507a"
             ]
         ]
     },
@@ -6240,94 +6222,6 @@
         "l": false
     },
     {
-        "id": "9f6498380a05390b",
-        "type": "switch",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Routing",
-        "property": "timerstate",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "idle",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "active",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "paused",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 3,
-        "x": 435,
-        "y": 300,
-        "wires": [
-            [
-                "0e39331337b021bb"
-            ],
-            [
-                "82172c8ab1a9c8e2"
-            ],
-            [
-                "34dcb204b421710d"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "452660fbaf11396c",
-        "type": "api-current-state",
-        "z": "4a8821853d4dd1ad",
-        "g": "a46fc8e7e70ca893",
-        "name": "Timer State",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "timer.kallen_timer",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "timerstate",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "timerdata",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 310,
-        "y": 300,
-        "wires": [
-            [
-                "9f6498380a05390b"
-            ]
-        ]
-    },
-    {
         "id": "206e512c5268020f",
         "type": "server-events",
         "z": "4a8821853d4dd1ad",
@@ -6636,6 +6530,143 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "1a0adfa82fff507a",
+        "type": "function",
+        "z": "4a8821853d4dd1ad",
+        "g": "a46fc8e7e70ca893",
+        "name": "Processing",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst timer = states['timer.kallen_timer'].state\n\n// Basic replacement for current entry flow\n\nif (timer === 'idle') {\n    node.send([msg,null,null])\n} else if (timer === 'active') {\n    node.send([null,msg,null])\n} else if (timer === 'paused') {\n    node.send([null,null,msg])\n}",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "0e39331337b021bb"
+            ],
+            [
+                "82172c8ab1a9c8e2"
+            ],
+            [
+                "34dcb204b421710d"
+            ]
+        ],
+        "outputLabels": [
+            "idle",
+            "active",
+            "paused"
+        ]
+    },
+    {
+        "id": "27ae9c023ee2d1f6",
+        "type": "server-state-changed",
+        "z": "4a8821853d4dd1ad",
+        "g": "a46fc8e7e70ca893",
+        "name": "Duration Change",
+        "server": "9e87348d.9c1c48",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_number.kallen_activity_duration",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "num",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": true,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            }
+        ],
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "88d088ea70f0030a"
+            ]
+        ]
+    },
+    {
+        "id": "88d088ea70f0030a",
+        "type": "function",
+        "z": "4a8821853d4dd1ad",
+        "g": "a46fc8e7e70ca893",
+        "name": "Timer Math",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst oldState = msg.data.old_state.state\nconst newState = msg.data.new_state.state\nconst entity_id = msg.data.entity_id\nconst subtract = newState - oldState\nconst multiply = subtract * 60\nconst diff = parseInt(multiply)\nconst running = states[\"timer.kallen_timer\"].state\n\nlet changeMsg = {\n    \"timer\": \"timer.kallen_timer\",\n    \"change\": diff\n}\n\nif (running === 'active') {\n    node.send(changeMsg)\n    node.status({fill:\"green\",shape:\"dot\",text:\"Timer Changed\"})\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "86c7f29776a59797"
+            ]
+        ]
+    },
+    {
+        "id": "86c7f29776a59797",
+        "type": "api-call-service",
+        "z": "4a8821853d4dd1ad",
+        "g": "a46fc8e7e70ca893",
+        "name": "Timer Change",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "timer_modify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"timer\": timer,\t    \"change\": change\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 520,
+        "y": 80,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "fd4bbf481e16e6ea",
