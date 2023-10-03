@@ -6537,7 +6537,7 @@
         "z": "4a8821853d4dd1ad",
         "g": "a46fc8e7e70ca893",
         "name": "Processing",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst timer = states['timer.kallen_timer'].state\n\n// Basic replacement for current entry flow\n\nif (timer === 'idle') {\n    node.send([msg,null,null])\n} else if (timer === 'active') {\n    node.send([null,msg,null])\n} else if (timer === 'paused') {\n    node.send([null,null,msg])\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst timer = states['timer.kallen_timer'].state\n\n// Basic replacement for current entry flow\n\nif (timer === 'idle') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Start\"})\n    node.send([msg,null,null])\n} else if (timer === 'active') {\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"Pause\"})\n    node.send([null,msg,null])\n} else if (timer === 'paused') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Resume\"})\n    node.send([null,null,msg])\n}",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
