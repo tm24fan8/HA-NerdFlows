@@ -1198,7 +1198,9 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19
+        "y": 19,
+        "w": 1492,
+        "h": 282
     },
     {
         "id": "0c81dfaed25d225c",
@@ -14348,7 +14350,7 @@
         "z": "b5717a86ce55bc29",
         "g": "eeafd13be593ae69",
         "name": "Shut Off",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst frontPorchToggle = states['input_boolean.front_porch_light_on'].state\nconst deliveryMode = states['input_boolean.delivery_mode'].state\nconst holidaymode = states['input_boolean.holiday_mode'].state\nconst currentholiday = states['input_select.holiday_animation'].state\nconst holiday = currentholiday.toLowerCase()\n\nif (frontPorchToggle === 'on' && deliveryMode === 'off') {\n    if (holidaymode === 'on') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Holiday On\"})\n        node.send([msg,null])\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Holiday Off\"})\n        node.send([null,msg])\n    }\n} else if (frontPorchToggle === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked (Automation Off\"})\n} else if (deliveryMode === 'on') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked (Delivery Mode)\"})\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst frontPorchToggle = states['input_boolean.front_porch_light_on'].state\nconst deliveryMode = states['input_boolean.delivery_mode'].state\nconst holidaymode = states['input_boolean.holiday_mode'].state\nconst currentholiday = states['input_select.holiday_animation'].state\nconst holiday = currentholiday.toLowerCase()\n\nif (frontPorchToggle === 'on' && deliveryMode === 'off') {\n    if (holidaymode === 'on') {\n        msg.holiday = holiday\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Holiday On\"})\n        node.send([msg,null])\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Holiday Off\"})\n        node.send([null,msg])\n    }\n} else if (frontPorchToggle === 'off') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked (Automation Off\"})\n} else if (deliveryMode === 'on') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked (Delivery Mode)\"})\n}",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
