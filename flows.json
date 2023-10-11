@@ -996,7 +996,9 @@
             "f4bfbaca4d7fb1df"
         ],
         "x": 14,
-        "y": 39
+        "y": 39,
+        "w": 1192,
+        "h": 82
     },
     {
         "id": "fbbe69a14cbe0236",
@@ -1173,7 +1175,9 @@
             "f44427c5a493c428"
         ],
         "x": 14,
-        "y": 139
+        "y": 139,
+        "w": 1152,
+        "h": 242
     },
     {
         "id": "eeafd13be593ae69",
@@ -1240,7 +1244,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "8aee4d340a136bac",
@@ -1316,7 +1322,9 @@
             "3463c4f2bf6388fe"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 682
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1340,7 +1348,9 @@
             "0be3c318e9e6df0a"
         ],
         "x": 64,
-        "y": 759
+        "y": 759,
+        "w": 1022,
+        "h": 162
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -1524,7 +1534,9 @@
             "99c141f21de4feda"
         ],
         "x": 74,
-        "y": 39
+        "y": 39,
+        "w": 1132,
+        "h": 262
     },
     {
         "id": "a6de35af12739885",
@@ -1546,7 +1558,9 @@
             "724f186878227dad"
         ],
         "x": 74,
-        "y": 339
+        "y": 339,
+        "w": 1132,
+        "h": 202
     },
     {
         "id": "0804d9edeca1c9fa",
@@ -1567,7 +1581,9 @@
             "4523045453de0a33"
         ],
         "x": 74,
-        "y": 579
+        "y": 579,
+        "w": 1092,
+        "h": 202
     },
     {
         "id": "385f03591bc34bcc",
@@ -1730,8 +1746,6 @@
         ],
         "x": 34,
         "y": 719,
-        "w": 732,
-        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1773,9 +1787,7 @@
             "44b7eabdec8197a3"
         ],
         "x": 34,
-        "y": 19,
-        "w": 752,
-        "h": 682
+        "y": 19
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -16290,7 +16302,7 @@
         "z": "72f99805df043603",
         "g": "39a7ac02f2727f1d",
         "name": "Processing",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst vacationMode = states['input_boolean.vacation_mode'].state\nconst overnight = states['input_boolean.kallen_overnight'].state\nconst kallenLoc = states['person.kallen_stork'].state\nconst dayVolume = states['input_number.kallen_bedroom_google_speaker_day_volume'].state\nconst nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nconst brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nconst fadeNight = states['input_number.wakeup_lights_fade_night'].state\nconst hotDay = states['input_boolean.hot_day'].state\nconst heatWarning = states['binary_sensor.heat_warning'].state\nconst fanSeparate = states['binary_sensor.kallen_fan_separate_schedule'].state\nconst schedMode = states['input_select.scheduled_climate_mode_kallen_fan'].state\nconst topic = msg.topic\nconst toggle = msg.toggle\nnode.log(\"Kallen Bedroom: Constants Set\")\n\nlet setFan = []\nlet setWhiteNoise = []\nlet setVolume = []\nlet setLights = []\nnode.log(\"Kallen Bedroom: Variables Defined\")\n\nif (toggle === 'off' && (hotDay === 'on' || heatWarning === 'on')) {\n    setFan = 'turn_on'\n} else if ((toggle === 'on' || topic === 'kallen-fan') && schedMode === 'Fan') {\n    setFan = 'turn_on'\n} else {\n    setFan = 'turn_off'\n}\n\nif (schedMode === 'White Noise' && toggle === 'on') {\n    setWhiteNoise = 'turn_on'\n} else {\n    setWhiteNoise = 'turn_off'\n}\n\nif (toggle === 'on') {\n    setVolume = parseFloat(nightVolume)\n    setLights = 'turn_on'\n} else {\n    setVolume = parseFloat(dayVolume)\n}\n\nlet fadeMult = fadeNight * 60\nlet fadeFinal = Math.round(fadeMult)\n\nlet brtFinal = Math.round(brightness)\n\nnode.log(\"Kallen Bedroom: Decision Logic Complete\")\n\nlet sendFan = {\n    \"payload\": {\n        \"domain\": \"fan\",\n        \"service\": setFan,\n        \"target\": {\n            \"entity_id\": [\"fan.kallen_bedroom_fan\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet sendWhiteNoise = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": setWhiteNoise,\n        \"target\": {\n            \"entity_id\": [\"input_boolean.white_noise_kallen_bedroom\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet sendVolume = {\n    \"payload\": {\n        \"domain\": \"media_player\",\n        \"service\": \"set_volume\",\n        \"target\": {\n            \"entity_id\": [\"media_player.kallen_bedroom_google_speaker\"]\n        },\n        \"data\": {\n            \"volume\": setVolume\n        }\n    }\n}\n\nlet sendLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": setLights,\n        \"target\": {\n            \"entity_id\": [\"light.kallen_bedroom_lights\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet wakeMsg = {\n    \"brightness\": brtFinal,\n    \"fade\": fadeFinal\n}\n\nlet sleepMsg = {\n    \"payload\": \"sleep\"\n}\n\nnode.log(\"Kallen Bedroom: Message Payloads Defined\")\n\nnode.log(\"----- Kallen Bedroom: Set Parameters -----\")\nnode.log(\"setFan: \" + setFan)\nnode.log(\"setWhiteNoise: \" + setWhiteNoise)\nnode.log(\"setVolume: \" + setVolume)\nnode.log(\"setLights: \" + setLights)\nnode.log(\"----- Kallen Bedroom: End Parameters -----\")\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan' && fanSeparate === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"})\n        node.log(\"Kallen Bedroom: Early Fan\")\n        node.send([null,[sendFan,sendWhiteNoise],null])\n    } else if (toggle === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"})\n        node.log(\"Kallen Bedroom: Wake\")\n        node.send([wakeMsg,[sendFan,sendWhiteNoise,sendVolume],null])\n    } else if (toggle === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"})\n        node.log(\"Kallen Bedroom: Sleep\")\n        node.send([null,[sendFan,sendWhiteNoise,sendVolume,sendLights],sleepMsg])\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    node.log(\"Kallen Bedroom: Flow Blocked\")\n}\n\nnode.log(\"Kallen Bedroom: Processing Complete\")",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst vacationMode = states['input_boolean.vacation_mode'].state\nconst overnight = states['input_boolean.kallen_overnight'].state\nconst kallenLoc = states['person.kallen_stork'].state\nconst dayVolume = states['input_number.kallen_bedroom_google_speaker_day_volume'].state\nconst nightVolume = states['input_number.kallen_bedroom_google_speaker_night_volume'].state\nconst brightness = states['switch.adaptive_lighting_kallen_bedroom'].attributes.brightness_pct\nconst fadeNight = states['input_number.wakeup_lights_fade_night'].state\nconst hotDay = states['input_boolean.hot_day'].state\nconst heatWarning = states['binary_sensor.heat_warning'].state\nconst fanSeparate = states['binary_sensor.kallen_fan_separate_schedule'].state\nconst schedMode = states['input_select.scheduled_climate_mode_kallen_fan'].state\nconst topic = msg.topic\nconst toggle = msg.toggle\nnode.log(\"Kallen Bedroom: Constants Set\")\n\nlet setFan = []\nlet setWhiteNoise = []\nlet setVolume = []\nlet setLights = []\nnode.log(\"Kallen Bedroom: Variables Defined\")\n\nif (toggle === 'off' && (hotDay === 'on' || heatWarning === 'on')) {\n    setFan = 'turn_on'\n} else if ((toggle === 'on' || topic === 'kallen-fan') && schedMode === 'Fan') {\n    setFan = 'turn_on'\n} else {\n    setFan = 'turn_off'\n}\n\nif (schedMode === 'White Noise' && toggle === 'on') {\n    setWhiteNoise = 'turn_on'\n} else {\n    setWhiteNoise = 'turn_off'\n}\n\nif (toggle === 'on') {\n    setVolume = parseFloat(nightVolume)\n    setLights = 'turn_on'\n} else {\n    setVolume = parseFloat(dayVolume)\n}\n\nlet fadeMult = fadeNight * 60\nlet fadeFinal = Math.round(fadeMult)\n\nlet brtFinal = Math.round(brightness)\n\nnode.log(\"Kallen Bedroom: Decision Logic Complete\")\n\nlet sendFan = {\n    \"payload\": {\n        \"domain\": \"fan\",\n        \"service\": setFan,\n        \"target\": {\n            \"entity_id\": [\"fan.kallen_bedroom_fan\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet sendWhiteNoise = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": setWhiteNoise,\n        \"target\": {\n            \"entity_id\": [\"input_boolean.white_noise_kallen_bedroom\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet sendVolume = {\n    \"payload\": {\n        \"domain\": \"media_player\",\n        \"service\": \"volume_set\",\n        \"target\": {\n            \"entity_id\": [\"media_player.kallen_bedroom_google_speaker\"]\n        },\n        \"data\": {\n            \"volume\": setVolume\n        }\n    }\n}\n\nlet sendLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": setLights,\n        \"target\": {\n            \"entity_id\": [\"light.kallen_bedroom_lights\"]\n        },\n        \"data\": {}\n    }\n}\n\nlet wakeMsg = {\n    \"brightness\": brtFinal,\n    \"fade\": fadeFinal\n}\n\nlet sleepMsg = {\n    \"payload\": \"sleep\"\n}\n\nnode.log(\"Kallen Bedroom: Message Payloads Defined\")\n\nnode.log(\"----- Kallen Bedroom: Set Parameters -----\")\nnode.log(\"setFan: \" + setFan)\nnode.log(\"setWhiteNoise: \" + setWhiteNoise)\nnode.log(\"setVolume: \" + setVolume)\nnode.log(\"setLights: \" + setLights)\nnode.log(\"----- Kallen Bedroom: End Parameters -----\")\n\nif (vacationMode === 'off' && overnight === 'off' && kallenLoc === 'home') {\n    if (topic === 'kallen-fan' && fanSeparate === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Fan\"})\n        node.log(\"Kallen Bedroom: Early Fan\")\n        node.send([null,[sendFan,sendWhiteNoise],null])\n    } else if (toggle === 'off') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Wakeup\"})\n        node.log(\"Kallen Bedroom: Wake\")\n        node.send([wakeMsg,[sendFan,sendWhiteNoise,sendVolume],null])\n    } else if (toggle === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sleep\"})\n        node.log(\"Kallen Bedroom: Sleep\")\n        node.send([null,[sendFan,sendWhiteNoise,sendVolume,sendLights],sleepMsg])\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    node.log(\"Kallen Bedroom: Flow Blocked\")\n}\n\nnode.log(\"Kallen Bedroom: Processing Complete\")",
         "outputs": 3,
         "timeout": "",
         "noerr": 0,
