@@ -874,9 +874,7 @@
             "ec4682a111a48b70"
         ],
         "x": 14,
-        "y": 839,
-        "w": 1552,
-        "h": 402
+        "y": 839
     },
     {
         "id": "e065b1ed4938b477",
@@ -935,9 +933,7 @@
             "6bbf7df2c43c481e"
         ],
         "x": 14,
-        "y": 11.5,
-        "w": 1252,
-        "h": 809.5
+        "y": 11.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -7435,7 +7431,7 @@
         "deviceId": [],
         "entityId": [],
         "data": "",
-        "dataType": "jsonata",
+        "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
