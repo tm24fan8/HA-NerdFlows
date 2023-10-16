@@ -3947,6 +3947,26 @@
         "debugEnabled": false
     },
     {
+        "id": "86feef66681d907f",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "exposed as for LightFX Listener",
+        "version": 6,
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "LightFX Listener"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:alarm-light"
+            }
+        ],
+        "resend": false
+    },
+    {
         "id": "afead614fabc01bb",
         "type": "function",
         "z": "a42343e035e3313c",
@@ -13791,50 +13811,6 @@
         "wires": []
     },
     {
-        "id": "86feef66681d907f",
-        "type": "server-events",
-        "z": "ce9c810396e540b6",
-        "name": "LightFX Listener",
-        "server": "9e87348d.9c1c48",
-        "version": 2,
-        "eventType": "lightfx",
-        "exposeToHomeAssistant": true,
-        "eventData": "",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "LightFX Listener"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:alarm-light"
-            }
-        ],
-        "waitForRunning": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "$outputData(\"eventData\").event_type",
-                "valueType": "jsonata"
-            }
-        ],
-        "event_type": "",
-        "x": 220,
-        "y": 280,
-        "wires": [
-            [
-                "9932b8210843f84e"
-            ]
-        ]
-    },
-    {
         "id": "9932b8210843f84e",
         "type": "debug",
         "z": "ce9c810396e540b6",
@@ -13933,6 +13909,40 @@
         "y": 200,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "67ba32adb7d35161",
+        "type": "server-events",
+        "z": "ce9c810396e540b6",
+        "name": "LightFX Listener",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "exposeAsEntityConfig": "86feef66681d907f",
+        "eventType": "lightfx",
+        "eventData": "",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "event_type": "",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "9932b8210843f84e"
+            ]
         ]
     },
     {
