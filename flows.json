@@ -1052,9 +1052,7 @@
             "f463df7e17e045e9"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1272,
-        "h": 502
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1162,9 +1160,7 @@
             "f5fb96bf1a33b3cd"
         ],
         "x": 54,
-        "y": 19,
-        "w": 1492,
-        "h": 282
+        "y": 19
     },
     {
         "id": "0c81dfaed25d225c",
@@ -1198,9 +1194,7 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39,
-        "w": 1652,
-        "h": 382
+        "y": 39
     },
     {
         "id": "8aee4d340a136bac",
@@ -1443,9 +1437,7 @@
             "99c141f21de4feda"
         ],
         "x": 74,
-        "y": 39,
-        "w": 1132,
-        "h": 262
+        "y": 39
     },
     {
         "id": "a6de35af12739885",
@@ -1467,9 +1459,7 @@
             "724f186878227dad"
         ],
         "x": 74,
-        "y": 339,
-        "w": 1132,
-        "h": 202
+        "y": 339
     },
     {
         "id": "0804d9edeca1c9fa",
@@ -1490,9 +1480,7 @@
             "4523045453de0a33"
         ],
         "x": 74,
-        "y": 579,
-        "w": 1092,
-        "h": 202
+        "y": 579
     },
     {
         "id": "385f03591bc34bcc",
@@ -1571,9 +1559,7 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1192,
-        "h": 502
+        "y": 539
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -1589,9 +1575,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 82
+        "y": 39
     },
     {
         "id": "4329e464360d0afa",
@@ -13848,11 +13832,11 @@
         "type": "function",
         "z": "ce9c810396e540b6",
         "name": "Processing",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst occupied = states[\"binary_sensor.basement_occupied\"].state\nconst quiet = states[\"input_boolean.studio_quiet\"].state\nconst stateTinaDesk = states[\"light.tina_desk_lights\"].state\nconst stateLivingRoom = states[\"light.living_room_lights\"].state\nconst stateDiningRoom = states[\"light.dining_room_lamp\"].state\nconst stateBasement = states[\"light.basement_studio_lights\"].state\nconst adaptLivingRoom = states[\"switch.adaptive_lighting_living_room\"].state\nconst adaptBasement = states[\"switch.adaptive_lighting_basement_studio\"].state\nconst nightLivingRoom = states[\"switch.adaptive_lighting_sleep_mode_living_room\"].state\nconst nightBasement = states[\"switch.adaptive_lighting_sleep_mode_basement_studio\"].state\nconst currentSceneBasement = states[\"input_text.basement_studio_selected_scene\"].state\nconst currentSceneLivingRoom = states[\"input_text.living_room_selected_scene\"].state\nconst currentSceneTinaDesk = states[\"input_text.tina_desk_selected_scene\"].state\nconst effectBasement = msg.payload.event.basement\nconst effectFirstFloor = msg.payload.event.first_floor\nconst effectType = msg.payload.event.type\nconst effectDivide = msg.payload.event.divide\nconst duration = msg.payload.event.duration\nconst delay = duration * 1000\nconst adaptiveSwitchFirstFloor = flow.get(\"adaptiveFirstFloor\")\nconst adaptiveSwitchBasement = flow.get(\"adaptiveBasement\")\n\n//! Use delay in service calls, not duration\n\nflow.set(\"currentSceneBasement\", currentSceneBasement)\nflow.set(\"currentSceneLivingRoom\", currentSceneLivingRoom)\nflow.set(\"currentSceneTinaDesk\", currentSceneTinaDesk)\nflow.set(\"adaptLivingRoom\", adaptLivingRoom)\nflow.set(\"adaptBasement\", adaptBasement)\nflow.set(\"nightLivingRoom\", nightLivingRoom)\nflow.set(\"nightBasement\", nightBasement)\nflow.set(\"stateTinaDesk\", stateTinaDesk)\nflow.set(\"stateLivingRoom\", stateLivingRoom)\nflow.set(\"stateDiningRoom\", stateDiningRoom)\nflow.set(\"stateBasement\", stateBasement)\n\nlet firstFloorLights = []\nlet basementLights = []\nlet basement1 = []\nlet basement2 = []\nlet basementFull = []\nlet livingRoom1 = []\nlet livingRoom2 = []\nlet livingRoomFull = []\n\nif (stateTinaDesk === 'on') {\n    firstFloorLights.push('light.tina_desk_strip','light.tina_lamp_top','light.tina_lamp_side')\n}\n\nif (stateLivingRoom === 'on') {\n    firstFloorLights.push('light.living_room_color_1','light.living_room_color_2','light.living_room_color_3','light.living_room_led_strip')\n}\n\nif (stateDiningRoom === 'on') {\n    firstFloorLights.push('light.dining_room_lamp')\n}\n\nif (stateBasement === 'on') {\n    basementLights.push('light.basement_tall_lamp','light.basement_short_lamp','light.basement_stairwell','light.basement_led_strip_1')\n}\n\nif (effectDivide === 'half') {\n    basement1 = flow.get(\"halfBasement1\")\n    basement2 = flow.get(\"halfBasement2\")\n    livingRoom1 = flow.get(\"halfLivingRoom1\")\n    livingRoom2 = flow.get(\"halfLivingRoom2\")\n} else if (effectDivide === 'quarter') {\n    basement1 = flow.get(\"effectSegBasement1\")\n    basement2 = flow.get(\"effectSegBasement2\")\n    livingRoom1 = flow.get(\"effectSegLivingRoom1\")\n    livingRoom2 = flow.get(\"effectSegLivingRoom2\")\n} else if (effectDivide === 'full') {\n    basementFull = flow.get(\"basementFull\")\n    livingRoomFull = flow.get(\"livingRoomFull\")\n}\n\n//! Implement setting of colors here\n\n// Set message payloads\nlet sendBasementStrip1 = {\n    \"payload\": {\n        \"domain\": \"lifx\",\n        \"service\": \"set_state\",\n        \"target\": {\n            \"entity_id\": [\"light.basement_led_strip_1\"]\n        },\n        \"data\": {\n            \"zones\": basement1\n        }\n    }\n}\n\nlet sendBasementStrip2 = {\n    \"payload\": {\n        \"domain\": \"lifx\",\n        \"service\": \"set_state\",\n        \"target\": {\n            \"entity_id\": [\"light.basement_led_strip_1\"]\n        },\n        \"data\": {\n            \"zones\": basement2\n        }\n    }\n}\n\nlet sendLivingRoomStrip1 = {\n    \"payload\": {\n        \"domain\": \"lifx\",\n        \"service\": \"set_state\",\n        \"target\": {\n            \"entity_id\": [\"light.living_room_led_strip\"]\n        },\n        \"data\": {\n            \"zones\": livingRoom1\n        }\n    }\n}\n\nlet sendLivingRoomStrip2 = {\n    \"payload\": {\n        \"domain\": \"lifx\",\n        \"service\": \"set_state\",\n        \"target\": {\n            \"entity_id\": [\"light.living_room_led_strip\"]\n        },\n        \"data\": {\n            \"zones\": livingRoom2\n        }\n    }\n}\n",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst occupied = states[\"binary_sensor.basement_occupied\"].state\nconst quiet = states[\"input_boolean.studio_quiet\"].state\nconst stateTinaDesk = states[\"light.tina_desk_lights\"].state\nconst stateLivingRoom = states[\"light.living_room_lights\"].state\nconst stateDiningRoom = states[\"light.dining_room_lamp\"].state\nconst stateBasement = states[\"light.basement_studio_lights\"].state\nconst adaptLivingRoom = states[\"switch.adaptive_lighting_living_room\"].state\nconst adaptBasement = states[\"switch.adaptive_lighting_basement_studio\"].state\nconst nightLivingRoom = states[\"switch.adaptive_lighting_sleep_mode_living_room\"].state\nconst nightBasement = states[\"switch.adaptive_lighting_sleep_mode_basement_studio\"].state\nconst currentSceneBasement = states[\"input_text.basement_studio_selected_scene\"].state\nconst currentSceneLivingRoom = states[\"input_text.living_room_selected_scene\"].state\nconst currentSceneTinaDesk = states[\"input_text.tina_desk_selected_scene\"].state\nconst effectBasement = msg.payload.event.basement\nconst effectFirstFloor = msg.payload.event.first_floor\nconst effectType = msg.payload.event.type\nconst effectDivide = msg.payload.event.divide\nconst duration = msg.payload.event.duration\nconst delay = duration * 1000\nconst adaptiveSwitchFirstFloor = flow.get(\"adaptiveFirstFloor\", \"diskCon\")\nconst adaptiveSwitchBasement = flow.get(\"adaptiveBasement\", \"diskCon\")\n\n//! Use delay in service calls, not duration\n\nflow.set(\"currentSceneBasement\", currentSceneBasement)\nflow.set(\"currentSceneLivingRoom\", currentSceneLivingRoom)\nflow.set(\"currentSceneTinaDesk\", currentSceneTinaDesk)\nflow.set(\"adaptLivingRoom\", adaptLivingRoom)\nflow.set(\"adaptBasement\", adaptBasement)\nflow.set(\"nightLivingRoom\", nightLivingRoom)\nflow.set(\"nightBasement\", nightBasement)\nflow.set(\"stateTinaDesk\", stateTinaDesk)\nflow.set(\"stateLivingRoom\", stateLivingRoom)\nflow.set(\"stateDiningRoom\", stateDiningRoom)\nflow.set(\"stateBasement\", stateBasement)\n\nlet firstFloorLights = []\nlet basementLights = []\nlet basement1 = []\nlet basement2 = []\nlet basementFull = []\nlet livingRoom1 = []\nlet livingRoom2 = []\nlet livingRoomFull = []\nlet colorName1 = effectType\nlet colorName2 = \"white\"\n\nif (stateTinaDesk === 'on') {\n    firstFloorLights.push('light.tina_desk_strip','light.tina_lamp_top','light.tina_lamp_side')\n}\n\nif (stateLivingRoom === 'on') {\n    firstFloorLights.push('light.living_room_color_1','light.living_room_color_2','light.living_room_color_3','light.living_room_led_strip')\n}\n\nif (stateDiningRoom === 'on') {\n    firstFloorLights.push('light.dining_room_lamp')\n}\n\nif (stateBasement === 'on') {\n    basementLights.push('light.basement_tall_lamp','light.basement_short_lamp','light.basement_stairwell','light.basement_led_strip_1')\n}\n\nif (effectDivide === 'half') {\n    basement1 = flow.get(\"halfBasement1\", \"diskCon\")\n    basement2 = flow.get(\"halfBasement2\", \"diskCon\")\n    livingRoom1 = flow.get(\"halfLivingRoom1\", \"diskCon\")\n    livingRoom2 = flow.get(\"halfLivingRoom2\", \"diskCon\")\n} else if (effectDivide === 'quarter') {\n    basement1 = flow.get(\"effectSegBasement1\", \"diskCon\")\n    basement2 = flow.get(\"effectSegBasement2\", \"diskCon\")\n    livingRoom1 = flow.get(\"effectSegLivingRoom1\", \"diskCon\")\n    livingRoom2 = flow.get(\"effectSegLivingRoom2\", \"diskCon\")\n} else if (effectDivide === 'full') {\n    basementFull = flow.get(\"basementFull\", \"diskCon\")\n    livingRoomFull = flow.get(\"livingRoomFull\", \"diskCon\")\n}\n\n//! Implement setting of colors here\n\n// Set message payloads\nlet sendBasementStripFX = {\n    \"payload\": {\n        \"domain\": \"lifx\",\n        \"service\": \"effect_move\",\n        \"target\": {\n            \"entity_id\": [\"light.basement_led_strip_1\"]\n        },\n        \"data\": {\n            \"speed\": 0.5,\n            \"direction\": \"right\",\n            \"power_on\": false\n        }\n    }\n}\n\nlet sendBasementStrip1 = {\n    \"payload\": {\n        \"domain\": \"lifx\",\n        \"service\": \"set_state\",\n        \"target\": {\n            \"entity_id\": [\"light.basement_led_strip_1\"]\n        },\n        \"data\": {\n            \"zones\": basement1,\n            \"color_name\": colorName1,\n            \"brightness\": 255\n        }\n    }\n}\n\nlet sendBasementStrip2 = {\n    \"payload\": {\n        \"domain\": \"lifx\",\n        \"service\": \"set_state\",\n        \"target\": {\n            \"entity_id\": [\"light.basement_led_strip_1\"]\n        },\n        \"data\": {\n            \"zones\": basement2,\n            \"color_name\": colorName2,\n            \"brightness\": 255,\n            \"power\": true\n        }\n    }\n}\n\nlet sendBasementLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": \"turn_on\",\n        \"target\": {\n            \"entity_id\": [\n                \"light.basement_tall_lamp\",\n                \"light.basement_short_lamp\",\n                \"light.basement_stairwell\"\n            ]\n        },\n        \"data\": {\n            \"color_name\": colorName1,\n            \"brightness\": 255\n        }\n    }\n}\n\nlet sendLivingRoomStrip1 = {\n    \"payload\": {\n        \"domain\": \"lifx\",\n        \"service\": \"set_state\",\n        \"target\": {\n            \"entity_id\": [\"light.living_room_led_strip\"]\n        },\n        \"data\": {\n            \"zones\": livingRoom1,\n            \"color_name\": colorName1,\n            \"brightness\": 255\n        }\n    }\n}\n\nlet sendLivingRoomStrip2 = {\n    \"payload\": {\n        \"domain\": \"lifx\",\n        \"service\": \"set_state\",\n        \"target\": {\n            \"entity_id\": [\"light.living_room_led_strip\"]\n        },\n        \"data\": {\n            \"zones\": livingRoom2,\n            \"color_name\": colorName2,\n            \"brightness\": 255\n        }\n    }\n}\n\nlet sendLivingRoomLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": \"turn_on\",\n        \"target\": {\n            \"entity_id\": [\n                \"light.living_room_color_1\",\n                \"light.living_room_color_2\",\n                \"light.living_room_color_3\"\n            ]\n        },\n        \"data\": {\n            \"color_name\": colorName1,\n            \"brightness\": 255\n        }\n    }\n}\n\nlet sendTinaDeskLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": \"turn_on\",\n        \"target\": {\n            \"entity_id\": [\"light.tina_desk_lights\"]\n        },\n        \"data\": {\n            \"color_name\": colorName1,\n            \"brightness\": 255\n        }\n    }\n}\n\nlet sendDiningRoomLamp = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": [\"light.dining_room_lamp\"]\n        },\n        \"data\": {}\n    }\n}\n\nif (effectBasement === true) {\n    node.send([null,null,null,null,[sendBasementStripFX,sendBasementLights,sendBasementStrip1,sendBasementStrip2],null])\n}",
         "outputs": 6,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "const states = global.get('homeassistant.homeAssistant.states')\n// Set some constants for all of the lights\n\n// Half and half for living room LED strip\nconst halfLivingRoom1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]\nconst halfLivingRoom2 = [20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]\n\n// Quarters for living room LED strip\nconst segLivingRoom1 = [0,1,2,3,4,5,6,7,8,9]\nconst segLivingRoom2 = [10,11,12,13,14,15,16,17,18,19]\nconst segLivingRoom3 = [20,21,22,23,24,25,26,27,28,29]\nconst segLivingRoom4 = [30,31,32,33,34,35,36,37,38,39]\n\n// Preset effect segments for living room LED strip\nconst effectSegLivingRoom1 = [].concat(segLivingRoom1, segLivingRoom3)\nconst effectSegLivingRoom2 = [].concat(segLivingRoom2, segLivingRoom4)\n\n// Full strip for living room LED strip\nconst livingRoomFull = [].concat(halfLivingRoom1, halfLivingRoom2)\n\n// Half and half for basement LED strip\nconst halfBasement1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]\nconst halfBasement2 = [16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]\n\n// Quarters for basement LED strip\nconst segBasement1 = [0,1,2,3,4,5,6,7]\nconst segBasement2 = [8,9,10,11,12,13,14,15]\nconst segBasement3 = [16,17,18,19,20,21,22,23]\nconst segBasement4 = [24,25,26,27,28,29,30,31]\n\n// Preset effect segments for basement LED strip\nconst effectSegBasement1 = [].concat(segBasement1, segBasement3)\nconst effectSegBasement2 = [].concat(segBasement2, segBasement4)\n\n// Full strip for basement LED strip\nconst basementFull = [].concat(halfBasement1, halfBasement2)\n\n// Adaptive Lighting switches\nconst adaptiveFirstFloor = [\n    \"switch.adaptive_lighting_living_room\",\n    \"switch.adaptive_lighting_dining_room_lamp\",\n    \"switch.adaptive_lighting_tina_lamp\"]\n\nconst adaptiveBasement = [\n    \"switch.adaptive_lighting_basement_studio\"\n]\n\n// Room scene options\nconst scenesLivingRoom = states[\"input_select.living_room_scenes\"].attributes.options\nconst scenesBasement = states[\"input_select.basement_studio_scenes\"].attributes.options\nconst scenesTinaDesk = states[\"input_select.tina_desk_scenes\"].attributes.options\n\n// Write flow variables\nflow.set(\"halfLivingRoom1\", halfLivingRoom1, \"diskCon\")\nflow.set(\"halfLivingRoom2\", halfLivingRoom1, \"diskCon\")\n\nflow.set(\"segLivingRoom1\", segLivingRoom1, \"diskCon\")\nflow.set(\"segLivingRoom2\", segLivingRoom2, \"diskCon\")\nflow.set(\"segLivingRoom3\", segLivingRoom3, \"diskCon\")\nflow.set(\"segLivingRoom4\", segLivingRoom4, \"diskCon\")\n\nflow.set(\"effectSegLivingRoom1\", effectSegLivingRoom1, \"diskCon\")\nflow.set(\"effectSegLivingRoom2\", effectSegLivingRoom2, \"diskCon\")\n\nflow.set(\"livingRoomFull\", livingRoomFull, \"diskCon\")\n\nflow.set(\"halfBasement1\", halfBasement1, \"diskCon\")\nflow.set(\"halfBasement2\", halfBasement1, \"diskCon\")\n\nflow.set(\"segBasement1\", segBasement1, \"diskCon\")\nflow.set(\"segBasement2\", segBasement2, \"diskCon\")\nflow.set(\"segBasement3\", segBasement3, \"diskCon\")\nflow.set(\"segBasement4\", segBasement4, \"diskCon\")\n\nflow.set(\"effectSegBasement1\", effectSegBasement1, \"diskCon\")\nflow.set(\"effectSegBasement2\", effectSegBasement2, \"diskCon\")\n\nflow.set(\"basementFull\", basementFull, \"diskCon\")\n\nflow.set(\"adaptiveFirstFloor\", adaptiveFirstFloor, \"diskCon\")\nflow.set(\"adaptiveBasement\", adaptiveBasement, \"diskCon\")\n\nflow.set(\"scenesLivingRoom\", scenesLivingRoom, \"diskCon\")\nflow.set(\"scenesBasement\", scenesBasement, \"diskCon\")\nflow.set(\"scenesTinaDesk\", scenesTinaDesk, \"diskCon\")\n",
+        "initialize": "const states = global.get('homeassistant.homeAssistant.states')\n// Set some constants for all of the lights\n\n// Half and half for living room LED strip\nconst halfLivingRoom1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]\nconst halfLivingRoom2 = [20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]\n\n// Quarters for living room LED strip\nconst segLivingRoom1 = [0,1,2,3,4,5,6,7,8,9]\nconst segLivingRoom2 = [10,11,12,13,14,15,16,17,18,19]\nconst segLivingRoom3 = [20,21,22,23,24,25,26,27,28,29]\nconst segLivingRoom4 = [30,31,32,33,34,35,36,37,38,39]\n\n// Preset effect segments for living room LED strip\nconst effectSegLivingRoom1 = [].concat(segLivingRoom1, segLivingRoom3)\nconst effectSegLivingRoom2 = [].concat(segLivingRoom2, segLivingRoom4)\n\n// Full strip for living room LED strip\nconst livingRoomFull = [].concat(halfLivingRoom1, halfLivingRoom2)\n\n// Half and half for basement LED strip\nconst halfBasement1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]\nconst halfBasement2 = [16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]\n\n// Quarters for basement LED strip\nconst segBasement1 = [0,1,2,3,4,5,6,7]\nconst segBasement2 = [8,9,10,11,12,13,14,15]\nconst segBasement3 = [16,17,18,19,20,21,22,23]\nconst segBasement4 = [24,25,26,27,28,29,30,31]\n\n// Preset effect segments for basement LED strip\nconst effectSegBasement1 = [].concat(segBasement1, segBasement3)\nconst effectSegBasement2 = [].concat(segBasement2, segBasement4)\n\n// Full strip for basement LED strip\nconst basementFull = [].concat(halfBasement1, halfBasement2)\n\n// Adaptive Lighting switches\nconst adaptiveFirstFloor = [\n    \"switch.adaptive_lighting_living_room\",\n    \"switch.adaptive_lighting_dining_room_lamp\",\n    \"switch.adaptive_lighting_tina_lamp\"]\n\nconst adaptiveBasement = [\n    \"switch.adaptive_lighting_basement_studio\"\n]\n\n// Room scene options\nconst scenesLivingRoom = states[\"input_select.living_room_scenes\"].attributes.options\nconst scenesBasement = states[\"input_select.basement_studio_scenes\"].attributes.options\nconst scenesTinaDesk = states[\"input_select.tina_desk_scenes\"].attributes.options\n\n// Write flow variables\nflow.set(\"halfLivingRoom1\", halfLivingRoom1, \"diskCon\")\nflow.set(\"halfLivingRoom2\", halfLivingRoom2, \"diskCon\")\n\nflow.set(\"segLivingRoom1\", segLivingRoom1, \"diskCon\")\nflow.set(\"segLivingRoom2\", segLivingRoom2, \"diskCon\")\nflow.set(\"segLivingRoom3\", segLivingRoom3, \"diskCon\")\nflow.set(\"segLivingRoom4\", segLivingRoom4, \"diskCon\")\n\nflow.set(\"effectSegLivingRoom1\", effectSegLivingRoom1, \"diskCon\")\nflow.set(\"effectSegLivingRoom2\", effectSegLivingRoom2, \"diskCon\")\n\nflow.set(\"livingRoomFull\", livingRoomFull, \"diskCon\")\n\nflow.set(\"halfBasement1\", halfBasement1, \"diskCon\")\nflow.set(\"halfBasement2\", halfBasement2, \"diskCon\")\n\nflow.set(\"segBasement1\", segBasement1, \"diskCon\")\nflow.set(\"segBasement2\", segBasement2, \"diskCon\")\nflow.set(\"segBasement3\", segBasement3, \"diskCon\")\nflow.set(\"segBasement4\", segBasement4, \"diskCon\")\n\nflow.set(\"effectSegBasement1\", effectSegBasement1, \"diskCon\")\nflow.set(\"effectSegBasement2\", effectSegBasement2, \"diskCon\")\n\nflow.set(\"basementFull\", basementFull, \"diskCon\")\n\nflow.set(\"adaptiveFirstFloor\", adaptiveFirstFloor, \"diskCon\")\nflow.set(\"adaptiveBasement\", adaptiveBasement, \"diskCon\")\n\nflow.set(\"scenesLivingRoom\", scenesLivingRoom, \"diskCon\")\nflow.set(\"scenesBasement\", scenesBasement, \"diskCon\")\nflow.set(\"scenesTinaDesk\", scenesTinaDesk, \"diskCon\")\n",
         "finalize": "",
         "libs": [],
         "x": 430,
@@ -13863,6 +13847,7 @@
             [],
             [],
             [
+                "c6886c9ecbce28c1",
                 "4165ae582e799463"
             ],
             []
@@ -14001,6 +13986,23 @@
         "info": "If current scene is a defined scene, take note of it\n\nIf the lights are on, and another alert isn't being interrupted, create a backup scene to restore at the end\n\nDefine variable for restoration of the current scene if the backup is not needed\n\nIf the lights were off, turn them back off\n\nIf the lights were in night mode, put them back to it\n\nIf the lights were in adaptive, put them back to it\n\nIf the current scene was a defined scene, activate that scene\n\nOtherwise, restore the backup scene from above\n\nCleanup",
         "x": 500,
         "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c6886c9ecbce28c1",
+        "type": "debug",
+        "z": "ce9c810396e540b6",
+        "name": "Basement Effect",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 380,
         "wires": []
     },
     {
