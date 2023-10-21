@@ -973,7 +973,9 @@
             "51b11f9d5b8bfbb0"
         ],
         "x": 34,
-        "y": 179
+        "y": 179,
+        "w": 1292,
+        "h": 382
     },
     {
         "id": "477e752fcd2e2a19",
@@ -995,56 +997,6 @@
         "y": 39
     },
     {
-        "id": "fbbe69a14cbe0236",
-        "type": "group",
-        "z": "ffa6a885ac41a5ed",
-        "name": "Sensors",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "c2972c7728c99c43",
-            "bc09f451754ba126",
-            "fdefcd6a64aa9bca",
-            "da305ace22579c07",
-            "7ecdec08d9698a19",
-            "1b5678e80095a461",
-            "c88179f1facb8646",
-            "7af97720032b4609",
-            "08aadf619537949e",
-            "a0adec284cd8162a",
-            "46e0046a27f4bc89",
-            "a6038f6bd028bd2f",
-            "d5c7d4f4714a6cd6",
-            "d1ac8b45d7baa4ed",
-            "35847fc20196c4ce",
-            "c002b47a53a0e203",
-            "0008fb5b70ae6aea",
-            "a46a88d4fb03cceb",
-            "8d26310ed06bb045",
-            "67119024666b68bd",
-            "e235145192886939",
-            "b0fee451dea6b00c",
-            "adc20601e249dc44",
-            "ea300ecd15cbc07f",
-            "4f0c3e053e317dbc",
-            "bdd8715ce3cc4713",
-            "9b66a631492c2023",
-            "c0813ccdec033370",
-            "d681fa96683511c1",
-            "e5cc046624cd5453",
-            "7ffbdab6daa40cd9",
-            "d00db0647d1c4034",
-            "7e733e83ceaef1f9",
-            "2d43bf0d5590f6bb",
-            "febc179b34c8cf71"
-        ],
-        "x": 34,
-        "y": 39,
-        "w": 692,
-        "h": 682
-    },
-    {
         "id": "46275dd0f9461013",
         "type": "group",
         "z": "ffa6a885ac41a5ed",
@@ -1060,7 +1012,7 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 739,
+        "y": 319,
         "w": 472,
         "h": 202
     },
@@ -1405,7 +1357,7 @@
             "9833b2aff0f97ea9",
             "51d05298561cfddb"
         ],
-        "x": 754,
+        "x": 34,
         "y": 39,
         "w": 672,
         "h": 262
@@ -1425,50 +1377,9 @@
             "a8d7f5e5d4f549b0"
         ],
         "x": 34,
-        "y": 579
-    },
-    {
-        "id": "4886967d0f8c0156",
-        "type": "group",
-        "z": "ffa6a885ac41a5ed",
-        "name": "Minecraft VM Sensors",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "39ba20ccdc0d3291",
-            "be219cd63a50687b",
-            "be46f7e1c3d82b99",
-            "6ba34dc18fbc940f",
-            "41ff21a8194cd9c8",
-            "f3ed9c6c6beeaaf3",
-            "6b368cf77a061795",
-            "c947f0b38745ac21",
-            "3d1df2ce8b0b3388",
-            "82d1a3d67d7b541e",
-            "b43388fd2c52ca59",
-            "186b89f637e64299",
-            "8aace1da7153a6b4",
-            "533f7ea9ff79fc13",
-            "f09bb064e2beade2",
-            "1641a391e57e7e24",
-            "a3bf61521dbb4dba",
-            "218a23a093cc070e",
-            "c3b53f37978e8fff",
-            "24c50ae79a4c9884",
-            "9ee545081e378ada",
-            "1159bd946a485e91",
-            "e81a5055a5060326",
-            "771cc9650d25ef9e",
-            "da4ebf48cc4bd6c4",
-            "aa5f280744935821",
-            "81a2ac8ed788454e",
-            "5ba9cfc0194ef62a"
-        ],
-        "x": 754,
-        "y": 319,
-        "w": 672,
-        "h": 622
+        "y": 579,
+        "w": 732,
+        "h": 162
     },
     {
         "id": "931cc27100c9317e",
@@ -1487,7 +1398,9 @@
             "f9bc4d36a0df7947"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 672,
+        "h": 222
     },
     {
         "id": "6e83103b5c5311e9",
@@ -1505,7 +1418,9 @@
             "a75651492e779bfc"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 912,
+        "h": 142
     },
     {
         "id": "88f099618e56926d",
@@ -1587,7 +1502,9 @@
             "15f7382daddb4b3e"
         ],
         "x": 34,
-        "y": 999
+        "y": 999,
+        "w": 632,
+        "h": 82
     },
     {
         "id": "31767ffd6a647579",
@@ -1824,12 +1741,21 @@
             "af22ad5de7f824ed",
             "cb37ef0a4c6a0d4b",
             "538a80f1ef807ce5",
-            "8bc88748bdc7fec8"
+            "8bc88748bdc7fec8",
+            "ca36c535f62a938b",
+            "fe5a9d13c3acdf8a",
+            "704c78f0839b0cbf",
+            "a98df8034046bdc1",
+            "fe27369f5d336321",
+            "1812eb70af41b475",
+            "6e7294be1430b43a",
+            "60b562a91a724301",
+            "ed548a3f33ed2137"
         ],
-        "x": 34,
-        "y": 959,
+        "x": 734,
+        "y": 39,
         "w": 512,
-        "h": 382
+        "h": 562
     },
     {
         "id": "fba69dfc80829db7",
@@ -2364,417 +2290,6 @@
         ]
     },
     {
-        "id": "1d09b6c6a3773d9a",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Basement Server - CPU Temperature",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - CPU Temperature"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:thermometer"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": "temperature"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "°C"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "6cf8f103906c1a49",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Basement Server - Memory Used",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - Memory Used"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:memory"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "GB"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "9c9d7870a5204f13",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Basement Server - CPU Usage",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - CPU Usage"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "%"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "5248dc02bf48733e",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Basement Server - Uptime",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - Uptime"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:timer-outline"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "hours"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "d819e61c0895affe",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Basement Server - Memory Usage",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - Memory Usage"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:memory"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "%"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "8006b0b34776ec34",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Basement Server - Free Space Root",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - Free Space Root"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:harddisk"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "GB"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "5fa5b04e2b1b3ae2",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Basement Server - CPU Average Loads 1 min",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - CPU Average Loads 1 min"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": ""
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "6f429b0dcaa5c607",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Basement Server - CPU Average Loads 5 min",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - CPU Average Loads 5 min"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": ""
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "9f53af3ad747cd62",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Basement Server - CPU Average Loads 15 min",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - CPU Average Loads 15 min"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": ""
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "80d831ad0265a01f",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Network RX",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - Network RX"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:download-network"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "MB/s"
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "069a7ab44b04c9ef",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "1dcff2ae01d3156f",
-        "name": "sensor config for Network TX",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Basement Server - Network TX"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:upload-network"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "MB/s"
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
         "id": "0df0d4b823c241ca",
         "type": "ical-config",
         "url": "webcal://p72-caldav.icloud.com/published/2/ODM5MDk5NTE5ODM5MDk5NR0HVUW-Vl-m45F7V86TDotlk2-IoVPJ7u9SJ4CgaxkUnwXfBv2X3Td4TIRw64EwIf2-usGEsd6zG21yi63A5PY",
@@ -3071,416 +2586,6 @@
         "manufacturer": "Iron Nerd",
         "model": "",
         "swVersion": ""
-    },
-    {
-        "id": "0d6712bde7f2c2aa",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "e8c9ceddca18e396",
-        "name": "Minecraft VM - CPU Usage",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Minecraft VM - CPU Usage"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "%"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "3dd7cd5953460bf0",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "e8c9ceddca18e396",
-        "name": "Minecraft VM - Uptime",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Minecraft VM - Uptime"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:timer-outline"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "hours"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "76cd1049416dcd40",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "e8c9ceddca18e396",
-        "name": "Minecraft VM - Memory Used",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Minecraft VM - Memory Used"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:memory"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "GB"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "cb79060b1357cc09",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "e8c9ceddca18e396",
-        "name": "Minecraft VM - Memory Usage",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Minecraft VM - Memory Usage"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:memory"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "%"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "c8f428ea43d3c0c7",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "e8c9ceddca18e396",
-        "name": "Minecraft VM - Free Space Root",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Minecraft VM - Free Space Root"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:harddisk"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "GB"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "resend": false,
-        "debugEnabled": false
-    },
-    {
-        "id": "a3a6fbcbe94daddf",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "e8c9ceddca18e396",
-        "name": "Minecraft VM - CPU Average Loads 1 min",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Minecraft VM - CPU Average Loads 1 min"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": ""
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "704b90ceb496c18d",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "e8c9ceddca18e396",
-        "name": "Minecraft VM - CPU Average Loads 5 min",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Minecraft VM - CPU Average Loads 5 min"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": ""
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "61ba199207e4396e",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "e8c9ceddca18e396",
-        "name": "Minecraft VM - CPU Average Loads 15 min",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Minecraft VM - CPU Average Loads 15 min"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:speedometer"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": ""
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "63218fa218b9ed68",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "e8c9ceddca18e396",
-        "name": "Minecraft VM - Network RX",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Minecraft VM - Network RX"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:download-network"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "MB/s"
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
-    },
-    {
-        "id": "c8bb405fd48982d7",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "e8c9ceddca18e396",
-        "name": "Minecraft VM - Network TX",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Minecraft VM - Network TX"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:upload-network"
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "MB/s"
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": true,
-        "debugEnabled": false
     },
     {
         "id": "d7208904f97a76d6",
@@ -4530,6 +3635,129 @@
             {
                 "property": "name",
                 "value": "Mosquitto Sent 15min"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:database"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "messages"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "3a3de00eeef75917",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "21461835f9233213",
+        "name": "Mosquitto Dropped 1min",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Mosquitto Dropped 1min"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:database"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "messages"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "01b4bc2b7f492cac",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "21461835f9233213",
+        "name": "Mosquitto Dropped 5min",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Mosquitto Dropped 5min"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:database"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "messages"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "58b262f448b7831a",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "21461835f9233213",
+        "name": "Mosquitto Dropped 15min",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Mosquitto Dropped 15min"
             },
             {
                 "property": "icon",
@@ -25196,264 +24424,6 @@
         "icon": "node-red-contrib-cpu/cpu.png"
     },
     {
-        "id": "c2972c7728c99c43",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Conversions",
-        "func": "msg.payload = (msg.payload / 1024000000)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 255,
-        "y": 200,
-        "wires": [
-            [
-                "bc09f451754ba126"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "bc09f451754ba126",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 315,
-        "y": 200,
-        "wires": [
-            [
-                "adc20601e249dc44"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "fdefcd6a64aa9bca",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "CPU Temp",
-        "topic": "glances/basement-server/sensors/Package_id_0/value",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 120,
-        "y": 80,
-        "wires": [
-            [
-                "b0fee451dea6b00c"
-            ]
-        ]
-    },
-    {
-        "id": "da305ace22579c07",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Memory Used",
-        "topic": "glances/basement-server/mem/used",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 130,
-        "y": 200,
-        "wires": [
-            [
-                "c2972c7728c99c43"
-            ]
-        ]
-    },
-    {
-        "id": "7ecdec08d9698a19",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "CPU Usage",
-        "topic": "glances/basement-server/cpu/total",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 130,
-        "y": 140,
-        "wires": [
-            [
-                "ea300ecd15cbc07f"
-            ]
-        ]
-    },
-    {
-        "id": "1b5678e80095a461",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Uptime",
-        "topic": "glances/basement-server/uptime/seconds",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 110,
-        "y": 320,
-        "wires": [
-            [
-                "c88179f1facb8646"
-            ]
-        ]
-    },
-    {
-        "id": "c88179f1facb8646",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Conversions",
-        "func": "msg.payload = (msg.payload / 60) / 60\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 215,
-        "y": 320,
-        "wires": [
-            [
-                "7af97720032b4609"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "7af97720032b4609",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 275,
-        "y": 320,
-        "wires": [
-            [
-                "4f0c3e053e317dbc"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "08aadf619537949e",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Memory Usage",
-        "topic": "glances/basement-server/mem/percent",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 140,
-        "y": 260,
-        "wires": [
-            [
-                "bdd8715ce3cc4713"
-            ]
-        ]
-    },
-    {
-        "id": "a0adec284cd8162a",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Free Space - /",
-        "topic": "glances/basement-server/fs/_/free",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 130,
-        "y": 380,
-        "wires": [
-            [
-                "46e0046a27f4bc89"
-            ]
-        ]
-    },
-    {
-        "id": "46e0046a27f4bc89",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Conversions",
-        "func": "msg.payload = (msg.payload / 1024000000)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 255,
-        "y": 380,
-        "wires": [
-            [
-                "a6038f6bd028bd2f"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "a6038f6bd028bd2f",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 315,
-        "y": 380,
-        "wires": [
-            [
-                "9b66a631492c2023"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "b109c8db1c2cd259",
         "type": "ha-button",
         "z": "ffa6a885ac41a5ed",
@@ -25472,7 +24442,7 @@
             }
         ],
         "x": 150,
-        "y": 780,
+        "y": 360,
         "wires": [
             [
                 "75a50e8dac7af692"
@@ -25500,204 +24470,10 @@
         "outputProperties": [],
         "queue": "none",
         "x": 380,
-        "y": 780,
+        "y": 360,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "d5c7d4f4714a6cd6",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "CPU Load - 1 min",
-        "topic": "glances/basement-server/load/min1",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 150,
-        "y": 440,
-        "wires": [
-            [
-                "7e733e83ceaef1f9"
-            ]
-        ]
-    },
-    {
-        "id": "d1ac8b45d7baa4ed",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "CPU Load - 5 min",
-        "topic": "glances/basement-server/load/min5",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 150,
-        "y": 500,
-        "wires": [
-            [
-                "2d43bf0d5590f6bb"
-            ]
-        ]
-    },
-    {
-        "id": "35847fc20196c4ce",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "CPU Load - 15 min",
-        "topic": "glances/basement-server/load/min15",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 150,
-        "y": 560,
-        "wires": [
-            [
-                "febc179b34c8cf71"
-            ]
-        ]
-    },
-    {
-        "id": "c002b47a53a0e203",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Network RX",
-        "topic": "glances/basement-server/network/enp4s0/rx",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 130,
-        "y": 620,
-        "wires": [
-            [
-                "a46a88d4fb03cceb"
-            ]
-        ]
-    },
-    {
-        "id": "0008fb5b70ae6aea",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Network TX",
-        "topic": "glances/basement-server/network/enp4s0/tx",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 130,
-        "y": 680,
-        "wires": [
-            [
-                "67119024666b68bd"
-            ]
-        ]
-    },
-    {
-        "id": "a46a88d4fb03cceb",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Conversions",
-        "func": "msg.payload = msg.payload / 1000000\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 255,
-        "y": 620,
-        "wires": [
-            [
-                "8d26310ed06bb045"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "8d26310ed06bb045",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 315,
-        "y": 620,
-        "wires": [
-            [
-                "7ffbdab6daa40cd9"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "67119024666b68bd",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Conversions",
-        "func": "msg.payload = msg.payload / 1000000\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 255,
-        "y": 680,
-        "wires": [
-            [
-                "e235145192886939"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "e235145192886939",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 315,
-        "y": 680,
-        "wires": [
-            [
-                "d00db0647d1c4034"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "baae5d6f53900594",
@@ -25730,7 +24506,7 @@
             }
         ],
         "x": 120,
-        "y": 840,
+        "y": 420,
         "wires": [
             [
                 "619d1474239faf58"
@@ -25749,217 +24525,8 @@
             "596e7ae95bf50ffd"
         ],
         "x": 235,
-        "y": 840,
+        "y": 420,
         "wires": []
-    },
-    {
-        "id": "b0fee451dea6b00c",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - CPU Temperature",
-        "entityConfig": "1d09b6c6a3773d9a",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 370,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "adc20601e249dc44",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - Memory Used",
-        "entityConfig": "6cf8f103906c1a49",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 520,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ea300ecd15cbc07f",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - CPU Usage",
-        "entityConfig": "9c9d7870a5204f13",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 370,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4f0c3e053e317dbc",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - Uptime",
-        "entityConfig": "5248dc02bf48733e",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 440,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bdd8715ce3cc4713",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - Memory Usage",
-        "entityConfig": "d819e61c0895affe",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 400,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9b66a631492c2023",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - Free Space Root",
-        "entityConfig": "8006b0b34776ec34",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 510,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c0813ccdec033370",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - CPU Average Loads 1 min",
-        "entityConfig": "5fa5b04e2b1b3ae2",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 520,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d681fa96683511c1",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - CPU Average Loads 5 min",
-        "entityConfig": "6f429b0dcaa5c607",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 520,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e5cc046624cd5453",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Basement Server - CPU Average Loads 15 min",
-        "entityConfig": "9f53af3ad747cd62",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 520,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7ffbdab6daa40cd9",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Network RX",
-        "entityConfig": "80d831ad0265a01f",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 430,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d00db0647d1c4034",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Network TX",
-        "entityConfig": "069a7ab44b04c9ef",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 430,
-        "y": 680,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "ce8a6bb6e9460f13",
@@ -25995,7 +24562,7 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 870,
+        "x": 150,
         "y": 80,
         "wires": [
             [
@@ -26018,7 +24585,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 1190,
+        "x": 470,
         "y": 80,
         "wires": []
     },
@@ -26056,7 +24623,7 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 880,
+        "x": 160,
         "y": 140,
         "wires": [
             [
@@ -26079,7 +24646,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 1190,
+        "x": 470,
         "y": 140,
         "wires": []
     },
@@ -26117,7 +24684,7 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 890,
+        "x": 170,
         "y": 260,
         "wires": [
             [
@@ -26140,7 +24707,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 1200,
+        "x": 480,
         "y": 260,
         "wires": []
     },
@@ -26178,7 +24745,7 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 870,
+        "x": 150,
         "y": 200,
         "wires": [
             [
@@ -26201,7 +24768,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fd29421fc00140a8",
-        "x": 1220,
+        "x": 500,
         "y": 200,
         "wires": []
     },
@@ -26228,653 +24795,12 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 900,
+        "y": 480,
         "wires": [
             [
                 "619d1474239faf58"
             ]
         ]
-    },
-    {
-        "id": "7e733e83ceaef1f9",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 285,
-        "y": 440,
-        "wires": [
-            [
-                "c0813ccdec033370"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "2d43bf0d5590f6bb",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 285,
-        "y": 500,
-        "wires": [
-            [
-                "d681fa96683511c1"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "febc179b34c8cf71",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "fbbe69a14cbe0236",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 285,
-        "y": 560,
-        "wires": [
-            [
-                "e5cc046624cd5453"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "39ba20ccdc0d3291",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "CPU Usage",
-        "topic": "glances/minecraft/cpu/total",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 850,
-        "y": 360,
-        "wires": [
-            [
-                "be219cd63a50687b"
-            ]
-        ]
-    },
-    {
-        "id": "be219cd63a50687b",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Minecraft VM - CPU Usage",
-        "entityConfig": "0d6712bde7f2c2aa",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1080,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "be46f7e1c3d82b99",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Uptime",
-        "topic": "glances/minecraft/uptime/seconds",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 830,
-        "y": 420,
-        "wires": [
-            [
-                "6ba34dc18fbc940f"
-            ]
-        ]
-    },
-    {
-        "id": "6ba34dc18fbc940f",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Conversions",
-        "func": "var readout = (msg.payload / 60) / 60\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 935,
-        "y": 420,
-        "wires": [
-            [
-                "41ff21a8194cd9c8"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "41ff21a8194cd9c8",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Minecraft VM - Uptime",
-        "entityConfig": "3dd7cd5953460bf0",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1100,
-        "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f3ed9c6c6beeaaf3",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Conversions",
-        "func": "var readout = (msg.payload / 1024000000)\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 975,
-        "y": 480,
-        "wires": [
-            [
-                "218a23a093cc070e"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "6b368cf77a061795",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Memory Used",
-        "topic": "glances/minecraft/mem/used",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 850,
-        "y": 480,
-        "wires": [
-            [
-                "f3ed9c6c6beeaaf3"
-            ]
-        ]
-    },
-    {
-        "id": "c947f0b38745ac21",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Memory Usage",
-        "topic": "glances/minecraft/mem/percent",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 860,
-        "y": 540,
-        "wires": [
-            [
-                "c3b53f37978e8fff"
-            ]
-        ]
-    },
-    {
-        "id": "3d1df2ce8b0b3388",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Free Space - /",
-        "topic": "glances/minecraft/fs/_/free",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 850,
-        "y": 600,
-        "wires": [
-            [
-                "82d1a3d67d7b541e"
-            ]
-        ]
-    },
-    {
-        "id": "82d1a3d67d7b541e",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Conversions",
-        "func": "var readout = (msg.payload / 1024000000)\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 975,
-        "y": 600,
-        "wires": [
-            [
-                "24c50ae79a4c9884"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "b43388fd2c52ca59",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "CPU Load - 1 min",
-        "topic": "glances/minecraft/load/min1",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 870,
-        "y": 660,
-        "wires": [
-            [
-                "aa5f280744935821"
-            ]
-        ]
-    },
-    {
-        "id": "186b89f637e64299",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "CPU Load - 5 min",
-        "topic": "glances/minecraft/load/min5",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 870,
-        "y": 720,
-        "wires": [
-            [
-                "81a2ac8ed788454e"
-            ]
-        ]
-    },
-    {
-        "id": "8aace1da7153a6b4",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "CPU Load - 15 min",
-        "topic": "glances/minecraft/load/min15",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 870,
-        "y": 780,
-        "wires": [
-            [
-                "5ba9cfc0194ef62a"
-            ]
-        ]
-    },
-    {
-        "id": "533f7ea9ff79fc13",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Network RX",
-        "topic": "glances/minecraft/network/ens18/rx",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 850,
-        "y": 840,
-        "wires": [
-            [
-                "1641a391e57e7e24"
-            ]
-        ]
-    },
-    {
-        "id": "f09bb064e2beade2",
-        "type": "mqtt in",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Network TX",
-        "topic": "glances/minecraft/network/ens18/tx",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "fd29421fc00140a8",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 850,
-        "y": 900,
-        "wires": [
-            [
-                "a3bf61521dbb4dba"
-            ]
-        ]
-    },
-    {
-        "id": "1641a391e57e7e24",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Conversions",
-        "func": "var readout = msg.payload / 1000000\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 975,
-        "y": 840,
-        "wires": [
-            [
-                "771cc9650d25ef9e"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "a3bf61521dbb4dba",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Conversions",
-        "func": "var readout = msg.payload / 1000000\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 975,
-        "y": 900,
-        "wires": [
-            [
-                "da4ebf48cc4bd6c4"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "218a23a093cc070e",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Minecraft VM - Memory Used",
-        "entityConfig": "76cd1049416dcd40",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1140,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c3b53f37978e8fff",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Minecraft VM - Memory Usage",
-        "entityConfig": "cb79060b1357cc09",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1110,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "24c50ae79a4c9884",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Minecraft VM - Free Space Root",
-        "entityConfig": "c8f428ea43d3c0c7",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1170,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9ee545081e378ada",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Minecraft VM - CPU Average Loads 1 min",
-        "entityConfig": "a3a6fbcbe94daddf",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1220,
-        "y": 660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1159bd946a485e91",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Minecraft VM - CPU Average Loads 5 min",
-        "entityConfig": "704b90ceb496c18d",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1220,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e81a5055a5060326",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Minecraft VM - CPU Average Loads 15 min",
-        "entityConfig": "61ba199207e4396e",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1230,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "771cc9650d25ef9e",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Minecraft VM - Network RX",
-        "entityConfig": "63218fa218b9ed68",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1160,
-        "y": 840,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "da4ebf48cc4bd6c4",
-        "type": "ha-sensor",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Minecraft VM - Network TX",
-        "entityConfig": "c8bb405fd48982d7",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1140,
-        "y": 900,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "aa5f280744935821",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1005,
-        "y": 660,
-        "wires": [
-            [
-                "9ee545081e378ada"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "81a2ac8ed788454e",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1005,
-        "y": 720,
-        "wires": [
-            [
-                "1159bd946a485e91"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "5ba9cfc0194ef62a",
-        "type": "function",
-        "z": "ffa6a885ac41a5ed",
-        "g": "4886967d0f8c0156",
-        "name": "Rounding",
-        "func": "var readout = msg.payload\n\nmsg.payload = +readout.toFixed(2)\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1005,
-        "y": 780,
-        "wires": [
-            [
-                "e81a5055a5060326"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "939abd584ee8580a",
@@ -26890,8 +24816,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 140,
-        "y": 1000,
+        "x": 840,
+        "y": 80,
         "wires": [
             [
                 "6b17d7fa4de2b620"
@@ -26911,8 +24837,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 285,
-        "y": 1000,
+        "x": 985,
+        "y": 80,
         "wires": [
             [
                 "e2a8c8b2638be79f"
@@ -26933,8 +24859,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 440,
-        "y": 1000,
+        "x": 1140,
+        "y": 80,
         "wires": [
             []
         ]
@@ -26953,8 +24879,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 140,
-        "y": 1060,
+        "x": 840,
+        "y": 140,
         "wires": [
             [
                 "8357b66291d6f498"
@@ -26974,8 +24900,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 285,
-        "y": 1060,
+        "x": 985,
+        "y": 140,
         "wires": [
             [
                 "76eb43f2c84142f8"
@@ -26996,8 +24922,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 440,
-        "y": 1060,
+        "x": 1140,
+        "y": 140,
         "wires": [
             []
         ]
@@ -27016,8 +24942,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 140,
-        "y": 1120,
+        "x": 840,
+        "y": 200,
         "wires": [
             [
                 "b2a69c7d24c170ad"
@@ -27037,8 +24963,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 285,
-        "y": 1120,
+        "x": 985,
+        "y": 200,
         "wires": [
             [
                 "0f107a6c4d46cdc8"
@@ -27059,8 +24985,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 440,
-        "y": 1120,
+        "x": 1140,
+        "y": 200,
         "wires": [
             []
         ]
@@ -27079,8 +25005,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 120,
-        "y": 1180,
+        "x": 820,
+        "y": 260,
         "wires": [
             [
                 "ef26acc3d75b5b93"
@@ -27100,8 +25026,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 285,
-        "y": 1180,
+        "x": 985,
+        "y": 260,
         "wires": [
             [
                 "d790797e62163c2b"
@@ -27122,8 +25048,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 420,
-        "y": 1180,
+        "x": 1120,
+        "y": 260,
         "wires": [
             []
         ]
@@ -27142,8 +25068,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 120,
-        "y": 1240,
+        "x": 820,
+        "y": 320,
         "wires": [
             [
                 "396cee5f3aa5255f"
@@ -27163,8 +25089,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 285,
-        "y": 1240,
+        "x": 985,
+        "y": 320,
         "wires": [
             [
                 "af22ad5de7f824ed"
@@ -27185,8 +25111,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 420,
-        "y": 1240,
+        "x": 1120,
+        "y": 320,
         "wires": [
             []
         ]
@@ -27205,8 +25131,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 130,
-        "y": 1300,
+        "x": 830,
+        "y": 380,
         "wires": [
             [
                 "538a80f1ef807ce5"
@@ -27226,8 +25152,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 285,
-        "y": 1300,
+        "x": 985,
+        "y": 380,
         "wires": [
             [
                 "8bc88748bdc7fec8"
@@ -27248,8 +25174,197 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 430,
-        "y": 1300,
+        "x": 1130,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca36c535f62a938b",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Dropped 1min",
+        "topic": "$SYS/broker/load/publish/dropped/1min",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 830,
+        "y": 440,
+        "wires": [
+            [
+                "fe5a9d13c3acdf8a"
+            ]
+        ]
+    },
+    {
+        "id": "fe5a9d13c3acdf8a",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "function 10",
+        "func": "let payload = msg.payload\n\nmsg.payload = Math.round(payload)\n\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 985,
+        "y": 440,
+        "wires": [
+            [
+                "704c78f0839b0cbf"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "704c78f0839b0cbf",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Dropped 1min",
+        "entityConfig": "3a3de00eeef75917",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1140,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a98df8034046bdc1",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Dropped 5min",
+        "topic": "$SYS/broker/load/publish/dropped/5min",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 830,
+        "y": 500,
+        "wires": [
+            [
+                "fe27369f5d336321"
+            ]
+        ]
+    },
+    {
+        "id": "fe27369f5d336321",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "function 11",
+        "func": "let payload = msg.payload\n\nmsg.payload = Math.round(payload)\n\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 985,
+        "y": 500,
+        "wires": [
+            [
+                "1812eb70af41b475"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "1812eb70af41b475",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Dropped 5min",
+        "entityConfig": "01b4bc2b7f492cac",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1140,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e7294be1430b43a",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Dropped 15min",
+        "topic": "$SYS/broker/load/publish/dropped/15min",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 840,
+        "y": 560,
+        "wires": [
+            [
+                "60b562a91a724301"
+            ]
+        ]
+    },
+    {
+        "id": "60b562a91a724301",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "function 12",
+        "func": "let payload = msg.payload\n\nmsg.payload = Math.round(payload)\n\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 985,
+        "y": 560,
+        "wires": [
+            [
+                "ed548a3f33ed2137"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "ed548a3f33ed2137",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Dropped 15min",
+        "entityConfig": "58b262f448b7831a",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1140,
+        "y": 560,
         "wires": [
             []
         ]
