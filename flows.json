@@ -1750,12 +1750,21 @@
             "1812eb70af41b475",
             "6e7294be1430b43a",
             "60b562a91a724301",
-            "ed548a3f33ed2137"
+            "ed548a3f33ed2137",
+            "9df778270aff32c7",
+            "5f6468dc8b022b6b",
+            "5486cc70a2a83cd0",
+            "c95f5ac879cfef5d",
+            "ccebc1def6a944d9",
+            "a675ad54d1ec36fa",
+            "0723c20ffd541ca7",
+            "6596ad2f0c91a78c",
+            "bb4ca3d4e66d87a5"
         ],
         "x": 734,
         "y": 39,
         "w": 512,
-        "h": 562
+        "h": 802
     },
     {
         "id": "fba69dfc80829db7",
@@ -2351,15 +2360,6 @@
         "swVersion": ""
     },
     {
-        "id": "1dcff2ae01d3156f",
-        "type": "ha-device-config",
-        "name": "Basement Server",
-        "hwVersion": "",
-        "manufacturer": "Iron Nerd",
-        "model": "",
-        "swVersion": ""
-    },
-    {
         "id": "23e5e32354cf867a",
         "type": "ha-entity-config",
         "server": "9e87348d.9c1c48",
@@ -2577,15 +2577,6 @@
         ],
         "resend": false,
         "debugEnabled": false
-    },
-    {
-        "id": "e8c9ceddca18e396",
-        "type": "ha-device-config",
-        "name": "Minecraft VM",
-        "hwVersion": "",
-        "manufacturer": "Iron Nerd",
-        "model": "",
-        "swVersion": ""
     },
     {
         "id": "d7208904f97a76d6",
@@ -3758,6 +3749,170 @@
             {
                 "property": "name",
                 "value": "Mosquitto Dropped 15min"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:database"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "messages"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "63b391b64c920d72",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "21461835f9233213",
+        "name": "Mosquitto Uptime",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Mosquitto Uptime"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:database"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "seconds"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "06c585be926ee13b",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "21461835f9233213",
+        "name": "Mosquitto Messages Received",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Mosquitto Messages Received"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:database"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "messages"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "20642905379cffe9",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "21461835f9233213",
+        "name": "Mosquitto Messages Sent",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Mosquitto Messages Sent"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:database"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "messages"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "3e54ec9fa6f987bc",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "21461835f9233213",
+        "name": "Mosquitto Messages Stored",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Mosquitto Messages Stored"
             },
             {
                 "property": "icon",
@@ -25367,6 +25522,192 @@
         "y": 560,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "9df778270aff32c7",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Uptime",
+        "topic": "$SYS/broker/uptime",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 810,
+        "y": 620,
+        "wires": [
+            [
+                "5486cc70a2a83cd0"
+            ]
+        ]
+    },
+    {
+        "id": "5f6468dc8b022b6b",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Uptime",
+        "entityConfig": "63b391b64c920d72",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1120,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5486cc70a2a83cd0",
+        "type": "function",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Formatting",
+        "func": "const payload = msg.payload\nconst numbersOnly = payload.replace(/\\D/g, \"\")\n\nmsg.payload = numbersOnly\n\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 985,
+        "y": 620,
+        "wires": [
+            [
+                "5f6468dc8b022b6b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "c95f5ac879cfef5d",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Msg Received",
+        "topic": "$SYS/broker/messages/received",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 830,
+        "y": 740,
+        "wires": [
+            [
+                "ccebc1def6a944d9"
+            ]
+        ]
+    },
+    {
+        "id": "ccebc1def6a944d9",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Msg Received",
+        "entityConfig": "06c585be926ee13b",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1140,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a675ad54d1ec36fa",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Msg Sent",
+        "topic": "$SYS/broker/messages/sent",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 820,
+        "y": 800,
+        "wires": [
+            [
+                "0723c20ffd541ca7"
+            ]
+        ]
+    },
+    {
+        "id": "0723c20ffd541ca7",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Msg Sent",
+        "entityConfig": "20642905379cffe9",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1120,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6596ad2f0c91a78c",
+        "type": "ha-sensor",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Msg Stored",
+        "entityConfig": "3e54ec9fa6f987bc",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1130,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb4ca3d4e66d87a5",
+        "type": "mqtt in",
+        "z": "ffa6a885ac41a5ed",
+        "g": "23b02b1256dfd302",
+        "name": "Msg Stored",
+        "topic": "$SYS/broker/messages/stored",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "fd29421fc00140a8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 830,
+        "y": 680,
+        "wires": [
+            [
+                "6596ad2f0c91a78c"
+            ]
         ]
     },
     {
