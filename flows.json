@@ -1071,7 +1071,9 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1032,
+        "h": 322
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1233,7 +1235,9 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 619
+        "y": 579,
+        "w": 992,
+        "h": 202
     },
     {
         "id": "f519aff597ece351",
@@ -12768,7 +12772,7 @@
             "572b2040be874f4e"
         ],
         "x": 75,
-        "y": 800,
+        "y": 680,
         "wires": [
             [
                 "11aabd786c07244f"
@@ -12816,7 +12820,7 @@
             }
         ],
         "x": 130,
-        "y": 680,
+        "y": 620,
         "wires": [
             [
                 "0c7ef72bd0ef47d4"
@@ -12848,10 +12852,11 @@
             }
         ],
         "x": 130,
-        "y": 860,
+        "y": 740,
         "wires": [
             [
-                "11aabd786c07244f"
+                "11aabd786c07244f",
+                "ea5306d6f92d9550"
             ]
         ]
     },
@@ -12859,6 +12864,7 @@
         "id": "b3bb08ff51e46985",
         "type": "api-call-service",
         "z": "47f17992fab9b4f5",
+        "d": true,
         "g": "550e5b2d99316b12",
         "name": "Alexa Actionable Notification",
         "server": "9e87348d.9c1c48",
@@ -12875,8 +12881,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 640,
-        "y": 740,
+        "x": 880,
+        "y": 620,
         "wires": [
             []
         ]
@@ -12900,11 +12906,11 @@
         "allowrate": false,
         "outputs": 1,
         "x": 255,
-        "y": 680,
+        "y": 620,
         "wires": [
             [
-                "61cb79c998ee0b59",
-                "2516c6e3146cc851"
+                "2516c6e3146cc851",
+                "ea5306d6f92d9550"
             ]
         ],
         "l": false
@@ -12917,12 +12923,13 @@
         "name": "user conversion",
         "func": "var userTrigger = msg.payload.context.user_id\n\nif (userTrigger === \"c3909d27048140729f002aaef0391775\") {\n    msg.user = \"tony\"\n} else if (userTrigger === \"f387a983651a4321a7411ff8cf36f949\") {\n    msg.user = \"tina\"\n} else if (userTrigger === \"879b4c04e32841b3ad1d2763a11b4e70\") {\n    msg.user = \"kallen\"\n}\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 255,
-        "y": 800,
+        "x": 275,
+        "y": 740,
         "wires": [
             [
                 "73078f818abdc6c2"
@@ -12950,12 +12957,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 680,
-        "y": 860,
+        "x": 700,
+        "y": 740,
         "wires": [
-            [
-                "ea5306d6f92d9550"
-            ]
+            []
         ]
     },
     {
@@ -12978,8 +12983,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 910,
-        "y": 740,
+        "x": 390,
+        "y": 680,
         "wires": [
             [
                 "4829663e9913e2aa"
@@ -13008,8 +13013,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1070,
-        "y": 740,
+        "x": 550,
+        "y": 680,
         "wires": [
             []
         ]
@@ -13018,6 +13023,7 @@
         "id": "61cb79c998ee0b59",
         "type": "change",
         "z": "47f17992fab9b4f5",
+        "d": true,
         "g": "550e5b2d99316b12",
         "name": "Last Alexa",
         "rules": [
@@ -13034,8 +13040,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 410,
-        "y": 740,
+        "x": 650,
+        "y": 620,
         "wires": [
             [
                 "b3bb08ff51e46985"
@@ -13074,14 +13080,11 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 430,
-        "y": 800,
+        "y": 740,
         "wires": [
+            [],
             [
-                "ea5306d6f92d9550"
-            ],
-            [
-                "795c53ad6642733a",
-                "ea5306d6f92d9550"
+                "795c53ad6642733a"
             ]
         ]
     },
@@ -13089,6 +13092,7 @@
         "id": "2516c6e3146cc851",
         "type": "api-current-state",
         "z": "47f17992fab9b4f5",
+        "d": true,
         "g": "550e5b2d99316b12",
         "name": "Kallen's Computer On?",
         "server": "9e87348d.9c1c48",
@@ -13117,14 +13121,11 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 430,
-        "y": 660,
+        "y": 620,
         "wires": [
+            [],
             [
-                "ea5306d6f92d9550"
-            ],
-            [
-                "61cb79c998ee0b59",
-                "ea5306d6f92d9550"
+                "61cb79c998ee0b59"
             ]
         ]
     },
