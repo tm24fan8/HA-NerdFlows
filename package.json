@@ -3,17 +3,18 @@
     "description": "Version control for my Node-RED flows",
     "version": "1.0.0",
     "dependencies": {
-        "node-red-contrib-alexa-home-skill": "0.1.19",
         "node-red-contrib-alexa-remote2-applestrudel": "5.0.20",
         "node-red-contrib-discord-advanced": "3.3.3",
         "node-red-contrib-googlehome": "0.0.15",
         "node-red-contrib-home-assistant-websocket": "0.44.0",
-        "node-red-contrib-huemagic": "4.2.2",
         "node-red-contrib-lifx-api": "1.2.1",
         "node-red-contrib-stoptimer": "0.0.7",
         "node-red-node-suncalc": "1.0.1",
         "node-red-node-wol": "0.2.0",
-        "node-red-contrib-ical-events": "2.2.1"
+        "node-red-contrib-ical-events": "2.2.1",
+        "node-red-contrib-color-convert": "0.0.8",
+        "node-red-contrib-github-plus": "0.3.1",
+        "node-red-contrib-moment": "5.0.0"
     },
     "node-red": {
         "settings": {
