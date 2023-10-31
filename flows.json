@@ -14460,6 +14460,126 @@
         "wires": []
     },
     {
+        "id": "f7ef93404ff2600c",
+        "type": "lifx-list-lights",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "api": "60eb53fb94cd64e4",
+        "selector": "",
+        "x": 1240,
+        "y": 300,
+        "wires": [
+            [
+                "d2f9555e50d1b963"
+            ]
+        ]
+    },
+    {
+        "id": "cd96785b83e0ad44",
+        "type": "inject",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1060,
+        "y": 300,
+        "wires": [
+            [
+                "f7ef93404ff2600c"
+            ]
+        ]
+    },
+    {
+        "id": "d2f9555e50d1b963",
+        "type": "debug",
+        "z": "ce9c810396e540b6",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7bbd82db3b5927de",
+        "type": "lifx-pulse-effect",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "api": "60eb53fb94cd64e4",
+        "selector": "label:Living Room LED Strip",
+        "color": "blue",
+        "from_color": "",
+        "period": "0.5",
+        "cycles": "30",
+        "persist": "false",
+        "power_on": "true",
+        "x": 1330,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ef50126e2954a217",
+        "type": "lifx-toggle-power",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "api": "60eb53fb94cd64e4",
+        "selector": "label:Living Room LED Strip",
+        "x": 1340,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "72a3eedd9685b958",
+        "type": "inject",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1120,
+        "y": 380,
+        "wires": [
+            [
+                "7bbd82db3b5927de"
+            ]
+        ]
+    },
+    {
+        "id": "c2fb67de9c2db0df",
+        "type": "comment",
+        "z": "ce9c810396e540b6",
+        "name": "Link in body of this comment",
+        "info": "[Break arrays into chunks](https://medium.com/@drdDavi/split-a-javascript-array-into-chunks-d90c90de3a2d)",
+        "x": 1300,
+        "y": 500,
+        "wires": []
+    },
+    {
         "id": "7611921cadb91b1e",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
