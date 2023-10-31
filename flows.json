@@ -14460,63 +14460,6 @@
         "wires": []
     },
     {
-        "id": "f7ef93404ff2600c",
-        "type": "lifx-list-lights",
-        "z": "ce9c810396e540b6",
-        "name": "",
-        "api": "60eb53fb94cd64e4",
-        "selector": "",
-        "x": 1240,
-        "y": 300,
-        "wires": [
-            [
-                "d2f9555e50d1b963"
-            ]
-        ]
-    },
-    {
-        "id": "cd96785b83e0ad44",
-        "type": "inject",
-        "z": "ce9c810396e540b6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1060,
-        "y": 300,
-        "wires": [
-            [
-                "f7ef93404ff2600c"
-            ]
-        ]
-    },
-    {
-        "id": "d2f9555e50d1b963",
-        "type": "debug",
-        "z": "ce9c810396e540b6",
-        "name": "debug 32",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1440,
-        "y": 300,
-        "wires": []
-    },
-    {
         "id": "7bbd82db3b5927de",
         "type": "lifx-pulse-effect",
         "z": "ce9c810396e540b6",
@@ -14578,6 +14521,219 @@
         "x": 1300,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "b3de67c0fc15a402",
+        "type": "lifx-list-lights",
+        "z": "ce9c810396e540b6",
+        "name": "Living Room",
+        "api": "60eb53fb94cd64e4",
+        "selector": "id:d073d574e9b8",
+        "x": 1250,
+        "y": 240,
+        "wires": [
+            [
+                "7e05547bcfafea02"
+            ]
+        ]
+    },
+    {
+        "id": "119c5c39959e3c65",
+        "type": "inject",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1070,
+        "y": 240,
+        "wires": [
+            [
+                "b3de67c0fc15a402"
+            ]
+        ]
+    },
+    {
+        "id": "cc0177d8684890ca",
+        "type": "lifx-list-lights",
+        "z": "ce9c810396e540b6",
+        "name": "Basement LED Strip",
+        "api": "60eb53fb94cd64e4",
+        "selector": "id:d073d5442e01",
+        "x": 1280,
+        "y": 180,
+        "wires": [
+            [
+                "0c8b98ce87062a9c"
+            ]
+        ]
+    },
+    {
+        "id": "5d323c7b70c443de",
+        "type": "inject",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1070,
+        "y": 180,
+        "wires": [
+            [
+                "cc0177d8684890ca"
+            ]
+        ]
+    },
+    {
+        "id": "9dabb44e1bd45e70",
+        "type": "debug",
+        "z": "ce9c810396e540b6",
+        "name": "debug 33",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "0573ee00ca026634",
+        "type": "debug",
+        "z": "ce9c810396e540b6",
+        "name": "debug 34",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0c8b98ce87062a9c",
+        "type": "change",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(diskCon)::stripBasement",
+                "pt": "flow",
+                "to": "payload.0",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1520,
+        "y": 180,
+        "wires": [
+            [
+                "0573ee00ca026634"
+            ]
+        ]
+    },
+    {
+        "id": "7e05547bcfafea02",
+        "type": "change",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(diskCon)::stripLivingRoom",
+                "pt": "flow",
+                "to": "payload.0",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 240,
+        "wires": [
+            [
+                "9dabb44e1bd45e70"
+            ]
+        ]
+    },
+    {
+        "id": "eaf7e8b208231240",
+        "type": "inject",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "stripBasement.zones.zones",
+        "payloadType": "flow",
+        "x": 1250,
+        "y": 120,
+        "wires": [
+            [
+                "62bc40993ec68f2f"
+            ]
+        ]
+    },
+    {
+        "id": "62bc40993ec68f2f",
+        "type": "function",
+        "z": "ce9c810396e540b6",
+        "name": "Split zones",
+        "func": "const zones = msg.payload\nconst divide = zones.length / 4\nconst chunkSize = divide\nconst chunks = []\nconst zoneID = []\n\n// for (let i = 0; i < zones.length; i += 1) {\n//     const zoneID = zones.i.zone\n//     zoneID.push(zoneID)\n// }\n\nfor (let i = 0; i < zones.length; i += chunkSize) {\n    const chunk = zones.slice(i, i + chunkSize)\n    chunks.push(chunk)\n}\n\nmsg.payload = chunks\nmsg.zone = zoneID\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 120,
+        "wires": [
+            [
+                "0573ee00ca026634"
+            ]
+        ]
     },
     {
         "id": "7611921cadb91b1e",
