@@ -8346,7 +8346,9 @@
         "service": "increment",
         "areaId": [],
         "deviceId": [],
-        "entityId": [],
+        "entityId": [
+            "input_number.{{whichdoor}}_door_opened_today"
+        ],
         "data": "",
         "dataType": "jsonata",
         "mergeContext": "",
@@ -9985,7 +9987,9 @@
         "service": "select_option",
         "areaId": [],
         "deviceId": [],
-        "entityId": [],
+        "entityId": [
+            "input_select.downstairs_bathroom_scenes"
+        ],
         "data": "{\t    \"option\":\"Adaptive\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
