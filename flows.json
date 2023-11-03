@@ -1071,9 +1071,7 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239,
-        "w": 1032,
-        "h": 322
+        "y": 239
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1210,7 +1208,9 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759
+        "y": 759,
+        "w": 612,
+        "h": 202
     },
     {
         "id": "550e5b2d99316b12",
@@ -1235,9 +1235,7 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 579,
-        "w": 992,
-        "h": 202
+        "y": 579
     },
     {
         "id": "f519aff597ece351",
@@ -1522,8 +1520,10 @@
             "e23e7b080ee3773f",
             "1e1059008d19c0ee"
         ],
-        "x": 0,
-        "y": 0
+        "x": 14,
+        "y": 399,
+        "w": 1532,
+        "h": 282
     },
     {
         "id": "1cc8b382530c33d0",
@@ -8346,9 +8346,7 @@
         "service": "increment",
         "areaId": [],
         "deviceId": [],
-        "entityId": [
-            "input_number.{{whichdoor}}_door_opened_today"
-        ],
+        "entityId": [],
         "data": "",
         "dataType": "jsonata",
         "mergeContext": "",
@@ -8987,64 +8985,6 @@
         ],
         "x": 1060,
         "y": 160,
-        "wires": [
-            [
-                "5f8b61ddc9963e99"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "Open",
-            ""
-        ]
-    },
-    {
-        "id": "e7a73ec2ec0f9018",
-        "type": "server-state-changed",
-        "z": "3abb5ae57afb4761",
-        "name": "Downstairs Bathroom Door",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.downstairs_bathroom_door",
-        "entityIdType": "exact",
-        "outputInitially": false,
-        "stateType": "str",
-        "ifState": "on",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": true,
-        "ignorePrevStateUnavailable": true,
-        "ignoreCurrentStateUnknown": true,
-        "ignoreCurrentStateUnavailable": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "detect",
-                "propertyType": "msg",
-                "value": "door",
-                "valueType": "str"
-            },
-            {
-                "property": "whichdoor",
-                "propertyType": "msg",
-                "value": "downstairs_bathroom",
-                "valueType": "str"
-            }
-        ],
-        "x": 1090,
-        "y": 220,
         "wires": [
             [
                 "5f8b61ddc9963e99"
@@ -9879,6 +9819,7 @@
         "name": "Delay",
         "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar duration = states['input_number.downstairs_bathroom_lights_off_delay'].state\nvar newDuration = duration * 60\n\nmsg.duration = newDuration\n\nnode.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'});\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -9981,12 +9922,12 @@
         "type": "server-state-changed",
         "z": "eff21041cc941fef",
         "g": "8aee4d340a136bac",
-        "name": "Door Sensor",
+        "name": "Motion Sensor",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.downstairs_bathroom_door",
+        "entityId": "binary_sensor.downstairs_bathroom_sensor_motion",
         "entityIdType": "exact",
         "outputInitially": false,
         "stateType": "str",
@@ -10012,7 +9953,7 @@
             {
                 "property": "detect",
                 "propertyType": "msg",
-                "value": "door",
+                "value": "motion",
                 "valueType": "str"
             }
         ],
@@ -10044,9 +9985,7 @@
         "service": "select_option",
         "areaId": [],
         "deviceId": [],
-        "entityId": [
-            "input_select.downstairs_bathroom_scenes"
-        ],
+        "entityId": [],
         "data": "{\t    \"option\":\"Adaptive\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
