@@ -9929,7 +9929,7 @@
         "version": 5,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.downstairs_bathroom_sensor_motion",
+        "entityId": "binary_sensor.downstairs_bathroom_motion",
         "entityIdType": "exact",
         "outputInitially": false,
         "stateType": "str",
