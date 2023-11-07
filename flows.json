@@ -1209,7 +1209,7 @@
         ],
         "x": 34,
         "y": 759,
-        "w": 612,
+        "w": 792,
         "h": 202
     },
     {
@@ -3928,6 +3928,39 @@
             }
         ],
         "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "2bdf556c5a30e5d5",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "Downstairs Bathroom Motion Lighting",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Downstairs Bathroom Motion Lighting"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:motion-sensor"
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
         "debugEnabled": false
     },
     {
@@ -9819,16 +9852,19 @@
         "z": "eff21041cc941fef",
         "g": "8aee4d340a136bac",
         "name": "Delay",
-        "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar duration = states['input_number.downstairs_bathroom_lights_off_delay'].state\nvar newDuration = duration * 60\n\nmsg.duration = newDuration\n\nnode.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'});\n\nreturn msg;",
-        "outputs": 1,
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst lights = states['light.downstairs_bathroom_lights'].state\nconst duration = states['input_number.downstairs_bathroom_lights_off_delay'].state\nconst lux = states['sensor.downstairs_bathroom_illuminance'].state\nconst threshold = states['input_number.downstairs_bathroom_lux_threshold'].state\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nif (payload === 'on') {\n    if (lux <= threshold) {\n        node.status({fill:'green',shape:'dot',text:'Lights On'})\n        node.send([msg,null])\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Too bright'})\n    }\n} else if (payload === 'off') {\n    if (lights === 'on') {\n        msg.duration = newDuration\n        node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n        node.send([null,msg])\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n    }\n}",
+        "outputs": 2,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 290,
         "y": 860,
         "wires": [
+            [
+                "b281061a4b08d2eb"
+            ],
             [
                 "b7d94cd0e420c650"
             ]
@@ -9885,7 +9921,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 550,
+        "x": 730,
         "y": 800,
         "wires": [
             []
@@ -9927,13 +9963,13 @@
         "name": "Motion Sensor",
         "server": "9e87348d.9c1c48",
         "version": 5,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
+        "outputs": 1,
+        "exposeAsEntityConfig": "2bdf556c5a30e5d5",
         "entityId": "binary_sensor.downstairs_bathroom_motion",
         "entityIdType": "exact",
         "outputInitially": false,
         "stateType": "str",
-        "ifState": "on",
+        "ifState": "",
         "ifStateType": "str",
         "ifStateOperator": "is",
         "outputOnlyOnStateChange": true,
@@ -9962,9 +9998,6 @@
         "x": 130,
         "y": 860,
         "wires": [
-            [
-                "b281061a4b08d2eb"
-            ],
             [
                 "f84e6b5157e857cf"
             ]
@@ -9996,7 +10029,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 320,
+        "x": 540,
         "y": 800,
         "wires": [
             [
