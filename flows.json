@@ -1208,9 +1208,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 34,
-        "y": 759,
-        "w": 792,
-        "h": 202
+        "y": 759
     },
     {
         "id": "550e5b2d99316b12",
@@ -1521,9 +1519,7 @@
             "1e1059008d19c0ee"
         ],
         "x": 14,
-        "y": 399,
-        "w": 1532,
-        "h": 282
+        "y": 399
     },
     {
         "id": "1cc8b382530c33d0",
@@ -18932,7 +18928,7 @@
         "halt_if": "disarmed",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "alarm_control_panel.stratton_ave_alarm",
+        "entity_id": "alarm_control_panel.nerdhome_alarm_panel",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -19311,7 +19307,7 @@
         "halt_if": "armed_home",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "alarm_control_panel.stratton_ave_alarm",
+        "entity_id": "alarm_control_panel.nerdhome_alarm_panel",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
