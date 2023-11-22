@@ -834,9 +834,7 @@
             "d0cbe3d9ed984771"
         ],
         "x": 74,
-        "y": 339,
-        "w": 1852,
-        "h": 522
+        "y": 339
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -872,9 +870,7 @@
             "ec4682a111a48b70"
         ],
         "x": 14,
-        "y": 839,
-        "w": 1552,
-        "h": 402
+        "y": 839
     },
     {
         "id": "e065b1ed4938b477",
@@ -933,9 +929,7 @@
             "6bbf7df2c43c481e"
         ],
         "x": 14,
-        "y": 11.5,
-        "w": 1252,
-        "h": 809.5
+        "y": 11.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -1045,10 +1039,13 @@
             "6110b45c374a5b7f",
             "e5af55b177f37c65",
             "27b2c22907382e6d",
-            "f111c40459e27629"
+            "f111c40459e27629",
+            "33903d3f8f53dadd"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1272,
+        "h": 502
     },
     {
         "id": "208284848b13b85b",
@@ -1555,7 +1552,9 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1192,
+        "h": 502
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -1571,7 +1570,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 752,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1613,8 +1614,10 @@
             "b497fe229c8f2eea",
             "f47a0d107875d550"
         ],
-        "x": 0,
-        "y": 0
+        "x": 34,
+        "y": 139,
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "395da9d5d5f7e232",
@@ -13808,7 +13811,6 @@
         "id": "7611921cadb91b1e",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Lamp Off",
         "server": "9e87348d.9c1c48",
@@ -13839,7 +13841,6 @@
         "id": "3a29cecbefa6cbe2",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Reset Living Room",
         "server": "9e87348d.9c1c48",
@@ -13870,7 +13871,6 @@
         "id": "4a2031f363418db1",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Set Scene",
         "server": "9e87348d.9c1c48",
@@ -13899,7 +13899,6 @@
         "id": "984386fa0a6369d6",
         "type": "server-state-changed",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Living Room TV Current App",
         "server": "9e87348d.9c1c48",
@@ -13908,7 +13907,7 @@
         "exposeAsEntityConfig": "",
         "entityId": "sensor.living_room_tv_current_app",
         "entityIdType": "exact",
-        "outputInitially": false,
+        "outputInitially": true,
         "stateType": "str",
         "ifState": "",
         "ifStateType": "str",
@@ -13928,6 +13927,12 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
+            },
+            {
+                "property": "toggle",
+                "propertyType": "msg",
+                "value": "appmode",
+                "valueType": "str"
             }
         ],
         "x": 180,
@@ -13942,11 +13947,11 @@
         "id": "0beae13503166379",
         "type": "function",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
-        "func": "const appList = global.get(\"appListLivingRoom\", \"diskCon\")\nvar states = global.get('homeassistant.homeAssistant.states')\nvar lampState = states['light.dining_room_lamp'].state\nvar app = msg.payload\nvar payload = {}\n\nif (appList.includes(app)) {\n    flow.set(\"lampState\", lampState)\n    payload = \"start\"\n} else {\n    payload = \"stop\"\n}\n\nmsg.payload = payload\n\nglobal.set('tvAppLivingRoom',app)\n\nif (payload === 'start') {\n    node.status({fill:\"green\",shape:\"dot\",text:app});\n    return[msg,null]\n} else if (payload === 'stop') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Stopped\"});\n    return[null,msg]\n}",
+        "func": "const appList = global.get(\"appListLivingRoom\", \"diskCon\")\nvar states = global.get('homeassistant.homeAssistant.states')\nvar lampState = states['light.dining_room_lamp'].state\nvar app = msg.payload\nvar toggle = msg.toggle\nvar payload = {}\n\nif (toggle === 'appmode' || toggle === 'on') {\n    if (appList.includes(app)) {\n        flow.set(\"lampState\", lampState)\n        payload = \"start\"\n    } else {\n        payload = \"stop\"\n    }\n} else if (toggle === 'off') {\n    payload = \"stop\"\n}\n\nmsg.payload = payload\n\nglobal.set('tvAppLivingRoom',app)\n\nif (payload === 'start') {\n    node.status({fill:\"green\",shape:\"dot\",text:app});\n    return[msg,null]\n} else if (payload === 'stop') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Stopped\"});\n    return[null,msg]\n}",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -13971,7 +13976,6 @@
         "id": "6c77ade442a47a30",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Entertainment Mode On",
         "server": "9e87348d.9c1c48",
@@ -14000,7 +14004,6 @@
         "id": "6392f2f0586d988a",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Entertainment Mode Off",
         "server": "9e87348d.9c1c48",
@@ -14029,7 +14032,6 @@
         "id": "e505e9f24bf919dd",
         "type": "server-state-changed",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Entertainment Mode State",
         "server": "9e87348d.9c1c48",
@@ -14081,7 +14083,6 @@
         "id": "9efd5346a1ca1972",
         "type": "server-state-changed",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Detect Pause",
         "server": "9e87348d.9c1c48",
@@ -14128,7 +14129,6 @@
         "id": "8b53b9f4d5ba0bf0",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Dynamic On",
         "server": "9e87348d.9c1c48",
@@ -14160,7 +14160,6 @@
         "id": "cc8f6ab710549be2",
         "type": "stoptimer",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "duration": "15",
         "units": "Second",
@@ -14180,7 +14179,6 @@
         "id": "346379575efad516",
         "type": "function",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
         "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar active = states['input_boolean.living_room_entertainment_mode'].state\nvar currentApp = global.get('tvAppLivingRoom');\nvar lights = states['light.living_room_lights'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar lamp = flow.get(\"lampState\")\nvar alert = msg.alert\nvar payload = msg.payload\n\nif (currentApp === 'YouTube' || currentApp === 'Jellyfin') {\n    var hueScene = 'Tokyo'\n    var lifxScene = 'intense'\n} else if (currentApp === 'Twitch') {\n    var hueScene = 'Twitch'\n    var lifxScene = 'party'\n} else if (currentApp === 'Hulu') {\n    var hueScene = 'Forest Adventure'\n    var lifxScene = 'relaxing'\n} else if (currentApp === 'Netflix') {\n    var hueScene = 'Netflix'\n    var lifxScene = 'love'\n} else if (currentApp === 'MLB') {\n    var hueScene = 'MLB'\n    var lifxScene = 'independence'\n}\n\nmsg.huescene = hueScene\nmsg.lifxscene = lifxScene\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'on') {\n        if (selectedScene != hueScene) {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On\"});\n            return[msg,null,null]\n        } else if (alert === 'on' && active === 'on') {\n            node.status({fill:\"green\",shape:\"dot\",text:\"On (Alert Resume)\"});\n            return[msg,null,null]\n        } else if (selectedScene === hueScene) {\n            node.status({fill:\"yellow\",shape:\"ring\",text:\"Scene already set\"});\n            return null\n        }\n    } else if (payload === 'off') {\n        if (lamp === 'on') {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,msg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Off\"});\n            return[null,msg,null]\n        }\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Blocked\"});\n    return null\n}",
@@ -14213,7 +14211,6 @@
         "id": "8b0b39deb5142557",
         "type": "function",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Processing",
         "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar allowed = states['input_boolean.living_room_entertainment_control'].state\nvar lights = states['light.living_room_lights'].state\nvar active = states['input_boolean.living_room_entertainment_mode'].state\nvar selectedScene = states['input_text.living_room_selected_scene'].state\nvar payload = msg.payload\nvar stopMsg = {\n    \"payload\":\"stop\"\n}\nvar resumeMsg = {\n    \"payload\":\"on\"\n}\n\nif (allowed === 'on' && lights === 'on') {\n    if (payload === 'paused') {\n        node.status({fill:\"blue\",shape:\"dot\",text:\"Paused\"});\n        return [null,msg,null]\n    } else if (payload === 'playing') {\n        if (allowed === 'on' && lights === 'on' && active === 'on') {\n            node.status({ fill: \"green\", shape: \"dot\", text: \"Playing\" });\n            return[resumeMsg,null,stopMsg]\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n            return[null,null,stopMsg]\n        }\n    } else {\n        node.status({fill:\"grey\",shape:\"dot\",text:\"Timer Stopped\"});\n        return[null,null,stopMsg]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
@@ -14246,7 +14243,6 @@
         "id": "7cb8056b3b41a9e8",
         "type": "function",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Check",
         "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar active = states['input_boolean.living_room_entertainment_mode'].state\nvar lights = states['light.living_room_lights'].state\nvar lamp = flow.get('lampState')\n\nif (active === 'on' && lights === 'on') {\n    if (lamp === 'on') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sent (Both)\"});\n        return[msg,msg]\n    } else {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sent (Living Room)\"});\n        return[msg,null]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"});\n    return null\n}",
@@ -14275,7 +14271,6 @@
         "id": "d2390789a8b3101a",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "LIFX",
         "server": "9e87348d.9c1c48",
@@ -14304,7 +14299,6 @@
         "id": "d961ffeaea408909",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "LIFX Stop",
         "server": "9e87348d.9c1c48",
@@ -14333,7 +14327,6 @@
         "id": "107f2c88924975fe",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Adaptive Off",
         "server": "9e87348d.9c1c48",
@@ -14365,7 +14358,6 @@
         "id": "ed2e0f4f214ad76c",
         "type": "delay",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "",
         "pauseType": "delay",
@@ -14393,7 +14385,6 @@
         "id": "d09061428e9c694d",
         "type": "api-call-service",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Turn On Lamp",
         "server": "9e87348d.9c1c48",
@@ -14422,11 +14413,11 @@
         "id": "6110b45c374a5b7f",
         "type": "function",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Settings",
         "func": "const appListLivingRoom = [\"YouTube\", \"Netflix\", \"MLB\", \"Jellyfin\", \"Twitch\", \"Hulu\"]\n\nglobal.set(\"appListLivingRoom\", appListLivingRoom, \"diskCon\");\n\nnode.status({fill:\"green\",shape:\"dot\",text:\"Updated\"});",
         "outputs": 0,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -14439,7 +14430,6 @@
         "id": "e5af55b177f37c65",
         "type": "inject",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Update",
         "props": [
@@ -14532,7 +14522,7 @@
         "exposeAsEntityConfig": "",
         "entityId": "sensor.basement_tv_current_app",
         "entityIdType": "exact",
-        "outputInitially": false,
+        "outputInitially": true,
         "stateType": "str",
         "ifState": "",
         "ifStateType": "str",
@@ -15062,7 +15052,6 @@
         "id": "27b2c22907382e6d",
         "type": "link in",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Media Scenes Input - Living Room",
         "links": [
@@ -15081,7 +15070,6 @@
         "id": "f111c40459e27629",
         "type": "comment",
         "z": "b0286fae9f2ce547",
-        "d": true,
         "g": "ff6d8150e8d5e606",
         "name": "Figure out why alerts aren't resetting to media scenes properly",
         "info": "",
@@ -15104,6 +15092,54 @@
         "wires": [
             [
                 "cb285727507f50da"
+            ]
+        ]
+    },
+    {
+        "id": "33903d3f8f53dadd",
+        "type": "server-state-changed",
+        "z": "b0286fae9f2ce547",
+        "g": "ff6d8150e8d5e606",
+        "name": "Media Scenes Toggle",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entityId": "input_boolean.living_room_entertainment_control",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "tvAppLivingRoom",
+                "valueType": "global"
+            },
+            {
+                "property": "toggle",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "0beae13503166379"
             ]
         ]
     },
@@ -22615,13 +22651,13 @@
         "z": "ebd5561c4f077718",
         "g": "b9ffa3fa5af46ec3",
         "name": "",
-        "filename": "/config/files/weather_briefing_full.txt",
+        "filename": "/homeassistant/files/weather_briefing_full.txt",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 560,
+        "x": 590,
         "y": 80,
         "wires": [
             []
