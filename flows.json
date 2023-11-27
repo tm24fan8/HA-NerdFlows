@@ -870,7 +870,9 @@
             "ec4682a111a48b70"
         ],
         "x": 14,
-        "y": 839
+        "y": 839,
+        "w": 1552,
+        "h": 402
     },
     {
         "id": "e065b1ed4938b477",
@@ -929,7 +931,9 @@
             "6bbf7df2c43c481e"
         ],
         "x": 14,
-        "y": 11.5
+        "y": 11.5,
+        "w": 1252,
+        "h": 809.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -1262,7 +1266,9 @@
             "3463c4f2bf6388fe"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 852,
+        "h": 682
     },
     {
         "id": "26f91eb2ef77450d",
@@ -1286,7 +1292,9 @@
             "0be3c318e9e6df0a"
         ],
         "x": 64,
-        "y": 759
+        "y": 759,
+        "w": 1022,
+        "h": 162
     },
     {
         "id": "a46fc8e7e70ca893",
@@ -16541,7 +16549,7 @@
         "repeat": "300",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "60",
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -16563,8 +16571,8 @@
         "scope": [
             "a10629857d60f774",
             "ce5d8005cbf08144",
-            "73c2d06e9114a0f6",
-            "5def5d2440e767b3"
+            "5def5d2440e767b3",
+            "73c2d06e9114a0f6"
         ],
         "uncaught": false,
         "x": 990,
@@ -16606,8 +16614,8 @@
         "ignorePrevStateNull": false,
         "ignorePrevStateUnknown": false,
         "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
         "outputProperties": [
             {
                 "property": "payload",
