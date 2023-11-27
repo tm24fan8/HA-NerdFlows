@@ -1044,9 +1044,7 @@
             "f463df7e17e045e9"
         ],
         "x": 34,
-        "y": 19,
-        "w": 1272,
-        "h": 502
+        "y": 19
     },
     {
         "id": "208284848b13b85b",
@@ -1553,9 +1551,7 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539,
-        "w": 1192,
-        "h": 502
+        "y": 539
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -1639,6 +1635,8 @@
         ],
         "x": 34,
         "y": 719,
+        "w": 732,
+        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1680,7 +1678,9 @@
             "44b7eabdec8197a3"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 752,
+        "h": 682
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -3362,26 +3362,6 @@
             {
                 "property": "icon",
                 "value": "mdi:test-tube"
-            }
-        ],
-        "resend": false
-    },
-    {
-        "id": "ecbe040f269f316f",
-        "type": "ha-entity-config",
-        "server": "9e87348d.9c1c48",
-        "deviceConfig": "",
-        "name": "exposed as for Adaptive Lighting Manual Control",
-        "version": 6,
-        "entityType": "switch",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Adaptive Lighting Diagnostics"
-            },
-            {
-                "property": "icon",
-                "value": "mdi:skull-crossbones"
             }
         ],
         "resend": false
@@ -28382,23 +28362,6 @@
         "wires": []
     },
     {
-        "id": "16d93fd5efd5fec3",
-        "type": "file",
-        "z": "d49b385d8b582b20",
-        "name": "Write to adaptive_lighting.txt",
-        "filename": "/config/files/adaptive_lighting.txt",
-        "filenameType": "str",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 1240,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "c92edf73327c1a2a",
         "type": "server-events",
         "z": "d49b385d8b582b20",
@@ -28429,39 +28392,6 @@
         "wires": [
             [
                 "59892c31142ac295"
-            ]
-        ]
-    },
-    {
-        "id": "e47b689f01ed0c9b",
-        "type": "server-events",
-        "z": "d49b385d8b582b20",
-        "name": "Adaptive Lighting Manual Control",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "exposeAsEntityConfig": "ecbe040f269f316f",
-        "eventType": "adaptive_lighting.manual_control",
-        "eventData": "",
-        "waitForRunning": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "$outputData(\"eventData\").event_type",
-                "valueType": "jsonata"
-            }
-        ],
-        "x": 950,
-        "y": 320,
-        "wires": [
-            [
-                "16d93fd5efd5fec3"
             ]
         ]
     },
