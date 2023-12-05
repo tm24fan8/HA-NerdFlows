@@ -834,7 +834,9 @@
             "d0cbe3d9ed984771"
         ],
         "x": 74,
-        "y": 339
+        "y": 339,
+        "w": 1852,
+        "h": 522
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -870,7 +872,9 @@
             "ec4682a111a48b70"
         ],
         "x": 14,
-        "y": 839
+        "y": 839,
+        "w": 1552,
+        "h": 402
     },
     {
         "id": "e065b1ed4938b477",
@@ -929,7 +933,9 @@
             "6bbf7df2c43c481e"
         ],
         "x": 14,
-        "y": 11.5
+        "y": 11.5,
+        "w": 1252,
+        "h": 809.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -11598,7 +11604,7 @@
         "y": 560,
         "wires": [
             [
-                "1d03ecbe4448d224"
+                "da70285e80c3f195"
             ]
         ]
     },
@@ -11638,17 +11644,18 @@
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
         "name": "Math",
-        "func": "msg.duration = msg.duration * 60\n\nnode.status({fill:\"green\",shape:\"dot\",text:msg.duration + \"s\"});\n\nreturn msg;",
+        "func": "msg.duration = msg.duration * 60\n\nnode.status({fill:\"green\",shape:\"dot\",text:msg.duration + \"s\"})\nnode.log(\"Upstairs Bathroom Timer started\")\n\nreturn msg",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 595,
+        "x": 835,
         "y": 560,
         "wires": [
             [
-                "da70285e80c3f195"
+                "463689442b9d2046"
             ]
         ],
         "l": false
@@ -11740,11 +11747,11 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 740,
+        "x": 680,
         "y": 560,
         "wires": [
             [
-                "463689442b9d2046"
+                "1d03ecbe4448d224"
             ],
             []
         ],
@@ -11839,7 +11846,7 @@
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
         "name": "Timer Finished",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst showerMode = states['input_boolean.shower_mode'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\n\nlet scene = {}\nlet late = {}\n\nif (nightMode === 'on' || (earlyNightMode === 'on' && masterBedroomSleep === 'on')) {\n    late = true\n    scene = 'Single Nightlight'\n} else {\n    late = false\n    scene = 'Nightlight'\n}\n\nif (showerMode === 'off') {\n    if (earlyNightMode === 'off') {\n        node.send([null,null,msg])\n        node.status({fill:'green',shape:'dot',text:'Lights Off'})\n    } else {\n        msg.option = scene\n        node.send([null,msg,null])\n        if (late === true && kallenOvernight === 'on') {\n            node.send([msg,null,null])\n        }\n        node.status({fill:'green',shape:'dot',text:'Scene set to ' + scene})\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Blocked'})\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst showerMode = states['input_boolean.shower_mode'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\n\nlet scene = {}\nlet late = {}\n\nif (nightMode === 'on' || (earlyNightMode === 'on' && masterBedroomSleep === 'on')) {\n    late = true\n    scene = 'Single Nightlight'\n} else {\n    late = false\n    scene = 'Nightlight'\n}\n\nif (showerMode === 'off') {\n    if (earlyNightMode === 'off') {\n        node.send([null,null,msg])\n        node.status({fill:'green',shape:'dot',text:'Lights Off'})\n    } else {\n        msg.option = scene\n        node.send([null,msg,null])\n        if (late === true && kallenOvernight === 'on') {\n            node.send([msg,null,null])\n        }\n        node.status({fill:'green',shape:'dot',text:'Scene set to ' + scene})\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Blocked'})\n}\n\nnode.log(\"----- Upstairs Bathroom Timer Parameters Start -----\")\nnode.log(\"Upstairs Bathroom showerMode: \" + showerMode)\nnode.log(\"Upstairs Bathroom earlyNightMode: \" + showerMode)\nnode.log(\"Upstairs Bathroom kallenOvernight: \" + kallenOvernight)\nnode.log(\"Upstairs Bathroom nightMode: \" + nightMode)\nnode.log(\"Upstairs Bathroom masterBedroomSleep: \" + masterBedroomSleep)\nnode.log(\"Upstairs Bathroom scene: \" + scene)\nnode.log(\"Upstairs Bathroom late: \" + late)\nnode.log(\"----- Upstairs Bathroom Timer Parameters End -----\")",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
