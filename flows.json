@@ -870,9 +870,7 @@
             "ec4682a111a48b70"
         ],
         "x": 14,
-        "y": 839,
-        "w": 1552,
-        "h": 402
+        "y": 839
     },
     {
         "id": "e065b1ed4938b477",
@@ -931,9 +929,7 @@
             "6bbf7df2c43c481e"
         ],
         "x": 14,
-        "y": 11.5,
-        "w": 1252,
-        "h": 809.5
+        "y": 11.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -24174,7 +24170,7 @@
         "id": "dcf595a3aeb025a4",
         "type": "api-call-service",
         "z": "789ba711dc04fad2",
-        "name": "Turn on boolean",
+        "name": "Turn on booleans",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -24183,6 +24179,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
+            "input_boolean.gaming_mode",
             "input_boolean.studio_quiet"
         ],
         "data": "",
@@ -24191,7 +24188,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 600,
+        "x": 610,
         "y": 200,
         "wires": [
             []
@@ -24404,6 +24401,7 @@
         "name": "Processing",
         "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar vacationMode = states['input_boolean.vacation_mode'].state\nvar peoplePresent = states['binary_sensor.people_present'].state\nvar streamLive = msg.payload\n\nif (vacationMode === 'off' && peoplePresent === 'on') {\n    if (streamLive === 'streaming') {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Stream Live\"});\n        return[msg,null]\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Stream Offline\"});\n        return[null,msg]\n    }\n} else {\n    node.status({fill:\"grey\",shape:\"dot\",text:\"Skipped\"});\n    return null\n}",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
