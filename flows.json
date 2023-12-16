@@ -878,7 +878,9 @@
             "ec4682a111a48b70"
         ],
         "x": 14,
-        "y": 839
+        "y": 839,
+        "w": 1552,
+        "h": 402
     },
     {
         "id": "e065b1ed4938b477",
@@ -937,7 +939,9 @@
             "6bbf7df2c43c481e"
         ],
         "x": 14,
-        "y": 11.5
+        "y": 11.5,
+        "w": 1252,
+        "h": 809.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -1575,7 +1579,9 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 752,
+        "h": 82
     },
     {
         "id": "4329e464360d0afa",
@@ -1618,7 +1624,9 @@
             "f47a0d107875d550"
         ],
         "x": 34,
-        "y": 139
+        "y": 139,
+        "w": 1592,
+        "h": 422
     },
     {
         "id": "395da9d5d5f7e232",
@@ -1643,6 +1651,8 @@
         ],
         "x": 34,
         "y": 719,
+        "w": 732,
+        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1684,7 +1694,9 @@
             "44b7eabdec8197a3"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 752,
+        "h": 682
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -3965,6 +3977,38 @@
             }
         ],
         "resend": false
+    },
+    {
+        "id": "edae070429e71608",
+        "type": "node-lifx-server",
+        "name": "Lifx Server",
+        "address": "",
+        "broadcast": "",
+        "lights": "",
+        "interval": "10000"
+    },
+    {
+        "id": "24bb3fbd.11e11",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 5,
+        "addon": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": 30,
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": "at: ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "h23",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": true
     },
     {
         "id": "afead614fabc01bb",
@@ -13881,6 +13925,7 @@
         "id": "67ba32adb7d35161",
         "type": "server-events",
         "z": "ce9c810396e540b6",
+        "d": true,
         "name": "LightFX Listener",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -14465,7 +14510,7 @@
         "z": "ce9c810396e540b6",
         "name": "",
         "api": "60eb53fb94cd64e4",
-        "selector": "label:Living Room LED Strip",
+        "selector": "label:Basement LED Strip 1",
         "color": "blue",
         "from_color": "",
         "period": "0.5",
@@ -14732,6 +14777,172 @@
         "wires": [
             [
                 "0573ee00ca026634"
+            ]
+        ]
+    },
+    {
+        "id": "55a87d29eaa3926b",
+        "type": "server-events",
+        "z": "ce9c810396e540b6",
+        "name": "LightFX Listener",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "exposeAsEntityConfig": "86feef66681d907f",
+        "eventType": "lightfx",
+        "eventData": "",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "event_type": "",
+        "x": 200,
+        "y": 1080,
+        "wires": [
+            [
+                "113ff14de3833337",
+                "c1d473c27b166443",
+                "16a9861296c67569"
+            ]
+        ]
+    },
+    {
+        "id": "113ff14de3833337",
+        "type": "debug",
+        "z": "ce9c810396e540b6",
+        "name": "Custom Event",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "c1d473c27b166443",
+        "type": "switch",
+        "z": "ce9c810396e540b6",
+        "name": "Basement",
+        "property": "payload.event.basement",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "16a9861296c67569",
+        "type": "switch",
+        "z": "ce9c810396e540b6",
+        "name": "First Floor",
+        "property": "payload.event.first_floor",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d86b9d530b79bf24",
+        "type": "node-lifx-out",
+        "z": "ce9c810396e540b6",
+        "server": "edae070429e71608",
+        "name": "",
+        "lightID": "d073d5442e01",
+        "x": 820,
+        "y": 960,
+        "wires": [
+            [
+                "d26457a0aa90c4f7"
+            ]
+        ]
+    },
+    {
+        "id": "6cab75631f15beec",
+        "type": "node-lifx-in",
+        "z": "ce9c810396e540b6",
+        "server": "edae070429e71608",
+        "name": "",
+        "lightID": "d073d5442e01",
+        "x": 1340,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "d26457a0aa90c4f7",
+        "type": "debug",
+        "z": "ce9c810396e540b6",
+        "name": "debug 35",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "d7321febc50680f7",
+        "type": "inject",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"isTransient\":true,\"color\":{\"hue\":40,\"saturation\":65535,\"brightness\":65535},\"period\":600,\"cycles\":5,\"skewRatio\":0,\"waveform\":\"SINE\"}",
+        "payloadType": "json",
+        "x": 1170,
+        "y": 1020,
+        "wires": [
+            [
+                "6cab75631f15beec"
             ]
         ]
     },
@@ -29461,5 +29672,240 @@
                 "f9e1aec6c25f6480"
             ]
         ]
+    },
+    {
+        "id": "18e0b69d9cb6c6c3",
+        "type": "switch",
+        "z": "d49b385d8b582b20",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1830,
+        "y": 640,
+        "wires": [
+            [
+                "49634f0e147b0309"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "84e55c4e0426c93b",
+        "type": "stoptimer",
+        "z": "d49b385d8b582b20",
+        "duration": "5",
+        "units": "Second",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "",
+        "x": 1600,
+        "y": 560,
+        "wires": [
+            [
+                "9b1293bd69c9aad7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9b1293bd69c9aad7",
+        "type": "api-current-state",
+        "z": "d49b385d8b582b20",
+        "name": "",
+        "server": "24bb3fbd.11e11",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.sonoff_a44000b1ea",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1650,
+        "y": 460,
+        "wires": [
+            [
+                "18e0b69d9cb6c6c3"
+            ]
+        ]
+    },
+    {
+        "id": "bf2ce7f008ad4e32",
+        "type": "api-call-service",
+        "z": "d49b385d8b582b20",
+        "name": "Red",
+        "server": "24bb3fbd.11e11",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [
+            "bedroom"
+        ],
+        "deviceId": [
+            "f160baab0002f2533a0294b3abd93c0f"
+        ],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1430,
+        "y": 560,
+        "wires": [
+            [
+                "84e55c4e0426c93b"
+            ]
+        ]
+    },
+    {
+        "id": "d722fbc128aa18e2",
+        "type": "stoptimer",
+        "z": "d49b385d8b582b20",
+        "duration": "5",
+        "units": "Second",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "",
+        "x": 1260,
+        "y": 560,
+        "wires": [
+            [
+                "bf2ce7f008ad4e32"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "49634f0e147b0309",
+        "type": "api-call-service",
+        "z": "d49b385d8b582b20",
+        "name": "Red",
+        "server": "24bb3fbd.11e11",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.bedroom_lamp_color"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1090,
+        "y": 560,
+        "wires": [
+            [
+                "d722fbc128aa18e2"
+            ]
+        ]
+    },
+    {
+        "id": "6efbaac0d6a27a69",
+        "type": "server-state-changed",
+        "z": "d49b385d8b582b20",
+        "name": "Door Open?",
+        "server": "24bb3fbd.11e11",
+        "version": 5,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "binary_sensor.sonoff_a44000b1ea",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "off",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 890,
+        "y": 560,
+        "wires": [
+            [
+                "49634f0e147b0309"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f1847a8299e5701f",
+        "type": "comment",
+        "z": "d49b385d8b582b20",
+        "name": "From this reddit comment",
+        "info": "[Comment is here](https://www.reddit.com/r/nodered/comments/srfplo/home_assistant_with_nodered_automation_how_to/hwtjnho/)",
+        "x": 1110,
+        "y": 640,
+        "wires": []
     }
 ]
