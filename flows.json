@@ -1579,9 +1579,7 @@
             "6b5d3e550ad76528"
         ],
         "x": 34,
-        "y": 39,
-        "w": 752,
-        "h": 82
+        "y": 39
     },
     {
         "id": "4329e464360d0afa",
@@ -1624,9 +1622,7 @@
             "f47a0d107875d550"
         ],
         "x": 34,
-        "y": 139,
-        "w": 1592,
-        "h": 422
+        "y": 139
     },
     {
         "id": "395da9d5d5f7e232",
@@ -1651,8 +1647,6 @@
         ],
         "x": 34,
         "y": 719,
-        "w": 732,
-        "h": 282,
         "info": "https://stackoverflow.com/a/74399359"
     },
     {
@@ -1694,9 +1688,7 @@
             "44b7eabdec8197a3"
         ],
         "x": 34,
-        "y": 19,
-        "w": 752,
-        "h": 682
+        "y": 19
     },
     {
         "id": "50e4d951ee7b3e54",
@@ -14810,9 +14802,8 @@
         "y": 1080,
         "wires": [
             [
-                "113ff14de3833337",
-                "c1d473c27b166443",
-                "16a9861296c67569"
+                "a2409be80f0717f9",
+                "113ff14de3833337"
             ]
         ]
     },
@@ -14829,55 +14820,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
+        "x": 400,
         "y": 980,
         "wires": []
-    },
-    {
-        "id": "c1d473c27b166443",
-        "type": "switch",
-        "z": "ce9c810396e540b6",
-        "name": "Basement",
-        "property": "payload.event.basement",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "true",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 400,
-        "y": 1040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "16a9861296c67569",
-        "type": "switch",
-        "z": "ce9c810396e540b6",
-        "name": "First Floor",
-        "property": "payload.event.first_floor",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "true",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 400,
-        "y": 1120,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "d86b9d530b79bf24",
@@ -14886,8 +14831,8 @@
         "server": "edae070429e71608",
         "name": "",
         "lightID": "d073d5442e01",
-        "x": 820,
-        "y": 960,
+        "x": 1200,
+        "y": 680,
         "wires": [
             [
                 "d26457a0aa90c4f7"
@@ -14901,8 +14846,8 @@
         "server": "edae070429e71608",
         "name": "",
         "lightID": "d073d5442e01",
-        "x": 1340,
-        "y": 1020,
+        "x": 1720,
+        "y": 740,
         "wires": []
     },
     {
@@ -14910,15 +14855,15 @@
         "type": "debug",
         "z": "ce9c810396e540b6",
         "name": "debug 35",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
-        "y": 960,
+        "x": 1400,
+        "y": 680,
         "wires": []
     },
     {
@@ -14938,13 +14883,128 @@
         "topic": "",
         "payload": "{\"isTransient\":true,\"color\":{\"hue\":40,\"saturation\":65535,\"brightness\":65535},\"period\":600,\"cycles\":5,\"skewRatio\":0,\"waveform\":\"SINE\"}",
         "payloadType": "json",
-        "x": 1170,
-        "y": 1020,
+        "x": 1550,
+        "y": 740,
         "wires": [
             [
                 "6cab75631f15beec"
             ]
         ]
+    },
+    {
+        "id": "3e7a35727cc07dd4",
+        "type": "api-call-service",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"scene_id\": \"basement_alert_restore\",\t    \"snapshot_entities\": [\t        \"light.basement_stairwell\",\t        \"light.basement_tall_lamp\",\t        \"light.basement_short_lamp\",\t        \"light.basement_led_strip_1\"\t    ]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 590,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a2409be80f0717f9",
+        "type": "function",
+        "z": "ce9c810396e540b6",
+        "name": "Rooms",
+        "func": "const basement = msg.payload.event.basement\nconst first_floor = msg.payload.event.first_floor\n\nif (basement === true) {\n    node.send(msg,null)\n}\n\nif (first_floor === true) {\n    node.send(null,msg)\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1080,
+        "wires": [
+            [
+                "3e7a35727cc07dd4"
+            ],
+            [
+                "17d1d5070c22fa6b"
+            ]
+        ]
+    },
+    {
+        "id": "17d1d5070c22fa6b",
+        "type": "api-call-service",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "scene",
+        "service": "create",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t    \"scene_id\": \"living_room_alert_restore\",\t    \"snapshot_entities\": [\t        \"light.living_room_color_1\",\t        \"light.living_room_color_2\",\t        \"light.living_room_color_3\",\t        \"light.living_room_led_strip\",\t        \"light.stairwell_led_strip\"\t    ]\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 590,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d9f3eb921c59578",
+        "type": "AnamicoLightUpdates",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "lightNames": "",
+        "x": 1180,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "855b3fa03cafcefe",
+        "type": "AnamicoLightChanged",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "mode": "Basic",
+        "x": 960,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "acf7862ddab646ed",
+        "type": "AnamicoChangeLight",
+        "z": "ce9c810396e540b6",
+        "name": "",
+        "mode": "Basic",
+        "x": 1000,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "9bde44f995631ede",
+        "type": "comment",
+        "z": "ce9c810396e540b6",
+        "name": "Possible winner here",
+        "info": "[Possible winner](https://flows.nodered.org/node/node-red-contrib-light)",
+        "x": 1090,
+        "y": 1040,
+        "wires": []
     },
     {
         "id": "7611921cadb91b1e",
