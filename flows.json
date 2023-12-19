@@ -8350,12 +8350,12 @@
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "input_number",
+        "domain": "counter",
         "service": "increment",
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_number.{{whichdoor}}_door_opened_today"
+            "counter.{{whichdoor}}_door_opened_today"
         ],
         "data": "",
         "dataType": "jsonata",
