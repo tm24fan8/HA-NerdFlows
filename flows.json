@@ -799,45 +799,32 @@
         "nodes": [
             "a1ee07ab20229b45",
             "74c0ced4ac160364",
-            "ea8536fc853a8af4",
             "d2df58b074b9ba08",
             "83686fab02a3d825",
             "853abef16fadc824",
-            "bfcb013bbf11611c",
             "2ad7be43ccdbdeaf",
-            "2e299ac73c696afc",
-            "5d18c5d00181b011",
             "ea02f8930aa2c7aa",
             "8859759915625e2f",
             "3941b4a5b3493461",
             "0b122b02cfb10c25",
-            "d1ae15dff680b3b1",
-            "39b90ceaed170ac8",
             "31b8c8291d19ffc6",
             "34e2055344eea8fe",
             "55e84ccb73ae9b74",
-            "3a25dfcae623ee00",
-            "fc4bcd1c117fa849",
             "017de174925e8c75",
             "2dc5f9d3e00f4ddc",
             "86922621398f4b79",
-            "73bf42069fe27d3a",
-            "32559cd9120b4916",
             "a1fa2d2d1f55af4b",
             "463689442b9d2046",
             "5350d2264880d0ad",
-            "1d03ecbe4448d224",
-            "da70285e80c3f195",
-            "a7a59e2f845b849c",
-            "37f1c11c59a6ce16",
             "b9741e2e2ed0448b",
             "d0cbe3d9ed984771",
-            "f3aa3620e8a94a96"
+            "fd33d3e819d8c772",
+            "f70e4a4480d43b2b"
         ],
-        "x": 74,
+        "x": 34,
         "y": 339,
-        "w": 1852,
-        "h": 522
+        "w": 1612,
+        "h": 382
     },
     {
         "id": "39a7ac02f2727f1d",
@@ -873,7 +860,9 @@
             "ec4682a111a48b70"
         ],
         "x": 14,
-        "y": 839
+        "y": 839,
+        "w": 1552,
+        "h": 402
     },
     {
         "id": "e065b1ed4938b477",
@@ -932,7 +921,9 @@
             "6bbf7df2c43c481e"
         ],
         "x": 14,
-        "y": 11.5
+        "y": 11.5,
+        "w": 1252,
+        "h": 809.5
     },
     {
         "id": "5c50443a84910fb7",
@@ -1774,8 +1765,8 @@
             "48c2ad199a4ab538",
             "4e3d058c164d6a97"
         ],
-        "x": 74,
-        "y": 879,
+        "x": 34,
+        "y": 739,
         "w": 792,
         "h": 202
     },
@@ -1797,8 +1788,8 @@
             "440fc7142e7345d4",
             "cef61cdb2808ce5a"
         ],
-        "x": 934,
-        "y": 879,
+        "x": 894,
+        "y": 739,
         "w": 792,
         "h": 202
     },
@@ -1819,7 +1810,7 @@
         "type": "junction",
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
-        "x": 1480,
+        "x": 1200,
         "y": 480,
         "wires": [
             [
@@ -10922,16 +10913,15 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 200,
-        "y": 380,
+        "x": 140,
+        "y": 440,
         "wires": [
             [
-                "73bf42069fe27d3a"
+                "fd33d3e819d8c772"
             ]
         ],
         "outputLabels": [
-            "On",
-            "Off"
+            "On"
         ]
     },
     {
@@ -10958,7 +10948,7 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1630,
+        "x": 1350,
         "y": 620,
         "wires": [
             []
@@ -10972,50 +10962,6 @@
         "x": 520,
         "y": 40,
         "wires": []
-    },
-    {
-        "id": "ea8536fc853a8af4",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Check Shower Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.shower_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 540,
-        "y": 380,
-        "wires": [
-            [
-                "f3aa3620e8a94a96"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
-        ]
     },
     {
         "id": "d2df58b074b9ba08",
@@ -11039,7 +10985,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 910,
+        "x": 590,
         "y": 380,
         "wires": [
             []
@@ -11067,7 +11013,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1630,
+        "x": 1350,
         "y": 560,
         "wires": [
             []
@@ -11081,13 +11027,13 @@
         "name": "Shower Mode",
         "server": "9e87348d.9c1c48",
         "version": 5,
-        "outputs": 2,
+        "outputs": 1,
         "exposeAsEntityConfig": "",
         "entityId": "input_boolean.shower_mode",
         "entityIdType": "exact",
         "outputInitially": false,
         "stateType": "str",
-        "ifState": "on",
+        "ifState": "",
         "ifStateType": "str",
         "ifStateOperator": "is",
         "outputOnlyOnStateChange": true,
@@ -11113,60 +11059,24 @@
                 "valueType": "str"
             }
         ],
-        "x": 170,
-        "y": 720,
+        "x": 130,
+        "y": 620,
         "wires": [
             [
-                "2ad7be43ccdbdeaf",
-                "31b8c8291d19ffc6",
-                "a1fa2d2d1f55af4b"
-            ],
-            [
-                "31b8c8291d19ffc6",
-                "a1fa2d2d1f55af4b",
-                "a7a59e2f845b849c"
+                "f70e4a4480d43b2b"
             ]
         ],
         "outputLabels": [
             "On",
             "Off"
         ]
-    },
-    {
-        "id": "bfcb013bbf11611c",
-        "type": "change",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Payload \"stop\"",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "stop",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 675,
-        "y": 480,
-        "wires": [
-            [
-                "34e2055344eea8fe"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "2ad7be43ccdbdeaf",
         "type": "api-call-service",
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
-        "name": "Set to Bright",
+        "name": "Set Scene",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -11177,88 +11087,14 @@
         "entityId": [
             "input_select.upstairs_bathroom_scenes"
         ],
-        "data": "{\t    \"option\":\"Bright\"\t}",
+        "data": "{\t    \"option\": scene\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 430,
-        "y": 680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2e299ac73c696afc",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Check Early Night",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.early_night_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 650,
-        "y": 800,
-        "wires": [
-            [
-                "d1ae15dff680b3b1"
-            ],
-            [
-                "ea02f8930aa2c7aa"
-            ]
-        ],
-        "outputLabels": [
-            "On",
-            "Off"
-        ]
-    },
-    {
-        "id": "5d18c5d00181b011",
-        "type": "api-call-service",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Set Nightlight",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.upstairs_bathroom_scenes"
-        ],
-        "data": "{\t    \"option\":\"Nightlight\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1470,
-        "y": 760,
+        "x": 510,
+        "y": 620,
         "wires": [
             []
         ]
@@ -11279,14 +11115,14 @@
         "entityId": [
             "light.upstairs_bathroom_lights"
         ],
-        "data": "",
+        "data": "{}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 860,
-        "y": 820,
+        "x": 520,
+        "y": 680,
         "wires": [
             [
                 "8859759915625e2f"
@@ -11311,8 +11147,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 985,
-        "y": 820,
+        "x": 645,
+        "y": 680,
         "wires": [
             [
                 "3941b4a5b3493461"
@@ -11336,14 +11172,14 @@
         "entityId": [
             "switch.adaptive_lighting_upstairs_bathroom"
         ],
-        "data": "",
+        "data": "{}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1110,
-        "y": 820,
+        "x": 770,
+        "y": 680,
         "wires": [
             [
                 "0b122b02cfb10c25"
@@ -11372,88 +11208,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1300,
-        "y": 820,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d1ae15dff680b3b1",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Check Night Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.night_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "nightmode",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 870,
-        "y": 760,
-        "wires": [
-            [
-                "3a25dfcae623ee00"
-            ],
-            [
-                "3a25dfcae623ee00"
-            ]
-        ],
-        "outputLabels": [
-            "On",
-            "Off"
-        ]
-    },
-    {
-        "id": "39b90ceaed170ac8",
-        "type": "api-call-service",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Set Single Nightlight",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.upstairs_bathroom_scenes"
-        ],
-        "data": "{\t    \"option\":\"Single Nightlight\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1500,
-        "y": 700,
+        "x": 960,
+        "y": 680,
         "wires": [
             []
         ]
@@ -11468,8 +11224,8 @@
         "links": [
             "7a7f626dce181b23"
         ],
-        "x": 385,
-        "y": 620,
+        "x": 565,
+        "y": 560,
         "wires": []
     },
     {
@@ -11481,96 +11237,13 @@
         "links": [
             "60ce44747cf3e507"
         ],
-        "x": 135,
-        "y": 480,
+        "x": 425,
+        "y": 500,
         "wires": [
             [
                 "a1fa2d2d1f55af4b"
             ]
         ]
-    },
-    {
-        "id": "3a25dfcae623ee00",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Check Kallen Overnight",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.kallen_overnight",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 1110,
-        "y": 760,
-        "wires": [
-            [
-                "ea02f8930aa2c7aa"
-            ],
-            [
-                "fc4bcd1c117fa849"
-            ]
-        ]
-    },
-    {
-        "id": "fc4bcd1c117fa849",
-        "type": "switch",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "",
-        "property": "nightmode",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1305,
-        "y": 760,
-        "wires": [
-            [
-                "39b90ceaed170ac8"
-            ],
-            [
-                "5d18c5d00181b011"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "017de174925e8c75",
@@ -11606,7 +11279,7 @@
                 "valueType": "str"
             }
         ],
-        "x": 1400,
+        "x": 1120,
         "y": 440,
         "wires": [
             [
@@ -11629,7 +11302,7 @@
         "payloadtype": "num",
         "payloadval": "0",
         "name": "Wait 2 Minutes",
-        "x": 1640,
+        "x": 1360,
         "y": 440,
         "wires": [
             [
@@ -11662,85 +11335,10 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1830,
+        "x": 1550,
         "y": 440,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "73bf42069fe27d3a",
-        "type": "switch",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 355,
-        "y": 380,
-        "wires": [
-            [
-                "ea8536fc853a8af4",
-                "a1fa2d2d1f55af4b"
-            ],
-            [
-                "32559cd9120b4916"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "32559cd9120b4916",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Delay",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_number.upstairs_bathroom_motion_off_delay",
-        "state_type": "num",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "duration",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 490,
-        "y": 560,
-        "wires": [
-            [
-                "da70285e80c3f195"
-            ]
         ]
     },
     {
@@ -11759,41 +11357,19 @@
         "entityId": [
             "timer.upstairs_bathroom_motion_timer"
         ],
-        "data": "",
+        "data": "{}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 510,
-        "y": 480,
+        "x": 590,
+        "y": 500,
         "wires": [
             [
-                "bfcb013bbf11611c"
+                "34e2055344eea8fe"
             ]
         ]
-    },
-    {
-        "id": "1d03ecbe4448d224",
-        "type": "function",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Math",
-        "func": "msg.duration = msg.duration * 60\n\nnode.status({fill:\"green\",shape:\"dot\",text:msg.duration + \"s\"})\nnode.log(\"Upstairs Bathroom Timer started\")\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 835,
-        "y": 560,
-        "wires": [
-            [
-                "463689442b9d2046"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "463689442b9d2046",
@@ -11817,8 +11393,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 950,
-        "y": 560,
+        "x": 590,
+        "y": 440,
         "wires": [
             []
         ]
@@ -11843,136 +11419,12 @@
                 "valueType": "date"
             }
         ],
-        "x": 1200,
+        "x": 920,
         "y": 560,
         "wires": [
             [
                 "b9741e2e2ed0448b"
             ]
-        ]
-    },
-    {
-        "id": "da70285e80c3f195",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Check Shower Mode",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_boolean.shower_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 680,
-        "y": 560,
-        "wires": [
-            [
-                "1d03ecbe4448d224"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "Off",
-            "On"
-        ]
-    },
-    {
-        "id": "a7a59e2f845b849c",
-        "type": "api-current-state",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Motion On?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "binary_sensor.upstairs_bathroom_occupied",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "motion",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 430,
-        "y": 800,
-        "wires": [
-            [
-                "37f1c11c59a6ce16"
-            ],
-            [
-                "2e299ac73c696afc"
-            ]
-        ],
-        "outputLabels": [
-            "On",
-            "Off"
-        ]
-    },
-    {
-        "id": "37f1c11c59a6ce16",
-        "type": "api-call-service",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Set Adaptive",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "input_select",
-        "service": "select_option",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_select.upstairs_bathroom_scenes"
-        ],
-        "data": "{\t    \"option\":\"Adaptive\"\t}",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 630,
-        "y": 740,
-        "wires": [
-            []
         ]
     },
     {
@@ -11988,7 +11440,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1400,
+        "x": 1120,
         "y": 560,
         "wires": [
             [
@@ -12025,7 +11477,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1200,
+        "x": 920,
         "y": 420,
         "wires": [
             [
@@ -12057,8 +11509,8 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 590,
-        "y": 1040,
+        "x": 550,
+        "y": 900,
         "wires": [
             []
         ]
@@ -12076,8 +11528,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 980,
+        "x": 290,
+        "y": 840,
         "wires": [
             [
                 "4e3d058c164d6a97"
@@ -12110,8 +11562,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 590,
-        "y": 980,
+        "x": 550,
+        "y": 840,
         "wires": [
             []
         ]
@@ -12138,8 +11590,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 770,
-        "y": 920,
+        "x": 730,
+        "y": 780,
         "wires": [
             []
         ]
@@ -12164,8 +11616,8 @@
                 "valueType": "date"
             }
         ],
-        "x": 180,
-        "y": 1040,
+        "x": 140,
+        "y": 900,
         "wires": [
             [
                 "f18aab5a5bda9a84"
@@ -12212,8 +11664,8 @@
                 "valueType": "str"
             }
         ],
-        "x": 170,
-        "y": 980,
+        "x": 130,
+        "y": 840,
         "wires": [
             [
                 "293a957a5c4f79fa"
@@ -12245,32 +11697,11 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 580,
-        "y": 920,
+        "x": 540,
+        "y": 780,
         "wires": [
             [
                 "33ba5ffd653f09a1"
-            ]
-        ]
-    },
-    {
-        "id": "f3aa3620e8a94a96",
-        "type": "function",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "Turn On",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst lights = states['light.upstairs_bathroom_lights'].state\nconst lux = states['sensor.upstairs_bathroom_illuminance'].state\nconst threshold = states['input_number.upstairs_bathroom_lux_threshold'].state\n\nif (lux <= threshold || lights === 'on') {\n    node.status({fill:'green',shape:'dot',text:'LightsOn'})\n    node.send(msg)\n} else {\n    node.status({fill:'red',shape:'ring',text:'Too bright'})\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 740,
-        "y": 380,
-        "wires": [
-            [
-                "d2df58b074b9ba08"
             ]
         ]
     },
@@ -12298,8 +11729,8 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1450,
-        "y": 1040,
+        "x": 1410,
+        "y": 900,
         "wires": [
             []
         ]
@@ -12317,8 +11748,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1190,
-        "y": 980,
+        "x": 1150,
+        "y": 840,
         "wires": [
             [
                 "440fc7142e7345d4"
@@ -12351,8 +11782,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1450,
-        "y": 980,
+        "x": 1410,
+        "y": 840,
         "wires": [
             []
         ]
@@ -12379,8 +11810,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1630,
-        "y": 920,
+        "x": 1590,
+        "y": 780,
         "wires": [
             []
         ]
@@ -12405,8 +11836,8 @@
                 "valueType": "date"
             }
         ],
-        "x": 1040,
-        "y": 1040,
+        "x": 1000,
+        "y": 900,
         "wires": [
             [
                 "cef61cdb2808ce5a"
@@ -12453,8 +11884,8 @@
                 "valueType": "str"
             }
         ],
-        "x": 1030,
-        "y": 980,
+        "x": 990,
+        "y": 840,
         "wires": [
             [
                 "3b698d0a4f2620bd"
@@ -12486,8 +11917,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1440,
-        "y": 920,
+        "x": 1400,
+        "y": 780,
         "wires": [
             [
                 "b058c2262ac522ff"
@@ -12525,13 +11956,78 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1250,
-        "y": 1040,
+        "x": 1210,
+        "y": 900,
         "wires": [
             [
                 "c3f2a4aa281295ce"
             ],
             []
+        ]
+    },
+    {
+        "id": "fd33d3e819d8c772",
+        "type": "function",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "Motion Detected",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst lights = states['light.upstairs_bathroom_lights'].state\nconst duration = states['input_number.upstairs_bathroom_lights_off_delay'].state\nconst lux = states['sensor.upstairs_bathroom_illuminance'].state\nconst threshold = states['input_number.upstairs_bathroom_lux_threshold'].state\nconst showerMode = states['input_boolean.shower_mode'].state\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nlet timerCancel = {\n    \"payload\": \"stop\"\n}\n\nif (showerMode === 'off') {\n    if (payload === 'on') {\n        node.send([null,null,timerCancel])\n        if (lux <= threshold || lights === 'on') {\n            node.status({fill:'green',shape:'dot',text:'Lights On'})\n            node.send([msg,null,null])\n        } else {\n            node.status({fill:'red',shape:'ring',text:'Too bright'})\n        }\n    } else if (payload === 'off') {\n        if (lights === 'on') {\n            msg.duration = newDuration\n            node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n            node.send([null,msg,null])\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n        }\n    }\n}\n\nnode.log(\"----- Upstairs Bathroom Motion Parameters Start -----\")\nnode.log(\"Upstairs Bathroom payload: \" + payload)\nnode.log(\"Upstairs Bathroom lights: \" + lights)\nnode.log(\"Upstairs Bathroom duration: \" + duration)\nnode.log(\"Upstairs Bathroom newDuration: \" + newDuration)\nnode.log(\"Upstairs Bathroom lux: \" + lux)\nnode.log(\"Upstairs Bathroom threshold: \" + threshold)\nnode.log(\"Upstairs Bathroom showerMode: \" + showerMode)\nnode.log(\"----- Upstairs Bathroom Motion Parameters End -----\")",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 440,
+        "wires": [
+            [
+                "d2df58b074b9ba08"
+            ],
+            [
+                "463689442b9d2046"
+            ],
+            [
+                "a1fa2d2d1f55af4b"
+            ]
+        ],
+        "outputLabels": [
+            "On",
+            "Off",
+            "Timer Cancel"
+        ]
+    },
+    {
+        "id": "f70e4a4480d43b2b",
+        "type": "function",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "Shower Mode",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst occupied = states['binary_sensor.upstairs_bathroom_occupied'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst motion = states['binary_sensor.upstairs_bathroom_motion'].state\nconst payload = msg.showerMode\n\nlet timerCancel = {\n    \"payload\": \"stop\"\n}\n\nlet scene = {}\nif (payload === 'on') {\n    scene = 'Bright'\n} else {\n    if (motion === 'on') {\n        scene = 'Adaptive'\n    } else {\n        if (kallenOvernight === 'off') {\n            if (nightMode === 'on') {\n                scene = 'Single Nightlight'\n            } else {\n                scene = 'Nightlight'\n            }\n        } else {\n            scene = 'Adaptive'\n        }\n    }\n}\n\nif (payload === 'on') {\n    msg.scene = scene\n    node.status({fill:'green',shape:'dot',text:'Shower Mode On'})\n    node.send([timerCancel,msg,null])\n} else if (payload === 'off') {\n    node.send([timerCancel,null,null])\n    if (motion === 'on') {\n        msg.scene = scene\n        node.status({fill:'green',shape:'dot',text:'Lights Adaptive'})\n        node.send([null,msg,null])\n    } else if (earlyNightMode === 'on') {\n        if (kallenOvernight === 'on') {\n            node.status({fill:'green',shape:'dot',text:'Lights Off'})\n            node.send([null,null,msg])\n        } else {\n            msg.scene = scene\n            node.status({fill:'green',shape:'dot',text:'Scene Set'})\n            node.send([null,msg,null])\n        }\n    } else {\n        node.status({fill:'green',shape:'dot',text:'Lights Off'})\n        node.send([null,null,msg])\n    }\n}\n\nnode.log(\"----- Upstairs Bathroom Shower Mode Parameters Start -----\")\nnode.log(\"Upstairs Bathroom payload: \" + payload)\nnode.log(\"Upstairs Bathroom scene: \" + scene)\nif (payload === 'off') {\n    node.log(\"Upstairs Bathroom occupied: \" + occupied)\n    node.log(\"Upstairs Bathroom earlyNightMode: \" + earlyNightMode)\n    node.log(\"Upstairs Bathroom nightMode: \" + nightMode)\n    node.log(\"Upstairs Bathroom kallenOvernight: \" + kallenOvernight)\n    node.log(\"Upstairs Bathroom motion: \" + motion)\n}\nnode.log(\"----- Upstairs Bathroom Shower Mode Parameters End -----\")",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 620,
+        "wires": [
+            [
+                "a1fa2d2d1f55af4b"
+            ],
+            [
+                "2ad7be43ccdbdeaf",
+                "31b8c8291d19ffc6"
+            ],
+            [
+                "ea02f8930aa2c7aa"
+            ]
+        ],
+        "outputLabels": [
+            "Cancel Timer",
+            "Set Scene",
+            "Lights Off"
         ]
     },
     {
@@ -16430,6 +15926,7 @@
         "name": "On",
         "func": "var states = global.get('homeassistant.homeAssistant.states')\nvar ac = states['input_boolean.master_bedroom_aircon_installed'].state\nvar temp = global.get('tempStr')\nvar threshold = states['input_number.master_bedroom_aircon_run_threshold'].state\nvar nightTemp = states['input_number.master_bedroom_night_temp'].state\nvar bedTemp = states['input_number.master_bedroom_bedtime_temp'].state\nvar sleeping = states['input_boolean.master_bedroom_sleeping'].state\n\nif (ac === 'on') {\n    if (temp >= threshold) {\n        if (sleeping === 'on') {\n            msg.set = bedTemp\n            node.status({fill:\"green\",shape:\"dot\",text:\"Shower Mode On: \" + bedTemp});\n            return msg\n        } else {\n            msg.set = nightTemp\n            node.status({fill:\"green\",shape:\"dot\",text:\"Shower Mode On: \" + nightTemp});\n            return msg\n        }\n    } else {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"Too Cold\" });\n        return null\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"A/C Not Installed\" });\n    return null\n}\n",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
