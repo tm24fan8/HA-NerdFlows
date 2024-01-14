@@ -822,7 +822,8 @@
             "f70e4a4480d43b2b",
             "12e93caa5bb34d08",
             "c24d343c3f54e24d",
-            "bdf337f7654b461b"
+            "bdf337f7654b461b",
+            "5e00ecbccbe51462"
         ],
         "x": 34,
         "y": 339,
@@ -1813,11 +1814,11 @@
         "type": "junction",
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
-        "x": 1220,
-        "y": 480,
+        "x": 1120,
+        "y": 500,
         "wires": [
             [
-                "2dc5f9d3e00f4ddc"
+                "5e00ecbccbe51462"
             ]
         ]
     },
@@ -11268,7 +11269,7 @@
         "y": 440,
         "wires": [
             [
-                "2dc5f9d3e00f4ddc"
+                "5e00ecbccbe51462"
             ],
             []
         ],
@@ -11346,7 +11347,14 @@
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
-        "outputProperties": [],
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "stop",
+                "valueType": "str"
+            }
+        ],
         "queue": "none",
         "x": 610,
         "y": 500,
@@ -11429,7 +11437,7 @@
         "y": 560,
         "wires": [
             [
-                "2dc5f9d3e00f4ddc"
+                "5e00ecbccbe51462"
             ],
             [
                 "83686fab02a3d825"
@@ -12092,6 +12100,28 @@
                 "b9741e2e2ed0448b"
             ]
         ]
+    },
+    {
+        "id": "5e00ecbccbe51462",
+        "type": "function",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "function 13",
+        "func": "const payload = msg.payload\n\nif (payload === 'stop') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Timer Stopped\"})\n} else {\n    node.log(\"Upstairs Bathroom 2-minute timer started\")\n    node.log(\"Upstairs Bathroom 2-minute timer payload: \" + payload)\n    node.status({fill:\"red\",shape:\"ring\",text:\"Message Logged\"})\n} \n\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1255,
+        "y": 500,
+        "wires": [
+            [
+                "2dc5f9d3e00f4ddc"
+            ]
+        ],
+        "l": false
     },
     {
         "id": "07049ae77b6751c6",
