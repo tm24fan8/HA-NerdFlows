@@ -1042,7 +1042,9 @@
             "f463df7e17e045e9"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1272,
+        "h": 502
     },
     {
         "id": "208284848b13b85b",
@@ -1067,7 +1069,9 @@
             "c0933fcc8737bc0b"
         ],
         "x": 34,
-        "y": 239
+        "y": 239,
+        "w": 1032,
+        "h": 322
     },
     {
         "id": "1ca205a84922c8c2",
@@ -1233,7 +1237,9 @@
             "2516c6e3146cc851"
         ],
         "x": 34,
-        "y": 579
+        "y": 579,
+        "w": 992,
+        "h": 202
     },
     {
         "id": "f519aff597ece351",
@@ -1555,7 +1561,9 @@
             "8146f43fea5aec03"
         ],
         "x": 34,
-        "y": 539
+        "y": 539,
+        "w": 1192,
+        "h": 502
     },
     {
         "id": "b9ffa3fa5af46ec3",
@@ -9473,7 +9481,7 @@
         "type": "function",
         "z": "3abb5ae57afb4761",
         "name": "Processing",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst workEndZone = states['binary_sensor.tina_work_end_zone'].state\nconst tinawork = msg.tinawork\n\nif (tinawork === 'on' && workEndZone === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Activated\"});\n    return[msg,null]\n} else if (tinawork === 'off') {\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"No Work Today\"});\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"We fucked up\"});\n    return[null,msg]\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst workEndZone = states['binary_sensor.tina_work_end_zone'].state\nconst tinawork = msg.tinawork\n\nif (tinawork === 'on' && workEndZone === 'on') {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Activated\"})\n    return[msg,null]\n} else if (tinawork === 'off') {\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"No Work Today\"})\n    return null\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"We fucked up\"})\n    node.warn(\"Tina presence flow encountered a situation we did not account for\")\n    return[null,msg]\n}",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
