@@ -819,11 +819,14 @@
             "b9741e2e2ed0448b",
             "d0cbe3d9ed984771",
             "fd33d3e819d8c772",
-            "f70e4a4480d43b2b"
+            "f70e4a4480d43b2b",
+            "12e93caa5bb34d08",
+            "c24d343c3f54e24d",
+            "bdf337f7654b461b"
         ],
         "x": 34,
         "y": 339,
-        "w": 1612,
+        "w": 1632,
         "h": 382
     },
     {
@@ -1810,7 +1813,7 @@
         "type": "junction",
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
-        "x": 1200,
+        "x": 1220,
         "y": 480,
         "wires": [
             [
@@ -10913,7 +10916,7 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 140,
+        "x": 160,
         "y": 440,
         "wires": [
             [
@@ -10948,7 +10951,7 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1350,
+        "x": 1370,
         "y": 620,
         "wires": [
             []
@@ -10985,7 +10988,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 590,
+        "x": 610,
         "y": 380,
         "wires": [
             []
@@ -11013,7 +11016,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1350,
+        "x": 1370,
         "y": 560,
         "wires": [
             []
@@ -11047,7 +11050,7 @@
         "ignoreCurrentStateUnavailable": false,
         "outputProperties": [
             {
-                "property": "showermode",
+                "property": "payload",
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
@@ -11059,7 +11062,7 @@
                 "valueType": "str"
             }
         ],
-        "x": 130,
+        "x": 150,
         "y": 620,
         "wires": [
             [
@@ -11067,8 +11070,7 @@
             ]
         ],
         "outputLabels": [
-            "On",
-            "Off"
+            "On"
         ]
     },
     {
@@ -11093,7 +11095,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 510,
+        "x": 530,
         "y": 620,
         "wires": [
             []
@@ -11121,7 +11123,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 520,
+        "x": 540,
         "y": 680,
         "wires": [
             [
@@ -11147,7 +11149,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 645,
+        "x": 665,
         "y": 680,
         "wires": [
             [
@@ -11178,7 +11180,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 770,
+        "x": 790,
         "y": 680,
         "wires": [
             [
@@ -11208,7 +11210,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 960,
+        "x": 980,
         "y": 680,
         "wires": [
             []
@@ -11224,7 +11226,7 @@
         "links": [
             "7a7f626dce181b23"
         ],
-        "x": 565,
+        "x": 585,
         "y": 560,
         "wires": []
     },
@@ -11237,7 +11239,7 @@
         "links": [
             "60ce44747cf3e507"
         ],
-        "x": 425,
+        "x": 445,
         "y": 500,
         "wires": [
             [
@@ -11279,7 +11281,7 @@
                 "valueType": "str"
             }
         ],
-        "x": 1120,
+        "x": 1140,
         "y": 440,
         "wires": [
             [
@@ -11302,7 +11304,7 @@
         "payloadtype": "num",
         "payloadval": "0",
         "name": "Wait 2 Minutes",
-        "x": 1360,
+        "x": 1380,
         "y": 440,
         "wires": [
             [
@@ -11335,7 +11337,7 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1550,
+        "x": 1570,
         "y": 440,
         "wires": [
             []
@@ -11363,7 +11365,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 590,
+        "x": 610,
         "y": 500,
         "wires": [
             [
@@ -11393,7 +11395,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 590,
+        "x": 610,
         "y": 440,
         "wires": [
             []
@@ -11419,7 +11421,7 @@
                 "valueType": "date"
             }
         ],
-        "x": 920,
+        "x": 940,
         "y": 560,
         "wires": [
             [
@@ -11440,7 +11442,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
+        "x": 1140,
         "y": 560,
         "wires": [
             [
@@ -11477,7 +11479,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 920,
+        "x": 940,
         "y": 420,
         "wires": [
             [
@@ -11971,14 +11973,14 @@
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
         "name": "Motion Detected",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst lights = states['light.upstairs_bathroom_lights'].state\nconst duration = states['input_number.upstairs_bathroom_lights_off_delay'].state\nconst lux = states['sensor.upstairs_bathroom_illuminance'].state\nconst threshold = states['input_number.upstairs_bathroom_lux_threshold'].state\nconst showerMode = states['input_boolean.shower_mode'].state\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nlet timerCancel = {\n    \"payload\": \"stop\"\n}\n\nif (showerMode === 'off') {\n    if (payload === 'on') {\n        node.send([null,null,timerCancel])\n        if (lux <= threshold || lights === 'on') {\n            node.status({fill:'green',shape:'dot',text:'Lights On'})\n            node.send([msg,null,null])\n        } else {\n            node.status({fill:'red',shape:'ring',text:'Too bright'})\n        }\n    } else if (payload === 'off') {\n        if (lights === 'on') {\n            msg.duration = newDuration\n            node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n            node.send([null,msg,null])\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n        }\n    }\n}\n\nnode.log(\"----- Upstairs Bathroom Motion Parameters Start -----\")\nnode.log(\"Upstairs Bathroom payload: \" + payload)\nnode.log(\"Upstairs Bathroom lights: \" + lights)\nnode.log(\"Upstairs Bathroom duration: \" + duration)\nnode.log(\"Upstairs Bathroom newDuration: \" + newDuration)\nnode.log(\"Upstairs Bathroom lux: \" + lux)\nnode.log(\"Upstairs Bathroom threshold: \" + threshold)\nnode.log(\"Upstairs Bathroom showerMode: \" + showerMode)\nnode.log(\"----- Upstairs Bathroom Motion Parameters End -----\")",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst lights = states['light.upstairs_bathroom_lights'].state\nconst duration = states['input_number.upstairs_bathroom_motion_off_delay'].state\nconst lux = states['sensor.upstairs_bathroom_illuminance'].state\nconst threshold = states['input_number.upstairs_bathroom_lux_threshold'].state\nconst showerMode = states['input_boolean.shower_mode'].state\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nlet timerCancel = {\n    \"payload\": \"stop\"\n}\n\nif (showerMode === 'off') {\n    if (payload === 'on') {\n        node.send([null,null,timerCancel])\n        if (lux <= threshold || lights === 'on') {\n            node.status({fill:'green',shape:'dot',text:'Lights On'})\n            node.send([msg,null,null])\n        } else {\n            node.status({fill:'red',shape:'ring',text:'Too bright'})\n        }\n    } else if (payload === 'off') {\n        if (lights === 'on') {\n            msg.duration = newDuration\n            node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n            node.send([null,msg,null])\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n        }\n    }\n}\n\nnode.log(\"----- Upstairs Bathroom Motion Parameters Start -----\")\nnode.log(\"Upstairs Bathroom payload: \" + payload)\nnode.log(\"Upstairs Bathroom lights: \" + lights)\nnode.log(\"Upstairs Bathroom duration: \" + duration)\nnode.log(\"Upstairs Bathroom newDuration: \" + newDuration)\nnode.log(\"Upstairs Bathroom lux: \" + lux)\nnode.log(\"Upstairs Bathroom threshold: \" + threshold)\nnode.log(\"Upstairs Bathroom showerMode: \" + showerMode)\nnode.log(\"----- Upstairs Bathroom Motion Parameters End -----\")",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
+        "x": 380,
         "y": 440,
         "wires": [
             [
@@ -12003,14 +12005,14 @@
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
         "name": "Shower Mode",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst occupied = states['binary_sensor.upstairs_bathroom_occupied'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst motion = states['binary_sensor.upstairs_bathroom_motion'].state\nconst payload = msg.showerMode\n\nlet timerCancel = {\n    \"payload\": \"stop\"\n}\n\nlet scene = {}\nif (payload === 'on') {\n    scene = 'Bright'\n} else {\n    if (motion === 'on') {\n        scene = 'Adaptive'\n    } else {\n        if (kallenOvernight === 'off') {\n            if (nightMode === 'on') {\n                scene = 'Single Nightlight'\n            } else {\n                scene = 'Nightlight'\n            }\n        } else {\n            scene = 'Adaptive'\n        }\n    }\n}\n\nif (payload === 'on') {\n    msg.scene = scene\n    node.status({fill:'green',shape:'dot',text:'Shower Mode On'})\n    node.send([timerCancel,msg,null])\n} else if (payload === 'off') {\n    node.send([timerCancel,null,null])\n    if (motion === 'on') {\n        msg.scene = scene\n        node.status({fill:'green',shape:'dot',text:'Lights Adaptive'})\n        node.send([null,msg,null])\n    } else if (earlyNightMode === 'on') {\n        if (kallenOvernight === 'on') {\n            node.status({fill:'green',shape:'dot',text:'Lights Off'})\n            node.send([null,null,msg])\n        } else {\n            msg.scene = scene\n            node.status({fill:'green',shape:'dot',text:'Scene Set'})\n            node.send([null,msg,null])\n        }\n    } else {\n        node.status({fill:'green',shape:'dot',text:'Lights Off'})\n        node.send([null,null,msg])\n    }\n}\n\nnode.log(\"----- Upstairs Bathroom Shower Mode Parameters Start -----\")\nnode.log(\"Upstairs Bathroom payload: \" + payload)\nnode.log(\"Upstairs Bathroom scene: \" + scene)\nif (payload === 'off') {\n    node.log(\"Upstairs Bathroom occupied: \" + occupied)\n    node.log(\"Upstairs Bathroom earlyNightMode: \" + earlyNightMode)\n    node.log(\"Upstairs Bathroom nightMode: \" + nightMode)\n    node.log(\"Upstairs Bathroom kallenOvernight: \" + kallenOvernight)\n    node.log(\"Upstairs Bathroom motion: \" + motion)\n}\nnode.log(\"----- Upstairs Bathroom Shower Mode Parameters End -----\")",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst occupied = states['binary_sensor.upstairs_bathroom_occupied'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst motion = states['binary_sensor.upstairs_bathroom_motion'].state\nconst payload = msg.payload\n\nlet timerCancel = {\n    \"payload\": \"stop\"\n}\n\nlet scene = {}\nif (payload === 'on') {\n    scene = 'Bright'\n} else {\n    if (motion === 'on') {\n        scene = 'Adaptive'\n    } else {\n        if (kallenOvernight === 'off') {\n            if (nightMode === 'on') {\n                scene = 'Single Nightlight'\n            } else {\n                scene = 'Nightlight'\n            }\n        } else {\n            scene = 'Adaptive'\n        }\n    }\n}\n\nif (payload === 'on') {\n    msg.scene = scene\n    node.status({fill:'green',shape:'dot',text:'Shower Mode On'})\n    node.send([timerCancel,msg,null])\n} else if (payload === 'off') {\n    node.send([timerCancel,null,null])\n    if (motion === 'on') {\n        msg.scene = scene\n        node.status({fill:'green',shape:'dot',text:'Lights Adaptive'})\n        node.send([null,msg,null])\n    } else if (earlyNightMode === 'on') {\n        if (kallenOvernight === 'on') {\n            node.status({fill:'green',shape:'dot',text:'Lights Off'})\n            node.send([null,null,msg])\n        } else {\n            msg.scene = scene\n            node.status({fill:'green',shape:'dot',text:'Scene Set'})\n            node.send([null,msg,null])\n        }\n    } else {\n        node.status({fill:'green',shape:'dot',text:'Lights Off'})\n        node.send([null,null,msg])\n    }\n}\n\nnode.log(\"----- Upstairs Bathroom Shower Mode Parameters Start -----\")\nnode.log(\"Upstairs Bathroom payload: \" + payload)\nnode.log(\"Upstairs Bathroom scene: \" + scene)\nif (payload === 'off') {\n    node.log(\"Upstairs Bathroom occupied: \" + occupied)\n    node.log(\"Upstairs Bathroom earlyNightMode: \" + earlyNightMode)\n    node.log(\"Upstairs Bathroom nightMode: \" + nightMode)\n    node.log(\"Upstairs Bathroom kallenOvernight: \" + kallenOvernight)\n    node.log(\"Upstairs Bathroom motion: \" + motion)\n}\nnode.log(\"----- Upstairs Bathroom Shower Mode Parameters End -----\")",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
+        "x": 340,
         "y": 620,
         "wires": [
             [
@@ -12028,6 +12030,84 @@
             "Cancel Timer",
             "Set Scene",
             "Lights Off"
+        ]
+    },
+    {
+        "id": "12e93caa5bb34d08",
+        "type": "inject",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "fd33d3e819d8c772"
+            ]
+        ]
+    },
+    {
+        "id": "c24d343c3f54e24d",
+        "type": "inject",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 130,
+        "y": 560,
+        "wires": [
+            [
+                "fd33d3e819d8c772"
+            ]
+        ]
+    },
+    {
+        "id": "bdf337f7654b461b",
+        "type": "inject",
+        "z": "5e238cbbe6d612c9",
+        "g": "eccca853a916b662",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 920,
+        "y": 620,
+        "wires": [
+            [
+                "b9741e2e2ed0448b"
+            ]
         ]
     },
     {
