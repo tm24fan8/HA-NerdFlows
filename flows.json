@@ -10588,23 +10588,6 @@
         "wires": []
     },
     {
-        "id": "48976bf8e9a62b0a",
-        "type": "debug",
-        "z": "eff21041cc941fef",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 40,
-        "wires": []
-    },
-    {
         "id": "1e1059008d19c0ee",
         "type": "server-state-changed",
         "z": "eff21041cc941fef",
