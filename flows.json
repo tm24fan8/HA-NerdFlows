@@ -7267,7 +7267,7 @@
         "type": "function",
         "z": "e44b1e7a8ef7ae1d",
         "name": "Processing",
-        "func": "//! FLOW VARIABLES DEFINED IN START TAB\n\n// Set Constants\n\nconst states = global.get('homeassistant.homeAssistant.states')\nconst holidayMode = states['input_boolean.holiday_mode'].state\nconst holidayHold = states['input_boolean.holiday_mode_hold'].state\nconst currentHoliday = states['input_select.holiday_animation'].state\nconst holiday = currentHoliday.toLowerCase()\nconst sunsetLights = states['input_boolean.sunset_lights_on'].state\nconst weather = states['weather.iron_nerd_weather_station'].state\nconst vacation = states['input_boolean.vacation_mode'].state\nconst upBathOcc = states['binary_sensor.upstairs_bathroom_occupied'].state\nconst deskLights = states['light.tina_desk_lights'].state\nconst adaptiveSleep = flow.get(\"adaptiveSleep\", \"diskCon\")\nconst selScenesMain = flow.get(\"selScenesMain\", \"diskCon\")\nconst selScenesTinaDesk = flow.get(\"selScenesTinaDesk\", \"diskCon\")\nconst booleanOff = flow.get(\"booleanOff\", \"diskCon\")\nconst payload = msg.payload\nnode.log(\"Time-based Automations: Constants Set\")\n\n// Set a few important variables\n\nlet time = {}\nlet topic = {}\nlet delay = {}\nlet eventCall = {}\n\nif (payload == 0 || payload === 'weather') {\n    time = \"night\"\n    eventCall = \"on\"\n} else if (payload == 1) {\n    time = \"day\"\n    eventCall = \"off\"\n}\n\nif (msg.topic === 'timer-finished' || msg.topic === 'manual-trigger' || msg.topic === 'weather') {\n    topic = msg.topic\n}\n\nif (topic === 'timer-finished' || topic === 'manual-trigger') {\n    delay = 'off'\n} else if (topic === 'weather') {\n    delay = 'off'\n} else if (weather === 'sunny' || weather === 'clear-night') {\n    delay = 'on'\n} else {\n    delay = 'off'\n}\nnode.log(\"Time-based Automations: Main variables defined\")\n\n// ---------- Configuration ----------\n// Decide which nighttime lighting to turn off at sunrise\nlet lightsOff = [\"light.hallway_overhead\"]\n\nif (holidayHold === 'off') {\n    lightsOff.push(\"light.front_porch_light\")\n}\n\nif (upBathOcc === 'off') {\n    lightsOff.push(\"light.upstairs_bathroom_lights\")\n}\n\n// Sunset lights timer settings\nlet timerEntity = [\"timer.sunset_lighting_timer\"]\nlet timerDuration = \"00:30:00\"\n\n// Adaptive lighting switches to set\nlet switchAdaptive = []\nlet setAdaptive = {}\n\nif (time === 'day') {\n    if (holidayHold === 'on'){\n        switchAdaptive = flow.get(\"adaptiveDayHoliday\", \"diskCon\")\n    } else {\n        switchAdaptive = flow.get(\"adaptiveDay\", \"diskCon\")\n    }\n    setAdaptive = 'on'\n} else if (time === 'night') {\n    switchAdaptive = flow.get(\"adaptiveNight\", \"diskCon\")\n    if (holidayMode === 'on') {\n        setAdaptive = 'off'\n    } else {\n        setAdaptive = 'on'\n    }\n}\n\n// Notification settings\nlet notifyTitle = {}\nlet notifyMsg = {}\nlet sunsetStatus = {}\nif (sunsetLights === 'off') {\n    notifyTitle = \"Sunset Lights SKIPPED\"\n    notifyMsg = \"Lights not on due to nobody home, or toggle shutoff\"\n    sunsetStatus = \"Skipped\"\n} else {\n    notifyTitle = \"Sunset Lights On\"\n    if (topic === 'weather') {\n        notifyMsg = \"Lights on, delay cancelled due to weather change\"\n        sunsetStatus = \"Weather Change\"\n    } else if (topic === 'timer-finished') {\n        notifyMsg = \"Lights on because timer was finished manually\"\n        sunsetStatus = \"Manual Trigger\"\n    } else if (delay === 'on') {\n        notifyMsg = \"Lights on after delay due to clear weather\"\n        sunsetStatus = \"Delayed\"\n    } else if (delay === 'off') {\n        notifyMsg = \"Lights on early due to cloudy weather\"\n        sunsetStatus = \"Early\"\n    }\n}\n\n// Holiday Settings\nlet setHoliday = {}\nlet switchHoliday = [\"switch.animated_scene_\" + holiday]\nif (holidayMode === 'on') {\n    if (time === 'day') {\n        setHoliday = 'off'\n    } else if (time === 'night') {\n        setHoliday = 'on'\n    }\n}\n\nnode.log(\"Time-based Automations: Decision Logic Complete\")\n\n// ---------- Service Calls ----------\nlet sendLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": lightsOff\n        },\n        \"data\": {}\n    }\n}\n\nlet sendSleepOff = {\n    \"payload\": {\n        \"domain\": \"switch\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": adaptiveSleep\n        },\n        \"data\": {}\n    }\n}\n\nlet sendBooleanOff = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": booleanOff\n        },\n        \"data\": {}\n    }\n}\n\nlet sendAdaptive = {\n    \"payload\": {\n        \"domain\": \"switch\",\n        \"service\": \"turn_\" + setAdaptive,\n        \"target\": {\n            \"entity_id\": switchAdaptive\n        },\n        \"data\": {}\n    }\n}\n\nlet sendSceneResetMain = {\n    \"payload\": {\n        \"domain\": \"input_text\",\n        \"service\": \"set_value\",\n        \"target\": {\n            \"entity_id\": selScenesMain\n        },\n        \"data\": {\n            \"value\": \"Adaptive\"\n        }\n    }\n}\n\nlet sendSceneResetDesk = {\n    \"payload\": {\n        \"domain\": \"input_text\",\n        \"service\": \"set_value\",\n        \"target\": {\n            \"entity_id\": selScenesTinaDesk\n        },\n        \"data\": {\n            \"value\": \"Day Mode\"\n        }\n    }\n}\n\nlet sendHoliday = {\n    \"payload\": {\n        \"domain\": \"switch\",\n        \"service\": \"turn_\" + setHoliday,\n        \"target\": {\n            \"entity_id\": switchHoliday\n        },\n        \"data\": {}\n    }\n}\n\nlet sendTimer = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"start\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {\n            \"duration\": timerDuration\n        }\n    }\n}\n\nlet sendTimerCancel = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"cancel\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {}\n    }\n}\n\nlet sendNotifyPhone = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"text_notify\",\n        \"data\": {\n            \"who\": \"all\",\n            \"title\": notifyTitle,\n            \"message\": notifyMsg,\n            \"type\": \"normal\",\n            \"tag\": \"sunset-lights\"\n        }\n    }\n}\n\nlet sendNotifyTV = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"tv_notify\",\n        \"data\": {\n            \"who\": \"all\",\n            \"title\": notifyTitle,\n            \"message\": notifyMsg,\n            \"data\": {\n                \"fontsize\": \"large\",\n                \"duration\": 3,\n                \"transparency\": \"25%\"\n            }\n        }\n    }\n}\n\nlet sendFirstFloorScene = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"evening_on_first_floor\",\n        \"data\": {\n            \"sunset_lights\": 1\n        }\n    }\n}\n\nlet sendSecondFloorScene = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"evening_on_second_floor\",\n        \"data\": {\n            \"sunset_lights\": 1\n        }\n    }\n}\n\nlet sendDeskScene = {\n    \"payload\": {\n        \"domain\": \"input_select\",\n        \"service\": \"select_option\",\n        \"target\": {\n            \"entity_id\": [\"input_select.tina_desk_scenes\"]\n        },\n        \"data\": {\n            \"option\": \"Reset\"\n        }\n    }\n}\n\nlet sendExtraLights = {\n    \"payload\": {\n        \"event\": \"extraLights\",\n        \"data\": {\n            \"toggle\": eventCall\n        }\n    }\n}\n\nnode.log(\"Time-based Automations: Message Payloads Defined\")\n\nnode.log(\"----- Time-based Automations: Set Parameters\")\nnode.log(\"time: \" + time)\nnode.log(\"topic: \" + topic)\nnode.log(\"lightsOff: \" + lightsOff)\nnode.log(\"holidayMode: \" + holidayMode)\nnode.log(\"eventCall: \" + eventCall)\nif (time === 'night') {\n    node.log(\"weather: \" + weather)\n    node.log(\"delay: \" + delay)\n    node.log(\"sunsetStatus: \" + sunsetStatus)\n}\nif (holidayMode === 'on') {\n    node.log(\"switchHoliday: \" + switchHoliday)\n    node.log(\"holiday: \" + holiday)\n    node.log(\"holidayHold: \" + holidayHold)\n    node.log(\"switchHoliday: \" + switchHoliday)\n}\nnode.log(\"----- Time-based Automations: End Parameters -----\")\n\nif (vacation === 'off') {\n    if (time === \"day\") {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sunrise Flow\"})\n        node.send([null,[sendLights,sendBooleanOff],sendExtraLights])\n        setTimeout(() => {\n            node.send([null,[sendSleepOff,sendAdaptive,sendSceneResetMain,sendSceneResetDesk],null,null])\n            if (holidayMode === 'on' && holidayHold === 'off') {\n                node.send([null,[sendHoliday],null,null])\n            }\n        }, 5000)\n    } else if (time === \"night\") {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sunset Flow\"})\n        node.send([null,sendAdaptive,null,null])\n        if (holidayMode === 'on') {\n            setTimeout(() => {\n                node.send([null,sendHoliday,null,null])\n            }, 1000)\n        }\n        if (delay === 'on') {\n            node.send([null,sendTimer,null,null])\n        } else {\n            if (topic === 'weather') {\n                node.send([null,sendTimerCancel,null,null])\n            }\n            node.send([null,null,[sendFirstFloorScene,sendSecondFloorScene],sendExtraLights])\n            if (deskLights === 'on') {\n                node.send([null,sendDeskScene,null,null])\n            }\n            if (topic != 'manual-trigger') {\n                node.send([[sendNotifyPhone,sendNotifyTV],null,null,null])\n            }\n        }\n    }\n}\nnode.log(\"Time-based Automations: Processing Complete\")",
+        "func": "//! FLOW VARIABLES DEFINED IN START TAB\n\n// Set Constants\n\nconst states = global.get('homeassistant.homeAssistant.states')\nconst holidayMode = states['input_boolean.holiday_mode'].state\nconst holidayHold = states['input_boolean.holiday_mode_hold'].state\nconst currentHoliday = states['input_select.holiday_animation'].state\nconst holiday = currentHoliday.toLowerCase()\nconst sunsetLights = states['input_boolean.sunset_lights_on'].state\nconst vacation = states['input_boolean.vacation_mode'].state\nconst upBathOcc = states['binary_sensor.upstairs_bathroom_occupied'].state\nconst deskLights = states['light.tina_desk_lights'].state\nconst lux = states['sensor.living_room_illuminance'].state\nconst luxThreshold = states['input_number.living_room_lux_threshold'].state\nconst adaptiveSleep = flow.get(\"adaptiveSleep\", \"diskCon\")\nconst selScenesMain = flow.get(\"selScenesMain\", \"diskCon\")\nconst selScenesTinaDesk = flow.get(\"selScenesTinaDesk\", \"diskCon\")\nconst booleanOff = flow.get(\"booleanOff\", \"diskCon\")\nconst payload = msg.payload\nnode.log(\"Time-based Automations: Constants Set\")\n\n// Set a few important variables\n\nlet time = {}\nlet topic = {}\nlet delay = {}\nlet eventCall = {}\n\nif (payload == 0) {\n    time = \"night\"\n    eventCall = \"on\"\n} else if (payload == 1) {\n    time = \"day\"\n    eventCall = \"off\"\n}\n\nif (msg.topic === 'timer-finished' || msg.topic === 'manual-trigger' || msg.topic === 'lux') {\n    topic = msg.topic\n}\n\nif (topic === 'timer-finished' || topic === 'manual-trigger' || topic === 'lux') {\n    delay = 'off'\n} else if (lux > luxThreshold) {\n    delay = 'on'\n} else {\n    delay = 'off'\n}\nnode.log(\"Time-based Automations: Main variables defined\")\n\n// ---------- Configuration ----------\n// Decide which nighttime lighting to turn off at sunrise\nlet lightsOff = [\"light.hallway_overhead\"]\n\nif (holidayHold === 'off') {\n    lightsOff.push(\"light.front_porch_light\")\n}\n\nif (upBathOcc === 'off') {\n    lightsOff.push(\"light.upstairs_bathroom_lights\")\n}\n\n// Sunset lights timer settings\nlet timerEntity = [\"timer.sunset_lighting_timer\"]\nlet timerDuration = \"00:30:00\"\n\n// Adaptive lighting switches to set\nlet switchAdaptive = []\nlet setAdaptive = {}\n\nif (time === 'day') {\n    if (holidayHold === 'on'){\n        switchAdaptive = flow.get(\"adaptiveDayHoliday\", \"diskCon\")\n    } else {\n        switchAdaptive = flow.get(\"adaptiveDay\", \"diskCon\")\n    }\n    setAdaptive = 'on'\n} else if (time === 'night') {\n    switchAdaptive = flow.get(\"adaptiveNight\", \"diskCon\")\n    if (holidayMode === 'on') {\n        setAdaptive = 'off'\n    } else {\n        setAdaptive = 'on'\n    }\n}\n\n// Notification settings\nlet notifyTitle = {}\nlet notifyMsg = {}\nlet sunsetStatus = {}\nif (sunsetLights === 'off') {\n    notifyTitle = \"Sunset Lights SKIPPED\"\n    notifyMsg = \"Lights not on due to nobody home, or toggle shutoff\"\n    sunsetStatus = \"Skipped\"\n} else {\n    notifyTitle = \"Sunset Lights On\"\n    if (topic === 'timer-finished') {\n        notifyMsg = \"Lights on because timer was finished manually\"\n        sunsetStatus = \"Manual Trigger\"\n    } else if (topic === 'lux') {\n        notifyMsg = \"Lights on because light level dropped below threshold\"\n        sunsetStatus = \"Light Level Trigger\"\n    } else if (delay === 'on') {\n        notifyMsg = \"Lights on after delay due to sufficient light\"\n        sunsetStatus = \"Delayed\"\n    } else if (delay === 'off') {\n        notifyMsg = \"Lights on early due to low light\"\n        sunsetStatus = \"Early\"\n    }\n}\n\n// Holiday Settings\nlet setHoliday = {}\nlet switchHoliday = [\"switch.animated_scene_\" + holiday]\nif (holidayMode === 'on') {\n    if (time === 'day') {\n        setHoliday = 'off'\n    } else if (time === 'night') {\n        setHoliday = 'on'\n    }\n}\n\nnode.log(\"Time-based Automations: Decision Logic Complete\")\n\n// ---------- Service Calls ----------\nlet sendLights = {\n    \"payload\": {\n        \"domain\": \"light\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": lightsOff\n        },\n        \"data\": {}\n    }\n}\n\nlet sendSleepOff = {\n    \"payload\": {\n        \"domain\": \"switch\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": adaptiveSleep\n        },\n        \"data\": {}\n    }\n}\n\nlet sendBooleanOff = {\n    \"payload\": {\n        \"domain\": \"input_boolean\",\n        \"service\": \"turn_off\",\n        \"target\": {\n            \"entity_id\": booleanOff\n        },\n        \"data\": {}\n    }\n}\n\nlet sendAdaptive = {\n    \"payload\": {\n        \"domain\": \"switch\",\n        \"service\": \"turn_\" + setAdaptive,\n        \"target\": {\n            \"entity_id\": switchAdaptive\n        },\n        \"data\": {}\n    }\n}\n\nlet sendSceneResetMain = {\n    \"payload\": {\n        \"domain\": \"input_text\",\n        \"service\": \"set_value\",\n        \"target\": {\n            \"entity_id\": selScenesMain\n        },\n        \"data\": {\n            \"value\": \"Adaptive\"\n        }\n    }\n}\n\nlet sendSceneResetDesk = {\n    \"payload\": {\n        \"domain\": \"input_text\",\n        \"service\": \"set_value\",\n        \"target\": {\n            \"entity_id\": selScenesTinaDesk\n        },\n        \"data\": {\n            \"value\": \"Day Mode\"\n        }\n    }\n}\n\nlet sendHoliday = {\n    \"payload\": {\n        \"domain\": \"switch\",\n        \"service\": \"turn_\" + setHoliday,\n        \"target\": {\n            \"entity_id\": switchHoliday\n        },\n        \"data\": {}\n    }\n}\n\nlet sendTimer = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"start\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {\n            \"duration\": timerDuration\n        }\n    }\n}\n\nlet sendTimerCancel = {\n    \"payload\": {\n        \"domain\": \"timer\",\n        \"service\": \"cancel\",\n        \"target\": {\n            \"entity_id\": timerEntity\n        },\n        \"data\": {}\n    }\n}\n\nlet sendNotifyPhone = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"text_notify\",\n        \"data\": {\n            \"who\": \"all\",\n            \"title\": notifyTitle,\n            \"message\": notifyMsg,\n            \"type\": \"normal\",\n            \"tag\": \"sunset-lights\"\n        }\n    }\n}\n\nlet sendNotifyTV = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"tv_notify\",\n        \"data\": {\n            \"who\": \"all\",\n            \"title\": notifyTitle,\n            \"message\": notifyMsg,\n            \"data\": {\n                \"fontsize\": \"large\",\n                \"duration\": 3,\n                \"transparency\": \"25%\"\n            }\n        }\n    }\n}\n\nlet sendFirstFloorScene = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"evening_on_first_floor\",\n        \"data\": {\n            \"sunset_lights\": 1\n        }\n    }\n}\n\nlet sendSecondFloorScene = {\n    \"payload\": {\n        \"domain\": \"script\",\n        \"service\": \"evening_on_second_floor\",\n        \"data\": {\n            \"sunset_lights\": 1\n        }\n    }\n}\n\nlet sendDeskScene = {\n    \"payload\": {\n        \"domain\": \"input_select\",\n        \"service\": \"select_option\",\n        \"target\": {\n            \"entity_id\": [\"input_select.tina_desk_scenes\"]\n        },\n        \"data\": {\n            \"option\": \"Reset\"\n        }\n    }\n}\n\nlet sendExtraLights = {\n    \"payload\": {\n        \"event\": \"extraLights\",\n        \"data\": {\n            \"toggle\": eventCall\n        }\n    }\n}\n\nnode.log(\"Time-based Automations: Message Payloads Defined\")\n\nnode.log(\"----- Time-based Automations: Set Parameters\")\nnode.log(\"time: \" + time)\nnode.log(\"topic: \" + topic)\nnode.log(\"lightsOff: \" + lightsOff)\nnode.log(\"holidayMode: \" + holidayMode)\nnode.log(\"eventCall: \" + eventCall)\nif (time === 'night') {\n    node.log(\"lux: \" + lux)\n    node.log(\"luxThreshold: \" + luxThreshold)\n    node.log(\"delay: \" + delay)\n    node.log(\"sunsetStatus: \" + sunsetStatus)\n}\nif (holidayMode === 'on') {\n    node.log(\"switchHoliday: \" + switchHoliday)\n    node.log(\"holiday: \" + holiday)\n    node.log(\"holidayHold: \" + holidayHold)\n    node.log(\"switchHoliday: \" + switchHoliday)\n}\nnode.log(\"----- Time-based Automations: End Parameters -----\")\n\nif (vacation === 'off') {\n    if (time === \"day\") {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sunrise Flow\"})\n        node.send([null,[sendLights,sendBooleanOff],sendExtraLights])\n        setTimeout(() => {\n            node.send([null,[sendSleepOff,sendAdaptive,sendSceneResetMain,sendSceneResetDesk],null,null])\n            if (holidayMode === 'on' && holidayHold === 'off') {\n                node.send([null,[sendHoliday],null,null])\n            }\n        }, 5000)\n    } else if (time === \"night\") {\n        node.status({fill:\"green\",shape:\"dot\",text:\"Sunset Flow\"})\n        node.send([null,sendAdaptive,null,null])\n        if (holidayMode === 'on') {\n            setTimeout(() => {\n                node.send([null,sendHoliday,null,null])\n            }, 1000)\n        }\n        if (delay === 'on') {\n            node.send([null,sendTimer,null,null])\n        } else {\n            if (topic === 'lux') {\n                node.send([null,sendTimerCancel,null,null])\n            }\n            node.send([null,null,[sendFirstFloorScene,sendSecondFloorScene],sendExtraLights])\n            if (deskLights === 'on') {\n                node.send([null,sendDeskScene,null,null])\n            }\n            if (topic != 'manual-trigger') {\n                node.send([[sendNotifyPhone,sendNotifyTV],null,null,null])\n            }\n        }\n    }\n}\nnode.log(\"Time-based Automations: Processing Complete\")",
         "outputs": 4,
         "timeout": 0,
         "noerr": 0,
@@ -7299,85 +7299,6 @@
         "icon": "node-red-node-suncalc/sun.png"
     },
     {
-        "id": "4b76bbe58ee8175e",
-        "type": "server-state-changed",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Weather Change",
-        "server": "9e87348d.9c1c48",
-        "version": 5,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "weather.iron_nerd_weather_station",
-        "entityIdType": "exact",
-        "outputInitially": false,
-        "stateType": "str",
-        "ifState": "sunny, clear-night",
-        "ifStateType": "str",
-        "ifStateOperator": "does_not_include",
-        "outputOnlyOnStateChange": true,
-        "for": "3",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": true,
-        "ignoreCurrentStateUnavailable": true,
-        "outputProperties": [
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "weather",
-                "valueType": "str"
-            }
-        ],
-        "x": 120,
-        "y": 360,
-        "wires": [
-            [
-                "d8e3c9bf4f26f31f"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "d8e3c9bf4f26f31f",
-        "type": "api-current-state",
-        "z": "e44b1e7a8ef7ae1d",
-        "name": "Timer Running?",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 2,
-        "halt_if": "active",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "timer.sunset_lighting_timer",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 255,
-        "y": 360,
-        "wires": [
-            [
-                "5ec63f0857df4164"
-            ],
-            []
-        ],
-        "outputLabels": [
-            "Running",
-            "Idle"
-        ],
-        "l": false
-    },
-    {
         "id": "51c4e0e4f75a06df",
         "type": "ha-fire-event",
         "z": "e44b1e7a8ef7ae1d",
@@ -7392,6 +7313,75 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "1e292a2db40e58de",
+        "type": "server-state-changed",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Light Level",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entityId": "sensor.living_room_illuminance",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "num",
+        "ifState": "",
+        "ifStateType": "num",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "lux",
+                "valueType": "str"
+            }
+        ],
+        "x": 100,
+        "y": 360,
+        "wires": [
+            [
+                "96b23f9fc6e83696"
+            ]
+        ]
+    },
+    {
+        "id": "96b23f9fc6e83696",
+        "type": "function",
+        "z": "e44b1e7a8ef7ae1d",
+        "name": "Light Level Filter",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst luxThreshold = states['input_number.living_room_lux_threshold'].state\nconst timer = states['timer.sunset_lighting_timer'].state\nconst payload = msg.payload\n\nif (timer === 'active' && payload <= luxThreshold) {\n    node.status({fill:'green',shape:'dot',text:'Sent'})\n    node.send(msg)\n} else {\n    node.status({fill:'red',shape:'ring',text:'Blocked'})\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 215,
+        "y": 360,
+        "wires": [
+            [
+                "5ec63f0857df4164"
+            ]
+        ],
+        "icon": "node-red-node-suncalc/sun.png",
+        "l": false
     },
     {
         "id": "134433d6e21dab5b",
