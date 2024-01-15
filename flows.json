@@ -817,17 +817,13 @@
             "463689442b9d2046",
             "5350d2264880d0ad",
             "b9741e2e2ed0448b",
-            "d0cbe3d9ed984771",
             "fd33d3e819d8c772",
             "f70e4a4480d43b2b",
-            "12e93caa5bb34d08",
-            "c24d343c3f54e24d",
-            "bdf337f7654b461b",
             "5e00ecbccbe51462"
         ],
-        "x": 34,
+        "x": 54,
         "y": 339,
-        "w": 1632,
+        "w": 1612,
         "h": 382
     },
     {
@@ -11454,32 +11450,6 @@
         ]
     },
     {
-        "id": "d0cbe3d9ed984771",
-        "type": "inject",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 940,
-        "y": 420,
-        "wires": [
-            [
-                "b9741e2e2ed0448b"
-            ]
-        ]
-    },
-    {
         "id": "f18aab5a5bda9a84",
         "type": "api-call-service",
         "z": "5e238cbbe6d612c9",
@@ -12022,84 +11992,6 @@
             "Cancel Timer",
             "Set Scene",
             "Lights Off"
-        ]
-    },
-    {
-        "id": "12e93caa5bb34d08",
-        "type": "inject",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "on",
-        "payloadType": "str",
-        "x": 130,
-        "y": 500,
-        "wires": [
-            [
-                "fd33d3e819d8c772"
-            ]
-        ]
-    },
-    {
-        "id": "c24d343c3f54e24d",
-        "type": "inject",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "off",
-        "payloadType": "str",
-        "x": 130,
-        "y": 560,
-        "wires": [
-            [
-                "fd33d3e819d8c772"
-            ]
-        ]
-    },
-    {
-        "id": "bdf337f7654b461b",
-        "type": "inject",
-        "z": "5e238cbbe6d612c9",
-        "g": "eccca853a916b662",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 920,
-        "y": 620,
-        "wires": [
-            [
-                "b9741e2e2ed0448b"
-            ]
         ]
     },
     {
