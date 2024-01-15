@@ -11484,7 +11484,7 @@
         "type": "function",
         "z": "5e238cbbe6d612c9",
         "g": "f16f28689b7ec2b4",
-        "name": "Delay",
+        "name": "On/Off",
         "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst lights = states['light.stairwell_led_strip'].state\nconst duration = states['input_number.stairwell_lights_off_delay'].state\nconst lux = states['sensor.stairwell_bottom_illuminance'].state\nconst threshold = states['input_number.stairwell_lux_threshold'].state\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nif (payload === 'on') {\n    if (lux <= threshold || lights === 'on') {\n        node.status({fill:'green',shape:'dot',text:'Lights On'})\n        node.send([msg,null])\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Too bright'})\n    }\n} else if (payload === 'off') {\n    if (lights === 'on') {\n        msg.duration = newDuration\n        node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n        node.send([null,msg])\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n    }\n}",
         "outputs": 2,
         "timeout": "",
