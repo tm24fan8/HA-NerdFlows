@@ -1205,8 +1205,8 @@
             "8d2e7fb5f214879c",
             "b281061a4b08d2eb"
         ],
-        "x": 34,
-        "y": 759,
+        "x": 14,
+        "y": 919,
         "w": 792,
         "h": 202
     },
@@ -1803,6 +1803,47 @@
         "y": 739,
         "w": 792,
         "h": 202
+    },
+    {
+        "id": "0f7fdf39e4400032",
+        "type": "group",
+        "z": "eff21041cc941fef",
+        "name": "Living Room",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "87d449113f439710",
+            "29c0dbf6add54879",
+            "7305cfffd320c75a",
+            "f511cce02d6ad811",
+            "130c6ac167cd49f0",
+            "7c33144c3e356edf",
+            "bcbc098444744cbb",
+            "f31cabbf0dd66d75"
+        ],
+        "x": 14,
+        "y": 699,
+        "w": 1092,
+        "h": 202
+    },
+    {
+        "id": "dcdfa098347020de",
+        "type": "group",
+        "z": "eff21041cc941fef",
+        "name": "Back Door",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "74f9d2bf4a8c0b53",
+            "5e7a082800eeb73c",
+            "f0ef9a565f72dcae"
+        ],
+        "x": 754,
+        "y": 19,
+        "w": 652,
+        "h": 82
     },
     {
         "id": "fba69dfc80829db7",
@@ -4039,6 +4080,39 @@
             {
                 "property": "name",
                 "value": "Emma Bedroom Motion Lighting"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:motion-sensor"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "4a9187b8b68e4181",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "Living Room Motion Lighting",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Living Room Motion Lighting"
             },
             {
                 "property": "icon",
@@ -9716,8 +9790,8 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 550,
-        "y": 920,
+        "x": 530,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -9782,6 +9856,7 @@
         "id": "74f9d2bf4a8c0b53",
         "type": "server-state-changed",
         "z": "eff21041cc941fef",
+        "g": "dcdfa098347020de",
         "name": "Back Door Open",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -9817,8 +9892,8 @@
                 "valueType": "str"
             }
         ],
-        "x": 140,
-        "y": 1020,
+        "x": 860,
+        "y": 60,
         "wires": [
             [
                 "f0ef9a565f72dcae"
@@ -9830,6 +9905,7 @@
         "id": "5e7a082800eeb73c",
         "type": "api-call-service",
         "z": "eff21041cc941fef",
+        "g": "dcdfa098347020de",
         "name": "Mud Room Lights",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -9847,8 +9923,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 570,
-        "y": 1020,
+        "x": 1290,
+        "y": 60,
         "wires": [
             []
         ]
@@ -9857,6 +9933,7 @@
         "id": "f0ef9a565f72dcae",
         "type": "api-current-state",
         "z": "eff21041cc941fef",
+        "g": "dcdfa098347020de",
         "name": "Early Night Mode",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -9883,8 +9960,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 350,
-        "y": 1020,
+        "x": 1070,
+        "y": 60,
         "wires": [
             [
                 "5e7a082800eeb73c"
@@ -9967,8 +10044,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
-        "y": 860,
+        "x": 270,
+        "y": 1020,
         "wires": [
             [
                 "b281061a4b08d2eb"
@@ -10001,8 +10078,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 550,
-        "y": 860,
+        "x": 530,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -10029,8 +10106,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 730,
-        "y": 800,
+        "x": 710,
+        "y": 960,
         "wires": [
             []
         ]
@@ -10055,8 +10132,8 @@
                 "valueType": "date"
             }
         ],
-        "x": 140,
-        "y": 920,
+        "x": 120,
+        "y": 1080,
         "wires": [
             [
                 "5123a607588fa737"
@@ -10103,8 +10180,8 @@
                 "valueType": "str"
             }
         ],
-        "x": 130,
-        "y": 860,
+        "x": 110,
+        "y": 1020,
         "wires": [
             [
                 "f84e6b5157e857cf"
@@ -10137,8 +10214,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 540,
-        "y": 800,
+        "x": 520,
+        "y": 960,
         "wires": [
             [
                 "41a8d5ef20cf55d7"
@@ -10625,6 +10702,273 @@
             [
                 "c983b44381b46ab5"
             ],
+            []
+        ]
+    },
+    {
+        "id": "87d449113f439710",
+        "type": "server-state-changed",
+        "z": "eff21041cc941fef",
+        "g": "0f7fdf39e4400032",
+        "name": "Living Room Motion",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "outputs": 1,
+        "exposeAsEntityConfig": "4a9187b8b68e4181",
+        "entityId": "binary_sensor.living_room_motion",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "motion",
+                "valueType": "str"
+            }
+        ],
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "7305cfffd320c75a"
+            ]
+        ]
+    },
+    {
+        "id": "29c0dbf6add54879",
+        "type": "server-events",
+        "z": "eff21041cc941fef",
+        "g": "0f7fdf39e4400032",
+        "name": "Timer Finished",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "eventType": "timer.finished",
+        "eventData": "{\"entity_id\":\"timer.living_room_motion_timer\"}",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "finished",
+                "valueType": "str"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "timer",
+                "valueType": "str"
+            }
+        ],
+        "x": 140,
+        "y": 800,
+        "wires": [
+            [
+                "7305cfffd320c75a"
+            ]
+        ]
+    },
+    {
+        "id": "7305cfffd320c75a",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "g": "0f7fdf39e4400032",
+        "name": "Living Room Processing",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst peoplePresent = states['binary_sensor.people_present'].state\nconst vacationMode = states['input_boolean.vacation_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst kallenSleeping = states['input_boolean.kallen_sleeping'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst duration = states['input_number.living_room_lights_off_delay'].state\nconst newDuration = duration * 60\nconst topic = msg.topic\nconst payload = msg.payload\n\nlet block = {}\n\nif ((peoplePresent === 'on' && vacationMode === 'off' && nightMode === 'on') && (kallenSleeping === 'on' || kallenOvernight === 'on')) {\n    block = false\n} else {\n    block = true\n}\n\nif (topic === 'motion' && block === false) {\n    if (payload === 'on') {\n        node.status({fill:'green',shape:'dot',text:'Motion On'})\n        node.send([msg,null,null])\n    } else if (payload === 'off') {\n        msg.duration = newDuration\n        node.status({fill:'red',shape:'ring',text:'Motion Off'})\n        node.send([null,msg,null])\n    }\n} else if (topic === 'timer') {\n    if (payload === 'finished') {\n        node.status({fill:'green',shape:'dot',text:'Timer Finished'})\n        node.send([null,null,msg])\n    }\n} else if (block === true) {\n    node.status({fill:'red',shape:'ring',text:'Blocked'})\n}",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 800,
+        "wires": [
+            [
+                "130c6ac167cd49f0"
+            ],
+            [
+                "bcbc098444744cbb"
+            ],
+            [
+                "f31cabbf0dd66d75"
+            ]
+        ],
+        "outputLabels": [
+            "Motion On",
+            "Motion Off",
+            "Timer Finished"
+        ],
+        "icon": "node-red-contrib-huemagic/hue-motion.svg"
+    },
+    {
+        "id": "f511cce02d6ad811",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "0f7fdf39e4400032",
+        "name": "First Floor Lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.first_floor_lights"
+        ],
+        "data": "{}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 810,
+        "y": 740,
+        "wires": [
+            [
+                "7c33144c3e356edf"
+            ]
+        ]
+    },
+    {
+        "id": "130c6ac167cd49f0",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "0f7fdf39e4400032",
+        "name": "Cancel Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "cancel",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.living_room_motion_timer"
+        ],
+        "data": "{}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 610,
+        "y": 740,
+        "wires": [
+            [
+                "f511cce02d6ad811"
+            ]
+        ]
+    },
+    {
+        "id": "7c33144c3e356edf",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "0f7fdf39e4400032",
+        "name": "Set Scenes",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.dining_room_lamp_scenes",
+            "input_select.downstairs_bathroom_scenes",
+            "input_select.living_room_scenes",
+            "input_select.mud_room_scenes",
+            "input_select.tina_lamp_scenes"
+        ],
+        "data": "{\t    \"option\": \"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1010,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bcbc098444744cbb",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "0f7fdf39e4400032",
+        "name": "Start Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "start",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.living_room_motion_timer"
+        ],
+        "data": "{\t    \"duration\": duration\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 610,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f31cabbf0dd66d75",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "0f7fdf39e4400032",
+        "name": "Lights Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.dining_room_lamp",
+            "light.downstairs_bathroom_lights",
+            "light.living_room_lights",
+            "light.mud_room_overhead",
+            "light.tina_desk_lights"
+        ],
+        "data": "{}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 600,
+        "y": 860,
+        "wires": [
             []
         ]
     },
