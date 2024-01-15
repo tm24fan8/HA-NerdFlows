@@ -1775,12 +1775,15 @@
             "33ba5ffd653f09a1",
             "0df82708f1ef261c",
             "48c2ad199a4ab538",
-            "4e3d058c164d6a97"
+            "4e3d058c164d6a97",
+            "ddc0d0f404305275",
+            "648067c40fc0423c",
+            "58eca02aaf6bde81"
         ],
         "x": 34,
         "y": 739,
         "w": 792,
-        "h": 202
+        "h": 262
     },
     {
         "id": "ba738e13229c781b",
@@ -12120,6 +12123,97 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "ddc0d0f404305275",
+        "type": "server-state-changed",
+        "z": "5e238cbbe6d612c9",
+        "g": "f16f28689b7ec2b4",
+        "name": "Light On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entityId": "light.stairwell_led_strip",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 120,
+        "y": 960,
+        "wires": [
+            [
+                "648067c40fc0423c"
+            ]
+        ]
+    },
+    {
+        "id": "648067c40fc0423c",
+        "type": "function",
+        "z": "5e238cbbe6d612c9",
+        "g": "f16f28689b7ec2b4",
+        "name": "Adjust",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst giveMeDarkness = states['input_boolean.give_me_darkness'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst payload = msg.payload\n\nlet brt1 = 50\nlet brt2 = 100\nlet brt3 = 150\nlet brtmax = 255\nlet colortemp = {}\nlet brt = {}\n\nif (earlyNightMode === 'off' && giveMeDarkness === 'off' && nightMode === 'off' && goodnight === 'off') {\n    colortemp = 4000\n} else {\n    colortemp = 2000\n}\n\nif (goodnight === 'on') {\n    brt = brt1\n} else if (nightMode === 'on') {\n    brt = brt3\n} else if (giveMeDarkness === 'on') {\n    brt === brt2\n} else if (earlyNightMode === 'on') {\n    brt = brt3\n} else {\n    brt = brtmax\n}\n\nlet msgAdjust = {\n    \"brightness\": brt,\n    \"colortemp\": colortemp\n}\n\nlet msgStatus = 'brt ' + brt + ', colortemp ' + colortemp\n\nif (payload === 'on') {\n    node.status({fill:'green',shape:'dot',text:msgStatus})\n    node.send(msgAdjust)\n} else {\n    node.status({fill:'red',shape:'ring',text:'Light Off'})\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 960,
+        "wires": [
+            [
+                "58eca02aaf6bde81"
+            ]
+        ]
+    },
+    {
+        "id": "58eca02aaf6bde81",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "f16f28689b7ec2b4",
+        "name": "Lights On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.stairwell_led_strip"
+        ],
+        "data": "{\t    \"brightness\": brightness,\t    \"color_temp_kelvin\": colortemp\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 540,
+        "y": 960,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "07049ae77b6751c6",
