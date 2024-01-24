@@ -1772,14 +1772,16 @@
             "0df82708f1ef261c",
             "48c2ad199a4ab538",
             "4e3d058c164d6a97",
-            "ddc0d0f404305275",
-            "648067c40fc0423c",
-            "58eca02aaf6bde81"
+            "76423fc24fedb52c",
+            "48c5c102461f0981",
+            "b05b87a1e43f11f9",
+            "ef677459c795d246",
+            "1f1489a0514e233b"
         ],
         "x": 34,
         "y": 739,
         "w": 792,
-        "h": 262
+        "h": 382
     },
     {
         "id": "ba738e13229c781b",
@@ -11869,7 +11871,7 @@
         "type": "api-call-service",
         "z": "5e238cbbe6d612c9",
         "g": "f16f28689b7ec2b4",
-        "name": "Turn off light",
+        "name": "Stairwell",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -11888,8 +11890,8 @@
         "queue": "none",
         "output_location": "",
         "output_location_type": "none",
-        "x": 550,
-        "y": 900,
+        "x": 540,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -11900,22 +11902,34 @@
         "z": "5e238cbbe6d612c9",
         "g": "f16f28689b7ec2b4",
         "name": "On/Off",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst lights = states['light.stairwell_led_strip'].state\nconst duration = states['input_number.stairwell_lights_off_delay'].state\nconst lux = parseInt(states['sensor.stairwell_bottom_illuminance'].state)\nconst threshold = parseInt(states['input_number.stairwell_lux_threshold'].state)\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nif (payload === 'on') {\n    if (lux <= threshold || lights === 'on') {\n        node.status({fill:'green',shape:'dot',text:'Lights On'})\n        node.send([msg,null])\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Too bright'})\n    }\n} else if (payload === 'off') {\n    if (lights === 'on') {\n        msg.duration = newDuration\n        node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n        node.send([null,msg])\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n    }\n}",
-        "outputs": 2,
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst stairwellLights = states['light.stairwell_led_strip'].state\nconst hallwayLights = states['light.hallway_overhead'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\nconst duration = states['input_number.stairwell_lights_off_delay'].state\nconst lux = parseInt(states['sensor.stairwell_bottom_illuminance'].state)\nconst threshold = parseInt(states['input_number.stairwell_lux_threshold'].state)\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nlet hallwayScene = {}\nlet hallwayAction = {}\n\nif (payload === 'on') {\n    if (goodnight === 'on') {\n        hallwayAction = 'off'\n    } else if (nightMode === 'on' || masterBedroomSleep === 'on') {\n        hallwayAction = 'on'\n        hallwayScene = 'Dimmed'\n    } else if (earlyNightMode === 'on') {\n        hallwayAction = 'on'\n        hallwayScene = 'Adaptive'\n    } else {\n        hallwayAction = 'off'\n    }\n}\n\nmsg.hallway = hallwayAction\nmsg.scene = hallwayScene\n\nif (payload === 'on') {\n    if (lux <= threshold || stairwellLights === 'on' || hallwayLights === 'on') {\n        if (hallwayScene === 'Adaptive') {\n            node.send([null,null,msg,msg])\n        } else if (hallwayAction === 'on') {\n            node.send([null,null,msg,null])\n        }\n        node.status({fill:'green',shape:'dot',text:'Lights On'})\n        node.send([msg,null,null,null])\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Too bright'})\n    }\n} else if (payload === 'off') {\n    if (stairwellLights === 'on') {\n        msg.duration = newDuration\n        node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n        node.send([null,msg,null])\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n    }\n}",
+        "outputs": 4,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
-        "y": 840,
+        "x": 310,
+        "y": 860,
         "wires": [
             [
                 "4e3d058c164d6a97"
             ],
             [
                 "96e7237a63089317"
+            ],
+            [
+                "b05b87a1e43f11f9"
+            ],
+            [
+                "48c5c102461f0981"
             ]
+        ],
+        "outputLabels": [
+            "Stairwell",
+            "Timer",
+            "Hallway Scene",
+            "Hallway On/Off"
         ],
         "icon": "node-red/timer.svg"
     },
@@ -11996,10 +12010,10 @@
             }
         ],
         "x": 140,
-        "y": 900,
+        "y": 960,
         "wires": [
             [
-                "f18aab5a5bda9a84"
+                "76423fc24fedb52c"
             ]
         ]
     },
@@ -12044,7 +12058,7 @@
             }
         ],
         "x": 130,
-        "y": 840,
+        "y": 860,
         "wires": [
             [
                 "293a957a5c4f79fa"
@@ -12432,16 +12446,104 @@
         "l": false
     },
     {
-        "id": "ddc0d0f404305275",
+        "id": "76423fc24fedb52c",
+        "type": "function",
+        "z": "5e238cbbe6d612c9",
+        "g": "f16f28689b7ec2b4",
+        "name": "Settings",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\n\nlet hallwayScene = {}\nlet hallwayAction = {}\n\nif (goodnight === 'on') {\n    hallwayAction = 'off'\n} else if (masterBedroomSleep === 'off' && (earlyNightMode === 'on' || nightMode === 'on')) {\n    hallwayAction = 'on'\n    hallwayScene = 'Nightlight'\n} else {\n    hallwayAction = 'off'\n}\n\nmsg.hallway = hallwayAction\n\n// Turn off Stairwell LED Strip\nnode.send([msg,null])\n\n// Hallway actions\nif (hallwayAction === 'on') {\n    msg.scene = hallwayScene\n    node.status({fill:'green',shape:'dot',text:'Hallway ' + hallwayScene})\n    node.send([null,null,msg])\n} else if (hallwayAction === 'off') {\n    node.status({fill:'green',shape:'dot',text:'Hallway Off'})\n    node.send([null,msg,null])\n}",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 960,
+        "wires": [
+            [
+                "b05b87a1e43f11f9"
+            ],
+            [
+                "48c5c102461f0981"
+            ],
+            [
+                "f18aab5a5bda9a84"
+            ]
+        ],
+        "outputLabels": [
+            "Scene",
+            "Hallway",
+            "Stairwell"
+        ]
+    },
+    {
+        "id": "48c5c102461f0981",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "f16f28689b7ec2b4",
+        "name": "Hallway On/Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_{{hallway}}",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.hallway_overhead"
+        ],
+        "data": "{}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 560,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b05b87a1e43f11f9",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "f16f28689b7ec2b4",
+        "name": "Hallway Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.upstairs_hallway_scenes"
+        ],
+        "data": "{\t    \"option\": scene\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 560,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef677459c795d246",
         "type": "server-state-changed",
         "z": "5e238cbbe6d612c9",
         "g": "f16f28689b7ec2b4",
-        "name": "Light On",
+        "name": "Goodnight",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "outputs": 1,
         "exposeAsEntityConfig": "",
-        "entityId": "light.stairwell_led_strip",
+        "entityId": "input_boolean.goodnight",
         "entityIdType": "exact",
         "outputInitially": false,
         "stateType": "str",
@@ -12466,58 +12568,37 @@
             }
         ],
         "x": 120,
-        "y": 960,
+        "y": 1080,
         "wires": [
             [
-                "648067c40fc0423c"
+                "1f1489a0514e233b"
             ]
         ]
     },
     {
-        "id": "648067c40fc0423c",
-        "type": "function",
-        "z": "5e238cbbe6d612c9",
-        "g": "f16f28689b7ec2b4",
-        "name": "Adjust",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst giveMeDarkness = states['input_boolean.give_me_darkness'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst payload = msg.payload\n\nlet brt1 = 50\nlet brt2 = 100\nlet brt3 = 150\nlet brtmax = 255\nlet colortemp = {}\nlet brt = {}\n\nif (earlyNightMode === 'off' && giveMeDarkness === 'off' && nightMode === 'off' && goodnight === 'off') {\n    colortemp = 4000\n} else {\n    colortemp = 2000\n}\n\nif (goodnight === 'on') {\n    brt = brt1\n} else if (nightMode === 'on') {\n    brt = brt3\n} else if (giveMeDarkness === 'on') {\n    brt === brt2\n} else if (earlyNightMode === 'on') {\n    brt = brt3\n} else {\n    brt = brtmax\n}\n\nlet msgAdjust = {\n    \"brightness\": brt,\n    \"colortemp\": colortemp\n}\n\nlet msgStatus = 'brt ' + brt + ', colortemp ' + colortemp\n\nif (payload === 'on') {\n    node.status({fill:'green',shape:'dot',text:msgStatus})\n    node.send(msgAdjust)\n} else {\n    node.status({fill:'red',shape:'ring',text:'Light Off'})\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 290,
-        "y": 960,
-        "wires": [
-            [
-                "58eca02aaf6bde81"
-            ]
-        ]
-    },
-    {
-        "id": "58eca02aaf6bde81",
+        "id": "1f1489a0514e233b",
         "type": "api-call-service",
         "z": "5e238cbbe6d612c9",
         "g": "f16f28689b7ec2b4",
-        "name": "Lights On",
+        "name": "Sleep Mode",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
-        "domain": "light",
-        "service": "turn_on",
+        "domain": "switch",
+        "service": "turn_{{payload}}",
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "light.stairwell_led_strip"
+            "switch.adaptive_lighting_sleep_mode_stairwell"
         ],
-        "data": "{\t    \"brightness\": brightness,\t    \"color_temp_kelvin\": colortemp\t}",
-        "dataType": "jsonata",
+        "data": "{}",
+        "dataType": "json",
         "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 540,
-        "y": 960,
+        "x": 550,
+        "y": 1080,
         "wires": [
             []
         ]
