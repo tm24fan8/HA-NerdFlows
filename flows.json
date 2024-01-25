@@ -1263,7 +1263,8 @@
             "b57e12eb73074535",
             "93b718cd47747ccc",
             "c8af362d48d5c0ad",
-            "3463c4f2bf6388fe"
+            "3463c4f2bf6388fe",
+            "9d1cf8af02a6c86b"
         ],
         "x": 54,
         "y": 39,
@@ -1850,6 +1851,36 @@
         "y": 19,
         "w": 652,
         "h": 82
+    },
+    {
+        "id": "c4c2c79b692236a0",
+        "type": "group",
+        "z": "47f17992fab9b4f5",
+        "name": "Basement Shutdown",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "56c84e793b8b0d79",
+            "9751c5a6a1b98b7d",
+            "a4490fb4765e1c9c",
+            "0cfd7edd88cfa0de",
+            "4c7184cd35bf3f1f",
+            "4681a8b5fa2d942c",
+            "09dd0d2cf254619e",
+            "bbcf0451ac4c4cd4",
+            "f052c9629cad7a5f",
+            "80c5f8a40169fcb7",
+            "a9bbf53b9584976a",
+            "cc0407d29b656ca6",
+            "fc1ca3e2f921b01e",
+            "18cd2aed123cdaa8",
+            "8851dbeb9b28003a"
+        ],
+        "x": 94,
+        "y": 799,
+        "w": 1492,
+        "h": 262
     },
     {
         "id": "fba69dfc80829db7",
@@ -13678,6 +13709,465 @@
         "wires": []
     },
     {
+        "id": "56c84e793b8b0d79",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Turn off any active modes",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.gaming_mode",
+            "input_boolean.recliner_mode",
+            "input_boolean.studio_quiet"
+        ],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 290,
+        "y": 840,
+        "wires": [
+            [
+                "a4490fb4765e1c9c",
+                "4c7184cd35bf3f1f",
+                "f052c9629cad7a5f",
+                "80c5f8a40169fcb7"
+            ]
+        ]
+    },
+    {
+        "id": "9751c5a6a1b98b7d",
+        "type": "link in",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Basement Shutdown",
+        "links": [
+            "9d1cf8af02a6c86b"
+        ],
+        "x": 135,
+        "y": 840,
+        "wires": [
+            [
+                "56c84e793b8b0d79"
+            ]
+        ]
+    },
+    {
+        "id": "a4490fb4765e1c9c",
+        "type": "api-current-state",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "If Basement TV is not playing",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "playing",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "entity_id": "media_player.basement_tv",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "tv",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 580,
+        "y": 900,
+        "wires": [
+            [
+                "0cfd7edd88cfa0de"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "Not Playing",
+            "Else"
+        ]
+    },
+    {
+        "id": "0cfd7edd88cfa0de",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Turn off Basement TV",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "media_player",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "media_player.basement_tv"
+        ],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 840,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c7184cd35bf3f1f",
+        "type": "api-current-state",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "If K's PC is not sched for updates",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.kallen_computer_updates",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "kallen-updates",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 600,
+        "y": 960,
+        "wires": [
+            [
+                "4681a8b5fa2d942c"
+            ],
+            [
+                "09dd0d2cf254619e"
+            ]
+        ],
+        "outputLabels": [
+            "No Updates",
+            "Else"
+        ]
+    },
+    {
+        "id": "4681a8b5fa2d942c",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Shut Down K's PC",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "kallen_desktop_shutdown",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 870,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "09dd0d2cf254619e",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Lock K's PC",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "kallen_desktop_lock",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 850,
+        "y": 1020,
+        "wires": [
+            [
+                "bbcf0451ac4c4cd4"
+            ]
+        ]
+    },
+    {
+        "id": "bbcf0451ac4c4cd4",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Turn off updates",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.kallen_computer_updates"
+        ],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1040,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f052c9629cad7a5f",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Ask to shutdown main PC",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "text_notify",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\"type\":\"alert\",\"who\":\"tony\",\"title\":\"Basement Shutting Down\",\"message\":\"Would you like to shut down your computer?\",\"tag\":\"tony-pc-shutdown\",\"actions\":[{\"action\":\"TONY_COMPUTER_SHUTDOWN\",\"title\":\"Shutdown\"},{\"action\":\"TONY_COMPUTER_LOCK\",\"title\":\"Lock\"},{\"action\":\"TONY_COMPUTER_IGNORE\",\"title\":\"Do Nothing\"}]}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 570,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80c5f8a40169fcb7",
+        "type": "ha-wait-until",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Wait for door to open",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "outputs": 2,
+        "entityId": "binary_sensor.basement_studio_door",
+        "entityIdFilterType": "exact",
+        "property": "state",
+        "comparator": "is",
+        "value": "on",
+        "valueType": "str",
+        "timeout": "5",
+        "timeoutType": "num",
+        "timeoutUnits": "minutes",
+        "checkCurrentState": true,
+        "blockInputOverrides": true,
+        "outputProperties": [],
+        "entityLocation": "data",
+        "entityLocationType": "none",
+        "x": 560,
+        "y": 840,
+        "wires": [
+            [
+                "a9bbf53b9584976a"
+            ],
+            [
+                "a9bbf53b9584976a"
+            ]
+        ]
+    },
+    {
+        "id": "a9bbf53b9584976a",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Turn off fan",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "fan",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "fan.basement_fan"
+        ],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 770,
+        "y": 840,
+        "wires": [
+            [
+                "cc0407d29b656ca6"
+            ]
+        ]
+    },
+    {
+        "id": "cc0407d29b656ca6",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Turn off lights",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.basement_studio_lights"
+        ],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 960,
+        "y": 840,
+        "wires": [
+            [
+                "fc1ca3e2f921b01e"
+            ]
+        ]
+    },
+    {
+        "id": "fc1ca3e2f921b01e",
+        "type": "ha-wait-until",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Wait for door to close",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "outputs": 2,
+        "entityId": "binary_sensor.basement_studio_door",
+        "entityIdFilterType": "exact",
+        "property": "state",
+        "comparator": "is",
+        "value": "off",
+        "valueType": "str",
+        "timeout": "1",
+        "timeoutType": "num",
+        "timeoutUnits": "minutes",
+        "checkCurrentState": true,
+        "blockInputOverrides": true,
+        "outputProperties": [],
+        "entityLocation": "data",
+        "entityLocationType": "none",
+        "x": 1180,
+        "y": 840,
+        "wires": [
+            [
+                "8851dbeb9b28003a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "18cd2aed123cdaa8",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Cancel door timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "cancel",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.basement_studio_door_timer"
+        ],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1470,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8851dbeb9b28003a",
+        "type": "delay",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1325,
+        "y": 840,
+        "wires": [
+            [
+                "18cd2aed123cdaa8"
+            ]
+        ],
+        "l": false
+    },
+    {
         "id": "091390f43bfeddf5",
         "type": "api-call-service",
         "z": "b5717a86ce55bc29",
@@ -21783,7 +22273,7 @@
                 "b57e12eb73074535"
             ],
             [
-                "3463c4f2bf6388fe"
+                "9d1cf8af02a6c86b"
             ],
             [
                 "93b718cd47747ccc"
@@ -22429,7 +22919,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 480,
+        "x": 680,
         "y": 500,
         "wires": [
             []
@@ -22539,6 +23029,20 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "9d1cf8af02a6c86b",
+        "type": "link out",
+        "z": "bb961e59e2ef86c9",
+        "g": "f519aff597ece351",
+        "name": "Basement Shutdown",
+        "mode": "link",
+        "links": [
+            "9751c5a6a1b98b7d"
+        ],
+        "x": 395,
+        "y": 500,
+        "wires": []
     },
     {
         "id": "a4c477269b22f766",
