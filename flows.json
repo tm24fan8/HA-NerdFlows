@@ -1875,11 +1875,101 @@
             "cc0407d29b656ca6",
             "fc1ca3e2f921b01e",
             "18cd2aed123cdaa8",
-            "8851dbeb9b28003a"
+            "8851dbeb9b28003a",
+            "06b3f795ae9e14e6"
         ],
         "x": 94,
         "y": 799,
         "w": 1492,
+        "h": 262
+    },
+    {
+        "id": "f4057835848d0904",
+        "type": "group",
+        "z": "5c4ac37140a54ac9",
+        "name": "Goodnight",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ba97906b7b81342c",
+            "d9e39b8ebb86c941",
+            "09c7a61f7a4c4d05",
+            "280e2a7895ca63fb",
+            "60ce44747cf3e507",
+            "50e351d1ee6108b3",
+            "33773b3aaa551b79",
+            "f30486c8e11db0e4",
+            "9bd4665845af0545",
+            "20b3699a56b0e901"
+        ],
+        "x": 14,
+        "y": 239,
+        "w": 1052,
+        "h": 322
+    },
+    {
+        "id": "7d1c0a1099be4427",
+        "type": "group",
+        "z": "5c4ac37140a54ac9",
+        "name": "Good Morning",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "105271e0816c6a52",
+            "2854170262757e84",
+            "5c9c73b7adb72896",
+            "c18d27a9438bfa08",
+            "ef0efdc23805d872",
+            "bad6373b442c58a1",
+            "54b8bca62d27e659",
+            "708843ea29ee6626",
+            "bb77b36dd4d9cc96",
+            "2fb85204eb56f86b",
+            "3778a9f4cb80ce0b"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 1072,
+        "h": 202
+    },
+    {
+        "id": "553ecd620357c03d",
+        "type": "group",
+        "z": "5c4ac37140a54ac9",
+        "name": "Kallen Activity Commands Flow",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8c4d01db6f6ef33e",
+            "20ede2b52515bc63",
+            "88c56b0964f9a6db",
+            "38e168a79848fa19",
+            "86cd67e28114a585",
+            "5926b0004a47dfd1",
+            "50982205a91e63c5",
+            "254ffc8e8bd1d414",
+            "c43b69d84deb44a4",
+            "65589264d77f668d",
+            "6167d4da61990bfb",
+            "2aa8397f85a8ceed",
+            "9f1c60a822a2b550",
+            "dff1ff1e18a1bc74",
+            "9e3c9006ff125d9b",
+            "efd47cbc26ed2810",
+            "75e1b9f265ecb4e5",
+            "c2212b77414c61f3",
+            "1383f8e6ebf8ad88",
+            "7d53b4bd4c7ea874",
+            "4726a2605a1f56cc",
+            "506e7e645cf06383",
+            "716d4f60c2af0f2e"
+        ],
+        "x": 14,
+        "y": 999,
+        "w": 1192,
         "h": 262
     },
     {
@@ -4154,6 +4244,39 @@
             {
                 "property": "icon",
                 "value": "mdi:motion-sensor"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "8a6ada44f455b396",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "Going Upstairs",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Going Upstairs"
+            },
+            {
+                "property": "icon",
+                "value": "hue:room-stairs"
             },
             {
                 "property": "entity_picture",
@@ -11937,7 +12060,7 @@
         "z": "5e238cbbe6d612c9",
         "g": "f16f28689b7ec2b4",
         "name": "On/Off",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst stairwellLights = states['light.stairwell_led_strip'].state\nconst hallwayLights = states['light.hallway_overhead'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\nconst duration = states['input_number.stairwell_lights_off_delay'].state\nconst lux = parseInt(states['sensor.stairwell_bottom_illuminance'].state)\nconst threshold = parseInt(states['input_number.stairwell_lux_threshold'].state)\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nlet hallwayScene = {}\nlet hallwayAction = {}\n\nif (payload === 'on') {\n    if (goodnight === 'on') {\n        hallwayAction = 'off'\n    } else if (nightMode === 'on' || masterBedroomSleep === 'on') {\n        hallwayAction = 'on'\n        hallwayScene = 'Dimmed'\n    } else if (earlyNightMode === 'on') {\n        hallwayAction = 'on'\n        hallwayScene = 'Adaptive'\n    } else {\n        hallwayAction = 'off'\n    }\n}\n\nmsg.hallway = hallwayAction\nmsg.scene = hallwayScene\n\nif (payload === 'on') {\n    if (lux <= threshold || stairwellLights === 'on' || hallwayLights === 'on') {\n        if (hallwayScene === 'Adaptive') {\n            node.send([null,null,msg,msg])\n        } else if (hallwayAction === 'on') {\n            node.send([null,null,msg,null])\n        }\n        node.status({fill:'green',shape:'dot',text:'Lights On'})\n        node.send([msg,null,null,null])\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Too bright'})\n    }\n} else if (payload === 'off') {\n    if (stairwellLights === 'on') {\n        msg.duration = newDuration\n        node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n        node.send([null,msg,null,null])\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n    }\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst stairwellLights = states['light.stairwell_led_strip'].state\nconst hallwayLights = states['light.hallway_overhead'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\nconst kallenBedroomSleep = states['input_boolean.kallen_sleeping'].state\nconst peopleSleeping = (masterBedroomSleep === 'on' || kallenBedroomSleep === 'on')\nconst duration = states['input_number.stairwell_lights_off_delay'].state\nconst lux = parseInt(states['sensor.stairwell_bottom_illuminance'].state)\nconst threshold = parseInt(states['input_number.stairwell_lux_threshold'].state)\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nlet hallwayScene = {}\nlet hallwayAction = {}\n\nif (payload === 'on') {\n    if (goodnight === 'on') {\n        hallwayAction = 'off'\n    } else if (nightMode === 'on' || peopleSleeping === true) {\n        hallwayAction = 'on'\n        hallwayScene = 'Dimmed'\n    } else if (earlyNightMode === 'on') {\n        hallwayAction = 'on'\n        hallwayScene = 'Adaptive'\n    } else {\n        hallwayAction = 'off'\n    }\n}\n\nmsg.hallway = hallwayAction\nmsg.scene = hallwayScene\n\nif (payload === 'on') {\n    if (lux <= threshold || stairwellLights === 'on' || hallwayLights === 'on') {\n        if (hallwayScene === 'Adaptive') {\n            node.send([null,null,msg,msg])\n        } else if (hallwayAction === 'on') {\n            node.send([null,null,msg,null])\n        }\n        node.status({fill:'green',shape:'dot',text:'Lights On'})\n        node.send([msg,null,null,null])\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Too bright'})\n    }\n} else if (payload === 'off') {\n    if (stairwellLights === 'on') {\n        msg.duration = newDuration\n        node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n        node.send([null,msg,null,null])\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n    }\n}",
         "outputs": 4,
         "timeout": "",
         "noerr": 0,
@@ -12486,7 +12609,7 @@
         "z": "5e238cbbe6d612c9",
         "g": "f16f28689b7ec2b4",
         "name": "Settings",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\n\nlet hallwayScene = {}\nlet hallwayAction = {}\n\nif (goodnight === 'on') {\n    hallwayAction = 'off'\n} else if (masterBedroomSleep === 'off' && (earlyNightMode === 'on' || nightMode === 'on')) {\n    hallwayAction = 'on'\n    hallwayScene = 'Nightlight'\n} else {\n    hallwayAction = 'off'\n}\n\nmsg.hallway = hallwayAction\n\n// Turn off Stairwell LED Strip\nnode.send([null,null,msg])\n\n// Hallway actions\nif (hallwayAction === 'on') {\n    msg.scene = hallwayScene\n    node.status({fill:'green',shape:'dot',text:'Hallway ' + hallwayScene})\n    node.send([msg,null,null])\n} else if (hallwayAction === 'off') {\n    node.status({fill:'green',shape:'dot',text:'Hallway Off'})\n    node.send([null,msg,null])\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\n\nlet hallwayScene = {}\nlet hallwayAction = {}\n\nif (goodnight === 'on' || masterBedroomSleep === 'on') {\n    hallwayAction = 'off'\n} else if (earlyNightMode === 'on' || nightMode === 'on') {\n    hallwayAction = 'on'\n    hallwayScene = 'Nightlight'\n} else {\n    hallwayAction = 'off'\n}\n\nmsg.hallway = hallwayAction\n\n// Turn off Stairwell LED Strip\nnode.send([null,null,msg])\n\n// Hallway actions\nif (hallwayAction === 'on') {\n    msg.scene = hallwayScene\n    node.status({fill:'green',shape:'dot',text:'Hallway ' + hallwayScene})\n    node.send([msg,null,null])\n} else if (hallwayAction === 'off') {\n    node.status({fill:'green',shape:'dot',text:'Hallway Off'})\n    node.send([null,msg,null])\n}",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -13748,7 +13871,7 @@
         "type": "link in",
         "z": "47f17992fab9b4f5",
         "g": "c4c2c79b692236a0",
-        "name": "Basement Shutdown",
+        "name": "Basement Shutdown Full",
         "links": [
             "9d1cf8af02a6c86b"
         ],
@@ -14166,6 +14289,24 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "06b3f795ae9e14e6",
+        "type": "link in",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Basement Shutdown Abridged",
+        "links": [
+            "c3b3c90a43c4481a"
+        ],
+        "x": 385,
+        "y": 900,
+        "wires": [
+            [
+                "a4490fb4765e1c9c",
+                "4c7184cd35bf3f1f"
+            ]
+        ]
     },
     {
         "id": "091390f43bfeddf5",
@@ -16526,8 +16667,8 @@
         "g": "e065b1ed4938b477",
         "name": "Master Bedroom Climate - Input",
         "links": [
-            "028351e8c4e2faf5",
-            "5c9c73b7adb72896"
+            "5c9c73b7adb72896",
+            "60ce44747cf3e507"
         ],
         "x": 265,
         "y": 540,
@@ -19779,6 +19920,7 @@
         "id": "105271e0816c6a52",
         "type": "ha-button",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "Good Morning",
         "version": 0,
         "debugenabled": false,
@@ -19812,6 +19954,7 @@
         "id": "2854170262757e84",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "Turn off switches",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -19857,8 +20000,8 @@
                 "valueType": "date"
             }
         ],
-        "x": 120,
-        "y": 740,
+        "x": 1200,
+        "y": 40,
         "wires": [
             [
                 "fa09d8a69bcbfbb5"
@@ -19869,6 +20012,7 @@
         "id": "ba97906b7b81342c",
         "type": "ha-button",
         "z": "5c4ac37140a54ac9",
+        "g": "f4057835848d0904",
         "name": "Goodnight",
         "version": 0,
         "debugenabled": false,
@@ -19901,7 +20045,7 @@
             }
         ],
         "x": 100,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "33773b3aaa551b79"
@@ -19912,6 +20056,7 @@
         "id": "d9e39b8ebb86c941",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "f4057835848d0904",
         "name": "Kallen Desktop - Shutdown",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -19927,8 +20072,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 860,
-        "y": 460,
+        "x": 920,
+        "y": 400,
         "wires": [
             []
         ]
@@ -19950,8 +20095,8 @@
                 "valueType": "date"
             }
         ],
-        "x": 110,
-        "y": 800,
+        "x": 1190,
+        "y": 100,
         "wires": [
             [
                 "1d121bd0f1f5d628"
@@ -19971,8 +20116,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 800,
+        "x": 1570,
+        "y": 100,
         "wires": []
     },
     {
@@ -19994,8 +20139,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 350,
-        "y": 800,
+        "x": 1430,
+        "y": 100,
         "wires": [
             [
                 "5eb7493d13b65a60"
@@ -20006,6 +20151,7 @@
         "id": "09c7a61f7a4c4d05",
         "type": "api-current-state",
         "z": "5c4ac37140a54ac9",
+        "g": "f4057835848d0904",
         "name": "Check Security",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -20038,8 +20184,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 620,
-        "y": 300,
+        "x": 600,
+        "y": 340,
         "wires": [
             [
                 "280e2a7895ca63fb"
@@ -20051,6 +20197,7 @@
         "id": "280e2a7895ca63fb",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "f4057835848d0904",
         "name": "Arm Security",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20068,8 +20215,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 910,
-        "y": 300,
+        "x": 810,
+        "y": 340,
         "wires": [
             []
         ]
@@ -20087,8 +20234,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
-        "y": 740,
+        "x": 1590,
+        "y": 40,
         "wires": []
     },
     {
@@ -20110,8 +20257,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 370,
-        "y": 740,
+        "x": 1450,
+        "y": 40,
         "wires": [
             [
                 "28a99bbb21540cbc"
@@ -20123,8 +20270,8 @@
         "type": "subflow:05a2d9f89e72481f",
         "z": "5c4ac37140a54ac9",
         "name": "",
-        "x": 255,
-        "y": 740,
+        "x": 1335,
+        "y": 40,
         "wires": [
             [
                 "3363b9392f425a55"
@@ -20137,8 +20284,8 @@
         "type": "subflow:05a2d9f89e72481f",
         "z": "5c4ac37140a54ac9",
         "name": "",
-        "x": 235,
-        "y": 800,
+        "x": 1315,
+        "y": 100,
         "wires": [
             [
                 "804c40c435c342fc"
@@ -20150,6 +20297,7 @@
         "id": "5c9c73b7adb72896",
         "type": "link out",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "Good Morning Output",
         "mode": "link",
         "links": [
@@ -20160,29 +20308,18 @@
         "wires": []
     },
     {
-        "id": "028351e8c4e2faf5",
-        "type": "link out",
-        "z": "5c4ac37140a54ac9",
-        "name": "Goodnight Output - Climate",
-        "mode": "link",
-        "links": [
-            "bc592ba259667f9d"
-        ],
-        "x": 475,
-        "y": 360,
-        "wires": []
-    },
-    {
         "id": "60ce44747cf3e507",
         "type": "link out",
         "z": "5c4ac37140a54ac9",
-        "name": "Goodnight Output - Lighting",
+        "g": "f4057835848d0904",
+        "name": "Goodnight Output",
         "mode": "link",
         "links": [
-            "55e84ccb73ae9b74"
+            "55e84ccb73ae9b74",
+            "bc592ba259667f9d"
         ],
-        "x": 475,
-        "y": 400,
+        "x": 535,
+        "y": 280,
         "wires": []
     },
     {
@@ -20202,8 +20339,8 @@
                 "valueType": "date"
             }
         ],
-        "x": 130,
-        "y": 860,
+        "x": 1210,
+        "y": 160,
         "wires": [
             [
                 "ed96b2ce33128205"
@@ -20215,8 +20352,8 @@
         "type": "subflow:05a2d9f89e72481f",
         "z": "5c4ac37140a54ac9",
         "name": "",
-        "x": 275,
-        "y": 860,
+        "x": 1355,
+        "y": 160,
         "wires": [
             [
                 "08eafe762d6146ee"
@@ -20243,8 +20380,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 390,
-        "y": 860,
+        "x": 1470,
+        "y": 160,
         "wires": [
             [
                 "e39da18ec3ecc852"
@@ -20264,14 +20401,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 530,
-        "y": 860,
+        "x": 1610,
+        "y": 160,
         "wires": []
     },
     {
         "id": "c18d27a9438bfa08",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "Morning Scene",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20299,6 +20437,7 @@
         "id": "ef0efdc23805d872",
         "type": "api-current-state",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "Morning?",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -20342,6 +20481,7 @@
         "id": "bad6373b442c58a1",
         "type": "api-current-state",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "Late Morning?",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -20385,6 +20525,7 @@
         "id": "54b8bca62d27e659",
         "type": "api-current-state",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "Security State",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -20428,6 +20569,7 @@
         "id": "708843ea29ee6626",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "Disarm Security",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20455,6 +20597,7 @@
         "id": "bb77b36dd4d9cc96",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "Disable Automations",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20485,6 +20628,7 @@
         "id": "50e351d1ee6108b3",
         "type": "api-current-state",
         "z": "5c4ac37140a54ac9",
+        "g": "f4057835848d0904",
         "name": "Kallen Computer Updates?",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -20511,8 +20655,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 580,
-        "y": 460,
+        "x": 640,
+        "y": 400,
         "wires": [
             [
                 "d9e39b8ebb86c941"
@@ -20528,6 +20672,7 @@
         "id": "2fb85204eb56f86b",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "TTS Briefing",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20553,6 +20698,7 @@
         "id": "8c4d01db6f6ef33e",
         "type": "ha-button",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Kallen Activities",
         "version": 0,
         "debugenabled": false,
@@ -20567,7 +20713,7 @@
             }
         ],
         "x": 120,
-        "y": 940,
+        "y": 1040,
         "wires": [
             [
                 "88c56b0964f9a6db"
@@ -20578,6 +20724,7 @@
         "id": "20ede2b52515bc63",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Ask Activity",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20594,7 +20741,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 930,
-        "y": 940,
+        "y": 1040,
         "wires": [
             [
                 "38e168a79848fa19"
@@ -20605,9 +20752,10 @@
         "id": "88c56b0964f9a6db",
         "type": "subflow:b88bb63bb13eeb27",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "",
         "x": 275,
-        "y": 940,
+        "y": 1040,
         "wires": [
             [
                 "7d53b4bd4c7ea874"
@@ -20619,6 +20767,7 @@
         "id": "38e168a79848fa19",
         "type": "debug",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Activity",
         "active": false,
         "tosidebar": true,
@@ -20629,13 +20778,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 940,
+        "y": 1040,
         "wires": []
     },
     {
         "id": "86cd67e28114a585",
         "type": "server-events",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Activity Response",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -20659,7 +20809,7 @@
         ],
         "event_type": "",
         "x": 130,
-        "y": 1000,
+        "y": 1100,
         "wires": [
             [
                 "5926b0004a47dfd1"
@@ -20670,9 +20820,10 @@
         "id": "5926b0004a47dfd1",
         "type": "subflow:b88bb63bb13eeb27",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "",
         "x": 275,
-        "y": 1000,
+        "y": 1100,
         "wires": [
             [
                 "4726a2605a1f56cc"
@@ -20684,6 +20835,7 @@
         "id": "50982205a91e63c5",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Ask Duration",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20700,7 +20852,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 930,
-        "y": 1000,
+        "y": 1100,
         "wires": [
             [
                 "254ffc8e8bd1d414"
@@ -20711,6 +20863,7 @@
         "id": "254ffc8e8bd1d414",
         "type": "debug",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Duration",
         "active": false,
         "tosidebar": true,
@@ -20721,13 +20874,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 1000,
+        "y": 1100,
         "wires": []
     },
     {
         "id": "c43b69d84deb44a4",
         "type": "server-events",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Duration Response",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -20751,7 +20905,7 @@
         ],
         "event_type": "",
         "x": 130,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "6167d4da61990bfb"
@@ -20762,6 +20916,7 @@
         "id": "65589264d77f668d",
         "type": "debug",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Location",
         "active": false,
         "tosidebar": true,
@@ -20772,16 +20927,17 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 1060,
+        "y": 1160,
         "wires": []
     },
     {
         "id": "6167d4da61990bfb",
         "type": "subflow:b88bb63bb13eeb27",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "",
         "x": 275,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "506e7e645cf06383"
@@ -20793,6 +20949,7 @@
         "id": "2aa8397f85a8ceed",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Set Activity",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20811,7 +20968,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 690,
-        "y": 1000,
+        "y": 1100,
         "wires": [
             [
                 "50982205a91e63c5"
@@ -20822,6 +20979,7 @@
         "id": "9f1c60a822a2b550",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Set Duration",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20840,7 +20998,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 690,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "dff1ff1e18a1bc74"
@@ -20851,6 +21009,7 @@
         "id": "dff1ff1e18a1bc74",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Ask Location",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20867,7 +21026,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 930,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "65589264d77f668d"
@@ -20878,6 +21037,7 @@
         "id": "9e3c9006ff125d9b",
         "type": "server-events",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Location Response",
         "server": "9e87348d.9c1c48",
         "version": 3,
@@ -20901,7 +21061,7 @@
         ],
         "event_type": "",
         "x": 130,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "716d4f60c2af0f2e"
@@ -20912,6 +21072,7 @@
         "id": "efd47cbc26ed2810",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Set Location",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -20930,7 +21091,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 690,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "c2212b77414c61f3"
@@ -20941,6 +21102,7 @@
         "id": "75e1b9f265ecb4e5",
         "type": "debug",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "End",
         "active": false,
         "tosidebar": true,
@@ -20951,13 +21113,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1090,
-        "y": 1120,
+        "y": 1220,
         "wires": []
     },
     {
         "id": "c2212b77414c61f3",
         "type": "delay",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -20972,7 +21135,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 805,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "1383f8e6ebf8ad88"
@@ -20984,6 +21147,7 @@
         "id": "1383f8e6ebf8ad88",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Start Timer",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -21002,7 +21166,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 930,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "75e1b9f265ecb4e5"
@@ -21013,6 +21177,7 @@
         "id": "7d53b4bd4c7ea874",
         "type": "function",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Filtering",
         "func": "var who = msg.who\n\nif (who === 'media_player.master_bedroom_echo_dot') {\n    msg.who = 'media_player.living_room_echo_dot'\n    node.status({ fill: \"red\", shape: \"dot\", text: \"Rerouted\" });\n    return msg;\n} else {\n    msg.who = who\n    node.status({ fill: \"green\", shape: \"dot\", text: \"Unchanged\" });\n    return msg;\n}",
         "outputs": 1,
@@ -21021,7 +21186,7 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 940,
+        "y": 1040,
         "wires": [
             [
                 "20ede2b52515bc63"
@@ -21032,6 +21197,7 @@
         "id": "4726a2605a1f56cc",
         "type": "function",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Filtering",
         "func": "var who = msg.who\nvar responseType = msg.payload.event.event_response_type\n\nif (responseType != 'ResponseNone') {\n    if (who === 'media_player.master_bedroom_echo_dot') {\n        msg.who = 'media_player.living_room_echo_dot'\n        node.status({fill:\"red\",shape:\"dot\",text:\"Rerouted\"});\n        return msg;\n    } else {\n        msg.who = who\n        node.status({fill:\"green\",shape:\"dot\",text:\"Unchanged\"});\n        return msg;\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No Response\"});\n    return null\n}",
         "outputs": 1,
@@ -21040,7 +21206,7 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 1000,
+        "y": 1100,
         "wires": [
             [
                 "2aa8397f85a8ceed"
@@ -21051,6 +21217,7 @@
         "id": "506e7e645cf06383",
         "type": "function",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Filtering",
         "func": "var who = msg.who\nvar responseType = msg.payload.event.event_response_type\n\nmsg.duration = (msg.payload.event.event_response / 60)\n\nif (responseType != 'ResponseNone') {\n    if (who === 'media_player.master_bedroom_echo_dot') {\n        msg.who = 'media_player.living_room_echo_dot'\n        node.status({ fill: \"red\", shape: \"dot\", text: \"Rerouted, \" + msg.duration + \"m\" });\n        return msg;\n    } else {\n        msg.who = who\n        node.status({ fill: \"green\", shape: \"dot\", text: \"Unchanged, \" + msg.duration + \"m\" });\n        return msg;\n    }\n} else {\n    node.status({ fill: \"red\", shape: \"ring\", text: \"No Response\" });\n    return null\n}",
         "outputs": 1,
@@ -21059,7 +21226,7 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 1060,
+        "y": 1160,
         "wires": [
             [
                 "9f1c60a822a2b550"
@@ -21070,6 +21237,7 @@
         "id": "716d4f60c2af0f2e",
         "type": "function",
         "z": "5c4ac37140a54ac9",
+        "g": "553ecd620357c03d",
         "name": "Filtering",
         "func": "var responseType = msg.payload.event.event_response_type\n\nif (responseType === 'ResponseNone') {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No Response\"});\n    return null\n} else {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Success\"});\n    return msg;\n}",
         "outputs": 1,
@@ -21078,7 +21246,7 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "efd47cbc26ed2810"
@@ -21089,6 +21257,7 @@
         "id": "33773b3aaa551b79",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "f4057835848d0904",
         "name": "Goodnight Switch",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -21109,11 +21278,10 @@
         "outputProperties": [],
         "queue": "none",
         "x": 330,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "09c7a61f7a4c4d05",
-                "028351e8c4e2faf5",
                 "60ce44747cf3e507",
                 "50e351d1ee6108b3",
                 "f30486c8e11db0e4",
@@ -21125,6 +21293,7 @@
         "id": "f30486c8e11db0e4",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "f4057835848d0904",
         "name": "Do Not Disturb",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -21144,8 +21313,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 540,
-        "y": 520,
+        "x": 600,
+        "y": 460,
         "wires": [
             [
                 "20b3699a56b0e901"
@@ -21156,6 +21325,7 @@
         "id": "9bd4665845af0545",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "f4057835848d0904",
         "name": "Goodnight Scripts",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -21175,8 +21345,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 550,
-        "y": 580,
+        "x": 610,
+        "y": 520,
         "wires": [
             []
         ]
@@ -21185,6 +21355,7 @@
         "id": "3778a9f4cb80ce0b",
         "type": "delay",
         "z": "5c4ac37140a54ac9",
+        "g": "7d1c0a1099be4427",
         "name": "",
         "pauseType": "delay",
         "timeout": "5",
@@ -21211,6 +21382,7 @@
         "id": "20b3699a56b0e901",
         "type": "api-call-service",
         "z": "5c4ac37140a54ac9",
+        "g": "f4057835848d0904",
         "name": "Turn off Quiet/Gaming Modes",
         "server": "9e87348d.9c1c48",
         "version": 5,
@@ -21229,8 +21401,98 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 790,
-        "y": 520,
+        "x": 850,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80761160776018a1",
+        "type": "ha-button",
+        "z": "5c4ac37140a54ac9",
+        "name": "Going Upstairs",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "8a6ada44f455b396",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "on",
+                "valueType": "str"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "going-upstairs",
+                "valueType": "str"
+            }
+        ],
+        "x": 120,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3b3c90a43c4481a",
+        "type": "link out",
+        "z": "5c4ac37140a54ac9",
+        "name": "Going Upstairs Output",
+        "mode": "link",
+        "links": [
+            "06b3f795ae9e14e6"
+        ],
+        "x": 255,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "12ad9b1c6c0e05bd",
+        "type": "mqtt out",
+        "z": "5c4ac37140a54ac9",
+        "name": "MQTT Night Mode",
+        "topic": "house/time/night_mode",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fd29421fc00140a8",
+        "x": 390,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "28d9251be3529bfe",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Set Scenes",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.basement_studio_scenes",
+            "input_select.living_room_scenes",
+            "input_select.mud_room_scenes",
+            "input_select.tina_lamp_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 350,
+        "y": 680,
         "wires": [
             []
         ]
