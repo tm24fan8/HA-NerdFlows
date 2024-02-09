@@ -857,12 +857,13 @@
             "7c483301056c67a9",
             "a0dd18613130787f",
             "324d56cbdc1eb170",
-            "ec4682a111a48b70"
+            "ec4682a111a48b70",
+            "5b3a0cf1ee7d06b9"
         ],
         "x": 14,
         "y": 839,
         "w": 1552,
-        "h": 402
+        "h": 462
     },
     {
         "id": "e065b1ed4938b477",
@@ -1971,6 +1972,77 @@
         "y": 999,
         "w": 1192,
         "h": 262
+    },
+    {
+        "id": "ab4dbcc968a1d346",
+        "type": "group",
+        "z": "eff21041cc941fef",
+        "name": "Mud Room",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "de9fe68a439b4c41",
+            "7c4cc52be117251f",
+            "a7cd304d11f25e60",
+            "ddae3391e8b78cb8",
+            "0c70e666ebfcd6c1",
+            "67d04dc394a23636",
+            "d4c7136ad434c2b5",
+            "95fe501e85a5f65b",
+            "5d9a85d3534d83e6",
+            "fa7c83f1dece9741"
+        ],
+        "x": 14,
+        "y": 1139,
+        "w": 972,
+        "h": 262
+    },
+    {
+        "id": "5c1df7492351b925",
+        "type": "group",
+        "z": "5e238cbbe6d612c9",
+        "name": "Kallen Bedroom",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f3824e4c7e202605",
+            "4954c509d4d697e2",
+            "9a8f53db7d3ed3b7",
+            "bbe9fd4eff4e6a04",
+            "f6aca47ad4719dab",
+            "1a63ea711d6658b2",
+            "0b5424aadc3479f7",
+            "5524e8ba9b5545be"
+        ],
+        "x": 894,
+        "y": 959,
+        "w": 792,
+        "h": 202
+    },
+    {
+        "id": "505e378279011759",
+        "type": "group",
+        "z": "5e238cbbe6d612c9",
+        "name": "Master Bedroom",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e270c73896a1a50c",
+            "3063e6a5b5c3f677",
+            "31686303c43971c7",
+            "f14572686bbbbf9e",
+            "602869aebc96184c",
+            "cfb6cf1f5f583447",
+            "4a431478798a51c8",
+            "81129efa6676b58e"
+        ],
+        "x": 894,
+        "y": 1179,
+        "w": 792,
+        "h": 202
     },
     {
         "id": "fba69dfc80829db7",
@@ -4277,6 +4349,138 @@
             {
                 "property": "icon",
                 "value": "hue:room-stairs"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "c5511d32d6044b83",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "Mud Room Motion Lighting",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Mud Room Motion Lighting"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:motion-sensor"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "5053909a498e0d02",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "Kallen Bedroom Motion Lighting",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Kallen Bedroom Motion Lighting"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:motion-sensor"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "9a5af08b3c421d41",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "Master Bedroom Motion Lighting",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Master Bedroom Motion Lighting"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "b721c7240c08272f",
+        "type": "ha-entity-config",
+        "server": "9e87348d.9c1c48",
+        "deviceConfig": "",
+        "name": "Upstairs Bathroom Motion Lighting",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Upstairs Bathroom Motion Lighting"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:motion-sensor"
             },
             {
                 "property": "entity_picture",
@@ -10419,8 +10623,7 @@
             ]
         ],
         "outputLabels": [
-            "on",
-            "off"
+            "on"
         ]
     },
     {
@@ -11204,6 +11407,326 @@
         ]
     },
     {
+        "id": "de9fe68a439b4c41",
+        "type": "server-state-changed",
+        "z": "eff21041cc941fef",
+        "g": "ab4dbcc968a1d346",
+        "name": "Motion Sensor",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "outputs": 1,
+        "exposeAsEntityConfig": "c5511d32d6044b83",
+        "entityId": "binary_sensor.mud_room_motion",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "motion",
+                "valueType": "str"
+            }
+        ],
+        "x": 110,
+        "y": 1240,
+        "wires": [
+            [
+                "7c4cc52be117251f"
+            ]
+        ],
+        "outputLabels": [
+            "on"
+        ]
+    },
+    {
+        "id": "7c4cc52be117251f",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "g": "ab4dbcc968a1d346",
+        "name": "Delay",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst lights = states['light.mud_room_overhead'].state\nconst duration = states['input_number.mud_room_lights_off_delay'].state\nconst lux = parseInt(states['sensor.mud_room_illuminance'].state)\nconst threshold = parseInt(states['input_number.mud_room_lux_threshold'].state)\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nif (payload === 'on') {\n    if (lux <= threshold || lights === 'on') {\n        node.status({fill:'green',shape:'dot',text:'Lights On'})\n        node.send([msg,null])\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Too bright'})\n    }\n} else if (payload === 'off') {\n    if (lights === 'on') {\n        msg.duration = newDuration\n        node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n        node.send([null,msg])\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n    }\n}",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 1240,
+        "wires": [
+            [
+                "67d04dc394a23636"
+            ],
+            [
+                "0c70e666ebfcd6c1"
+            ]
+        ],
+        "icon": "node-red/timer.svg"
+    },
+    {
+        "id": "a7cd304d11f25e60",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "ab4dbcc968a1d346",
+        "name": "Lights Adaptive",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.mud_room_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 700,
+        "y": 1180,
+        "wires": [
+            [
+                "ddae3391e8b78cb8"
+            ]
+        ]
+    },
+    {
+        "id": "ddae3391e8b78cb8",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "ab4dbcc968a1d346",
+        "name": "Cancel Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "cancel",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.mud_room_motion_timer"
+        ],
+        "data": "{}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 890,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c70e666ebfcd6c1",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "ab4dbcc968a1d346",
+        "name": "Start Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "start",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.mud_room_motion_timer"
+        ],
+        "data": "{    \t    \"duration\": duration\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 530,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67d04dc394a23636",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "ab4dbcc968a1d346",
+        "name": "Lights On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [
+            "mud_room"
+        ],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 520,
+        "y": 1180,
+        "wires": [
+            [
+                "a7cd304d11f25e60"
+            ]
+        ]
+    },
+    {
+        "id": "d4c7136ad434c2b5",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "ab4dbcc968a1d346",
+        "name": "Turn off light",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.downstairs_bathroom_lights"
+        ],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 530,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95fe501e85a5f65b",
+        "type": "server-events",
+        "z": "eff21041cc941fef",
+        "g": "ab4dbcc968a1d346",
+        "name": "Timer Finished",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "eventType": "timer.finished",
+        "eventData": "{\"entity_id\":\"timer.mud_room_motion_timer\"}",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "date"
+            }
+        ],
+        "x": 120,
+        "y": 1300,
+        "wires": [
+            [
+                "5d9a85d3534d83e6"
+            ]
+        ]
+    },
+    {
+        "id": "5d9a85d3534d83e6",
+        "type": "api-current-state",
+        "z": "eff21041cc941fef",
+        "g": "ab4dbcc968a1d346",
+        "name": "Early Night Mode?",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "binary_sensor.early_night_mode",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "earlynight",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 330,
+        "y": 1300,
+        "wires": [
+            [
+                "fa7c83f1dece9741"
+            ],
+            [
+                "d4c7136ad434c2b5"
+            ]
+        ]
+    },
+    {
+        "id": "fa7c83f1dece9741",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "ab4dbcc968a1d346",
+        "name": "Lights Nightlight",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.mud_room_scenes"
+        ],
+        "data": "{\t    \"option\":\"Nightlight\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 540,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "879ee8903841b8f0",
         "type": "server-state-changed",
         "z": "5e238cbbe6d612c9",
@@ -11447,7 +11970,7 @@
         "server": "9e87348d.9c1c48",
         "version": 5,
         "outputs": 1,
-        "exposeAsEntityConfig": "",
+        "exposeAsEntityConfig": "b721c7240c08272f",
         "entityId": "binary_sensor.upstairs_bathroom_motion",
         "entityIdType": "exact",
         "outputInitially": false,
@@ -12060,7 +12583,7 @@
         "z": "5e238cbbe6d612c9",
         "g": "f16f28689b7ec2b4",
         "name": "On/Off",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst stairwellLights = states['light.stairwell_led_strip'].state\nconst hallwayLights = states['light.hallway_overhead'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\nconst kallenBedroomSleep = states['input_boolean.kallen_sleeping'].state\nconst peopleSleeping = (masterBedroomSleep === 'on' || kallenBedroomSleep === 'on')\nconst duration = states['input_number.stairwell_lights_off_delay'].state\nconst lux = parseInt(states['sensor.stairwell_bottom_illuminance'].state)\nconst threshold = parseInt(states['input_number.stairwell_lux_threshold'].state)\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nlet hallwayScene = {}\nlet hallwayAction = {}\n\nif (payload === 'on') {\n    if (goodnight === 'on') {\n        hallwayAction = 'off'\n    } else if (nightMode === 'on' || peopleSleeping === true) {\n        hallwayAction = 'on'\n        hallwayScene = 'Dimmed'\n    } else if (earlyNightMode === 'on') {\n        hallwayAction = 'on'\n        hallwayScene = 'Adaptive'\n    } else {\n        hallwayAction = 'off'\n    }\n}\n\nmsg.hallway = hallwayAction\nmsg.scene = hallwayScene\n\nif (payload === 'on') {\n    if (lux <= threshold || stairwellLights === 'on' || hallwayLights === 'on') {\n        if (hallwayScene === 'Adaptive') {\n            node.send([null,null,msg,msg])\n        } else if (hallwayAction === 'on') {\n            node.send([null,null,msg,null])\n        }\n        node.status({fill:'green',shape:'dot',text:'Lights On'})\n        node.send([msg,null,null,null])\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Too bright'})\n    }\n} else if (payload === 'off') {\n    if (stairwellLights === 'on') {\n        msg.duration = newDuration\n        node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n        node.send([null,msg,null,null])\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n    }\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst stairwellLights = states['light.stairwell_led_strip'].state\nconst hallwayLights = states['light.hallway_overhead'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\nconst kallenBedroomSleep = states['input_boolean.kallen_sleeping'].state\nconst peopleSleeping = (masterBedroomSleep === 'on' || kallenBedroomSleep === 'on')\nconst duration = states['input_number.stairwell_lights_off_delay'].state\nconst lux = parseInt(states['sensor.stairwell_bottom_illuminance'].state)\nconst threshold = parseInt(states['input_number.stairwell_lux_threshold'].state)\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nlet hallwayScene = {}\nlet hallwayAction = {}\n\nif (payload === 'on') {\n    if (goodnight === 'on') {\n        hallwayAction = 'off'\n    } else if (nightMode === 'on' || peopleSleeping === true) {\n        hallwayAction = 'on'\n        hallwayScene = 'Nightlight'\n    } else if (earlyNightMode === 'on') {\n        hallwayAction = 'on'\n        hallwayScene = 'Adaptive'\n    } else {\n        hallwayAction = 'off'\n    }\n}\n\nmsg.hallway = hallwayAction\nmsg.scene = hallwayScene\n\nif (payload === 'on') {\n    if (lux <= threshold || stairwellLights === 'on' || hallwayLights === 'on') {\n        if (hallwayScene === 'Adaptive') {\n            node.send([null,null,msg,msg])\n        } else if (hallwayAction === 'on') {\n            node.send([null,null,msg,null])\n        }\n        node.status({fill:'green',shape:'dot',text:'Lights On'})\n        node.send([msg,null,null,null])\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Too bright'})\n    }\n} else if (payload === 'off') {\n    if (stairwellLights === 'on') {\n        msg.duration = newDuration\n        node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n        node.send([null,msg,null,null])\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n    }\n}",
         "outputs": 4,
         "timeout": "",
         "noerr": 0,
@@ -12185,7 +12708,7 @@
         "version": 5,
         "outputs": 1,
         "exposeAsEntityConfig": "e86f48a9dd99dd2b",
-        "entityId": "binary_sensor.stairwell_bottom_motion",
+        "entityId": "binary_sensor.stairwell_motion",
         "entityIdType": "exact",
         "outputInitially": false,
         "stateType": "str",
@@ -12609,7 +13132,7 @@
         "z": "5e238cbbe6d612c9",
         "g": "f16f28689b7ec2b4",
         "name": "Settings",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\n\nlet hallwayScene = {}\nlet hallwayAction = {}\n\nif (goodnight === 'on' || masterBedroomSleep === 'on') {\n    hallwayAction = 'off'\n} else if (earlyNightMode === 'on' || nightMode === 'on') {\n    hallwayAction = 'on'\n    hallwayScene = 'Nightlight'\n} else {\n    hallwayAction = 'off'\n}\n\nmsg.hallway = hallwayAction\n\n// Turn off Stairwell LED Strip\nnode.send([null,null,msg])\n\n// Hallway actions\nif (hallwayAction === 'on') {\n    msg.scene = hallwayScene\n    node.status({fill:'green',shape:'dot',text:'Hallway ' + hallwayScene})\n    node.send([msg,null,null])\n} else if (hallwayAction === 'off') {\n    node.status({fill:'green',shape:'dot',text:'Hallway Off'})\n    node.send([null,msg,null])\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst goodnight = states['input_boolean.goodnight'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\nconst kallenBedroomSleep = states['input_boolean.kallen_sleeping'].state\nconst peopleSleeping = (masterBedroomSleep === 'on' || kallenBedroomSleep === 'on')\n\nlet hallwayScene = {}\nlet hallwayAction = {}\n\nif (goodnight === 'on' || peopleSleeping === true) {\n    hallwayAction = 'off'\n} else if (earlyNightMode === 'on' || nightMode === 'on') {\n    hallwayAction = 'on'\n    hallwayScene = 'Nightlight'\n} else {\n    hallwayAction = 'off'\n}\n\nmsg.hallway = hallwayAction\n\n// Turn off Stairwell LED Strip\nnode.send([null,null,msg])\n\n// Hallway actions\nif (hallwayAction === 'on') {\n    msg.scene = hallwayScene\n    node.status({fill:'green',shape:'dot',text:'Hallway ' + hallwayScene})\n    node.send([msg,null,null])\n} else if (hallwayAction === 'off') {\n    node.status({fill:'green',shape:'dot',text:'Hallway Off'})\n    node.send([null,msg,null])\n}",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -12759,6 +13282,526 @@
         "y": 1080,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "f3824e4c7e202605",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "5c1df7492351b925",
+        "name": "Turn off light",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.kallen_bedroom_lights"
+        ],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1410,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4954c509d4d697e2",
+        "type": "function",
+        "z": "5e238cbbe6d612c9",
+        "g": "5c1df7492351b925",
+        "name": "Delay",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst lights = states['light.kallen_bedroom_lights'].state\nconst duration = states['input_number.kallen_bedroom_lights_off_delay'].state\nconst lux = parseInt(states['sensor.kallen_bedroom_illuminance'].state)\nconst threshold = parseInt(states['input_number.kallen_bedroom_lux_threshold'].state)\nconst sleeping = states['input_boolean.kallen_sleeping'].state\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nif (sleeping === 'off') {\n    if (payload === 'on') {\n        if (lux <= threshold || lights === 'on') {\n            node.status({fill:'green',shape:'dot',text:'Lights On'})\n            node.send([msg,null])\n        } else {\n            node.status({fill:'red',shape:'ring',text:'Too bright'})\n        }\n    } else if (payload === 'off') {\n        if (lights === 'on') {\n            msg.duration = newDuration\n            node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n            node.send([null,msg])\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n        }\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Blocked (Sleeping)'})\n}",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 1060,
+        "wires": [
+            [
+                "5524e8ba9b5545be"
+            ],
+            [
+                "9a8f53db7d3ed3b7"
+            ]
+        ],
+        "icon": "node-red/timer.svg"
+    },
+    {
+        "id": "9a8f53db7d3ed3b7",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "5c1df7492351b925",
+        "name": "Start Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "start",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.kallen_bedroom_motion_timer"
+        ],
+        "data": "{    \t    \"duration\": duration\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1410,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bbe9fd4eff4e6a04",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "5c1df7492351b925",
+        "name": "Cancel Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "cancel",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.kallen_bedroom_motion_timer"
+        ],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1590,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6aca47ad4719dab",
+        "type": "server-events",
+        "z": "5e238cbbe6d612c9",
+        "g": "5c1df7492351b925",
+        "name": "Timer Finished",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "eventType": "timer.finished",
+        "eventData": "{\"entity_id\":\"timer.kallen_bedroom_motion_timer\"}",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "date"
+            }
+        ],
+        "x": 1000,
+        "y": 1120,
+        "wires": [
+            [
+                "0b5424aadc3479f7"
+            ]
+        ]
+    },
+    {
+        "id": "1a63ea711d6658b2",
+        "type": "server-state-changed",
+        "z": "5e238cbbe6d612c9",
+        "g": "5c1df7492351b925",
+        "name": "Motion Sensor",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "outputs": 1,
+        "exposeAsEntityConfig": "5053909a498e0d02",
+        "entityId": "binary_sensor.kallen_bedroom_motion",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "motion",
+                "valueType": "str"
+            }
+        ],
+        "x": 990,
+        "y": 1060,
+        "wires": [
+            [
+                "4954c509d4d697e2"
+            ]
+        ],
+        "outputLabels": [
+            "on"
+        ]
+    },
+    {
+        "id": "0b5424aadc3479f7",
+        "type": "api-current-state",
+        "z": "5e238cbbe6d612c9",
+        "g": "5c1df7492351b925",
+        "name": "Sleep Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.kallen_sleeping",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1210,
+        "y": 1120,
+        "wires": [
+            [
+                "f3824e4c7e202605"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5524e8ba9b5545be",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "5c1df7492351b925",
+        "name": "Lights On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.kallen_bedroom_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1400,
+        "y": 1000,
+        "wires": [
+            [
+                "bbe9fd4eff4e6a04"
+            ]
+        ]
+    },
+    {
+        "id": "e270c73896a1a50c",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "505e378279011759",
+        "name": "Turn off light",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.master_bedroom_lights"
+        ],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1410,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3063e6a5b5c3f677",
+        "type": "function",
+        "z": "5e238cbbe6d612c9",
+        "g": "505e378279011759",
+        "name": "Delay",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst lights = states['light.master_bedroom_lights'].state\nconst duration = states['input_number.master_bedroom_lights_off_delay'].state\nconst lux = parseInt(states['sensor.master_bedroom_illuminance'].state)\nconst threshold = parseInt(states['input_number.master_bedroom_lux_threshold'].state)\nconst sleeping = states['input_boolean.master_bedroom_sleeping'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst payload = msg.payload\nconst newDuration = duration * 60\n\nif (sleeping === 'off' && nightMode === 'off') {\n    if (payload === 'on') {\n        if (lux <= threshold || lights === 'on') {\n            node.status({fill:'green',shape:'dot',text:'Lights On'})\n            node.send([msg,null])\n        } else {\n            node.status({fill:'red',shape:'ring',text:'Too bright'})\n        }\n    } else if (payload === 'off') {\n        if (lights === 'on') {\n            msg.duration = newDuration\n            node.status({fill:\"green\",shape:\"dot\",text:parseInt(duration) + ' minutes'})\n            node.send([null,msg])\n        } else {\n            node.status({fill:\"red\",shape:\"ring\",text:\"Lights already off\"})\n        }\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Blocked (Sleeping)'})\n}",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 1280,
+        "wires": [
+            [
+                "81129efa6676b58e"
+            ],
+            [
+                "31686303c43971c7"
+            ]
+        ],
+        "icon": "node-red/timer.svg"
+    },
+    {
+        "id": "31686303c43971c7",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "505e378279011759",
+        "name": "Start Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "start",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.master_bedroom_motion_timer"
+        ],
+        "data": "{    \t    \"duration\": duration\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1410,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f14572686bbbbf9e",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "505e378279011759",
+        "name": "Cancel Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "cancel",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.master_bedroom_motion_timer"
+        ],
+        "data": "{}",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1590,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "602869aebc96184c",
+        "type": "server-events",
+        "z": "5e238cbbe6d612c9",
+        "g": "505e378279011759",
+        "name": "Timer Finished",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "eventType": "timer.finished",
+        "eventData": "{\"entity_id\":\"timer.master_bedroom_motion_timer\"}",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "date"
+            }
+        ],
+        "x": 1000,
+        "y": 1340,
+        "wires": [
+            [
+                "4a431478798a51c8"
+            ]
+        ]
+    },
+    {
+        "id": "cfb6cf1f5f583447",
+        "type": "server-state-changed",
+        "z": "5e238cbbe6d612c9",
+        "g": "505e378279011759",
+        "name": "Motion Sensor",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "outputs": 1,
+        "exposeAsEntityConfig": "9a5af08b3c421d41",
+        "entityId": "binary_sensor.master_bedroom_motion",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "detect",
+                "propertyType": "msg",
+                "value": "motion",
+                "valueType": "str"
+            }
+        ],
+        "x": 990,
+        "y": 1280,
+        "wires": [
+            [
+                "3063e6a5b5c3f677"
+            ]
+        ],
+        "outputLabels": [
+            "on"
+        ]
+    },
+    {
+        "id": "4a431478798a51c8",
+        "type": "api-current-state",
+        "z": "5e238cbbe6d612c9",
+        "g": "505e378279011759",
+        "name": "Sleep Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.master_bedroom_sleeping",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 1210,
+        "y": 1340,
+        "wires": [
+            [
+                "e270c73896a1a50c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "81129efa6676b58e",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "g": "505e378279011759",
+        "name": "Lights On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.master_bedroom_scenes"
+        ],
+        "data": "{\t    \"option\":\"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1400,
+        "y": 1220,
+        "wires": [
+            [
+                "f14572686bbbbf9e"
+            ]
         ]
     },
     {
@@ -17173,7 +18216,8 @@
             ],
             [
                 "7b0648758704fad4",
-                "292cda64df0c1c10"
+                "292cda64df0c1c10",
+                "5b3a0cf1ee7d06b9"
             ]
         ],
         "outputLabels": [
@@ -18599,6 +19643,34 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "5b3a0cf1ee7d06b9",
+        "type": "api-call-service",
+        "z": "72f99805df043603",
+        "g": "39a7ac02f2727f1d",
+        "name": "Turn on Give Me Darkness",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.give_me_darkness"
+        ],
+        "data": "{}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 740,
+        "y": 1260,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "48b8af9419ed18d6",
