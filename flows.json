@@ -1187,7 +1187,9 @@
             "37bdac2c9a4e2837"
         ],
         "x": 54,
-        "y": 39
+        "y": 39,
+        "w": 1652,
+        "h": 382
     },
     {
         "id": "8aee4d340a136bac",
@@ -1207,7 +1209,7 @@
             "b281061a4b08d2eb"
         ],
         "x": 14,
-        "y": 919,
+        "y": 1139,
         "w": 792,
         "h": 202
     },
@@ -1439,7 +1441,9 @@
             "99c141f21de4feda"
         ],
         "x": 74,
-        "y": 39
+        "y": 39,
+        "w": 1132,
+        "h": 262
     },
     {
         "id": "a6de35af12739885",
@@ -1461,7 +1465,9 @@
             "724f186878227dad"
         ],
         "x": 74,
-        "y": 339
+        "y": 339,
+        "w": 1132,
+        "h": 202
     },
     {
         "id": "0804d9edeca1c9fa",
@@ -1482,7 +1488,9 @@
             "4523045453de0a33"
         ],
         "x": 74,
-        "y": 579
+        "y": 579,
+        "w": 1092,
+        "h": 202
     },
     {
         "id": "385f03591bc34bcc",
@@ -1994,7 +2002,7 @@
             "fa7c83f1dece9741"
         ],
         "x": 14,
-        "y": 1139,
+        "y": 1359,
         "w": 972,
         "h": 262
     },
@@ -2042,6 +2050,30 @@
         "x": 894,
         "y": 1179,
         "w": 792,
+        "h": 202
+    },
+    {
+        "id": "2cf9519404abb320",
+        "type": "group",
+        "z": "eff21041cc941fef",
+        "name": "Dining Room",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8b7c95049784f3f2",
+            "5dd5378daf7167e1",
+            "8f63644e54a327c1",
+            "18776d7d2b56cfd3",
+            "68cbecfd745cb24f",
+            "50bbe5b7296d27f2",
+            "a11843dd105f012e",
+            "ee64a23e4a4ae724",
+            "4441b7f8ede452fd"
+        ],
+        "x": 14,
+        "y": 919,
+        "w": 1052,
         "h": 202
     },
     {
@@ -10226,7 +10258,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 530,
-        "y": 1080,
+        "y": 1300,
         "wires": [
             []
         ]
@@ -10480,7 +10512,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1020,
+        "y": 1240,
         "wires": [
             [
                 "b281061a4b08d2eb"
@@ -10514,7 +10546,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 530,
-        "y": 1020,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -10542,7 +10574,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 710,
-        "y": 960,
+        "y": 1180,
         "wires": [
             []
         ]
@@ -10568,7 +10600,7 @@
             }
         ],
         "x": 120,
-        "y": 1080,
+        "y": 1300,
         "wires": [
             [
                 "5123a607588fa737"
@@ -10616,7 +10648,7 @@
             }
         ],
         "x": 110,
-        "y": 1020,
+        "y": 1240,
         "wires": [
             [
                 "f84e6b5157e857cf"
@@ -10649,7 +10681,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 520,
-        "y": 960,
+        "y": 1180,
         "wires": [
             [
                 "41a8d5ef20cf55d7"
@@ -11259,7 +11291,7 @@
         "type": "api-call-service",
         "z": "eff21041cc941fef",
         "g": "0f7fdf39e4400032",
-        "name": "First Floor Lights",
+        "name": "Living Room Lights",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -11268,7 +11300,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "light.first_floor_lights"
+            "light.living_room_lights"
         ],
         "data": "{}",
         "dataType": "jsonata",
@@ -11319,7 +11351,7 @@
         "type": "api-call-service",
         "z": "eff21041cc941fef",
         "g": "0f7fdf39e4400032",
-        "name": "Set Scenes",
+        "name": "Set Scene",
         "server": "9e87348d.9c1c48",
         "version": 5,
         "debugenabled": false,
@@ -11328,11 +11360,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "input_select.dining_room_lamp_scenes",
-            "input_select.downstairs_bathroom_scenes",
-            "input_select.living_room_scenes",
-            "input_select.mud_room_scenes",
-            "input_select.tina_lamp_scenes"
+            "input_select.living_room_scenes"
         ],
         "data": "{\t    \"option\": \"Adaptive\"\t}",
         "dataType": "jsonata",
@@ -11388,11 +11416,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "light.dining_room_lamp",
-            "light.downstairs_bathroom_lights",
-            "light.living_room_lights",
-            "light.mud_room_overhead",
-            "light.tina_desk_lights"
+            "light.living_room_lights"
         ],
         "data": "{}",
         "dataType": "jsonata",
@@ -11447,7 +11471,7 @@
             }
         ],
         "x": 110,
-        "y": 1240,
+        "y": 1460,
         "wires": [
             [
                 "7c4cc52be117251f"
@@ -11471,7 +11495,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 1240,
+        "y": 1460,
         "wires": [
             [
                 "67d04dc394a23636"
@@ -11505,7 +11529,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 700,
-        "y": 1180,
+        "y": 1400,
         "wires": [
             [
                 "ddae3391e8b78cb8"
@@ -11535,7 +11559,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 890,
-        "y": 1180,
+        "y": 1400,
         "wires": [
             []
         ]
@@ -11563,7 +11587,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 530,
-        "y": 1240,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -11591,7 +11615,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 520,
-        "y": 1180,
+        "y": 1400,
         "wires": [
             [
                 "a7cd304d11f25e60"
@@ -11623,7 +11647,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 530,
-        "y": 1360,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -11649,7 +11673,7 @@
             }
         ],
         "x": 120,
-        "y": 1300,
+        "y": 1520,
         "wires": [
             [
                 "5d9a85d3534d83e6"
@@ -11688,7 +11712,7 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 330,
-        "y": 1300,
+        "y": 1520,
         "wires": [
             [
                 "fa7c83f1dece9741"
@@ -11721,7 +11745,297 @@
         "outputProperties": [],
         "queue": "none",
         "x": 540,
-        "y": 1300,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b7c95049784f3f2",
+        "type": "server-state-changed",
+        "z": "eff21041cc941fef",
+        "g": "2cf9519404abb320",
+        "name": "Dining Room Motion",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "outputs": 1,
+        "exposeAsEntityConfig": "4a9187b8b68e4181",
+        "entityId": "binary_sensor.dining_room_motion",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "motion",
+                "valueType": "str"
+            }
+        ],
+        "x": 130,
+        "y": 960,
+        "wires": [
+            [
+                "8f63644e54a327c1"
+            ]
+        ]
+    },
+    {
+        "id": "5dd5378daf7167e1",
+        "type": "server-events",
+        "z": "eff21041cc941fef",
+        "g": "2cf9519404abb320",
+        "name": "Timer Finished",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "eventType": "timer.finished",
+        "eventData": "{\"entity_id\":\"timer.dining_room_motion_timer\"}",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "finished",
+                "valueType": "str"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "timer",
+                "valueType": "str"
+            }
+        ],
+        "x": 140,
+        "y": 1020,
+        "wires": [
+            [
+                "8f63644e54a327c1"
+            ]
+        ]
+    },
+    {
+        "id": "8f63644e54a327c1",
+        "type": "function",
+        "z": "eff21041cc941fef",
+        "g": "2cf9519404abb320",
+        "name": "Dining Room Processing",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst peoplePresent = states['binary_sensor.people_present'].state\nconst vacationMode = states['input_boolean.vacation_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst kallenSleeping = states['input_boolean.kallen_sleeping'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst duration = states['input_number.dining_room_lights_off_delay'].state\nconst newDuration = duration * 60\nconst topic = msg.topic\nconst payload = msg.payload\n\nlet block = {}\n\nif ((peoplePresent === 'on' && vacationMode === 'off' && nightMode === 'on') && (kallenSleeping === 'on' || kallenOvernight === 'on')) {\n    block = false\n} else {\n    block = true\n}\n\nif (topic === 'motion' && block === false) {\n    if (payload === 'on') {\n        node.status({fill:'green',shape:'dot',text:'Motion On'})\n        node.send([msg,null,null])\n    } else if (payload === 'off') {\n        msg.duration = newDuration\n        node.status({fill:'red',shape:'ring',text:parseInt(duration) + ' minutes'})\n        node.send([null,msg,null])\n    }\n} else if (topic === 'timer') {\n    if (payload === 'finished') {\n        node.status({fill:'green',shape:'dot',text:'Timer Finished'})\n        node.send([null,null,msg])\n    }\n} else if (block === true) {\n    node.status({fill:'red',shape:'ring',text:'Blocked'})\n}",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1020,
+        "wires": [
+            [
+                "68cbecfd745cb24f"
+            ],
+            [
+                "a11843dd105f012e"
+            ],
+            [
+                "ee64a23e4a4ae724"
+            ]
+        ],
+        "outputLabels": [
+            "Motion On",
+            "Motion Off",
+            "Timer Finished"
+        ],
+        "icon": "node-red-contrib-huemagic/hue-motion.svg"
+    },
+    {
+        "id": "18776d7d2b56cfd3",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "2cf9519404abb320",
+        "name": "Lights On",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.dining_room_lamp",
+            "light.tina_desk_lights"
+        ],
+        "data": "{}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 780,
+        "y": 960,
+        "wires": [
+            [
+                "50bbe5b7296d27f2",
+                "4441b7f8ede452fd"
+            ]
+        ]
+    },
+    {
+        "id": "68cbecfd745cb24f",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "2cf9519404abb320",
+        "name": "Cancel Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "cancel",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.dining_room_motion_timer"
+        ],
+        "data": "{}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 610,
+        "y": 960,
+        "wires": [
+            [
+                "18776d7d2b56cfd3"
+            ]
+        ]
+    },
+    {
+        "id": "50bbe5b7296d27f2",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "2cf9519404abb320",
+        "name": "Lamp Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.dining_room_lamp_scenes"
+        ],
+        "data": "{\t    \"option\": \"Adaptive\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 970,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a11843dd105f012e",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "2cf9519404abb320",
+        "name": "Start Timer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "timer",
+        "service": "start",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "timer.dining_room_motion_timer"
+        ],
+        "data": "{\t    \"duration\": duration\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 610,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee64a23e4a4ae724",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "2cf9519404abb320",
+        "name": "Lights Off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "light",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.dining_room_lamp",
+            "light.tina_desk_lights"
+        ],
+        "data": "{}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 600,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4441b7f8ede452fd",
+        "type": "api-call-service",
+        "z": "eff21041cc941fef",
+        "g": "2cf9519404abb320",
+        "name": "Desk Scene",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_select",
+        "service": "select_option",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_select.tina_desk_scenes"
+        ],
+        "data": "{\t    \"option\": \"Evening Mode\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 970,
+        "y": 1020,
         "wires": [
             []
         ]
