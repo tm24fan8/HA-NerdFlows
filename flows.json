@@ -14195,6 +14195,100 @@
         ]
     },
     {
+        "id": "b26bc471bcac2653",
+        "type": "function",
+        "z": "5e238cbbe6d612c9",
+        "name": "Auto Shower Mode",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst showerMode = states['input_boolean.shower_mode'].state\nconst tempChange = parseFloat(msg.payload)\n\nlet action = {}\n\nif (tempChange < 0) {\n    action = 'off'\n} else if (tempChange >= 5.0) {\n    action = 'on'\n} else {\n    action = 'none'\n}\n\nlet actionMsg = {\n    'action': 'turn_' + action\n}\n\nif ((action === 'on' && showerMode === 'off') || (action === 'off' && showerMode === 'on')) {\n    node.status({fill:'green',shape:'dot',text:'Shower Mode ' + action})\n    node.send(actionMsg)\n} else {\n    node.status({fill:'red',shape:'ring',text:'No action taken'})\n    return null\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 220,
+        "wires": [
+            [
+                "646ac99f62432e22"
+            ]
+        ]
+    },
+    {
+        "id": "b51f19fa5b3d1587",
+        "type": "server-state-changed",
+        "z": "5e238cbbe6d612c9",
+        "name": "Temp Change",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "outputs": 1,
+        "exposeAsEntityConfig": "48a08ecc20e474e9",
+        "entityId": "sensor.upstairs_bathroom_temp_change",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "num",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": true,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "temp-change",
+                "valueType": "str"
+            }
+        ],
+        "x": 670,
+        "y": 220,
+        "wires": [
+            [
+                "b26bc471bcac2653"
+            ]
+        ]
+    },
+    {
+        "id": "646ac99f62432e22",
+        "type": "api-call-service",
+        "z": "5e238cbbe6d612c9",
+        "name": "Turn on/off",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "{{action}}",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.shower_mode"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1150,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "07049ae77b6751c6",
         "type": "server-state-changed",
         "z": "47f17992fab9b4f5",
