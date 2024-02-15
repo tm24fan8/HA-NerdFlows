@@ -2001,7 +2001,7 @@
             "716d4f60c2af0f2e"
         ],
         "x": 14,
-        "y": 999,
+        "y": 1039,
         "w": 1192,
         "h": 262
     },
@@ -22283,7 +22283,7 @@
             }
         ],
         "x": 120,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "88c56b0964f9a6db"
@@ -22311,7 +22311,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 930,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "38e168a79848fa19"
@@ -22325,7 +22325,7 @@
         "g": "553ecd620357c03d",
         "name": "",
         "x": 275,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "7d53b4bd4c7ea874"
@@ -22348,7 +22348,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 1040,
+        "y": 1080,
         "wires": []
     },
     {
@@ -22379,7 +22379,7 @@
         ],
         "event_type": "",
         "x": 130,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "5926b0004a47dfd1"
@@ -22393,7 +22393,7 @@
         "g": "553ecd620357c03d",
         "name": "",
         "x": 275,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "4726a2605a1f56cc"
@@ -22422,7 +22422,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 930,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "254ffc8e8bd1d414"
@@ -22444,7 +22444,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 1100,
+        "y": 1140,
         "wires": []
     },
     {
@@ -22475,7 +22475,7 @@
         ],
         "event_type": "",
         "x": 130,
-        "y": 1160,
+        "y": 1200,
         "wires": [
             [
                 "6167d4da61990bfb"
@@ -22497,7 +22497,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 1160,
+        "y": 1200,
         "wires": []
     },
     {
@@ -22507,7 +22507,7 @@
         "g": "553ecd620357c03d",
         "name": "",
         "x": 275,
-        "y": 1160,
+        "y": 1200,
         "wires": [
             [
                 "506e7e645cf06383"
@@ -22538,7 +22538,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 690,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "50982205a91e63c5"
@@ -22568,7 +22568,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 690,
-        "y": 1160,
+        "y": 1200,
         "wires": [
             [
                 "dff1ff1e18a1bc74"
@@ -22596,7 +22596,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 930,
-        "y": 1160,
+        "y": 1200,
         "wires": [
             [
                 "65589264d77f668d"
@@ -22631,7 +22631,7 @@
         ],
         "event_type": "",
         "x": 130,
-        "y": 1220,
+        "y": 1260,
         "wires": [
             [
                 "716d4f60c2af0f2e"
@@ -22661,7 +22661,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 690,
-        "y": 1220,
+        "y": 1260,
         "wires": [
             [
                 "c2212b77414c61f3"
@@ -22683,7 +22683,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1090,
-        "y": 1220,
+        "y": 1260,
         "wires": []
     },
     {
@@ -22705,7 +22705,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 805,
-        "y": 1220,
+        "y": 1260,
         "wires": [
             [
                 "1383f8e6ebf8ad88"
@@ -22736,7 +22736,7 @@
         "outputProperties": [],
         "queue": "none",
         "x": 930,
-        "y": 1220,
+        "y": 1260,
         "wires": [
             [
                 "75e1b9f265ecb4e5"
@@ -22757,7 +22757,7 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "20ede2b52515bc63"
@@ -22778,7 +22778,7 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 1100,
+        "y": 1140,
         "wires": [
             [
                 "2aa8397f85a8ceed"
@@ -22799,7 +22799,7 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 1160,
+        "y": 1200,
         "wires": [
             [
                 "9f1c60a822a2b550"
@@ -22820,7 +22820,7 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 1220,
+        "y": 1260,
         "wires": [
             [
                 "efd47cbc26ed2810"
@@ -23005,7 +23005,7 @@
             }
         ],
         "x": 120,
-        "y": 640,
+        "y": 620,
         "wires": [
             []
         ]
@@ -23019,8 +23019,8 @@
         "links": [
             "06b3f795ae9e14e6"
         ],
-        "x": 255,
-        "y": 720,
+        "x": 65,
+        "y": 840,
         "wires": []
     },
     {
@@ -23065,9 +23065,371 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 350,
+        "x": 370,
         "y": 680,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b2b73eed26a4ac6",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Turn on night mode",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.night_mode"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 390,
+        "y": 740,
+        "wires": [
+            [
+                "8d992470168b48db"
+            ]
+        ]
+    },
+    {
+        "id": "8d992470168b48db",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Turn off studio modes",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.gaming_mode",
+            "input_boolean.studio_quiet"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 620,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27862f1fd0313891",
+        "type": "api-current-state",
+        "z": "5c4ac37140a54ac9",
+        "name": "If basement TV is not playing",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "playing",
+        "halt_if_type": "str",
+        "halt_if_compare": "is_not",
+        "entity_id": "media_player.basement_tv",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 315,
+        "y": 800,
+        "wires": [
+            [
+                "c7302971bce3d542"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "Not playing",
+            "Playing"
+        ],
+        "icon": "font-awesome/fa-tv",
+        "l": false
+    },
+    {
+        "id": "c7302971bce3d542",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Turn off basement TV",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "remote",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "remote.basement_tv"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 460,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96cb27c48ddd3087",
+        "type": "api-current-state",
+        "z": "5c4ac37140a54ac9",
+        "name": "If Kallen's computer is not updating",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.kallen_computer_updates",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 315,
+        "y": 860,
+        "wires": [
+            [
+                "adb36e61e39c7fa9"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "Not updating",
+            "Updating"
+        ],
+        "icon": "font-awesome/fa-cloud-download",
+        "l": false
+    },
+    {
+        "id": "adb36e61e39c7fa9",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Shut down Kallen Desktop",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "kallen_desktop_shutdown",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 480,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c4ddac65fd3b245",
+        "type": "subflow:b88bb63bb13eeb27",
+        "z": "5c4ac37140a54ac9",
+        "name": "",
+        "x": 315,
+        "y": 920,
+        "wires": [
+            [
+                "56a4fbb75463258c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "56a4fbb75463258c",
+        "type": "api-call-service",
+        "z": "5c4ac37140a54ac9",
+        "name": "Ask about shutting down main computer",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "script",
+        "service": "activate_alexa_actionable_notification",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [],
+        "data": "{\t   \"text\": \"<voice name='Joanna'><prosody rate='150%'>Would you like me to shut down your computer?</prosody></voice>\",\t   \"event_id\": \"actionable_notification_shutdown_computer\",\t   \"alexa_device\": who\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 520,
+        "y": 920,
+        "wires": [
+            [
+                "881f3f534e5cc523",
+                "b077b050fad45521",
+                "b1f93c10edc4ff47"
+            ]
+        ]
+    },
+    {
+        "id": "881f3f534e5cc523",
+        "type": "ha-wait-until",
+        "z": "5c4ac37140a54ac9",
+        "name": "Basement Studio door open",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "outputs": 2,
+        "entityId": "binary_sensor.basement_studio_door",
+        "entityIdFilterType": "exact",
+        "property": "state",
+        "comparator": "is",
+        "value": "on",
+        "valueType": "str",
+        "timeout": "30",
+        "timeoutType": "num",
+        "timeoutUnits": "minutes",
+        "checkCurrentState": true,
+        "blockInputOverrides": true,
+        "outputProperties": [
+            {
+                "property": "reset",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "entityLocation": "data",
+        "entityLocationType": "none",
+        "x": 840,
+        "y": 860,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b077b050fad45521",
+        "type": "ha-wait-until",
+        "z": "5c4ac37140a54ac9",
+        "name": "Goodnight turns on",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "outputs": 2,
+        "entityId": "input_boolean.goodnight",
+        "entityIdFilterType": "exact",
+        "property": "state",
+        "comparator": "is",
+        "value": "on",
+        "valueType": "str",
+        "timeout": "30",
+        "timeoutType": "num",
+        "timeoutUnits": "minutes",
+        "checkCurrentState": true,
+        "blockInputOverrides": true,
+        "outputProperties": [
+            {
+                "property": "reset",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "entityLocation": "data",
+        "entityLocationType": "none",
+        "x": 810,
+        "y": 920,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b1f93c10edc4ff47",
+        "type": "ha-wait-until",
+        "z": "5c4ac37140a54ac9",
+        "name": "Master bedroom lights on",
+        "server": "9e87348d.9c1c48",
+        "version": 2,
+        "outputs": 2,
+        "entityId": "light.master_bedroom_lights",
+        "entityIdFilterType": "exact",
+        "property": "state",
+        "comparator": "is",
+        "value": "on",
+        "valueType": "str",
+        "timeout": "30",
+        "timeoutType": "num",
+        "timeoutUnits": "minutes",
+        "checkCurrentState": true,
+        "blockInputOverrides": true,
+        "outputProperties": [
+            {
+                "property": "reset",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "entityLocation": "data",
+        "entityLocationType": "none",
+        "x": 830,
+        "y": 980,
+        "wires": [
+            [],
             []
         ]
     },
