@@ -1239,7 +1239,8 @@
             "4829663e9913e2aa",
             "61cb79c998ee0b59",
             "73078f818abdc6c2",
-            "2516c6e3146cc851"
+            "2516c6e3146cc851",
+            "d6e7197427bb4d1b"
         ],
         "x": 34,
         "y": 579,
@@ -12529,6 +12530,12 @@
                 "propertyType": "msg",
                 "value": "toggle",
                 "valueType": "str"
+            },
+            {
+                "property": "showermode",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
             }
         ],
         "x": 150,
@@ -15184,7 +15191,9 @@
         "x": 550,
         "y": 680,
         "wires": [
-            []
+            [
+                "d6e7197427bb4d1b"
+            ]
         ]
     },
     {
@@ -15833,6 +15842,34 @@
                 "a4490fb4765e1c9c",
                 "4c7184cd35bf3f1f"
             ]
+        ]
+    },
+    {
+        "id": "d6e7197427bb4d1b",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "550e5b2d99316b12",
+        "name": "Reset Basement Briefing",
+        "server": "9e87348d.9c1c48",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "input_boolean",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "input_boolean.basement_briefing"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 750,
+        "y": 680,
+        "wires": [
+            []
         ]
     },
     {
