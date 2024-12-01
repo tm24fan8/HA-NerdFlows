@@ -1005,7 +1005,9 @@
             "ca88f85ba00a6744"
         ],
         "x": 34,
-        "y": 319
+        "y": 319,
+        "w": 472,
+        "h": 202
     },
     {
         "id": "ff6d8150e8d5e606",
@@ -1241,9 +1243,9 @@
             "2516c6e3146cc851",
             "d6e7197427bb4d1b"
         ],
-        "x": 34,
+        "x": 24,
         "y": 579,
-        "w": 992,
+        "w": 1002,
         "h": 262
     },
     {
@@ -1370,7 +1372,9 @@
             "51d05298561cfddb"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 672,
+        "h": 262
     },
     {
         "id": "265593f442864b6a",
@@ -1790,7 +1794,9 @@
             "bb4ca3d4e66d87a5"
         ],
         "x": 734,
-        "y": 39
+        "y": 39,
+        "w": 512,
+        "h": 802
     },
     {
         "id": "f16f28689b7ec2b4",
@@ -1814,9 +1820,9 @@
             "ef677459c795d246",
             "1f1489a0514e233b"
         ],
-        "x": 34,
+        "x": 24,
         "y": 739,
-        "w": 792,
+        "w": 802,
         "h": 382
     },
     {
@@ -1837,9 +1843,9 @@
             "440fc7142e7345d4",
             "cef61cdb2808ce5a"
         ],
-        "x": 894,
+        "x": 884,
         "y": 739,
-        "w": 792,
+        "w": 802,
         "h": 202
     },
     {
@@ -2047,9 +2053,9 @@
             "0b5424aadc3479f7",
             "5524e8ba9b5545be"
         ],
-        "x": 894,
+        "x": 884,
         "y": 959,
-        "w": 792,
+        "w": 802,
         "h": 202
     },
     {
@@ -2070,9 +2076,9 @@
             "4a431478798a51c8",
             "81129efa6676b58e"
         ],
-        "x": 894,
+        "x": 884,
         "y": 1179,
-        "w": 792,
+        "w": 802,
         "h": 202
     },
     {
@@ -13096,7 +13102,7 @@
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
         "name": "Timer Finished",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst showerMode = states['input_boolean.shower_mode'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\n\nlet scene = {}\nlet late = {}\n\nif (nightMode === 'on' || (earlyNightMode === 'on' && masterBedroomSleep === 'on')) {\n    late = true\n    scene = 'Single Nightlight'\n} else {\n    late = false\n    scene = 'Nightlight'\n}\n\nif (showerMode === 'off') {\n    if (earlyNightMode === 'off') {\n        node.send([null,null,msg])\n        node.status({fill:'green',shape:'dot',text:'Lights Off'})\n    } else {\n        msg.option = scene\n        node.send([null,msg,null])\n        if (late === true && kallenOvernight === 'on') {\n            node.send([msg,null,null])\n        }\n        node.status({fill:'green',shape:'dot',text:'Scene set to ' + scene})\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Blocked'})\n}\n\nnode.log(\"----- Upstairs Bathroom Timer Parameters Start -----\")\nnode.log(\"Upstairs Bathroom showerMode: \" + showerMode)\nnode.log(\"Upstairs Bathroom earlyNightMode: \" + showerMode)\nnode.log(\"Upstairs Bathroom kallenOvernight: \" + kallenOvernight)\nnode.log(\"Upstairs Bathroom nightMode: \" + nightMode)\nnode.log(\"Upstairs Bathroom masterBedroomSleep: \" + masterBedroomSleep)\nnode.log(\"Upstairs Bathroom scene: \" + scene)\nnode.log(\"Upstairs Bathroom late: \" + late)\nnode.log(\"----- Upstairs Bathroom Timer Parameters End -----\")",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst showerMode = states['input_boolean.shower_mode'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst masterBedroomSleep = states['input_boolean.master_bedroom_sleeping'].state\n\nlet scene = 'Single Nightlight'\nlet late = {}\n\nif (nightMode === 'on' || (earlyNightMode === 'on' && masterBedroomSleep === 'on')) {\n    late = true\n} else {\n    late = false\n}\n\nif (showerMode === 'off') {\n    if (earlyNightMode === 'off') {\n        node.send([null,null,msg])\n        node.status({fill:'green',shape:'dot',text:'Lights Off'})\n    } else {\n        msg.option = scene\n        node.send([null,msg,null])\n        if (late === true && kallenOvernight === 'on') {\n            node.send([msg,null,null])\n        }\n        node.status({fill:'green',shape:'dot',text:'Scene set to ' + scene})\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Blocked'})\n}\n\nnode.log(\"----- Upstairs Bathroom Timer Parameters Start -----\")\nnode.log(\"Upstairs Bathroom showerMode: \" + showerMode)\nnode.log(\"Upstairs Bathroom earlyNightMode: \" + showerMode)\nnode.log(\"Upstairs Bathroom kallenOvernight: \" + kallenOvernight)\nnode.log(\"Upstairs Bathroom nightMode: \" + nightMode)\nnode.log(\"Upstairs Bathroom masterBedroomSleep: \" + masterBedroomSleep)\nnode.log(\"Upstairs Bathroom scene: \" + scene)\nnode.log(\"Upstairs Bathroom late: \" + late)\nnode.log(\"----- Upstairs Bathroom Timer Parameters End -----\")",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -13694,7 +13700,7 @@
         "z": "5e238cbbe6d612c9",
         "g": "eccca853a916b662",
         "name": "Shower Mode",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst occupied = states['binary_sensor.upstairs_bathroom_occupied'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst motion = states['binary_sensor.upstairs_bathroom_motion'].state\nconst payload = msg.payload\n\nlet timerCancel = {\n    \"payload\": \"stop\"\n}\n\nlet scene = {}\nif (payload === 'on') {\n    scene = 'Bright'\n} else {\n    if (motion === 'on') {\n        scene = 'Adaptive'\n    } else {\n        if (kallenOvernight === 'off') {\n            if (nightMode === 'on') {\n                scene = 'Single Nightlight'\n            } else {\n                scene = 'Nightlight'\n            }\n        } else {\n            scene = 'Adaptive'\n        }\n    }\n}\n\nif (payload === 'on') {\n    msg.scene = scene\n    node.status({fill:'green',shape:'dot',text:'Shower Mode On'})\n    node.send([timerCancel,msg,null])\n} else if (payload === 'off') {\n    node.send([timerCancel,null,null])\n    if (motion === 'on') {\n        msg.scene = scene\n        node.status({fill:'green',shape:'dot',text:'Lights Adaptive'})\n        node.send([null,msg,null])\n    } else if (earlyNightMode === 'on') {\n        if (kallenOvernight === 'on') {\n            node.status({fill:'green',shape:'dot',text:'Lights Off'})\n            node.send([null,null,msg])\n        } else {\n            msg.scene = scene\n            node.status({fill:'green',shape:'dot',text:'Scene Set'})\n            node.send([null,msg,null])\n        }\n    } else {\n        node.status({fill:'green',shape:'dot',text:'Lights Off'})\n        node.send([null,null,msg])\n    }\n}\n\nnode.log(\"----- Upstairs Bathroom Shower Mode Parameters Start -----\")\nnode.log(\"Upstairs Bathroom payload: \" + payload)\nnode.log(\"Upstairs Bathroom scene: \" + scene)\nif (payload === 'off') {\n    node.log(\"Upstairs Bathroom occupied: \" + occupied)\n    node.log(\"Upstairs Bathroom earlyNightMode: \" + earlyNightMode)\n    node.log(\"Upstairs Bathroom nightMode: \" + nightMode)\n    node.log(\"Upstairs Bathroom kallenOvernight: \" + kallenOvernight)\n    node.log(\"Upstairs Bathroom motion: \" + motion)\n}\nnode.log(\"----- Upstairs Bathroom Shower Mode Parameters End -----\")",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst occupied = states['binary_sensor.upstairs_bathroom_occupied'].state\nconst earlyNightMode = states['binary_sensor.early_night_mode'].state\nconst nightMode = states['input_boolean.night_mode'].state\nconst kallenOvernight = states['input_boolean.kallen_overnight'].state\nconst motion = states['binary_sensor.upstairs_bathroom_motion'].state\nconst payload = msg.payload\n\nlet timerCancel = {\n    \"payload\": \"stop\"\n}\n\nlet scene = {}\nif (payload === 'on') {\n    scene = 'Bright'\n} else {\n    if (motion === 'on') {\n        scene = 'Adaptive'\n    } else {\n        scene = 'Single Nightlight'\n    }\n}\n\nif (payload === 'on') {\n    msg.scene = scene\n    node.status({fill:'green',shape:'dot',text:'Shower Mode On'})\n    node.send([timerCancel,msg,null])\n} else if (payload === 'off') {\n    node.send([timerCancel,null,null])\n    if (motion === 'on') {\n        msg.scene = scene\n        node.status({fill:'green',shape:'dot',text:'Lights Adaptive'})\n        node.send([null,msg,null])\n    } else if (earlyNightMode === 'on') {\n        if (kallenOvernight === 'on') {\n            node.status({fill:'green',shape:'dot',text:'Lights Off'})\n            node.send([null,null,msg])\n        } else {\n            msg.scene = scene\n            node.status({fill:'green',shape:'dot',text:'Scene Set'})\n            node.send([null,msg,null])\n        }\n    } else {\n        node.status({fill:'green',shape:'dot',text:'Lights Off'})\n        node.send([null,null,msg])\n    }\n}\n\nnode.log(\"----- Upstairs Bathroom Shower Mode Parameters Start -----\")\nnode.log(\"Upstairs Bathroom payload: \" + payload)\nnode.log(\"Upstairs Bathroom scene: \" + scene)\nif (payload === 'off') {\n    node.log(\"Upstairs Bathroom occupied: \" + occupied)\n    node.log(\"Upstairs Bathroom earlyNightMode: \" + earlyNightMode)\n    node.log(\"Upstairs Bathroom nightMode: \" + nightMode)\n    node.log(\"Upstairs Bathroom kallenOvernight: \" + kallenOvernight)\n    node.log(\"Upstairs Bathroom motion: \" + motion)\n}\nnode.log(\"----- Upstairs Bathroom Shower Mode Parameters End -----\")",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -32061,7 +32067,7 @@
         "type": "file",
         "z": "d49b385d8b582b20",
         "name": "Write to overwolf.txt",
-        "filename": "/config/files/overwolf.txt",
+        "filename": "/homeassistant/files/overwolf.txt",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
