@@ -1917,12 +1917,15 @@
             "fc1ca3e2f921b01e",
             "18cd2aed123cdaa8",
             "8851dbeb9b28003a",
-            "06b3f795ae9e14e6"
+            "06b3f795ae9e14e6",
+            "15c84d12d17ac254",
+            "b947106d8f7b72ed",
+            "d575b0381d31edaa"
         ],
         "x": 94,
         "y": 919,
         "w": 1492,
-        "h": 262
+        "h": 382
     },
     {
         "id": "f4057835848d0904",
@@ -15769,7 +15772,8 @@
                 "a4490fb4765e1c9c",
                 "4c7184cd35bf3f1f",
                 "f052c9629cad7a5f",
-                "80c5f8a40169fcb7"
+                "80c5f8a40169fcb7",
+                "15c84d12d17ac254"
             ]
         ]
     },
@@ -16253,7 +16257,8 @@
         "wires": [
             [
                 "a4490fb4765e1c9c",
-                "4c7184cd35bf3f1f"
+                "4c7184cd35bf3f1f",
+                "15c84d12d17ac254"
             ]
         ]
     },
@@ -16402,6 +16407,98 @@
             [
                 "4b7ed8ad595ee9cb"
             ]
+        ]
+    },
+    {
+        "id": "15c84d12d17ac254",
+        "type": "function",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Heat Logic",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst allowed = states['input_boolean.basement_studio_heat_allowed'].state\nconst idleTemp = states['input_number.basement_studio_idle_temp'].state\nconst outsideTemp = states['weather.iron_nerd_weather_station'].attributes.temperature\n\nif (allowed === 'on') {\n    if (outsideTemp <= 32) {\n        msg.idle_temp = parseFloat(idleTemp)\n        node.status({fill:'green',shape:'dot',text:'Idle Temp Set'})\n        node.send(msg,null)\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Heater Shutoff'})\n        node.send(null,msg)\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Heat Not Allowed'})\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1200,
+        "wires": [
+            [
+                "b947106d8f7b72ed"
+            ],
+            [
+                "d575b0381d31edaa"
+            ]
+        ],
+        "outputLabels": [
+            "Idle Temp",
+            "Shutoff"
+        ]
+    },
+    {
+        "id": "b947106d8f7b72ed",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Set Idle Temp",
+        "server": "9e87348d.9c1c48",
+        "version": 7,
+        "debugenabled": false,
+        "action": "climate.set_temperature",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.basement_studio_thermostat"
+        ],
+        "labelId": [],
+        "data": "{\t    \"temperature\":idle_temp,\t    \"hvac_mode\":\"heat\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": true,
+        "domain": "climate",
+        "service": "set_temperature",
+        "x": 720,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d575b0381d31edaa",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "c4c2c79b692236a0",
+        "name": "Turn Off Heater",
+        "server": "9e87348d.9c1c48",
+        "version": 7,
+        "debugenabled": false,
+        "action": "climate.set_hvac_mode",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.basement_studio_thermostat"
+        ],
+        "labelId": [],
+        "data": "{\t    \"hvac_mode\":\"off\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": true,
+        "domain": "climate",
+        "service": "set_hvac_mode",
+        "x": 720,
+        "y": 1260,
+        "wires": [
+            []
         ]
     },
     {
