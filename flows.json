@@ -1244,7 +1244,7 @@
             "d6e7197427bb4d1b",
             "6c1ffa37c98be592",
             "4b7ed8ad595ee9cb",
-            "d77477323b52d82f"
+            "b7022ac46a70a7d8"
         ],
         "x": 24,
         "y": 579,
@@ -16329,7 +16329,7 @@
         "y": 800,
         "wires": [
             [
-                "d77477323b52d82f"
+                "4b7ed8ad595ee9cb"
             ],
             []
         ],
@@ -16343,19 +16343,19 @@
         "type": "api-call-service",
         "z": "47f17992fab9b4f5",
         "g": "550e5b2d99316b12",
-        "name": "Set Basement Thermostat",
+        "name": "Turn on heater",
         "server": "9e87348d.9c1c48",
         "version": 7,
         "debugenabled": false,
-        "action": "climate.set_temperature",
+        "action": "climate.set_hvac_mode",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "climate.basement_studio_thermostat"
+            "climate.basement_studio_vtherm"
         ],
         "labelId": [],
-        "data": "{\t    \"temperature\":active_temp,\t    \"hvac_mode\":\"heat\"\t}",
+        "data": "{\t    \"hvac_mode\":\"heat\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -16363,49 +16363,12 @@
         "queue": "none",
         "blockInputOverrides": true,
         "domain": "climate",
-        "service": "set_temperature",
-        "x": 800,
-        "y": 800,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d77477323b52d82f",
-        "type": "api-current-state",
-        "z": "47f17992fab9b4f5",
-        "g": "550e5b2d99316b12",
-        "name": "Active Temp",
-        "server": "9e87348d.9c1c48",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_number.basement_studio_active_temp",
-        "state_type": "num",
-        "blockInputOverrides": true,
-        "outputProperties": [
-            {
-                "property": "active_temp",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 570,
+        "service": "set_hvac_mode",
+        "x": 580,
         "y": 800,
         "wires": [
             [
-                "4b7ed8ad595ee9cb"
+                "b7022ac46a70a7d8"
             ]
         ]
     },
@@ -16415,7 +16378,7 @@
         "z": "47f17992fab9b4f5",
         "g": "c4c2c79b692236a0",
         "name": "Heat Logic",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst allowed = states['input_boolean.basement_studio_heat_allowed'].state\nconst idleTemp = states['input_number.basement_studio_idle_temp'].state\nconst outsideTemp = states['weather.iron_nerd_weather_station'].attributes.temperature\n\nif (allowed === 'on') {\n    if (outsideTemp <= 32) {\n        msg.idle_temp = parseFloat(idleTemp)\n        node.status({fill:'green',shape:'dot',text:'Idle Temp Set'})\n        node.send(msg,null)\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Heater Shutoff'})\n        node.send(null,msg)\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Heat Not Allowed'})\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst allowed = states['input_boolean.basement_studio_heat_allowed'].state\nconst outsideTemp = states['weather.iron_nerd_weather_station'].attributes.temperature\nconst nightMode = states['input_boolean.night_mode'].state\n\nlet power = {}\nlet preset = {}\n\nif (outsideTemp > 32) {\n    power = 'off'\n} else {\n    power = 'on'\n    if (nightMode === 'on') {\n        preset = \"frost\"\n    } else {\n        preset = \"eco\"\n    }\n}\n\nif (allowed === 'on') {\n    if (power === 'on') {\n        msg.preset = preset\n        node.status({fill:'green',shape:'dot',text:'Preset ' + preset})\n        node.send(msg,null)\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Heater Shutoff'})\n        node.send(null,msg)\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Heat Disabled'})\n}\n",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -16442,19 +16405,19 @@
         "type": "api-call-service",
         "z": "47f17992fab9b4f5",
         "g": "c4c2c79b692236a0",
-        "name": "Set Idle Temp",
+        "name": "Set Temp",
         "server": "9e87348d.9c1c48",
         "version": 7,
         "debugenabled": false,
-        "action": "climate.set_temperature",
+        "action": "climate.set_preset_mode",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "climate.basement_studio_thermostat"
+            "climate.basement_studio_vtherm"
         ],
         "labelId": [],
-        "data": "{\t    \"temperature\":idle_temp,\t    \"hvac_mode\":\"heat\"\t}",
+        "data": "{\t    \"preset_mode\":preset\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -16462,8 +16425,8 @@
         "queue": "none",
         "blockInputOverrides": true,
         "domain": "climate",
-        "service": "set_temperature",
-        "x": 720,
+        "service": "set_preset_mode",
+        "x": 700,
         "y": 1200,
         "wires": [
             []
@@ -16483,7 +16446,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "climate.basement_studio_thermostat"
+            "climate.basement_studio_vtherm"
         ],
         "labelId": [],
         "data": "{\t    \"hvac_mode\":\"off\"\t}",
@@ -16497,6 +16460,38 @@
         "service": "set_hvac_mode",
         "x": 720,
         "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7022ac46a70a7d8",
+        "type": "api-call-service",
+        "z": "47f17992fab9b4f5",
+        "g": "550e5b2d99316b12",
+        "name": "Set temperature",
+        "server": "9e87348d.9c1c48",
+        "version": 7,
+        "debugenabled": false,
+        "action": "climate.set_preset_mode",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "climate.basement_studio_vtherm"
+        ],
+        "labelId": [],
+        "data": "{\t    \"preset_mode\":\"comfort\"\t}",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": true,
+        "domain": "climate",
+        "service": "set_preset_mode",
+        "x": 780,
+        "y": 800,
         "wires": [
             []
         ]
