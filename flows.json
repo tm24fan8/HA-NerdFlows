@@ -11120,7 +11120,7 @@
         "deviceId": [],
         "entityId": [],
         "labelId": [],
-        "data": "{\t    \"scene_id\":\"doorbell_lights_restore\",\t    \"snapshot_entities\":[\"light.living_room_overhead\",\"light.living_room_led_strip\",\"light.tina_lamp_top\",\"light.tina_desk_strip\"]\t}",
+        "data": "{\t    \"scene_id\":\"doorbell_lights_restore\",\t    \"snapshot_entities\":[\"light.living_room_overhead\",\"light.living_room_led_strip\",\"light.tina_lamp_top\"]\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
@@ -11218,7 +11218,6 @@
         "entityId": [
             "light.living_room_led_strip",
             "light.living_room_lights",
-            "light.tina_desk_strip",
             "light.tina_lamp"
         ],
         "labelId": [],
@@ -27476,7 +27475,6 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "light.tina_desk_strip",
             "light.tina_lamp_side",
             "light.tina_lamp_top"
         ],
@@ -27752,7 +27750,7 @@
         "z": "ebd5561c4f077718",
         "g": "4329e464360d0afa",
         "name": "Processing",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst allowed = states[\"binary_sensor.audible_weather_alerts_allowed\"].state\nconst occupied = states[\"binary_sensor.basement_occupied\"].state\nconst quiet = states[\"input_boolean.studio_quiet\"].state\nconst deskState = states[\"light.tina_desk_lights\"].state\nconst livingRoomState = states[\"light.living_room_lights\"].state\nconst basementState = states[\"light.basement_studio_lights\"].state\nconst who = states[\"binary_sensor.audible_weather_alerts_allowed\"].attributes.location\nconst duration = msg.duration\nconst payload = msg.payload\n\nlet firstFloorLights = []\nlet basementLights = []\n\nif (deskState === 'on') {\n    firstFloorLights.push('light.tina_desk_strip','light.tina_lamp_top','light.tina_lamp_side')\n}\n\nif (livingRoomState === 'on') {\n    firstFloorLights.push('light.living_room_color_1','light.living_room_color_2','light.living_room_color_3','light.living_room_led_strip')\n}\n\nif (basementState === 'on') {\n    basementLights.push('light.basement_tall_lamp','light.basement_short_lamp','light.basement_stairwell','light.basement_led_strip_1')\n}\n\nflow.set(\"deskState\", deskState)\nflow.set(\"livingRoomState\", livingRoomState)\nflow.set(\"basementState\", basementState)\n\nlet firstFloorMsg = {\n    \"payload\": payload,\n    \"duration\": duration,\n    \"backup\": firstFloorLights,\n    \"who\": who\n}\n\nlet basementMsg = {\n    \"payload\": payload,\n    \"duration\": duration,\n    \"backup\": basementLights\n}\n\nif (allowed === 'on') {\n    if (occupied === 'on' && quiet === 'off') {\n        flow.set(\"basementTrigger\",\"true\")\n        node.status({fill:\"green\",shape:\"dot\",text:\"Both\"})\n        return[firstFloorMsg,basementMsg]\n    } else {\n        flow.set(\"basementTrigger\",\"false\")\n        node.status({fill:\"green\",shape:\"dot\",text:\"Living Room\"})\n        return[firstFloorMsg,null]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    return null\n}",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst allowed = states[\"binary_sensor.audible_weather_alerts_allowed\"].state\nconst occupied = states[\"binary_sensor.basement_occupied\"].state\nconst quiet = states[\"input_boolean.studio_quiet\"].state\nconst deskState = states[\"light.tina_desk_lights\"].state\nconst livingRoomState = states[\"light.living_room_lights\"].state\nconst basementState = states[\"light.basement_studio_lights\"].state\nconst who = states[\"binary_sensor.audible_weather_alerts_allowed\"].attributes.location\nconst duration = msg.duration\nconst payload = msg.payload\n\nlet firstFloorLights = []\nlet basementLights = []\n\nif (deskState === 'on') {\n    firstFloorLights.push('light.tina_lamp_top','light.tina_lamp_side')\n}\n\nif (livingRoomState === 'on') {\n    firstFloorLights.push('light.living_room_color_1','light.living_room_color_2','light.living_room_color_3','light.living_room_led_strip')\n}\n\nif (basementState === 'on') {\n    basementLights.push('light.basement_tall_lamp','light.basement_short_lamp','light.basement_stairwell','light.basement_led_strip_1')\n}\n\nflow.set(\"deskState\", deskState)\nflow.set(\"livingRoomState\", livingRoomState)\nflow.set(\"basementState\", basementState)\n\nlet firstFloorMsg = {\n    \"payload\": payload,\n    \"duration\": duration,\n    \"backup\": firstFloorLights,\n    \"who\": who\n}\n\nlet basementMsg = {\n    \"payload\": payload,\n    \"duration\": duration,\n    \"backup\": basementLights\n}\n\nif (allowed === 'on') {\n    if (occupied === 'on' && quiet === 'off') {\n        flow.set(\"basementTrigger\",\"true\")\n        node.status({fill:\"green\",shape:\"dot\",text:\"Both\"})\n        return[firstFloorMsg,basementMsg]\n    } else {\n        flow.set(\"basementTrigger\",\"false\")\n        node.status({fill:\"green\",shape:\"dot\",text:\"Living Room\"})\n        return[firstFloorMsg,null]\n    }\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"Blocked\"})\n    return null\n}",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
