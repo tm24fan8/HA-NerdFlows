@@ -919,7 +919,8 @@
             "d6c81a79393be92c",
             "88b10efda9e2c047",
             "96cf0949902f8572",
-            "6bbf7df2c43c481e"
+            "6bbf7df2c43c481e",
+            "02f922bba32e4c71"
         ],
         "x": 14,
         "y": 11.5,
@@ -20969,6 +20970,7 @@
         "server": "9e87348d.9c1c48",
         "version": 7,
         "debugenabled": false,
+        "action": "",
         "floorId": [],
         "areaId": [],
         "deviceId": [],
@@ -20983,7 +20985,7 @@
         "blockInputOverrides": false,
         "domain": "",
         "service": "",
-        "x": 820,
+        "x": 1020,
         "y": 420,
         "wires": [
             []
@@ -21011,7 +21013,7 @@
         "y": 420,
         "wires": [
             [
-                "96cf0949902f8572"
+                "02f922bba32e4c71"
             ]
         ],
         "l": false
@@ -21045,6 +21047,46 @@
         "x": 740,
         "y": 1260,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02f922bba32e4c71",
+        "type": "api-current-state",
+        "z": "72f99805df043603",
+        "g": "e065b1ed4938b477",
+        "name": "Do Not Disturb",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "switch.master_bedroom_echo_dot_do_not_disturb_switch",
+        "state_type": "str",
+        "blockInputOverrides": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 820,
+        "y": 420,
+        "wires": [
+            [
+                "96cf0949902f8572"
+            ],
             []
         ]
     },
