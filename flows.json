@@ -1245,7 +1245,9 @@
             "d6e7197427bb4d1b",
             "6c1ffa37c98be592",
             "4b7ed8ad595ee9cb",
-            "b7022ac46a70a7d8"
+            "b7022ac46a70a7d8",
+            "a64928d7a0b836cf",
+            "aecc95a3db3369e2"
         ],
         "x": 34,
         "y": 579,
@@ -16495,6 +16497,122 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "a64928d7a0b836cf",
+        "type": "server-state-changed",
+        "z": "47f17992fab9b4f5",
+        "g": "550e5b2d99316b12",
+        "name": "Room Presence",
+        "server": "9e87348d.9c1c48",
+        "version": 6,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [
+                "binary_sensor.basement_occupied"
+            ],
+            "substring": [],
+            "regex": []
+        },
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "on",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": true,
+        "ignorePrevStateUnknown": true,
+        "ignorePrevStateUnavailable": true,
+        "ignoreCurrentStateUnknown": true,
+        "ignoreCurrentStateUnavailable": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 140,
+        "y": 800,
+        "wires": [
+            [
+                "aecc95a3db3369e2"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "occupied",
+            "not occupied"
+        ]
+    },
+    {
+        "id": "aecc95a3db3369e2",
+        "type": "api-current-state",
+        "z": "47f17992fab9b4f5",
+        "g": "550e5b2d99316b12",
+        "name": "Night Mode",
+        "server": "9e87348d.9c1c48",
+        "version": 3,
+        "outputs": 2,
+        "halt_if": "off",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.night_mode",
+        "state_type": "str",
+        "blockInputOverrides": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 265,
+        "y": 800,
+        "wires": [
+            [
+                "6c1ffa37c98be592"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "night mode off",
+            "night mode on"
+        ],
+        "icon": "font-awesome/fa-moon-o",
+        "l": false
     },
     {
         "id": "091390f43bfeddf5",
