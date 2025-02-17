@@ -1247,9 +1247,9 @@
             "4b7ed8ad595ee9cb",
             "b7022ac46a70a7d8"
         ],
-        "x": 24,
+        "x": 34,
         "y": 579,
-        "w": 1002,
+        "w": 992,
         "h": 322
     },
     {
@@ -16378,7 +16378,7 @@
         "z": "47f17992fab9b4f5",
         "g": "c4c2c79b692236a0",
         "name": "Heat Logic",
-        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst allowed = states['input_boolean.basement_studio_heat_allowed'].state\nconst outsideTemp = states['weather.iron_nerd_weather_station'].attributes.temperature\nconst nightMode = states['input_boolean.night_mode'].state\n\nlet power = {}\nlet preset = {}\n\nif (outsideTemp > 32) {\n    power = 'off'\n} else {\n    power = 'on'\n    if (nightMode === 'on') {\n        preset = \"frost\"\n    } else {\n        preset = \"eco\"\n    }\n}\n\nif (allowed === 'on') {\n    if (power === 'on') {\n        msg.preset = preset\n        node.status({fill:'green',shape:'dot',text:'Preset ' + preset})\n        node.send(msg,null)\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Heater Shutoff'})\n        node.send(null,msg)\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Heat Disabled'})\n}\n",
+        "func": "const states = global.get('homeassistant.homeAssistant.states')\nconst allowed = states['input_boolean.basement_studio_heat_allowed'].state\nconst outsideTemp = states['weather.iron_nerd_weather_station'].attributes.temperature\nconst nightMode = states['input_boolean.night_mode'].state\n\nlet power = {}\nlet preset = {}\n\nif (outsideTemp > 32) {\n    power = 'off'\n} else {\n    power = 'on'\n    if (nightMode === 'on') {\n        preset = \"frost\"\n    } else {\n        preset = \"activity\"\n    }\n}\n\nif (allowed === 'on') {\n    if (power === 'on') {\n        msg.preset = preset\n        node.status({fill:'green',shape:'dot',text:'Preset ' + preset})\n        node.send(msg,null)\n    } else {\n        node.status({fill:'red',shape:'ring',text:'Heater Shutoff'})\n        node.send(null,msg)\n    }\n} else {\n    node.status({fill:'red',shape:'ring',text:'Heat Disabled'})\n}\n",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
@@ -16481,7 +16481,7 @@
             "climate.basement_studio_vtherm"
         ],
         "labelId": [],
-        "data": "{\t    \"preset_mode\":\"comfort\"\t}",
+        "data": "{\t    \"preset_mode\":\"activity\"\t}",
         "dataType": "jsonata",
         "mergeContext": "",
         "mustacheAltTags": false,
