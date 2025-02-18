@@ -9340,39 +9340,6 @@
         ]
     },
     {
-        "id": "8a22032494f84cae",
-        "type": "api-call-service",
-        "z": "3abb5ae57afb4761",
-        "name": "Lights Handler",
-        "server": "9e87348d.9c1c48",
-        "version": 7,
-        "debugenabled": false,
-        "action": "input_boolean.turn_on",
-        "floorId": [],
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "input_boolean.tina_desk_lights"
-        ],
-        "labelId": [],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "blockInputOverrides": false,
-        "domain": "input_boolean",
-        "service": "turn_on",
-        "x": 880,
-        "y": 300,
-        "wires": [
-            [
-                "7fbab2c7cb7ecc92"
-            ]
-        ]
-    },
-    {
         "id": "0ba46659c49cf39a",
         "type": "mqtt out",
         "z": "3abb5ae57afb4761",
@@ -10389,8 +10356,8 @@
         "y": 340,
         "wires": [
             [
-                "8a22032494f84cae",
-                "9ae7e308f889137d"
+                "9ae7e308f889137d",
+                "8a22032494f84cae"
             ],
             [
                 "7992545819db1a42"
@@ -10401,6 +10368,39 @@
             "We fucked up"
         ],
         "icon": "node-red-contrib-cpu/cpu.png"
+    },
+    {
+        "id": "8a22032494f84cae",
+        "type": "api-call-service",
+        "z": "3abb5ae57afb4761",
+        "name": "Lights Handler",
+        "server": "9e87348d.9c1c48",
+        "version": 7,
+        "debugenabled": false,
+        "action": "light.turn_on",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.tina_desk_lights"
+        ],
+        "labelId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "light",
+        "service": "turn_on",
+        "x": 880,
+        "y": 300,
+        "wires": [
+            [
+                "7fbab2c7cb7ecc92"
+            ]
+        ]
     },
     {
         "id": "d95d9964546768a5",
